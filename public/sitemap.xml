@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://flyamba.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://flyamba.com/about</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://flyamba.com/compare</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/explore</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://flyamba.com/barcelona</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://flyamba.com/tokyo</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/lisbon</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/new-york</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/bali</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/cape-town</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/reykjavik</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/marrakech</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <url><loc>https://flyamba.com/barcelona/attractions</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/barcelona/restaurants</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/barcelona/hotels</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/barcelona/transport</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/barcelona/weather</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/barcelona/prices</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/barcelona/nightlife</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/barcelona/beaches</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+</urlset>
