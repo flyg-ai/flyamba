@@ -7,8 +7,9 @@ import type { BcnPlace } from "@/app/data/barcelona-places";
 
 const PLACEHOLDER = "/images/barcelona/placeholder.webp";
 
-const mapsUrl = (name: string) =>
-  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name} Barcelona`)}`;
+// Uses the place's own area/name (not a hardcoded city) so it works for every city.
+const mapsUrl = (name: string, area: string) =>
+  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(area ? `${name}, ${area}` : name)}`;
 
 // Derive the right-hand info cell label/value from whichever category field is set.
 function rightInfo(p: BcnPlace): { label: string; value: string } | null {
@@ -103,7 +104,7 @@ export function CategoryCard({ place }: { place: BcnPlace }) {
             </a>
           )}
           <a
-            href={mapsUrl(place.name)}
+            href={mapsUrl(place.name, place.area)}
             target="_blank"
             rel="nofollow noopener"
             aria-label={`${place.name} on Google Maps`}

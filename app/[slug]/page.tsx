@@ -9,7 +9,13 @@ import { usdStr } from "@/app/lib/format";
 
 // Static routes that must NOT be produced by this catch-all (they have their own
 // pages). Barcelona has the full static /barcelona guide with a sub-nav.
-const RESERVED = new Set(["barcelona", "about", "compare", "explore"]);
+const RESERVED = new Set([
+  "barcelona", "about", "compare", "explore",
+  // Cities with their own full static hub + subpages (must not be produced by
+  // the catch-all). rome/prague/athens/tenerife use distinct English slugs that
+  // aren't in the ported catalog, so they don't collide and aren't listed here.
+  "london", "paris", "amsterdam", "lisbon", "tokyo", "bangkok", "palma", "ibiza", "santorini",
+]);
 
 // Every rich destination plus every ported catalog destination gets a static page.
 export function generateStaticParams() {
