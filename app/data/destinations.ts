@@ -79,6 +79,8 @@ export type Destination = {
   airportName?: string;
   lowestPrice?: string; // display string incl. currency, e.g. "$128"
   coordinates?: { lat: number; lng: number };
+  // Per-category hero images for the /[slug]/[category] guide pages.
+  categoryImages?: Record<string, string>;
 
   summerTemp?: number;
   foodCostPerDay?: string;
@@ -137,6 +139,19 @@ export const destinations: Destination[] = [
     airportName: "Barcelona–El Prat Airport (BCN)",
     lowestPrice: "$128",
     coordinates: { lat: 41.3851, lng: 2.1734 },
+    categoryImages: {
+      attractions: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1600",
+      restaurants: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600",
+      hotels: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600",
+      transport: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1600",
+      prices: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=1600",
+      weather: "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=1600",
+      shopping: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600",
+      beaches: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600",
+      nightlife: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=1600",
+      "with-kids": "https://images.unsplash.com/photo-1484820540004-14229fe36ca4?w=1600",
+      "day-trips": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600",
+    },
     topAirlines: ["Vueling", "Iberia", "SAS", "Norwegian"],
     bestMonths: "May – June, September",
     airlines: [

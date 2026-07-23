@@ -21,6 +21,9 @@ const CATEGORY_LABELS: Record<string, string> = {
   prices: "Prices",
   nightlife: "Nightlife",
   beaches: "Beaches",
+  shopping: "Shopping",
+  "with-kids": "With kids",
+  "day-trips": "Day trips",
 };
 
 const labelFor = (c: string) => CATEGORY_LABELS[c] ?? c.charAt(0).toUpperCase() + c.slice(1);

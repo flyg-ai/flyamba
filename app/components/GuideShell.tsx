@@ -6,6 +6,7 @@ import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { BarcelonaSubNav } from "@/app/components/BarcelonaSubNav";
 import { FlightCTA } from "@/app/components/FlightCTA";
+import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
 import { ArrowRight } from "lucide-react";
 
@@ -63,6 +64,10 @@ export function GuideShell({
 
       {/* Related + CTA */}
       <section className="mx-auto max-w-4xl px-4 pb-20 sm:px-6 lg:px-8">
+        <div className="mb-10">
+          <AskAiWidget destination="Barcelona" heading="Have more questions? Ask our AI" />
+        </div>
+
         <FlightCTA />
 
         <h2 className="mt-14 font-serif text-2xl font-semibold text-foreground">More Barcelona guides</h2>

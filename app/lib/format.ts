@@ -12,3 +12,9 @@ export function usd(sek: number): number {
 export function usdStr(sek: number): string {
   return `$${usd(sek).toLocaleString()}`;
 }
+
+/** SEK → USD rounded to the nearest $5 (for price charts). */
+export function usd5(sek: number): number {
+  return Math.round(usd(sek) / 5) * 5;
+}
+

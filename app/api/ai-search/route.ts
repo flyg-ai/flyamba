@@ -56,7 +56,7 @@ function toLines(text: string): string[] {
 }
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
-  let body: { query?: string };
+  let body: { query?: string; destinationContext?: string };
   try {
     body = await req.json();
   } catch {
@@ -72,6 +72,13 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: "Missing ANTHROPIC_API_KEY" }, { status: 500 });
   }
 
+  // Optional destination context — biases the answer toward one city when the
+  // widget is embedded on a destination page.
+  const destination = (body?.destinationContext ?? "").trim().slice(0, 60);
+  const system = destination
+    ? `${SYSTEM_PROMPT}\n\nThe user is viewing the ${destination} destination page. Prioritize information about ${destination} in your responses, and lead with ${destination} in the matches when it is relevant.`
+    : SYSTEM_PROMPT;
+
   const client = new Anthropic({ apiKey });
 
   // Haiku 4.5: fast + cheap, ideal for this latency-sensitive matching over a
@@ -79,7 +86,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   const response = await client.messages.create({
     model: "claude-haiku-4-5",
     max_tokens: 700,
-    system: SYSTEM_PROMPT,
+    system,
     messages: [
       {
         role: "user",
