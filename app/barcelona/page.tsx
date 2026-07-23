@@ -293,9 +293,6 @@ export default function BarcelonaHub() {
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Guides &amp; inspiration</p>
               <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Latest Barcelona guides</h2>
             </div>
-            <Link href="/barcelona/guides" className="hidden items-center gap-1.5 text-sm font-semibold text-accent hover:underline sm:flex">
-              All guides <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             {latestGuides.map((g) => (

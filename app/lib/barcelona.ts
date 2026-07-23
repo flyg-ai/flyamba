@@ -35,4 +35,7 @@ export const BARCELONA_SUBPAGES: SubPage[] = [
   { slug: "guides", label: "Guides", emoji: "📖", blurb: "In-depth reads on planning, budgets and comparisons.", image: "/images/content/photo-1481627834876-b7833e8f5570.avif" },
 ];
 
-export const barcelonaHref = (slug: string) => (slug ? `/barcelona/${slug}` : "/barcelona");
+// The "guides" card/tab has no index page — it points at the hub's "Latest
+// guides" list section (/barcelona#guides), which links out to the 3 articles.
+export const barcelonaHref = (slug: string) =>
+  slug === "guides" ? "/barcelona#guides" : slug ? `/barcelona/${slug}` : "/barcelona";

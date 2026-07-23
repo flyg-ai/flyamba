@@ -22,7 +22,7 @@ export function GuideArticleView({ guide: g }: { guide: Guide }) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
       { "@type": "ListItem", position: 2, name: "Barcelona", item: `${SITE}/barcelona` },
-      { "@type": "ListItem", position: 3, name: "Guides", item: `${SITE}/barcelona/guides` },
+      { "@type": "ListItem", position: 3, name: "Guides", item: `${SITE}/barcelona#guides` },
       { "@type": "ListItem", position: 4, name: g.title, item: url },
     ],
   };
@@ -54,7 +54,7 @@ export function GuideArticleView({ guide: g }: { guide: Guide }) {
               items={[
                 { name: "Flyamba", href: "/" },
                 { name: "Barcelona", href: "/barcelona" },
-                { name: "Guides", href: "/barcelona/guides" },
+                { name: "Guides", href: "/barcelona#guides" },
                 { name: g.category },
               ]}
             />
@@ -95,7 +95,7 @@ export function GuideArticleView({ guide: g }: { guide: Guide }) {
         </div>
 
         <div className="mt-8">
-          <Link href="/barcelona/guides" className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
+          <Link href="/barcelona#guides" className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline">
             ← All Barcelona guides <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
