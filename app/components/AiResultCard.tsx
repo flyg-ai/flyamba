@@ -149,7 +149,7 @@ export function AiResultCard({
         {/* Prominent price */}
         <p className="font-serif text-2xl font-bold text-accent">
           from {usdStr(d.price)}
-          <span className="ml-1.5 align-middle text-xs font-normal text-muted-foreground">round trip</span>
+          <span className="ml-1.5 align-middle text-xs font-normal text-muted-foreground">one way</span>
         </p>
 
         {reason && <p className="text-sm leading-relaxed text-muted-foreground">{reason}</p>}

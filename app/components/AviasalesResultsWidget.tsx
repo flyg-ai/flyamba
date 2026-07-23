@@ -26,7 +26,7 @@ export function AviasalesResultsWidget({ toName, fromName }: Props) {
     container.innerHTML = "";
     const fromParam = fromName ? `from_name=${fromName}&` : "";
     const script = document.createElement("script");
-    script.src = `https://tpwdg.com/content?currency=usd&trs=508580&shmarker=711264.711264&powered_by=false&locale=en&${fromParam}to_name=${toName}&searchUrl=search.jetradar.com&show_header=false&limit=3&primary_color=FF6B35&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=4478`;
+    script.src = `https://tpwdg.com/content?currency=usd&trs=508580&shmarker=711264.711264&powered_by=false&locale=en&${fromParam}to_name=${toName}&searchUrl=search.jetradar.com&show_header=false&limit=5&primary_color=FF6B35&results_background_color=FFFFFF&form_background_color=FFFFFF&campaign_id=111&promo_id=4478`;
     script.async = true;
     script.charset = "utf-8";
     container.appendChild(script);
