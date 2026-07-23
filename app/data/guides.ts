@@ -1,5 +1,6 @@
 export interface Guide {
   slug: string;
+  path: string; // URL segment under /barcelona/, e.g. "best-time-to-visit"
   title: string;
   excerpt: string;
   destination: string;
@@ -13,6 +14,7 @@ export interface Guide {
 export const guides: Guide[] = [
   {
     slug: "best-time-to-visit-barcelona",
+    path: "best-time-to-visit",
     title: "Best Time to Visit Barcelona — Month by Month Guide",
     excerpt:
       "When is the perfect time to visit Barcelona? We break down weather, crowds, prices and events month by month so you can plan the ideal trip.",
@@ -62,6 +64,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "barcelona-budget-guide",
+    path: "budget-guide",
     title: "Barcelona on a Budget — 5-Day Itinerary Under $500",
     excerpt:
       "Explore Barcelona without breaking the bank. Our complete budget guide covers free attractions, cheap eats, affordable accommodation and money-saving tips.",
@@ -115,6 +118,7 @@ export const guides: Guide[] = [
   },
   {
     slug: "barcelona-vs-madrid",
+    path: "vs-madrid",
     title: "Barcelona vs Madrid — Which Spanish City Should You Visit?",
     excerpt:
       "Trying to choose between Barcelona and Madrid? We compare both cities on culture, food, nightlife, beaches, costs and flight options to help you decide.",
@@ -164,3 +168,10 @@ export function getGuidesByDestination(destination: string): Guide[] {
 export function getGuideBySlug(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);
 }
+
+export function getGuideByPath(path: string): Guide | undefined {
+  return guides.find((g) => g.path === path);
+}
+
+// Canonical URL for a guide article (now served as a Barcelona subpage).
+export const guideHref = (g: Guide) => `/barcelona/${g.path}`;

@@ -5,6 +5,10 @@ export const BARCELONA_KIWI_CTA =
   "https://tp.media/r?marker=711264&trs=508580&p=4478&u=" +
   encodeURIComponent("https://www.kiwi.com/en/search/results/anywhere/barcelona-el-prat-airport-barcelona-spain/anytime/no-return/");
 
+// Plain (non-affiliate) Skyscanner flight search to Barcelona. Linked with
+// rel="nofollow noopener" so we don't pass SEO equity to the aggregator.
+export const BARCELONA_SKYSCANNER_CTA = "https://www.skyscanner.com/flights/bcn/";
+
 export type SubPage = {
   slug: string; // path segment, e.g. "attractions" ("" for the hub/flights)
   label: string; // sub-nav label
@@ -25,6 +29,7 @@ export const BARCELONA_SUBPAGES: SubPage[] = [
   { slug: "shopping", label: "Shopping", emoji: "🛍️", blurb: "Luxury avenues, markets, vintage and souvenirs.", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400" },
   { slug: "beaches", label: "Beaches", emoji: "🏖️", blurb: "8 beaches from Barceloneta to Sitges.", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400" },
   { slug: "nightlife", label: "Nightlife", emoji: "🌙", blurb: "Best bars, clubs and rooftops by neighborhood.", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400" },
+  { slug: "events", label: "Events", emoji: "🎉", blurb: "Festivals, concerts and things to do month by month.", image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400" },
   { slug: "with-kids", label: "With kids", emoji: "👨‍👩‍👧", blurb: "Family activities, parks and practical tips.", image: "https://images.unsplash.com/photo-1484820540004-14229fe36ca4?w=400" },
   { slug: "day-trips", label: "Day trips", emoji: "🚆", blurb: "Montserrat, Sitges, Girona and the Costa Brava.", image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" },
   { slug: "guides", label: "Guides", emoji: "📖", blurb: "In-depth reads on planning, budgets and comparisons.", image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400" },

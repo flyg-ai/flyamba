@@ -9,8 +9,9 @@ import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
 import { CategoryGrid } from "@/app/components/CategoryGrid";
+import { BarcelonaHubNav } from "@/app/components/BarcelonaHubNav";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
-import { getGuidesByDestination } from "@/app/data/guides";
+import { getGuidesByDestination, guideHref } from "@/app/data/guides";
 import { SITE, airlineNames, lowestPriceStr } from "@/app/lib/destination-helpers";
 import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route, Clock } from "lucide-react";
@@ -156,8 +157,13 @@ export default function BarcelonaHub() {
         </div>
       </section>
 
+      {/* Sticky in-page sub-nav */}
+      <div className="mt-8">
+        <BarcelonaHubNav />
+      </div>
+
       {/* 3. Flight search widget */}
-      <section id="flight-search" className="mx-auto mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section id="flights" className="mx-auto mt-10 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <AviasalesWidget toName={d.tpName || ""} />
       </section>
 
@@ -182,7 +188,7 @@ export default function BarcelonaHub() {
       </section>
 
       {/* 5. Image category cards */}
-      <section className="mx-auto mt-14 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section id="explore" className="mx-auto mt-14 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Complete guide</p>
         <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Explore Barcelona</h2>
         <div className="mt-8">
@@ -192,7 +198,7 @@ export default function BarcelonaHub() {
 
       {/* 6. Price by month (USD) */}
       {usdMonths.length > 0 && (
-        <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
           <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Barcelona?</h2>
           <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
@@ -217,7 +223,7 @@ export default function BarcelonaHub() {
       )}
 
       {/* 7. Non-stop cities (USD) */}
-      <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
         <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Barcelona from {NON_STOP.length} cities</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -281,7 +287,7 @@ export default function BarcelonaHub() {
 
       {/* Latest guides */}
       {latestGuides.length > 0 && (
-        <section className="mx-auto mt-14 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <section id="guides" className="mx-auto mt-14 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Guides &amp; inspiration</p>
@@ -293,7 +299,7 @@ export default function BarcelonaHub() {
           </div>
           <div className="mt-6 grid gap-6 sm:grid-cols-3">
             {latestGuides.map((g) => (
-              <Link key={g.slug} href={`/guides/${g.slug}`} className="group overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant">
+              <Link key={g.slug} href={guideHref(g)} className="group overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant">
                 <div className="relative h-44 overflow-hidden">
                   <Image src={g.image} alt={g.title} fill sizes="(max-width:1024px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
                   <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-neutral-900">{g.category}</span>
@@ -317,7 +323,7 @@ export default function BarcelonaHub() {
       </section>
 
       {/* 11. Nearby European cities */}
-      <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+      <section id="nearby" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Nearby</p>
         <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Fly onward from Barcelona</h2>
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">

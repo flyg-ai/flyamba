@@ -1,7 +1,7 @@
 import { Plane, ArrowRight } from "lucide-react";
-import { BARCELONA_KIWI_CTA } from "@/app/lib/barcelona";
+import { BARCELONA_SKYSCANNER_CTA } from "@/app/lib/barcelona";
 
-/** Prominent "Find flights to Barcelona" CTA (Kiwi affiliate deep link). */
+/** Prominent "Find flights to Barcelona" CTA (Skyscanner, nofollow). */
 export function FlightCTA({
   label = "Find flights to Barcelona",
   className = "",
@@ -19,9 +19,9 @@ export function FlightCTA({
         Compare live fares across airlines and book direct — Barcelona from around $128.
       </p>
       <a
-        href={BARCELONA_KIWI_CTA}
+        href={BARCELONA_SKYSCANNER_CTA}
         target="_blank"
-        rel="noopener sponsored"
+        rel="nofollow noopener"
         className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-glow transition hover:scale-105"
       >
         {label} <ArrowRight className="h-4 w-4" />

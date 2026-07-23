@@ -1,8 +1,6 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { guides, getGuideBySlug } from "@/app/data/guides";
+import { guides, guideHref, type Guide } from "@/app/data/guides";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
@@ -10,32 +8,13 @@ import { FlightCTA } from "@/app/components/FlightCTA";
 import { SITE } from "@/app/lib/destination-helpers";
 import { Clock, ArrowRight } from "lucide-react";
 
-export function generateStaticParams() {
-  return guides.map((g) => ({ slug: g.slug }));
-}
-export const dynamicParams = false;
-
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const g = getGuideBySlug(slug);
-  if (!g) return { title: "Guide not found — Flyamba", robots: { index: false } };
-  const canonical = `${SITE}/guides/${g.slug}`;
-  return {
-    title: `${g.title} | Flyamba`,
-    description: g.excerpt,
-    alternates: { canonical },
-    openGraph: { title: g.title, description: g.excerpt, type: "article", url: canonical, images: [g.image] },
-    twitter: { card: "summary_large_image", images: [g.image] },
-  };
-}
-
-export default async function GuideArticle({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const g = getGuideBySlug(slug);
-  if (!g) notFound();
-
+/**
+ * Full guide article layout. Guides are served as Barcelona subpages
+ * (/barcelona/[path]); each static page passes its Guide here to render.
+ */
+export function GuideArticleView({ guide: g }: { guide: Guide }) {
   const related = guides.filter((x) => x.slug !== g.slug).slice(0, 3);
-  const url = `${SITE}/guides/${g.slug}`;
+  const url = `${SITE}${guideHref(g)}`;
 
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -103,7 +82,7 @@ export default async function GuideArticle({ params }: { params: Promise<{ slug:
         <h2 className="mt-14 font-serif text-2xl font-semibold text-foreground">More Barcelona guides</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-3">
           {related.map((r) => (
-            <Link key={r.slug} href={`/guides/${r.slug}`} className="group overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant">
+            <Link key={r.slug} href={guideHref(r)} className="group overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant">
               <div className="relative h-32 overflow-hidden">
                 <Image src={r.image} alt={r.title} fill sizes="(max-width:1024px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
               </div>

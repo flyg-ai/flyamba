@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { GuideShell } from "@/app/components/GuideShell";
-import { getGuidesByDestination } from "@/app/data/guides";
+import { getGuidesByDestination, guideHref } from "@/app/data/guides";
 import { SITE } from "@/app/lib/destination-helpers";
 import { Clock, ArrowRight } from "lucide-react";
 
@@ -26,7 +26,7 @@ export default function BarcelonaGuides() {
     >
       <div className="mt-8 grid gap-8">
         {guides.map((g) => (
-          <Link key={g.slug} href={`/guides/${g.slug}`} className="group grid gap-5 overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant sm:grid-cols-[minmax(0,1fr)_1.4fr]">
+          <Link key={g.slug} href={guideHref(g)} className="group grid gap-5 overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant sm:grid-cols-[minmax(0,1fr)_1.4fr]">
             <div className="relative h-48 overflow-hidden sm:h-full">
               <Image src={g.image} alt={g.title} fill sizes="(max-width:640px) 100vw, 40vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
             </div>
