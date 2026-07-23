@@ -16,7 +16,7 @@ export default function BarcelonaDayTrips() {
       active="day-trips"
       crumb="Day trips"
       h1="Best Day Trips from Barcelona"
-      heroImage="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=2000"
+      heroImage="/images/content/photo-1506905925346-21bda4d32df4.avif"
       intro="Barcelona is a superb base for exploring Catalonia. Within an hour or two by train you can reach a sawtooth mountain monastery, whitewashed beach towns, Roman ruins, a Game-of-Thrones film set and the vineyards that make Spain's best sparkling wine. Here are the five best day trips, with what to see, how to get there and how much time to set aside."
     >
       <GuideSection title="Montserrat — the obvious choice">

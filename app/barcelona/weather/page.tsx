@@ -33,7 +33,7 @@ export default function BarcelonaWeather() {
       active="weather"
       crumb="Weather"
       h1="Barcelona Weather by Month"
-      heroImage="https://images.unsplash.com/photo-1591792063115-a3e10eaa6a4b?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/barceloneta.avif"
       intro="Barcelona enjoys a mild Mediterranean climate with hot, dry summers and gentle, sunny winters — one of the reasons it's a year-round destination. Summers are for the beach, spring and autumn are perfect for sightseeing, and even winter rarely gets truly cold. Here's what to expect every month, and when to plan your trip."
     >
       <GuideSection title="Month-by-month climate">

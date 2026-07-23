@@ -14,25 +14,25 @@ export type SubPage = {
   label: string; // sub-nav label
   emoji: string;
   blurb: string; // one line for the "Explore Barcelona" cards
-  image: string; // Unsplash card image
+  image: string; // local card image (/images/content/...)
 };
 
 // Order drives the sub-nav tabs and the image category-card grid on the hub.
 export const BARCELONA_SUBPAGES: SubPage[] = [
-  { slug: "", label: "Flights", emoji: "✈️", blurb: "Cheap fares, price calendar and airlines.", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400" },
-  { slug: "attractions", label: "Attractions", emoji: "🎨", blurb: "20 best things to do, from Gaudí to the Gothic Quarter.", image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=400" },
-  { slug: "restaurants", label: "Restaurants", emoji: "🍽️", blurb: "Tapas bars, seafood, markets and fine dining.", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400" },
-  { slug: "hotels", label: "Hotels", emoji: "🏨", blurb: "Where to stay by neighborhood and budget.", image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=400" },
-  { slug: "transport", label: "Transport", emoji: "🚇", blurb: "Airport transfers, metro, buses, taxis and bikes.", image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400" },
-  { slug: "prices", label: "Prices", emoji: "💶", blurb: "Daily budgets, food, transport and entry fees.", image: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400" },
-  { slug: "weather", label: "Weather", emoji: "🌤️", blurb: "Month-by-month climate and the best time to visit.", image: "https://images.unsplash.com/photo-1504386106331-3e4e71712b38?w=400" },
-  { slug: "shopping", label: "Shopping", emoji: "🛍️", blurb: "Luxury avenues, markets, vintage and souvenirs.", image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400" },
-  { slug: "beaches", label: "Beaches", emoji: "🏖️", blurb: "8 beaches from Barceloneta to Sitges.", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400" },
-  { slug: "nightlife", label: "Nightlife", emoji: "🌙", blurb: "Best bars, clubs and rooftops by neighborhood.", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400" },
-  { slug: "events", label: "Events", emoji: "🎉", blurb: "Festivals, concerts and things to do month by month.", image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=400" },
-  { slug: "with-kids", label: "With kids", emoji: "👨‍👩‍👧", blurb: "Family activities, parks and practical tips.", image: "https://images.unsplash.com/photo-1484820540004-14229fe36ca4?w=400" },
-  { slug: "day-trips", label: "Day trips", emoji: "🚆", blurb: "Montserrat, Sitges, Girona and the Costa Brava.", image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" },
-  { slug: "guides", label: "Guides", emoji: "📖", blurb: "In-depth reads on planning, budgets and comparisons.", image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400" },
+  { slug: "", label: "Flights", emoji: "✈️", blurb: "Cheap fares, price calendar and airlines.", image: "/images/content/photo-1436491865332-7a61a109cc05.avif" },
+  { slug: "attractions", label: "Attractions", emoji: "🎨", blurb: "20 best things to do, from Gaudí to the Gothic Quarter.", image: "/images/content/photo-1539037116277-4db20889f2d4.avif" },
+  { slug: "restaurants", label: "Restaurants", emoji: "🍽️", blurb: "Tapas bars, seafood, markets and fine dining.", image: "/images/content/photo-1414235077428-338989a2e8c0.avif" },
+  { slug: "hotels", label: "Hotels", emoji: "🏨", blurb: "Where to stay by neighborhood and budget.", image: "/images/content/photo-1566073771259-6a8506099945.avif" },
+  { slug: "transport", label: "Transport", emoji: "🚇", blurb: "Airport transfers, metro, buses, taxis and bikes.", image: "/images/content/photo-1544620347-c4fd4a3d5957.avif" },
+  { slug: "prices", label: "Prices", emoji: "💶", blurb: "Daily budgets, food, transport and entry fees.", image: "/images/content/photo-1579621970563-ebec7560ff3e.avif" },
+  { slug: "weather", label: "Weather", emoji: "🌤️", blurb: "Month-by-month climate and the best time to visit.", image: "/images/content/photo-1504386106331-3e4e71712b38.avif" },
+  { slug: "shopping", label: "Shopping", emoji: "🛍️", blurb: "Luxury avenues, markets, vintage and souvenirs.", image: "/images/content/photo-1483985988355-763728e1935b.avif" },
+  { slug: "beaches", label: "Beaches", emoji: "🏖️", blurb: "8 beaches from Barceloneta to Sitges.", image: "/images/content/photo-1507525428034-b723cf961d3e.avif" },
+  { slug: "nightlife", label: "Nightlife", emoji: "🌙", blurb: "Best bars, clubs and rooftops by neighborhood.", image: "/images/content/photo-1516450360452-9312f5e86fc7.avif" },
+  { slug: "events", label: "Events", emoji: "🎉", blurb: "Festivals, concerts and things to do month by month.", image: "/images/content/photo-1533174072545-7a4b6ad7a6c3.avif" },
+  { slug: "with-kids", label: "With kids", emoji: "👨‍👩‍👧", blurb: "Family activities, parks and practical tips.", image: "/images/content/photo-1484820540004-14229fe36ca4.avif" },
+  { slug: "day-trips", label: "Day trips", emoji: "🚆", blurb: "Montserrat, Sitges, Girona and the Costa Brava.", image: "/images/content/photo-1506905925346-21bda4d32df4.avif" },
+  { slug: "guides", label: "Guides", emoji: "📖", blurb: "In-depth reads on planning, budgets and comparisons.", image: "/images/content/photo-1481627834876-b7833e8f5570.avif" },
 ];
 
 export const barcelonaHref = (slug: string) => (slug ? `/barcelona/${slug}` : "/barcelona");

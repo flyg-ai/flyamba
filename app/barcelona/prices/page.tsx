@@ -16,7 +16,7 @@ export default function BarcelonaPrices() {
       active="prices"
       crumb="Prices"
       h1="How Much Does Barcelona Cost?"
-      heroImage="https://images.unsplash.com/photo-1512909006721-3d6018887383?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/photo-1512909006721-3d6018887383.avif"
       intro="Barcelona is one of the better-value major European cities — cheaper than Paris or London, with excellent public transport and affordable food if you eat where the locals do. Here's a realistic breakdown of what a day costs at every level, plus typical prices for food, transport, attractions and hotels so you can plan your budget with confidence."
     >
       <GuideSection title="Daily budget at a glance">

@@ -21,7 +21,7 @@ export default function BarcelonaGuides() {
       active="guides"
       crumb="Guides"
       h1="Barcelona Travel Guides"
-      heroImage="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=2000"
+      heroImage="/images/content/photo-1481627834876-b7833e8f5570.avif"
       intro="Go deeper with our long-form Barcelona guides — from picking the perfect month and travelling on a budget to deciding between Barcelona and Madrid. Each one is a practical, in-depth read to help you plan a smarter, cheaper and more memorable trip."
     >
       <div className="mt-8 grid gap-8">

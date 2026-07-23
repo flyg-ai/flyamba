@@ -52,7 +52,7 @@ export default function BarcelonaAttractions() {
       active="attractions"
       crumb="Attractions"
       h1="Best Things to Do in Barcelona"
-      heroImage="https://images.unsplash.com/photo-1583779457094-ab6f8be4a1c8?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/sagrada-familia.avif"
       intro="Barcelona packs more must-see sights into a walkable city than almost anywhere in Europe — from Gaudí's fantastical architecture and world-class museums to Mediterranean beaches and buzzing food markets. Here are the 20 attractions worth building your trip around, with prices, opening hours and tips to skip the queues."
     >
       {ATTRACTIONS.map((a) => (

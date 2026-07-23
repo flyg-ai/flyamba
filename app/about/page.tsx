@@ -41,7 +41,7 @@ export default function About() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=2000&q=80"
+            src="/images/content/photo-1436491865332-7a61a109cc05.avif"
             alt="Plane wing over clouds"
             className="h-[420px] w-full rounded-[2rem] object-cover shadow-elegant"
           />

@@ -36,7 +36,7 @@ export default function BarcelonaRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Barcelona"
-      heroImage="https://images.unsplash.com/photo-1555992336-fb0d29498b13?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/photo-1555992336-fb0d29498b13.avif"
       intro="Barcelona is one of Europe's great eating cities — a place where a €2 montadito at a tiled bar and a multi-course tasting menu can both be the meal of the trip. This guide covers the full range: classic tapas bars, harbour-side seafood, buzzing food markets, wallet-friendly bites and the fine dining that put the city on the world map."
     >
       <GuideSection title="How eating out works in Barcelona">

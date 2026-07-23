@@ -39,7 +39,7 @@ export default function BarcelonaBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Barcelona's Best Beaches"
-      heroImage="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/photo-1523531294919-4bcd7c65e216.avif"
       intro="Few big cities put a proper beach 20 minutes from the medieval old town. Barcelona has more than four kilometres of golden sand right in the city, plus quieter stretches and resort towns a short train ride away. Here are the eight best beaches — from the buzzing centre to family-friendly sands and the perfect day-trip escape — with facilities and how to reach each."
     >
       {BEACHES.map((b) => (

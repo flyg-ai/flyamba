@@ -16,7 +16,7 @@ export default function BarcelonaNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Barcelona Nightlife Guide"
-      heroImage="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/photo-1514525253161-7a46d19cd819.avif"
       intro="Barcelona goes out late and hard. The night starts with vermouth or cocktails around 20:00, dinner stretches past 22:00, bars fill after midnight and clubs don't get going until 02:00 — often running to 06:00. From cosy El Born cocktail dens to vast beachfront superclubs, here's where to go and how to time your night like a local."
     >
       <GuideSection title="Best neighborhoods for a night out">

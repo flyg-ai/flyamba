@@ -16,7 +16,7 @@ export default function BarcelonaHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Barcelona"
-      heroImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/photo-1566073771259-6a8506099945.avif"
       intro="Barcelona is compact and superbly connected, so almost any central neighborhood puts you within a short metro ride of the sights. The bigger question is what kind of trip you want: grand modernista boulevards, medieval lanes, beach life or a local village feel. This guide breaks down the best areas to stay and what to expect at every budget."
     >
       <GuideSection title="Best neighborhoods to stay in">

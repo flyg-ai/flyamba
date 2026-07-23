@@ -17,7 +17,7 @@ export default function BarcelonaTransport() {
       active="transport"
       crumb="Transport"
       h1="Getting Around Barcelona"
-      heroImage="https://images.unsplash.com/photo-1554072675-66db59dba46f?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/photo-1554072675-66db59dba46f.avif"
       intro="Barcelona has one of Europe's best public transport networks — 12 metro lines, hundreds of bus routes, trams, the Aerobus and city bikes — and a compact centre that's a joy to walk. This guide covers everything from getting in from the airport to which ticket saves you the most, plus the pickpocket warnings every visitor should know."
     >
       <GuideSection title="From the airport to the city">

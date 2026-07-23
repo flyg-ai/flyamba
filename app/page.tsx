@@ -45,9 +45,9 @@ const TRIP_TYPES = [
 ];
 
 const ARTICLES = [
-  { title: "48 hours in Barcelona: the perfect weekend", excerpt: "Gaudí, tapas and beach time — how to make the most of a short city break.", category: "City guide", image: "https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=800&q=80" },
-  { title: "When to book flights for the cheapest fares", excerpt: "The data-backed sweet spot for booking, plus the days and months that save the most.", category: "Tips", image: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80" },
-  { title: "10 warm-weather escapes for winter sun", excerpt: "Where to fly when the days get short — from the Canaries to Southeast Asia.", category: "Inspiration", image: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?auto=format&fit=crop&w=800&q=80" },
+  { title: "48 hours in Barcelona: the perfect weekend", excerpt: "Gaudí, tapas and beach time — how to make the most of a short city break.", category: "City guide", image: "/images/content/photo-1583422409516-2895a77efded.avif" },
+  { title: "When to book flights for the cheapest fares", excerpt: "The data-backed sweet spot for booking, plus the days and months that save the most.", category: "Tips", image: "/images/content/photo-1436491865332-7a61a109cc05.avif" },
+  { title: "10 warm-weather escapes for winter sun", excerpt: "Where to fly when the days get short — from the Canaries to Southeast Asia.", category: "Inspiration", image: "/images/content/photo-1512100356356-de1b84283e18.avif" },
 ];
 
 // 15 "Flights to X" links — the 8 catalog cities (real pages) plus popular
@@ -79,7 +79,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative isolate h-[92vh] min-h-[640px] w-full overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=80"
+          src="/images/content/photo-1507525428034-b723cf961d3e.avif"
           alt="Aerial view of a tropical coastline"
           fill
           priority
@@ -237,7 +237,7 @@ export default function Home() {
       {/* Compare promo */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="relative isolate overflow-hidden rounded-[2.5rem] border border-border">
-          <Image src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=2000&q=80" alt="Two travelers comparing maps" fill sizes="100vw" className="object-cover" />
+          <Image src="/images/content/photo-1488646953014-85cb44e25828.avif" alt="Two travelers comparing maps" fill sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/25" />
           <div className="relative max-w-xl p-10 sm:p-16">
             <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/80">

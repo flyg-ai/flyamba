@@ -22,7 +22,7 @@ export const guides: Guide[] = [
     category: "Planning",
     readTime: "6 min",
     publishedAt: "2026-07-01",
-    image: "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200",
+    image: "/images/content/photo-1539037116277-4db20889f2d4.avif",
     content: `
 <p>Barcelona is a genuine year-round destination — one of the few major European cities where you can sightsee in shorts in October and still find sunshine in January. But the <strong>best time to visit Barcelona</strong> depends entirely on what you want from your trip: beach days and warm sea, or empty museums and cheap flights. This month-by-month guide covers the weather, crowds, prices and events so you can pick the perfect window.</p>
 
@@ -72,7 +72,7 @@ export const guides: Guide[] = [
     category: "Budget",
     readTime: "8 min",
     publishedAt: "2026-07-05",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200",
+    image: "/images/content/photo-1558618666-fcd25c85cd64.avif",
     content: `
 <p>Barcelona has a reputation as a pricey city break, but that's mostly a myth for anyone willing to plan a little. With free attractions, market lunches, cheap public transport and smart timing, you can experience the very best of the city — Gaudí, tapas, beaches and nightlife — for well under $100 a day. Here's a complete <strong>Barcelona budget guide</strong>, including a five-day itinerary that comes in under $500 excluding flights.</p>
 
@@ -126,7 +126,7 @@ export const guides: Guide[] = [
     category: "Comparison",
     readTime: "7 min",
     publishedAt: "2026-07-10",
-    image: "https://images.unsplash.com/photo-1543785734-4b6e564642f8?w=1200",
+    image: "/images/content/photo-1543785734-4b6e564642f8.avif",
     content: `
 <p>Barcelona and Madrid are Spain's two great cities, and choosing between them is one of the happiest dilemmas in European travel. Both are world-class, but they offer genuinely different experiences: one is a coastal, design-obsessed Catalan capital with a beach; the other a grand, high-energy Spanish capital of art and late nights. Here's an honest <strong>Barcelona vs Madrid</strong> comparison across the things that matter, so you can pick the right city for your trip.</p>
 

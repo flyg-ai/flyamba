@@ -16,7 +16,7 @@ export default function BarcelonaShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Barcelona"
-      heroImage="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=2000"
+      heroImage="/images/content/photo-1483985988355-763728e1935b.avif"
       intro="Barcelona is one of Europe's great shopping cities — a place where flagship luxury boutiques on a modernista boulevard sit minutes from medieval lanes full of independent designers, and where century-old food markets outshine any mall. Whether you're after Spanish fashion, local craft, vintage finds or edible souvenirs, here's where to go, area by area."
     >
       <GuideSection title="Passeig de Gràcia — luxury & flagships">

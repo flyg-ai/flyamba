@@ -141,7 +141,7 @@ export default function BarcelonaEvents() {
       active="events"
       crumb="Events"
       h1="Barcelona Events & Festivals 2026"
-      heroImage="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=2000&q=80"
+      heroImage="/images/content/photo-1533174072545-7a4b6ad7a6c3.avif"
       intro="Barcelona throws a party in every season. From the books-and-roses romance of Sant Jordi in spring to the fire, music and human towers of La Mercè in autumn, the city's calendar is packed with world-class festivals and free neighbourhood celebrations. Here's the complete 2026 guide to Barcelona's biggest events — the signature festivals worth planning a trip around, plus a full month-by-month calendar — so you can time your flights to catch the city at its most exciting."
     >
       {jsonLd().map((s, i) => (

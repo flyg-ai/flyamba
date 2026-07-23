@@ -31,7 +31,7 @@ export default function BarcelonaWithKids() {
       active="with-kids"
       crumb="With kids"
       h1="Barcelona with Kids"
-      heroImage="https://images.unsplash.com/photo-1484820540004-14229fe36ca4?w=2000"
+      heroImage="/images/content/photo-1484820540004-14229fe36ca4.avif"
       intro="Barcelona is a dream family destination: a compact, walkable city with warm weather, sandy beaches, big green parks and a surprising number of attractions built for children. Add welcoming, child-friendly restaurants and excellent public transport, and it's easy to keep everyone happy. Here are the best things to do with kids, where to base yourselves, and the practical tips that make travelling with children stress-free."
     >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd()).replace(/</g, "\\u003c") }} />

@@ -69,19 +69,19 @@ const NON_STOP = [
 ];
 
 const ATTRACTION_PREVIEW = [
-  { name: "Sagrada Família", blurb: "Gaudí's unfinished basilica — Barcelona's defining landmark.", image: "https://images.unsplash.com/photo-1583779457094-ab6f8be4a1c8?w=800" },
-  { name: "Park Güell", blurb: "Mosaic terraces and gingerbread gatehouses with city views.", image: "https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=800" },
-  { name: "Gothic Quarter", blurb: "Medieval lanes, hidden squares and Roman remains.", image: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?w=800" },
+  { name: "Sagrada Família", blurb: "Gaudí's unfinished basilica — Barcelona's defining landmark.", image: "/images/content/sagrada-familia.avif" },
+  { name: "Park Güell", blurb: "Mosaic terraces and gingerbread gatehouses with city views.", image: "/images/content/photo-1509840841025-9088ba78a826.avif" },
+  { name: "Gothic Quarter", blurb: "Medieval lanes, hidden squares and Roman remains.", image: "/images/content/photo-1523531294919-4bcd7c65e216.avif" },
 ];
 const EAT_PREVIEW = [
-  { name: "Bar Cañete", blurb: "Buzzing marble-counter tapas in El Raval.", image: "https://images.unsplash.com/photo-1555992336-fb0d29498b13?w=800" },
-  { name: "La Boqueria", blurb: "The famous market's tucked-away seafood bars.", image: "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800" },
-  { name: "Can Solé", blurb: "Century-old paella and seafood in Barceloneta.", image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=800" },
+  { name: "Bar Cañete", blurb: "Buzzing marble-counter tapas in El Raval.", image: "/images/content/photo-1555992336-fb0d29498b13.avif" },
+  { name: "La Boqueria", blurb: "The famous market's tucked-away seafood bars.", image: "/images/content/photo-1414235077428-338989a2e8c0.avif" },
+  { name: "Can Solé", blurb: "Century-old paella and seafood in Barceloneta.", image: "/images/content/photo-1512058564366-18510be2db19.avif" },
 ];
 const BEACH_PREVIEW = [
-  { name: "Barceloneta", blurb: "The city's most central, liveliest beach.", image: "https://images.unsplash.com/photo-1591792063115-a3e10eaa6a4b?w=800" },
-  { name: "Bogatell", blurb: "Wide, calmer and popular with locals.", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" },
-  { name: "Sitges", blurb: "17 beaches in a charming town, 40 min south.", image: "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=800" },
+  { name: "Barceloneta", blurb: "The city's most central, liveliest beach.", image: "/images/content/barceloneta.avif" },
+  { name: "Bogatell", blurb: "Wide, calmer and popular with locals.", image: "/images/content/photo-1507525428034-b723cf961d3e.avif" },
+  { name: "Sitges", blurb: "17 beaches in a charming town, 40 min south.", image: "/images/content/photo-1520454974749-611b7248ffdb.avif" },
 ];
 
 const NEARBY = [
