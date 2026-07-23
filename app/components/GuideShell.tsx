@@ -22,6 +22,7 @@ export function GuideShell({
   heroImage,
   intro,
   children,
+  wide = false,
 }: {
   active: string; // subpage slug, e.g. "attractions"
   crumb: string; // breadcrumb tail + used for related-links exclusion
@@ -29,6 +30,7 @@ export function GuideShell({
   heroImage: string;
   intro: string;
   children: ReactNode;
+  wide?: boolean; // widen the content column (for card-grid category pages)
 }) {
   const related = BARCELONA_SUBPAGES.filter((p) => p.slug && p.slug !== active).slice(0, 6);
 
@@ -57,7 +59,7 @@ export function GuideShell({
       <BarcelonaSubNav active={active} />
 
       {/* Content */}
-      <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6 lg:px-8">
+      <article className={`mx-auto px-4 py-14 sm:px-6 lg:px-8 ${wide ? "max-w-6xl" : "max-w-3xl"}`}>
         <p className="text-lg leading-relaxed text-muted-foreground">{intro}</p>
         {children}
       </article>
