@@ -142,7 +142,7 @@ export function DestinationDetail({
                 <span className="hidden h-1 w-1 rounded-full bg-muted-foreground sm:inline" />
                 <span>{d.flightTime ?? `${d.avgFlightHours}h`}</span>
                 <span className="hidden h-1 w-1 rounded-full bg-muted-foreground sm:inline" />
-                <span>Direct flights</span>
+                <span>Nonstop flights</span>
               </div>
               <a href="#flight-search" className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-glow transition hover:scale-[1.02]">
                 Search flights <ArrowRight className="h-4 w-4" />

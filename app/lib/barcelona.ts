@@ -2,7 +2,8 @@
 
 // Affiliate deep link to a Barcelona flight search (Kiwi via Travelpayouts).
 export const BARCELONA_KIWI_CTA =
-  "https://tp.media/r?marker=711264&trs=508580&p=4478&u=https%3A%2F%2Fwww.kiwi.com%2Fen%2Fsearch%2Fresults%2Fanywhere%2Fbarcelona-el-prat-airport-barcelona-spain%2Fanytime%2Fno-return%2F";
+  "https://tp.media/r?marker=711264&trs=508580&p=4478&u=" +
+  encodeURIComponent("https://www.kiwi.com/en/search/results/anywhere/barcelona-el-prat-airport-barcelona-spain/anytime/no-return/");
 
 export type SubPage = {
   slug: string; // path segment, e.g. "attractions" ("" for the hub/flights)
@@ -26,6 +27,7 @@ export const BARCELONA_SUBPAGES: SubPage[] = [
   { slug: "nightlife", label: "Nightlife", emoji: "🌙", blurb: "Best bars, clubs and rooftops by neighborhood.", image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=400" },
   { slug: "with-kids", label: "With kids", emoji: "👨‍👩‍👧", blurb: "Family activities, parks and practical tips.", image: "https://images.unsplash.com/photo-1484820540004-14229fe36ca4?w=400" },
   { slug: "day-trips", label: "Day trips", emoji: "🚆", blurb: "Montserrat, Sitges, Girona and the Costa Brava.", image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400" },
+  { slug: "guides", label: "Guides", emoji: "📖", blurb: "In-depth reads on planning, budgets and comparisons.", image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400" },
 ];
 
 export const barcelonaHref = (slug: string) => (slug ? `/barcelona/${slug}` : "/barcelona");

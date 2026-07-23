@@ -25,4 +25,9 @@
   <url><loc>https://flyamba.com/barcelona/shopping</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://flyamba.com/barcelona/with-kids</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://flyamba.com/barcelona/day-trips</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://flyamba.com/barcelona/guides</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <url><loc>https://flyamba.com/guides/best-time-to-visit-barcelona</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/guides/barcelona-budget-guide</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/guides/barcelona-vs-madrid</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>

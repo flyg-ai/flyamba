@@ -52,7 +52,7 @@ export function HomeCard({
         <p className="text-xs uppercase tracking-[0.2em] text-white/70">{d.country}</p>
         <h3 className={`mt-1 font-serif font-semibold ${featured ? "text-4xl sm:text-5xl" : "text-2xl"}`}>{d.city}</h3>
         <p className="mt-1 flex items-center gap-1.5 text-xs text-white/80">
-          <Plane className="h-3.5 w-3.5" /> {d.flightTime ?? `${d.avgFlightHours}h`} · direct
+          <Plane className="h-3.5 w-3.5" /> {d.flightTime ?? `${d.avgFlightHours}h`} · nonstop
         </p>
       </div>
     </Link>

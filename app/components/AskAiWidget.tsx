@@ -2,63 +2,67 @@
 
 import { useState } from "react";
 import { Loader2, Send, Sparkles } from "lucide-react";
-import type { AiSearchResult } from "@/app/lib/ai-search-types";
 
 /**
- * "Ask AI about {destination}" widget. Calls /api/ai-search with a
- * destinationContext so answers focus on the current city, and shows the
- * response inline (matches + reasons).
+ * "Ask AI about {destination}" widget. Calls /api/destination-chat and shows a
+ * concise prose answer. Suggested-question chips populate the input and ask.
  */
 export function AskAiWidget({
   destination,
   heading = `Ask AI about ${destination}`,
   subtext = "Get personalized advice about flights, weather, attractions and more.",
-  compact = false,
 }: {
   destination: string;
   heading?: string;
   subtext?: string;
-  compact?: boolean;
 }) {
   const [value, setValue] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<AiSearchResult | null>(null);
+  const [answer, setAnswer] = useState<string | null>(null);
+  const [asked, setAsked] = useState<string | null>(null);
 
   async function ask(q: string) {
-    const query = q.trim();
-    if (!query || loading) return;
+    const question = q.trim();
+    if (!question || loading) return;
+    setValue(question);
     setLoading(true);
     setError(null);
+    setAsked(question);
     try {
-      const res = await fetch("/api/ai-search", {
+      const res = await fetch("/api/destination-chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query, destinationContext: destination }),
+        body: JSON.stringify({ question, destination }),
       });
       if (!res.ok) {
         const b = (await res.json().catch(() => null)) as { error?: string } | null;
         throw new Error(b?.error ?? "Something went wrong. Please try again.");
       }
-      setResult((await res.json()) as AiSearchResult);
+      const data = (await res.json()) as { answer?: string };
+      setAnswer(data.answer ?? "");
     } catch (err) {
       setError(err instanceof Error ? err.message : "Something went wrong.");
-      setResult(null);
+      setAnswer(null);
     } finally {
       setLoading(false);
     }
   }
 
-  const suggestions = compact
-    ? [`Best time to visit ${destination}?`, `Is ${destination} expensive?`]
-    : [`Best time to visit ${destination}?`, `What should I not miss?`, `Is ${destination} good for families?`];
+  const suggestions = [
+    `Best time to visit ${destination}?`,
+    "What should I not miss?",
+    `Is ${destination} good for families?`,
+    `How much does ${destination} cost per day?`,
+    `Which airlines fly to ${destination} from the US?`,
+  ];
 
   return (
-    <div className={`rounded-3xl border border-border bg-gradient-to-br from-accent/10 via-card to-card p-6 sm:p-8`}>
+    <div className="rounded-3xl border border-border bg-gradient-to-br from-accent/10 via-card to-card p-6 sm:p-8">
       <div className="inline-flex items-center gap-2 rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent">
         <Sparkles className="h-3.5 w-3.5" /> {heading}
       </div>
-      {!compact && <p className="mt-3 text-muted-foreground">{subtext}</p>}
+      <p className="mt-3 text-muted-foreground">{subtext}</p>
 
       <form
         onSubmit={(e) => {
@@ -87,10 +91,8 @@ export function AskAiWidget({
         {suggestions.map((s) => (
           <button
             key={s}
-            onClick={() => {
-              setValue(s);
-              void ask(s);
-            }}
+            type="button"
+            onClick={() => void ask(s)}
             className="rounded-full border border-border bg-card px-3 py-1.5 text-xs text-muted-foreground transition hover:border-accent hover:text-accent"
           >
             {s}
@@ -100,19 +102,19 @@ export function AskAiWidget({
 
       {error && <p className="mt-4 text-sm text-destructive">{error}</p>}
 
-      {result && !error && (
-        <div className="mt-5 space-y-3">
-          {result.matches.length > 0 ? (
-            result.matches.map((m) => (
-              <div key={m.slug} className="rounded-2xl border border-border bg-card p-4">
-                <p className="text-sm font-semibold text-foreground">{m.city}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{m.reason}</p>
-              </div>
-            ))
-          ) : (
-            <p className="text-sm text-muted-foreground">
-              Try describing what you want to know about {destination} a little differently.
+      {(loading || answer) && !error && (
+        <div className="mt-5 rounded-2xl border border-border bg-card p-5">
+          {asked && <p className="mb-3 text-sm font-semibold text-foreground">{asked}</p>}
+          {loading ? (
+            <p className="flex items-center gap-2 text-sm text-muted-foreground">
+              <Loader2 className="h-4 w-4 animate-spin" /> Thinking…
             </p>
+          ) : (
+            <div className="space-y-3 text-sm leading-relaxed text-muted-foreground">
+              {(answer ?? "").split(/\n\n+/).filter(Boolean).map((p, i) => (
+                <p key={i}>{p}</p>
+              ))}
+            </div>
           )}
         </div>
       )}

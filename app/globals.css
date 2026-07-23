@@ -141,3 +141,14 @@
   background-clip: text;
   color: transparent;
 }
+
+/* Article body rendered from guide HTML content. */
+.guide-prose { color: var(--muted-foreground); line-height: 1.75; }
+.guide-prose h2 { font-family: var(--font-serif); color: var(--foreground); font-size: 1.6rem; font-weight: 600; margin: 2.2rem 0 0.9rem; letter-spacing: -0.02em; }
+.guide-prose h3 { font-family: var(--font-serif); color: var(--foreground); font-size: 1.2rem; font-weight: 600; margin: 1.4rem 0 0.6rem; }
+.guide-prose p { margin: 0 0 1rem; font-size: 1.02rem; }
+.guide-prose ul { margin: 0 0 1.2rem; padding-left: 1.4rem; list-style: disc; }
+.guide-prose li { margin: 0 0 0.4rem; }
+.guide-prose strong { color: var(--foreground); font-weight: 600; }
+.guide-prose a { color: var(--accent); text-decoration: none; }
+.guide-prose a:hover { text-decoration: underline; }

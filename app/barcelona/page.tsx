@@ -8,10 +8,12 @@ import { Footer } from "@/app/components/Footer";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
+import { CategoryGrid } from "@/app/components/CategoryGrid";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
+import { getGuidesByDestination } from "@/app/data/guides";
 import { SITE, airlineNames, lowestPriceStr } from "@/app/lib/destination-helpers";
 import { usd5, usdStr } from "@/app/lib/format";
-import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
+import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route, Clock } from "lucide-react";
 
 const d = getDestination("barcelona")!;
 
@@ -110,6 +112,7 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
 export default function BarcelonaHub() {
   if (!d) notFound();
   const categories = BARCELONA_SUBPAGES.filter((p) => p.slug);
+  const latestGuides = getGuidesByDestination("barcelona");
   const months = d.monthlyPrices ?? [];
   const usdMonths = months.map((m) => ({ month: m.month, price: usd5(m.price) }));
   const min = Math.min(...usdMonths.map((m) => m.price));
@@ -140,14 +143,14 @@ export default function BarcelonaHub() {
         </div>
       </section>
 
-      {/* 2. Flight stats bar */}
-      <section className="mx-auto -mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-3xl border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
+      {/* 2. Flight stats bar — below the hero, not overlapping */}
+      <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
           <span>from <span className="font-serif text-lg text-accent">{usdStr(d.price)}</span></span>
           <span className="text-muted-foreground/40">•</span>
           <span>{d.flightTime}</span>
           <span className="text-muted-foreground/40">•</span>
-          <span>Direct flights available</span>
+          <span>Nonstop flights worldwide</span>
           <span className="text-muted-foreground/40">•</span>
           <span className="inline-flex items-center gap-1"><Plane className="h-4 w-4 text-accent" /> {d.iata}</span>
         </div>
@@ -182,17 +185,8 @@ export default function BarcelonaHub() {
       <section className="mx-auto mt-14 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Complete guide</p>
         <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Explore Barcelona</h2>
-        <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-3">
-          {categories.map((c) => (
-            <Link key={c.slug} href={barcelonaHref(c.slug)} className="group relative block h-[180px] overflow-hidden rounded-3xl border border-border">
-              <Image src={c.image} alt={`Barcelona ${c.label}`} fill sizes="(max-width:1024px) 50vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-              <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4 text-white">
-                <span className="font-serif text-xl font-semibold">{c.label}</span>
-                <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
-              </div>
-            </Link>
-          ))}
+        <div className="mt-8">
+          <CategoryGrid categories={categories} />
         </div>
       </section>
 
@@ -231,7 +225,7 @@ export default function BarcelonaHub() {
             <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
               <div>
                 <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → BCN · direct</p>
+                <p className="text-xs text-muted-foreground">{r.iata} → BCN · nonstop</p>
               </div>
               <p className="font-serif text-2xl text-accent">${r.price}</p>
             </div>
@@ -284,6 +278,38 @@ export default function BarcelonaHub() {
         </div>
         <PreviewGrid items={BEACH_PREVIEW} />
       </section>
+
+      {/* Latest guides */}
+      {latestGuides.length > 0 && (
+        <section className="mx-auto mt-14 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Guides &amp; inspiration</p>
+              <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Latest Barcelona guides</h2>
+            </div>
+            <Link href="/barcelona/guides" className="hidden items-center gap-1.5 text-sm font-semibold text-accent hover:underline sm:flex">
+              All guides <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="mt-6 grid gap-6 sm:grid-cols-3">
+            {latestGuides.map((g) => (
+              <Link key={g.slug} href={`/guides/${g.slug}`} className="group overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant">
+                <div className="relative h-44 overflow-hidden">
+                  <Image src={g.image} alt={g.title} fill sizes="(max-width:1024px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
+                  <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-neutral-900">{g.category}</span>
+                </div>
+                <div className="p-5">
+                  <h3 className="font-serif text-lg font-semibold leading-tight text-foreground">{g.title}</h3>
+                  <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{g.excerpt}</p>
+                  <p className="mt-3 inline-flex items-center gap-1.5 text-xs text-muted-foreground">
+                    <Clock className="h-3.5 w-3.5" /> {g.readTime} read
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">

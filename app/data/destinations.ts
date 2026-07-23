@@ -166,7 +166,7 @@ export const destinations: Destination[] = [
       { icon: "☀️", text: "300+ sunny days per year" },
       { icon: "🏖️", text: "Beautiful beaches 20 min from city center" },
       { icon: "🍷", text: "World-class food & nightlife" },
-      { icon: "✈️", text: "Direct flights from major European cities" },
+      { icon: "✈️", text: "Nonstop flights from major cities worldwide" },
     ],
     weather: weatherFor([11, 12, 14, 16, 20, 24, 27, 27, 24, 20, 15, 12]),
     thingsToDo: [
