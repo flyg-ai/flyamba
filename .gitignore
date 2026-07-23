@@ -39,3 +39,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# --- Destination image library (flyg.ai import) ---
+# ~1010 flights-* images (144MB) live on disk but are NOT tracked.
+# Only images referenced in the codebase are committed (negated below).
+/public/images/destinations/flights-*
+!/public/images/destinations/flights-bali-thumb.avif
+!/public/images/destinations/flights-bali.avif
+!/public/images/destinations/flights-barcelona-thumb.avif
+!/public/images/destinations/flights-barcelona.avif
+!/public/images/destinations/flights-girona.avif
+!/public/images/destinations/flights-lisbon-thumb.avif
+!/public/images/destinations/flights-lisbon.avif
+!/public/images/destinations/flights-marrakech-thumb.avif
+!/public/images/destinations/flights-marrakech.avif
+!/public/images/destinations/flights-new-york-thumb.avif
+!/public/images/destinations/flights-new-york.avif
+!/public/images/destinations/flights-reykjavik-thumb.avif
+!/public/images/destinations/flights-reykjavik.avif
+!/public/images/destinations/flights-sitges.avif
+!/public/images/destinations/flights-tokyo-thumb.avif
+!/public/images/destinations/flights-tokyo.avif
+!/public/images/destinations/flights-ubud.avif
