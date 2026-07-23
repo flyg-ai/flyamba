@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
-import { AISearchBar } from "@/app/components/AISearchBar";
+import { HomeHero } from "@/app/components/HomeHero";
 import { HowItWorks } from "@/app/components/HowItWorks";
 import { HomeCard } from "@/app/components/HomeCard";
 import { Footer } from "@/app/components/Footer";
@@ -76,39 +76,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       <Navbar transparent />
 
-      {/* Hero */}
-      <section className="relative isolate h-[92vh] min-h-[640px] w-full overflow-hidden">
-        <Image
-          src="/images/content/photo-1507525428034-b723cf961d3e.avif"
-          alt="Aerial view of a tropical coastline"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-hero-overlay" />
-        <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-4 pt-16 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur animate-fade-in-up">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
-            </span>
-            AI-powered flight search
-          </span>
-          <h1 className="mt-6 font-serif text-5xl font-semibold leading-[1.05] text-white sm:text-6xl md:text-7xl animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            Find Cheap Flights
-            <br />
-            <span className="italic text-gradient-accent">with AI</span>
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-white/80 animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            Describe your dream trip in plain words — Flyamba finds the cheapest flights across hundreds of airlines.
-          </p>
-          <div className="mt-10 w-full animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            <AISearchBar />
-          </div>
-        </div>
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
-      </section>
+      <HomeHero />
 
       <HowItWorks />
 

@@ -52,6 +52,8 @@ export type DayTrip = {
 export type EventItem = { month: string; name: string; note: string };
 export type Guide = { title: string; readMinutes: number; image: string; category: string };
 export type RecentSearch = { from: string; when: string; price: number; ago: string };
+// 1–10 lifestyle scores shown as rating dots on the AI result cards.
+export type DestScores = { beaches: number; nightlife: number; food: number; activities: number; family: number; value: number };
 
 export type Destination = {
   slug: string;
@@ -112,6 +114,11 @@ export type Destination = {
   events?: EventItem[];
   guides?: Guide[];
   recentSearches?: RecentSearch[];
+
+  // AI result-card fields (flyg.ai-style rich card).
+  scores?: DestScores;
+  localDishes?: string[];
+  insiderTip?: string;
 };
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -178,8 +185,11 @@ export const destinations: Destination[] = [
       { title: "Barceloneta Beach", desc: "Golden sand a short metro ride from the Gothic Quarter.", image: "/images/content/barceloneta.avif" },
     ],
     summerTemp: 27,
-    foodCostPerDay: "€35–50",
-    hotelCostPerNight: "€100–140",
+    foodCostPerDay: "$38–55",
+    hotelCostPerNight: "$110–150",
+    scores: { beaches: 8, nightlife: 9, food: 9, activities: 9, family: 7, value: 7 },
+    localDishes: ["Pa amb tomàquet", "Seafood paella", "Crema catalana"],
+    insiderTip: "Book Sagrada Família online at least two weeks ahead and arrive at opening to beat the queues.",
     intro:
       "Barcelona is one of Europe's most captivating cities — a rare mix of modernist architecture, world-class food and easy Mediterranean beach life. Gaudí's masterpieces like Sagrada Família and Park Güell draw millions each year, while neighborhoods like Gràcia and El Born stay stubbornly local.",
     monthlyPrices: [
@@ -398,6 +408,11 @@ export const destinations: Destination[] = [
     countryFlag: "🇯🇵",
     iata: "HND",
     tpName: "tokyo_jp",
+    foodCostPerDay: "$40–60",
+    hotelCostPerNight: "$120–180",
+    scores: { beaches: 2, nightlife: 8, food: 10, activities: 9, family: 7, value: 6 },
+    localDishes: ["Sushi omakase", "Tonkotsu ramen", "Tempura"],
+    insiderTip: "Grab a Suica card on arrival — it works on every train, bus and even convenience stores.",
     price: 5490,
     image: "/images/destinations/flights-tokyo.avif",
     thumbnail: "/images/destinations/flights-tokyo-thumb.avif",
@@ -420,6 +435,11 @@ export const destinations: Destination[] = [
     countryFlag: "🇵🇹",
     iata: "LIS",
     tpName: "lisbon_pt",
+    foodCostPerDay: "$30–45",
+    hotelCostPerNight: "$90–140",
+    scores: { beaches: 6, nightlife: 7, food: 8, activities: 8, family: 7, value: 8 },
+    localDishes: ["Pastéis de nata", "Bacalhau à brás", "Grilled sardines"],
+    insiderTip: "Ride tram 28 first thing in the morning to enjoy the route before the midday crowds.",
     price: 1690,
     image: "/images/destinations/flights-lisbon.avif",
     thumbnail: "/images/destinations/flights-lisbon-thumb.avif",
@@ -442,6 +462,11 @@ export const destinations: Destination[] = [
     countryFlag: "🇺🇸",
     iata: "JFK",
     tpName: "new-york_us",
+    foodCostPerDay: "$50–80",
+    hotelCostPerNight: "$200–350",
+    scores: { beaches: 3, nightlife: 9, food: 9, activities: 10, family: 7, value: 4 },
+    localDishes: ["New York pizza", "Bagel with lox", "Pastrami on rye"],
+    insiderTip: "Several top museums are 'pay what you wish' or have free evenings — check schedules before you go.",
     price: 3890,
     image: "/images/destinations/flights-new-york.avif",
     thumbnail: "/images/destinations/flights-new-york-thumb.avif",
@@ -464,6 +489,11 @@ export const destinations: Destination[] = [
     countryFlag: "🇮🇩",
     iata: "DPS",
     tpName: "bali_id",
+    foodCostPerDay: "$15–30",
+    hotelCostPerNight: "$40–120",
+    scores: { beaches: 9, nightlife: 6, food: 7, activities: 8, family: 7, value: 9 },
+    localDishes: ["Nasi goreng", "Babi guling", "Satay lilit"],
+    insiderTip: "Hire a scooter or a private driver for the day — the best rice terraces and temples are spread far apart.",
     price: 6790,
     image: "/images/destinations/flights-bali.avif",
     thumbnail: "/images/destinations/flights-bali-thumb.avif",
@@ -486,6 +516,11 @@ export const destinations: Destination[] = [
     countryFlag: "🇿🇦",
     iata: "CPT",
     tpName: "cape-town_za",
+    foodCostPerDay: "$25–40",
+    hotelCostPerNight: "$70–150",
+    scores: { beaches: 8, nightlife: 7, food: 8, activities: 9, family: 7, value: 8 },
+    localDishes: ["Bobotie", "Braai", "Cape Malay curry"],
+    insiderTip: "Climb or ride Table Mountain early — the cable car often closes on windy afternoons.",
     price: 6290,
     image: "/images/content/photo-1580060839134-75a5edca2e99.avif",
     tagline: "Table Mountain meets two oceans",
@@ -507,6 +542,11 @@ export const destinations: Destination[] = [
     countryFlag: "🇮🇸",
     iata: "KEF",
     tpName: "reykjavik_is",
+    foodCostPerDay: "$45–70",
+    hotelCostPerNight: "$130–220",
+    scores: { beaches: 2, nightlife: 6, food: 7, activities: 9, family: 6, value: 4 },
+    localDishes: ["Lamb soup", "Fresh cod", "Skyr"],
+    insiderTip: "Skip the pricey Blue Lagoon and try Sky Lagoon or a local geothermal pool for a fraction of the cost.",
     price: 2490,
     image: "/images/destinations/flights-reykjavik.avif",
     thumbnail: "/images/destinations/flights-reykjavik-thumb.avif",
@@ -528,6 +568,11 @@ export const destinations: Destination[] = [
     countryFlag: "🇲🇦",
     iata: "RAK",
     tpName: "marrakech_ma",
+    foodCostPerDay: "$15–30",
+    hotelCostPerNight: "$50–120",
+    scores: { beaches: 2, nightlife: 5, food: 8, activities: 8, family: 6, value: 9 },
+    localDishes: ["Lamb tagine", "Couscous", "Harira soup"],
+    insiderTip: "Agree the price before any taxi ride or souk purchase — haggling is expected and part of the fun.",
     price: 2190,
     image: "/images/destinations/flights-marrakech.avif",
     thumbnail: "/images/destinations/flights-marrakech-thumb.avif",
