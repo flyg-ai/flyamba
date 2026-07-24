@@ -15,6 +15,9 @@ const RESERVED = new Set([
   // the catch-all). rome/prague/athens/tenerife use distinct English slugs that
   // aren't in the ported catalog, so they don't collide and aren't listed here.
   "london", "paris", "amsterdam", "lisbon", "tokyo", "bangkok", "palma", "ibiza", "santorini",
+  // Cities that now use English catalog slugs AND have a full static hub — reserve
+  // so the catch-all doesn't emit a page that conflicts with the hub route.
+  "rome", "prague", "athens", "tenerife",
 ]);
 
 // Every rich destination plus every ported catalog destination gets a static page.
