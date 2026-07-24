@@ -195,6 +195,8 @@ export default function CapeTownHub() {
 
       {/* 3. Flight search widget */}
       <section id="flights" className="mx-auto mt-10 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
+        <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Cape Town</h2>
+        <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Cape Town is easier than ever, with direct routes from New York, London and other major hubs — making Cape Town one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Cape Town, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Cape Town — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CAPE_TOWN.tpName} />
       </section>
 
@@ -284,7 +286,7 @@ export default function CapeTownHub() {
       {/* 8. Why Cape Town */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Cape Town?</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">A city worth the flight</h2>
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Why Fly to Cape Town with Flyamba?</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {WHY.map((w) => (
             <div key={w.text} className="rounded-3xl border border-border bg-card p-6">

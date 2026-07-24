@@ -66,6 +66,10 @@ export function DestinationLite({ d }: { d: AllDestination }) {
 
       {/* Flight search widget */}
       <section className="mx-auto mt-10 max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find flights to {d.name}</h2>
+        <p className="mb-6 max-w-3xl text-muted-foreground">
+          Compare live fares and find cheap flights to {d.name}, {d.country} — search hundreds of airlines and book direct.
+        </p>
         <AviasalesWidget toName={d.tpName} />
       </section>
 
