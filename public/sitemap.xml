@@ -804,4 +804,44 @@
   <url><loc>https://flyamba.com/reykjavik/transport</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://flyamba.com/reykjavik/weather</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://flyamba.com/reykjavik/with-kids</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <!-- Dubrovnik, Dubai, Cancún guides -->
+  <url><loc>https://flyamba.com/dubrovnik</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/attractions</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/beaches</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/day-trips</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/events</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/hotels</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/nightlife</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/prices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/restaurants</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/shopping</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/transport</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/weather</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubrovnik/with-kids</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/dubai/attractions</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/beaches</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/day-trips</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/events</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/hotels</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/nightlife</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/prices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/restaurants</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/shopping</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/transport</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/weather</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/dubai/with-kids</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://flyamba.com/cancun/attractions</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/beaches</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/day-trips</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/events</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/hotels</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/nightlife</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/prices</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/restaurants</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/shopping</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/transport</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/weather</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://flyamba.com/cancun/with-kids</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
