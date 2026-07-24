@@ -18,6 +18,8 @@ const RESERVED = new Set([
   // Cities that now use English catalog slugs AND have a full static hub — reserve
   // so the catch-all doesn't emit a page that conflicts with the hub route.
   "rome", "prague", "athens", "tenerife",
+  // Ported full hubs (from flyg.ai) that also exist as catalog lite entries.
+  "madrid", "mykonos", "new-york", "bali", "cape-town", "reykjavik",
 ]);
 
 // Every rich destination plus every ported catalog destination gets a static page.
