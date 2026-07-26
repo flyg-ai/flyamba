@@ -19,6 +19,7 @@ const RESERVED = new Set([
   // so the catch-all doesn't emit a page that conflicts with the hub route.
   "rome", "prague", "athens", "tenerife",
   "dubrovnik", "dubai", "cancun",
+  "marrakech", "vienna", "florence", "phuket", "singapore",
   // Ported full hubs (from flyg.ai) that also exist as catalog lite entries.
   "madrid", "mykonos", "new-york", "bali", "cape-town", "reykjavik",
 ]);
