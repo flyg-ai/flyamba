@@ -52,3 +52,6 @@ next-env.d.ts
 !/public/images/destinations/flights-new-york-thumb.avif
 !/public/images/destinations/flights-reykjavik-thumb.avif
 !/public/images/destinations/flights-tokyo-thumb.avif
+
+.vercel
+.env*.local

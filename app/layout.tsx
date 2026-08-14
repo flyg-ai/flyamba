@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     title: "Flyamba — AI flight search for curious travelers",
     description: "Smarter flight search powered by AI. Describe your dream trip — we handle the rest.",
     type: "website",
+    images: ["/images/destinations/flights-barcelona.avif"],
   },
   twitter: { card: "summary_large_image", site: "@Flyamba" },
 };
