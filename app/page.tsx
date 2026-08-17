@@ -6,6 +6,8 @@ import { HomeHero } from "@/app/components/HomeHero";
 import { HowItWorks } from "@/app/components/HowItWorks";
 import { HomeCard } from "@/app/components/HomeCard";
 import { HomeSeoSection, HOME_FAQ } from "@/app/components/HomeSeoSection";
+import { GuidesCarousel } from "@/app/components/GuidesCarousel";
+import { latestGuides } from "@/app/data/guides";
 import { Footer } from "@/app/components/Footer";
 import { destinations } from "@/app/data/destinations";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
@@ -57,11 +59,6 @@ const TRIP_TYPES = [
   { label: "Long Haul", emoji: "✈️" },
 ];
 
-const ARTICLES = [
-  { title: "48 hours in Barcelona: the perfect weekend", excerpt: "Gaudí, tapas and beach time — how to make the most of a short city break.", category: "City guide", image: "/images/content/photo-1583422409516-2895a77efded.avif" },
-  { title: "When to book flights for the cheapest fares", excerpt: "The data-backed sweet spot for booking, plus the days and months that save the most.", category: "Tips", image: "/images/content/photo-1436491865332-7a61a109cc05.avif" },
-  { title: "10 warm-weather escapes for winter sun", excerpt: "Where to fly when the days get short — from the Canaries to Southeast Asia.", category: "Inspiration", image: "/images/content/photo-1512100356356-de1b84283e18.avif" },
-];
 
 // 15 "Flights to X" links — the 8 catalog cities (real pages) plus popular
 // cities that route to the AI home search until they have their own pages.
@@ -98,6 +95,8 @@ export default function Home() {
       <HomeHero />
 
       <HowItWorks />
+
+      <GuidesCarousel guides={latestGuides(3)} title="Latest Travel Guides" />
 
       {/* Featured destinations — 1 large + 2 smaller */}
       <section id="explore" className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
@@ -199,27 +198,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* E) Latest from guides & inspiration */}
-      <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Blog</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Latest from guides &amp; inspiration</h2>
-        <div className="mt-8 grid gap-6 sm:grid-cols-3">
-          {ARTICLES.map((a) => (
-            <article key={a.title} className="group overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant">
-              <div className="relative h-44 overflow-hidden">
-                <Image src={a.image} alt={a.title} fill sizes="(max-width:1024px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-neutral-900">
-                  <BookOpen className="h-3 w-3" /> {a.category}
-                </span>
-              </div>
-              <div className="p-5">
-                <h3 className="font-serif text-lg font-semibold leading-tight text-foreground">{a.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{a.excerpt}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
       {/* Compare promo */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">

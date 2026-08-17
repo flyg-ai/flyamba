@@ -3,7 +3,7 @@ import path from "node:path";
 import type { MetadataRoute } from "next";
 import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 import { destinations } from "@/app/data/destinations";
-import { guides } from "@/app/data/guides";
+import { guides, guideHref } from "@/app/data/guides";
 import { CALENDAR_DESTINATIONS, CALENDAR_AIRLINES, lowFareHref } from "@/app/lib/low-fare";
 import { SITE } from "@/app/lib/destination-helpers";
 
@@ -22,6 +22,7 @@ const STATIC_ROUTES = [
   { path: "/terms", priority: 0.2 },
   { path: "/cookies", priority: 0.2 },
   { path: "/low-fare-calendar", priority: 0.7 },
+  { path: "/guides", priority: 0.6 },
 ];
 
 // app/ directories that aren't routes at all, plus the airline folders — those
@@ -37,8 +38,10 @@ const NON_ROUTE_DIRS = new Set([
 // Anything already covered above must not also be emitted as a destination hub.
 const NOT_A_HUB = new Set([...NON_ROUTE_DIRS, ...STATIC_ROUTES.map((r) => r.path.slice(1))]);
 
-// Guide routes are emitted from the guides catalog below, not by scanning.
-const GUIDE_PATHS = new Set(guides.map((g) => g.path));
+// Legacy /barcelona/<path> guide URLs, kept out of the hub scan. The routes
+// themselves are gone (next.config.ts redirects them to /guides/<slug>); this
+// guards against one being reintroduced by accident.
+const GUIDE_PATHS = new Set(guides.map((g) => g.path).filter((p): p is string => !!p));
 
 // Walks app/ for the static destination hubs and the subpages each one actually
 // ships. This replaces a hand-maintained array that had to be edited in lockstep
@@ -132,13 +135,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Long-form guides live under their destination hub (/barcelona/budget-guide).
+  // Guide articles all live under /guides/<slug>.
   for (const guide of guides) {
     entries.push({
-      url: `${SITE}/${guide.destination}/${guide.path}`,
+      url: `${SITE}${guideHref(guide)}`,
       lastModified: new Date(guide.publishedAt),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 0.6,
     });
   }
 

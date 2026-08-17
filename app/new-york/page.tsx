@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { GuidesCarousel } from "@/app/components/GuidesCarousel";
+import { getGuidesByDestination } from "@/app/data/guides";
 import { LowFareCta } from "@/app/components/LowFareCta";
 import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { SmartImage } from "@/app/components/SmartImage";
@@ -349,6 +351,19 @@ export default function NewYorkHub() {
       </section>
 
       <FaqSection items={FAQS} city="New York" />
+
+
+      <GuidesCarousel
+
+
+        guides={getGuidesByDestination("new-york").slice(0, 3)}
+
+
+        title="Latest New York guides"
+
+
+      />
+
 
 
       {/* 12. SEO footer links */}

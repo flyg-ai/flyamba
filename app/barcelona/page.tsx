@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { getDestination } from "@/app/data/destinations";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { GuidesCarousel } from "@/app/components/GuidesCarousel";
 import { LowFareCta } from "@/app/components/LowFareCta";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
@@ -326,34 +327,7 @@ export default function BarcelonaHub() {
         <PreviewGrid items={BEACH_PREVIEW} />
       </section>
 
-      {/* Latest guides */}
-      {latestGuides.length > 0 && (
-        <section id="guides" className="mx-auto mt-14 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-          <div className="flex items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Guides &amp; inspiration</p>
-              <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Latest Barcelona guides</h2>
-            </div>
-          </div>
-          <div className="mt-6 grid gap-6 sm:grid-cols-3">
-            {latestGuides.map((g) => (
-              <Link key={g.slug} href={guideHref(g)} className="group overflow-hidden rounded-3xl border border-border bg-card transition hover:-translate-y-1 hover:shadow-elegant">
-                <div className="relative h-44 overflow-hidden">
-                  <Image src={g.image} alt={g.title} fill sizes="(max-width:1024px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
-                  <span className="absolute left-3 top-3 rounded-full bg-white/95 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-widest text-neutral-900">{g.category}</span>
-                </div>
-                <div className="p-5">
-                  <h3 className="font-serif text-lg font-semibold leading-tight text-foreground">{g.title}</h3>
-                  <p className="mt-2 line-clamp-2 text-sm text-muted-foreground">{g.excerpt}</p>
-                  <p className="mt-3 inline-flex items-center gap-1.5 text-xs text-muted-foreground">
-                    <Clock className="h-3.5 w-3.5" /> {g.readTime} read
-                  </p>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      <GuidesCarousel guides={latestGuides} title="Latest Barcelona guides" />
 
       <FaqSection items={FAQ} city="Barcelona" />
 

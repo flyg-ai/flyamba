@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { GuidesCarousel } from "@/app/components/GuidesCarousel";
+import { getGuidesByDestination } from "@/app/data/guides";
 import { LowFareCta } from "@/app/components/LowFareCta";
 import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
@@ -331,6 +333,19 @@ export default function LisbonHub() {
       </section>
 
       <FaqSection items={FAQ} city="Lisbon" />
+
+
+      <GuidesCarousel
+
+
+        guides={getGuidesByDestination("lisbon").slice(0, 3)}
+
+
+        title="Latest Lisbon guides"
+
+
+      />
+
 
 
       {/* 12. SEO footer links */}

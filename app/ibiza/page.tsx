@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { GuidesCarousel } from "@/app/components/GuidesCarousel";
+import { getGuidesByDestination } from "@/app/data/guides";
 import { LowFareCta } from "@/app/components/LowFareCta";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
@@ -388,6 +390,15 @@ export default function IbizaHub() {
       </section>
 
       <FaqSection items={FAQ} city="Ibiza" />
+
+      <GuidesCarousel
+
+        guides={getGuidesByDestination("ibiza").slice(0, 3)}
+
+        title="Latest Ibiza guides"
+
+      />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

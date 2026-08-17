@@ -31,14 +31,31 @@ const SLUG_REDIRECTS: { from: string; to: string }[] = [
   { from: "kapverde", to: "cape-verde" },
 ];
 
+// The first three guides were published as Barcelona subpages before /guides
+// existed. They now live at /guides/<slug> like every other guide; these keep
+// the original URLs working and stop the same article being served from two
+// addresses, which would compete with itself in search.
+const GUIDE_REDIRECTS: { from: string; to: string }[] = [
+  { from: "/barcelona/best-time-to-visit", to: "/guides/best-time-to-visit-barcelona" },
+  { from: "/barcelona/budget-guide", to: "/guides/barcelona-budget-guide" },
+  { from: "/barcelona/vs-madrid", to: "/guides/barcelona-vs-madrid" },
+];
+
 const nextConfig: NextConfig = {
   // All imagery is self-hosted under /public/images — no remote patterns needed.
   async redirects() {
-    return SLUG_REDIRECTS.map(({ from, to }) => ({
-      source: `/${from}`,
-      destination: `/${to}`,
-      permanent: true,
-    }));
+    return [
+      ...SLUG_REDIRECTS.map(({ from, to }) => ({
+        source: `/${from}`,
+        destination: `/${to}`,
+        permanent: true,
+      })),
+      ...GUIDE_REDIRECTS.map(({ from, to }) => ({
+        source: from,
+        destination: to,
+        permanent: true,
+      })),
+    ];
   },
 };
 
