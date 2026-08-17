@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Things to Do in Mykonos 2026 — Attractions Guide | Flyamba",
   description:
-    "The best things to do in Mykonos — Chora's whitewashed lanes, Little Venice, the iconic windmills, Paraportiani church, the museums and a boat trip to ancient Delos, with prices, hours and tips.",
+    "The best things to do in Mykonos — Chora's whitewashed lanes, Little Venice, the iconic windmills, Paraportiani church, the museums and a boat trip to…",
   alternates: { canonical: `${SITE}/mykonos/attractions` },
   openGraph: { title: "Best Things to Do in Mykonos | Flyamba", description: "16 top Mykonos attractions with prices, hours and insider tips.", type: "article" },
 };

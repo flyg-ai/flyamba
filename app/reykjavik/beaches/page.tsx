@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Reykjavik Beaches & Geothermal Pools 2026 — Guide | Flyamba",
   description:
-    "Beaches and geothermal pools near Reykjavik — the warm Nauthólsvík geothermal beach, Sky Lagoon, the Secret Lagoon, the black sands of Reynisfjara and Djúpalónssandur, with prices and tips.",
+    "Beaches and geothermal pools near Reykjavik — the warm Nauthólsvík geothermal beach, Sky Lagoon, the Secret Lagoon, the black sands of Reynisfjara and…",
   alternates: { canonical: `${SITE}/reykjavik/beaches` },
   openGraph: { title: "Reykjavik Beaches & Geothermal Pools | Flyamba", description: "Geothermal lagoons, warm beaches and dramatic black sands near Reykjavik.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Phuket 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Phuket — the heritage boutiques of Old Town, the Sunday Walking Street, sprawling weekend night markets, hip container markets, big malls like Central Phuket and Jungceylon, and fresh markets, with tips.",
+    "Where to shop in Phuket — the heritage boutiques of Old Town, the Sunday Walking Street, sprawling weekend night markets, hip container markets, big…",
   alternates: { canonical: `${SITE}/phuket/shopping` },
   openGraph: { title: "Shopping in Phuket | Flyamba", description: "Phuket's best markets, malls and Old Town shops with insider tips.", type: "article" },
 };

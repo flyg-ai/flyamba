@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Hotels in Singapore 2026 — Guide | Flyamba",
   description:
-    "Where to stay in Singapore — from the iconic Marina Bay Sands and colonial Raffles to island resorts, boutique shophouse stays and stylish value picks, with areas, prices and tips.",
+    "Where to stay in Singapore — from the iconic Marina Bay Sands and colonial Raffles to island resorts, boutique shophouse stays and stylish value picks…",
   alternates: { canonical: `${SITE}/singapore/hotels` },
   openGraph: { title: "Best Hotels in Singapore | Flyamba", description: "8 top Singapore hotels across every budget, with areas, prices and tips.", type: "article" },
 };

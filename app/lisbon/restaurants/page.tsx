@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Eat in Lisbon 2026 — Best Restaurants | Flyamba",
   description:
-    "The best restaurants in Lisbon, from Belcanto's Michelin stars and Cervejaria Ramiro's shellfish to the Time Out Market and the city's best pastéis de nata — with prices and tips.",
+    "The best restaurants in Lisbon, from Belcanto's Michelin stars and Cervejaria Ramiro's shellfish to the Time Out Market and the city's best pastéis de…",
   alternates: { canonical: `${SITE}/lisbon/restaurants` },
   openGraph: { title: "Best Restaurants in Lisbon | Flyamba", description: "Where to eat in Lisbon, from seafood halls to fine dining.", type: "article" },
 };

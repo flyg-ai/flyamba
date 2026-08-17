@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Best Restaurants in Tokyo 2026 — Where to Eat | Flyamba",
   description:
-    "Where to eat in Tokyo — from legendary sushi counters and Michelin-starred kaiseki to the best ramen, tonkatsu and smoky izakaya alleys, with prices and tips.",
+    "Where to eat in Tokyo — from legendary sushi counters and Michelin-starred kaiseki to the best ramen, tonkatsu and smoky izakaya alleys, with prices and…",
   alternates: { canonical: `${SITE}/tokyo/restaurants` },
   openGraph: { title: "Best Restaurants in Tokyo | Flyamba", description: "Tokyo's finest sushi, ramen, izakaya and fine dining.", type: "article" },
 };

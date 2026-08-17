@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Restaurants in Florence 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Florence — the best Tuscan trattorias, the bistecca alla fiorentina, ribollita, legendary schiacciata panini and fine dining, with areas, prices and booking tips.",
+    "Where to eat in Florence — the best Tuscan trattorias, the bistecca alla fiorentina, ribollita, legendary schiacciata panini and fine dining, with areas…",
   alternates: { canonical: `${SITE}/florence/restaurants` },
   openGraph: { title: "Where to Eat in Florence | Flyamba", description: "The best Florence restaurants, trattorias and street food with prices and tips.", type: "article" },
 };

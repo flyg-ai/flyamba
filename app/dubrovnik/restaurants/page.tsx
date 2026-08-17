@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Dubrovnik 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Dubrovnik — from the Michelin-starred Restaurant 360 and grande-dame Nautika to century-old Proto, modern Dalmatian Pantarul and budget bakery bites, with prices, areas and booking tips.",
+    "Where to eat in Dubrovnik — from the Michelin-starred Restaurant 360 and grande-dame Nautika to century-old Proto, modern Dalmatian Pantarul and budget…",
   alternates: { canonical: `${SITE}/dubrovnik/restaurants` },
   openGraph: { title: "Best Restaurants in Dubrovnik | Flyamba", description: "10 top Dubrovnik restaurants from fine dining to budget bites, with prices and tips.", type: "article" },
 };

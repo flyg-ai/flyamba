@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Beaches near Marrakech 2026 — Atlantic Coast Guide | Flyamba",
   description:
-    "Marrakech is inland, but the Atlantic coast is a day trip away — Essaouira, Taghazout, Agadir, Oualidia, Sidi Kaouki and more, with how to get there, watersports and what to expect.",
+    "Marrakech is inland, but the Atlantic coast is a day trip away — Essaouira, Taghazout, Agadir, Oualidia, Sidi Kaouki and more, with how to get there…",
   alternates: { canonical: `${SITE}/marrakech/beaches` },
   openGraph: { title: "Beaches near Marrakech | Flyamba", description: "The best Atlantic-coast beaches within reach of Marrakech, and how to reach them.", type: "article" },
 };

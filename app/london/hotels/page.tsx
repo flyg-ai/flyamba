@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Hotels in London 2026 — Guide | Flyamba",
   description:
-    "Where to stay in London — from the Savoy, Ritz and Claridge's to hip Shoreditch boutiques and great-value chains. The 8 best hotels by neighbourhood and budget, with nightly rates and tips.",
+    "Where to stay in London — from the Savoy, Ritz and Claridge's to hip Shoreditch boutiques and great-value chains.",
   alternates: { canonical: `${SITE}/london/hotels` },
   openGraph: { title: "Best Hotels in London | Flyamba", description: "8 top London hotels by area and budget, with rates and tips.", type: "article" },
 };

@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/athens-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Athens 2026 — Markets & Boutiques Guide | Flyamba",
+  title: "Shopping in Athens 2026 — Markets & Boutiques Guide",
   description:
-    "Where to shop in Athens — Ermou Street's high street, the Monastiraki flea market, Kolonaki boutiques, the Central Market and Plaka's craft and sandal shops, with tips and hours.",
+    "Where to shop in Athens — Ermou Street's high street, the Monastiraki flea market, Kolonaki boutiques, the Central Market and Plaka's craft and sandal…",
   alternates: { canonical: `${SITE}/athens/shopping` },
   openGraph: { title: "Shopping in Athens | Flyamba", description: "Markets, boutiques, antiques and souvenirs in Athens.", type: "article" },
 };

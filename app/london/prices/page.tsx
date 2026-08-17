@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Prices in London 2026 — Cost Guide | Flyamba",
   description:
-    "How much does London cost? A real-world breakdown of daily budgets, food and drink, hotels, attractions and transport in USD and £, plus the best ways to save in an expensive city.",
+    "How much does London cost? A real-world breakdown of daily budgets, food and drink, hotels, attractions and transport in USD and £, plus the best ways to…",
   alternates: { canonical: `${SITE}/london/prices` },
   openGraph: { title: "London Cost & Budget Guide | Flyamba", description: "Daily budgets, food, hotels, attractions and transport costs.", type: "article" },
 };

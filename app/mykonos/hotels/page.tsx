@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Stay in Mykonos 2026 — Hotels Guide | Flyamba",
   description:
-    "The best hotels in Mykonos — iconic Cavo Tagoo, intimate Bill & Coo, the design-led Belvedere and Katikies, beach resorts, a central boutique and the island's only campsite, with nightly rates and areas.",
+    "The best hotels in Mykonos — iconic Cavo Tagoo, intimate Bill & Coo, the design-led Belvedere and Katikies, beach resorts, a central boutique and the…",
   alternates: { canonical: `${SITE}/mykonos/hotels` },
   openGraph: { title: "Best Hotels in Mykonos | Flyamba", description: "8 top places to stay in Mykonos, from cliff-top luxury to budget beds.", type: "article" },
 };

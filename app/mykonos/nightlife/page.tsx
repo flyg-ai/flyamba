@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Mykonos Nightlife 2026 — Best Bars & Clubs Guide | Flyamba",
   description:
-    "The best of Mykonos nightlife — legendary Cavo Paradiso, cult beach club Scorpios, glamorous Nammos, the LGBTQ+ heart at Jackie O', the 180° sunset bar and the island's best-value party at Skandinavian Bar.",
+    "The best of Mykonos nightlife — legendary Cavo Paradiso, cult beach club Scorpios, glamorous Nammos, the LGBTQ+ heart at Jackie O', the 180° sunset bar…",
   alternates: { canonical: `${SITE}/mykonos/nightlife` },
   openGraph: { title: "Best Nightlife in Mykonos | Flyamba", description: "8 top Mykonos bars and clubs, from superclubs to sunset bars.", type: "article" },
 };

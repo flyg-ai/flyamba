@@ -6,9 +6,9 @@ import { HOTELS, CATEGORIES } from "@/app/data/amsterdam-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Stay in Amsterdam 2026 — Best Hotels Guide | Flyamba",
+  title: "Where to Stay in Amsterdam 2026 — Best Hotels Guide",
   description:
-    "The best hotels in Amsterdam — canal-house luxury, design boutiques and smart budget stays, with areas, nightly prices in USD and tips on the best neighbourhoods.",
+    "The best hotels in Amsterdam — canal-house luxury, design boutiques and smart budget stays, with areas, nightly prices in USD and tips on the best…",
   alternates: { canonical: `${SITE}/amsterdam/hotels` },
   openGraph: { title: "Best Hotels in Amsterdam | Flyamba", description: "Canal palaces, design boutiques and budget picks — where to stay in Amsterdam.", type: "article" },
 };

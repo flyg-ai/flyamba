@@ -10,7 +10,7 @@ const HERO = "/images/destinations/flights-ibiza.avif";
 export const metadata: Metadata = {
   title: "Attractions in Ibiza 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Ibiza — UNESCO Dalt Vila, the rock of Es Vedrà, hippy markets, the Ses Salines salt flats and more, with prices, hours and insider tips.",
+    "The best things to do in Ibiza — UNESCO Dalt Vila, the rock of Es Vedrà, hippy markets, the Ses Salines salt flats and more, with prices, hours and…",
   alternates: { canonical: `${SITE}/ibiza/attractions` },
   openGraph: { title: "Best Things to Do in Ibiza | Flyamba", description: "Top Ibiza attractions with prices, hours and tips.", type: "article", images: [HERO] },
 };

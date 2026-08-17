@@ -10,6 +10,7 @@ import { CitySubNav } from "@/app/components/CitySubNav";
 import { SmartImage } from "@/app/components/SmartImage";
 import { IBIZA_CATEGORIES, ATTRACTIONS, NIGHTLIFE, BEACHES } from "@/app/data/ibiza-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -46,8 +47,8 @@ const LOWEST_SEK = Math.min(...IBIZA.monthlyPricesSEK.filter((p): p is number =>
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Ibiza ${year} — Guide, Beaches, Clubs & Prices | Flyamba`;
-  const description = `Find cheap flights to Ibiza, Spain from ${usdStr(LOWEST_SEK)}. Compare live fares, see the month-by-month price calendar, and read complete English guides to Ibiza's beaches, nightlife, restaurants, hotels, attractions, family days out and Formentera day trips.`;
+  const title = clampTitle(`Cheap Flights to Ibiza ${year} — Guide, Beaches, Clubs & Prices | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Ibiza, Spain from ${usdStr(LOWEST_SEK)}. Compare live fares, see the month-by-month price calendar, and read complete English guides to Ibiza's beaches, nightlife, restaurants, hotels, attractions, family days out and Formentera day trips.`);
   const canonical = `${SITE}/ibiza`;
   return {
     title,

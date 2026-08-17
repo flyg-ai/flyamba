@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Rome with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Rome with children — Villa Borghese boats and bikes, the Bioparco zoo, Explora children's museum, gladiator school, hands-on museums and family days out, with ages, prices and tips.",
+    "The best things to do in Rome with children — Villa Borghese boats and bikes, the Bioparco zoo, Explora children's museum, gladiator school, hands-on…",
   alternates: { canonical: `${SITE}/rome/with-kids` },
   openGraph: { title: "Rome with Kids | Flyamba", description: "Family-friendly Rome: parks, zoos, hands-on museums and gladiator school, with ages and prices.", type: "article" },
 };

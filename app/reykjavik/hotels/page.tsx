@@ -6,9 +6,9 @@ import { HOTELS, CATEGORIES } from "@/app/data/reykjavik-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Stay in Reykjavik 2026 — Best Hotels Guide | Flyamba",
+  title: "Where to Stay in Reykjavik 2026 — Best Hotels Guide",
   description:
-    "The best hotels in Reykjavik — Art Deco icons, design boutiques, countryside aurora resorts and smart budget hostels, with areas, nightly prices in USD and neighbourhood tips.",
+    "The best hotels in Reykjavik — Art Deco icons, design boutiques, countryside aurora resorts and smart budget hostels, with areas, nightly prices in USD…",
   alternates: { canonical: `${SITE}/reykjavik/hotels` },
   openGraph: { title: "Best Hotels in Reykjavik | Flyamba", description: "Heritage icons, design boutiques, aurora resorts and budget stays — where to stay in Reykjavik.", type: "article" },
 };

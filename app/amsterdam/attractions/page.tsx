@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Amsterdam 2026 — Visitor Guide | Flyamba",
   description:
-    "The 18 best things to do in Amsterdam — the Rijksmuseum, Van Gogh Museum, Anne Frank House, a canal cruise, Vondelpark and more, with prices, opening hours and insider tips.",
+    "The 18 best things to do in Amsterdam — the Rijksmuseum, Van Gogh Museum, Anne Frank House, a canal cruise, Vondelpark and more, with prices, opening…",
   alternates: { canonical: `${SITE}/amsterdam/attractions` },
   openGraph: { title: "Best Things to Do in Amsterdam | Flyamba", description: "18 top Amsterdam attractions with prices, hours and tips.", type: "article" },
 };

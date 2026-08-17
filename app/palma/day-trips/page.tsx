@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Palma 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Palma de Mallorca — the Sóller valley and its vintage train, the mountain villages of Valldemossa and Deià, medieval Alcúdia, the Caves of Drach, Cap de Formentor and Sa Calobra.",
+    "The best day trips from Palma de Mallorca — the Sóller valley and its vintage train, the mountain villages of Valldemossa and Deià, medieval Alcúdia, the…",
   alternates: { canonical: `${SITE}/palma/day-trips` },
   openGraph: { title: "Day Trips from Palma | Flyamba", description: "The best day trips across Mallorca from Palma, with distances and travel tips.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubrovnik Nightlife 2026 — Bars & Clubs Guide | Flyamba",
   description:
-    "Where to drink and party in Dubrovnik — sunset cocktails at the cliff-side Buža bar, clubbing in the Revelin fortress, wine flights at D'vino, live jazz at the Troubadour, rooftop and beach-club bars, with prices and tips.",
+    "Where to drink and party in Dubrovnik — sunset cocktails at the cliff-side Buža bar, clubbing in the Revelin fortress, wine flights at D'vino, live jazz…",
   alternates: { canonical: `${SITE}/dubrovnik/nightlife` },
   openGraph: { title: "Dubrovnik Nightlife | Flyamba", description: "Dubrovnik's best bars and clubs, from cliff-side Buža to the Revelin fortress club, with tips.", type: "article" },
 };

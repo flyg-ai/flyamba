@@ -6,9 +6,9 @@ import { BANGKOK_CATEGORIES } from "@/app/lib/bangkok";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Bangkok Prices & Budget 2026 — How Much Does It Cost? | Flyamba",
+  title: "Bangkok Prices & Budget 2026 — How Much Does It Cost?",
   description:
-    "How much does Bangkok cost? A full breakdown of daily budgets, street-food and restaurant prices, transport fares, attraction tickets and accommodation, in Thai baht.",
+    "How much does Bangkok cost? A full breakdown of daily budgets, street-food and restaurant prices, transport fares, attraction tickets and accommodation…",
   alternates: { canonical: `${SITE}/bangkok/prices` },
   openGraph: { title: "Bangkok Prices & Budget | Flyamba", description: "Daily budgets, food, transport and entry fees.", type: "article" },
 };

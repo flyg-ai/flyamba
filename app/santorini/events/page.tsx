@@ -6,9 +6,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Santorini Events & Festivals 2026 — What's On Guide | Flyamba",
+  title: "Santorini Events & Festivals 2026 — What's On Guide",
   description:
-    "Santorini events and festivals through the year — Greek Orthodox Easter, the Ifestia volcano fireworks spectacle, the Santorini Jazz Festival, the Megaron Gyzi arts festival, the autumn wine harvest and summer feast days.",
+    "Santorini events and festivals through the year — Greek Orthodox Easter, the Ifestia volcano fireworks spectacle, the Santorini Jazz Festival, the…",
   alternates: { canonical: `${SITE}/santorini/events` },
   openGraph: { title: "Santorini Events & Festivals | Flyamba", description: "The festivals and celebrations worth timing a Santorini trip around.", type: "article" },
 };

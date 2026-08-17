@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Stay in Bali 2026 — Best Hotels & Areas | Flyamba",
   description:
-    "The best places to stay in Bali — jungle luxury at Four Seasons Sayan and Amandari, wellness at COMO Shambhala, beachfront Legian, clifftop Alila Uluwatu and cool Canggu hostels, with areas, prices and tips.",
+    "The best places to stay in Bali — jungle luxury at Four Seasons Sayan and Amandari, wellness at COMO Shambhala, beachfront Legian, clifftop Alila Uluwatu…",
   alternates: { canonical: `${SITE}/bali/hotels` },
   openGraph: { title: "Best Hotels in Bali | Flyamba", description: "Where to stay in Bali — luxury resorts, boutiques and budget stays by area.", type: "article" },
 };

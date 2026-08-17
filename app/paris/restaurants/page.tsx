@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Restaurants in Paris 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Paris — from historic bouillons and classic bistros to Michelin-starred neo-bistros and a seat inside the Eiffel Tower. Prices, areas, Métro directions and booking tips for the city's best tables.",
+    "Where to eat in Paris — from historic bouillons and classic bistros to Michelin-starred neo-bistros and a seat inside the Eiffel Tower.",
   alternates: { canonical: `${SITE}/paris/restaurants` },
   openGraph: { title: "Best Restaurants in Paris | Flyamba", description: "The best places to eat in Paris, from bistros to Michelin stars.", type: "article" },
 };

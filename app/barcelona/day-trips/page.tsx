@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Day Trips from Barcelona 2026 — Best Excursions | Flyamba",
   description:
-    "The best day trips from Barcelona — Montserrat, Sitges, Girona, the Costa Brava, Tarragona and the Penedès wine country — with distances, timings and how to get there.",
+    "The best day trips from Barcelona — Montserrat, Sitges, Girona, the Costa Brava, Tarragona and the Penedès wine country — with distances, timings and how…",
   alternates: { canonical: `${SITE}/barcelona/day-trips` },
   openGraph: { title: "Best Day Trips from Barcelona | Flyamba", description: "Montserrat, Sitges, Girona, Tarragona and the Costa Brava.", type: "article" },
 };

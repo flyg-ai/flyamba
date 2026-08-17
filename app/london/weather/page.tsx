@@ -7,9 +7,9 @@ import { CATEGORIES } from "@/app/data/london-places";
 const SITE = "https://flyamba.com";
 
 export const metadata: Metadata = {
-  title: "Weather in London 2026 — Climate & Best Time to Visit | Flyamba",
+  title: "Weather in London 2026 — Climate & Best Time to Visit",
   description:
-    "London weather month by month — spring, summer, autumn and winter temperatures, rainfall and daylight, plus the best time to visit and exactly what to pack for each season.",
+    "London weather month by month — spring, summer, autumn and winter temperatures, rainfall and daylight, plus the best time to visit and exactly what to…",
   alternates: { canonical: `${SITE}/london/weather` },
   openGraph: { title: "London Weather & Best Time to Visit | Flyamba", description: "Season-by-season London climate and the best time to go.", type: "article" },
 };

@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Attractions in London 2026 — Guide | Flyamba",
   description:
-    "The 20 best things to do in London — the Tower of London, British Museum, Buckingham Palace, the London Eye and more, with prices, opening hours and insider tips.",
+    "The 20 best things to do in London — the Tower of London, British Museum, Buckingham Palace, the London Eye and more, with prices, opening hours and…",
   alternates: { canonical: `${SITE}/london/attractions` },
   openGraph: { title: "Best Things to Do in London | Flyamba", description: "20 top London attractions with prices, hours and tips.", type: "article" },
 };

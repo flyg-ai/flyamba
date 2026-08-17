@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Santorini Prices & Budget 2026 — How Much It Costs | Flyamba",
   description:
-    "How much does Santorini cost? Daily budgets for backpackers, couples and luxury travellers, plus real-world euro prices for cave hotels, dining, wine, tours and getting around — and how to save.",
+    "How much does Santorini cost? Daily budgets for backpackers, couples and luxury travellers, plus real-world euro prices for cave hotels, dining, wine…",
   alternates: { canonical: `${SITE}/santorini/prices` },
   openGraph: { title: "Santorini Prices & Budget | Flyamba", description: "Daily budgets and euro price guide for accommodation, food, tours and transport in Santorini.", type: "article" },
 };

@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/mykonos-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Mykonos Weather 2026 — Best Time to Visit & What to Pack | Flyamba",
+  title: "Mykonos Weather 2026 — Best Time to Visit & What to Pack",
   description:
-    "Mykonos weather season by season — temperatures, the famous Meltemi wind and what to pack, plus the best time to visit for warm seas, lower prices and the full beach-club buzz.",
+    "Mykonos weather season by season — temperatures, the famous Meltemi wind and what to pack, plus the best time to visit for warm seas, lower prices and…",
   alternates: { canonical: `${SITE}/mykonos/weather` },
   openGraph: { title: "Mykonos Weather & Best Time to Visit | Flyamba", description: "Season-by-season temperatures, the Meltemi wind and packing tips for Mykonos.", type: "article" },
 };

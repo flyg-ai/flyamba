@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Nightlife in Phuket 2026 — Bars & Clubs Guide | Flyamba",
   description:
-    "Where to go out in Phuket — the neon of Bangla Road, mega-clubs, glamorous beach clubs, the famous Simon Cabaret, jaw-dropping rooftop bars, mellow reggae beach shacks and sunset spots, with areas, prices and tips.",
+    "Where to go out in Phuket — the neon of Bangla Road, mega-clubs, glamorous beach clubs, the famous Simon Cabaret, jaw-dropping rooftop bars, mellow…",
   alternates: { canonical: `${SITE}/phuket/nightlife` },
   openGraph: { title: "Phuket Nightlife Guide | Flyamba", description: "Phuket's best bars, clubs, beach clubs, cabaret and sunset spots with prices and tips.", type: "article" },
 };

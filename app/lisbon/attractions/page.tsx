@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Lisbon 2026 — Visitor Guide | Flyamba",
   description:
-    "The 20 best things to do in Lisbon — Belém Tower, Jerónimos Monastery, Alfama, São Jorge Castle, tram 28, the Oceanário and more, with prices, hours and insider tips.",
+    "The 20 best things to do in Lisbon — Belém Tower, Jerónimos Monastery, Alfama, São Jorge Castle, tram 28, the Oceanário and more, with prices, hours and…",
   alternates: { canonical: `${SITE}/lisbon/attractions` },
   openGraph: { title: "Best Things to Do in Lisbon | Flyamba", description: "20 top Lisbon attractions with prices, hours and tips.", type: "article" },
 };

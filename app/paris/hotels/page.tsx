@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Hotels in Paris 2026 — Guide | Flyamba",
   description:
-    "Where to stay in Paris — from legendary Palace hotels like the Ritz and Le Bristol to romantic Marais boutiques, design-led mid-range stays and stylish budget hostels. Areas, nightly rates, Métro links and booking tips.",
+    "Where to stay in Paris — from legendary Palace hotels like the Ritz and Le Bristol to romantic Marais boutiques, design-led mid-range stays and stylish…",
   alternates: { canonical: `${SITE}/paris/hotels` },
   openGraph: { title: "Best Hotels in Paris | Flyamba", description: "The best places to stay in Paris, from palaces to budget.", type: "article" },
 };

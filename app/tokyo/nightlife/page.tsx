@@ -7,9 +7,9 @@ import { NIGHTLIFE, CATEGORIES } from "@/app/data/tokyo-places";
 const SITE = "https://flyamba.com";
 
 export const metadata: Metadata = {
-  title: "Tokyo Nightlife 2026 — Best Bars, Clubs & Golden Gai | Flyamba",
+  title: "Tokyo Nightlife 2026 — Best Bars, Clubs & Golden Gai",
   description:
-    "The best of Tokyo after dark — the tiny bars of Golden Gai, megaclubs like Womb and Ageha, world-class cocktail dens, jazz clubs, karaoke and sky-high views.",
+    "The best of Tokyo after dark — the tiny bars of Golden Gai, megaclubs like Womb and Ageha, world-class cocktail dens, jazz clubs, karaoke and sky-high…",
   alternates: { canonical: `${SITE}/tokyo/nightlife` },
   openGraph: { title: "Best Nightlife in Tokyo | Flyamba", description: "Golden Gai, Shibuya clubs, cocktail bars and karaoke.", type: "article" },
 };

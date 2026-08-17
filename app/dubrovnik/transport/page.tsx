@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Getting Around Dubrovnik 2026 — Transport Guide | Flyamba",
   description:
-    "How to get around Dubrovnik — the airport shuttle bus and taxi from DBV, the car-free Old Town on foot, Libertas city buses, the Gruž ferry port, the Lokrum and Cavtat boats, the Srđ cable car, and taxis, with real routes and euro fares.",
+    "How to get around Dubrovnik — the airport shuttle bus and taxi from DBV, the car-free Old Town on foot, Libertas city buses, the Gruž ferry port, the…",
   alternates: { canonical: `${SITE}/dubrovnik/transport` },
   openGraph: { title: "Getting Around Dubrovnik | Flyamba", description: "Dubrovnik transport explained: airport, buses, ferries, cable car and taxis, with fares.", type: "article" },
 };

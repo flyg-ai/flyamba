@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/amsterdam-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Amsterdam 2026 — Best Streets & Markets | Flyamba",
+  title: "Shopping in Amsterdam 2026 — Best Streets & Markets",
   description:
-    "Where to shop in Amsterdam — the boutique-lined Nine Streets, Albert Cuyp Market, the floating Flower Market, luxury PC Hooftstraat, flea markets and more, with areas and tips.",
+    "Where to shop in Amsterdam — the boutique-lined Nine Streets, Albert Cuyp Market, the floating Flower Market, luxury PC Hooftstraat, flea markets and…",
   alternates: { canonical: `${SITE}/amsterdam/shopping` },
   openGraph: { title: "Amsterdam Shopping Guide | Flyamba", description: "Boutiques, markets and department stores — the best shopping in Amsterdam.", type: "article" },
 };

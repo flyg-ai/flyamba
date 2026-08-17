@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Vienna Events & Festivals 2026 — Calendar | Flyamba",
   description:
-    "Vienna's biggest annual events and festivals — the glittering ball season and Opera Ball, the New Year's Concert and Silvesterpfad, the famous Christmas markets, the Wiener Festwochen, Donauinselfest and the summer film festival, with dates and tips.",
+    "Vienna's biggest annual events and festivals — the glittering ball season and Opera Ball, the New Year's Concert and Silvesterpfad, the famous Christmas…",
   alternates: { canonical: `${SITE}/vienna/events` },
   openGraph: { title: "Vienna Events & Festivals | Flyamba", description: "Vienna's annual festival calendar, from the ball season to the Christmas markets, with dates and tips.", type: "article" },
 };

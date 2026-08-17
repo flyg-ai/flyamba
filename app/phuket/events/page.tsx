@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Phuket Events & Festivals 2026 — Calendar | Flyamba",
   description:
-    "Phuket's biggest annual events and festivals — the extraordinary Vegetarian Festival, the Songkran water fight, the beautiful Loy Krathong, Chinese New Year and the Old Town Festival, the King's Cup Regatta and the Hungry Ghost Festival, with dates and tips.",
+    "Phuket's biggest annual events and festivals — the extraordinary Vegetarian Festival, the Songkran water fight, the beautiful Loy Krathong, Chinese New…",
   alternates: { canonical: `${SITE}/phuket/events` },
   openGraph: { title: "Phuket Events & Festivals | Flyamba", description: "Phuket's annual festival calendar, from the Vegetarian Festival to Songkran, with dates and tips.", type: "article" },
 };

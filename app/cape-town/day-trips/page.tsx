@@ -6,9 +6,9 @@ import { DAY_TRIPS, CATEGORIES } from "@/app/data/cape-town-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Day Trips from Cape Town 2026 — Best Excursions Guide | Flyamba",
+  title: "Day Trips from Cape Town 2026 — Best Excursions Guide",
   description:
-    "The best day trips from Cape Town — the Stellenbosch and Franschhoek winelands, Hermanus whale watching, Gansbaai shark cage diving, a Big Five day safari and Cape Agulhas, with distances and tips.",
+    "The best day trips from Cape Town — the Stellenbosch and Franschhoek winelands, Hermanus whale watching, Gansbaai shark cage diving, a Big Five day…",
   alternates: { canonical: `${SITE}/cape-town/day-trips` },
   openGraph: { title: "Best Day Trips from Cape Town | Flyamba", description: "Winelands, whales, sharks and safari — the best excursions from Cape Town.", type: "article" },
 };

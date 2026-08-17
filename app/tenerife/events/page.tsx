@@ -5,9 +5,9 @@ import { EVENTS, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Tenerife Events & Festivals 2026 — Carnival & Fiestas | Flyamba",
+  title: "Tenerife Events & Festivals 2026 — Carnival & Fiestas",
   description:
-    "Tenerife's best events and festivals: the world-famous February Carnival of Santa Cruz, La Orotava's flower carpets, La Laguna's fiestas and Holy Week, Garachico's pilgrimage, Christmas parades and Teide stargazing.",
+    "Tenerife's best events and festivals: the world-famous February Carnival of Santa Cruz, La Orotava's flower carpets, La Laguna's fiestas and Holy Week…",
   alternates: { canonical: `${SITE}/tenerife/events` },
   openGraph: { title: "Tenerife Events & Festivals | Flyamba", description: "Carnival, flower carpets and island fiestas month by month.", type: "article" },
 };

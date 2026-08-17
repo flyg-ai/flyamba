@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches in Mykonos 2026 — Beach Guide | Flyamba",
   description:
-    "The best beaches in Mykonos — long, relaxed Elia, boho Paraga and Scorpios, the windsurf bays of Kalafatis and Ftelia, and wild, empty northern beaches like Agios Sostis and Fokos, with lounger prices and how to get there.",
+    "The best beaches in Mykonos — long, relaxed Elia, boho Paraga and Scorpios, the windsurf bays of Kalafatis and Ftelia, and wild, empty northern beaches…",
   alternates: { canonical: `${SITE}/mykonos/beaches` },
   openGraph: { title: "Best Beaches in Mykonos | Flyamba", description: "8 top Mykonos beaches, from beach clubs to wild, empty coves.", type: "article" },
 };

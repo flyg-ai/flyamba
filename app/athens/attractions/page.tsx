@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Athens 2026 — Visitor Guide | Flyamba",
   description:
-    "The 18 best things to do in Athens — the Acropolis and Parthenon, Acropolis Museum, Ancient Agora, Plaka, the National Archaeological Museum and more, with prices, hours and insider tips.",
+    "The 18 best things to do in Athens — the Acropolis and Parthenon, Acropolis Museum, Ancient Agora, Plaka, the National Archaeological Museum and more…",
   alternates: { canonical: `${SITE}/athens/attractions` },
   openGraph: { title: "Best Things to Do in Athens | Flyamba", description: "18 top Athens attractions with prices, hours and tips.", type: "article" },
 };

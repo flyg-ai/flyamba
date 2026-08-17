@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Barcelona 2026 — Where to Eat | Flyamba",
   description:
-    "Where to eat in Barcelona — from classic tapas bars and harbour-side paella to buzzing food markets, budget bites and world-ranked fine dining, with areas and prices.",
+    "Where to eat in Barcelona — from classic tapas bars and harbour-side paella to buzzing food markets, budget bites and world-ranked fine dining, with…",
   alternates: { canonical: `${SITE}/barcelona/restaurants` },
   openGraph: { title: "Where to Eat in Barcelona | Flyamba", description: "Barcelona's best restaurants and food spots.", type: "article" },
 };

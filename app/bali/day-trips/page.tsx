@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Bali 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Bali — the T-Rex cliff of Nusa Penida, a Mount Batur sunrise trek, the car-free Gili Islands, Ubud's temples and rice terraces, iconic Tanah Lot and the north-coast dolphins of Lovina, with travel times and tips.",
+    "The best day trips from Bali — the T-Rex cliff of Nusa Penida, a Mount Batur sunrise trek, the car-free Gili Islands, Ubud's temples and rice terraces…",
   alternates: { canonical: `${SITE}/bali/day-trips` },
   openGraph: { title: "Day Trips from Bali | Flyamba", description: "Islands, volcanoes, temples and rice terraces — the best day trips from Bali.", type: "article" },
 };

@@ -9,7 +9,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Bangkok with Kids 2026 — Family Things to Do | Flyamba",
   description:
-    "The best family activities in Bangkok — Safari World, SEA LIFE Ocean World, KidZania, Dream World and more, with ages, prices and transport tips for a smooth trip.",
+    "The best family activities in Bangkok — Safari World, SEA LIFE Ocean World, KidZania, Dream World and more, with ages, prices and transport tips for a…",
   alternates: { canonical: `${SITE}/bangkok/with-kids` },
   openGraph: { title: "Bangkok with Kids | Flyamba", description: "Family-friendly attractions, parks and practical tips.", type: "article" },
 };

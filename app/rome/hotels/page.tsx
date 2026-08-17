@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Stay in Rome 2026 — Hotels Guide | Flyamba",
   description:
-    "The best hotels in Rome for every budget — grand five-stars like Hotel Eden and de Russie, Colosseum-view boutiques, characterful mid-range stays and top budget guesthouses, with areas, prices and tips.",
+    "The best hotels in Rome for every budget — grand five-stars like Hotel Eden and de Russie, Colosseum-view boutiques, characterful mid-range stays and top…",
   alternates: { canonical: `${SITE}/rome/hotels` },
   openGraph: { title: "Best Hotels in Rome | Flyamba", description: "Where to stay in Rome, from luxury to budget, with prices and neighbourhood tips.", type: "article" },
 };

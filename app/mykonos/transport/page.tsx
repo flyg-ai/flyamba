@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Getting Around Mykonos 2026 — Buses, Boats & ATVs | Flyamba",
   description:
-    "How to get around Mykonos: from the airport, the KTEL bus network, water taxis between beaches, renting a car or ATV, the island's famously scarce taxis, and ferries to and from the island — with euro prices and tips.",
+    "How to get around Mykonos: from the airport, the KTEL bus network, water taxis between beaches, renting a car or ATV, the island's famously scarce taxis…",
   alternates: { canonical: `${SITE}/mykonos/transport` },
   openGraph: { title: "Getting Around Mykonos | Flyamba", description: "Buses, water taxis, ATVs, ferries and airport transfers — the complete transport guide.", type: "article" },
 };

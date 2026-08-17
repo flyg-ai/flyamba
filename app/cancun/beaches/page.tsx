@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches in Cancún 2026 — Guide | Flyamba",
   description:
-    "The best beaches in Cancún — the showpiece Playa Delfines and its famous sign, calm family-friendly Tortugas and Langosta, wide open Ballenas and Marlin, and world-beating Playa Norte on Isla Mujeres, with how to reach them and tips.",
+    "The best beaches in Cancún — the showpiece Playa Delfines and its famous sign, calm family-friendly Tortugas and Langosta, wide open Ballenas and Marlin…",
   alternates: { canonical: `${SITE}/cancun/beaches` },
   openGraph: { title: "Best Beaches in Cancún | Flyamba", description: "Cancún's finest public beaches, from calm family shallows to the iconic Playa Delfines, with tips.", type: "article" },
 };

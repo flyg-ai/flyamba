@@ -11,7 +11,7 @@ const PH = "/images/barcelona/placeholder.webp";
 export const metadata: Metadata = {
   title: "Transport in Ibiza 2026 — Getting Around | Flyamba",
   description:
-    "Getting around Ibiza — airport transfers and taxis, the bus network, car and scooter hire, the all-night Discobus and ferries to the beaches and Formentera, with fares and tips.",
+    "Getting around Ibiza — airport transfers and taxis, the bus network, car and scooter hire, the all-night Discobus and ferries to the beaches and…",
   alternates: { canonical: `${SITE}/ibiza/transport` },
   openGraph: { title: "Getting Around Ibiza: Transport Guide | Flyamba", description: "Airport transfers, buses, car hire, the Discobus and ferries explained.", type: "article", images: [HERO] },
 };

@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Transport in Singapore 2026 — Guide | Flyamba",
   description:
-    "Getting around Singapore — the airport MRT from Changi, the world-class metro, buses and the EZ-Link card, honest taxis and the Grab app, and whether the Singapore Tourist Pass is worth it, with prices and tips.",
+    "Getting around Singapore — the airport MRT from Changi, the world-class metro, buses and the EZ-Link card, honest taxis and the Grab app, and whether the…",
   alternates: { canonical: `${SITE}/singapore/transport` },
   openGraph: { title: "Getting Around Singapore | Flyamba", description: "Singapore transport explained: Changi transfers, the MRT, buses, taxis and passes, with prices.", type: "article" },
 };

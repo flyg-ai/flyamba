@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Reykjavik 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Reykjavik — the Golden Circle, the Blue Lagoon, the South Coast waterfalls and black beaches, Snæfellsnes, the Reykjanes Peninsula and a Sólheimajökull glacier walk, with travel times and tips.",
+    "The best day trips from Reykjavik — the Golden Circle, the Blue Lagoon, the South Coast waterfalls and black beaches, Snæfellsnes, the Reykjanes…",
   alternates: { canonical: `${SITE}/reykjavik/day-trips` },
   openGraph: { title: "Day Trips from Reykjavik | Flyamba", description: "Golden Circle, Blue Lagoon, waterfalls, glaciers and volcanoes — the best day trips from Reykjavik.", type: "article" },
 };

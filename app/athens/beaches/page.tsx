@@ -6,9 +6,9 @@ import { BEACHES, CATEGORIES } from "@/app/data/athens-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Best Beaches in Athens 2026 — Athenian Riviera Guide | Flyamba",
+  title: "Best Beaches in Athens 2026 — Athenian Riviera Guide",
   description:
-    "The best beaches near Athens — the Athenian Riviera from Alimos and Glyfada to turquoise Vouliagmeni, exclusive Astir, the warm thermal Lake Vouliagmeni and pine-backed Schinias, with how to get there and prices.",
+    "The best beaches near Athens — the Athenian Riviera from Alimos and Glyfada to turquoise Vouliagmeni, exclusive Astir, the warm thermal Lake Vouliagmeni…",
   alternates: { canonical: `${SITE}/athens/beaches` },
   openGraph: { title: "Athenian Riviera Beaches | Flyamba", description: "8 of the best beaches near Athens, by tram and bus.", type: "article" },
 };

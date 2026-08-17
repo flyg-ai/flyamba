@@ -8,6 +8,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { CAPE_TOWN, CATEGORIES } from "@/app/data/cape-town-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -18,8 +19,8 @@ const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Cape Town ${year} — Guide, Prices & Attractions | Flyamba`;
-  const description = `Find cheap flights to Cape Town, South Africa from $${MIN_USD}, plus complete English guides to attractions, restaurants, hotels, beaches, transport, weather, shopping, nightlife, family travel and day trips. Table Mountain, winelands and Africa's most beautiful city.`;
+  const title = clampTitle(`Cheap Flights to Cape Town ${year} — Guide, Prices & Attractions | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Cape Town, South Africa from $${MIN_USD}, plus complete English guides to attractions, restaurants, hotels, beaches, transport, weather, shopping, nightlife, family travel and day trips. Table Mountain, winelands and Africa's most beautiful city.`);
   const canonical = `${SITE}/cape-town`;
   return {
     title,

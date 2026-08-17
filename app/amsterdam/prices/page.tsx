@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/amsterdam-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Amsterdam Prices 2026 — Flights, Budget & Daily Costs | Flyamba",
+  title: "Amsterdam Prices 2026 — Flights, Budget & Daily Costs",
   description:
-    "How much does Amsterdam cost? Flight fares from $255, plus a full daily-budget breakdown — hotels, food, attractions, transport and money-saving tips, in USD and euros.",
+    "How much does Amsterdam cost? Flight fares from $255, plus a full daily-budget breakdown — hotels, food, attractions, transport and money-saving tips, in…",
   alternates: { canonical: `${SITE}/amsterdam/prices` },
   openGraph: { title: "Amsterdam Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to Amsterdam.", type: "article" },
 };

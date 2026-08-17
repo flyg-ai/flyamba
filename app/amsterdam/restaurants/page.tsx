@@ -6,9 +6,9 @@ import { RESTAURANTS, CATEGORIES } from "@/app/data/amsterdam-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Eat in Amsterdam 2026 — Best Restaurants Guide | Flyamba",
+  title: "Where to Eat in Amsterdam 2026 — Best Restaurants Guide",
   description:
-    "The best restaurants in Amsterdam — traditional Dutch cooking, food halls, seafood and Michelin-starred canal-side dining, with prices, areas and booking tips.",
+    "The best restaurants in Amsterdam — traditional Dutch cooking, food halls, seafood and Michelin-starred canal-side dining, with prices, areas and booking…",
   alternates: { canonical: `${SITE}/amsterdam/restaurants` },
   openGraph: { title: "Best Restaurants in Amsterdam | Flyamba", description: "From brown-café classics to Michelin stars — where to eat in Amsterdam.", type: "article" },
 };

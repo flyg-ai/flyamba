@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Transport in Florence 2026 — Guide | Flyamba",
   description:
-    "Getting around Florence — the T2 tram from the airport, reaching the city from Pisa airport, the walkable historic centre, trams and buses, day-trip trains from Santa Maria Novella, taxis and the ZTL, with prices.",
+    "Getting around Florence — the T2 tram from the airport, reaching the city from Pisa airport, the walkable historic centre, trams and buses, day-trip…",
   alternates: { canonical: `${SITE}/florence/transport` },
   openGraph: { title: "Getting Around Florence | Flyamba", description: "Florence transport explained: airports, trams, trains, taxis and the ZTL, with prices.", type: "article" },
 };

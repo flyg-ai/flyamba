@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Transport in Paris 2026 — Guide | Flyamba",
   description:
-    "How to get around Paris — Charles de Gaulle and Orly airport transfers, the Métro, RER trains, Navigo passes, buses, trams, Vélib' bikes and taxis. Ticket prices, travel times and practical tips for visitors.",
+    "How to get around Paris — Charles de Gaulle and Orly airport transfers, the Métro, RER trains, Navigo passes, buses, trams, Vélib' bikes and taxis.",
   alternates: { canonical: `${SITE}/paris/transport` },
   openGraph: { title: "Getting Around Paris | Flyamba", description: "Métro, RER, airports and tickets explained for Paris.", type: "article" },
 };

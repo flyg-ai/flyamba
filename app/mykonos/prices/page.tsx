@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/mykonos-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Mykonos Prices 2026 — Costs, Daily Budget & Money Tips | Flyamba",
+  title: "Mykonos Prices 2026 — Costs, Daily Budget & Money Tips",
   description:
-    "What Mykonos really costs — daily budgets, dining and drinks, the notoriously pricey beach clubs, hotels, and transport — plus honest tips for enjoying one of Greece's most expensive islands without overspending.",
+    "What Mykonos really costs — daily budgets, dining and drinks, the notoriously pricey beach clubs, hotels, and transport — plus honest tips for enjoying…",
   alternates: { canonical: `${SITE}/mykonos/prices` },
   openGraph: { title: "Mykonos Prices & Daily Budget | Flyamba", description: "Daily budgets, beach-club costs, dining and hotels — what Mykonos really costs.", type: "article" },
 };

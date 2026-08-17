@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Attractions in Vienna 2026 — Guide | Flyamba",
   description:
-    "The 18 best things to do in Vienna — Schönbrunn and the Hofburg, St Stephen's Cathedral, Klimt at the Belvedere, the Kunsthistorisches Museum, the State Opera, the Prater and more, with prices, hours and tips.",
+    "The 18 best things to do in Vienna — Schönbrunn and the Hofburg, St Stephen's Cathedral, Klimt at the Belvedere, the Kunsthistorisches Museum, the State…",
   alternates: { canonical: `${SITE}/vienna/attractions` },
   openGraph: { title: "Best Things to Do in Vienna | Flyamba", description: "18 top Vienna attractions with prices, hours and tips.", type: "article" },
 };

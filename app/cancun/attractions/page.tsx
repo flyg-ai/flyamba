@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Cancún 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Cancún — Chichén Itzá, Tulum and Cobá ruins, turquoise cenotes, the eco-parks Xcaret, Xel-Há and Xplor, Isla Mujeres, the MUSA underwater museum and more, with prices, hours and tips.",
+    "The best things to do in Cancún — Chichén Itzá, Tulum and Cobá ruins, turquoise cenotes, the eco-parks Xcaret, Xel-Há and Xplor, Isla Mujeres, the MUSA…",
   alternates: { canonical: `${SITE}/cancun/attractions` },
   openGraph: { title: "Best Things to Do in Cancún | Flyamba", description: "18 top Cancún attractions — Maya ruins, cenotes and eco-parks — with prices, hours and tips.", type: "article" },
 };

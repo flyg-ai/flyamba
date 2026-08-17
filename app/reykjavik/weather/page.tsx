@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/reykjavik-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Reykjavik Weather 2026 — Best Time to Visit & What to Pack | Flyamba",
+  title: "Reykjavik Weather 2026 — Best Time to Visit & What to Pack",
   description:
-    "Reykjavik weather season by season — temperatures, daylight, the midnight sun and northern lights, and what to pack, plus the best time to visit for nature, aurora or lower prices.",
+    "Reykjavik weather season by season — temperatures, daylight, the midnight sun and northern lights, and what to pack, plus the best time to visit for…",
   alternates: { canonical: `${SITE}/reykjavik/weather` },
   openGraph: { title: "Reykjavik Weather & Best Time to Visit | Flyamba", description: "Season-by-season temperatures, daylight and packing tips for Reykjavik.", type: "article" },
 };

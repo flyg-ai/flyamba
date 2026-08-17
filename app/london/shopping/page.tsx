@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Shopping in London 2026 — Guide | Flyamba",
   description:
-    "The best shopping in London — Harrods, Selfridges and Liberty, Oxford Street's flagships, and the antique and food markets of Portobello, Borough and Camden, with hours and insider tips.",
+    "The best shopping in London — Harrods, Selfridges and Liberty, Oxford Street's flagships, and the antique and food markets of Portobello, Borough and…",
   alternates: { canonical: `${SITE}/london/shopping` },
   openGraph: { title: "Best Shopping in London | Flyamba", description: "8 top London shopping spots, from luxury stores to markets.", type: "article" },
 };

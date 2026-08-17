@@ -10,7 +10,7 @@ const HERO = "/images/destinations/flights-ibiza.avif";
 export const metadata: Metadata = {
   title: "Ibiza with Kids 2026 — Family Guide | Flyamba",
   description:
-    "Ibiza with kids — the Aguamar water park, an easy Formentera boat trip, calm family beaches like Cala Bassa and Talamanca, tree-top adventure and a salt-flat nature walk.",
+    "Ibiza with kids — the Aguamar water park, an easy Formentera boat trip, calm family beaches like Cala Bassa and Talamanca, tree-top adventure and a…",
   alternates: { canonical: `${SITE}/ibiza/with-kids` },
   openGraph: { title: "Ibiza with Kids: Family Things to Do | Flyamba", description: "Family-friendly beaches, boat trips and activities on the White Isle.", type: "article", images: [HERO] },
 };

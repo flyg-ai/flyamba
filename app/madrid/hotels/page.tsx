@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Stay in Madrid 2026 — Best Hotels & Areas | Flyamba",
   description:
-    "The best hotels and neighbourhoods in Madrid — from the grande-dame Mandarin Oriental Ritz and the Four Seasons to boutique stays, design hotels and great-value hostales, with areas and tips.",
+    "The best hotels and neighbourhoods in Madrid — from the grande-dame Mandarin Oriental Ritz and the Four Seasons to boutique stays, design hotels and…",
   alternates: { canonical: `${SITE}/madrid/hotels` },
   openGraph: { title: "Best Hotels in Madrid | Flyamba", description: "Where to stay in Madrid — 8 hotels for every budget.", type: "article" },
 };

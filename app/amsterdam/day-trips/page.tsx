@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Amsterdam 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Amsterdam — Zaanse Schans windmills, the Keukenhof tulip gardens, historic Haarlem and Utrecht, fairytale Giethoorn and modern Rotterdam, with travel times and tips.",
+    "The best day trips from Amsterdam — Zaanse Schans windmills, the Keukenhof tulip gardens, historic Haarlem and Utrecht, fairytale Giethoorn and modern…",
   alternates: { canonical: `${SITE}/amsterdam/day-trips` },
   openGraph: { title: "Day Trips from Amsterdam | Flyamba", description: "Windmills, tulips, canal towns and modern cities — the best day trips from Amsterdam.", type: "article" },
 };

@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/athens-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Athens 2026 — Metro, Tram & Bus Guide | Flyamba",
+  title: "Getting Around Athens 2026 — Metro, Tram & Bus Guide",
   description:
-    "How to get around Athens: the airport metro and express buses, the modern metro, the tram to the coast, buses and trolleybuses, taxis and ride-hailing, plus tickets, the Ath.ena card, prices in euros and money-saving tips.",
+    "How to get around Athens: the airport metro and express buses, the modern metro, the tram to the coast, buses and trolleybuses, taxis and ride-hailing…",
   alternates: { canonical: `${SITE}/athens/transport` },
   openGraph: { title: "Getting Around Athens | Flyamba", description: "Airport metro, tram to the coast, buses, taxis and tickets.", type: "article" },
 };

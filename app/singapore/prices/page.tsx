@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Prices in Singapore 2026 — Guide | Flyamba",
   description:
-    "How much does Singapore cost? When flights are cheapest, realistic daily budgets, whether Singapore is expensive, and money-saving tips from hawker meals and GST refunds to happy hours and advance tickets.",
+    "How much does Singapore cost? When flights are cheapest, realistic daily budgets, whether Singapore is expensive, and money-saving tips from hawker meals…",
   alternates: { canonical: `${SITE}/singapore/prices` },
   openGraph: { title: "Singapore Prices & Budget | Flyamba", description: "Flight prices, daily budgets and money-saving tips for Singapore.", type: "article" },
 };

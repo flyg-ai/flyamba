@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "New York With Kids 2026 — Best Family Things to Do | Flyamba",
   description:
-    "The best family things to do in New York — the Natural History Museum, Central Park Zoo, the Bronx Zoo, the Intrepid, the Rockefeller ice rink and Coney Island, with prices, ages and tips.",
+    "The best family things to do in New York — the Natural History Museum, Central Park Zoo, the Bronx Zoo, the Intrepid, the Rockefeller ice rink and Coney…",
   alternates: { canonical: `${SITE}/new-york/with-kids` },
   openGraph: { title: "New York With Kids | Flyamba", description: "Museums, zoos, an aircraft carrier and Coney Island — the best family days out in New York.", type: "article" },
 };

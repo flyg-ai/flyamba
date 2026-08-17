@@ -7,9 +7,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Top Attractions in Santorini 2026 — Things to Do Guide | Flyamba",
+  title: "Top Attractions in Santorini 2026 — Things to Do Guide",
   description:
-    "The best things to do in Santorini — the Oia sunset, Fira, the Fira-to-Oia caldera walk, Akrotiri, Ancient Thera, the volcano, wineries and blue-domed churches, with prices, hours and tips.",
+    "The best things to do in Santorini — the Oia sunset, Fira, the Fira-to-Oia caldera walk, Akrotiri, Ancient Thera, the volcano, wineries and blue-domed…",
   alternates: { canonical: `${SITE}/santorini/attractions` },
   openGraph: { title: "Best Things to Do in Santorini | Flyamba", description: "18 top Santorini attractions with prices, hours and insider tips.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Marrakech 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Marrakech — from Jemaa el-Fnaa food stalls and pit-roasted mechoui to modern rooftops like Nomad and lavish palace feasts at Dar Yacout, with prices, hours and tips.",
+    "Where to eat in Marrakech — from Jemaa el-Fnaa food stalls and pit-roasted mechoui to modern rooftops like Nomad and lavish palace feasts at Dar Yacout…",
   alternates: { canonical: `${SITE}/marrakech/restaurants` },
   openGraph: { title: "Best Restaurants in Marrakech | Flyamba", description: "The top Marrakech restaurants, from street food to palace banquets.", type: "article" },
 };

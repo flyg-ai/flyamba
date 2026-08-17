@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Beaches in Phuket 2026 — Best Beaches Guide | Flyamba",
   description:
-    "The best beaches in Phuket — lively Patong, beautiful Kata and Karon, upscale Surin and Bang Tao, family-friendly Kamala, stunning Nai Harn and secret Freedom Beach, with facilities, swimming advice and how to get there.",
+    "The best beaches in Phuket — lively Patong, beautiful Kata and Karon, upscale Surin and Bang Tao, family-friendly Kamala, stunning Nai Harn and secret…",
   alternates: { canonical: `${SITE}/phuket/beaches` },
   openGraph: { title: "Best Beaches in Phuket | Flyamba", description: "Phuket's best beaches, from lively Patong to gorgeous Nai Harn, with facilities and tips.", type: "article" },
 };

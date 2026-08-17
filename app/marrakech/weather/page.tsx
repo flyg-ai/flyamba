@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Marrakech Weather & Best Time to Visit 2026 | Flyamba",
   description:
-    "Marrakech weather month by month and the best time to visit — glorious spring and autumn, brutal 40°C+ summers, mild sunny winter days with cold nights, and what to pack each season.",
+    "Marrakech weather month by month and the best time to visit — glorious spring and autumn, brutal 40°C+ summers, mild sunny winter days with cold nights…",
   alternates: { canonical: `${SITE}/marrakech/weather` },
   openGraph: { title: "Marrakech Weather & Best Time to Visit | Flyamba", description: "When to visit Marrakech: a season-by-season climate guide.", type: "article" },
 };

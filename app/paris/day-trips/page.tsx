@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Day Trips from Paris 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Paris — the palace of Versailles, Monet's garden at Giverny, Disneyland Paris, the champagne cellars of Reims, the château of Fontainebleau and the Gothic cathedral of Chartres. Distances, train routes and tips.",
+    "The best day trips from Paris — the palace of Versailles, Monet's garden at Giverny, Disneyland Paris, the champagne cellars of Reims, the château of…",
   alternates: { canonical: `${SITE}/paris/day-trips` },
   openGraph: { title: "Best Day Trips from Paris | Flyamba", description: "Versailles, Giverny, Champagne and more from Paris.", type: "article" },
 };

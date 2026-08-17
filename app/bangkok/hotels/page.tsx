@@ -7,9 +7,9 @@ import { BANGKOK_CATEGORIES } from "@/app/lib/bangkok";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Stay in Bangkok 2026 — Best Hotels & Areas | Flyamba",
+  title: "Where to Stay in Bangkok 2026 — Best Hotels & Areas",
   description:
-    "The best hotels in Bangkok by area and budget — riverside legends like the Mandarin Oriental and Peninsula, design boutiques, central Sukhumvit bases and top hostels.",
+    "The best hotels in Bangkok by area and budget — riverside legends like the Mandarin Oriental and Peninsula, design boutiques, central Sukhumvit bases and…",
   alternates: { canonical: `${SITE}/bangkok/hotels` },
   openGraph: { title: "Best Hotels in Bangkok | Flyamba", description: "Where to stay in Bangkok by neighborhood and budget.", type: "article" },
 };

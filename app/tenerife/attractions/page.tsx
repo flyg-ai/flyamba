@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Tenerife 2026 — Visitor Guide | Flyamba",
   description:
-    "The best things to do in Tenerife — Mount Teide and its cable car, Siam Park, Loro Parque, Masca village, Los Gigantes cliffs, La Laguna and more, with prices, hours and insider tips.",
+    "The best things to do in Tenerife — Mount Teide and its cable car, Siam Park, Loro Parque, Masca village, Los Gigantes cliffs, La Laguna and more, with…",
   alternates: { canonical: `${SITE}/tenerife/attractions` },
   openGraph: { title: "Best Things to Do in Tenerife | Flyamba", description: "18 top Tenerife attractions with prices, hours and tips.", type: "article" },
 };

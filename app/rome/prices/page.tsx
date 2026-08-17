@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Rome Prices 2026 — Costs & Budget Guide | Flyamba",
   description:
-    "How much a trip to Rome costs — the cheapest months to fly, daily budgets from backpacker to luxury, attraction and museum ticket prices, what meals cost and getting-around fares, with money-saving tips.",
+    "How much a trip to Rome costs — the cheapest months to fly, daily budgets from backpacker to luxury, attraction and museum ticket prices, what meals cost…",
   alternates: { canonical: `${SITE}/rome/prices` },
   openGraph: { title: "Rome Prices & Budget Guide | Flyamba", description: "What a Rome trip costs: flights, daily budgets, tickets, food and transport, with saving tips.", type: "article" },
 };

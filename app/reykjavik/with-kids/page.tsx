@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Reykjavik with Kids 2026 — Best Family Attractions | Flyamba",
   description:
-    "The best things to do in Reykjavik with kids — Perlan's ice cave, whale and puffin watching, FlyOver Iceland, geothermal pools, the Family Park and Zoo and more, with ages, prices and tips.",
+    "The best things to do in Reykjavik with kids — Perlan's ice cave, whale and puffin watching, FlyOver Iceland, geothermal pools, the Family Park and Zoo…",
   alternates: { canonical: `${SITE}/reykjavik/with-kids` },
   openGraph: { title: "Reykjavik with Kids | Flyamba", description: "Ice caves, whale watching, geothermal pools and hot-spring hikes — family fun in Reykjavik.", type: "article" },
 };

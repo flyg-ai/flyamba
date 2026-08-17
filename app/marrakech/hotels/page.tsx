@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Hotels & Riads in Marrakech 2026 — Guide | Flyamba",
   description:
-    "Where to stay in Marrakech — from legendary palace hotels like La Mamounia and the Royal Mansour to boutique medina riads and budget guesthouses, with prices, areas and tips.",
+    "Where to stay in Marrakech — from legendary palace hotels like La Mamounia and the Royal Mansour to boutique medina riads and budget guesthouses, with…",
   alternates: { canonical: `${SITE}/marrakech/hotels` },
   openGraph: { title: "Best Hotels & Riads in Marrakech | Flyamba", description: "Marrakech's top riads and hotels for every budget, with prices and tips.", type: "article" },
 };

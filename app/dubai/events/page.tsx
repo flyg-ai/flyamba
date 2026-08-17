@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubai Events & Festivals 2026 — Calendar | Flyamba",
   description:
-    "Dubai's biggest annual events and festivals — the Dubai Shopping Festival, the spectacular New Year's Eve fireworks at the Burj Khalifa, Ramadan and Eid, the Dubai World Cup, UAE National Day and the Dubai Food Festival, with dates and tips.",
+    "Dubai's biggest annual events and festivals — the Dubai Shopping Festival, the spectacular New Year's Eve fireworks at the Burj Khalifa, Ramadan and Eid…",
   alternates: { canonical: `${SITE}/dubai/events` },
   openGraph: { title: "Dubai Events & Festivals | Flyamba", description: "Dubai's annual festival calendar, from the Shopping Festival to New Year's Eve, with dates and tips.", type: "article" },
 };

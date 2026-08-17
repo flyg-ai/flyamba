@@ -11,7 +11,7 @@ const PH = "/images/barcelona/placeholder.webp";
 export const metadata: Metadata = {
   title: "Prices in Ibiza 2026 — Costs & Budget Guide | Flyamba",
   description:
-    "How much does Ibiza cost? A budget guide to daily spending — accommodation, food and drink, club entry, transport and beach clubs — and how to visit the White Isle for less.",
+    "How much does Ibiza cost? A budget guide to daily spending — accommodation, food and drink, club entry, transport and beach clubs — and how to visit the…",
   alternates: { canonical: `${SITE}/ibiza/prices` },
   openGraph: { title: "Ibiza Prices & Daily Budget | Flyamba", description: "What things cost in Ibiza, from club entry to beach-club lunches, and how to save.", type: "article", images: [HERO] },
 };

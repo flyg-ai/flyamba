@@ -9,7 +9,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Bangkok 2026 — Malls & Markets Guide | Flyamba",
   description:
-    "Where to shop in Bangkok — from ICONSIAM and Siam Paragon to Chatuchak Weekend Market, Terminal 21 and Pratunam's wholesale bargains, with tips and transport.",
+    "Where to shop in Bangkok — from ICONSIAM and Siam Paragon to Chatuchak Weekend Market, Terminal 21 and Pratunam's wholesale bargains, with tips and…",
   alternates: { canonical: `${SITE}/bangkok/shopping` },
   openGraph: { title: "Best Shopping in Bangkok | Flyamba", description: "Mega-malls, weekend markets and bargain bazaars.", type: "article" },
 };

@@ -7,9 +7,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Santorini with Kids 2026 — Family Things to Do Guide | Flyamba",
+  title: "Santorini with Kids 2026 — Family Things to Do Guide",
   description:
-    "Santorini with children — the volcano boat trip, family beaches like Kamari and Monolithos, a water park, the immersive Lost Atlantis show and gentle mini-cruises. Age tips, prices and practical advice.",
+    "Santorini with children — the volcano boat trip, family beaches like Kamari and Monolithos, a water park, the immersive Lost Atlantis show and gentle…",
   alternates: { canonical: `${SITE}/santorini/with-kids` },
   openGraph: { title: "Santorini with Kids | Flyamba", description: "7 family-friendly things to do in Santorini, with ages, prices and tips.", type: "article" },
 };

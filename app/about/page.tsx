@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { SITE } from "@/app/lib/destination-helpers";
 import { Sparkles, Compass, Shield, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "About Flyamba — Smarter flight search for curious travelers",
   description:
     "Flyamba blends warm travel curation with AI-powered flight search. Meet the team building the future of trip planning.",
+  alternates: { canonical: `${SITE}/about` },
   openGraph: {
     title: "About Flyamba",
     description: "Warm, AI-powered flight search built for people who love to travel.",

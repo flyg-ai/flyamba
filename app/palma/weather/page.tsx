@@ -6,7 +6,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Palma Weather 2026 — Best Time to Visit Guide | Flyamba",
   description:
-    "Palma de Mallorca weather month by month — hot, dry summers around 30°C, warm September seas, mild sunny winters and the best time to visit, with a full climate table and what to pack.",
+    "Palma de Mallorca weather month by month — hot, dry summers around 30°C, warm September seas, mild sunny winters and the best time to visit, with a full…",
   alternates: { canonical: `${SITE}/palma/weather` },
   openGraph: { title: "Palma Weather & Best Time to Visit | Flyamba", description: "Month-by-month Palma climate, sea temperatures and the best time to visit.", type: "article" },
 };

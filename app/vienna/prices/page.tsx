@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Prices in Vienna 2026 — Costs & Budget Guide | Flyamba",
   description:
-    "How much a trip to Vienna costs — the cheapest months to fly, daily budgets from backpacker to luxury, attraction and museum ticket prices, what meals and coffee cost and getting-around fares, with money-saving tips.",
+    "How much a trip to Vienna costs — the cheapest months to fly, daily budgets from backpacker to luxury, attraction and museum ticket prices, what meals…",
   alternates: { canonical: `${SITE}/vienna/prices` },
   openGraph: { title: "Vienna Prices & Budget Guide | Flyamba", description: "What a Vienna trip costs: flights, daily budgets, tickets, food and transport, with saving tips.", type: "article" },
 };

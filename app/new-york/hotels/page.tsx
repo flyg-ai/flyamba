@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Stay in New York 2026 — Best Hotels Guide | Flyamba",
   description:
-    "The best hotels in New York — from the iconic Plaza and ultra-luxe Aman to design boutiques and smart budget stays, with neighbourhoods, nightly prices in USD and tips on the best areas.",
+    "The best hotels in New York — from the iconic Plaza and ultra-luxe Aman to design boutiques and smart budget stays, with neighbourhoods, nightly prices…",
   alternates: { canonical: `${SITE}/new-york/hotels` },
   openGraph: { title: "Best Hotels in New York | Flyamba", description: "Iconic grand hotels, design boutiques and budget picks — where to stay in New York.", type: "article" },
 };

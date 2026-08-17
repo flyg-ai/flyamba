@@ -9,6 +9,7 @@ import { CitySubNav } from "@/app/components/CitySubNav";
 import { SmartImage } from "@/app/components/SmartImage";
 import { CATEGORIES, ATTRACTIONS, RESTAURANTS, BEACHES } from "@/app/data/lisbon-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -60,9 +61,9 @@ const NEARBY = [
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Lisbon ${year} — Guide, Prices & Attractions | Flyamba`;
+  const title = clampTitle(`Cheap Flights to Lisbon ${year} — Guide, Prices & Attractions | Flyamba`);
   const description =
-    "Find cheap flights to Lisbon, Portugal from $240. Compare fares from TAP Air Portugal, United and British Airways, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips to Sintra and Cascais.";
+    clampDescription("Find cheap flights to Lisbon, Portugal from $240. Compare fares from TAP Air Portugal, United and British Airways, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips to Sintra and Cascais.");
   const canonical = `${SITE}/lisbon`;
   return {
     title,

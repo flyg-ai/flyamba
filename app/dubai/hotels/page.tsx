@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Hotels in Dubai 2026 — Where to Stay Guide | Flyamba",
   description:
-    "The best hotels in Dubai for every budget — icons like the Burj Al Arab, Atlantis The Palm and One&Only, the Armani inside the Burj Khalifa, plus smart-value picks like Rove, Premier Inn and Citymax, with areas, prices and tips.",
+    "The best hotels in Dubai for every budget — icons like the Burj Al Arab, Atlantis The Palm and One&Only, the Armani inside the Burj Khalifa, plus…",
   alternates: { canonical: `${SITE}/dubai/hotels` },
   openGraph: { title: "Best Hotels in Dubai | Flyamba", description: "Where to stay in Dubai, from icons to budget, with prices and area tips.", type: "article" },
 };

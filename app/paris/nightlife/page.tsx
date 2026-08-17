@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Nightlife in Paris 2026 — Guide | Flyamba",
   description:
-    "Paris after dark — the Moulin Rouge cabaret, a swing-jazz cellar in the Latin Quarter, hidden cocktail speakeasies, rooftop bars, David Lynch's club and the city's temple of techno. Areas, hours, prices and Métro directions.",
+    "Paris after dark — the Moulin Rouge cabaret, a swing-jazz cellar in the Latin Quarter, hidden cocktail speakeasies, rooftop bars, David Lynch's club and…",
   alternates: { canonical: `${SITE}/paris/nightlife` },
   openGraph: { title: "Best Nightlife in Paris | Flyamba", description: "Cabarets, jazz, cocktail bars and clubs in Paris.", type: "article" },
 };

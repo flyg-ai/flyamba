@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/cape-town-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Cape Town Prices 2026 — Flights, Budget & Daily Costs | Flyamba",
+  title: "Cape Town Prices 2026 — Flights, Budget & Daily Costs",
   description:
-    "How much does Cape Town cost? Flight fares from $570, plus a full daily-budget breakdown — hotels, food, wine, attractions, transport and money-saving tips, all in US dollars.",
+    "How much does Cape Town cost? Flight fares from $570, plus a full daily-budget breakdown — hotels, food, wine, attractions, transport and money-saving…",
   alternates: { canonical: `${SITE}/cape-town/prices` },
   openGraph: { title: "Cape Town Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to Cape Town.", type: "article" },
 };

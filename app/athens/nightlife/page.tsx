@@ -6,9 +6,9 @@ import { NIGHTLIFE, CATEGORIES } from "@/app/data/athens-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Athens Nightlife 2026 — Best Bars, Rooftops & Clubs | Flyamba",
+  title: "Athens Nightlife 2026 — Best Bars, Rooftops & Clubs",
   description:
-    "Where to drink and party in Athens — world-ranked cocktail bars, Acropolis-view rooftops in Monastiraki, the alternative clubs of Gazi and historic Plaka bars, with areas, prices and tips.",
+    "Where to drink and party in Athens — world-ranked cocktail bars, Acropolis-view rooftops in Monastiraki, the alternative clubs of Gazi and historic Plaka…",
   alternates: { canonical: `${SITE}/athens/nightlife` },
   openGraph: { title: "Athens Nightlife | Flyamba", description: "The best bars, rooftops and clubs in Athens.", type: "article" },
 };

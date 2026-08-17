@@ -7,9 +7,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Best Day Trips from Santorini 2026 — Islands & Volcano | Flyamba",
+  title: "Best Day Trips from Santorini 2026 — Islands & Volcano",
   description:
-    "The best day trips from Santorini — the volcano and hot springs cruise, quiet Thirassia, ferry hops to Ios, Naxos and Milos, and a guided volcanic wine tour. Distances, durations and booking tips.",
+    "The best day trips from Santorini — the volcano and hot springs cruise, quiet Thirassia, ferry hops to Ios, Naxos and Milos, and a guided volcanic wine…",
   alternates: { canonical: `${SITE}/santorini/day-trips` },
   openGraph: { title: "Day Trips from Santorini | Flyamba", description: "6 great day trips from Santorini, from the volcano to neighbouring Cycladic islands.", type: "article" },
 };

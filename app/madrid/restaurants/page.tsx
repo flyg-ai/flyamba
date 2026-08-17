@@ -6,9 +6,9 @@ import { RESTAURANTS, CATEGORIES } from "@/app/data/madrid-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Eat in Madrid 2026 — Best Restaurants Guide | Flyamba",
+  title: "Where to Eat in Madrid 2026 — Best Restaurants Guide",
   description:
-    "The best restaurants in Madrid — from Sobrino de Botín, the world's oldest, and three-Michelin-star DiverXO to the world-champion tortilla at Casa Dani, plus tapas, churros and local favourites.",
+    "The best restaurants in Madrid — from Sobrino de Botín, the world's oldest, and three-Michelin-star DiverXO to the world-champion tortilla at Casa Dani…",
   alternates: { canonical: `${SITE}/madrid/restaurants` },
   openGraph: { title: "Best Restaurants in Madrid | Flyamba", description: "Where to eat in Madrid — 10 standout tables with tips.", type: "article" },
 };

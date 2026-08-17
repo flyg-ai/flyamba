@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Restaurants in Singapore 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Singapore — from three-Michelin-star Odette and Les Amis to the world's cheapest Michelin meal at Hawker Chan, chilli crab, laksa and the best hawker centres, with prices and tips.",
+    "Where to eat in Singapore — from three-Michelin-star Odette and Les Amis to the world's cheapest Michelin meal at Hawker Chan, chilli crab, laksa and the…",
   alternates: { canonical: `${SITE}/singapore/restaurants` },
   openGraph: { title: "Best Restaurants in Singapore | Flyamba", description: "10 top Singapore restaurants and hawker centres with prices and tips.", type: "article" },
 };

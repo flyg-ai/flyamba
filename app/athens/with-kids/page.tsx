@@ -6,9 +6,9 @@ import { WITH_KIDS, CATEGORIES } from "@/app/data/athens-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Athens with Kids 2026 — Family Guide & Things to Do | Flyamba",
+  title: "Athens with Kids 2026 — Family Guide & Things to Do",
   description:
-    "The best things to do in Athens with kids — the free SNFCC park and National Garden, the Attica zoo, a giant planetarium, a hands-on children's museum, the seafront and a fun park, with ages, prices and tips.",
+    "The best things to do in Athens with kids — the free SNFCC park and National Garden, the Attica zoo, a giant planetarium, a hands-on children's museum…",
   alternates: { canonical: `${SITE}/athens/with-kids` },
   openGraph: { title: "Athens with Kids | Flyamba", description: "Family-friendly activities, parks and days out in Athens.", type: "article" },
 };

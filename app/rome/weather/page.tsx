@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Rome Weather 2026 — Best Time to Visit | Flyamba",
   description:
-    "Rome's weather season by season — mild springs, hot dry summers, golden autumns and cool wet winters — with temperatures, what to pack and the best time to visit for weather, crowds and prices.",
+    "Rome's weather season by season — mild springs, hot dry summers, golden autumns and cool wet winters — with temperatures, what to pack and the best time…",
   alternates: { canonical: `${SITE}/rome/weather` },
   openGraph: { title: "Rome Weather & Best Time to Visit | Flyamba", description: "Rome's climate month by month, with temperatures and the ideal time to go.", type: "article" },
 };

@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/new-york-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "New York Weather 2026 — Best Time to Visit & What to Pack | Flyamba",
+  title: "New York Weather 2026 — Best Time to Visit & What to Pack",
   description:
-    "New York weather month by month — temperatures, seasons and what to pack, from hot humid summers to snowy winters, plus the best time to visit for spring blossom, autumn colour and lower prices.",
+    "New York weather month by month — temperatures, seasons and what to pack, from hot humid summers to snowy winters, plus the best time to visit for spring…",
   alternates: { canonical: `${SITE}/new-york/weather` },
   openGraph: { title: "New York Weather & Best Time to Visit | Flyamba", description: "Season-by-season temperatures and packing tips for New York.", type: "article" },
 };

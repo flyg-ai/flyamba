@@ -7,9 +7,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Best Restaurants in Santorini 2026 — Where to Eat Guide | Flyamba",
+  title: "Best Restaurants in Santorini 2026 — Where to Eat Guide",
   description:
-    "Where to eat in Santorini — from fine dining at Selene and cliffside sunset tables in Oia to fresh seafood at Amoudi and Vlychada and cheap, brilliant souvlaki. Local dishes, areas and booking tips.",
+    "Where to eat in Santorini — from fine dining at Selene and cliffside sunset tables in Oia to fresh seafood at Amoudi and Vlychada and cheap, brilliant…",
   alternates: { canonical: `${SITE}/santorini/restaurants` },
   openGraph: { title: "Best Restaurants in Santorini | Flyamba", description: "10 top Santorini restaurants, from fava and fresh fish to caldera-view fine dining.", type: "article" },
 };

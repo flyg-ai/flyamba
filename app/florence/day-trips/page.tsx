@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Day Trips from Florence 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Florence — Pisa and its Leaning Tower, medieval Siena, the towers of San Gimignano, the Chianti wine country, walled Lucca and the Cinque Terre, with travel times, transport and tips.",
+    "The best day trips from Florence — Pisa and its Leaning Tower, medieval Siena, the towers of San Gimignano, the Chianti wine country, walled Lucca and…",
   alternates: { canonical: `${SITE}/florence/day-trips` },
   openGraph: { title: "Best Day Trips from Florence | Flyamba", description: "Pisa, Siena, San Gimignano, Chianti, Lucca and the Cinque Terre, with travel advice.", type: "article" },
 };

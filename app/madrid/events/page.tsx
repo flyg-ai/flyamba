@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/madrid-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Madrid Events 2026 — Festivals & What's On Calendar | Flyamba",
+  title: "Madrid Events 2026 — Festivals & What's On Calendar",
   description:
-    "Madrid's festivals and events through the year — New Year's Eve grapes at Puerta del Sol, the Three Kings parade, Christmas lights on Gran Vía, Semana Santa, summer festivals, football and Sunday markets.",
+    "Madrid's festivals and events through the year — New Year's Eve grapes at Puerta del Sol, the Three Kings parade, Christmas lights on Gran Vía, Semana…",
   alternates: { canonical: `${SITE}/madrid/events` },
   openGraph: { title: "Madrid Events & Festivals | Flyamba", description: "What's on in Madrid through the year, season by season.", type: "article" },
 };

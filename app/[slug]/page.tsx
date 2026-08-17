@@ -6,6 +6,7 @@ import { DestinationDetail } from "@/app/components/DestinationDetail";
 import { DestinationLite } from "@/app/components/DestinationLite";
 import { SITE, airlineNames, lowestPriceStr } from "@/app/lib/destination-helpers";
 import { usdStr } from "@/app/lib/format";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 
 // Static routes that must NOT be produced by this catch-all (they have their own
 // pages). Barcelona has the full static /barcelona guide with a sub-nav.
@@ -39,10 +40,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const rich = getDestination(slug);
   if (rich) {
-    const title = `Cheap Flights to ${rich.city} ${year} — Compare & Book | Flyamba`;
-    const description = `Find cheap flights to ${rich.city}, ${rich.country}. Compare prices from ${airlineNames(rich)
-      .slice(0, 3)
-      .join(", ")}, view price calendar and book direct. Flights from ${lowestPriceStr(rich)}.`;
+    const title = clampTitle(`Cheap Flights to ${rich.city} ${year} — Compare & Book | Flyamba`);
+    const description = clampDescription(
+      `Find cheap flights to ${rich.city}, ${rich.country}. Compare prices from ${airlineNames(rich)
+        .slice(0, 3)
+        .join(", ")}, view price calendar and book direct. Flights from ${lowestPriceStr(rich)}.`,
+    );
     const canonical = `${SITE}/${rich.slug}`;
     return {
       title,
@@ -57,8 +60,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!d) return { title: "Destination not found — Flyamba", robots: { index: false } };
   const validPrices = d.monthlyPrices.filter((p): p is number => p != null);
   const from = validPrices.length ? ` from ${usdStr(Math.min(...validPrices))}` : "";
-  const title = `Cheap Flights to ${d.name} ${year} — Compare & Book | Flyamba`;
-  const description = `Find cheap flights to ${d.name}, ${d.country}${from}. Compare live fares, see the monthly price calendar and book direct with Flyamba.`;
+  const title = clampTitle(`Cheap Flights to ${d.name} ${year} — Compare & Book | Flyamba`);
+  // Country-level entries (Cape Verde, Barbados, Monaco…) would otherwise read
+  // "Cape Verde, Cape Verde".
+  const place = d.name === d.country ? d.name : `${d.name}, ${d.country}`;
+  const description = clampDescription(
+    `Find cheap flights to ${place}${from}. Compare live fares, see the monthly price calendar and book direct with Flyamba.`,
+  );
   const canonical = `${SITE}/${d.slug}`;
   return {
     title,

@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Getting Around Rome 2026 — Transport Guide | Flyamba",
   description:
-    "How to get around Rome — the Leonardo Express from Fiumicino, Ciampino shuttles, the three-line metro, buses and trams, the Roma Pass and taxis, with ticket prices, routes and practical tips.",
+    "How to get around Rome — the Leonardo Express from Fiumicino, Ciampino shuttles, the three-line metro, buses and trams, the Roma Pass and taxis, with…",
   alternates: { canonical: `${SITE}/rome/transport` },
   openGraph: { title: "Getting Around Rome | Flyamba", description: "Rome transport explained: airports, metro, buses, the Roma Pass and taxis, with prices.", type: "article" },
 };

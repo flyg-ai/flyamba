@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Palma Events & Festivals 2026 — Guide | Flyamba",
   description:
-    "Palma de Mallorca's festivals and events month by month — the huge Sant Sebastià bonfires in January, Semana Santa processions, September's Nit de l'Art, summer concerts and sailing, and the Three Kings parade.",
+    "Palma de Mallorca's festivals and events month by month — the huge Sant Sebastià bonfires in January, Semana Santa processions, September's Nit de l'Art…",
   alternates: { canonical: `${SITE}/palma/events` },
   openGraph: { title: "Palma Events & Festivals | Flyamba", description: "Festivals, concerts and celebrations in Palma month by month.", type: "article" },
 };

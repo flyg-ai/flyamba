@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Marrakech 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Marrakech — the High Atlas and Imlil, the Ourika Valley, Essaouira, Aït Ben Haddou and Ouarzazate, the Agafay Desert and Ouzoud Falls, with distances, prices and tips.",
+    "The best day trips from Marrakech — the High Atlas and Imlil, the Ourika Valley, Essaouira, Aït Ben Haddou and Ouarzazate, the Agafay Desert and Ouzoud…",
   alternates: { canonical: `${SITE}/marrakech/day-trips` },
   openGraph: { title: "Best Day Trips from Marrakech | Flyamba", description: "Mountains, valleys, kasbahs, desert and coast within reach of Marrakech.", type: "article" },
 };

@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/madrid-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Madrid Weather 2026 — Best Time to Visit & What to Pack | Flyamba",
+  title: "Madrid Weather 2026 — Best Time to Visit & What to Pack",
   description:
-    "Madrid weather month by month — temperatures, seasons and what to pack, plus the best time to visit. Hot, dry summers, mild sunny winters and around 300 days of sun a year.",
+    "Madrid weather month by month — temperatures, seasons and what to pack, plus the best time to visit.",
   alternates: { canonical: `${SITE}/madrid/weather` },
   openGraph: { title: "Madrid Weather & Best Time to Visit | Flyamba", description: "Season-by-season temperatures and packing tips for Madrid.", type: "article" },
 };

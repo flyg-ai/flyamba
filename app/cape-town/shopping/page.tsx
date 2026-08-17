@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Cape Town 2026 — Markets & Malls Guide | Flyamba",
   description:
-    "Where to shop in Cape Town — the V&A Waterfront and Watershed design market, Greenmarket Square curios, Long Street vintage, weekend farmers' markets and flea markets, with hours and tips.",
+    "Where to shop in Cape Town — the V&A Waterfront and Watershed design market, Greenmarket Square curios, Long Street vintage, weekend farmers' markets and…",
   alternates: { canonical: `${SITE}/cape-town/shopping` },
   openGraph: { title: "Best Shopping in Cape Town | Flyamba", description: "Malls, craft markets, design stores, vintage and flea markets in Cape Town.", type: "article" },
 };

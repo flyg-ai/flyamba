@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Paris Prices in 2026 — Cost Guide | Flyamba",
   description:
-    "What a trip to Paris really costs — flight fares from around $286, hotel prices by category, the cost of food and drink, museum tickets and the Paris Museum Pass, plus realistic daily budgets for every kind of traveller.",
+    "What a trip to Paris really costs — flight fares from around $286, hotel prices by category, the cost of food and drink, museum tickets and the Paris…",
   alternates: { canonical: `${SITE}/paris/prices` },
   openGraph: { title: "How Much Does Paris Cost? | Flyamba", description: "Flights, hotels, food, attractions and daily budgets for Paris.", type: "article" },
 };

@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Best Beaches Near Tokyo 2026 — Coast & Day Trips | Flyamba",
   description:
-    "The best beaches within reach of Tokyo — Kamakura's Yuigahama, Enoshima, Zushi, Hayama and the surf town of Chigasaki, plus in-city Odaiba and paradise-like Izu.",
+    "The best beaches within reach of Tokyo — Kamakura's Yuigahama, Enoshima, Zushi, Hayama and the surf town of Chigasaki, plus in-city Odaiba and…",
   alternates: { canonical: `${SITE}/tokyo/beaches` },
   openGraph: { title: "Best Beaches Near Tokyo | Flyamba", description: "Kamakura, Enoshima, Zushi and the best coast near Tokyo.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Prague with Kids 2026 — Best Family Attractions | Flyamba",
   description:
-    "The best things to do in Prague with children — the world-class zoo, the Petřín mirror maze, a giant model railway, hands-on museums, a planetarium, aquarium and big green parks, with prices and tips.",
+    "The best things to do in Prague with children — the world-class zoo, the Petřín mirror maze, a giant model railway, hands-on museums, a planetarium…",
   alternates: { canonical: `${SITE}/prague/with-kids` },
   openGraph: { title: "Prague with Kids | Flyamba", description: "8 top family attractions in Prague with prices and tips.", type: "article" },
 };

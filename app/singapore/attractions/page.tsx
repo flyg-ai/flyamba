@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Attractions in Singapore 2026 — Guide | Flyamba",
   description:
-    "The 18 best things to do in Singapore — Gardens by the Bay, Marina Bay Sands, the Singapore Zoo, Universal Studios, Sentosa, Chinatown, Little India and more, with prices, hours and insider tips.",
+    "The 18 best things to do in Singapore — Gardens by the Bay, Marina Bay Sands, the Singapore Zoo, Universal Studios, Sentosa, Chinatown, Little India and…",
   alternates: { canonical: `${SITE}/singapore/attractions` },
   openGraph: { title: "Best Things to Do in Singapore | Flyamba", description: "18 top Singapore attractions with prices, hours and tips.", type: "article" },
 };

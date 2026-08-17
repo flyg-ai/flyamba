@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/reykjavik-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Reykjavik 2026 — Best Streets & Markets | Flyamba",
+  title: "Shopping in Reykjavik 2026 — Best Streets & Markets",
   description:
-    "Where to shop in Reykjavik — design-lined Laugavegur and Skólavörðustígur, hand-knitted wool sweaters, 66°North outerwear, the Kolaportið flea market and Icelandic design stores, with areas and tips.",
+    "Where to shop in Reykjavik — design-lined Laugavegur and Skólavörðustígur, hand-knitted wool sweaters, 66°North outerwear, the Kolaportið flea market and…",
   alternates: { canonical: `${SITE}/reykjavik/shopping` },
   openGraph: { title: "Reykjavik Shopping Guide | Flyamba", description: "Icelandic design, wool sweaters, outdoor gear and flea markets — the best shopping in Reykjavik.", type: "article" },
 };

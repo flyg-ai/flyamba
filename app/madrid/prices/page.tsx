@@ -13,7 +13,7 @@ const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
 export const metadata: Metadata = {
   title: "Madrid Prices 2026 — Flights, Daily Budget & Costs | Flyamba",
   description:
-    "How much does Madrid cost? Flight prices by month, a realistic daily budget, and typical prices for tapas, beer, coffee, hotels, the metro and museums — plus how to see the city for less.",
+    "How much does Madrid cost? Flight prices by month, a realistic daily budget, and typical prices for tapas, beer, coffee, hotels, the metro and museums…",
   alternates: { canonical: `${SITE}/madrid/prices` },
   openGraph: { title: "How Much Does Madrid Cost? | Flyamba", description: "Flight prices, daily budgets and typical costs in Madrid.", type: "article" },
 };

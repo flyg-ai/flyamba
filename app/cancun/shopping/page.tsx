@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Cancún 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Cancún — the open-air La Isla village, luxury and duty-free at Kukulcán Plaza, the crafts and haggling of Mercado 28, authentic local markets and the marina boutiques of Puerto Cancún, with tips and prices.",
+    "Where to shop in Cancún — the open-air La Isla village, luxury and duty-free at Kukulcán Plaza, the crafts and haggling of Mercado 28, authentic local…",
   alternates: { canonical: `${SITE}/cancun/shopping` },
   openGraph: { title: "Shopping in Cancún | Flyamba", description: "Cancún's malls, markets and boutiques, from duty-free luxury to haggling for souvenirs, with tips.", type: "article" },
 };

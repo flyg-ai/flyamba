@@ -4,7 +4,7 @@ import { FaqItem } from "@/app/components/FaqItem";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Barcelona 2026 — Metro, Bus & Taxi Guide | Flyamba",
+  title: "Getting Around Barcelona 2026 — Metro, Bus & Taxi Guide",
   description:
     "How to get around Barcelona: airport transfers, the metro, buses, cycling, taxis and Uber, plus ticket types, prices in euros and money-saving tips.",
   alternates: { canonical: `${SITE}/barcelona/transport` },

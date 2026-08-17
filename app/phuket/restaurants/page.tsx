@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Restaurants in Phuket 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Phuket — fiery southern Thai and unique Baba cuisine, fresh seafood, heritage Old Town institutions, beachfront tables and cheap street food, from Raya to Blue Elephant, with prices and tips.",
+    "Where to eat in Phuket — fiery southern Thai and unique Baba cuisine, fresh seafood, heritage Old Town institutions, beachfront tables and cheap street…",
   alternates: { canonical: `${SITE}/phuket/restaurants` },
   openGraph: { title: "Best Restaurants in Phuket | Flyamba", description: "Phuket's top Thai, seafood, Old Town and street-food spots with prices and tips.", type: "article" },
 };

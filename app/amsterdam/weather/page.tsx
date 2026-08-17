@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/amsterdam-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Amsterdam Weather 2026 — Best Time to Visit & What to Pack | Flyamba",
+  title: "Amsterdam Weather 2026 — Best Time to Visit & What to Pack",
   description:
-    "Amsterdam weather month by month — temperatures, rainfall and what to pack for every season, plus the best time to visit for tulips, sunshine and lower prices.",
+    "Amsterdam weather month by month — temperatures, rainfall and what to pack for every season, plus the best time to visit for tulips, sunshine and lower…",
   alternates: { canonical: `${SITE}/amsterdam/weather` },
   openGraph: { title: "Amsterdam Weather & Best Time to Visit | Flyamba", description: "Season-by-season temperatures, rainfall and packing tips for Amsterdam.", type: "article" },
 };

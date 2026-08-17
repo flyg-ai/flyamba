@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Paris 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Paris — the grand department stores of Galeries Lafayette and Le Bon Marché, the concept stores and vintage boutiques of the Marais, luxury flagships on Rue Saint-Honoré and the city's best markets. Hours, areas and tips.",
+    "Where to shop in Paris — the grand department stores of Galeries Lafayette and Le Bon Marché, the concept stores and vintage boutiques of the Marais…",
   alternates: { canonical: `${SITE}/paris/shopping` },
   openGraph: { title: "Best Shopping in Paris | Flyamba", description: "Department stores, boutiques and markets in Paris.", type: "article" },
 };

@@ -7,9 +7,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Santorini 2026 — Art, Jewellery & Wine Guide | Flyamba",
+  title: "Shopping in Santorini 2026 — Art, Jewellery & Wine Guide",
   description:
-    "Where to shop in Santorini — Oia's art galleries and boutiques, Fira's Gold Street jewellery, the cult Atlantis Books, handmade ceramics, and volcanic Assyrtiko and Vinsanto wines to take home.",
+    "Where to shop in Santorini — Oia's art galleries and boutiques, Fira's Gold Street jewellery, the cult Atlantis Books, handmade ceramics, and volcanic…",
   alternates: { canonical: `${SITE}/santorini/shopping` },
   openGraph: { title: "Shopping in Santorini | Flyamba", description: "8 of the best places to shop in Santorini, from cave bookshops to winery cellars.", type: "article" },
 };

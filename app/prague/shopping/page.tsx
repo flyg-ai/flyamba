@@ -6,9 +6,9 @@ import { SHOPPING, PRAGUE_CATEGORIES } from "@/app/data/prague-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Prague 2026 — Best Streets, Markets & Gifts | Flyamba",
+  title: "Shopping in Prague 2026 — Best Streets, Markets & Gifts",
   description:
-    "Where to shop in Prague — luxury Pařížská street, the high-street Na Příkopě, Bohemian crystal, Czech design, natural cosmetics, farmers' markets and the best souvenirs, with locations and tips.",
+    "Where to shop in Prague — luxury Pařížská street, the high-street Na Příkopě, Bohemian crystal, Czech design, natural cosmetics, farmers' markets and the…",
   alternates: { canonical: `${SITE}/prague/shopping` },
   openGraph: { title: "Shopping in Prague | Flyamba", description: "8 top Prague shopping streets, markets and design stores.", type: "article" },
 };

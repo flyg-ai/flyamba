@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Restaurants in Vienna 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Vienna — the best schnitzel houses and Tafelspitz, historic coffee houses, traditional Beisln and Michelin-starred fine dining, from Figlmüller and Plachutta to Steirereck, with prices and tips.",
+    "Where to eat in Vienna — the best schnitzel houses and Tafelspitz, historic coffee houses, traditional Beisln and Michelin-starred fine dining, from…",
   alternates: { canonical: `${SITE}/vienna/restaurants` },
   openGraph: { title: "Best Restaurants in Vienna | Flyamba", description: "Vienna's top schnitzel houses, coffee houses, Beisln and fine dining with prices and tips.", type: "article" },
 };

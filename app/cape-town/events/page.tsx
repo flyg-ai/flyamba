@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Cape Town Events & Festivals 2026 — What's On | Flyamba",
   description:
-    "Cape Town's best events — the Cape Town Jazz Festival, Kirstenbosch summer sunset concerts, the Cape Town Carnival, the Two Oceans Marathon, the Kaapse Klopse minstrel carnival and monthly First Thursdays — month by month.",
+    "Cape Town's best events — the Cape Town Jazz Festival, Kirstenbosch summer sunset concerts, the Cape Town Carnival, the Two Oceans Marathon, the Kaapse…",
   alternates: { canonical: `${SITE}/cape-town/events` },
   openGraph: { title: "Cape Town Events & Festivals | Flyamba", description: "Jazz, sunset concerts, carnival and marathons — Cape Town's event calendar.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Dubrovnik 2026 — Guide | Flyamba",
   description:
-    "The 20 best things to do in Dubrovnik — walk the medieval city walls, ride the Srđ cable car, explore Fort Lovrijenac, Lokrum island, the Rector's Palace and Game of Thrones locations, with prices, opening hours and insider tips.",
+    "The 20 best things to do in Dubrovnik — walk the medieval city walls, ride the Srđ cable car, explore Fort Lovrijenac, Lokrum island, the Rector's Palace…",
   alternates: { canonical: `${SITE}/dubrovnik/attractions` },
   openGraph: { title: "Best Things to Do in Dubrovnik | Flyamba", description: "20 top Dubrovnik attractions with prices, hours and tips.", type: "article" },
 };

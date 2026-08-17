@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Day Trips from Phuket 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Phuket — the Phi Phi Islands and Maya Bay, Phang Nga Bay and James Bond Island, the pristine Similan Islands, Krabi and Railay, close-in Coral Island and the Racha Islands, with travel times and tips.",
+    "The best day trips from Phuket — the Phi Phi Islands and Maya Bay, Phang Nga Bay and James Bond Island, the pristine Similan Islands, Krabi and Railay…",
   alternates: { canonical: `${SITE}/phuket/day-trips` },
   openGraph: { title: "Best Day Trips from Phuket | Flyamba", description: "Six great island day trips from Phuket, from Phi Phi to the Similans, with directions and tips.", type: "article" },
 };

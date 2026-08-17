@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "With Kids in Singapore 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Singapore with kids — Universal Studios, the S.E.A. Aquarium, the world-beating Singapore Zoo, River Wonders, Adventure Cove, Gardens by the Bay and the Science Centre, with ages, prices and tips.",
+    "The best things to do in Singapore with kids — Universal Studios, the S.E.A. Aquarium, the world-beating Singapore Zoo, River Wonders, Adventure Cove…",
   alternates: { canonical: `${SITE}/singapore/with-kids` },
   openGraph: { title: "Singapore With Kids | Flyamba", description: "8 top family attractions in Singapore with ages, prices and tips.", type: "article" },
 };

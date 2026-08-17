@@ -4,6 +4,7 @@ import { CategorySeoSections } from "@/app/components/CategorySeoSections";
 import type { BcnPlace } from "@/app/data/barcelona-places";
 import { CATEGORIES, BALI } from "@/app/data/bali-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 
 const usdMonths = BALI.monthlyPrices.map((m) => usd5(m.price));
@@ -12,8 +13,7 @@ const MAX_USD = Math.max(...usdMonths);
 
 export const metadata: Metadata = {
   title: "Bali Prices 2026 — Flights, Budget & Daily Costs | Flyamba",
-  description:
-    `How much does Bali cost? Flight fares from $${MIN_USD}, plus a full daily-budget breakdown — hotels, food, drinks, transport and attractions — with currency, ATM, tipping and money-saving tips.`,
+  description: clampDescription(`How much does Bali cost? Flight fares from $${MIN_USD}, plus a full daily-budget breakdown — hotels, food, drinks, transport and attractions — with currency, ATM, tipping and money-saving tips.`),
   alternates: { canonical: `${SITE}/bali/prices` },
   openGraph: { title: "Bali Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to Bali.", type: "article" },
 };

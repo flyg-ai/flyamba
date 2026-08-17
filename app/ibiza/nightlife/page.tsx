@@ -10,7 +10,7 @@ const HERO = "/images/destinations/flights-ibiza.avif";
 export const metadata: Metadata = {
   title: "Nightlife in Ibiza 2026 — Clubs Guide | Flyamba",
   description:
-    "Ibiza's legendary nightlife — Pacha, Amnesia, Ushuaïa, Hï Ibiza, DC-10, Eden and more. The world's clubbing capital, with entry prices, line-ups and insider tips.",
+    "Ibiza's legendary nightlife — Pacha, Amnesia, Ushuaïa, Hï Ibiza, DC-10, Eden and more. The world's clubbing capital, with entry prices, line-ups and…",
   alternates: { canonical: `${SITE}/ibiza/nightlife` },
   openGraph: { title: "Best Clubs & Nightlife in Ibiza | Flyamba", description: "The superclubs that made Ibiza the clubbing capital of the world.", type: "article", images: [HERO] },
 };

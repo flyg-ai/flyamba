@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches in Cape Town 2026 — Complete Guide | Flyamba",
   description:
-    "The best beaches in Cape Town — glamorous Camps Bay and Clifton, the penguins at Boulders, warmer-water Muizenberg for surfing, wild Noordhoek and the classic Table Mountain view at Big Bay, with tips.",
+    "The best beaches in Cape Town — glamorous Camps Bay and Clifton, the penguins at Boulders, warmer-water Muizenberg for surfing, wild Noordhoek and the…",
   alternates: { canonical: `${SITE}/cape-town/beaches` },
   openGraph: { title: "Best Beaches in Cape Town | Flyamba", description: "Atlantic glamour, warmer False Bay swimming and world-class surf — Cape Town's beaches.", type: "article" },
 };

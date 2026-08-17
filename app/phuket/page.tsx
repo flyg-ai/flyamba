@@ -8,6 +8,7 @@ import { FlightCTA } from "@/app/components/FlightCTA";
 import { SmartImage } from "@/app/components/SmartImage";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5, usdStr } from "@/app/lib/format";
 import { CATEGORIES } from "@/app/data/phuket-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
@@ -115,8 +116,8 @@ const FAQ = [
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Phuket ${year} — Guide, Prices & Beaches | Flyamba`;
-  const description = `Find cheap flights to Phuket, Thailand from ${usdStr(LOWEST_SEK)}. Compare fares, plus complete English guides to beaches, attractions, island day trips, restaurants, hotels, transport, weather, shopping, nightlife and family travel.`;
+  const title = clampTitle(`Cheap Flights to Phuket ${year} — Guide, Prices & Beaches | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Phuket, Thailand from ${usdStr(LOWEST_SEK)}. Compare fares, plus complete English guides to beaches, attractions, island day trips, restaurants, hotels, transport, weather, shopping, nightlife and family travel.`);
   const canonical = `${SITE}/phuket`;
   return {
     title,

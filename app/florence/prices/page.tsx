@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Prices in Florence 2026 — Cost Guide | Flyamba",
   description:
-    "How much a trip to Florence costs — cheapest times to fly, daily budgets for every travel style, museum and attraction ticket prices, what meals cost, and transport costs, all with real figures.",
+    "How much a trip to Florence costs — cheapest times to fly, daily budgets for every travel style, museum and attraction ticket prices, what meals cost…",
   alternates: { canonical: `${SITE}/florence/prices` },
   openGraph: { title: "How Much Does Florence Cost? | Flyamba", description: "Flights, daily budgets, museum tickets, food and transport costs for Florence.", type: "article" },
 };

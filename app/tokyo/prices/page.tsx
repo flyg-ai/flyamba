@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Tokyo Travel Costs 2026 — Prices & Daily Budget | Flyamba",
   description:
-    "How much does Tokyo cost? A full breakdown of daily budgets, meal prices, transport, hotels, attractions and money tips — Tokyo is more affordable than most visitors expect.",
+    "How much does Tokyo cost? A full breakdown of daily budgets, meal prices, transport, hotels, attractions and money tips — Tokyo is more affordable than…",
   alternates: { canonical: `${SITE}/tokyo/prices` },
   openGraph: { title: "Tokyo Travel Costs & Budget | Flyamba", description: "Daily budgets, meal prices and money tips for Tokyo.", type: "article" },
 };

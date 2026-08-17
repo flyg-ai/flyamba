@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Tokyo Events & Festivals 2026 — What's On | Flyamba",
   description:
-    "Tokyo's best events and festivals through the year — cherry-blossom hanami, summer fireworks and matsuri, sumo tournaments, autumn illuminations and New Year traditions, with dates and tips.",
+    "Tokyo's best events and festivals through the year — cherry-blossom hanami, summer fireworks and matsuri, sumo tournaments, autumn illuminations and New…",
   alternates: { canonical: `${SITE}/tokyo/events` },
   openGraph: { title: "Tokyo Events & Festivals | Flyamba", description: "Festivals, fireworks, sumo and seasonal events in Tokyo.", type: "article" },
 };

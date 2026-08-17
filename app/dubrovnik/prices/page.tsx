@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubrovnik Prices 2026 — Costs & Budget Guide | Flyamba",
   description:
-    "How much a trip to Dubrovnik costs — the cheapest months to fly, daily budgets from backpacker to luxury, city-walls and cable-car ticket prices, the Dubrovnik Pass, what meals cost and getting-around fares, with money-saving tips.",
+    "How much a trip to Dubrovnik costs — the cheapest months to fly, daily budgets from backpacker to luxury, city-walls and cable-car ticket prices, the…",
   alternates: { canonical: `${SITE}/dubrovnik/prices` },
   openGraph: { title: "Dubrovnik Prices & Budget Guide | Flyamba", description: "What a Dubrovnik trip costs: flights, daily budgets, tickets, food and transport, with saving tips.", type: "article" },
 };

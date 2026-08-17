@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Cape Town with Kids 2026 — Best Family Activities | Flyamba",
   description:
-    "The best things to do in Cape Town with kids — the Two Oceans Aquarium, Boulders Beach penguins, the Table Mountain cableway, Kirstenbosch, World of Birds and more, with prices, ages and tips.",
+    "The best things to do in Cape Town with kids — the Two Oceans Aquarium, Boulders Beach penguins, the Table Mountain cableway, Kirstenbosch, World of…",
   alternates: { canonical: `${SITE}/cape-town/with-kids` },
   openGraph: { title: "Cape Town with Kids | Flyamba", description: "Family-friendly attractions in Cape Town, with prices, ages and tips.", type: "article" },
 };

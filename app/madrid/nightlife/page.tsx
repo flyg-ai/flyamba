@@ -6,9 +6,9 @@ import { NIGHTLIFE, CATEGORIES } from "@/app/data/madrid-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Madrid Nightlife 2026 — Bars, Clubs & Flamenco Guide | Flyamba",
+  title: "Madrid Nightlife 2026 — Bars, Clubs & Flamenco Guide",
   description:
-    "The best of Madrid nightlife — World's 50 Best cocktail bars like Salmon Guru, the legendary Corral de la Morería flamenco tablao, Café Central jazz, seven-floor Teatro Kapital and the Fabrik superclub.",
+    "The best of Madrid nightlife — World's 50 Best cocktail bars like Salmon Guru, the legendary Corral de la Morería flamenco tablao, Café Central jazz…",
   alternates: { canonical: `${SITE}/madrid/nightlife` },
   openGraph: { title: "Madrid Nightlife | Flyamba", description: "Madrid's best bars, clubs, flamenco and jazz.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Lisbon with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Lisbon with kids — the world-class Oceanário, the zoo and its cable car, hands-on science at the Pavilhão do Conhecimento, KidZania, riverside parks and a tram 28 ride.",
+    "The best things to do in Lisbon with kids — the world-class Oceanário, the zoo and its cable car, hands-on science at the Pavilhão do Conhecimento…",
   alternates: { canonical: `${SITE}/lisbon/with-kids` },
   openGraph: { title: "Lisbon with Kids | Flyamba", description: "Family-friendly attractions and days out in Lisbon.", type: "article" },
 };

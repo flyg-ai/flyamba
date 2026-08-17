@@ -6,9 +6,9 @@ import { BEACHES, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Best Beaches in Tenerife 2026 — Golden & Black Sand Guide | Flyamba",
+  title: "Best Beaches in Tenerife 2026 — Golden & Black Sand Guide",
   description:
-    "The best beaches in Tenerife: golden El Duque and Las Teresitas, family-friendly Los Cristianos, windsurf-famous El Médano and wild black-sand Benijo — with facilities, safety and how to get there.",
+    "The best beaches in Tenerife: golden El Duque and Las Teresitas, family-friendly Los Cristianos, windsurf-famous El Médano and wild black-sand Benijo…",
   alternates: { canonical: `${SITE}/tenerife/beaches` },
   openGraph: { title: "Best Beaches in Tenerife | Flyamba", description: "8 beaches from golden sand to wild volcanic coves.", type: "article" },
 };

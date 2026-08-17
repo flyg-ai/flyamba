@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Marrakech with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Marrakech with children — camel rides, the Jemaa el-Fnaa entertainers, a water park, hot-air ballooning, calèche tours and film studios, with ages, prices and tips.",
+    "The best things to do in Marrakech with children — camel rides, the Jemaa el-Fnaa entertainers, a water park, hot-air ballooning, calèche tours and film…",
   alternates: { canonical: `${SITE}/marrakech/with-kids` },
   openGraph: { title: "Marrakech with Kids | Flyamba", description: "Family-friendly Marrakech: camel rides, water parks, ballooning and more.", type: "article" },
 };

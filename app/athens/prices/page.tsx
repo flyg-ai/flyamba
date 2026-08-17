@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Athens Travel Costs 2026 — Budget Guide | Flyamba",
   description:
-    "How much does Athens cost? Daily budgets for budget, mid-range and luxury travellers, plus real prices in euros for food and drink, transport, attraction entry and hotels — one of Europe's best-value capitals.",
+    "How much does Athens cost? Daily budgets for budget, mid-range and luxury travellers, plus real prices in euros for food and drink, transport, attraction…",
   alternates: { canonical: `${SITE}/athens/prices` },
   openGraph: { title: "How Much Does Athens Cost? | Flyamba", description: "Daily budgets and real prices for Athens in euros.", type: "article" },
 };

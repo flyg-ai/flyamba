@@ -10,7 +10,7 @@ const HERO = "/images/destinations/flights-ibiza.avif";
 export const metadata: Metadata = {
   title: "Beaches in Ibiza 2026 — Guide | Flyamba",
   description:
-    "Ibiza's best beaches and coves — from turquoise Cala Comte and family-friendly Cala Bassa to the bohemian drumming of Benirràs and the Es Vedrà view at Cala d'Hort.",
+    "Ibiza's best beaches and coves — from turquoise Cala Comte and family-friendly Cala Bassa to the bohemian drumming of Benirràs and the Es Vedrà view at…",
   alternates: { canonical: `${SITE}/ibiza/beaches` },
   openGraph: { title: "Best Beaches in Ibiza | Flyamba", description: "The White Isle's best beaches and coves, with facilities, access and tips.", type: "article", images: [HERO] },
 };

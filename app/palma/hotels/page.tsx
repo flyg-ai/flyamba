@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Hotels in Palma 2026 — Where to Stay Guide | Flyamba",
   description:
-    "Where to stay in Palma de Mallorca — from a fortress luxury retreat and castle golf resort to boutique old-town mansions and well-priced rooftop-pool hotels, by neighborhood and budget.",
+    "Where to stay in Palma de Mallorca — from a fortress luxury retreat and castle golf resort to boutique old-town mansions and well-priced rooftop-pool…",
   alternates: { canonical: `${SITE}/palma/hotels` },
   openGraph: { title: "Where to Stay in Palma | Flyamba", description: "The best Palma hotels by area and budget, with prices and tips.", type: "article" },
 };

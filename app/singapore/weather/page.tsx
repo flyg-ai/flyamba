@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Weather in Singapore 2026 — Guide | Flyamba",
   description:
-    "Singapore's weather explained — hot, humid and tropical at 31–33°C year-round, the best time to visit, the monsoon seasons, a month-by-month guide and exactly what to pack for the heat and rain.",
+    "Singapore's weather explained — hot, humid and tropical at 31–33°C year-round, the best time to visit, the monsoon seasons, a month-by-month guide and…",
   alternates: { canonical: `${SITE}/singapore/weather` },
   openGraph: { title: "Singapore Weather & Best Time to Visit | Flyamba", description: "Singapore's tropical climate, monsoons, month-by-month and what to pack.", type: "article" },
 };

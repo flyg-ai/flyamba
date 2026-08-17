@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Nightlife in Cancún 2026 — Guide | Flyamba",
   description:
-    "Cancún nightlife — the legendary Coco Bongo show, the Party Center megaclubs Mandala, Dady'O and Palazzo, beach and pool parties, open-air bars, Señor Frog's and authentic local salsa downtown, with prices and tips.",
+    "Cancún nightlife — the legendary Coco Bongo show, the Party Center megaclubs Mandala, Dady'O and Palazzo, beach and pool parties, open-air bars, Señor…",
   alternates: { canonical: `${SITE}/cancun/nightlife` },
   openGraph: { title: "Cancún Nightlife | Flyamba", description: "Cancún's clubs, bars and shows, from Coco Bongo and the Party Center to local salsa, with tips.", type: "article" },
 };

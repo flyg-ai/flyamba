@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Getting Around Palma 2026 — Transport Guide | Flyamba",
   description:
-    "How to get around Palma de Mallorca — the airport bus and taxis, EMT city buses, the historic Sóller train and tram, the metro and regional trains, plus taxis, bikes and car hire, with fares and tips.",
+    "How to get around Palma de Mallorca — the airport bus and taxis, EMT city buses, the historic Sóller train and tram, the metro and regional trains, plus…",
   alternates: { canonical: `${SITE}/palma/transport` },
   openGraph: { title: "Getting Around Palma | Flyamba", description: "Airport transfers, buses, the Sóller train, taxis, bikes and car hire in Palma.", type: "article" },
 };

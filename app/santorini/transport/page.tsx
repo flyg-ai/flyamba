@@ -6,9 +6,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Santorini 2026 — Buses, ATV & Cable Car | Flyamba",
+  title: "Getting Around Santorini 2026 — Buses, ATV & Cable Car",
   description:
-    "How to get around Santorini: KTEL buses from Fira, ATV and scooter rental, car hire and parking, the Fira cable car and Old Port, ferries and the airport. Prices in euros and practical tips.",
+    "How to get around Santorini: KTEL buses from Fira, ATV and scooter rental, car hire and parking, the Fira cable car and Old Port, ferries and the airport.",
   alternates: { canonical: `${SITE}/santorini/transport` },
   openGraph: { title: "Getting Around Santorini | Flyamba", description: "Buses, ATVs, cars, the cable car and ferries — how to move around Santorini.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Singapore 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Singapore — from the malls of Orchard Road and ION to Haji Lane's indie boutiques, Bugis Street, the 24-hour Mustafa Centre and Jewel Changi, with areas, hours and GST-refund tips.",
+    "Where to shop in Singapore — from the malls of Orchard Road and ION to Haji Lane's indie boutiques, Bugis Street, the 24-hour Mustafa Centre and Jewel…",
   alternates: { canonical: `${SITE}/singapore/shopping` },
   openGraph: { title: "Best Shopping in Singapore | Flyamba", description: "8 top Singapore shopping spots from luxury malls to street markets.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches Near Rome 2026 — Guide | Flyamba",
   description:
-    "The best beaches within reach of Rome — from Lido di Ostia on a city train ticket to whitewashed Sperlonga, family-friendly Santa Marinella and the wild dunes of Sabaudia, with how to get there and tips.",
+    "The best beaches within reach of Rome — from Lido di Ostia on a city train ticket to whitewashed Sperlonga, family-friendly Santa Marinella and the wild…",
   alternates: { canonical: `${SITE}/rome/beaches` },
   openGraph: { title: "Best Beaches Near Rome | Flyamba", description: "Rome's best day-trip beaches, from Ostia to Sperlonga, with train and driving directions.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Rome Nightlife 2026 — Bars & Clubs Guide | Flyamba",
   description:
-    "Where to go out in Rome — Trastevere aperitivo bars, hidden speakeasies, rooftop terraces with dome views, live jazz and blues, and the city's best clubs, with areas, prices and insider tips.",
+    "Where to go out in Rome — Trastevere aperitivo bars, hidden speakeasies, rooftop terraces with dome views, live jazz and blues, and the city's best…",
   alternates: { canonical: `${SITE}/rome/nightlife` },
   openGraph: { title: "Rome Nightlife Guide | Flyamba", description: "Rome's best bars, rooftops, live music and clubs with prices and tips.", type: "article" },
 };

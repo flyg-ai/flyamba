@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Prague 2026 — Visitor Guide | Flyamba",
   description:
-    "The 18 best things to do in Prague — Charles Bridge, Prague Castle, St Vitus Cathedral, the Old Town Square and Astronomical Clock, the Jewish Quarter and more, with prices, hours and insider tips.",
+    "The 18 best things to do in Prague — Charles Bridge, Prague Castle, St Vitus Cathedral, the Old Town Square and Astronomical Clock, the Jewish Quarter…",
   alternates: { canonical: `${SITE}/prague/attractions` },
   openGraph: { title: "Best Things to Do in Prague | Flyamba", description: "18 top Prague attractions with prices, hours and tips.", type: "article" },
 };

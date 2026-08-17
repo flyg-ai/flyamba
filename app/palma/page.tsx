@@ -9,6 +9,7 @@ import { FlightCTA } from "@/app/components/FlightCTA";
 import { SmartImage } from "@/app/components/SmartImage";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { PALMA_CATEGORIES, ATTRACTIONS, RESTAURANTS, BEACHES } from "@/app/data/palma-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
@@ -33,9 +34,9 @@ const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "S
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Palma de Mallorca ${year} — Guide, Prices & Beaches | Flyamba`;
+  const title = clampTitle(`Cheap Flights to Palma de Mallorca ${year} — Guide, Prices & Beaches | Flyamba`);
   const description =
-    "Find cheap flights to Palma de Mallorca, Spain from $265. Compare fares from London, Berlin, Paris and more, plus complete English guides to Palma's attractions, beaches, restaurants, hotels, transport, nightlife, family travel and island day trips.";
+    clampDescription("Find cheap flights to Palma de Mallorca, Spain from $265. Compare fares from London, Berlin, Paris and more, plus complete English guides to Palma's attractions, beaches, restaurants, hotels, transport, nightlife, family travel and island day trips.");
   const canonical = `${SITE}/palma`;
   return {
     title,

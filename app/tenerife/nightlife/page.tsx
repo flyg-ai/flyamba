@@ -6,9 +6,9 @@ import { NIGHTLIFE, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Tenerife Nightlife 2026 — Best Bars, Clubs & Beach Clubs | Flyamba",
+  title: "Tenerife Nightlife 2026 — Best Bars, Clubs & Beach Clubs",
   description:
-    "Where to go out in Tenerife: chic beach clubs and the rowdy Veronicas strip in Playa de las Américas and Costa Adeje, live-music bars, a casino, and where locals really party in the capital.",
+    "Where to go out in Tenerife: chic beach clubs and the rowdy Veronicas strip in Playa de las Américas and Costa Adeje, live-music bars, a casino, and…",
   alternates: { canonical: `${SITE}/tenerife/nightlife` },
   openGraph: { title: "Tenerife Nightlife Guide | Flyamba", description: "Beach clubs, bars and clubs in Las Américas and Costa Adeje.", type: "article" },
 };

@@ -6,9 +6,9 @@ import { HOTELS, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Stay in Tenerife 2026 — Best Hotels & Areas | Flyamba",
+  title: "Where to Stay in Tenerife 2026 — Best Hotels & Areas",
   description:
-    "Where to stay in Tenerife: the best hotels by area and budget, from Costa Adeje's five-star beach resorts and Michelin-starred Abama to boutique stays in the greener north and a lodge inside Teide National Park.",
+    "Where to stay in Tenerife: the best hotels by area and budget, from Costa Adeje's five-star beach resorts and Michelin-starred Abama to boutique stays in…",
   alternates: { canonical: `${SITE}/tenerife/hotels` },
   openGraph: { title: "Best Hotels in Tenerife | Flyamba", description: "Where to stay by neighbourhood and budget, with prices and tips.", type: "article" },
 };

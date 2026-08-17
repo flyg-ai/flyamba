@@ -6,9 +6,9 @@ import { HOTELS, CATEGORIES } from "@/app/data/cape-town-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Stay in Cape Town 2026 — Best Hotels Guide | Flyamba",
+  title: "Where to Stay in Cape Town 2026 — Best Hotels Guide",
   description:
-    "The best hotels in Cape Town — from the iconic Silo and One&Only at the V&A Waterfront to clifftop Ellerman House and charming City Bowl boutiques, with areas, prices and booking tips.",
+    "The best hotels in Cape Town — from the iconic Silo and One&Only at the V&A Waterfront to clifftop Ellerman House and charming City Bowl boutiques, with…",
   alternates: { canonical: `${SITE}/cape-town/hotels` },
   openGraph: { title: "Best Hotels in Cape Town | Flyamba", description: "From world-famous luxury to characterful boutiques — where to stay in Cape Town.", type: "article" },
 };

@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubai Prices 2026 — Costs & Budget Guide | Flyamba",
   description:
-    "How much a trip to Dubai costs — when flights are cheapest (summer is low season), daily budgets from backpacker to luxury, attraction and activity prices, what food, drink and alcohol cost, and getting-around fares, with money-saving tips.",
+    "How much a trip to Dubai costs — when flights are cheapest (summer is low season), daily budgets from backpacker to luxury, attraction and activity…",
   alternates: { canonical: `${SITE}/dubai/prices` },
   openGraph: { title: "Dubai Prices & Budget Guide | Flyamba", description: "What a Dubai trip costs: flights, daily budgets, tickets, food and transport, with saving tips.", type: "article" },
 };

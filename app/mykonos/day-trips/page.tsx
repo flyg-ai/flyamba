@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Mykonos 2026 — Island Guide | Flyamba",
   description:
-    "The best day trips from Mykonos — ancient Delos and empty-beach Rhenia next door, devout Tinos, green Naxos, laid-back Paros and a long full-day catamaran to spectacular Santorini, with ferry times and prices.",
+    "The best day trips from Mykonos — ancient Delos and empty-beach Rhenia next door, devout Tinos, green Naxos, laid-back Paros and a long full-day…",
   alternates: { canonical: `${SITE}/mykonos/day-trips` },
   openGraph: { title: "Best Day Trips from Mykonos | Flyamba", description: "6 great day trips from Mykonos, from Delos to Santorini.", type: "article" },
 };

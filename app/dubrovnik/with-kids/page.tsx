@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubrovnik with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Dubrovnik with kids — the hillside Aquapark, the aquarium inside a fortress, family beaches, the peacock island of Lokrum, the Srđ cable car, sea kayaking and the castle-like walls, with ages, prices and tips.",
+    "The best things to do in Dubrovnik with kids — the hillside Aquapark, the aquarium inside a fortress, family beaches, the peacock island of Lokrum, the…",
   alternates: { canonical: `${SITE}/dubrovnik/with-kids` },
   openGraph: { title: "Dubrovnik with Kids | Flyamba", description: "Family-friendly Dubrovnik: water park, aquarium, islands, cable car and beaches, with ages and tips.", type: "article" },
 };

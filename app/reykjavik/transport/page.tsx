@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/reykjavik-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Reykjavik 2026 — Flybus, Buses & Car Hire | Flyamba",
+  title: "Getting Around Reykjavik 2026 — Flybus, Buses & Car Hire",
   description:
-    "How to get around Reykjavik: the Flybus from Keflavík airport, the walkable centre, Strætó city buses, rental cars for day trips, cycling and taxis, with USD prices and money-saving tips.",
+    "How to get around Reykjavik: the Flybus from Keflavík airport, the walkable centre, Strætó city buses, rental cars for day trips, cycling and taxis, with…",
   alternates: { canonical: `${SITE}/reykjavik/transport` },
   openGraph: { title: "Getting Around Reykjavik | Flyamba", description: "Airport transfers, city buses, car hire, cycling and taxis — the complete Reykjavik transport guide.", type: "article" },
 };

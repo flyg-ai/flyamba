@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Getting Around Marrakech 2026 — Transport Guide | Flyamba",
   description:
-    "How to get around Marrakech — the Menara Airport transfer, metered petit taxis and shared grands taxis, city buses, calèches, trains and CTM/Supratours coaches, with fares in dirhams.",
+    "How to get around Marrakech — the Menara Airport transfer, metered petit taxis and shared grands taxis, city buses, calèches, trains and CTM/Supratours…",
   alternates: { canonical: `${SITE}/marrakech/transport` },
   openGraph: { title: "Getting Around Marrakech | Flyamba", description: "Marrakech transport explained: airport, taxis, buses, calèches and intercity travel.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubrovnik Weather 2026 — When to Visit | Flyamba",
   description:
-    "Dubrovnik weather and the best time to visit, season by season — warm springs, hot 28°C summers with swimmable sea, golden autumns and mild winters, plus sea temperatures, crowds and prices to help you choose.",
+    "Dubrovnik weather and the best time to visit, season by season — warm springs, hot 28°C summers with swimmable sea, golden autumns and mild winters, plus…",
   alternates: { canonical: `${SITE}/dubrovnik/weather` },
   openGraph: { title: "Dubrovnik Weather & Best Time to Visit | Flyamba", description: "Season-by-season Dubrovnik weather, sea temperatures, crowds and prices, with the best months to go.", type: "article" },
 };

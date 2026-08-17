@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Madrid with Kids 2026 — Family Attractions Guide | Flyamba",
   description:
-    "The best things to do in Madrid with kids — the Zoo Aquarium's giant pandas, Retiro park's boating lake, Warner theme park, Madrid Río playgrounds, Faunia, the planetarium and the railway museum.",
+    "The best things to do in Madrid with kids — the Zoo Aquarium's giant pandas, Retiro park's boating lake, Warner theme park, Madrid Río playgrounds…",
   alternates: { canonical: `${SITE}/madrid/with-kids` },
   openGraph: { title: "Madrid with Kids | Flyamba", description: "Family-friendly Madrid — 10 attractions for all ages.", type: "article" },
 };

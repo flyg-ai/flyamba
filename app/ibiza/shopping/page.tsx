@@ -10,7 +10,7 @@ const HERO = "/images/destinations/flights-ibiza.avif";
 export const metadata: Metadata = {
   title: "Shopping in Ibiza 2026 — Markets & Fashion | Flyamba",
   description:
-    "Shopping in Ibiza — the Las Dalias and Punta Arabí hippy markets, signature white 'Adlib' island fashion, glossy marina boutiques and the Sluiz concept store, with tips.",
+    "Shopping in Ibiza — the Las Dalias and Punta Arabí hippy markets, signature white 'Adlib' island fashion, glossy marina boutiques and the Sluiz concept…",
   alternates: { canonical: `${SITE}/ibiza/shopping` },
   openGraph: { title: "Shopping in Ibiza: Hippy Markets & Adlib Fashion | Flyamba", description: "Where to shop on the White Isle, from bohemian markets to designer boutiques.", type: "article", images: [HERO] },
 };

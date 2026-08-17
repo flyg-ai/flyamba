@@ -8,6 +8,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { CATEGORIES } from "@/app/data/paris-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd, usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -95,9 +96,9 @@ const TRIP_PREVIEW = [
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Paris ${year} — Guide, Prices & Attractions | Flyamba`;
+  const title = clampTitle(`Cheap Flights to Paris ${year} — Guide, Prices & Attractions | Flyamba`);
   const description =
-    "Find cheap flights to Paris, France from around $286. Compare fares, then plan your trip with complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips — all prices in USD.";
+    clampDescription("Find cheap flights to Paris, France from around $286. Compare fares, then plan your trip with complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips — all prices in USD.");
   const canonical = `${SITE}/paris`;
   return {
     title,

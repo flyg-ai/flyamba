@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches Near Lisbon 2026 — Guide | Flyamba",
   description:
-    "The best beaches near Lisbon — Carcavelos, Costa da Caparica, wild Guincho, family-friendly Estoril and the surf coast at Ericeira and Praia Grande, with how to get there by train.",
+    "The best beaches near Lisbon — Carcavelos, Costa da Caparica, wild Guincho, family-friendly Estoril and the surf coast at Ericeira and Praia Grande, with…",
   alternates: { canonical: `${SITE}/lisbon/beaches` },
   openGraph: { title: "Best Beaches Near Lisbon | Flyamba", description: "Atlantic beaches near Lisbon, from surf breaks to family sands.", type: "article" },
 };

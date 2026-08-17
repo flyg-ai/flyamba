@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Phuket Prices 2026 — Costs & Budget Guide | Flyamba",
   description:
-    "How much a trip to Phuket costs — the cheapest months to fly, daily budgets from backpacker to luxury, tour, activity and attraction prices, what meals and drinks cost, and getting-around fares, with money-saving tips.",
+    "How much a trip to Phuket costs — the cheapest months to fly, daily budgets from backpacker to luxury, tour, activity and attraction prices, what meals…",
   alternates: { canonical: `${SITE}/phuket/prices` },
   openGraph: { title: "Phuket Prices & Budget Guide | Flyamba", description: "What a Phuket trip costs: flights, daily budgets, tours, food and transport, with saving tips.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Rome 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Rome — Tivoli's UNESCO villas, ancient Ostia Antica, Pompeii and Naples, Florence by fast train, hilltop Orvieto and the wine towns of the Castelli Romani, with train times and tips.",
+    "The best day trips from Rome — Tivoli's UNESCO villas, ancient Ostia Antica, Pompeii and Naples, Florence by fast train, hilltop Orvieto and the wine…",
   alternates: { canonical: `${SITE}/rome/day-trips` },
   openGraph: { title: "Best Day Trips from Rome | Flyamba", description: "Six great day trips from Rome, from Tivoli and Ostia to Pompeii and Florence, with directions.", type: "article" },
 };

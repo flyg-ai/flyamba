@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Amsterdam with Kids 2026 — Best Family Attractions | Flyamba",
   description:
-    "The best things to do in Amsterdam with kids — Artis Zoo, NEMO Science Museum, Micropia, the Pancake Boat, indoor playgrounds and more, with ages, prices and tips.",
+    "The best things to do in Amsterdam with kids — Artis Zoo, NEMO Science Museum, Micropia, the Pancake Boat, indoor playgrounds and more, with ages, prices…",
   alternates: { canonical: `${SITE}/amsterdam/with-kids` },
   openGraph: { title: "Amsterdam with Kids | Flyamba", description: "Zoos, science museums, playgrounds and boat trips — family fun in Amsterdam.", type: "article" },
 };

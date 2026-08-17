@@ -8,6 +8,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { REYKJAVIK, CATEGORIES } from "@/app/data/reykjavik-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -18,8 +19,8 @@ const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Reykjavik ${year} — Guide, Prices & Attractions | Flyamba`;
-  const description = `Find cheap flights to Reykjavik, Iceland from $${MIN_USD}, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips. Northern lights, geysers, volcanoes and geothermal lagoons.`;
+  const title = clampTitle(`Cheap Flights to Reykjavik ${year} — Guide, Prices & Attractions | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Reykjavik, Iceland from $${MIN_USD}, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips. Northern lights, geysers, volcanoes and geothermal lagoons.`);
   const canonical = `${SITE}/reykjavik`;
   return {
     title,

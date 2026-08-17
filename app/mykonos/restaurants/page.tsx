@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Eat in Mykonos 2026 — Restaurants Guide | Flyamba",
   description:
-    "The best restaurants in Mykonos — Nobu and Scorpios, the cave-set Spilia, off-grid Kiki's Taverna, historic Kounelas fish tavern and modern-Greek M-eating, with prices, areas and booking tips.",
+    "The best restaurants in Mykonos — Nobu and Scorpios, the cave-set Spilia, off-grid Kiki's Taverna, historic Kounelas fish tavern and modern-Greek…",
   alternates: { canonical: `${SITE}/mykonos/restaurants` },
   openGraph: { title: "Best Restaurants in Mykonos | Flyamba", description: "10 top Mykonos restaurants, from beach clubs to classic tavernas.", type: "article" },
 };

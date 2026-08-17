@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches in Barcelona 2026 — Complete Guide | Flyamba",
   description:
-    "The 8 best beaches in Barcelona and nearby — from central Barceloneta to family-friendly sands, quiet local escapes and Sitges — with facilities and how to get there.",
+    "The 8 best beaches in Barcelona and nearby — from central Barceloneta to family-friendly sands, quiet local escapes and Sitges — with facilities and how…",
   alternates: { canonical: `${SITE}/barcelona/beaches` },
   openGraph: { title: "Barcelona's Best Beaches | Flyamba", description: "8 beaches from Barceloneta to Sitges.", type: "article" },
 };

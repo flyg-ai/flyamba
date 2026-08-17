@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Phuket Weather 2026 — Best Time to Visit | Flyamba",
   description:
-    "Phuket's weather season by season — the sunny dry season, the hot months, and the green monsoon season — with temperatures, sea conditions, vital rip-current safety advice, and the best time to visit for weather, crowds and prices.",
+    "Phuket's weather season by season — the sunny dry season, the hot months, and the green monsoon season — with temperatures, sea conditions, vital…",
   alternates: { canonical: `${SITE}/phuket/weather` },
   openGraph: { title: "Phuket Weather & Best Time to Visit | Flyamba", description: "Phuket's tropical climate season by season, with sea safety and the ideal time to go.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Palma 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Palma de Mallorca — the luxury boulevards of the Born and Jaume III, the Olivar food market, Rialto Living, Santa Catalina boutiques, El Corte Inglés and Mallorcan pearls.",
+    "Where to shop in Palma de Mallorca — the luxury boulevards of the Born and Jaume III, the Olivar food market, Rialto Living, Santa Catalina boutiques, El…",
   alternates: { canonical: `${SITE}/palma/shopping` },
   openGraph: { title: "Shopping in Palma | Flyamba", description: "The best Palma shopping, from luxury avenues to markets and souvenirs.", type: "article" },
 };

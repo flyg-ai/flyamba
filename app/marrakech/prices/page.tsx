@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Marrakech Prices & Costs 2026 — Budget Guide | Flyamba",
   description:
-    "What a trip to Marrakech costs — the cheapest months to fly, daily budgets from backpacker to luxury, attraction and food prices, and how money and haggling work, with dirham figures.",
+    "What a trip to Marrakech costs — the cheapest months to fly, daily budgets from backpacker to luxury, attraction and food prices, and how money and…",
   alternates: { canonical: `${SITE}/marrakech/prices` },
   openGraph: { title: "Marrakech Prices & Costs | Flyamba", description: "Flight prices, daily budgets, food and attraction costs, and haggling in Marrakech.", type: "article" },
 };

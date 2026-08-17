@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Transport in London 2026 — Guide | Flyamba",
   description:
-    "How to get around London — the Tube, buses, Oyster and contactless, black cabs, the Elizabeth line and airport transfers from Heathrow, Gatwick and beyond, with real fares and tips.",
+    "How to get around London — the Tube, buses, Oyster and contactless, black cabs, the Elizabeth line and airport transfers from Heathrow, Gatwick and…",
   alternates: { canonical: `${SITE}/london/transport` },
   openGraph: { title: "Getting Around London | Flyamba", description: "The Tube, buses, Oyster, taxis and airport transfers explained.", type: "article" },
 };

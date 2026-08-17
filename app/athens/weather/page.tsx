@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Athens Weather 2026 — Best Time to Visit | Flyamba",
   description:
-    "Athens weather by season: hot, dry summers around 32–35°C, mild sunny winters, and glorious spring and autumn shoulder seasons. When to visit for sightseeing, beaches and value, plus what to pack and sea temperatures.",
+    "Athens weather by season: hot, dry summers around 32–35°C, mild sunny winters, and glorious spring and autumn shoulder seasons.",
   alternates: { canonical: `${SITE}/athens/weather` },
   openGraph: { title: "Athens Weather & Best Time to Visit | Flyamba", description: "Season-by-season climate and the best time to visit Athens.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Hotels in Phuket 2026 — Where to Stay Guide | Flyamba",
   description:
-    "The best hotels in Phuket for every budget — iconic luxury villa resorts like Amanpuri and Trisara, stylish design hotels, family beach resorts and characterful budget stays, with the best areas, prices and tips.",
+    "The best hotels in Phuket for every budget — iconic luxury villa resorts like Amanpuri and Trisara, stylish design hotels, family beach resorts and…",
   alternates: { canonical: `${SITE}/phuket/hotels` },
   openGraph: { title: "Best Hotels in Phuket | Flyamba", description: "Where to stay in Phuket, from luxury villas to budget Old Town stays, with areas and prices.", type: "article" },
 };

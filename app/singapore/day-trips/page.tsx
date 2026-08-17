@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Day Trips in Singapore 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Singapore — the resort island of Sentosa, rustic Pulau Ubin, Johor Bahru and Legoland Malaysia, the Indonesian islands of Bintan and Batam, and onward to Kuala Lumpur, with times, costs and tips.",
+    "The best day trips from Singapore — the resort island of Sentosa, rustic Pulau Ubin, Johor Bahru and Legoland Malaysia, the Indonesian islands of Bintan…",
   alternates: { canonical: `${SITE}/singapore/day-trips` },
   openGraph: { title: "Best Day Trips from Singapore | Flyamba", description: "6 top day trips from Singapore, from islands to neighbouring countries.", type: "article" },
 };

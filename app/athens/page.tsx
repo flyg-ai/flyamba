@@ -9,6 +9,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { CATEGORIES } from "@/app/data/athens-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -71,8 +72,8 @@ const WHY = [
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Athens ${year} — Guide, Prices & Attractions | Flyamba`;
-  const description = `Find cheap flights to Athens, Greece from $${LOW}. Compare fares to ATH, plus complete English guides to the Acropolis, attractions, restaurants, hotels, transport, weather, shopping, the Athenian Riviera beaches, nightlife, family travel and day trips.`;
+  const title = clampTitle(`Cheap Flights to Athens ${year} — Guide, Prices & Attractions | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Athens, Greece from $${LOW}. Compare fares to ATH, plus complete English guides to the Acropolis, attractions, restaurants, hotels, transport, weather, shopping, the Athenian Riviera beaches, nightlife, family travel and day trips.`);
   const canonical = `${SITE}/athens`;
   return {
     title,

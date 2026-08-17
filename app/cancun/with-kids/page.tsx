@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Cancún with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Cancún with kids — Ventura Park's water and adventure rides, the interactive aquarium, swimming with dolphins, the hands-on Croco Cun Zoo, the family eco-parks and calm beaches, with ages, prices and tips.",
+    "The best things to do in Cancún with kids — Ventura Park's water and adventure rides, the interactive aquarium, swimming with dolphins, the hands-on…",
   alternates: { canonical: `${SITE}/cancun/with-kids` },
   openGraph: { title: "Cancún with Kids | Flyamba", description: "Family-friendly Cancún — water parks, aquariums, dolphins, zoos and calm beaches, with ages and tips.", type: "article" },
 };

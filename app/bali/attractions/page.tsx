@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Bali 2026 — Visitor Guide | Flyamba",
   description:
-    "The 20 best things to do in Bali — Uluwatu and Tanah Lot temples, the Tegallalang and Jatiluwih rice terraces, the Ubud Monkey Forest, a Mount Batur sunrise trek and more, with prices, hours and insider tips.",
+    "The 20 best things to do in Bali — Uluwatu and Tanah Lot temples, the Tegallalang and Jatiluwih rice terraces, the Ubud Monkey Forest, a Mount Batur…",
   alternates: { canonical: `${SITE}/bali/attractions` },
   openGraph: { title: "Best Things to Do in Bali | Flyamba", description: "20 top Bali attractions with prices, hours and tips.", type: "article" },
 };

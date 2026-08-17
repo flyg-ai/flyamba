@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Lisbon Travel Costs 2026 — Budget Guide | Flyamba",
   description:
-    "How much does Lisbon cost? Daily budgets for backpackers, mid-range and luxury travellers, plus real prices in euros for food, drink, transport, attractions and hotels.",
+    "How much does Lisbon cost? Daily budgets for backpackers, mid-range and luxury travellers, plus real prices in euros for food, drink, transport…",
   alternates: { canonical: `${SITE}/lisbon/prices` },
   openGraph: { title: "How Much Does Lisbon Cost? | Flyamba", description: "Daily budgets and real prices for a Lisbon trip.", type: "article" },
 };

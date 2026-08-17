@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Palma Nightlife 2026 — Best Bars & Clubs Guide | Flyamba",
   description:
-    "Where to go out in Palma de Mallorca — the hip bar scene of Santa Catalina, cocktail dens in La Lonja, rooftop and beach clubs, the seafront mega-clubs Tito's and Pacha, and the Magaluf party strip.",
+    "Where to go out in Palma de Mallorca — the hip bar scene of Santa Catalina, cocktail dens in La Lonja, rooftop and beach clubs, the seafront mega-clubs…",
   alternates: { canonical: `${SITE}/palma/nightlife` },
   openGraph: { title: "Palma Nightlife | Flyamba", description: "The best Palma bars, clubs and rooftops by neighborhood.", type: "article" },
 };

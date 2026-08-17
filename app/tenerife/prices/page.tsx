@@ -5,9 +5,9 @@ import { PRICES, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Tenerife Prices & Budget 2026 — How Much Does a Trip Cost? | Flyamba",
+  title: "Tenerife Prices & Budget 2026 — How Much Does a Trip Cost?",
   description:
-    "How much does Tenerife cost? A full price guide in euros — eating out and the menú del día, attraction tickets, transport, accommodation and daily budgets for budget, mid-range and luxury travellers.",
+    "How much does Tenerife cost? A full price guide in euros — eating out and the menú del día, attraction tickets, transport, accommodation and daily…",
   alternates: { canonical: `${SITE}/tenerife/prices` },
   openGraph: { title: "Tenerife Prices & Daily Budgets | Flyamba", description: "Food, tickets, transport and accommodation costs in euros.", type: "article" },
 };

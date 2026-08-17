@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Florence with Kids 2026 — Family Guide | Flyamba",
   description:
-    "Florence with children — the Boboli Gardens, the hands-on Museo Galileo, climbing the dome and campanile, Palazzo Vecchio's secret-passage family tours and the ultimate gelato trail, with ages, prices and tips.",
+    "Florence with children — the Boboli Gardens, the hands-on Museo Galileo, climbing the dome and campanile, Palazzo Vecchio's secret-passage family tours…",
   alternates: { canonical: `${SITE}/florence/with-kids` },
   openGraph: { title: "Florence with Kids | Flyamba", description: "Family-friendly things to do in Florence with ages, prices and tips.", type: "article" },
 };

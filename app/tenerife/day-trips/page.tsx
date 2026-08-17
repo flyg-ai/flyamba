@@ -6,9 +6,9 @@ import { DAY_TRIPS, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Best Day Trips from Tenerife 2026 — Teide, Masca & La Gomera | Flyamba",
+  title: "Best Day Trips from Tenerife 2026 — Teide, Masca & La Gomera",
   description:
-    "The best day trips in Tenerife: the Teide summit and cable car, the Masca gorge hike, a ferry to La Gomera, the Anaga forests, Garachico and Icod, and world-class stargazing — with distances and tips.",
+    "The best day trips in Tenerife: the Teide summit and cable car, the Masca gorge hike, a ferry to La Gomera, the Anaga forests, Garachico and Icod, and…",
   alternates: { canonical: `${SITE}/tenerife/day-trips` },
   openGraph: { title: "Best Day Trips from Tenerife | Flyamba", description: "Teide, Masca, La Gomera, Anaga and stargazing.", type: "article" },
 };

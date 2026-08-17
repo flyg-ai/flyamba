@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/amsterdam-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Amsterdam 2026 — Trams, Metro & Bikes | Flyamba",
+  title: "Getting Around Amsterdam 2026 — Trams, Metro & Bikes",
   description:
-    "How to get around Amsterdam: the train from Schiphol Airport, GVB trams and metro, the OV-chipkaart and OVpay, cycling, ferries and taxis, with euro prices and money-saving tips.",
+    "How to get around Amsterdam: the train from Schiphol Airport, GVB trams and metro, the OV-chipkaart and OVpay, cycling, ferries and taxis, with euro…",
   alternates: { canonical: `${SITE}/amsterdam/transport` },
   openGraph: { title: "Getting Around Amsterdam | Flyamba", description: "Schiphol transfers, trams, metro, bikes and ferries — the complete transport guide.", type: "article" },
 };

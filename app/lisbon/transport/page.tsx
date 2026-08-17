@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Getting Around Lisbon 2026 — Transport Guide | Flyamba",
   description:
-    "How to get around Lisbon — from the airport, the Metro, historic trams and funiculars, buses, taxis, Uber and Bolt, plus CP trains to Cascais and Sintra, with fares in euros and the Navegante card.",
+    "How to get around Lisbon — from the airport, the Metro, historic trams and funiculars, buses, taxis, Uber and Bolt, plus CP trains to Cascais and Sintra…",
   alternates: { canonical: `${SITE}/lisbon/transport` },
   openGraph: { title: "Getting Around Lisbon | Flyamba", description: "Metro, trams, funiculars, trains and taxis in Lisbon.", type: "article" },
 };

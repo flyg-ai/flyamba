@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Marrakech 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Marrakech — Jemaa el-Fnaa, the souks, Bahia and El Badi palaces, the Saadian Tombs, Ben Youssef Madrasa, Jardin Majorelle and more, with prices, hours and insider tips.",
+    "The best things to do in Marrakech — Jemaa el-Fnaa, the souks, Bahia and El Badi palaces, the Saadian Tombs, Ben Youssef Madrasa, Jardin Majorelle and…",
   alternates: { canonical: `${SITE}/marrakech/attractions` },
   openGraph: { title: "Best Things to Do in Marrakech | Flyamba", description: "18 top Marrakech attractions with prices, hours and tips.", type: "article" },
 };

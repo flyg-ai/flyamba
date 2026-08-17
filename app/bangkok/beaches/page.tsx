@@ -9,7 +9,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Beaches Near Bangkok 2026 — Day Trips & Islands | Flyamba",
   description:
-    "The best beaches within reach of Bangkok — Bang Saen, Koh Larn, Hua Hin, Cha-Am, Koh Samet and the river island of Koh Kret, with travel times, prices and tips.",
+    "The best beaches within reach of Bangkok — Bang Saen, Koh Larn, Hua Hin, Cha-Am, Koh Samet and the river island of Koh Kret, with travel times, prices…",
   alternates: { canonical: `${SITE}/bangkok/beaches` },
   openGraph: { title: "Best Beaches Near Bangkok | Flyamba", description: "Day-trip sands and islands from Bang Saen to Koh Samet.", type: "article" },
 };

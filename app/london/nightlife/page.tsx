@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Nightlife in London 2026 — Guide | Flyamba",
   description:
-    "The best nightlife in London — historic pubs, world-ranked cocktail bars, legendary clubs like Fabric, rooftop views and Ronnie Scott's jazz, with areas, prices and insider tips.",
+    "The best nightlife in London — historic pubs, world-ranked cocktail bars, legendary clubs like Fabric, rooftop views and Ronnie Scott's jazz, with areas…",
   alternates: { canonical: `${SITE}/london/nightlife` },
   openGraph: { title: "Best Nightlife in London | Flyamba", description: "10 top London bars, pubs, clubs and rooftops.", type: "article" },
 };

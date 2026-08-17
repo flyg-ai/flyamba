@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Vienna with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Vienna with children — the Prater funfair and Ferris wheel, the world's oldest zoo at Schönbrunn, the Haus des Meeres aquarium, hands-on museums, ZOOM children's museum and the Danube Island, with ages, prices and tips.",
+    "The best things to do in Vienna with children — the Prater funfair and Ferris wheel, the world's oldest zoo at Schönbrunn, the Haus des Meeres aquarium…",
   alternates: { canonical: `${SITE}/vienna/with-kids` },
   openGraph: { title: "Vienna with Kids | Flyamba", description: "Family-friendly Vienna: funfair, zoo, aquarium and hands-on museums, with ages and prices.", type: "article" },
 };

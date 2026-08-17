@@ -11,7 +11,7 @@ const PH = "/images/barcelona/placeholder.webp";
 export const metadata: Metadata = {
   title: "Weather in Ibiza 2026 — Climate & Best Time | Flyamba",
   description:
-    "Ibiza weather month by month — hot, dry summers around 28°C, warm sea into autumn, mild but quiet winters. When to visit for beaches, clubbing, value and calm.",
+    "Ibiza weather month by month — hot, dry summers around 28°C, warm sea into autumn, mild but quiet winters.",
   alternates: { canonical: `${SITE}/ibiza/weather` },
   openGraph: { title: "Ibiza Weather & Best Time to Visit | Flyamba", description: "Month-by-month climate and the best time to go to the White Isle.", type: "article", images: [HERO] },
 };

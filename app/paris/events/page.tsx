@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Events in Paris 2026 — Guide | Flyamba",
   description:
-    "The Paris events calendar — Bastille Day, the Fête de la Musique, Roland-Garros, Paris Fashion Week, Paris Plages, Nuit Blanche and the city's magical Christmas season. What's on month by month and how to plan around it.",
+    "The Paris events calendar — Bastille Day, the Fête de la Musique, Roland-Garros, Paris Fashion Week, Paris Plages, Nuit Blanche and the city's magical…",
   alternates: { canonical: `${SITE}/paris/events` },
   openGraph: { title: "Paris Events & Festivals | Flyamba", description: "The best festivals and events in Paris, month by month.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Getting Around Bangkok 2026 — Transport Guide | Flyamba",
   description:
-    "How to get around Bangkok — the BTS Skytrain, MRT subway, Airport Rail Link, Chao Phraya river boats, tuk-tuks, taxis and the Grab app, with fares and practical tips.",
+    "How to get around Bangkok — the BTS Skytrain, MRT subway, Airport Rail Link, Chao Phraya river boats, tuk-tuks, taxis and the Grab app, with fares and…",
   alternates: { canonical: `${SITE}/bangkok/transport` },
   openGraph: { title: "Getting Around Bangkok | Flyamba", description: "BTS, MRT, boats, tuk-tuks and Grab explained.", type: "article" },
 };

@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubai Weather 2026 — Best Time to Visit Guide | Flyamba",
   description:
-    "When to visit Dubai — the glorious winter peak season (November–March), the brutally hot but cheap summer, the shoulder months, and how the desert climate, humidity and rare rain really work, with what to pack.",
+    "When to visit Dubai — the glorious winter peak season (November–March), the brutally hot but cheap summer, the shoulder months, and how the desert…",
   alternates: { canonical: `${SITE}/dubai/weather` },
   openGraph: { title: "Dubai Weather & Best Time to Visit | Flyamba", description: "Dubai's seasons, temperatures and the best time to visit, with packing tips.", type: "article" },
 };

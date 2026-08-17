@@ -7,9 +7,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Best Beaches in Santorini 2026 — Red, Black & White Sand | Flyamba",
+  title: "Best Beaches in Santorini 2026 — Red, Black & White Sand",
   description:
-    "Santorini's beaches are unlike anywhere else — the Red Beach, black-sand Perissa, Kamari and Perivolos, the sculpted cliffs of Vlychada, secluded White Beach and family-friendly Monolithos. Facilities, access and tips.",
+    "Santorini's beaches are unlike anywhere else — the Red Beach, black-sand Perissa, Kamari and Perivolos, the sculpted cliffs of Vlychada, secluded White…",
   alternates: { canonical: `${SITE}/santorini/beaches` },
   openGraph: { title: "Best Beaches in Santorini | Flyamba", description: "8 volcanic Santorini beaches — red, black and white sand — with facilities and access tips.", type: "article" },
 };

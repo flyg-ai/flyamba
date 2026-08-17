@@ -8,6 +8,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { AMSTERDAM, CATEGORIES } from "@/app/data/amsterdam-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -18,8 +19,8 @@ const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Amsterdam ${year} — Guide, Prices & Attractions | Flyamba`;
-  const description = `Find cheap flights to Amsterdam, Netherlands from $${MIN_USD}, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips. Canals, world museums and easy-going charm.`;
+  const title = clampTitle(`Cheap Flights to Amsterdam ${year} — Guide, Prices & Attractions | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Amsterdam, Netherlands from $${MIN_USD}, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips. Canals, world museums and easy-going charm.`);
   const canonical = `${SITE}/amsterdam`;
   return {
     title,

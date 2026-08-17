@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Lisbon Events & Festivals 2026 — Guide | Flyamba",
   description:
-    "The best events and festivals in Lisbon — the Santo António street parties and Festas de Lisboa in June, NOS Alive and Rock in Rio, the Web Summit, food festivals and New Year's Eve fireworks.",
+    "The best events and festivals in Lisbon — the Santo António street parties and Festas de Lisboa in June, NOS Alive and Rock in Rio, the Web Summit, food…",
   alternates: { canonical: `${SITE}/lisbon/events` },
   openGraph: { title: "Lisbon Events & Festivals | Flyamba", description: "Festivals and events worth timing a Lisbon trip around.", type: "article" },
 };

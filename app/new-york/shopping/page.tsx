@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/new-york-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in New York 2026 — Best Stores & Markets Guide | Flyamba",
+  title: "Shopping in New York 2026 — Best Stores & Markets Guide",
   description:
-    "Where to shop in New York — the Fifth Avenue flagships, cast-iron SoHo, Chelsea Market, Macy's, the Brooklyn Flea and the Union Square Greenmarket, with hours, areas and tax tips.",
+    "Where to shop in New York — the Fifth Avenue flagships, cast-iron SoHo, Chelsea Market, Macy's, the Brooklyn Flea and the Union Square Greenmarket, with…",
   alternates: { canonical: `${SITE}/new-york/shopping` },
   openGraph: { title: "Best Shopping in New York | Flyamba", description: "Fifth Avenue flagships, SoHo boutiques, food halls and markets — where to shop in New York.", type: "article" },
 };

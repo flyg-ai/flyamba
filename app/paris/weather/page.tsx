@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Paris Weather 2026 — When to Visit | Flyamba",
   description:
-    "Paris weather season by season — spring blossom, warm summers around 22°C, golden autumns and cool, atmospheric winters. Average temperatures, rainfall, what to pack and the best time to visit the City of Light.",
+    "Paris weather season by season — spring blossom, warm summers around 22°C, golden autumns and cool, atmospheric winters.",
   alternates: { canonical: `${SITE}/paris/weather` },
   openGraph: { title: "Paris Weather & Best Time to Visit | Flyamba", description: "Season-by-season weather and when to go to Paris.", type: "article" },
 };

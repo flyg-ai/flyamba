@@ -9,7 +9,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Bangkok 2026 — Where to Eat | Flyamba",
   description:
-    "Where to eat in Bangkok — from Michelin street-food legend Jay Fai and three-star Sorn to Gaggan, Le Du and the city's best pad thai, with tips and price guides.",
+    "Where to eat in Bangkok — from Michelin street-food legend Jay Fai and three-star Sorn to Gaggan, Le Du and the city's best pad thai, with tips and price…",
   alternates: { canonical: `${SITE}/bangkok/restaurants` },
   openGraph: { title: "Best Restaurants in Bangkok | Flyamba", description: "Street-food legends to fine dining, with tips and prices.", type: "article" },
 };

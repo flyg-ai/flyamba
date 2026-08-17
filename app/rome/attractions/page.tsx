@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Rome 2026 — Guide | Flyamba",
   description:
-    "The 20 best things to do in Rome — the Colosseum, Roman Forum, Pantheon, Trevi Fountain, Vatican Museums, Borghese Gallery and more, with prices, opening hours and insider tips.",
+    "The 20 best things to do in Rome — the Colosseum, Roman Forum, Pantheon, Trevi Fountain, Vatican Museums, Borghese Gallery and more, with prices, opening…",
   alternates: { canonical: `${SITE}/rome/attractions` },
   openGraph: { title: "Best Things to Do in Rome | Flyamba", description: "20 top Rome attractions with prices, hours and tips.", type: "article" },
 };

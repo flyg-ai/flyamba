@@ -3,9 +3,9 @@ import { GuideShell, GuideSection } from "@/app/components/GuideShell";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Barcelona Events 2026 — Festivals, Concerts & Things to Do | Flyamba",
+  title: "Barcelona Events 2026 — Festivals, Concerts & Things to Do",
   description:
-    "A complete calendar of Barcelona events and festivals in 2026 — La Mercè, Primavera Sound, Sónar, Sant Jordi, Carnival and New Year — month by month, with tips on when to fly.",
+    "A complete calendar of Barcelona events and festivals in 2026 — La Mercè, Primavera Sound, Sónar, Sant Jordi, Carnival and New Year — month by month…",
   alternates: { canonical: `${SITE}/barcelona/events` },
   openGraph: { title: "Barcelona Events & Festivals 2026 | Flyamba", description: "Month-by-month Barcelona events calendar for 2026.", type: "article" },
 };

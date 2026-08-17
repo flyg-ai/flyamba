@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches in Dubrovnik 2026 — Guide | Flyamba",
   description:
-    "The best beaches in and around Dubrovnik — the iconic Banje beneath the walls, quiet Sveti Jakov, family-friendly Copacabana, Lokrum's salt lake, sunset-facing Bellevue, cliff-backed Pasjača and the sandy Šunj on Lopud, with how to get there.",
+    "The best beaches in and around Dubrovnik — the iconic Banje beneath the walls, quiet Sveti Jakov, family-friendly Copacabana, Lokrum's salt lake…",
   alternates: { canonical: `${SITE}/dubrovnik/beaches` },
   openGraph: { title: "Best Beaches in Dubrovnik | Flyamba", description: "Dubrovnik's best beaches, from Banje beneath the walls to the sandy Šunj, with access and tips.", type: "article" },
 };

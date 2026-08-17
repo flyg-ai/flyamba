@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Palma 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Palma de Mallorca — La Seu Cathedral, Bellver Castle, the old town, Es Baluard, the Sóller train and more, with prices, hours and insider tips.",
+    "The best things to do in Palma de Mallorca — La Seu Cathedral, Bellver Castle, the old town, Es Baluard, the Sóller train and more, with prices, hours…",
   alternates: { canonical: `${SITE}/palma/attractions` },
   openGraph: { title: "Best Things to Do in Palma | Flyamba", description: "Top Palma attractions with prices, hours and tips.", type: "article" },
 };

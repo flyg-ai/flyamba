@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "London with Kids 2026 — Guide | Flyamba",
   description:
-    "The best things to do in London with kids — free museums, London Zoo, the Harry Potter Studio Tour, aquarium and adventure playgrounds, with ages, prices and practical tips.",
+    "The best things to do in London with kids — free museums, London Zoo, the Harry Potter Studio Tour, aquarium and adventure playgrounds, with ages, prices…",
   alternates: { canonical: `${SITE}/london/with-kids` },
   openGraph: { title: "London with Kids | Flyamba", description: "8 top family attractions in London, with ages, prices and tips.", type: "article" },
 };

@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/bali-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Bali Weather 2026 — Best Time to Visit & What to Pack | Flyamba",
+  title: "Bali Weather 2026 — Best Time to Visit & What to Pack",
   description:
-    "Bali weather season by season — the April–October dry season, the November–March wet season, the July–August high season, the unique Nyepi Day of Silence, and the best time to visit, with what to pack.",
+    "Bali weather season by season — the April–October dry season, the November–March wet season, the July–August high season, the unique Nyepi Day of…",
   alternates: { canonical: `${SITE}/bali/weather` },
   openGraph: { title: "Bali Weather & Best Time to Visit | Flyamba", description: "Dry and wet seasons, high season and the best time to visit Bali, with packing tips.", type: "article" },
 };

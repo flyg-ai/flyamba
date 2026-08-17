@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Restaurants in London 2026 — Guide | Flyamba",
   description:
-    "Where to eat in London — from Dishoom and Padella to three-Michelin-star tables. The 10 best restaurants across cuisines and budgets, with prices, areas and booking tips.",
+    "Where to eat in London — from Dishoom and Padella to three-Michelin-star tables. The 10 best restaurants across cuisines and budgets, with prices, areas…",
   alternates: { canonical: `${SITE}/london/restaurants` },
   openGraph: { title: "Best Restaurants in London | Flyamba", description: "10 top London restaurants with prices, areas and tips.", type: "article" },
 };

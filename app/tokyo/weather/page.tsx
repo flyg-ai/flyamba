@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Tokyo Weather & Best Time to Visit 2026 | Flyamba",
   description:
-    "Tokyo weather by season and the best time to visit — cherry blossom in spring, hot humid summers and rainy season, glorious autumn colour and crisp clear winters, with what to pack.",
+    "Tokyo weather by season and the best time to visit — cherry blossom in spring, hot humid summers and rainy season, glorious autumn colour and crisp clear…",
   alternates: { canonical: `${SITE}/tokyo/weather` },
   openGraph: { title: "Tokyo Weather & Best Time to Visit | Flyamba", description: "Season-by-season weather and the best time to visit Tokyo.", type: "article" },
 };

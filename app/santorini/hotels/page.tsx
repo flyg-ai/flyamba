@@ -7,9 +7,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Stay in Santorini 2026 — Best Hotels Guide | Flyamba",
+  title: "Where to Stay in Santorini 2026 — Best Hotels Guide",
   description:
-    "Where to stay in Santorini — iconic caldera-edge cave hotels in Oia and Imerovigli, design luxury resorts, and the island's best budget base. Compare areas, views and price tiers.",
+    "Where to stay in Santorini — iconic caldera-edge cave hotels in Oia and Imerovigli, design luxury resorts, and the island's best budget base.",
   alternates: { canonical: `${SITE}/santorini/hotels` },
   openGraph: { title: "Best Hotels in Santorini | Flyamba", description: "8 standout Santorini stays, from Oia cave suites to a converted-winery hostel.", type: "article" },
 };

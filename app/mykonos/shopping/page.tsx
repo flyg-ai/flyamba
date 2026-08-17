@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/mykonos-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Mykonos 2026 — Boutiques & Markets Guide | Flyamba",
+  title: "Shopping in Mykonos 2026 — Boutiques & Markets Guide",
   description:
-    "Where to shop in Mykonos — designer-lined Matogianni Street, the galleries of Little Venice, iconic Greek label Parthenis, local jewellery, handmade leather sandals and edible island specialities.",
+    "Where to shop in Mykonos — designer-lined Matogianni Street, the galleries of Little Venice, iconic Greek label Parthenis, local jewellery, handmade…",
   alternates: { canonical: `${SITE}/mykonos/shopping` },
   openGraph: { title: "Best Shopping in Mykonos | Flyamba", description: "8 top Mykonos shopping spots, from luxury boutiques to local food.", type: "article" },
 };

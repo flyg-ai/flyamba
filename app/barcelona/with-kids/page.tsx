@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Barcelona with Kids 2026 — Family Travel Guide | Flyamba",
   description:
-    "The best things to do in Barcelona with kids — Tibidabo, the aquarium, CosmoCaixa, the zoo, parks and the Magic Fountain — with ages, prices and practical tips.",
+    "The best things to do in Barcelona with kids — Tibidabo, the aquarium, CosmoCaixa, the zoo, parks and the Magic Fountain — with ages, prices and…",
   alternates: { canonical: `${SITE}/barcelona/with-kids` },
   openGraph: { title: "Barcelona with Kids | Flyamba", description: "Family activities, parks and practical tips for Barcelona.", type: "article" },
 };

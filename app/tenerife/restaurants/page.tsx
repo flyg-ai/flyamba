@@ -6,9 +6,9 @@ import { RESTAURANTS, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Eat in Tenerife 2026 — Best Restaurants Guide | Flyamba",
+  title: "Where to Eat in Tenerife 2026 — Best Restaurants Guide",
   description:
-    "The best restaurants in Tenerife, from two-Michelin-star tables to rustic guachinches serving papas arrugadas, mojo and fresh fish — with prices, areas and insider tips.",
+    "The best restaurants in Tenerife, from two-Michelin-star tables to rustic guachinches serving papas arrugadas, mojo and fresh fish — with prices, areas…",
   alternates: { canonical: `${SITE}/tenerife/restaurants` },
   openGraph: { title: "Best Restaurants in Tenerife | Flyamba", description: "Canarian food, seafood and Michelin stars with prices and tips.", type: "article" },
 };

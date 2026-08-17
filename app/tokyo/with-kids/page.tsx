@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Tokyo with Kids 2026 — Best Family Attractions | Flyamba",
   description:
-    "The best things to do in Tokyo with children — Disneyland and DisneySea, teamLab, Ueno Zoo, the Ghibli Museum, Pokemon, Sanrio Puroland and KidZania, with prices and tips.",
+    "The best things to do in Tokyo with children — Disneyland and DisneySea, teamLab, Ueno Zoo, the Ghibli Museum, Pokemon, Sanrio Puroland and KidZania…",
   alternates: { canonical: `${SITE}/tokyo/with-kids` },
   openGraph: { title: "Tokyo with Kids | Flyamba", description: "Disney, teamLab, zoos, Ghibli and family fun in Tokyo.", type: "article" },
 };

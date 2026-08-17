@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Paris With Kids 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Paris with children — Europe's biggest science museum, gentle amusement parks, a historic zoo, aquariums, wax museums, boat-sailing in the Tuileries and a magical fairground museum. Ages, prices and Métro directions.",
+    "The best things to do in Paris with children — Europe's biggest science museum, gentle amusement parks, a historic zoo, aquariums, wax museums…",
   alternates: { canonical: `${SITE}/paris/with-kids` },
   openGraph: { title: "Paris With Kids | Flyamba", description: "Family-friendly things to do in Paris with children.", type: "article" },
 };

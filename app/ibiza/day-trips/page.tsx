@@ -10,7 +10,7 @@ const HERO = "/images/destinations/flights-ibiza.avif";
 export const metadata: Metadata = {
   title: "Day Trips from Ibiza 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Ibiza — the ferry to unspoilt Formentera, a sunset boat around Es Vedrà, the wild north coast and coves, chic Santa Gertrudis and island wine tasting.",
+    "The best day trips from Ibiza — the ferry to unspoilt Formentera, a sunset boat around Es Vedrà, the wild north coast and coves, chic Santa Gertrudis and…",
   alternates: { canonical: `${SITE}/ibiza/day-trips` },
   openGraph: { title: "Best Day Trips from Ibiza | Flyamba", description: "Formentera, Es Vedrà, the wild north and more — the best escapes from Ibiza.", type: "article", images: [HERO] },
 };

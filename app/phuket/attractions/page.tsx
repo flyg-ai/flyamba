@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Attractions in Phuket 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Phuket — the Big Buddha, Wat Chalong, Old Phuket Town, Phang Nga Bay, James Bond Island, Promthep Cape, viewpoints, Phi Phi and more, with prices, hours and insider tips.",
+    "The best things to do in Phuket — the Big Buddha, Wat Chalong, Old Phuket Town, Phang Nga Bay, James Bond Island, Promthep Cape, viewpoints, Phi Phi and…",
   alternates: { canonical: `${SITE}/phuket/attractions` },
   openGraph: { title: "Best Things to Do in Phuket | Flyamba", description: "20 top Phuket attractions with prices, hours and tips.", type: "article" },
 };

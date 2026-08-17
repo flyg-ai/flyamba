@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Prague Travel Costs 2026 — Budget Guide | Flyamba",
   description:
-    "How much does Prague cost? Daily budgets for budget, mid-range and luxury travellers, plus real prices in Czech koruna (Kč) for beer, food, transport, attractions and hotels.",
+    "How much does Prague cost? Daily budgets for budget, mid-range and luxury travellers, plus real prices in Czech koruna (Kč) for beer, food, transport…",
   alternates: { canonical: `${SITE}/prague/prices` },
   openGraph: { title: "How Much Does Prague Cost? | Flyamba", description: "Daily budgets and real prices for Prague in koruna.", type: "article" },
 };

@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Events in London 2026 — Festivals & What's On | Flyamba",
   description:
-    "London's biggest annual events month by month — New Year fireworks, the Marathon, Chelsea Flower Show, Trooping the Colour, Wimbledon, Pride, Notting Hill Carnival and Christmas, with dates and tips.",
+    "London's biggest annual events month by month — New Year fireworks, the Marathon, Chelsea Flower Show, Trooping the Colour, Wimbledon, Pride, Notting…",
   alternates: { canonical: `${SITE}/london/events` },
   openGraph: { title: "London Events & Festivals | Flyamba", description: "The city's biggest annual events, month by month.", type: "article" },
 };

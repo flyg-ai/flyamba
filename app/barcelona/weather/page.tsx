@@ -5,7 +5,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Barcelona Weather 2026 — Best Time to Visit | Flyamba",
   description:
-    "Barcelona weather month by month: average temperatures, rainfall, sunshine hours and what to pack — plus the best times to visit for sun, city breaks and beaches.",
+    "Barcelona weather month by month: average temperatures, rainfall, sunshine hours and what to pack — plus the best times to visit for sun, city breaks and…",
   alternates: { canonical: `${SITE}/barcelona/weather` },
   openGraph: { title: "Barcelona Weather by Month | Flyamba", description: "Month-by-month climate and the best time to visit Barcelona.", type: "article" },
 };

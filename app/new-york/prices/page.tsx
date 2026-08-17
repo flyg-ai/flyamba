@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/new-york-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "New York Prices 2026 — Flights, Budget & Daily Costs | Flyamba",
+  title: "New York Prices 2026 — Flights, Budget & Daily Costs",
   description:
-    "How much does New York cost? Flight fares from $430, plus a full daily-budget breakdown — hotels, food, attractions, transport, tax and tipping — with money-saving tips, all in USD.",
+    "How much does New York cost? Flight fares from $430, plus a full daily-budget breakdown — hotels, food, attractions, transport, tax and tipping — with…",
   alternates: { canonical: `${SITE}/new-york/prices` },
   openGraph: { title: "New York Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to New York.", type: "article" },
 };

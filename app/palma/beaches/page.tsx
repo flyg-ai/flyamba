@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches in Palma & Mallorca 2026 — Guide | Flyamba",
   description:
-    "The best beaches near Palma de Mallorca — from the lively city sands of Playa de Palma and chic Illetes to the turquoise, Caribbean-like Es Trenc, Cala Deià and Cala Mondragó, with access tips.",
+    "The best beaches near Palma de Mallorca — from the lively city sands of Playa de Palma and chic Illetes to the turquoise, Caribbean-like Es Trenc, Cala…",
   alternates: { canonical: `${SITE}/palma/beaches` },
   openGraph: { title: "Best Beaches near Palma | Flyamba", description: "The best Palma and Mallorca beaches, with facilities and access tips.", type: "article" },
 };

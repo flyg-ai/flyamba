@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Attractions in Florence 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Florence — the Duomo and Brunelleschi's dome, the Uffizi, Michelangelo's David at the Accademia, the Ponte Vecchio, Pitti Palace and more, with prices, hours and insider tips.",
+    "The best things to do in Florence — the Duomo and Brunelleschi's dome, the Uffizi, Michelangelo's David at the Accademia, the Ponte Vecchio, Pitti Palace…",
   alternates: { canonical: `${SITE}/florence/attractions` },
   openGraph: { title: "Best Things to Do in Florence | Flyamba", description: "Top Florence attractions with prices, hours and tips.", type: "article" },
 };

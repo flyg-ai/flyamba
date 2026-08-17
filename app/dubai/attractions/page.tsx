@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Attractions in Dubai 2026 — Guide | Flyamba",
   description:
-    "The best things to do in Dubai — the Burj Khalifa, Dubai Mall & Fountain, Palm Jumeirah, Museum of the Future, the old souks and Creek, a desert safari and more, with prices, opening hours and insider tips.",
+    "The best things to do in Dubai — the Burj Khalifa, Dubai Mall & Fountain, Palm Jumeirah, Museum of the Future, the old souks and Creek, a desert safari…",
   alternates: { canonical: `${SITE}/dubai/attractions` },
   openGraph: { title: "Best Things to Do in Dubai | Flyamba", description: "Dubai's top attractions with prices, hours and tips.", type: "article" },
 };

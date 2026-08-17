@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches Near New York 2026 — Complete Guide | Flyamba",
   description:
-    "The best beaches near New York — Coney Island, Rockaway surf, Jones Beach, Long Beach, car-free Fire Island and the Hamptons — with how to get there by subway, train or ferry, and tips.",
+    "The best beaches near New York — Coney Island, Rockaway surf, Jones Beach, Long Beach, car-free Fire Island and the Hamptons — with how to get there by…",
   alternates: { canonical: `${SITE}/new-york/beaches` },
   openGraph: { title: "Best Beaches Near New York | Flyamba", description: "City beaches, Long Island sands and the Hamptons — where to swim near New York.", type: "article" },
 };

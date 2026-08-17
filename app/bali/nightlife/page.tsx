@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Bali Nightlife 2026 — Beach Clubs, Bars & Clubs | Flyamba",
   description:
-    "The best nightlife in Bali — iconic Seminyak beach clubs Potato Head and Ku De Ta, clifftop Single Fin at Uluwatu, spectacular clubs La Favela and Mirror, and Canggu's laid-back Old Man's, with areas and tips.",
+    "The best nightlife in Bali — iconic Seminyak beach clubs Potato Head and Ku De Ta, clifftop Single Fin at Uluwatu, spectacular clubs La Favela and…",
   alternates: { canonical: `${SITE}/bali/nightlife` },
   openGraph: { title: "Bali Nightlife | Flyamba", description: "Beach clubs, cocktail bars, clubs and sunset spots across Bali.", type: "article" },
 };

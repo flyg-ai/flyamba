@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Nightlife in Marrakech 2026 — Bars & Clubs Guide | Flyamba",
   description:
-    "Marrakech after dark — rooftop cocktail bars, dinner-cabarets, glamorous clubs and pool parties, plus how alcohol licensing works, where to drink in the medina and dress codes.",
+    "Marrakech after dark — rooftop cocktail bars, dinner-cabarets, glamorous clubs and pool parties, plus how alcohol licensing works, where to drink in the…",
   alternates: { canonical: `${SITE}/marrakech/nightlife` },
   openGraph: { title: "Nightlife in Marrakech | Flyamba", description: "The best rooftop bars, cabarets and clubs in Marrakech, with licensing notes.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Florence 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Florence — the leather markets and workshops, the luxury boutiques of Via de' Tornabuoni where Gucci and Ferragamo were born, the ancient perfumery and the local food markets.",
+    "Where to shop in Florence — the leather markets and workshops, the luxury boutiques of Via de' Tornabuoni where Gucci and Ferragamo were born, the…",
   alternates: { canonical: `${SITE}/florence/shopping` },
   openGraph: { title: "Shopping in Florence | Flyamba", description: "Leather, luxury, artisan crafts and markets in Florence, with tips.", type: "article" },
 };

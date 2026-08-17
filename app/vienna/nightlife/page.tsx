@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Nightlife in Vienna 2026 — Bars & Clubs Guide | Flyamba",
   description:
-    "Where to go out in Vienna — the historic Loos and Kruger's cocktail bars, the Heuriger wine taverns of Grinzing, canal-side techno clubs like Flex and Grelle Forelle, live jazz and rooftop bars, with tips.",
+    "Where to go out in Vienna — the historic Loos and Kruger's cocktail bars, the Heuriger wine taverns of Grinzing, canal-side techno clubs like Flex and…",
   alternates: { canonical: `${SITE}/vienna/nightlife` },
   openGraph: { title: "Vienna Nightlife Guide | Flyamba", description: "Vienna's best cocktail bars, wine taverns, clubs, live music and rooftops with tips.", type: "article" },
 };

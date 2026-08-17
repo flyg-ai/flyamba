@@ -5,9 +5,9 @@ import { WEATHER, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Tenerife Weather 2026 — Best Time to Visit & Climate | Flyamba",
+  title: "Tenerife Weather 2026 — Best Time to Visit & Climate",
   description:
-    "Tenerife weather season by season: warm year-round, the best winter-sun in Europe, and the striking climate difference between the sunny south, greener north and snow-capped Mount Teide — plus the best time to visit.",
+    "Tenerife weather season by season: warm year-round, the best winter-sun in Europe, and the striking climate difference between the sunny south, greener…",
   alternates: { canonical: `${SITE}/tenerife/weather` },
   openGraph: { title: "Tenerife Weather & Best Time to Visit | Flyamba", description: "Season-by-season climate and when to go.", type: "article" },
 };

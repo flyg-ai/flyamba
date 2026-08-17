@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Things to Do in Madrid 2026 — Attractions Guide | Flyamba",
   description:
-    "The 20 best things to do in Madrid — the Prado, Reina Sofía and Thyssen museums, the Royal Palace, Retiro park, Plaza Mayor and the Bernabéu, with prices, opening hours and insider tips.",
+    "The 20 best things to do in Madrid — the Prado, Reina Sofía and Thyssen museums, the Royal Palace, Retiro park, Plaza Mayor and the Bernabéu, with…",
   alternates: { canonical: `${SITE}/madrid/attractions` },
   openGraph: { title: "Best Things to Do in Madrid | Flyamba", description: "20 top Madrid attractions with prices, hours and tips.", type: "article" },
 };

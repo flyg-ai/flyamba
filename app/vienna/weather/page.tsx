@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Vienna Weather 2026 — Best Time to Visit | Flyamba",
   description:
-    "Vienna's weather season by season — mild blossoming springs, warm lively summers, golden autumns and cold, festive winters — with temperatures, what to pack and the best time to visit for weather, crowds and prices.",
+    "Vienna's weather season by season — mild blossoming springs, warm lively summers, golden autumns and cold, festive winters — with temperatures, what to…",
   alternates: { canonical: `${SITE}/vienna/weather` },
   openGraph: { title: "Vienna Weather & Best Time to Visit | Flyamba", description: "Vienna's climate season by season, with temperatures and the ideal time to go.", type: "article" },
 };

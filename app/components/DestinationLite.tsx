@@ -5,10 +5,43 @@ import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { SmartImage } from "@/app/components/SmartImage";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
 import { usd5, usdStr } from "@/app/lib/format";
+import { SITE } from "@/app/lib/destination-helpers";
 import { Plane, Globe, MapPin, TrendingDown, ArrowRight, Sparkles } from "lucide-react";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 const FULL_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+// Structured data for the lite pages. Deliberately smaller than the rich
+// DestinationDetail graph — only the facts the slim catalog actually holds.
+// `lowestSek` is a raw catalog price — usdStr does the SEK→USD conversion.
+function buildJsonLd(d: AllDestination, lowestSek: number | null) {
+  const url = `${SITE}/${d.slug}`;
+  const place = d.name === d.country ? d.name : `${d.name}, ${d.country}`;
+  const description = lowestSek
+    ? `Cheap flights to ${place} from ${usdStr(lowestSek)}, with a month-by-month price calendar.`
+    : `Cheap flights to ${place}, with a month-by-month price calendar.`;
+
+  return [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
+        { "@type": "ListItem", position: 2, name: d.country },
+        { "@type": "ListItem", position: 3, name: d.name, item: url },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "TouristDestination",
+      name: d.name,
+      description,
+      url,
+      image: `${SITE}${d.image}`,
+      address: { "@type": "PostalAddress", addressCountry: d.country },
+    },
+  ];
+}
 
 /**
  * Lightweight destination page for the ~544 ported catalog cities that don't yet
@@ -37,6 +70,13 @@ export function DestinationLite({ d }: { d: AllDestination }) {
 
   return (
     <div className="min-h-screen bg-background">
+      {buildJsonLd(d, cheapestVal === Infinity ? null : cheapestVal).map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
+        />
+      ))}
       <Navbar transparent />
 
       {/* Hero */}

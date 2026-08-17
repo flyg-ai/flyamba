@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/new-york-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around New York 2026 — Subway, OMNY & Taxis | Flyamba",
+  title: "Getting Around New York 2026 — Subway, OMNY & Taxis",
   description:
-    "How to get around New York: the subway, OMNY contactless fares and the weekly fare cap, buses, Citi Bike, walking, taxis and ride-hailing, plus how to reach the city from JFK, LaGuardia and Newark.",
+    "How to get around New York: the subway, OMNY contactless fares and the weekly fare cap, buses, Citi Bike, walking, taxis and ride-hailing, plus how to…",
   alternates: { canonical: `${SITE}/new-york/transport` },
   openGraph: { title: "Getting Around New York | Flyamba", description: "Airports, the 24-hour subway, OMNY fares, buses, bikes and taxis — the complete transport guide.", type: "article" },
 };

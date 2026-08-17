@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Rome Events & Festivals 2026 — Calendar | Flyamba",
   description:
-    "Rome's biggest annual events and festivals — the Natale di Roma birthday parade, Easter and Holy Week at the Vatican, the Estate Romana summer festival, the Rome Film Fest, Republic Day and Christmas, with dates and tips.",
+    "Rome's biggest annual events and festivals — the Natale di Roma birthday parade, Easter and Holy Week at the Vatican, the Estate Romana summer festival…",
   alternates: { canonical: `${SITE}/rome/events` },
   openGraph: { title: "Rome Events & Festivals | Flyamba", description: "Rome's annual festival calendar, from the city's birthday to Christmas, with dates and tips.", type: "article" },
 };

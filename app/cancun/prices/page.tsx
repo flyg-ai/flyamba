@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Cancún Prices 2026 — Costs & Budget Guide | Flyamba",
   description:
-    "How much a trip to Cancún costs — the cheapest months to fly, daily budgets from backpacker to luxury, all-inclusive versus paying as you go, attraction and tour prices, what meals cost and getting-around fares, with money-saving tips.",
+    "How much a trip to Cancún costs — the cheapest months to fly, daily budgets from backpacker to luxury, all-inclusive versus paying as you go, attraction…",
   alternates: { canonical: `${SITE}/cancun/prices` },
   openGraph: { title: "Cancún Prices & Budget Guide | Flyamba", description: "What a Cancún trip costs: flights, daily budgets, all-inclusive vs à la carte, tours, food and transport.", type: "article" },
 };

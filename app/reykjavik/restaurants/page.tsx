@@ -6,9 +6,9 @@ import { RESTAURANTS, CATEGORIES } from "@/app/data/reykjavik-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Eat in Reykjavik 2026 — Best Restaurants Guide | Flyamba",
+  title: "Where to Eat in Reykjavik 2026 — Best Restaurants Guide",
   description:
-    "The best restaurants in Reykjavik — New Nordic fine dining at Michelin-starred Dill, fresh seafood, lobster soup, the world-famous hot dog stand and budget eats, with prices and booking tips.",
+    "The best restaurants in Reykjavik — New Nordic fine dining at Michelin-starred Dill, fresh seafood, lobster soup, the world-famous hot dog stand and…",
   alternates: { canonical: `${SITE}/reykjavik/restaurants` },
   openGraph: { title: "Best Restaurants in Reykjavik | Flyamba", description: "From Michelin-starred New Nordic to lobster soup and lamb hot dogs — where to eat in Reykjavik.", type: "article" },
 };

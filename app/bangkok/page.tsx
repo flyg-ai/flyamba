@@ -8,6 +8,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { BANGKOK_CATEGORIES, bangkokHref } from "@/app/lib/bangkok";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -70,9 +71,9 @@ const NEARBY = [
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Bangkok ${year} — Guide, Prices & Attractions | Flyamba`;
+  const title = clampTitle(`Cheap Flights to Bangkok ${year} — Guide, Prices & Attractions | Flyamba`);
   const description =
-    "Find cheap flights to Bangkok, Thailand and plan the perfect trip with complete English guides to temples, street food, hotels, rooftop bars, transport, weather, shopping, beaches, family days and day trips.";
+    clampDescription("Find cheap flights to Bangkok, Thailand and plan the perfect trip with complete English guides to temples, street food, hotels, rooftop bars, transport, weather, shopping, beaches, family days and day trips.");
   const canonical = `${SITE}/bangkok`;
   return {
     title,

@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Events in Singapore 2026 — Guide | Flyamba",
   description:
-    "Singapore's biggest events and festivals — Chinese New Year, the F1 Night Race, National Day fireworks, Deepavali in Little India and the Orchard Road Christmas light-up, with dates, locations and tips.",
+    "Singapore's biggest events and festivals — Chinese New Year, the F1 Night Race, National Day fireworks, Deepavali in Little India and the Orchard Road…",
   alternates: { canonical: `${SITE}/singapore/events` },
   openGraph: { title: "Singapore Events & Festivals | Flyamba", description: "The best festivals and events in Singapore through the year, with dates and tips.", type: "article" },
 };

@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Weather in Florence 2026 — When to Visit | Flyamba",
   description:
-    "Florence weather and the best time to visit — season by season, from mild green springs and hot, humid summers to golden autumns and quiet, queue-free winters, with temperatures, crowds and prices.",
+    "Florence weather and the best time to visit — season by season, from mild green springs and hot, humid summers to golden autumns and quiet, queue-free…",
   alternates: { canonical: `${SITE}/florence/weather` },
   openGraph: { title: "Florence Weather & Best Time to Visit | Flyamba", description: "Season-by-season Florence weather, crowds and prices.", type: "article" },
 };

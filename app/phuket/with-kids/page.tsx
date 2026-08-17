@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Phuket with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Phuket with children — huge water parks like Andamanda, an ethical elephant sanctuary, the aquarium, FantaSea, gentle island snorkelling and dinosaur mini-golf, with ages, prices and tips.",
+    "The best things to do in Phuket with children — huge water parks like Andamanda, an ethical elephant sanctuary, the aquarium, FantaSea, gentle island…",
   alternates: { canonical: `${SITE}/phuket/with-kids` },
   openGraph: { title: "Phuket with Kids | Flyamba", description: "Family-friendly Phuket: water parks, elephants, aquarium, shows and island trips, with ages and prices.", type: "article" },
 };

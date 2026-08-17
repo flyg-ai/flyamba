@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Hotels in Cancún 2026 — Guide | Flyamba",
   description:
-    "Where to stay in Cancún — the finest all-inclusive resorts and adults-only luxury like Le Blanc and NIZUC, top family resorts, lively party hotels and budget boutique stays downtown, with prices and who each suits.",
+    "Where to stay in Cancún — the finest all-inclusive resorts and adults-only luxury like Le Blanc and NIZUC, top family resorts, lively party hotels and…",
   alternates: { canonical: `${SITE}/cancun/hotels` },
   openGraph: { title: "Best Hotels in Cancún | Flyamba", description: "Cancún's best resorts and hotels, from luxury all-inclusives to budget boutiques, with prices and tips.", type: "article" },
 };

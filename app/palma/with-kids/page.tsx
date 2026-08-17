@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Palma with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Palma de Mallorca with kids — the Palma Aquarium, Marineland, Katmandu Park, Aqualand water park, the vintage Sóller train, Bellver Castle and easy family beaches.",
+    "The best things to do in Palma de Mallorca with kids — the Palma Aquarium, Marineland, Katmandu Park, Aqualand water park, the vintage Sóller train…",
   alternates: { canonical: `${SITE}/palma/with-kids` },
   openGraph: { title: "Palma with Kids | Flyamba", description: "Family activities, water parks and practical tips for Palma with children.", type: "article" },
 };

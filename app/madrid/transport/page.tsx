@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/madrid-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Madrid Transport 2026 — Metro, Airport & Getting Around | Flyamba",
+  title: "Madrid Transport 2026 — Metro, Airport & Getting Around",
   description:
-    "How to get around Madrid — the metro, Cercanías trains, buses, taxis and rideshare, plus every way from Barajas airport (MAD) to the centre, the Tarjeta Multi card and money-saving ticket tips.",
+    "How to get around Madrid — the metro, Cercanías trains, buses, taxis and rideshare, plus every way from Barajas airport (MAD) to the centre, the Tarjeta…",
   alternates: { canonical: `${SITE}/madrid/transport` },
   openGraph: { title: "Getting Around Madrid | Flyamba", description: "Metro, airport transfers, tickets and taxis in Madrid.", type: "article" },
 };

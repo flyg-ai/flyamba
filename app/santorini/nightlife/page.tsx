@@ -7,9 +7,9 @@ import { SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Santorini Nightlife 2026 — Sunset Bars & Clubs Guide | Flyamba",
+  title: "Santorini Nightlife 2026 — Sunset Bars & Clubs Guide",
   description:
-    "Santorini after dark — legendary caldera cocktail bars in Fira like Franco's and PK, the island's biggest club Koo, rowdy budget bars, and the south-coast beach clubs of Perivolos. Where to drink and dance.",
+    "Santorini after dark — legendary caldera cocktail bars in Fira like Franco's and PK, the island's biggest club Koo, rowdy budget bars, and the…",
   alternates: { canonical: `${SITE}/santorini/nightlife` },
   openGraph: { title: "Santorini Nightlife | Flyamba", description: "9 of the best Santorini bars and clubs, from cliff-edge cocktails to beach-club parties.", type: "article" },
 };

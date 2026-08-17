@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Shopping in Tokyo 2026 — Best Districts & Stores | Flyamba",
   description:
-    "The best shopping in Tokyo — luxury Ginza, youth fashion in Shibuya and Harajuku, electronics and anime in Akihabara, plus markets, Don Quijote and duty-free tips.",
+    "The best shopping in Tokyo — luxury Ginza, youth fashion in Shibuya and Harajuku, electronics and anime in Akihabara, plus markets, Don Quijote and…",
   alternates: { canonical: `${SITE}/tokyo/shopping` },
   openGraph: { title: "Best Shopping in Tokyo | Flyamba", description: "Ginza luxury, Harajuku fashion, Akihabara electronics and more.", type: "article" },
 };

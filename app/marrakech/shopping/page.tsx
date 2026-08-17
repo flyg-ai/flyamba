@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Marrakech 2026 — Souks & Guide | Flyamba",
   description:
-    "Where to shop in Marrakech — the trade souks for spices, leather, metalwork and carpets, plus concept stores and fixed-price craft markets, with haggling tips and what things really cost.",
+    "Where to shop in Marrakech — the trade souks for spices, leather, metalwork and carpets, plus concept stores and fixed-price craft markets, with haggling…",
   alternates: { canonical: `${SITE}/marrakech/shopping` },
   openGraph: { title: "Shopping in Marrakech | Flyamba", description: "The souks by trade plus design boutiques, with haggling tips and fair prices.", type: "article" },
 };

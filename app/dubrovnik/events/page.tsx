@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubrovnik Events & Festivals 2026 — Guide | Flyamba",
   description:
-    "The best events and festivals in Dubrovnik — the world-famous Summer Festival of open-air theatre and music, the UNESCO-listed Feast of St Blaise, the carnival, the Good Food Festival, Midsummer Scene theatre and the winter festive season, with dates and tips.",
+    "The best events and festivals in Dubrovnik — the world-famous Summer Festival of open-air theatre and music, the UNESCO-listed Feast of St Blaise, the…",
   alternates: { canonical: `${SITE}/dubrovnik/events` },
   openGraph: { title: "Dubrovnik Events & Festivals | Flyamba", description: "Dubrovnik's key festivals and events through the year, from the Summer Festival to St Blaise, with dates and tips.", type: "article" },
 };

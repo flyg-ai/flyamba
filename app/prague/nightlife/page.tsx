@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Prague Nightlife 2026 — Beer Halls, Bars & Clubs | Flyamba",
   description:
-    "Prague after dark — legendary beer halls pouring perfect pilsner, world-ranked cocktail bars, underground clubs, jazz cellars and rooftop lounges. 10 of the best nightlife spots with hours, prices and tips.",
+    "Prague after dark — legendary beer halls pouring perfect pilsner, world-ranked cocktail bars, underground clubs, jazz cellars and rooftop lounges.",
   alternates: { canonical: `${SITE}/prague/nightlife` },
   openGraph: { title: "Prague Nightlife | Flyamba", description: "10 top Prague bars, beer halls and clubs.", type: "article" },
 };

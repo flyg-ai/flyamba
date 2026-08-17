@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/bali-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Bali 2026 — Scooters, Drivers & Taxis | Flyamba",
+  title: "Getting Around Bali 2026 — Scooters, Drivers & Taxis",
   description:
-    "How to get around Bali: airport transfers from Ngurah Rai (DPS), scooter rental, Grab and Gojek ride-hailing, hiring a private driver, buses between areas and fast boats to the islands, with prices and money-saving tips.",
+    "How to get around Bali: airport transfers from Ngurah Rai (DPS), scooter rental, Grab and Gojek ride-hailing, hiring a private driver, buses between…",
   alternates: { canonical: `${SITE}/bali/transport` },
   openGraph: { title: "Getting Around Bali | Flyamba", description: "Scooters, private drivers, Grab, taxis and island boats — the complete Bali transport guide.", type: "article" },
 };

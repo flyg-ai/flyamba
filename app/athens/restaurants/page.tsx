@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Athens 2026 — Where to Eat | Flyamba",
   description:
-    "Where to eat in Athens — cult souvlaki joints, meze and deli tavernas, historic cellars, modern Greek bistros and Michelin-starred tables, with prices, areas and insider tips.",
+    "Where to eat in Athens — cult souvlaki joints, meze and deli tavernas, historic cellars, modern Greek bistros and Michelin-starred tables, with prices…",
   alternates: { canonical: `${SITE}/athens/restaurants` },
   openGraph: { title: "Where to Eat in Athens | Flyamba", description: "9 of the best Athens restaurants, from €3 souvlaki to Michelin stars.", type: "article" },
 };

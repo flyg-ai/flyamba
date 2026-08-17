@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Attractions in Paris 2026 — Guide | Flyamba",
   description:
-    "The 20 best things to do in Paris — the Eiffel Tower, the Louvre, Notre-Dame, Musée d'Orsay, Montmartre, Versailles and more, with prices, opening hours, Métro directions and insider tips.",
+    "The 20 best things to do in Paris — the Eiffel Tower, the Louvre, Notre-Dame, Musée d'Orsay, Montmartre, Versailles and more, with prices, opening hours…",
   alternates: { canonical: `${SITE}/paris/attractions` },
   openGraph: { title: "Best Things to Do in Paris | Flyamba", description: "20 top Paris attractions with prices, hours and tips.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Dubrovnik 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Dubrovnik — Kotor and the Bay of Montenegro, Ottoman Mostar in Bosnia, the car-free Elaphiti islands, the oyster-and-wine Pelješac peninsula, charming Cavtat, green Mljet and Roman Split, with distances and tips.",
+    "The best day trips from Dubrovnik — Kotor and the Bay of Montenegro, Ottoman Mostar in Bosnia, the car-free Elaphiti islands, the oyster-and-wine…",
   alternates: { canonical: `${SITE}/dubrovnik/day-trips` },
   openGraph: { title: "Best Day Trips from Dubrovnik | Flyamba", description: "Day trips from Dubrovnik: Montenegro, Mostar, the islands, Cavtat and more, with distances and tips.", type: "article" },
 };

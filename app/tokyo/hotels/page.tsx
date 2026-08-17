@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Where to Stay in Tokyo 2026 — Best Hotels & Areas | Flyamba",
   description:
-    "The best hotels in Tokyo for every budget — from sky-high luxury like the Aman and Park Hyatt to a traditional ryokan, capsule pods and a book-lover's hostel.",
+    "The best hotels in Tokyo for every budget — from sky-high luxury like the Aman and Park Hyatt to a traditional ryokan, capsule pods and a book-lover's…",
   alternates: { canonical: `${SITE}/tokyo/hotels` },
   openGraph: { title: "Best Hotels in Tokyo | Flyamba", description: "Luxury towers, ryokan, boutique stays and budget capsules in Tokyo.", type: "article" },
 };

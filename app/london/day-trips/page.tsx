@@ -9,7 +9,7 @@ const SITE = "https://flyamba.com";
 export const metadata: Metadata = {
   title: "Day Trips from London 2026 — Guide | Flyamba",
   description:
-    "The best day trips from London — Windsor Castle, Oxford, Cambridge, Bath, Stonehenge and Brighton. How to get there by train, what to see, and prices and timing tips.",
+    "The best day trips from London — Windsor Castle, Oxford, Cambridge, Bath, Stonehenge and Brighton.",
   alternates: { canonical: `${SITE}/london/day-trips` },
   openGraph: { title: "Best Day Trips from London | Flyamba", description: "6 top day trips from London by train, with times and tips.", type: "article" },
 };

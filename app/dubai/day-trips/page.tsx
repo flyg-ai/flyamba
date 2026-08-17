@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Day Trips from Dubai 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Dubai — Abu Dhabi and the Sheikh Zayed Grand Mosque, the mountains of Hatta, the oasis city of Al Ain, cultural Sharjah, the fjords of Musandam in Oman and the east coast at Fujairah, with directions and tips.",
+    "The best day trips from Dubai — Abu Dhabi and the Sheikh Zayed Grand Mosque, the mountains of Hatta, the oasis city of Al Ain, cultural Sharjah, the…",
   alternates: { canonical: `${SITE}/dubai/day-trips` },
   openGraph: { title: "Best Day Trips from Dubai | Flyamba", description: "Six great day trips from Dubai, from Abu Dhabi to Musandam, with directions.", type: "article" },
 };

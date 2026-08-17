@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Hotels in Dubrovnik 2026 — Where to Stay | Flyamba",
   description:
-    "Where to stay in Dubrovnik — from cliffside five-stars like Villa Dubrovnik and the Excelsior with their iconic wall views to a Baroque palace boutique inside the walls, plus mid-range and budget options, with areas, prices and tips.",
+    "Where to stay in Dubrovnik — from cliffside five-stars like Villa Dubrovnik and the Excelsior with their iconic wall views to a Baroque palace boutique…",
   alternates: { canonical: `${SITE}/dubrovnik/hotels` },
   openGraph: { title: "Best Hotels in Dubrovnik | Flyamba", description: "Where to stay in Dubrovnik: luxury cliff hotels, Old Town boutiques and budget beds, with prices and tips.", type: "article" },
 };

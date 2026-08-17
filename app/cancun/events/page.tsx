@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Cancún Events & Festivals 2026 — Calendar | Flyamba",
   description:
-    "Cancún's biggest annual events — the world-famous spring break, the moving Day of the Dead festivals, summer whale-shark season, Easter's Semana Santa, jazz festivals and concerts, and the festive Christmas and New Year peak, with dates and tips.",
+    "Cancún's biggest annual events — the world-famous spring break, the moving Day of the Dead festivals, summer whale-shark season, Easter's Semana Santa…",
   alternates: { canonical: `${SITE}/cancun/events` },
   openGraph: { title: "Cancún Events & Festivals | Flyamba", description: "Cancún's annual calendar, from spring break and whale sharks to Day of the Dead and New Year, with tips.", type: "article" },
 };

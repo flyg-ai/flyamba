@@ -9,6 +9,7 @@ import { CitySubNav } from "@/app/components/CitySubNav";
 import { SmartImage } from "@/app/components/SmartImage";
 import { CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -86,9 +87,9 @@ const FAQS = [
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Tenerife ${year} — Guide, Prices & Attractions | Flyamba`;
+  const title = clampTitle(`Cheap Flights to Tenerife ${year} — Guide, Prices & Attractions | Flyamba`);
   const description =
-    "Find cheap flights to Tenerife, Spain from $89. Compare fares to Tenerife South (TFS), plus complete English guides to Mount Teide, attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.";
+    clampDescription("Find cheap flights to Tenerife, Spain from $89. Compare fares to Tenerife South (TFS), plus complete English guides to Mount Teide, attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.");
   const canonical = `${SITE}/tenerife`;
   return {
     title,

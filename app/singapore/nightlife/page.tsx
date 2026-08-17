@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Nightlife in Singapore 2026 — Guide | Flyamba",
   description:
-    "Singapore after dark — world-ranked cocktail bars like Atlas and Manhattan, sky-high rooftops at CÉ LA VI and 1-Altitude, the superclub Zouk, hidden speakeasies and Sentosa's beach club, with areas and tips.",
+    "Singapore after dark — world-ranked cocktail bars like Atlas and Manhattan, sky-high rooftops at CÉ LA VI and 1-Altitude, the superclub Zouk, hidden…",
   alternates: { canonical: `${SITE}/singapore/nightlife` },
   openGraph: { title: "Best Nightlife in Singapore | Flyamba", description: "8 top Singapore bars, rooftops and clubs with areas and tips.", type: "article" },
 };

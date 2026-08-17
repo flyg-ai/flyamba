@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Events in Florence 2026 — Festivals Guide | Flyamba",
   description:
-    "Florence's festivals and events — the Easter Scoppio del Carro, the ferocious Calcio Storico, the Festa di San Giovanni, the Maggio Musicale opera festival, the Estate Fiorentina summer programme and Christmas, with dates and tips.",
+    "Florence's festivals and events — the Easter Scoppio del Carro, the ferocious Calcio Storico, the Festa di San Giovanni, the Maggio Musicale opera…",
   alternates: { canonical: `${SITE}/florence/events` },
   openGraph: { title: "Florence Festivals & Events | Flyamba", description: "The best annual events in Florence, from Calcio Storico to Christmas.", type: "article" },
 };

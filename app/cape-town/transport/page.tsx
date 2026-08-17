@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/cape-town-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Cape Town 2026 — Uber, MyCiti & Car Hire | Flyamba",
+  title: "Getting Around Cape Town 2026 — Uber, MyCiti & Car Hire",
   description:
-    "How to get around Cape Town: the airport transfer, MyCiti buses, Uber and Bolt, hire cars for the peninsula and winelands, the hop-on-hop-off bus and safety tips, with prices in USD.",
+    "How to get around Cape Town: the airport transfer, MyCiti buses, Uber and Bolt, hire cars for the peninsula and winelands, the hop-on-hop-off bus and…",
   alternates: { canonical: `${SITE}/cape-town/transport` },
   openGraph: { title: "Getting Around Cape Town | Flyamba", description: "Airport transfers, MyCiti buses, Uber, car hire and safety tips — the complete transport guide.", type: "article" },
 };

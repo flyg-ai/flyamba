@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Lisbon Nightlife 2026 — Best Bars, Clubs & Fado | Flyamba",
   description:
-    "Where to go out in Lisbon — the Bairro Alto street party, Pink Street and Cais do Sodré, legendary club Lux Frágil, rooftop bars, jazz and authentic fado taverns, with tips and prices.",
+    "Where to go out in Lisbon — the Bairro Alto street party, Pink Street and Cais do Sodré, legendary club Lux Frágil, rooftop bars, jazz and authentic fado…",
   alternates: { canonical: `${SITE}/lisbon/nightlife` },
   openGraph: { title: "Lisbon Nightlife | Flyamba", description: "Bars, clubs, rooftops and fado in Lisbon.", type: "article" },
 };

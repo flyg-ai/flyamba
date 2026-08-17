@@ -6,7 +6,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Palma Prices & Daily Budget 2026 — Cost Guide | Flyamba",
   description:
-    "How much does Palma de Mallorca cost? A full breakdown of daily budgets, sample prices for food, drinks, transport, attractions and hotels, plus money-saving tips for your Mallorca trip.",
+    "How much does Palma de Mallorca cost? A full breakdown of daily budgets, sample prices for food, drinks, transport, attractions and hotels, plus…",
   alternates: { canonical: `${SITE}/palma/prices` },
   openGraph: { title: "Palma Prices & Daily Budget | Flyamba", description: "Daily budgets and sample costs for food, transport and attractions in Palma.", type: "article" },
 };

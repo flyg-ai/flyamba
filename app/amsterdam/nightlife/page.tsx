@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Amsterdam Nightlife 2026 — Best Bars & Clubs Guide | Flyamba",
   description:
-    "Amsterdam after dark — legendary clubs like Paradiso and the Melkweg, underground techno, cosy brown cafés, speakeasy cocktail bars and the Red Light District, with areas and tips.",
+    "Amsterdam after dark — legendary clubs like Paradiso and the Melkweg, underground techno, cosy brown cafés, speakeasy cocktail bars and the Red Light…",
   alternates: { canonical: `${SITE}/amsterdam/nightlife` },
   openGraph: { title: "Amsterdam Nightlife Guide | Flyamba", description: "Clubs, live music, brown cafés and cocktail bars — the best of Amsterdam after dark.", type: "article" },
 };

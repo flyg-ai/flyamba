@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
@@ -123,8 +124,8 @@ function jsonLd() {
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Tokyo ${year} — Guide, Prices & Attractions | Flyamba`;
-  const description = `Find cheap flights to Tokyo, Japan from ${usdStr(5200)}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.`;
+  const title = clampTitle(`Cheap Flights to Tokyo ${year} — Guide, Prices & Attractions | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Tokyo, Japan from ${usdStr(5200)}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.`);
   const canonical = `${SITE}/${SLUG}`;
   return {
     title,

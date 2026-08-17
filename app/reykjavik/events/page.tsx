@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Reykjavík Events & Festivals 2026 — What's On | Flyamba",
   description:
-    "Reykjavík's event calendar — Iceland Airwaves music festival, Culture Night (Menningarnótt), the Winter Lights Festival, National Day, the midnight-sun Secret Solstice and the famous New Year's Eve fireworks — plus the Northern Lights season.",
+    "Reykjavík's event calendar — Iceland Airwaves music festival, Culture Night (Menningarnótt), the Winter Lights Festival, National Day, the midnight-sun…",
   alternates: { canonical: `${SITE}/reykjavik/events` },
   openGraph: { title: "Reykjavík Events & Festivals | Flyamba", description: "Airwaves, Culture Night, Winter Lights and NYE fireworks — Reykjavík's event calendar.", type: "article" },
 };

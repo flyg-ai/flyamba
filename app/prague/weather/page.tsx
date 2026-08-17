@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Prague Weather 2026 — Best Time to Visit | Flyamba",
   description:
-    "Prague weather by season: average temperatures, rainfall and what to pack, plus the best times to visit — from warm summers and golden autumns to snowy Christmas-market winters.",
+    "Prague weather by season: average temperatures, rainfall and what to pack, plus the best times to visit — from warm summers and golden autumns to snowy…",
   alternates: { canonical: `${SITE}/prague/weather` },
   openGraph: { title: "Prague Weather & Best Time to Visit | Flyamba", description: "Season-by-season climate and the best time to visit Prague.", type: "article" },
 };

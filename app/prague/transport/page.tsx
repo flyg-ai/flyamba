@@ -6,9 +6,9 @@ import { PRAGUE_CATEGORIES } from "@/app/data/prague-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Prague 2026 — Metro, Trams & Transport Guide | Flyamba",
+  title: "Getting Around Prague 2026 — Metro, Trams & Transport Guide",
   description:
-    "How to get around Prague: airport transfers, the metro, the famous tram network, the Petřín funicular, taxis and Bolt, plus the Lítačka ticket system and prices in Czech koruna (Kč).",
+    "How to get around Prague: airport transfers, the metro, the famous tram network, the Petřín funicular, taxis and Bolt, plus the Lítačka ticket system and…",
   alternates: { canonical: `${SITE}/prague/transport` },
   openGraph: { title: "Getting Around Prague | Flyamba", description: "Airport transfers, metro, trams, funicular, taxis and tickets in Prague.", type: "article" },
 };

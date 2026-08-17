@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Beaches in Dubai 2026 — Guide | Flyamba",
   description:
-    "The best beaches in Dubai — lively free JBR and Kite Beach, stylish La Mer, classic Jumeirah Public Beach, the secret Black Palace Beach, surf-friendly Sunset Beach and family-focused Al Mamzar, with facilities and tips.",
+    "The best beaches in Dubai — lively free JBR and Kite Beach, stylish La Mer, classic Jumeirah Public Beach, the secret Black Palace Beach, surf-friendly…",
   alternates: { canonical: `${SITE}/dubai/beaches` },
   openGraph: { title: "Best Beaches in Dubai | Flyamba", description: "Dubai's best public beaches and beach parks, with facilities and tips.", type: "article" },
 };

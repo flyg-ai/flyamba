@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Transport in Dubai 2026 — Getting Around Guide | Flyamba",
   description:
-    "How to get around Dubai — from DXB airport to the city, the driverless Metro, the Tram, taxis and Careem/Uber, the Nol card and fares, and the traditional 1-dirham abras across the Creek, with routes and prices.",
+    "How to get around Dubai — from DXB airport to the city, the driverless Metro, the Tram, taxis and Careem/Uber, the Nol card and fares, and the…",
   alternates: { canonical: `${SITE}/dubai/transport` },
   openGraph: { title: "Getting Around Dubai | Flyamba", description: "Dubai transport explained: airport, Metro, taxis, the Nol card and abras, with prices.", type: "article" },
 };

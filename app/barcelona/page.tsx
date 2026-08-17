@@ -13,6 +13,7 @@ import { BarcelonaHubNav } from "@/app/components/BarcelonaHubNav";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
 import { getGuidesByDestination, guideHref } from "@/app/data/guides";
 import { SITE, airlineNames, lowestPriceStr } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route, Clock } from "lucide-react";
 
@@ -20,10 +21,10 @@ const d = getDestination("barcelona")!;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Barcelona ${year} — Guide, Prices & Attractions | Flyamba`;
-  const description = `Find cheap flights to Barcelona, Spain from ${lowestPriceStr(d)}. Compare prices from ${airlineNames(d)
+  const title = clampTitle(`Cheap Flights to Barcelona ${year} — Guide, Prices & Attractions | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Barcelona, Spain from ${lowestPriceStr(d)}. Compare prices from ${airlineNames(d)
     .slice(0, 3)
-    .join(", ")}, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.`;
+    .join(", ")}, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.`);
   const canonical = `${SITE}/barcelona`;
   return {
     title,

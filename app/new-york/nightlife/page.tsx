@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "New York Nightlife 2026 — Best Bars & Clubs Guide | Flyamba",
   description:
-    "New York's best nightlife — world-ranked speakeasies like Employees Only and PDT, historic jazz clubs, the Dead Rabbit, Bemelmans piano bar and Brooklyn's House of Yes, with prices and tips.",
+    "New York's best nightlife — world-ranked speakeasies like Employees Only and PDT, historic jazz clubs, the Dead Rabbit, Bemelmans piano bar and…",
   alternates: { canonical: `${SITE}/new-york/nightlife` },
   openGraph: { title: "Best Nightlife in New York | Flyamba", description: "Speakeasies, jazz clubs, cocktail bars and Brooklyn clubs — New York after dark.", type: "article" },
 };

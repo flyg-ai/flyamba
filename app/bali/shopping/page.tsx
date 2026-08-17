@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/bali-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Bali 2026 — Markets, Boutiques & Design | Flyamba",
+  title: "Shopping in Bali 2026 — Markets, Boutiques & Design",
   description:
-    "Where to shop in Bali — the Ubud and Sukawati art markets, Seminyak's designer boutiques on Jalan Laksmana, cool Canggu bazaars and beachfront Kuta malls, with opening hours, prices and bargaining tips.",
+    "Where to shop in Bali — the Ubud and Sukawati art markets, Seminyak's designer boutiques on Jalan Laksmana, cool Canggu bazaars and beachfront Kuta…",
   alternates: { canonical: `${SITE}/bali/shopping` },
   openGraph: { title: "Shopping in Bali | Flyamba", description: "Markets, boutiques, malls and design stores across Bali.", type: "article" },
 };

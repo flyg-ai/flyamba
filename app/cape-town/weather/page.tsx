@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/cape-town-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Cape Town Weather 2026 — Best Time to Visit & What to Pack | Flyamba",
+  title: "Cape Town Weather 2026 — Best Time to Visit & What to Pack",
   description:
-    "Cape Town weather season by season — temperatures, rainfall, wind and sea temperatures, plus the best time to visit for beaches, hiking, whale watching, wildflowers and lower prices.",
+    "Cape Town weather season by season — temperatures, rainfall, wind and sea temperatures, plus the best time to visit for beaches, hiking, whale watching…",
   alternates: { canonical: `${SITE}/cape-town/weather` },
   openGraph: { title: "Cape Town Weather & Best Time to Visit | Flyamba", description: "Season-by-season temperatures, rainfall and packing tips for Cape Town.", type: "article" },
 };

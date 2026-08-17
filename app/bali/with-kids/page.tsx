@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Bali with Kids 2026 — Family Attractions & Tips | Flyamba",
   description:
-    "The best things to do in Bali with kids — Asia's top water park Waterbom, Bali Safari, the Ubud Monkey Forest, Bali Bird Park, jungle ziplines at Bedugul and Canggu's Finns Recreation Club, with ages, prices and tips.",
+    "The best things to do in Bali with kids — Asia's top water park Waterbom, Bali Safari, the Ubud Monkey Forest, Bali Bird Park, jungle ziplines at Bedugul…",
   alternates: { canonical: `${SITE}/bali/with-kids` },
   openGraph: { title: "Bali with Kids | Flyamba", description: "Family-friendly Bali — water parks, wildlife, animals and adventure.", type: "article" },
 };

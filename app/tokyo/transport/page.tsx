@@ -7,9 +7,9 @@ import { CATEGORIES } from "@/app/data/tokyo-places";
 const SITE = "https://flyamba.com";
 
 export const metadata: Metadata = {
-  title: "Getting Around Tokyo 2026 — Metro, JR & Suica Guide | Flyamba",
+  title: "Getting Around Tokyo 2026 — Metro, JR & Suica Guide",
   description:
-    "How to get around Tokyo — Narita Express and Skyliner from the airport, the Suica/Pasmo IC card, the metro and JR Yamanote Line, taxis and the shinkansen, with fares and tips.",
+    "How to get around Tokyo — Narita Express and Skyliner from the airport, the Suica/Pasmo IC card, the metro and JR Yamanote Line, taxis and the…",
   alternates: { canonical: `${SITE}/tokyo/transport` },
   openGraph: { title: "Getting Around Tokyo | Flyamba", description: "Tokyo metro, JR, Suica cards, airport transfers and taxis explained.", type: "article" },
 };

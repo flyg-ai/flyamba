@@ -11,7 +11,7 @@ const PH = "/images/barcelona/placeholder.webp";
 export const metadata: Metadata = {
   title: "Events in Ibiza 2026 — Festivals & Parties | Flyamba",
   description:
-    "Ibiza's events calendar — the club opening and closing parties, Pacha's Flower Power, the Medieval Festival in Dalt Vila, Sant Josep and village fiestas, and more, month by month.",
+    "Ibiza's events calendar — the club opening and closing parties, Pacha's Flower Power, the Medieval Festival in Dalt Vila, Sant Josep and village fiestas…",
   alternates: { canonical: `${SITE}/ibiza/events` },
   openGraph: { title: "Ibiza Events, Festivals & Parties | Flyamba", description: "The opening and closing parties, festivals and fiestas that shape the Ibiza calendar.", type: "article", images: [HERO] },
 };

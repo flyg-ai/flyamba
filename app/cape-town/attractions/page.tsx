@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Things to Do in Cape Town 2026 — Attractions Guide | Flyamba",
   description:
-    "The 18 best things to do in Cape Town — Table Mountain, Robben Island, Cape Point, the Boulders Beach penguins, the V&A Waterfront, Kirstenbosch and more, with prices, hours and insider tips.",
+    "The 18 best things to do in Cape Town — Table Mountain, Robben Island, Cape Point, the Boulders Beach penguins, the V&A Waterfront, Kirstenbosch and…",
   alternates: { canonical: `${SITE}/cape-town/attractions` },
   openGraph: { title: "Best Things to Do in Cape Town | Flyamba", description: "18 top Cape Town attractions with prices, hours and tips.", type: "article" },
 };

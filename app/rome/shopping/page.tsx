@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Rome 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Rome — luxury flagships on Via dei Condotti, high-street Via del Corso, buzzing markets like Porta Portese and Campo de' Fiori, gourmet food halls and department stores, with tips and opening hours.",
+    "Where to shop in Rome — luxury flagships on Via dei Condotti, high-street Via del Corso, buzzing markets like Porta Portese and Campo de' Fiori, gourmet…",
   alternates: { canonical: `${SITE}/rome/shopping` },
   openGraph: { title: "Shopping in Rome | Flyamba", description: "Rome's best shopping streets, markets and food halls with insider tips.", type: "article" },
 };

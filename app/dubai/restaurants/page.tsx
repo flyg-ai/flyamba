@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Restaurants in Dubai 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Dubai — from three-Michelin-star Trèsind Studio and glamorous Nobu, Zuma and Pierchic to legendary cheap eats like Al Ustad kebabs, Bu Qtair fish and the Arabian Tea House, with prices and tips.",
+    "Where to eat in Dubai — from three-Michelin-star Trèsind Studio and glamorous Nobu, Zuma and Pierchic to legendary cheap eats like Al Ustad kebabs, Bu…",
   alternates: { canonical: `${SITE}/dubai/restaurants` },
   openGraph: { title: "Best Restaurants in Dubai | Flyamba", description: "Dubai's top fine dining and cheap local eats with prices and tips.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Bali 2026 — Where to Eat | Flyamba",
   description:
-    "Where to eat in Bali — from acclaimed Locavore and modern-Indonesian Merah Putih to the island's famous babi guling at Ibu Oka, beachfront La Lucciola and iconic Potato Head, with areas, prices and tips.",
+    "Where to eat in Bali — from acclaimed Locavore and modern-Indonesian Merah Putih to the island's famous babi guling at Ibu Oka, beachfront La Lucciola…",
   alternates: { canonical: `${SITE}/bali/restaurants` },
   openGraph: { title: "Best Restaurants in Bali | Flyamba", description: "Bali's best restaurants, from local warungs to fine dining.", type: "article" },
 };

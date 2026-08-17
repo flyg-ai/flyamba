@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Day Trips from Vienna 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Vienna — the UNESCO Wachau Valley and Dürnstein, Mozart's Salzburg, Baroque Melk Abbey, laid-back Bratislava, storybook Hallstatt and the Semmering mountain railway, with train times and tips.",
+    "The best day trips from Vienna — the UNESCO Wachau Valley and Dürnstein, Mozart's Salzburg, Baroque Melk Abbey, laid-back Bratislava, storybook Hallstatt…",
   alternates: { canonical: `${SITE}/vienna/day-trips` },
   openGraph: { title: "Best Day Trips from Vienna | Flyamba", description: "Six great day trips from Vienna, from the Wachau and Melk to Salzburg and Bratislava, with directions.", type: "article" },
 };

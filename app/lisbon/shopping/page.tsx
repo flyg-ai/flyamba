@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/lisbon-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Lisbon 2026 — Best Shops, Markets & Gifts | Flyamba",
+  title: "Shopping in Lisbon 2026 — Best Shops, Markets & Gifts",
   description:
-    "Where to shop in Lisbon — heritage stores like A Vida Portuguesa and Conserveira de Lisboa, the Feira da Ladra flea market, Chiado, LX Factory and the luxury Avenida da Liberdade.",
+    "Where to shop in Lisbon — heritage stores like A Vida Portuguesa and Conserveira de Lisboa, the Feira da Ladra flea market, Chiado, LX Factory and the…",
   alternates: { canonical: `${SITE}/lisbon/shopping` },
   openGraph: { title: "Shopping in Lisbon | Flyamba", description: "Best shops, markets and gifts in Lisbon.", type: "article" },
 };

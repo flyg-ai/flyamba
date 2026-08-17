@@ -9,7 +9,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Bangkok 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Bangkok — the ancient ruins of Ayutthaya, Damnoen Saduak floating market, the Maeklong railway market, Kanchanaburi and Khao Yai, with travel tips.",
+    "The best day trips from Bangkok — the ancient ruins of Ayutthaya, Damnoen Saduak floating market, the Maeklong railway market, Kanchanaburi and Khao Yai…",
   alternates: { canonical: `${SITE}/bangkok/day-trips` },
   openGraph: { title: "Best Day Trips from Bangkok | Flyamba", description: "Ayutthaya, floating markets, Kanchanaburi and more.", type: "article" },
 };

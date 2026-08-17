@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Palma 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Palma de Mallorca — from Michelin tables and Santa Catalina bistros to classic tapas bars, seafood by the port and the island's famous ensaïmada, with prices and tips.",
+    "Where to eat in Palma de Mallorca — from Michelin tables and Santa Catalina bistros to classic tapas bars, seafood by the port and the island's famous…",
   alternates: { canonical: `${SITE}/palma/restaurants` },
   openGraph: { title: "Where to Eat in Palma | Flyamba", description: "The best Palma restaurants, tapas bars and seafood, with prices and tips.", type: "article" },
 };

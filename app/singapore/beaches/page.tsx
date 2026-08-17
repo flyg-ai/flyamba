@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Beaches in Singapore 2026 — Guide | Flyamba",
   description:
-    "The best beaches in Singapore — Sentosa's Palawan, Siloso and Tanjong, the 15 km East Coast Park, laid-back Changi and the undeveloped island escapes of Lazarus and Coney, with facilities and how to get there.",
+    "The best beaches in Singapore — Sentosa's Palawan, Siloso and Tanjong, the 15 km East Coast Park, laid-back Changi and the undeveloped island escapes of…",
   alternates: { canonical: `${SITE}/singapore/beaches` },
   openGraph: { title: "Best Beaches in Singapore | Flyamba", description: "7 top Singapore beaches from Sentosa to hidden island escapes.", type: "article" },
 };

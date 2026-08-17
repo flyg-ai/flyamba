@@ -4,15 +4,15 @@ import { CategorySeoSections } from "@/app/components/CategorySeoSections";
 import type { BcnPlace } from "@/app/data/barcelona-places";
 import { CATEGORIES, REYKJAVIK } from "@/app/data/reykjavik-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 
 const MIN_USD = Math.min(...REYKJAVIK.monthlyPrices.map((m) => usd5(m.price)));
 const MAX_USD = Math.max(...REYKJAVIK.monthlyPrices.map((m) => usd5(m.price)));
 
 export const metadata: Metadata = {
-  title: "Reykjavik Prices 2026 — Flights, Budget & Daily Costs | Flyamba",
-  description:
-    `How much does Reykjavik cost? Flight fares from $${MIN_USD}, plus a full daily-budget breakdown — hotels, food, geothermal spas, tours and transport — for one of Europe's priciest cities, with money-saving tips.`,
+  title: "Reykjavik Prices 2026 — Flights, Budget & Daily Costs",
+  description: clampDescription(`How much does Reykjavik cost? Flight fares from $${MIN_USD}, plus a full daily-budget breakdown — hotels, food, geothermal spas, tours and transport — for one of Europe's priciest cities, with money-saving tips.`),
   alternates: { canonical: `${SITE}/reykjavik/prices` },
   openGraph: { title: "Reykjavik Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to Reykjavik.", type: "article" },
 };

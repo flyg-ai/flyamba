@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Cancún 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Cancún — Caribbean lobster at Lorenzillo's, refined Yucatecan cuisine at La Habichuela, glossy steakhouses, and the authentic taquerías and seafood shacks locals love downtown, with prices and what to order.",
+    "Where to eat in Cancún — Caribbean lobster at Lorenzillo's, refined Yucatecan cuisine at La Habichuela, glossy steakhouses, and the authentic taquerías…",
   alternates: { canonical: `${SITE}/cancun/restaurants` },
   openGraph: { title: "Best Restaurants in Cancún | Flyamba", description: "Cancún's top tables, from lobster houses and Yucatecan classics to local taquerías, with prices and tips.", type: "article" },
 };

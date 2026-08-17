@@ -6,9 +6,9 @@ import { PRAGUE_CATEGORIES } from "@/app/data/prague-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Prague Events 2026 — Festivals, Markets & Things to Do | Flyamba",
+  title: "Prague Events 2026 — Festivals, Markets & Things to Do",
   description:
-    "A calendar of Prague's biggest events and festivals in 2026 — the Prague Spring music festival, Easter and Christmas markets, the Signal light festival, Bohemian Carnevale and more, month by month with tips on when to fly.",
+    "A calendar of Prague's biggest events and festivals in 2026 — the Prague Spring music festival, Easter and Christmas markets, the Signal light festival…",
   alternates: { canonical: `${SITE}/prague/events` },
   openGraph: { title: "Prague Events & Festivals 2026 | Flyamba", description: "Month-by-month Prague events calendar for 2026.", type: "article" },
 };

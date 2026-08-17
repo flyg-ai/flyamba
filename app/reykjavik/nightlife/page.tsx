@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Reykjavik Nightlife 2026 — Best Bars & Clubs Guide | Flyamba",
   description:
-    "Reykjavik after dark — craft-beer bars, the cult Kaffibarinn, live-music clubs like Húrra and Gaukurinn, rooftop cocktails and the legendary weekend rúntur bar-crawl, with areas and tips.",
+    "Reykjavik after dark — craft-beer bars, the cult Kaffibarinn, live-music clubs like Húrra and Gaukurinn, rooftop cocktails and the legendary weekend…",
   alternates: { canonical: `${SITE}/reykjavik/nightlife` },
   openGraph: { title: "Reykjavik Nightlife Guide | Flyamba", description: "Craft beer, live music, hipster bars and the famous rúntur — the best of Reykjavik after dark.", type: "article" },
 };

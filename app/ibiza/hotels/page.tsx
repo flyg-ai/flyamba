@@ -10,7 +10,7 @@ const HERO = "/images/destinations/flights-ibiza.avif";
 export const metadata: Metadata = {
   title: "Hotels in Ibiza 2026 — Where to Stay | Flyamba",
   description:
-    "Where to stay in Ibiza — from the wellness luxury of Six Senses and Nobu Ibiza Bay to the historic Gran Hotel Montesol, the sunset Hostal La Torre and rural boutique retreats.",
+    "Where to stay in Ibiza — from the wellness luxury of Six Senses and Nobu Ibiza Bay to the historic Gran Hotel Montesol, the sunset Hostal La Torre and…",
   alternates: { canonical: `${SITE}/ibiza/hotels` },
   openGraph: { title: "Best Hotels in Ibiza | Flyamba", description: "Where to stay on the White Isle, by area and budget.", type: "article", images: [HERO] },
 };

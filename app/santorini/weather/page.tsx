@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Santorini Weather 2026 — Best Time to Visit Guide | Flyamba",
   description:
-    "Santorini weather month by month — warm dry summers, the famous meltemi wind, mild springs and autumns, and a quiet, breezy winter when much of the island closes. When to visit and what to pack.",
+    "Santorini weather month by month — warm dry summers, the famous meltemi wind, mild springs and autumns, and a quiet, breezy winter when much of the…",
   alternates: { canonical: `${SITE}/santorini/weather` },
   openGraph: { title: "Santorini Weather & Best Time to Visit | Flyamba", description: "Season-by-season Santorini climate guide and the best months to go.", type: "article" },
 };

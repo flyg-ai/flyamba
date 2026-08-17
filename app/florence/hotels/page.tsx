@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Hotels in Florence 2026 — Guide | Flyamba",
   description:
-    "Where to stay in Florence — the best areas and hotels, from Renaissance-palace luxury and Ferragamo boutiques to central four-stars and budget guesthouses, with prices and neighbourhood advice.",
+    "Where to stay in Florence — the best areas and hotels, from Renaissance-palace luxury and Ferragamo boutiques to central four-stars and budget…",
   alternates: { canonical: `${SITE}/florence/hotels` },
   openGraph: { title: "Where to Stay in Florence | Flyamba", description: "The best Florence hotels and neighbourhoods with prices and tips.", type: "article" },
 };

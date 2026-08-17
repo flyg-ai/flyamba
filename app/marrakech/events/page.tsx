@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Marrakech Events & Festivals 2026 — Guide | Flyamba",
   description:
-    "Marrakech's biggest events and festivals — the December International Film Festival, Ramadan and Eid, the Marrakech du Rire comedy festival, the Rose Festival and the January marathon.",
+    "Marrakech's biggest events and festivals — the December International Film Festival, Ramadan and Eid, the Marrakech du Rire comedy festival, the Rose…",
   alternates: { canonical: `${SITE}/marrakech/events` },
   openGraph: { title: "Marrakech Events & Festivals | Flyamba", description: "The film festival, Ramadan, comedy, the Rose Festival and the marathon, month by month.", type: "article" },
 };

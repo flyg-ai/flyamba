@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Transport in Phuket 2026 — Getting Around Guide | Flyamba",
   description:
-    "How to get around Phuket — from the airport to the beaches, the Grab app, the island's pricey taxis and tuk-tuks, cheap songthaew buses, scooter rental and safety, car hire, and the ferries and speedboats to the islands, with baht prices.",
+    "How to get around Phuket — from the airport to the beaches, the Grab app, the island's pricey taxis and tuk-tuks, cheap songthaew buses, scooter rental…",
   alternates: { canonical: `${SITE}/phuket/transport` },
   openGraph: { title: "Getting Around Phuket | Flyamba", description: "Phuket transport explained: airport transfers, Grab, taxis, songthaews, scooters and island boats, with prices.", type: "article" },
 };

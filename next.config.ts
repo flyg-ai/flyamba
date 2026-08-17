@@ -24,6 +24,11 @@ const SLUG_REDIRECTS: { from: string; to: string }[] = [
   { from: "kapstaden", to: "cape-town" },
   { from: "kairo", to: "cairo" },
   { from: "goteborg", to: "gothenburg" },
+  // These two were duplicate catalog entries for the same place under both a
+  // Swedish and an English slug, so they shipped two pages with identical
+  // titles. The Swedish entries are gone from the catalog; redirect their URLs.
+  { from: "gent", to: "ghent" },
+  { from: "kapverde", to: "cape-verde" },
 ];
 
 const nextConfig: NextConfig = {

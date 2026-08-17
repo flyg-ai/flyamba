@@ -6,9 +6,9 @@ import { DAY_TRIPS, CATEGORIES } from "@/app/data/madrid-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Best Day Trips from Madrid 2026 — Toledo, Segovia & More | Flyamba",
+  title: "Best Day Trips from Madrid 2026 — Toledo, Segovia & More",
   description:
-    "The best day trips from Madrid — UNESCO Toledo (33 min by train), Segovia's Roman aqueduct, El Escorial, walled Ávila, cliff-top Cuenca, Aranjuez's gardens, Alcalá de Henares and Chinchón.",
+    "The best day trips from Madrid — UNESCO Toledo (33 min by train), Segovia's Roman aqueduct, El Escorial, walled Ávila, cliff-top Cuenca, Aranjuez's…",
   alternates: { canonical: `${SITE}/madrid/day-trips` },
   openGraph: { title: "Best Day Trips from Madrid | Flyamba", description: "8 unmissable day trips from Madrid by train and road.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Hotels in Vienna 2026 — Guide | Flyamba",
   description:
-    "The best hotels in Vienna for every budget — grand palace five-stars like the Sacher and Imperial, design boutiques, the Park Hyatt in the old town and top budget stays, with areas, prices and tips.",
+    "The best hotels in Vienna for every budget — grand palace five-stars like the Sacher and Imperial, design boutiques, the Park Hyatt in the old town and…",
   alternates: { canonical: `${SITE}/vienna/hotels` },
   openGraph: { title: "Best Hotels in Vienna | Flyamba", description: "Where to stay in Vienna, from palace luxury to budget, with prices and neighbourhood tips.", type: "article" },
 };

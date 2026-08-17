@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Mykonos with Kids 2026 — Family Things to Do | Flyamba",
   description:
-    "The best family things to do in Mykonos — the island waterpark, a boat trip to ancient Delos, exploring Chora's maze, ATV and sailing adventures, a farm visit and the calm family beaches of Ornos and Platys Gialos.",
+    "The best family things to do in Mykonos — the island waterpark, a boat trip to ancient Delos, exploring Chora's maze, ATV and sailing adventures, a farm…",
   alternates: { canonical: `${SITE}/mykonos/with-kids` },
   openGraph: { title: "Mykonos with Kids | Flyamba", description: "8 family-friendly things to do in Mykonos, with ages, prices and tips.", type: "article" },
 };

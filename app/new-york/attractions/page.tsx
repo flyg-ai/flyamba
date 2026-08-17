@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in New York 2026 — Visitor Guide | Flyamba",
   description:
-    "The 20 best things to do in New York — the Statue of Liberty, Empire State Building, Central Park, the Met, MoMA, the Brooklyn Bridge and more, with prices, opening hours and insider tips.",
+    "The 20 best things to do in New York — the Statue of Liberty, Empire State Building, Central Park, the Met, MoMA, the Brooklyn Bridge and more, with…",
   alternates: { canonical: `${SITE}/new-york/attractions` },
   openGraph: { title: "Best Things to Do in New York | Flyamba", description: "20 top New York attractions with prices, hours and tips.", type: "article" },
 };

@@ -8,6 +8,7 @@ import { FlightCTA } from "@/app/components/FlightCTA";
 import { SmartImage } from "@/app/components/SmartImage";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5, usdStr } from "@/app/lib/format";
 import { CATEGORIES } from "@/app/data/cancun-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
@@ -113,8 +114,8 @@ const FAQ = [
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Cancún ${year} — Guide, Prices & Beaches | Flyamba`;
-  const description = `Find cheap flights to Cancún, Mexico from ${usdStr(LOWEST_SEK)}. Compare fares, plus complete English guides to beaches, Mayan ruins, attractions, restaurants, all-inclusive hotels, transport, weather, nightlife, family travel and day trips.`;
+  const title = clampTitle(`Cheap Flights to Cancún ${year} — Guide, Prices & Beaches | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Cancún, Mexico from ${usdStr(LOWEST_SEK)}. Compare fares, plus complete English guides to beaches, Mayan ruins, attractions, restaurants, all-inclusive hotels, transport, weather, nightlife, family travel and day trips.`);
   const canonical = `${SITE}/cancun`;
   return {
     title,

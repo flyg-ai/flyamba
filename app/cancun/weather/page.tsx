@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Cancún Weather 2026 — Best Time to Visit | Flyamba",
   description:
-    "Cancún's weather season by season — the sunny dry high season, the value-packed shoulder months, the hot wet-and-hurricane low season and the sargassum seaweed season — with temperatures, what to pack and the best time to visit.",
+    "Cancún's weather season by season — the sunny dry high season, the value-packed shoulder months, the hot wet-and-hurricane low season and the sargassum…",
   alternates: { canonical: `${SITE}/cancun/weather` },
   openGraph: { title: "Cancún Weather & Best Time to Visit | Flyamba", description: "Cancún's tropical climate season by season, with temperatures, seaweed and hurricane notes, and the ideal time to go.", type: "article" },
 };

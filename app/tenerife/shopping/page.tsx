@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Tenerife 2026 — Malls, Markets & Duty-Free | Flyamba",
+  title: "Shopping in Tenerife 2026 — Malls, Markets & Duty-Free",
   description:
-    "Where to shop in Tenerife: the big southern malls, luxury boutiques at Plaza del Duque, the capital's shopping streets and food markets, and duty-friendly deals thanks to the Canaries' low taxes.",
+    "Where to shop in Tenerife: the big southern malls, luxury boutiques at Plaza del Duque, the capital's shopping streets and food markets, and…",
   alternates: { canonical: `${SITE}/tenerife/shopping` },
   openGraph: { title: "Shopping in Tenerife | Flyamba", description: "Malls, markets, luxury boutiques and Canarian crafts.", type: "article" },
 };

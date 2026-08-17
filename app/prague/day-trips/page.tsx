@@ -6,9 +6,9 @@ import { DAY_TRIPS, PRAGUE_CATEGORIES } from "@/app/data/prague-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Best Day Trips from Prague 2026 — Castles, Towns & More | Flyamba",
+  title: "Best Day Trips from Prague 2026 — Castles, Towns & More",
   description:
-    "The best day trips from Prague — the bone church at Kutná Hora, fairytale Český Krumlov, Karlštejn Castle, the moving Terezín memorial, spa-town Karlovy Vary and cross-border Dresden, with travel times and tips.",
+    "The best day trips from Prague — the bone church at Kutná Hora, fairytale Český Krumlov, Karlštejn Castle, the moving Terezín memorial, spa-town Karlovy…",
   alternates: { canonical: `${SITE}/prague/day-trips` },
   openGraph: { title: "Best Day Trips from Prague | Flyamba", description: "6 top day trips from Prague with travel times and tips.", type: "article" },
 };

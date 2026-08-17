@@ -5,9 +5,9 @@ import { TRANSPORT, CATEGORIES } from "@/app/data/tenerife-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Getting Around Tenerife 2026 — Buses, Cars, Taxis & Ferries | Flyamba",
+  title: "Getting Around Tenerife 2026 — Buses, Cars, Taxis & Ferries",
   description:
-    "How to get around Tenerife: the two airports (TFS and TFN), the cheap TITSA bus network and Ten+ card, hiring a car, the northern tram, taxis and ferries to the other Canary Islands — with prices and tips.",
+    "How to get around Tenerife: the two airports (TFS and TFN), the cheap TITSA bus network and Ten+ card, hiring a car, the northern tram, taxis and ferries…",
   alternates: { canonical: `${SITE}/tenerife/transport` },
   openGraph: { title: "Getting Around Tenerife | Flyamba", description: "Airports, TITSA buses, hire cars, trams, taxis and ferries.", type: "article" },
 };

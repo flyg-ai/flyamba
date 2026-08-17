@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Dubai with Kids 2026 — Family Guide | Flyamba",
   description:
-    "The best things to do in Dubai with children — the Aquaventure and Wild Wadi water parks, the Dubai Aquarium, KidZania, The Green Planet rainforest, Ski Dubai's snow park, Legoland and more, with ages, prices and tips.",
+    "The best things to do in Dubai with children — the Aquaventure and Wild Wadi water parks, the Dubai Aquarium, KidZania, The Green Planet rainforest, Ski…",
   alternates: { canonical: `${SITE}/dubai/with-kids` },
   openGraph: { title: "Dubai with Kids | Flyamba", description: "Family-friendly Dubai: water parks, aquariums, indoor play and theme parks, with ages and prices.", type: "article" },
 };

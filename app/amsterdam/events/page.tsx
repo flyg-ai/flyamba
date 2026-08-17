@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/amsterdam-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Amsterdam Events 2026 — Festivals & What's On by Month | Flyamba",
+  title: "Amsterdam Events 2026 — Festivals & What's On by Month",
   description:
-    "Amsterdam's best events month by month — King's Day, tulip season and Keukenhof, Pride and the Canal Parade, Amsterdam Dance Event, the Light Festival and more, with dates and tips.",
+    "Amsterdam's best events month by month — King's Day, tulip season and Keukenhof, Pride and the Canal Parade, Amsterdam Dance Event, the Light Festival…",
   alternates: { canonical: `${SITE}/amsterdam/events` },
   openGraph: { title: "Amsterdam Events & Festivals | Flyamba", description: "King's Day, Pride, ADE, the Light Festival and the year's best events in Amsterdam.", type: "article" },
 };

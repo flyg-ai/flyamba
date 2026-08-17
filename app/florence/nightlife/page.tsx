@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Nightlife in Florence 2026 — Guide | Flyamba",
   description:
-    "Florence after dark — the best wine bars and aperitivo spots, rooftop cocktail bars over the Ponte Vecchio, hidden speakeasies and the buzzing squares of the Oltrarno, with areas, prices and tips.",
+    "Florence after dark — the best wine bars and aperitivo spots, rooftop cocktail bars over the Ponte Vecchio, hidden speakeasies and the buzzing squares of…",
   alternates: { canonical: `${SITE}/florence/nightlife` },
   openGraph: { title: "Florence Nightlife | Flyamba", description: "Wine bars, rooftops, cocktails and the Oltrarno scene, with tips.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Beaches in Bali 2026 — Beach Guide | Flyamba",
   description:
-    "The best beaches in Bali — calm, family-friendly Nusa Dua, Seminyak's sunset beach clubs, the seafood sands of Jimbaran Bay, hidden Bias Tugel and the T-Rex cliff of Kelingking, with facilities and tips.",
+    "The best beaches in Bali — calm, family-friendly Nusa Dua, Seminyak's sunset beach clubs, the seafood sands of Jimbaran Bay, hidden Bias Tugel and the…",
   alternates: { canonical: `${SITE}/bali/beaches` },
   openGraph: { title: "Best Beaches in Bali | Flyamba", description: "Bali's best beaches, from calm family sands to surf and sunset clubs.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from New York 2026 — Guide | Flyamba",
   description:
-    "The best day trips from New York — historic Philadelphia, the glamorous Hamptons, the scenic Hudson Valley, Storm King sculpture park, Sleepy Hollow and Niagara Falls, with travel times and tips.",
+    "The best day trips from New York — historic Philadelphia, the glamorous Hamptons, the scenic Hudson Valley, Storm King sculpture park, Sleepy Hollow and…",
   alternates: { canonical: `${SITE}/new-york/day-trips` },
   openGraph: { title: "Day Trips from New York | Flyamba", description: "History, beaches, art and river valleys — the best day trips from New York.", type: "article" },
 };

@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Transport in Vienna 2026 — Getting Around Guide | Flyamba",
   description:
-    "How to get around Vienna — the S7 and CAT trains from the airport, the five-line U-Bahn metro, trams and buses, tickets and the Vienna City Card, and taxis, with real routes, prices and practical tips.",
+    "How to get around Vienna — the S7 and CAT trains from the airport, the five-line U-Bahn metro, trams and buses, tickets and the Vienna City Card, and…",
   alternates: { canonical: `${SITE}/vienna/transport` },
   openGraph: { title: "Getting Around Vienna | Flyamba", description: "Vienna transport explained: airport trains, metro, trams, tickets and taxis, with prices.", type: "article" },
 };

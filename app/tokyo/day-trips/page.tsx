@@ -7,9 +7,9 @@ import { DAY_TRIPS, CATEGORIES } from "@/app/data/tokyo-places";
 const SITE = "https://flyamba.com";
 
 export const metadata: Metadata = {
-  title: "Best Day Trips from Tokyo 2026 — Fuji, Kamakura & Nikko | Flyamba",
+  title: "Best Day Trips from Tokyo 2026 — Fuji, Kamakura & Nikko",
   description:
-    "The best day trips from Tokyo — Hakone and Mount Fuji, the temples of Kamakura and Nikko, cosmopolitan Yokohama, old-town Kawagoe and Lake Kawaguchiko, with travel times and tips.",
+    "The best day trips from Tokyo — Hakone and Mount Fuji, the temples of Kamakura and Nikko, cosmopolitan Yokohama, old-town Kawagoe and Lake Kawaguchiko…",
   alternates: { canonical: `${SITE}/tokyo/day-trips` },
   openGraph: { title: "Best Day Trips from Tokyo | Flyamba", description: "Mount Fuji, Kamakura, Nikko, Yokohama and more.", type: "article" },
 };

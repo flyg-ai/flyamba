@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Dubai 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Dubai — the record-breaking Dubai Mall and Mall of the Emirates, the historic Gold and Spice Souks, the themed Ibn Battuta Mall, the modern Souk Madinat Jumeirah and designer outlets, with tips and hours.",
+    "Where to shop in Dubai — the record-breaking Dubai Mall and Mall of the Emirates, the historic Gold and Spice Souks, the themed Ibn Battuta Mall, the…",
   alternates: { canonical: `${SITE}/dubai/shopping` },
   openGraph: { title: "Shopping in Dubai | Flyamba", description: "Dubai's best malls, souks and markets with insider tips.", type: "article" },
 };

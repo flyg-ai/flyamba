@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Top Attractions in Reykjavik 2026 — Visitor Guide | Flyamba",
   description:
-    "The 20 best things to do in Reykjavik — Hallgrímskirkja, Harpa, Perlan, the Sun Voyager, Sky Lagoon, the National Museum and more, with prices, opening hours and insider tips.",
+    "The 20 best things to do in Reykjavik — Hallgrímskirkja, Harpa, Perlan, the Sun Voyager, Sky Lagoon, the National Museum and more, with prices, opening…",
   alternates: { canonical: `${SITE}/reykjavik/attractions` },
   openGraph: { title: "Best Things to Do in Reykjavik | Flyamba", description: "20 top Reykjavik attractions with prices, hours and tips.", type: "article" },
 };

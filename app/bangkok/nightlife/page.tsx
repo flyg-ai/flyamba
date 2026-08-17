@@ -7,9 +7,9 @@ import { BANGKOK_CATEGORIES } from "@/app/lib/bangkok";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Bangkok Nightlife 2026 — Rooftop Bars, Clubs & Speakeasies | Flyamba",
+  title: "Bangkok Nightlife 2026 — Rooftop Bars, Clubs & Speakeasies",
   description:
-    "The best of Bangkok after dark — sky-high rooftop bars like Sky Bar and Vertigo, hidden speakeasies, live jazz and Thong Lo clubs, with dress codes, prices and tips.",
+    "The best of Bangkok after dark — sky-high rooftop bars like Sky Bar and Vertigo, hidden speakeasies, live jazz and Thong Lo clubs, with dress codes…",
   alternates: { canonical: `${SITE}/bangkok/nightlife` },
   openGraph: { title: "Best Nightlife in Bangkok | Flyamba", description: "Rooftop bars, speakeasies, live music and clubs.", type: "article" },
 };

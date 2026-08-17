@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Athens 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Athens — Cape Sounion's clifftop Temple of Poseidon, the oracle at Delphi, Mycenae, Epidaurus and Nafplio, car-free Hydra island, the monasteries of Meteora and the Corinth Canal, with distances and how to get there.",
+    "The best day trips from Athens — Cape Sounion's clifftop Temple of Poseidon, the oracle at Delphi, Mycenae, Epidaurus and Nafplio, car-free Hydra island…",
   alternates: { canonical: `${SITE}/athens/day-trips` },
   openGraph: { title: "Day Trips from Athens | Flyamba", description: "Sounion, Delphi, Nafplio, Hydra, Meteora and Corinth.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Hotels in Barcelona 2026 — Where to Stay | Flyamba",
   description:
-    "Where to stay in Barcelona — beachfront luxury towers, boutique townhouses, design hotels and great-value stays, by neighborhood and budget, with rates and areas.",
+    "Where to stay in Barcelona — beachfront luxury towers, boutique townhouses, design hotels and great-value stays, by neighborhood and budget, with rates…",
   alternates: { canonical: `${SITE}/barcelona/hotels` },
   openGraph: { title: "Where to Stay in Barcelona | Flyamba", description: "Barcelona neighborhoods and hotels by budget.", type: "article" },
 };

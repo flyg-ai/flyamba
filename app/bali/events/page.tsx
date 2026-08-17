@@ -6,9 +6,9 @@ import { CATEGORIES } from "@/app/data/bali-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Bali Events & Festivals 2026 — Ceremonies & Things to Do | Flyamba",
+  title: "Bali Events & Festivals 2026 — Ceremonies & Things to Do",
   description:
-    "Bali's calendar of Hindu ceremonies and cultural festivals — Nyepi (the Day of Silence), Galungan, the Bali Arts Festival, BaliSpirit, the Ubud Writers Festival and more — month by month, with tips on timing your trip.",
+    "Bali's calendar of Hindu ceremonies and cultural festivals — Nyepi (the Day of Silence), Galungan, the Bali Arts Festival, BaliSpirit, the Ubud Writers…",
   alternates: { canonical: `${SITE}/bali/events` },
   openGraph: { title: "Bali Events & Festivals | Flyamba", description: "Nyepi, Galungan, the Bali Arts Festival and more — Bali's ceremony and festival calendar.", type: "article" },
 };

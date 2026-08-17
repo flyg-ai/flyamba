@@ -6,9 +6,9 @@ import { SHOPPING, CATEGORIES } from "@/app/data/madrid-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Shopping in Madrid 2026 — Markets, Boutiques & Malls | Flyamba",
+  title: "Shopping in Madrid 2026 — Markets, Boutiques & Malls",
   description:
-    "Where to shop in Madrid — the El Rastro Sunday flea market, indie fashion in Chueca and Malasaña, the El Corte Inglés flagship, Mercado de Motores design market and the boutiques of Salamanca.",
+    "Where to shop in Madrid — the El Rastro Sunday flea market, indie fashion in Chueca and Malasaña, the El Corte Inglés flagship, Mercado de Motores design…",
   alternates: { canonical: `${SITE}/madrid/shopping` },
   openGraph: { title: "Shopping in Madrid | Flyamba", description: "Madrid's best markets, boutiques and department stores.", type: "article" },
 };

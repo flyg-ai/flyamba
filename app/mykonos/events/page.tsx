@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Mykonos Events & Party Calendar 2026 — What's On | Flyamba",
   description:
-    "Mykonos's event calendar — the summer club season with opening and closing parties, the XLSIOR festival, Greek Orthodox Easter, the August 15 Panigiri saint's-day festivals and more, with the best months to visit.",
+    "Mykonos's event calendar — the summer club season with opening and closing parties, the XLSIOR festival, Greek Orthodox Easter, the August 15 Panigiri…",
   alternates: { canonical: `${SITE}/mykonos/events` },
   openGraph: { title: "Mykonos Events & Party Calendar | Flyamba", description: "Club season, XLSIOR, Easter and the August festivals — Mykonos's event calendar.", type: "article" },
 };

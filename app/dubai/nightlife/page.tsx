@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Nightlife in Dubai 2026 — Bars & Clubs Guide | Flyamba",
   description:
-    "Where to go out in Dubai — the White mega-club, Zero Gravity and Barasti beach clubs, sky-high rooftop bars with Burj Khalifa views, the Vegas-style Drai's and The Act, plus laid-back pubs, with prices and tips.",
+    "Where to go out in Dubai — the White mega-club, Zero Gravity and Barasti beach clubs, sky-high rooftop bars with Burj Khalifa views, the Vegas-style…",
   alternates: { canonical: `${SITE}/dubai/nightlife` },
   openGraph: { title: "Dubai Nightlife Guide | Flyamba", description: "Dubai's best clubs, rooftop bars, beach clubs and pubs with prices and tips.", type: "article" },
 };

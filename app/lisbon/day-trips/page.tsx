@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Lisbon 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Lisbon — fairytale Sintra, coastal Cascais, medieval Óbidos, the beaches of Setúbal & Arrábida, UNESCO Évora and the Fátima sanctuary, with how to get there by train and bus.",
+    "The best day trips from Lisbon — fairytale Sintra, coastal Cascais, medieval Óbidos, the beaches of Setúbal & Arrábida, UNESCO Évora and the Fátima…",
   alternates: { canonical: `${SITE}/lisbon/day-trips` },
   openGraph: { title: "Best Day Trips from Lisbon | Flyamba", description: "Sintra, Cascais, Óbidos, Évora and more from Lisbon.", type: "article" },
 };

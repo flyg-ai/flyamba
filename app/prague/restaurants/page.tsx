@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Prague 2026 — Where to Eat | Flyamba",
   description:
-    "Where to eat in Prague — from Michelin-starred Field and La Degustation to classic beer-hall Czech cooking at Lokál, grand cafés and buzzing food halls, with prices, hours and tips.",
+    "Where to eat in Prague — from Michelin-starred Field and La Degustation to classic beer-hall Czech cooking at Lokál, grand cafés and buzzing food halls…",
   alternates: { canonical: `${SITE}/prague/restaurants` },
   openGraph: { title: "Best Restaurants in Prague | Flyamba", description: "10 top Prague restaurants from Michelin stars to beer halls.", type: "article" },
 };

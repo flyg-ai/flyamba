@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Stay in Athens 2026 — Best Hotels Guide | Flyamba",
   description:
-    "The best hotels in Athens by neighbourhood and budget — from grand five-stars and Acropolis-view rooftop pools to design boutiques and stylish budget hostels, with prices and tips.",
+    "The best hotels in Athens by neighbourhood and budget — from grand five-stars and Acropolis-view rooftop pools to design boutiques and stylish budget…",
   alternates: { canonical: `${SITE}/athens/hotels` },
   openGraph: { title: "Best Hotels in Athens | Flyamba", description: "Where to stay in Athens, from luxury to budget.", type: "article" },
 };

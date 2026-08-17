@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Restaurants in Rome 2026 — Guide | Flyamba",
   description:
-    "Where to eat in Rome — the finest trattorias for carbonara and cacio e pepe, classic pizzerias, seafood and fine dining, from Roscioli and Armando al Pantheon to La Pergola, with prices and tips.",
+    "Where to eat in Rome — the finest trattorias for carbonara and cacio e pepe, classic pizzerias, seafood and fine dining, from Roscioli and Armando al…",
   alternates: { canonical: `${SITE}/rome/restaurants` },
   openGraph: { title: "Best Restaurants in Rome | Flyamba", description: "Rome's top trattorias, pizzerias and fine dining with prices and tips.", type: "article" },
 };

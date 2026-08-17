@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Where to Stay in Lisbon 2026 — Best Hotels & Areas | Flyamba",
   description:
-    "The best hotels in Lisbon for every budget — from the Four Seasons Ritz and Lapa Palace to Alfama boutique stays and the Generator design hostel, with prices, areas and tips.",
+    "The best hotels in Lisbon for every budget — from the Four Seasons Ritz and Lapa Palace to Alfama boutique stays and the Generator design hostel, with…",
   alternates: { canonical: `${SITE}/lisbon/hotels` },
   openGraph: { title: "Best Hotels in Lisbon | Flyamba", description: "Where to stay in Lisbon, from palace hotels to design hostels.", type: "article" },
 };

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Day Trips from Cancún 2026 — Guide | Flyamba",
   description:
-    "The best day trips from Cancún — the Wonder-of-the-World Chichén Itzá, the ruins of Tulum and Cobá, the islands of Isla Mujeres and Cozumel, colonial Valladolid and its cenotes, and lively Playa del Carmen, with travel times and tips.",
+    "The best day trips from Cancún — the Wonder-of-the-World Chichén Itzá, the ruins of Tulum and Cobá, the islands of Isla Mujeres and Cozumel, colonial…",
   alternates: { canonical: `${SITE}/cancun/day-trips` },
   openGraph: { title: "Best Day Trips from Cancún | Flyamba", description: "Six great day trips from Cancún, from Chichén Itzá and Tulum to Isla Mujeres and Cozumel, with directions.", type: "article" },
 };

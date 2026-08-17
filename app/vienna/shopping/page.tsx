@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Vienna 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Vienna — luxury flagships on Kohlmarkt and the Graben, high-street Kärntner and Mariahilfer Strasse, the Naschmarkt and its Saturday flea market, and historic gourmet and craft shops, with tips and hours.",
+    "Where to shop in Vienna — luxury flagships on Kohlmarkt and the Graben, high-street Kärntner and Mariahilfer Strasse, the Naschmarkt and its Saturday…",
   alternates: { canonical: `${SITE}/vienna/shopping` },
   openGraph: { title: "Shopping in Vienna | Flyamba", description: "Vienna's best shopping streets, markets and historic shops with insider tips.", type: "article" },
 };

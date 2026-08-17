@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Athens Events & Festivals 2026 — What's On | Flyamba",
   description:
-    "A guide to Athens events and festivals in 2026 — the Athens Epidaurus Festival, Greek Orthodox Easter, the Athens Marathon, Ohi Day, Carnival (Apokries), the August Full Moon and Christmas — with dates and tips on when to fly.",
+    "A guide to Athens events and festivals in 2026 — the Athens Epidaurus Festival, Greek Orthodox Easter, the Athens Marathon, Ohi Day, Carnival (Apokries)…",
   alternates: { canonical: `${SITE}/athens/events` },
   openGraph: { title: "Athens Events & Festivals 2026 | Flyamba", description: "The best festivals and events in Athens, month by month.", type: "article" },
 };

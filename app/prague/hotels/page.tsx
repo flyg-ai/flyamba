@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Best Hotels in Prague 2026 — Where to Stay | Flyamba",
   description:
-    "Where to stay in Prague — from riverside luxury at the Four Seasons and a monastery-set Mandarin Oriental to characterful boutiques and great-value design stays, with nightly prices and area tips.",
+    "Where to stay in Prague — from riverside luxury at the Four Seasons and a monastery-set Mandarin Oriental to characterful boutiques and great-value…",
   alternates: { canonical: `${SITE}/prague/hotels` },
   openGraph: { title: "Best Hotels in Prague | Flyamba", description: "8 top Prague hotels from five-star luxury to budget boutiques.", type: "article" },
 };

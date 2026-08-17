@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Lisbon Weather & Best Time to Visit 2026 — Guide | Flyamba",
   description:
-    "When to visit Lisbon — a season-by-season guide to Europe's sunniest capital, with temperatures, rainfall, sea conditions, crowds, flight prices and what to pack.",
+    "When to visit Lisbon — a season-by-season guide to Europe's sunniest capital, with temperatures, rainfall, sea conditions, crowds, flight prices and what…",
   alternates: { canonical: `${SITE}/lisbon/weather` },
   openGraph: { title: "Lisbon Weather & Best Time to Visit | Flyamba", description: "Season-by-season weather and the best time to visit Lisbon.", type: "article" },
 };

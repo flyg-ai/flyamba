@@ -8,6 +8,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { MYKONOS, CATEGORIES } from "@/app/data/mykonos-places";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 
@@ -18,8 +19,8 @@ const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Mykonos ${year} — Guide, Prices & Attractions | Flyamba`;
-  const description = `Find cheap flights to Mykonos, Greece from $${MIN_USD}, plus complete English guides to attractions, beaches, restaurants, hotels, nightlife, transport, weather, shopping, family travel and day trips. Whitewashed lanes, iconic windmills and legendary Aegean nightlife.`;
+  const title = clampTitle(`Cheap Flights to Mykonos ${year} — Guide, Prices & Attractions | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Mykonos, Greece from $${MIN_USD}, plus complete English guides to attractions, beaches, restaurants, hotels, nightlife, transport, weather, shopping, family travel and day trips. Whitewashed lanes, iconic windmills and legendary Aegean nightlife.`);
   const canonical = `${SITE}/mykonos`;
   return {
     title,

@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Cape Town Nightlife 2026 — Best Bars & Clubs Guide | Flyamba",
   description:
-    "The best of Cape Town's nightlife — Bree Street cocktail bars, hidden gin speakeasies, Long Street clubs, glamorous beach clubs and cool indie hangouts, with areas, prices and tips.",
+    "The best of Cape Town's nightlife — Bree Street cocktail bars, hidden gin speakeasies, Long Street clubs, glamorous beach clubs and cool indie hangouts…",
   alternates: { canonical: `${SITE}/cape-town/nightlife` },
   openGraph: { title: "Best Bars & Clubs in Cape Town | Flyamba", description: "Cocktail bars, gin speakeasies, clubs and beach clubs — Cape Town after dark.", type: "article" },
 };

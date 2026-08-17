@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Bangkok Events & Festivals 2026 — What's On | Flyamba",
   description:
-    "Bangkok's festivals and events through the year — Songkran water fights, Loy Krathong, Chinese New Year in Yaowarat, the Vegetarian Festival and the New Year countdown.",
+    "Bangkok's festivals and events through the year — Songkran water fights, Loy Krathong, Chinese New Year in Yaowarat, the Vegetarian Festival and the New…",
   alternates: { canonical: `${SITE}/bangkok/events` },
   openGraph: { title: "Bangkok Events & Festivals | Flyamba", description: "Songkran, Loy Krathong and festivals all year.", type: "article" },
 };

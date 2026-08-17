@@ -10,7 +10,7 @@ const HERO = "/images/destinations/flights-ibiza.avif";
 export const metadata: Metadata = {
   title: "Restaurants in Ibiza 2026 — Where to Eat | Flyamba",
   description:
-    "Where to eat in Ibiza — Michelin-starred La Gaia, Es Tragón and Etxeko, chic beach lunches at Casa Jondal and Amante, and traditional Ibicenco cooking, with prices and tips.",
+    "Where to eat in Ibiza — Michelin-starred La Gaia, Es Tragón and Etxeko, chic beach lunches at Casa Jondal and Amante, and traditional Ibicenco cooking…",
   alternates: { canonical: `${SITE}/ibiza/restaurants` },
   openGraph: { title: "Best Restaurants in Ibiza | Flyamba", description: "From Michelin stars to beachfront seafood, where to eat on the White Isle.", type: "article", images: [HERO] },
 };

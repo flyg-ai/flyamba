@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Shopping in Dubrovnik 2026 — Guide | Flyamba",
   description:
-    "Where to shop in Dubrovnik — the Stradun lanes, the Gundulić morning market, gourmet olive oil and truffles at Uje, curated Croatian design at Kawa, traditional filigree jewellery and the historic Ronchi hat atelier, with tips.",
+    "Where to shop in Dubrovnik — the Stradun lanes, the Gundulić morning market, gourmet olive oil and truffles at Uje, curated Croatian design at Kawa…",
   alternates: { canonical: `${SITE}/dubrovnik/shopping` },
   openGraph: { title: "Shopping in Dubrovnik | Flyamba", description: "The best shopping in Dubrovnik: markets, gourmet food, filigree jewellery and Croatian design.", type: "article" },
 };

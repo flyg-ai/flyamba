@@ -7,7 +7,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Getting Around Cancún 2026 — Transport Guide | Flyamba",
   description:
-    "How to get around Cancún — the airport transfer, the cheap R-1 Hotel Zone bus, ADO coaches and colectivos across the Yucatán, taxis and ride-hailing, ferries to Isla Mujeres and Cozumel, and car rental, with real prices and tips.",
+    "How to get around Cancún — the airport transfer, the cheap R-1 Hotel Zone bus, ADO coaches and colectivos across the Yucatán, taxis and ride-hailing…",
   alternates: { canonical: `${SITE}/cancun/transport` },
   openGraph: { title: "Getting Around Cancún | Flyamba", description: "Cancún transport explained: airport transfers, the R-1 bus, ADO coaches, taxis, ferries and car hire, with prices.", type: "article" },
 };

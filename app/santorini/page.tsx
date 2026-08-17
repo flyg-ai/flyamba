@@ -7,6 +7,7 @@ import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { SITE } from "@/app/lib/destination-helpers";
+import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { SANTORINI, MONTHS, SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { ATTRACTIONS, RESTAURANTS, BEACHES } from "@/app/data/santorini-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
@@ -24,8 +25,8 @@ const maxPrice = Math.max(...priced.map((m) => m.price));
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = `Cheap Flights to Santorini ${year} — Guide, Prices & Sunsets | Flyamba`;
-  const description = `Find cheap flights to Santorini, Greece from $${minPrice} round-trip. Compare seasonal fares to Thira (JTR), plus complete English guides to Oia, the caldera, restaurants, cave hotels, beaches, nightlife, wineries and island day trips.`;
+  const title = clampTitle(`Cheap Flights to Santorini ${year} — Guide, Prices & Sunsets | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Santorini, Greece from $${minPrice} round-trip. Compare seasonal fares to Thira (JTR), plus complete English guides to Oia, the caldera, restaurants, cave hotels, beaches, nightlife, wineries and island day trips.`);
   return {
     title,
     description,

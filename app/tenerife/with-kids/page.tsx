@@ -8,7 +8,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 export const metadata: Metadata = {
   title: "Tenerife with Kids 2026 — Best Family Attractions | Flyamba",
   description:
-    "The best family days out in Tenerife: Siam Park, Loro Parque, Aqualand, Jungle Park, Monkey Park, treetop adventure and a real tourist submarine — with ages, prices and tips for a family holiday.",
+    "The best family days out in Tenerife: Siam Park, Loro Parque, Aqualand, Jungle Park, Monkey Park, treetop adventure and a real tourist submarine — with…",
   alternates: { canonical: `${SITE}/tenerife/with-kids` },
   openGraph: { title: "Tenerife with Kids | Flyamba", description: "Water parks, animals and adventure for a family holiday.", type: "article" },
 };

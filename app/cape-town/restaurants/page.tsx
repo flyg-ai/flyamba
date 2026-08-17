@@ -6,9 +6,9 @@ import { RESTAURANTS, CATEGORIES } from "@/app/data/cape-town-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Eat in Cape Town 2026 — Best Restaurants Guide | Flyamba",
+  title: "Where to Eat in Cape Town 2026 — Best Restaurants Guide",
   description:
-    "The best restaurants in Cape Town — Africa's top-ranked fine dining, township feasts, pan-African grills, fresh seafood and unbeatable-value food halls, with prices, areas and booking tips.",
+    "The best restaurants in Cape Town — Africa's top-ranked fine dining, township feasts, pan-African grills, fresh seafood and unbeatable-value food halls…",
   alternates: { canonical: `${SITE}/cape-town/restaurants` },
   openGraph: { title: "Best Restaurants in Cape Town | Flyamba", description: "From Africa's best fine dining to township feasts — where to eat in Cape Town.", type: "article" },
 };

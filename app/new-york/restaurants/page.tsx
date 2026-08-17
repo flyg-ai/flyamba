@@ -6,9 +6,9 @@ import { RESTAURANTS, CATEGORIES } from "@/app/data/new-york-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 export const metadata: Metadata = {
-  title: "Where to Eat in New York 2026 — Best Restaurants Guide | Flyamba",
+  title: "Where to Eat in New York 2026 — Best Restaurants Guide",
   description:
-    "The best restaurants in New York — Le Bernardin, Eleven Madison Park, Peter Luger, Katz's, Joe's Pizza and Carbone, from three-Michelin fine dining to iconic delis, with prices and booking tips.",
+    "The best restaurants in New York — Le Bernardin, Eleven Madison Park, Peter Luger, Katz's, Joe's Pizza and Carbone, from three-Michelin fine dining to…",
   alternates: { canonical: `${SITE}/new-york/restaurants` },
   openGraph: { title: "Best Restaurants in New York | Flyamba", description: "From three-Michelin tables to iconic delis and pizza — where to eat in New York.", type: "article" },
 };
