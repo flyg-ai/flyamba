@@ -73,7 +73,7 @@ const DAG = (f: string) => `/images/mykonos/day-trips/${f}`;
 const BEA = (f: string) => `/images/mykonos/beaches/${f}`;
 
 const tiqets = (q: string) =>
-  `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(
+  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=508580&u=${encodeURIComponent(
     `https://www.tiqets.com/en/search?q=${encodeURIComponent(q)}`,
   )}`;
 

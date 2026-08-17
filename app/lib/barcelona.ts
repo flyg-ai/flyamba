@@ -2,7 +2,7 @@
 
 // Affiliate deep link to a Barcelona flight search (Kiwi via Travelpayouts).
 export const BARCELONA_KIWI_CTA =
-  "https://tp.media/r?marker=711264&trs=508580&p=4478&u=" +
+  "https://tp.media/r?marker=711264.flyamba&trs=508580&p=4478&u=" +
   encodeURIComponent("https://www.kiwi.com/en/search/results/anywhere/barcelona-el-prat-airport-barcelona-spain/anytime/no-return/");
 
 // Plain (non-affiliate) Skyscanner flight search to Barcelona. Linked with

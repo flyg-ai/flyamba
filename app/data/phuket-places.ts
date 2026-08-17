@@ -14,7 +14,7 @@ const FALLBACK = "/images/destinations/placeholder.avif"; // used where Phuket h
 const INFO_IMG = "/images/destinations/placeholder.avif"; // transport/prices/weather/events (no card image)
 
 const getYourGuide = (q: string) =>
-  `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(
+  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=508580&u=${encodeURIComponent(
     `https://www.getyourguide.com/s/?q=${encodeURIComponent(q)}`,
   )}`;
 

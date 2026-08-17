@@ -72,7 +72,7 @@ const B = (f: string) => `/images/new-york/beaches/${f}`;
 const PH = (cat: string) => `/images/placeholders/placeholder-${cat}.webp`;
 
 const tiqets = (q: string) =>
-  `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(
+  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=508580&u=${encodeURIComponent(
     `https://www.tiqets.com/en/search?q=${encodeURIComponent(q)}`,
   )}`;
 

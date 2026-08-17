@@ -16,7 +16,7 @@ export function AviasalesWidget({ toName }: Props) {
     loadedRef.current = true;
     container.innerHTML = "";
     const script = document.createElement("script");
-    script.src = `https://tpwdg.com/content?currency=usd&trs=508580&shmarker=711264.711264&powered_by=false&locale=en&to_name=${toName}&show_header=true&searchUrl=search.jetradar.com&campaign_id=111&promo_id=4478&limit=5`;
+    script.src = `https://tpwdg.com/content?currency=usd&trs=508580&shmarker=711264.flyamba&powered_by=false&locale=en&to_name=${toName}&show_header=true&searchUrl=search.jetradar.com&campaign_id=111&promo_id=4478&limit=5`;
     script.async = true;
     script.charset = "utf-8";
     container.appendChild(script);
