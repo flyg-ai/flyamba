@@ -8,6 +8,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
 import { SmartImage } from "@/app/components/SmartImage";
 import { CitySubNav } from "@/app/components/CitySubNav";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
@@ -31,6 +32,10 @@ const CITY = {
   monthlySek: [3000, 2800, 3200, 3600, 4100, 4400, 5200, 5000, 4100, 3400, 2900, 3100],
 };
 const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+// Hoisted so the FAQ can quote the same figures the price chart renders.
+const USD_MONTHS = CITY.monthlySek.map((sek, i) => ({ month: MONTH_LABELS[i], price: usd5(sek) }));
+const LOW = Math.min(...USD_MONTHS.map((m) => m.price));
+const HIGH = Math.max(...USD_MONTHS.map((m) => m.price));
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -67,7 +72,16 @@ function jsonLd() {
     touristType: ["Beach & Sun", "City Break", "Island Escape"],
     url,
   };
-  return [breadcrumb, touristDestination];
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return [breadcrumb, touristDestination, faqPage];
 }
 
 // ── Non-stop routes (USD, research-based low round-trip fares) ───────────────
@@ -81,6 +95,29 @@ const NON_STOP = [
   { city: "Amsterdam", price: 105, iata: "AMS" },
   { city: "Paris", price: 110, iata: "CDG" },
   { city: "Dublin", price: 115, iata: "DUB" },
+];
+
+const FAQ: FaqItem[] = [
+  {
+    q: "How much does a flight to Palma cost?",
+    a: `Round-trip fares to Palma bottom out near $${LOW} in February and peak around $${HIGH} in July. Mallorca is served by a dense low-cost network, so booking six to eight weeks ahead usually beats last-minute fares comfortably.`,
+  },
+  {
+    q: "Which airlines fly to Palma?",
+    a: "Ryanair, easyJet, Vueling and Eurowings dominate the schedules, alongside Iberia, Air Europa, Jet2, TUI, Lufthansa, Condor, Transavia, KLM and SAS. Palma is one of Europe's busiest summer airports, so competition on the main routes is fierce.",
+  },
+  {
+    q: "When is the cheapest time to fly to Palma?",
+    a: `February is the cheapest month at roughly $${LOW} round-trip, with November through March all below average. Prices climb from May and peak in July and August; May and October give you warm weather without the peak-season fares.`,
+  },
+  {
+    q: "How long is the flight to Palma?",
+    a: `Palma is ${CITY.flightTime}, about 55 minutes from Barcelona, 1h 20m from Madrid and roughly 2h 15m from Frankfurt or Amsterdam. Flyamba tracks nonstop routes from ${NON_STOP.length} cities.`,
+  },
+  {
+    q: "Which airport does Palma use?",
+    a: `Palma de Mallorca Airport (${CITY.iata}), also known as Son Sant Joan, sits 8 km east of the city and is the island's only commercial airport. Bus A1 reaches the centre in about 15–20 minutes, and A2 serves the Playa de Palma resorts.`,
+  },
 ];
 
 const WHY = [
@@ -225,7 +262,7 @@ export default function PalmaHub() {
         <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-3">
           {categories.map((c) => (
             <Link key={c.slug} href={`/palma/${c.slug}`} className="group relative h-[180px] overflow-hidden rounded-3xl border border-border">
-              <SmartImage src={CATEGORY_IMG[c.slug] ?? "/images/barcelona/placeholder.webp"} alt={`Palma ${c.label}`} fill sizes="(max-width:1024px) 50vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
+              <SmartImage src={CATEGORY_IMG[c.slug] ?? "/images/destinations/placeholder.avif"} alt={`Palma ${c.label}`} fill sizes="(max-width:1024px) 50vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4 text-white">
                 <span className="flex items-center gap-2 font-serif text-xl font-semibold"><span aria-hidden>{c.emoji}</span> {c.label}</span>
@@ -339,6 +376,8 @@ export default function PalmaHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Palma" />
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

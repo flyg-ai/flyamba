@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Paris Weather & Best Time to Visit | Flyamba", description: "Season-by-season weather and when to go to Paris.", type: "article" },
 };
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 const INFO: BcnPlace[] = [
   {

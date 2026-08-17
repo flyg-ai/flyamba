@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
@@ -74,6 +75,12 @@ export function generateMetadata(): Metadata {
   };
 }
 
+const FAQ: FaqItem[] = [
+  { q: "When is the cheapest time to fly to Lisbon?", a: "Fares are lowest in winter — February averages around $240 round-trip — while July and August are the most expensive. April–June and September offer the best balance of warm weather and moderate prices." },
+  { q: "How long is the flight to Lisbon?", a: "Lisbon (LIS) is about 4 hours from London, 2.5 hours from Paris, and 7–8 hours nonstop from the US East Coast (New York, Boston). TAP Air Portugal, United and British Airways all fly direct." },
+  { q: "Which airlines fly nonstop to Lisbon?", a: "TAP Air Portugal is the main carrier, with nonstop routes from New York, Boston, Toronto, São Paulo and across Europe. United, British Airways, Ryanair and easyJet also serve LIS directly." },
+];
+
 function jsonLd() {
   const url = `${SITE}/lisbon`;
   const breadcrumb = {
@@ -97,23 +104,11 @@ function jsonLd() {
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "When is the cheapest time to fly to Lisbon?",
-        acceptedAnswer: { "@type": "Answer", text: "Fares are lowest in winter — February averages around $240 round-trip — while July and August are the most expensive. April–June and September offer the best balance of warm weather and moderate prices." },
-      },
-      {
-        "@type": "Question",
-        name: "How long is the flight to Lisbon?",
-        acceptedAnswer: { "@type": "Answer", text: "Lisbon (LIS) is about 4 hours from London, 2.5 hours from Paris, and 7–8 hours nonstop from the US East Coast (New York, Boston). TAP Air Portugal, United and British Airways all fly direct." },
-      },
-      {
-        "@type": "Question",
-        name: "Which airlines fly nonstop to Lisbon?",
-        acceptedAnswer: { "@type": "Answer", text: "TAP Air Portugal is the main carrier, with nonstop routes from New York, Boston, Toronto, São Paulo and across Europe. United, British Airways, Ryanair and easyJet also serve LIS directly." },
-      },
-    ],
+    mainEntity: FAQ.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
   return [breadcrumb, touristDestination, faq];
 }
@@ -332,6 +327,9 @@ export default function LisbonHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Lisbon" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

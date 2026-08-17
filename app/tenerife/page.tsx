@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
@@ -52,9 +53,9 @@ const ATTRACTION_PREVIEW = [
   { name: "Masca Village", blurb: "A cliff-clinging hamlet deep in the Teno mountains.", image: "/images/tenerife/sevardheter/masca.webp", href: "/tenerife/attractions" },
 ];
 const EAT_PREVIEW = [
-  { name: "El Rincón de Juan Carlos", blurb: "Two Michelin stars of inventive Canarian cuisine.", image: "/images/barcelona/placeholder.webp", href: "/tenerife/restaurants" },
-  { name: "Casa Tomás", blurb: "Legendary ribs and papas at a rustic country tavern.", image: "/images/barcelona/placeholder.webp", href: "/tenerife/restaurants" },
-  { name: "Tasca El Callejón", blurb: "Creative Canarian tapas in the capital.", image: "/images/barcelona/placeholder.webp", href: "/tenerife/restaurants" },
+  { name: "El Rincón de Juan Carlos", blurb: "Two Michelin stars of inventive Canarian cuisine.", image: "/images/destinations/placeholder.avif", href: "/tenerife/restaurants" },
+  { name: "Casa Tomás", blurb: "Legendary ribs and papas at a rustic country tavern.", image: "/images/destinations/placeholder.avif", href: "/tenerife/restaurants" },
+  { name: "Tasca El Callejón", blurb: "Creative Canarian tapas in the capital.", image: "/images/destinations/placeholder.avif", href: "/tenerife/restaurants" },
 ];
 const BEACH_PREVIEW = [
   { name: "Playa de las Teresitas", blurb: "Golden Saharan sand and calm water near the capital.", image: "/images/tenerife/strander/playa-de-las-teresitas.webp", href: "/tenerife/beaches" },
@@ -62,7 +63,7 @@ const BEACH_PREVIEW = [
   { name: "Playa de Benijo", blurb: "Wild black sand and sea stacks in Anaga.", image: "/images/tenerife/strander/playa-de-benijo.webp", href: "/tenerife/beaches" },
 ];
 
-const FAQS = [
+const FAQS: FaqItem[] = [
   {
     q: "When is the cheapest time to fly to Tenerife?",
     a: "Fares are lowest in the shoulder months of late spring and autumn, with February also cheap outside the Carnival dates. Winter (the peak winter-sun season) and August are the priciest. Booking 5–7 weeks ahead and flying midweek typically gets the best price.",
@@ -358,6 +359,9 @@ export default function TenerifeHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQS} city="Tenerife" />
+
 
       {/* 13. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

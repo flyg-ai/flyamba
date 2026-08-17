@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "How Much Does Athens Cost? | Flyamba", description: "Daily budgets and real prices for Athens in euros.", type: "article" },
 };
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 const ITEMS: BcnPlace[] = [
   {

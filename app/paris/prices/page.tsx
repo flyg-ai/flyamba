@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "How Much Does Paris Cost? | Flyamba", description: "Flights, hotels, food, attractions and daily budgets for Paris.", type: "article" },
 };
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 const INFO: BcnPlace[] = [
   {

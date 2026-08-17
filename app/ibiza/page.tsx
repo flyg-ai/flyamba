@@ -8,6 +8,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { SmartImage } from "@/app/components/SmartImage";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { IBIZA_CATEGORIES, ATTRACTIONS, NIGHTLIFE, BEACHES } from "@/app/data/ibiza-places";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
@@ -80,7 +81,16 @@ function jsonLd() {
     touristType: ["Beach & Sun", "Nightlife", "Island Escape"],
     url,
   };
-  return [breadcrumb, touristDestination];
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return [breadcrumb, touristDestination, faqPage];
 }
 
 // ── Direct routes (USD, indicative one-way seasonal fares) ───────────────────
@@ -93,6 +103,31 @@ const NON_STOP = [
   { city: "Amsterdam", price: 120, iata: "AMS" },
   { city: "Paris", price: 130, iata: "ORY" },
   { city: "Brussels", price: 115, iata: "BRU" },
+];
+
+// Ibiza's winter months are null in the catalog — the island's flight schedule
+// collapses out of season — so the FAQ quotes the April–October figures only.
+const FAQ: FaqItem[] = [
+  {
+    q: "How much does a flight to Ibiza cost?",
+    a: `Round-trip fares to Ibiza start around $${MIN} in ${CHEAPEST_MONTH_FULL[CHEAPEST.month]} and climb to about $${MAX} at the July–August peak. Fares rise steeply once the club season opens, so booking well ahead for summer matters more here than for most destinations.`,
+  },
+  {
+    q: "Which airlines fly to Ibiza?",
+    a: "Vueling, Ryanair, easyJet and Iberia (via Air Nostrum) run the densest schedules, joined in summer by British Airways, Jet2, TUI, Eurowings, Transavia, KLM and Swiss. Most routes are seasonal, running roughly May to October.",
+  },
+  {
+    q: "When is the cheapest time to fly to Ibiza?",
+    a: `${CHEAPEST_MONTH_FULL[CHEAPEST.month]} is the cheapest month with fares near $${MIN}, and late September into October is the other good-value window — still warm, with the summer crowds gone. July and August are the most expensive by a wide margin.`,
+  },
+  {
+    q: "How long is the flight to Ibiza?",
+    a: `Ibiza is about 50 minutes from Barcelona, 1h 15m from Madrid, 2h 30m from London and roughly 2h 45m from Amsterdam or Paris. Flyamba tracks nonstop routes from ${NON_STOP.length} cities.`,
+  },
+  {
+    q: "Which airport does Ibiza use?",
+    a: `The island has one airport, Ibiza Airport (${IBIZA.iata}), 7 km southwest of Ibiza Town. Bus line 10 runs to the town in about 20 minutes and line 9 serves Sant Antoni in summer; taxis take roughly 15 minutes.`,
+  },
 ];
 
 const WHY_IBIZA = [
@@ -349,6 +384,8 @@ export default function IbizaHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Ibiza" />
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

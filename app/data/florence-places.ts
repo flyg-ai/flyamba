@@ -8,7 +8,7 @@ import type { BcnPlace } from "@/app/data/barcelona-places";
 export type { BcnPlace } from "@/app/data/barcelona-places";
 
 const SEV = (f: string) => `/images/florence/sevardheter/${f}`;
-const INFO_IMG = "/images/barcelona/placeholder.webp"; // restaurants/hotels/nightlife/shopping/kids/transport/prices/weather/events (no local image)
+const INFO_IMG = "/images/destinations/placeholder.avif"; // restaurants/hotels/nightlife/shopping/kids/transport/prices/weather/events (no local image)
 
 const tiqets = (q: string) =>
   `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(

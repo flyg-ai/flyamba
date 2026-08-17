@@ -5,7 +5,9 @@ import { useState } from "react";
 import { Star, MapPin, ArrowUpRight, Ticket } from "lucide-react";
 import type { BcnPlace } from "@/app/data/barcelona-places";
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+// Generic and landmark-free on purpose — the old value was a photo of the
+// Eiffel Tower, which stood in for every city that lacked its own image.
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 // Uses the place's own area/name (not a hardcoded city) so it works for every city.
 const mapsUrl = (name: string, area: string) =>

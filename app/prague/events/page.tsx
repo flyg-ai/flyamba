@@ -50,7 +50,7 @@ function jsonLd() {
   return [breadcrumb, faq];
 }
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 const item = (o: Partial<BcnPlace> & { name: string; slug: string; fullDescription: string; tip: string; practicalInfo: BcnPlace["practicalInfo"] }): BcnPlace => ({
   image: PLACEHOLDER, rating: 4.6, area: "Prague", filterKeys: [], description: "", ...o,
 });

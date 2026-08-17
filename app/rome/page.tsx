@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
@@ -92,7 +93,7 @@ const NEARBY = [
   { city: "Barcelona", href: "/barcelona" },
 ];
 
-const FAQ = [
+const FAQ: FaqItem[] = [
   {
     q: "How much are flights to Rome?",
     a: `Round-trip fares to Rome start from around ${usdStr(LOWEST_SEK)} in the low season (February and November), rising to roughly $400 during the June–August summer peak. Booking six to eight weeks ahead and flying midweek gets the best prices.`,
@@ -382,6 +383,9 @@ export default function RomeHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Rome" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

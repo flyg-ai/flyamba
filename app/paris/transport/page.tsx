@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around Paris | Flyamba", description: "Métro, RER, airports and tickets explained for Paris.", type: "article" },
 };
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 const INFO: BcnPlace[] = [
   {

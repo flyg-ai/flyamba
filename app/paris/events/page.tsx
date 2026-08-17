@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Paris Events & Festivals | Flyamba", description: "The best festivals and events in Paris, month by month.", type: "article" },
 };
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 const EVENTS: BcnPlace[] = [
   {

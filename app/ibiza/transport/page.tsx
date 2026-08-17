@@ -6,7 +6,7 @@ import { IBIZA_CATEGORIES } from "@/app/data/ibiza-places";
 import { SITE } from "@/app/lib/destination-helpers";
 
 const HERO = "/images/destinations/flights-ibiza.avif";
-const PH = "/images/barcelona/placeholder.webp";
+const PH = "/images/destinations/placeholder.avif";
 
 export const metadata: Metadata = {
   title: "Transport in Ibiza 2026 — Getting Around | Flyamba",

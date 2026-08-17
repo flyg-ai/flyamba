@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Athens Weather & Best Time to Visit | Flyamba", description: "Season-by-season climate and the best time to visit Athens.", type: "article" },
 };
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 const ITEMS: BcnPlace[] = [
   {

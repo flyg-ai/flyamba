@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Dubrovnik Prices & Budget Guide | Flyamba", description: "What a Dubrovnik trip costs: flights, daily budgets, tickets, food and transport, with saving tips.", type: "article" },
 };
 
-const INFO_IMG = "/images/barcelona/placeholder.webp";
+const INFO_IMG = "/images/destinations/placeholder.avif";
 
 const PRICES: BcnPlace[] = [
   {

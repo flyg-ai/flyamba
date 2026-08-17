@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Athens Events & Festivals 2026 | Flyamba", description: "The best festivals and events in Athens, month by month.", type: "article" },
 };
 
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 const ITEMS: BcnPlace[] = [
   {

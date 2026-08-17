@@ -14,7 +14,7 @@ const NIGHT = (f: string) => `/images/vienna/nattliv/${f}`;
 const SHOP = (f: string) => `/images/vienna/shopping/${f}`;
 const KIDS = (f: string) => `/images/vienna/med-barn/${f}`;
 const TRIP = (f: string) => `/images/vienna/dagsutflykter/${f}`;
-const INFO_IMG = "/images/barcelona/placeholder.webp"; // transport/prices/weather/events (no card image)
+const INFO_IMG = "/images/destinations/placeholder.avif"; // transport/prices/weather/events (no card image)
 
 const tiqets = (q: string) =>
   `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(

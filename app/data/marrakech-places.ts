@@ -15,8 +15,8 @@ const SHOP = (f: string) => `/images/marrakech/shopping/${f}`;
 const KIDS = (f: string) => `/images/marrakech/med-barn/${f}`;
 const TRIP = (f: string) => `/images/marrakech/dagsutflykter/${f}`;
 const BEACH = (f: string) => `/images/marrakech/strander/${f}`;
-const PLACEHOLDER = "/images/barcelona/placeholder.webp"; // generic, text-free fallback
-const INFO_IMG = "/images/barcelona/placeholder.webp"; // transport/prices/weather/events (no card image)
+const PLACEHOLDER = "/images/destinations/placeholder.avif"; // generic, text-free fallback
+const INFO_IMG = "/images/destinations/placeholder.avif"; // transport/prices/weather/events (no card image)
 
 const tiqets = (q: string) =>
   `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(

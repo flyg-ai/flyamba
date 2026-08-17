@@ -6,6 +6,7 @@ import { Footer } from "@/app/components/Footer";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { BANGKOK_CATEGORIES, bangkokHref } from "@/app/lib/bangkok";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
@@ -27,6 +28,11 @@ const CITY = {
   monthlyPricesSek: [4200, 3900, 4100, 4500, 5200, 5800, 5500, 5400, 4900, 4400, 4000, 4300],
 };
 const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+// Hoisted so the FAQ can quote the same figures the price chart renders.
+const USD_MONTHS = CITY.monthlyPricesSek.map((sek, i) => ({ month: MONTH_LABELS[i], price: usd5(sek) }));
+const LOW = Math.min(...USD_MONTHS.map((m) => m.price));
+const HIGH = Math.max(...USD_MONTHS.map((m) => m.price));
+const AVERAGE = Math.round(USD_MONTHS.reduce((s, m) => s + m.price, 0) / USD_MONTHS.length);
 
 const NON_STOP = [
   { city: "London", price: 620, iata: "LHR" },
@@ -84,6 +90,29 @@ export function generateMetadata(): Metadata {
   };
 }
 
+const FAQ: FaqItem[] = [
+  {
+    q: "How much does a flight to Bangkok cost?",
+    a: `Round-trip fares to Bangkok start around $${LOW} in February and peak near $${HIGH} in June, averaging about $${AVERAGE} across the year. Long-haul fares reward booking two to three months ahead.`,
+  },
+  {
+    q: "Which airlines fly to Bangkok?",
+    a: "Thai Airways is the flag carrier, with Bangkok Airways covering regional routes. Emirates, Qatar Airways, Etihad, Singapore Airlines, Cathay Pacific, EVA Air and Japan Airlines all serve Suvarnabhumi, and British Airways and Lufthansa fly nonstop from Europe. Budget options include AirAsia, Scoot and Thai Vietjet.",
+  },
+  {
+    q: "When is the cheapest time to fly to Bangkok?",
+    a: `February is the cheapest month at roughly $${LOW} round-trip, with January and November close behind — which conveniently coincides with the cool, dry season. Fares peak in June and stay high through August.`,
+  },
+  {
+    q: "How long is the flight to Bangkok?",
+    a: `Bangkok is about 11h 30m nonstop from London, 6h from Dubai, 2h 20m from Singapore and 6h from Tokyo. Flyamba tracks nonstop routes from ${NON_STOP.length} cities.`,
+  },
+  {
+    q: "Which airport does Bangkok use?",
+    a: `Suvarnabhumi (${CITY.iata}) handles almost all international flights and reaches the city by Airport Rail Link in about 30 minutes. The older Don Mueang (DMK) serves most budget carriers, so check which one your ticket uses.`,
+  },
+];
+
 function jsonLd() {
   const url = `${SITE}/bangkok`;
   const breadcrumb = {
@@ -104,7 +133,16 @@ function jsonLd() {
     touristType: ["City Break", "Culture", "Food & Drink", "Beach & Sun"],
     url,
   };
-  return [breadcrumb, touristDestination];
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return [breadcrumb, touristDestination, faqPage];
 }
 
 function PreviewGrid({ items }: { items: { name: string; blurb: string; image: string }[] }) {
@@ -304,6 +342,8 @@ export default function BangkokHub() {
         </div>
         <PreviewGrid items={BEACH_PREVIEW} />
       </section>
+
+      <FaqSection items={FAQ} city="Bangkok" />
 
       {/* 11. Nearby */}
       <section id="nearby" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">

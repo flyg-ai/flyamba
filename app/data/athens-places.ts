@@ -17,7 +17,7 @@ export type AthCategory = { slug: string; label: string; emoji: string; blurb: s
 const A = (f: string) => `/images/athens/sevardheter/${f}`;
 const B = (f: string) => `/images/athens/strander/${f}`;
 const D = (f: string) => `/images/athens/dagsutflykter/${f}`;
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 const FOOD_IMG = "/images/content/photo-1414235077428-338989a2e8c0.avif";
 const HOTEL_IMG = "/images/content/photo-1566073771259-6a8506099945.avif";
 const NIGHT_IMG = "/images/content/photo-1516450360452-9312f5e86fc7.avif";

@@ -28,7 +28,7 @@ export const PALMA_CATEGORIES: CityCategory[] = [
 const SEV = (f: string) => `/images/palma/sevardheter/${f}`; // sevärdheter = attractions
 const DAG = (f: string) => `/images/palma/dagsutflykter/${f}`; // dagsutflykter = day-trips
 const STR = (f: string) => `/images/palma/strander/${f}`; // stränder = beaches
-const PH = "/images/barcelona/placeholder.webp"; // liberal fallback
+const PH = "/images/destinations/placeholder.avif"; // liberal fallback
 const FOOD = "/images/content/photo-1414235077428-338989a2e8c0.avif";
 const HOTEL = "/images/content/photo-1566073771259-6a8506099945.avif";
 

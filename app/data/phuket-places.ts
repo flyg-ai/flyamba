@@ -10,8 +10,8 @@ export type { BcnPlace } from "@/app/data/barcelona-places";
 const SEV = (f: string) => `/images/phuket/sevardheter/${f}`;
 const TRIP = (f: string) => `/images/phuket/dagsutflykter/${f}`;
 const BEACH = (f: string) => `/images/phuket/strander/${f}`;
-const FALLBACK = "/images/barcelona/placeholder.webp"; // used where Phuket has no local photo
-const INFO_IMG = "/images/barcelona/placeholder.webp"; // transport/prices/weather/events (no card image)
+const FALLBACK = "/images/destinations/placeholder.avif"; // used where Phuket has no local photo
+const INFO_IMG = "/images/destinations/placeholder.avif"; // transport/prices/weather/events (no card image)
 
 const getYourGuide = (q: string) =>
   `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(

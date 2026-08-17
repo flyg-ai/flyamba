@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
@@ -36,6 +37,12 @@ export function generateMetadata(): Metadata {
   };
 }
 
+const FAQ: FaqItem[] = [
+  { q: "When is it cheapest to fly to Santorini?", a: `April is the cheapest month to fly to Santorini, with round-trip fares averaging around $${cheapest.price}. Prices climb through the summer, peaking in July and August, before easing again in autumn. Few flights operate in the winter low season.` },
+  { q: "Are there direct flights to Santorini?", a: "Santorini (JTR) has many seasonal direct flights from European cities such as London, Paris, Milan, Amsterdam and Rome between roughly April and October, plus year-round domestic connections via Athens. Most long-haul travellers connect through Athens." },
+  { q: "How many days do you need in Santorini?", a: "Three to four days is ideal for Santorini — enough to see the Oia sunset, walk the Fira-to-Oia caldera trail, take a volcano or catamaran cruise, visit Akrotiri and the wineries, and enjoy a couple of beaches." },
+];
+
 function jsonLd() {
   const breadcrumb = {
     "@context": "https://schema.org",
@@ -58,23 +65,11 @@ function jsonLd() {
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "When is it cheapest to fly to Santorini?",
-        acceptedAnswer: { "@type": "Answer", text: `April is the cheapest month to fly to Santorini, with round-trip fares averaging around $${cheapest.price}. Prices climb through the summer, peaking in July and August, before easing again in autumn. Few flights operate in the winter low season.` },
-      },
-      {
-        "@type": "Question",
-        name: "Are there direct flights to Santorini?",
-        acceptedAnswer: { "@type": "Answer", text: "Santorini (JTR) has many seasonal direct flights from European cities such as London, Paris, Milan, Amsterdam and Rome between roughly April and October, plus year-round domestic connections via Athens. Most long-haul travellers connect through Athens." },
-      },
-      {
-        "@type": "Question",
-        name: "How many days do you need in Santorini?",
-        acceptedAnswer: { "@type": "Answer", text: "Three to four days is ideal for Santorini — enough to see the Oia sunset, walk the Fira-to-Oia caldera trail, take a volcano or catamaran cruise, visit Akrotiri and the wineries, and enjoy a couple of beaches." },
-      },
-    ],
+    mainEntity: FAQ.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
   return [breadcrumb, touristDestination, faq];
 }
@@ -333,6 +328,9 @@ export default function SantoriniHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Santorini" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
@@ -91,7 +92,7 @@ const NEARBY = [
   { city: "Agadir", href: "/agadir" },
 ];
 
-const FAQ = [
+const FAQ: FaqItem[] = [
   {
     q: "How much are flights to Marrakech?",
     a: `Round-trip fares to Marrakech start from around ${usdStr(LOWEST_SEK)} in the low season (January and November), rising to roughly $500 during the spring peak (March–May). Marrakech is a major low-cost hub, so booking six to eight weeks ahead and flying midweek gets the best prices.`,
@@ -381,6 +382,9 @@ export default function MarrakechHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Marrakech" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

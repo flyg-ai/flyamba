@@ -10,6 +10,7 @@ import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
 import { CategoryGrid } from "@/app/components/CategoryGrid";
 import { BarcelonaHubNav } from "@/app/components/BarcelonaHubNav";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
 import { getGuidesByDestination, guideHref } from "@/app/data/guides";
 import { SITE, airlineNames, lowestPriceStr } from "@/app/lib/destination-helpers";
@@ -35,6 +36,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
+
 // ── JSON-LD ────────────────────────────────────────────────────────────────
 function jsonLd() {
   const url = `${SITE}/barcelona`;
@@ -56,7 +58,16 @@ function jsonLd() {
     touristType: ["Beach & Sun", "City Break", "Culture"],
     url,
   };
-  return [breadcrumb, touristDestination];
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return [breadcrumb, touristDestination, faqPage];
 }
 
 // ── Static preview + non-stop data (USD) ───────────────────────────────────
@@ -67,6 +78,31 @@ const NON_STOP = [
   { city: "Chicago", price: 534, iata: "ORD" },
   { city: "Miami", price: 567, iata: "MIA" },
   { city: "Los Angeles", price: 612, iata: "LAX" },
+];
+
+// Figures come from the destination record and the NON_STOP table above, so
+// they stay in step with the price chart and route list on the page.
+const FAQ: FaqItem[] = [
+  {
+    q: "How much does a flight to Barcelona cost?",
+    a: `Round-trip fares to Barcelona start from ${lowestPriceStr(d)}, with February the cheapest month at roughly $128 average and July–August the priciest. Booking six to eight weeks ahead and flying Tuesday or Wednesday gets the best prices.`,
+  },
+  {
+    q: "Which airlines fly to Barcelona?",
+    a: `${airlineNames(d).slice(0, 4).join(", ")} and Ryanair operate the most routes into El Prat, alongside easyJet, Lufthansa, Air France and KLM within Europe. Delta, United and American Airlines fly nonstop from the United States.`,
+  },
+  {
+    q: "When is the cheapest time to fly to Barcelona?",
+    a: "February is the cheapest month, and November through March all sit below the annual average. Fares rise sharply from June and peak in July and August; May and late September offer warm weather at shoulder-season prices.",
+  },
+  {
+    q: "How long is the flight to Barcelona?",
+    a: `Barcelona is about ${d.flightTime} from London, 1h 45m from Paris and roughly 8h nonstop from New York. Flyamba tracks nonstop routes from ${NON_STOP.length} cities including Chicago, Miami and Los Angeles.`,
+  },
+  {
+    q: "Which airport does Barcelona use?",
+    a: `Barcelona–El Prat (${d.iata}) sits 15 km southwest of the centre and handles essentially all traffic. The R2 Nord train and the Aerobús both reach the middle of the city in about 25–35 minutes; the L9 Sud metro connects to the wider network.`,
+  },
 ];
 
 const ATTRACTION_PREVIEW = [
@@ -316,6 +352,8 @@ export default function BarcelonaHub() {
           </div>
         </section>
       )}
+
+      <FaqSection items={FAQ} city="Barcelona" />
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">

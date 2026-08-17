@@ -32,7 +32,7 @@ const AT = (f: string) => `/images/ibiza/sevardheter/${f}`;
 const BE = (f: string) => `/images/ibiza/strander/${f}`;
 const DT = (f: string) => `/images/ibiza/dagsutflykter/${f}`;
 // No local imagery for these categories — fall back to the shared placeholder.
-const PH = "/images/barcelona/placeholder.webp";
+const PH = "/images/destinations/placeholder.avif";
 
 const tiqets = (q: string) =>
   `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(

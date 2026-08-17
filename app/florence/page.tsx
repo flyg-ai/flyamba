@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
@@ -46,13 +47,13 @@ const NON_STOP = [
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/florence/sevardheter/brunelleschi-kupolen.webp",
-  restaurants: "/images/barcelona/placeholder.webp",
-  hotels: "/images/barcelona/placeholder.webp",
+  restaurants: "/images/destinations/placeholder.avif",
+  hotels: "/images/destinations/placeholder.avif",
   transport: "/images/florence/sevardheter/ponte-vecchio.webp",
   prices: "/images/florence/sevardheter/uffizierna-galleria-degli-uffizi.webp",
   weather: "/images/florence/sevardheter/piazzale-michelangelo-utsikt.webp",
-  shopping: "/images/barcelona/placeholder.webp",
-  nightlife: "/images/barcelona/placeholder.webp",
+  shopping: "/images/destinations/placeholder.avif",
+  nightlife: "/images/destinations/placeholder.avif",
   "with-kids": "/images/florence/sevardheter/boboli-tradgarden.webp",
   "day-trips": "/images/florence/sevardheter/fiesole.webp",
   events: "/images/florence/sevardheter/piazza-della-signoria.webp",
@@ -71,9 +72,9 @@ const ATTRACTION_PREVIEW = [
   { name: "Accademia (David)", blurb: "Michelangelo's David, the most famous sculpture on earth, carved from a single block.", image: "/images/florence/sevardheter/galleria-dellaccademia-david.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Trattoria Mario", blurb: "A boisterous lunch-only institution for bistecca and ribollita by the Mercato Centrale.", image: "/images/barcelona/placeholder.webp" },
-  { name: "All'Antico Vinaio", blurb: "Florence's legendary schiacciata panini, stuffed to order — expect a queue.", image: "/images/barcelona/placeholder.webp" },
-  { name: "Trattoria Sostanza", blurb: "An 1869 classic famous for butter-drenched chicken and enormous shared bistecca.", image: "/images/barcelona/placeholder.webp" },
+  { name: "Trattoria Mario", blurb: "A boisterous lunch-only institution for bistecca and ribollita by the Mercato Centrale.", image: "/images/destinations/placeholder.avif" },
+  { name: "All'Antico Vinaio", blurb: "Florence's legendary schiacciata panini, stuffed to order — expect a queue.", image: "/images/destinations/placeholder.avif" },
+  { name: "Trattoria Sostanza", blurb: "An 1869 classic famous for butter-drenched chicken and enormous shared bistecca.", image: "/images/destinations/placeholder.avif" },
 ];
 
 const NEARBY = [
@@ -83,7 +84,7 @@ const NEARBY = [
   { city: "Siena", href: "/siena" },
 ];
 
-const FAQ = [
+const FAQ: FaqItem[] = [
   {
     q: "How much are flights to Florence?",
     a: `Round-trip fares to Florence start from around ${usdStr(LOWEST_SEK)} in the low season (February and November), rising to roughly $465 during the June–August summer peak. Booking six to eight weeks ahead and flying midweek gets the best prices, and it is often cheaper to fly into Rome, Milan or Pisa and take a fast train.`,
@@ -366,6 +367,9 @@ export default function FlorenceHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Florence" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

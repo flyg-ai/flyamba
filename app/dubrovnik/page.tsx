@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
@@ -89,7 +90,7 @@ const NEARBY = [
   { city: "Mostar", href: "/mostar" },
 ];
 
-const FAQ = [
+const FAQ: FaqItem[] = [
   {
     q: "How much are flights to Dubrovnik?",
     a: `Round-trip fares to Dubrovnik start from around ${usdStr(LOWEST_SEK)} in the winter low season (February and November), rising to roughly $475 during the July–August summer peak. Booking six to eight weeks ahead and flying midweek gets the best prices, and many European routes to DBV are seasonal, running mainly from spring to autumn.`,
@@ -380,6 +381,9 @@ export default function DubrovnikHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Dubrovnik" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

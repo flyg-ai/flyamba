@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around Dubrovnik | Flyamba", description: "Dubrovnik transport explained: airport, buses, ferries, cable car and taxis, with fares.", type: "article" },
 };
 
-const INFO_IMG = "/images/barcelona/placeholder.webp";
+const INFO_IMG = "/images/destinations/placeholder.avif";
 
 const TRANSPORT: BcnPlace[] = [
   {

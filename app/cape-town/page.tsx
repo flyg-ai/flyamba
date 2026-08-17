@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { SmartImage } from "@/app/components/SmartImage";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
@@ -32,7 +33,7 @@ export function generateMetadata(): Metadata {
 }
 
 // ── JSON-LD (Breadcrumb + TouristDestination + FAQPage) ──────────────────────
-const FAQS = [
+const FAQS: FaqItem[] = [
   {
     q: "How much are flights to Cape Town?",
     a: `Round-trip fares to Cape Town International (CPT) start from around $${MIN_USD} and average roughly $${MAX_USD} in the peak December–January summer season. July is the cheapest month to fly, as the wet winter lowers demand.`,
@@ -341,6 +342,9 @@ export default function CapeTownHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQS} city="Cape Town" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

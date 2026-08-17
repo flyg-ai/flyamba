@@ -15,7 +15,7 @@ const SHOP = (f: string) => `/images/rome/shopping/${f}`;
 const KIDS = (f: string) => `/images/rome/med-barn/${f}`;
 const TRIP = (f: string) => `/images/rome/dagsutflykter/${f}`;
 const BEACH = (f: string) => `/images/rome/strander/${f}`;
-const INFO_IMG = "/images/barcelona/placeholder.webp"; // transport/prices/weather/events (no card image)
+const INFO_IMG = "/images/destinations/placeholder.avif"; // transport/prices/weather/events (no card image)
 
 const tiqets = (q: string) =>
   `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(

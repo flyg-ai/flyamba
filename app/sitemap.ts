@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import type { MetadataRoute } from "next";
 import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 import { destinations } from "@/app/data/destinations";
@@ -8,57 +10,43 @@ import { SITE } from "@/app/lib/destination-helpers";
 // the same data the pages render from, so a new destination in the catalog shows
 // up in the sitemap on the next deploy without anyone editing XML.
 
-// Subpages that a full destination hub ships. Order only affects the XML.
-const HUB_SUBPAGES = [
-  "attractions",
-  "restaurants",
-  "hotels",
-  "transport",
-  "weather",
-  "prices",
-  "nightlife",
-  "beaches",
-  "shopping",
-  "with-kids",
-  "day-trips",
-  "events",
-];
+// Routes under app/ that exist but aren't destination hubs.
+const NOT_A_HUB = new Set(["api", "components", "data", "lib", "about", "compare", "explore"]);
 
-// The full hubs: cities with their own static app/<slug>/ route tree and sub-nav.
-// `omit` lists the subpages a city has no route for — landlocked cities have no
-// /beaches page, and New York has no /events page yet. Keep in sync with app/.
-const HUBS: { slug: string; omit?: string[] }[] = [
-  { slug: "amsterdam", omit: ["beaches"] },
-  { slug: "athens" },
-  { slug: "bali" },
-  { slug: "bangkok" },
-  { slug: "barcelona" },
-  { slug: "cancun" },
-  { slug: "cape-town" },
-  { slug: "dubai" },
-  { slug: "dubrovnik" },
-  { slug: "florence", omit: ["beaches"] },
-  { slug: "ibiza" },
-  { slug: "lisbon" },
-  { slug: "london", omit: ["beaches"] },
-  { slug: "madrid", omit: ["beaches"] },
-  { slug: "marrakech" },
-  { slug: "mykonos" },
-  { slug: "new-york", omit: ["events"] },
-  { slug: "palma" },
-  { slug: "paris", omit: ["beaches"] },
-  { slug: "phuket" },
-  { slug: "prague", omit: ["beaches"] },
-  { slug: "reykjavik" },
-  { slug: "rome" },
-  { slug: "santorini" },
-  { slug: "singapore" },
-  { slug: "tenerife" },
-  { slug: "tokyo" },
-  { slug: "vienna", omit: ["beaches"] },
-];
+// Guide routes are emitted from the guides catalog below, not by scanning.
+const GUIDE_PATHS = new Set(guides.map((g) => g.path));
 
-const HUB_SLUGS = new Set(HUBS.map((h) => h.slug));
+// Walks app/ for the static destination hubs and the subpages each one actually
+// ships. This replaces a hand-maintained array that had to be edited in lockstep
+// with the filesystem — a city folder added without touching it was silently
+// left out of the sitemap.
+//
+// Runs at build time: sitemap.ts is a server-only route handler, and every hub
+// is statically generated, so there's no per-request cost.
+function readHubs(): { slug: string; subpages: string[] }[] {
+  const appDir = path.join(process.cwd(), "app");
+  const isPage = (...segments: string[]) =>
+    fs.existsSync(path.join(appDir, ...segments, "page.tsx"));
+
+  return fs
+    .readdirSync(appDir, { withFileTypes: true })
+    .filter((e) => e.isDirectory())
+    // Dynamic segments ([slug], [category]) and route groups aren't hubs.
+    .filter((e) => !e.name.startsWith("[") && !e.name.startsWith("(") && !e.name.startsWith("_"))
+    .filter((e) => !NOT_A_HUB.has(e.name))
+    .filter((e) => isPage(e.name))
+    .map((e) => ({
+      slug: e.name,
+      subpages: fs
+        .readdirSync(path.join(appDir, e.name), { withFileTypes: true })
+        .filter((s) => s.isDirectory() && !s.name.startsWith("[") && !s.name.startsWith("("))
+        .filter((s) => isPage(e.name, s.name))
+        .filter((s) => !GUIDE_PATHS.has(s.name))
+        .map((s) => s.name)
+        .sort(),
+    }))
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Build time — every page's fares are re-seeded on deploy.
@@ -72,16 +60,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   });
 
-  for (const path of ["/compare", "/about", "/explore"]) {
+  // Named `route` rather than `path` so it doesn't shadow node:path above.
+  for (const route of ["/compare", "/about", "/explore"]) {
     entries.push({
-      url: `${SITE}${path}`,
+      url: `${SITE}${route}`,
       lastModified,
       changeFrequency: "monthly",
       priority: 0.3,
     });
   }
 
-  for (const hub of HUBS) {
+  const hubs = readHubs();
+  const hubSlugs = new Set(hubs.map((h) => h.slug));
+
+  for (const hub of hubs) {
     entries.push({
       url: `${SITE}/${hub.slug}`,
       lastModified,
@@ -89,8 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     });
 
-    for (const sub of HUB_SUBPAGES) {
-      if (hub.omit?.includes(sub)) continue;
+    for (const sub of hub.subpages) {
       entries.push({
         url: `${SITE}/${hub.slug}/${sub}`,
         lastModified,
@@ -113,8 +104,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Every other destination renders through app/[slug] — the rich hand-authored
   // cities that have no hub of their own, plus the ported lite catalog.
   const liteSlugs = new Set<string>();
-  for (const d of destinations) if (!HUB_SLUGS.has(d.slug)) liteSlugs.add(d.slug);
-  for (const d of ALL_DESTINATIONS) if (!HUB_SLUGS.has(d.slug)) liteSlugs.add(d.slug);
+  for (const d of destinations) if (!hubSlugs.has(d.slug)) liteSlugs.add(d.slug);
+  for (const d of ALL_DESTINATIONS) if (!hubSlugs.has(d.slug)) liteSlugs.add(d.slug);
 
   for (const slug of liteSlugs) {
     entries.push({

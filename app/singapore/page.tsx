@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { FlightCTA } from "@/app/components/FlightCTA";
@@ -89,7 +90,7 @@ const NEARBY = [
   { city: "Phuket", href: "/phuket" },
 ];
 
-const FAQ = [
+const FAQ: FaqItem[] = [
   {
     q: "How much are flights to Singapore?",
     a: `Round-trip fares to Singapore start from around ${usdStr(LOWEST_SEK)} in the low season (February), rising to $800 or more during the June–August and December peaks. As Changi is a major global hub with strong airline competition, booking two to four months ahead and flying midweek secures the best prices.`,
@@ -379,6 +380,9 @@ export default function SingaporeHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Singapore" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

@@ -12,7 +12,7 @@ import type { BcnPlace } from "@/app/data/barcelona-places";
 const SEV = (f: string) => `/images/tenerife/sevardheter/${f}`;
 const DAG = (f: string) => `/images/tenerife/dagsutflykter/${f}`;
 const STR = (f: string) => `/images/tenerife/strander/${f}`;
-const PLACEHOLDER = "/images/barcelona/placeholder.webp";
+const PLACEHOLDER = "/images/destinations/placeholder.avif";
 
 const tiqets = (q: string) =>
   `https://tp.media/r?campaign_id=89&marker=711264&p=2074&trs=508580&u=${encodeURIComponent(

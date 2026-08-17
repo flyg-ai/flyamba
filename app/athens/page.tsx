@@ -7,6 +7,7 @@ import { SmartImage } from "@/app/components/SmartImage";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { CATEGORIES } from "@/app/data/athens-places";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
@@ -84,6 +85,31 @@ export function generateMetadata(): Metadata {
   };
 }
 
+// Prices quoted here come from USD_MONTHS above, so they always match the
+// month-by-month chart further down the page.
+const FAQ: FaqItem[] = [
+  {
+    q: "How much does a flight to Athens cost?",
+    a: `Round-trip fares to Athens bottom out around $${LOW} in February and peak near $${HIGH} in July, averaging roughly $${Math.round(USD_MONTHS.reduce((s, m) => s + m.price, 0) / USD_MONTHS.length)} across the year. Booking six to eight weeks ahead and flying midweek keeps you at the lower end.`,
+  },
+  {
+    q: "Which airlines fly to Athens?",
+    a: "Aegean Airlines and its regional partner Olympic Air operate the widest network, joined by British Airways, Lufthansa, Air France, KLM and Turkish Airlines. Low-cost options include Ryanair, easyJet, Wizz Air and Volotea, while Emirates and Delta cover the long-haul routes.",
+  },
+  {
+    q: "When is the cheapest time to fly to Athens?",
+    a: `February is the cheapest month at about $${LOW} round-trip, and November through March all sit well below the annual average. Fares climb from May and peak in July and August; late September and October offer the best balance of warm weather and lower prices.`,
+  },
+  {
+    q: "How long is the flight to Athens?",
+    a: `Athens is about 3h 45m nonstop from London, 2h from Rome, 3h 20m from Paris and 1h 25m from Istanbul. From New York the nonstop is roughly 9h 45m. Flyamba currently tracks nonstop routes from ${NON_STOP.length} cities.`,
+  },
+  {
+    q: "Which airport does Athens use?",
+    a: `All scheduled flights use Athens International Airport "Eleftherios Venizelos" (${CITY.iata}), about 33 km east of the centre. Metro line 3 reaches Syntagma in roughly 40 minutes, and the X95 express bus runs around the clock.`,
+  },
+];
+
 function jsonLd() {
   const url = `${SITE}/athens`;
   const breadcrumb = {
@@ -104,7 +130,16 @@ function jsonLd() {
     touristType: ["Culture & History", "City Break", "Beach & Sun"],
     url,
   };
-  return [breadcrumb, touristDestination];
+  const faqPage = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  return [breadcrumb, touristDestination, faqPage];
 }
 
 function PreviewGrid({ items }: { items: { name: string; blurb: string; image: string }[] }) {
@@ -314,6 +349,8 @@ export default function AthensHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Athens" />
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

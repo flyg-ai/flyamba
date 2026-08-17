@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
@@ -109,6 +110,13 @@ export function generateMetadata(): Metadata {
   };
 }
 
+const FAQ: FaqItem[] = [
+  { q: "How much are flights to Paris?", a: "Round-trip fares to Paris (CDG) start from around $286, with the lowest prices typically in February and November and the highest in July. Booking six to eight weeks ahead usually gets the best deal." },
+  { q: "What is the cheapest month to fly to Paris?", a: "February and November are the cheapest months to fly to Paris, with average round-trip fares around $265–267. Summer (June to August) is the most expensive." },
+  { q: "Which airports serve Paris?", a: "Paris is served mainly by Charles de Gaulle (CDG), the largest international hub, and Orly (ORY) to the south. Beauvais (BVA) handles some low-cost flights. CDG connects to central Paris in about 35 minutes on the RER B." },
+  { q: "How many days do you need in Paris?", a: "Three to four days covers the essential sights — the Eiffel Tower, Louvre, Musée d'Orsay, Notre-Dame, Montmartre and the Marais — with time for cafés and a Seine cruise. Five or more days lets you add day trips such as Versailles or Giverny." },
+];
+
 function jsonLd() {
   const url = `${SITE}/paris`;
   const breadcrumb = {
@@ -132,28 +140,11 @@ function jsonLd() {
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "How much are flights to Paris?",
-        acceptedAnswer: { "@type": "Answer", text: "Round-trip fares to Paris (CDG) start from around $286, with the lowest prices typically in February and November and the highest in July. Booking six to eight weeks ahead usually gets the best deal." },
-      },
-      {
-        "@type": "Question",
-        name: "What is the cheapest month to fly to Paris?",
-        acceptedAnswer: { "@type": "Answer", text: "February and November are the cheapest months to fly to Paris, with average round-trip fares around $265–267. Summer (June to August) is the most expensive." },
-      },
-      {
-        "@type": "Question",
-        name: "Which airports serve Paris?",
-        acceptedAnswer: { "@type": "Answer", text: "Paris is served mainly by Charles de Gaulle (CDG), the largest international hub, and Orly (ORY) to the south. Beauvais (BVA) handles some low-cost flights. CDG connects to central Paris in about 35 minutes on the RER B." },
-      },
-      {
-        "@type": "Question",
-        name: "How many days do you need in Paris?",
-        acceptedAnswer: { "@type": "Answer", text: "Three to four days covers the essential sights — the Eiffel Tower, Louvre, Musée d'Orsay, Notre-Dame, Montmartre and the Marais — with time for cafés and a Seine cruise. Five or more days lets you add day trips such as Versailles or Giverny." },
-      },
-    ],
+    mainEntity: FAQ.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
   };
   return [breadcrumb, touristDestination, faq];
 }
@@ -370,6 +361,9 @@ export default function ParisHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQ} city="Paris" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

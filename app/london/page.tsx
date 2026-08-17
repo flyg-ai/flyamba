@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
@@ -78,7 +79,7 @@ const cheapestMonthUsd = usd(MONTHLY_SEK[cheapestIdx]);
 const dearestIdx = MONTHLY_SEK.indexOf(Math.max(...MONTHLY_SEK));
 const dearestMonthName = MONTH_NAMES[dearestIdx];
 
-const FAQS = [
+const FAQS: FaqItem[] = [
   {
     q: "How much are flights to London?",
     a: `Round-trip fares to London (Heathrow, LHR) start from around ${usdStr(MONTHLY_SEK[cheapestIdx])} in the low season and average higher in summer. From the US East Coast, expect roughly $400–$600 return; from within Europe, nonstop fares can dip below $100.`,
@@ -354,6 +355,9 @@ export default function LondonHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQS} city="London" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">

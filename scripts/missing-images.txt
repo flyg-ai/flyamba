@@ -1,0 +1,25 @@
+# Destinations with no hero image of their own
+#
+# These slugs in app/data/all-destinations.ts point at
+#   /images/destinations/placeholder.avif
+#   /images/destinations/placeholder-thumb.avif
+# a generic, landmark-free image. They render and index correctly, they just
+# don't illustrate the actual place yet.
+#
+# To resolve one: drop flights-<slug>.avif (~1600px wide) and
+# flights-<slug>-thumb.avif (450x300) into public/images/destinations/, then
+# point the entry's `image` / `thumbnail` at them and delete the line here.
+#
+# Previously this list held 59 slugs; 50 were resolved by converting the photos
+# already present in the flyg-ai sibling project. The 9 below have no source
+# image in either project.
+
+torres-del-paine
+st-maarten
+jaipur
+playa-del-carmen
+montego-bay
+varadero
+protaras
+limassol
+fethiye

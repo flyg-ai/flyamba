@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Dubrovnik Weather & Best Time to Visit | Flyamba", description: "Season-by-season Dubrovnik weather, sea temperatures, crowds and prices, with the best months to go.", type: "article" },
 };
 
-const INFO_IMG = "/images/barcelona/placeholder.webp";
+const INFO_IMG = "/images/destinations/placeholder.avif";
 
 const WEATHER: BcnPlace[] = [
   {

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Dubrovnik Events & Festivals | Flyamba", description: "Dubrovnik's key festivals and events through the year, from the Summer Festival to St Blaise, with dates and tips.", type: "article" },
 };
 
-const INFO_IMG = "/images/barcelona/placeholder.webp";
+const INFO_IMG = "/images/destinations/placeholder.avif";
 
 const EVENTS: BcnPlace[] = [
   {

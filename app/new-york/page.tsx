@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { SmartImage } from "@/app/components/SmartImage";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
@@ -32,7 +33,7 @@ export function generateMetadata(): Metadata {
 }
 
 // ── JSON-LD (Breadcrumb + TouristDestination + FAQPage) ──────────────────────
-const FAQS = [
+const FAQS: FaqItem[] = [
   {
     q: "How much are flights to New York?",
     a: `Round-trip fares to New York (JFK) start from around $${MIN_USD} and average roughly $${MAX_USD} in peak summer. February is the cheapest month to fly, while July and August are the most expensive.`,
@@ -344,6 +345,9 @@ export default function NewYorkHub() {
           ))}
         </div>
       </section>
+
+      <FaqSection items={FAQS} city="New York" />
+
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
