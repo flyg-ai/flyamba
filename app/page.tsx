@@ -5,6 +5,7 @@ import { Navbar } from "@/app/components/Navbar";
 import { HomeHero } from "@/app/components/HomeHero";
 import { HowItWorks } from "@/app/components/HowItWorks";
 import { HomeCard } from "@/app/components/HomeCard";
+import { HomeSeoSection, HOME_FAQ } from "@/app/components/HomeSeoSection";
 import { Footer } from "@/app/components/Footer";
 import { destinations } from "@/app/data/destinations";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
@@ -32,6 +33,18 @@ const websiteJsonLd = {
     target: { "@type": "EntryPoint", urlTemplate: "https://flyamba.com/?q={search_term_string}" },
     "query-input": "required name=search_term_string",
   },
+};
+
+// Mirrors the FAQ rendered by <HomeSeoSection /> below — the schema is only
+// valid while those answers are visible on the page.
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: HOME_FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
 };
 
 const TRIP_TYPES = [
@@ -73,7 +86,13 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
+      {[websiteJsonLd, faqJsonLd].map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
+        />
+      ))}
       <Navbar transparent />
 
       <HomeHero />
@@ -234,6 +253,8 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <HomeSeoSection />
 
       <Footer />
     </div>

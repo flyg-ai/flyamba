@@ -171,6 +171,16 @@
   color: transparent;
 }
 
+/* Body copy for the legal pages (/privacy, /terms, /cookies). */
+.legal-prose h2 { font-family: var(--font-serif); color: var(--foreground); font-size: 1.4rem; font-weight: 600; margin: 2.4rem 0 0.8rem; letter-spacing: -0.02em; }
+.legal-prose h3 { font-family: var(--font-serif); color: var(--foreground); font-size: 1.1rem; font-weight: 600; margin: 1.6rem 0 0.5rem; }
+.legal-prose p { color: var(--muted-foreground); line-height: 1.75; margin: 0 0 1rem; }
+.legal-prose ul { margin: 0 0 1.2rem; padding-left: 1.4rem; list-style: disc; color: var(--muted-foreground); line-height: 1.75; }
+.legal-prose li { margin: 0 0 0.5rem; }
+.legal-prose strong { color: var(--foreground); font-weight: 600; }
+.legal-prose a { color: var(--accent); text-decoration: none; }
+.legal-prose a:hover { text-decoration: underline; }
+
 /* Article body rendered from guide HTML content. */
 .guide-prose { color: var(--muted-foreground); line-height: 1.75; }
 .guide-prose h2 { font-family: var(--font-serif); color: var(--foreground); font-size: 1.6rem; font-weight: 600; margin: 2.2rem 0 0.9rem; letter-spacing: -0.02em; }

@@ -1,11 +1,34 @@
 import Link from "next/link";
-import { Plane, Instagram, Twitter, Facebook } from "lucide-react";
+import { Plane } from "lucide-react";
 
-const columns = [
-  { title: "Product", links: ["Search", "Explore", "Compare", "Deals", "Mobile app"] },
-  { title: "Company", links: ["About", "Careers", "Press", "Blog", "Contact"] },
-  { title: "Support", links: ["Help center", "Trust & safety", "Cancellations", "Accessibility"] },
-  { title: "Legal", links: ["Terms", "Privacy", "Cookies", "Sitemap"] },
+// Every entry points at a page that exists — the previous version linked a
+// column of placeholder "#" hrefs, several to pages that were never built.
+const columns: { title: string; links: { label: string; href: string }[] }[] = [
+  {
+    title: "Product",
+    links: [
+      { label: "Search", href: "/" },
+      { label: "Explore", href: "/explore" },
+      { label: "Compare", href: "/compare" },
+    ],
+  },
+  {
+    title: "Company",
+    links: [
+      { label: "About", href: "/about" },
+      { label: "Blog", href: "/explore" },
+      { label: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    title: "Legal",
+    links: [
+      { label: "Terms", href: "/terms" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Cookies", href: "/cookies" },
+      { label: "Sitemap", href: "/sitemap.xml" },
+    ],
+  },
 ];
 
 export function Footer() {
@@ -23,29 +46,28 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
               AI-powered flight search for curious travelers. Describe your dream trip — we handle the rest.
             </p>
-            <div className="mt-6 flex gap-2">
-              {[Instagram, Twitter, Facebook].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="grid h-10 w-10 place-items-center rounded-full border border-border bg-card text-foreground hover:text-accent"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
-            </div>
+            <p className="mt-4 max-w-sm text-xs leading-relaxed text-muted-foreground">
+              Flyamba is free to use. Some links are affiliate links — if you book through one we may earn a
+              commission, at no extra cost to you.
+            </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             {columns.map((c) => (
               <div key={c.title}>
                 <h4 className="text-sm font-semibold text-foreground">{c.title}</h4>
                 <ul className="mt-4 space-y-3">
                   {c.links.map((l) => (
-                    <li key={l}>
-                      <a href="#" className="text-sm text-muted-foreground hover:text-accent">
-                        {l}
-                      </a>
+                    <li key={l.label}>
+                      {l.href.startsWith("/sitemap") ? (
+                        <a href={l.href} className="text-sm text-muted-foreground hover:text-accent">
+                          {l.label}
+                        </a>
+                      ) : (
+                        <Link href={l.href} className="text-sm text-muted-foreground hover:text-accent">
+                          {l.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

@@ -10,8 +10,23 @@ import { SITE } from "@/app/lib/destination-helpers";
 // the same data the pages render from, so a new destination in the catalog shows
 // up in the sitemap on the next deploy without anyone editing XML.
 
-// Routes under app/ that exist but aren't destination hubs.
-const NOT_A_HUB = new Set(["api", "components", "data", "lib", "about", "compare", "explore"]);
+// Standalone pages, emitted explicitly rather than discovered by the hub scan.
+// Adding a page here is what keeps readHubs() from mistaking it for a city.
+const STATIC_ROUTES = [
+  { path: "/about", priority: 0.4 },
+  { path: "/compare", priority: 0.4 },
+  { path: "/explore", priority: 0.4 },
+  { path: "/contact", priority: 0.3 },
+  { path: "/privacy", priority: 0.2 },
+  { path: "/terms", priority: 0.2 },
+  { path: "/cookies", priority: 0.2 },
+];
+
+// app/ directories that aren't routes at all.
+const NON_ROUTE_DIRS = new Set(["api", "components", "data", "lib"]);
+
+// Anything already covered above must not also be emitted as a destination hub.
+const NOT_A_HUB = new Set([...NON_ROUTE_DIRS, ...STATIC_ROUTES.map((r) => r.path.slice(1))]);
 
 // Guide routes are emitted from the guides catalog below, not by scanning.
 const GUIDE_PATHS = new Set(guides.map((g) => g.path));
@@ -60,13 +75,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   });
 
-  // Named `route` rather than `path` so it doesn't shadow node:path above.
-  for (const route of ["/compare", "/about", "/explore"]) {
+  for (const route of STATIC_ROUTES) {
     entries.push({
-      url: `${SITE}${route}`,
+      url: `${SITE}${route.path}`,
       lastModified,
       changeFrequency: "monthly",
-      priority: 0.3,
+      priority: route.priority,
     });
   }
 

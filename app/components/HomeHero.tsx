@@ -139,8 +139,8 @@ export function HomeHero() {
             Describe your dream trip in plain words — Flyamba finds the cheapest flights across hundreds of airlines.
           </p>
 
-          {/* Search bar */}
-          <div className="mt-10 w-full animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
+          {/* Search bar — #search is the target of the closing CTA further down. */}
+          <div id="search" className="mt-10 w-full scroll-mt-24 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
             <div className="mx-auto w-full max-w-3xl">
               <div className="relative">
                 <div className="absolute -inset-2 rounded-[2rem] bg-accent/25 blur-2xl animate-pulse-glow" aria-hidden />
