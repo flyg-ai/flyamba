@@ -107,7 +107,9 @@ export function HomeHero() {
   return (
     <>
       {/* Hero */}
-      <section className="relative isolate h-[92vh] min-h-[640px] w-full overflow-hidden">
+      {/* min-height (not a fixed height) so the section grows rather than clips
+          if the pills wrap onto extra rows on a narrow screen. */}
+      <section className="relative isolate flex h-hero-viewport w-full flex-col overflow-hidden">
         <Image
           src="/images/content/photo-1507525428034-b723cf961d3e.avif"
           alt="Aerial view of a tropical coastline"
@@ -117,7 +119,10 @@ export function HomeHero() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-hero-overlay" />
-        <div className="relative z-10 mx-auto flex h-full max-w-5xl flex-col items-center justify-center px-4 pt-16 text-center">
+        {/* flex-1 fills the section instead of h-full, which needs a definite
+            parent height and would collapse now the section only sets min-h.
+            pb clears the bottom fade so the last pill is never under it. */}
+        <div className="relative z-10 mx-auto flex w-full max-w-5xl flex-1 flex-col items-center justify-center px-4 pb-28 pt-16 text-center sm:pb-24">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white backdrop-blur animate-fade-in-up">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
@@ -172,7 +177,7 @@ export function HomeHero() {
                 </form>
               </div>
 
-              <div className="mt-5 flex flex-wrap justify-center gap-2">
+              <div className="mt-5 flex flex-wrap justify-center gap-2 pb-2">
                 {suggestions.map((s) => (
                   <button
                     key={s}
@@ -189,7 +194,9 @@ export function HomeHero() {
             </div>
           </div>
         </div>
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-background" />
+        {/* Shorter than the old h-32 so the fade starts below the pills rather
+            than reaching up into them on short viewports. */}
+        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-background sm:h-24" />
       </section>
 
       {/* Results — rendered BELOW the hero in normal flow so nothing is clipped */}

@@ -135,6 +135,35 @@
   background: linear-gradient(180deg, rgba(10,10,26,0.35) 0%, rgba(10,10,26,0.55) 60%, rgba(10,10,26,0.9) 100%);
 }
 
+/*
+ * Hero height on mobile.
+ *
+ * `vh` resolves against the *large* viewport — the height the page would have
+ * if the browser chrome were hidden. Samsung Internet and Chrome on Android
+ * show their toolbars on load, so a 92vh hero is taller than what's actually
+ * visible and its bottom content (the suggestion pills) starts below the fold.
+ *
+ * `svh` is the small viewport — the height with chrome *shown* — so the hero
+ * always fits. `dvh` is deliberately avoided: it changes as the toolbar hides
+ * on scroll, which would resize the hero mid-scroll. The plain `vh` line is a
+ * fallback for browsers without svh support (Samsung Internet < 21).
+ */
+@utility h-hero-viewport {
+  min-height: 92svh;
+}
+
+/*
+ * Fallback for browsers without small-viewport units (Samsung Internet < 21).
+ * It has to live in @supports rather than as a second min-height declaration in
+ * the utility above — Lightning CSS collapses duplicate properties in the same
+ * rule and drops the vh line entirely.
+ */
+@supports not (min-height: 1svh) {
+  .h-hero-viewport {
+    min-height: 92vh;
+  }
+}
+
 @utility text-gradient-accent {
   background: linear-gradient(90deg, #FF6B35, #FF8555);
   -webkit-background-clip: text;
