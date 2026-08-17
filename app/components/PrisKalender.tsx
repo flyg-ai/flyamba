@@ -27,6 +27,43 @@ export const AIRLINE_IATA: Record<string, string> = {
   norwegian: "DY",
 };
 
+// Origins offered in the "Flying from" selector. The API can serve any IATA, so
+// this list is about keeping the dropdown short rather than limiting coverage.
+export const ORIGINS: { code: string; label: string }[] = [
+  { code: "LON", label: "London" },
+  { code: "JFK", label: "New York" },
+  { code: "LAX", label: "Los Angeles" },
+  { code: "CDG", label: "Paris" },
+  { code: "AMS", label: "Amsterdam" },
+  { code: "FRA", label: "Frankfurt" },
+  { code: "MAD", label: "Madrid" },
+  { code: "FCO", label: "Rome" },
+  { code: "BCN", label: "Barcelona" },
+  { code: "DXB", label: "Dubai" },
+  { code: "SYD", label: "Sydney" },
+  { code: "YYZ", label: "Toronto" },
+  { code: "SIN", label: "Singapore" },
+  { code: "NRT", label: "Tokyo" },
+  { code: "ARN", label: "Stockholm" },
+  { code: "OSL", label: "Oslo" },
+  { code: "CPH", label: "Copenhagen" },
+];
+
+const ORIGIN_LABEL = new Map(ORIGINS.map((o) => [o.code, o.label]));
+
+// The chosen origin is remembered so it carries across calendar pages rather
+// than resetting to the detected default on every navigation.
+const ORIGIN_KEY = "flyamba-origin";
+
+function storedOrigin(): string | null {
+  try {
+    const v = localStorage.getItem(ORIGIN_KEY);
+    return v && /^[A-Z]{3}$/.test(v) ? v : null;
+  } catch {
+    return null;
+  }
+}
+
 const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 const MONTHS = [
   "January", "February", "March", "April", "May", "June",
@@ -46,6 +83,7 @@ type CalendarData = {
   dates: Record<string, number>;
   airlines: Record<string, string>;
   origin: string;
+  detected: boolean;
 };
 
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -74,6 +112,14 @@ export default function PrisKalender({
   // way through to Kiwi.
   const [blockedUrl, setBlockedUrl] = useState<string | null>(null);
 
+  // `requested` is the origin the user explicitly picked and is what the fetch
+  // keys on; null means "let the server infer it from my country". `origin` is
+  // whatever the server actually used, and drives the label and the dropdown —
+  // keeping them apart is what stops the response feeding back into the fetch
+  // and looping.
+  const [requested, setRequested] = useState<string | null>(null);
+  const [origin, setOrigin] = useState<string | null>(null);
+
   const iata = destinationIata.trim().toUpperCase();
 
   // Reset during render when the destination changes rather than in an effect —
@@ -95,20 +141,51 @@ export default function PrisKalender({
   useEffect(() => {
     let cancelled = false;
 
-    fetch(`/api/tp-calendar?iata=${encodeURIComponent(iata)}`)
-      .then((r) => (r.ok ? r.json() : { dates: {}, airlines: {}, origin: "" }))
+    // Read the remembered choice here rather than in state initialisation: it
+    // would differ between server and client and break hydration. Reading it
+    // inside the effect also keeps setState out of the synchronous path, which
+    // is what react-hooks/set-state-in-effect objects to.
+    const pick = requested ?? storedOrigin();
+    const query = pick ? `&origin=${encodeURIComponent(pick)}` : "";
+
+    fetch(`/api/tp-calendar?iata=${encodeURIComponent(iata)}${query}`)
+      .then((r) => (r.ok ? r.json() : { dates: {}, airlines: {}, origin: "", detected: false }))
       .then((json: CalendarData) => {
         if (cancelled) return;
-        setData({ dates: json?.dates ?? {}, airlines: json?.airlines ?? {}, origin: json?.origin ?? "" });
+        setData({
+          dates: json?.dates ?? {},
+          airlines: json?.airlines ?? {},
+          origin: json?.origin ?? "",
+          detected: !!json?.detected,
+        });
+        if (json?.origin) setOrigin(json.origin);
       })
       .catch(() => {
-        if (!cancelled) setData({ dates: {}, airlines: {}, origin: "" });
+        if (!cancelled) setData({ dates: {}, airlines: {}, origin: "", detected: false });
       });
 
     return () => {
       cancelled = true;
     };
-  }, [iata]);
+  }, [iata, requested]);
+
+  function changeOrigin(code: string) {
+    setRequested(code);
+    setOrigin(code);
+    // Back to the loading state while the new origin's fares are fetched.
+    // Done here rather than in the effect: a synchronous setState inside an
+    // effect is the cascading-render pattern the lint rule rejects.
+    setData(null);
+    setDep(null);
+    setRet(null);
+    setBlockedUrl(null);
+    setMonthOffset(0);
+    try {
+      localStorage.setItem(ORIGIN_KEY, code);
+    } catch {
+      // Private mode or storage disabled — the choice just won't persist.
+    }
+  }
 
   // The carrier filter is applied before anything else reads prices, so the
   // colour thresholds and the "cheapest" summary describe what is actually shown.
@@ -165,7 +242,10 @@ export default function PrisKalender({
     return "mid";
   }
 
-  const origin = data?.origin || "";
+  // Falls back to the response's origin so the Kiwi links are never built with
+  // an empty `from` if a render lands between fetch and state update.
+  const activeOrigin = origin ?? data?.origin ?? "";
+  const originLabel = activeOrigin ? (ORIGIN_LABEL.get(activeOrigin) ?? activeOrigin) : null;
 
   function affiliate(url: string): string {
     return `https://tp.media/r?marker=711264.flyamba&trs=508580&p=4478&u=${encodeURIComponent(url)}`;
@@ -173,7 +253,7 @@ export default function PrisKalender({
 
   function buildKiwiUrl(depDate: string, retDate: string): string {
     return affiliate(
-      `https://www.kiwi.com/deep?from=${origin}&to=${iata}&departure=${depDate}&arrival=${retDate}`,
+      `https://www.kiwi.com/deep?from=${activeOrigin}&to=${iata}&departure=${depDate}&arrival=${retDate}`,
     );
   }
 
@@ -205,7 +285,7 @@ export default function PrisKalender({
   });
 
   const hasAnyPrice = Object.keys(prices).length > 0;
-  const noPriceHref = affiliate(`https://www.kiwi.com/deep?from=${origin}&to=${iata}`);
+  const noPriceHref = affiliate(`https://www.kiwi.com/deep?from=${activeOrigin}&to=${iata}`);
 
   return (
     <div className="pk-root">
@@ -220,6 +300,31 @@ export default function PrisKalender({
         .pk-head-text { font-size: 15px; font-weight: 800; color: var(--foreground); letter-spacing: -0.01em; }
         .pk-sub { font-size: 13px; color: var(--muted-foreground); margin: 4px 0 14px; line-height: 1.5; }
         .pk-sub b { color: ${ACCENT}; font-weight: 800; }
+
+        .pk-origin { display: flex; flex-direction: column; gap: 5px; margin: 12px 0 4px; }
+        .pk-origin-label {
+          font-size: 12px; font-weight: 700; letter-spacing: 0.01em;
+          color: var(--muted-foreground);
+        }
+        .pk-origin-select {
+          appearance: none;
+          width: 100%; max-width: 260px;
+          padding: 9px 34px 9px 13px;
+          border-radius: 100px;
+          border: 1px solid var(--border);
+          background: var(--background);
+          color: var(--foreground);
+          font-family: inherit; font-size: 13.5px; font-weight: 700;
+          cursor: pointer;
+          /* Chevron drawn inline so the control needs no icon dependency and
+             stays legible on both themes. */
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1.5 6 6.5l5-5' stroke='%23FF6B35' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-position: right 13px center;
+          transition: border-color 0.12s;
+        }
+        .pk-origin-select:hover { border-color: ${ACCENT}; }
+        .pk-origin-select:focus-visible { outline: 2px solid ${ACCENT}; outline-offset: 1px; }
 
         .pk-nav { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
         .pk-nav-btn {
@@ -322,8 +427,33 @@ export default function PrisKalender({
       <div className="pk-head">
         <span className="pk-head-text">Find the cheapest day to fly — select departure and return</span>
       </div>
+      <div className="pk-origin">
+        <label className="pk-origin-label" htmlFor={`pk-origin-${iata}`}>
+          Flying from {originLabel ?? "…"}
+        </label>
+        <select
+          id={`pk-origin-${iata}`}
+          className="pk-origin-select"
+          value={activeOrigin || ""}
+          onChange={(e) => changeOrigin(e.target.value)}
+        >
+          {!activeOrigin && <option value="">Detecting…</option>}
+          {/* A detected origin outside the shortlist still needs an entry, or
+              the select would silently show the wrong city. */}
+          {activeOrigin && !ORIGIN_LABEL.has(activeOrigin) && (
+            <option value={activeOrigin}>{activeOrigin}</option>
+          )}
+          {/* Drop the destination itself — an airport can't be both ends. */}
+          {ORIGINS.filter((o) => o.code !== iata).map((o) => (
+            <option key={o.code} value={o.code}>
+              {o.label} ({o.code})
+            </option>
+          ))}
+        </select>
+      </div>
+
       <p className="pk-sub">
-        Round-trip fares{origin ? ` from ${origin}` : ""} to {destinationCity} ({iata})
+        Round-trip fares{originLabel ? ` from ${originLabel}` : ""} to {destinationCity} ({iata})
         {airlineName ? `, ${airlineName} only` : ""}.
         {cheapestDate && (
           <>
