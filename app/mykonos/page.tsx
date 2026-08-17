@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { LowFareCta } from "@/app/components/LowFareCta";
 import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { SmartImage } from "@/app/components/SmartImage";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
@@ -200,6 +201,7 @@ export default function MykonosHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Mykonos</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Mykonos is easier than ever, with direct routes from New York, London and other major hubs — making Mykonos one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Mykonos, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Mykonos — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={MYKONOS.tpName} />
+        <LowFareCta slug="mykonos" city="Mykonos" />
       </section>
 
       {/* 4. Booking insights */}

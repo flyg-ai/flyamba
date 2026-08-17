@@ -7,12 +7,22 @@ export type FaqItem = { q: string; a: string };
  * page emitting the FAQ schema must render this too — schema-only FAQs are a
  * structured-data violation, not just a missed opportunity.
  */
-export function FaqSection({ items, city }: { items: FaqItem[]; city: string }) {
+export function FaqSection({
+  items,
+  city,
+  heading,
+}: {
+  items: FaqItem[];
+  city: string;
+  /** Overrides the default "Flying to {city}" wording — airline pages need it,
+   *  since "Flying to Ryanair" reads as a destination. */
+  heading?: string;
+}) {
   return (
     <section id="faq" className="mx-auto mt-16 max-w-4xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
       <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Good to know</p>
       <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
-        Flying to {city} — your questions answered
+        {heading ?? `Flying to ${city} — your questions answered`}
       </h2>
       <dl className="mt-8 space-y-4">
         {items.map((f) => (

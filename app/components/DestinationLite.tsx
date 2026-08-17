@@ -6,6 +6,8 @@ import { SmartImage } from "@/app/components/SmartImage";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
 import { usd5, usdStr } from "@/app/lib/format";
 import { SITE } from "@/app/lib/destination-helpers";
+import { LowFareCta } from "@/app/components/LowFareCta";
+import { CALENDAR_BY_SLUG } from "@/app/lib/low-fare";
 import { Plane, Globe, MapPin, TrendingDown, ArrowRight, Sparkles } from "lucide-react";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -111,6 +113,9 @@ export function DestinationLite({ d }: { d: AllDestination }) {
           Compare live fares and find cheap flights to {d.name}, {d.country} — search hundreds of airlines and book direct.
         </p>
         <AviasalesWidget toName={d.tpName} />
+        {/* Only the 22 cities with a calendar page — everything else would link
+            to a route that doesn't exist. */}
+        {CALENDAR_BY_SLUG.has(d.slug) && <LowFareCta slug={d.slug} city={d.name} />}
       </section>
 
       {/* Basic info */}

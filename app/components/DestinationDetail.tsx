@@ -7,6 +7,8 @@ import { Footer } from "@/app/components/Footer";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { FaqItem } from "@/app/components/FaqItem";
 import { SITE, airlineNames, lowestPriceStr, bestTimeToVisit } from "@/app/lib/destination-helpers";
+import { LowFareCta } from "@/app/components/LowFareCta";
+import { CALENDAR_BY_SLUG } from "@/app/lib/low-fare";
 import {
   Cloud, CloudRain, Plane, Snowflake, Sun, Calendar, ArrowRight, Sparkles, Thermometer,
   Utensils, BedDouble, TrendingDown, TrendingUp, Users, Bell, Shield, CalendarDays, Sunrise,
@@ -167,6 +169,9 @@ export function DestinationDetail({
           </div>
           <div id="flight-search" className="mt-10 scroll-mt-24">
             <AviasalesWidget toName={d.tpName || ""} />
+            {/* Only the 22 cities with a calendar page — everything else would
+                link to a route that doesn't exist. */}
+            {CALENDAR_BY_SLUG.has(d.slug) && <LowFareCta slug={d.slug} city={d.city} />}
           </div>
         </section>
       )}

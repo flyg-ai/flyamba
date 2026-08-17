@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { LowFareCta } from "@/app/components/LowFareCta";
 import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
@@ -233,6 +234,7 @@ export default function DubrovnikHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Dubrovnik</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Dubrovnik Airport (DBV) is well connected across Europe, with direct routes from London, Frankfurt, Paris, Rome and Istanbul, plus a growing list of seasonal summer flights — making the pearl of the Adriatic one of the most popular beach-and-culture escapes from the UK, Europe and, via connections, the US. Find cheap flights to Dubrovnik, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Dubrovnik — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+        <LowFareCta slug="dubrovnik" city="Dubrovnik" />
       </section>
 
       {/* 4. Booking insights */}

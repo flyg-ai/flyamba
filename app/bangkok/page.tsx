@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
+import { LowFareCta } from "@/app/components/LowFareCta";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
@@ -218,6 +219,8 @@ export default function BangkokHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Bangkok</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Bangkok is easier than ever, with direct routes from New York, London and other major hubs — making Bangkok one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Bangkok, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Bangkok — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        <LowFareCta slug="bangkok" city="Bangkok" />
       </section>
 
       {/* 4. Booking insights */}

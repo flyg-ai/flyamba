@@ -4,6 +4,7 @@ import type { MetadataRoute } from "next";
 import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 import { destinations } from "@/app/data/destinations";
 import { guides } from "@/app/data/guides";
+import { CALENDAR_DESTINATIONS, CALENDAR_AIRLINES, lowFareHref } from "@/app/lib/low-fare";
 import { SITE } from "@/app/lib/destination-helpers";
 
 // Replaces the hand-maintained public/sitemap.xml. Generated at build time from
@@ -20,10 +21,18 @@ const STATIC_ROUTES = [
   { path: "/privacy", priority: 0.2 },
   { path: "/terms", priority: 0.2 },
   { path: "/cookies", priority: 0.2 },
+  { path: "/low-fare-calendar", priority: 0.7 },
 ];
 
-// app/ directories that aren't routes at all.
-const NON_ROUTE_DIRS = new Set(["api", "components", "data", "lib"]);
+// app/ directories that aren't routes at all, plus the airline folders — those
+// hold only a /low-fare-calendar child, so they must not be read as city hubs.
+const NON_ROUTE_DIRS = new Set([
+  "api",
+  "components",
+  "data",
+  "lib",
+  ...CALENDAR_AIRLINES.map((a) => a.slug),
+]);
 
 // Anything already covered above must not also be emitted as a destination hub.
 const NOT_A_HUB = new Set([...NON_ROUTE_DIRS, ...STATIC_ROUTES.map((r) => r.path.slice(1))]);
@@ -103,6 +112,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
       });
     }
+  }
+
+  // Low fare calendars: one per destination, one per airline.
+  for (const d of CALENDAR_DESTINATIONS) {
+    entries.push({
+      url: `${SITE}${lowFareHref(d.slug)}`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.8,
+    });
+  }
+  for (const a of CALENDAR_AIRLINES) {
+    entries.push({
+      url: `${SITE}/${a.slug}/low-fare-calendar`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.7,
+    });
   }
 
   // Long-form guides live under their destination hub (/barcelona/budget-guide).
