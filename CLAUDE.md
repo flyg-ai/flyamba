@@ -94,8 +94,19 @@ rich slugs, `DestinationLite` otherwise. `/[slug]/[category]` is a `noindex` "co
 
 **API** (`runtime = "nodejs"`):
 - `/api/ai-search` — Anthropic `claude-haiku-4-5`, pipe-format protocol
-  (`INTENT|…`, `HEADLINE|…`, `<IATA>|<City>|<why>`, `FOLLOW|…`, or a single `CONV|…`).
-  Catalog = the 8 rich destinations. Supabase-cached.
+  (`INTENT|…`, `HEADLINE|…`, `<slug>|<City>|<why>`, `FOLLOW|…`, or a single `CONV|…`).
+  Catalog = **all 550** `ALL_DESTINATIONS`, serialized as pipe lines (~5k tokens; JSON
+  would be ~14k) in a `cache_control: ephemeral` system block. Supabase-cached.
+
+  **The protocol is keyed on SLUG, not IATA — do not "simplify" it back.** IATA is not
+  unique in this catalog: 550 destinations share 429 codes (SPU serves 8, AGP and LIS 7
+  each). An IATA-keyed lookup silently resolves Hvar to Split.
+
+  When the query names a region, `detectContinent()` filters the catalog **before** it is
+  sent, so an out-of-region answer is impossible rather than merely discouraged. The
+  parser then drops any slug outside the set that was actually shown. Both layers matter:
+  with only the 8 rich destinations to pick from, "best european beach destination" used
+  to return Marrakech and Reykjavik.
 - `/api/destination-chat` — per-destination Q&A behind `AskAiWidget`. Cached, 7-day TTL.
 - `/api/tp-calendar` — Travelpayouts `v1/prices/calendar` proxy, `revalidate = 86400`.
   Origin from `x-vercel-ip-country` / `cf-ipcountry` → `ORIGIN_BY_COUNTRY`, fallback `LON`.
@@ -105,7 +116,8 @@ rich slugs, `DestinationLite` otherwise. `/[slug]/[category]` is a `noindex` "co
 **`app/data/destinations.ts`** — `destinations: Destination[]`, only **8 entries**
 (barcelona, tokyo, lisbon, new-york, bali, cape-town, reykjavik, marrakech) but very rich
 (~60 optional fields: monthlyPrices, faqs, neighborhoods, dayTrips, scores…).
-This is the catalog `/api/ai-search` reasons over.
+These drive `DestinationDetail`; `/api/ai-search` reasons over all 550 in
+`all-destinations.ts` and only pulls `tagline` from here.
 
 **`app/data/all-destinations.ts`** — `ALL_DESTINATIONS: AllDestination[]`, **550 slim entries**
 (`slug, name, country, continent, iata, tpName, monthlyPrices[12], image, thumbnail, scores?,
@@ -188,28 +200,53 @@ All optional at build time — every consumer degrades gracefully. Vercel needs 
 **Done:** 28 hubs + subpages, 8 guides, low-fare calendar (22 destinations + 6 airlines),
 AI search with Supabase caching, sitemap/robots, 21 legacy-slug redirects.
 
-**`/compare` is minimal.** One client-rendered route, state in `?d=slug1,slug2` (max 4),
-picker limited to the ~21 cities that have `scores`. Renders a comparison table plus score
-dots. There are **no static per-pair pages and no AI involvement at all**.
+### /compare
 
-Known quirk: the price row does `usdStr(d.priceUsd * 10.5)` — re-multiplying an already
-converted value so `usdStr` can divide it back. Fix if you touch that file.
+Three layers, all sharing one catalog:
 
-**Next up:**
+- **`app/compare/comparable.ts`** — `COMPARABLE`, the 26 comparable cities (the 8 rich
+  destinations ∪ the 21 slim entries with `scores`; the 28 hubs minus **madrid** and
+  **mykonos**, which have no scores). Also `ROWS`, `bestSlug()`, `TRAVEL_STYLES`. No JSX,
+  so server components can import it.
+- **`app/compare/pairs.ts`** — `TOP_PAIRS`, 20 pre-rendered head-to-heads. **Zero imports
+  on purpose** so `app/sitemap.ts` can read it without pulling in the catalog or the
+  Anthropic SDK. Same reason flyg.ai keeps `app/jamfor/pairs.ts` bare.
+- **`app/compare/ComparisonTable.tsx`** — the table, shared by both flows. `onRemove`
+  present = interactive tool; absent = static page.
 
-1. **Static compare pages.** flyg.ai's model: `app/jamfor/pairs.ts` holds `TOP_PAIRS`
-   (130 slugs like `barcelona-eller-rom`) consumed by both `app/jamfor/[comparison]/page.tsx`
-   and the sitemap, kept dependency-free on purpose. Flyamba equivalent would be
-   `app/compare/pairs.ts` with `<a>-vs-<b>` slugs.
-2. **AI recommendation on compare.** flyg.ai's `app/jamfor/AiRecommendation.tsx` +
-   `/api/jamfor-recommend`: user picks month + travel styles, route returns
-   `{ intro, winner: {slug, reason}, alternatives: [{slug, reason}] }`, cached per
-   (sorted slugs + intents + month). Dynamic `/jamfor` auto-generates on mount; static pair
-   pages show a lazy CTA card instead. Port both behaviours.
-3. **`daily_prices` has no writer.** Needs a `/api/cron/prices` route hitting Travelpayouts
+**Pair URLs are canonical-alphabetical.** `pairSlug()` sorts the two slugs, so
+`/compare/rome-vs-athens` 308s to `/compare/athens-vs-rome` — one URL per comparison.
+`dynamicParams = true`: `TOP_PAIRS` is a pre-render + sitemap list, not a whitelist, so any
+two comparable slugs render on demand. Unknown slugs 404.
+
+**AI recommendation** — `app/compare/AiRecommendation.tsx` + `/api/compare-recommend`.
+Visitor picks a month and any of the six travel styles; the route returns
+`{ intro, winner: {slug, reason}, alternatives: [{slug, reason}] }` in the codebase's pipe
+format, cached in `ai_chat_cache` under `category_page = "compare"` keyed on
+(sorted slugs + styles + month).
+
+The two flows differ by one prop: the interactive `/compare` passes `autoGenerate` and fires
+on mount; **static pair pages must not** — they have to render fully without ever calling
+Anthropic, or 20 pages × every crawl burns API calls on bots. The styles are the same six
+`scores` keys the table displays, so the model reasons over numbers the visitor can see.
+A response naming a destination outside the shortlist is discarded rather than shown.
+
+**Prices in the comparison are all sourced from `ALL_DESTINATIONS.monthlyPrices`**, including
+for the 8 rich cities. `destinations.price` and `monthlyPrices` disagree by 0.8x–2.1x on the
+same city (Barcelona 1290 vs 2700 SEK) because they were authored separately — mixing them
+meant Barcelona won every price row it appeared in. `destinations.price` is still the right
+number on a destination's own page; it is just not comparable across cities. See
+`comparablePriceSek()` in `comparable.ts`.
+
+## Next up
+
+1. **`daily_prices` has no writer.** Needs a `/api/cron/prices` route hitting Travelpayouts
    plus `CRON_SECRET` and a `vercel.json` schedule — same shape as flyg.ai's.
-4. **9 destinations still on placeholder images** — see `scripts/missing-images.txt`.
+2. **9 destinations still on placeholder images** — see `scripts/missing-images.txt`.
    No source photo exists in either project.
-5. **2 Lisbon attractions on placeholders** — Padrão dos Descobrimentos and Sé Cathedral,
+3. **2 Lisbon attractions on placeholders** — Padrão dos Descobrimentos and Sé Cathedral,
    marked with TODOs in `lisbon-places.ts`. No photo in either project.
-6. `README.md` is still create-next-app boilerplate.
+4. **Only 26 of 550 catalog cities are comparable**, because `scores` were only authored for
+   the built-out hubs. More pairs means authoring more `scores` in `all-destinations.ts`
+   (madrid and mykonos are the two quickest wins — they already have hubs).
+5. `README.md` is still create-next-app boilerplate.
