@@ -50,7 +50,7 @@ export default function AmsterdamDayTrips() {
       active="day-trips"
       crumb="Day Trips"
       h1="Best Day Trips from Amsterdam"
-      heroImage="/images/amsterdam/dagsutflykter/zaanse-schans.webp"
+      heroImage="/images/amsterdam/day-trips/costa-brava-landscape-amsterdam.webp"
       intro="One of the joys of Amsterdam is how easily the rest of the Netherlands opens up from it, thanks to a fast, reliable rail network. In well under an hour you can be among working windmills at Zaanse Schans, wandering the Golden Age streets of Haarlem or Utrecht, or exploring bold, modern Rotterdam — while spring brings the world's greatest tulip garden at Keukenhof, and the fairytale canal village of Giethoorn rewards a longer day out. Here are the best day trips, with travel times, costs and tips."
       wide
     >

@@ -98,15 +98,15 @@ const NON_STOP = [
 
 const CATEGORY_IMAGES: Record<string, string> = {
   attractions: "/images/mykonos/attractions/vindkvarnarna-kato-mili.webp",
-  restaurants: "/images/mykonos/restaurants/scorpios.webp",
-  hotels: "/images/mykonos/hotels/cavo-tagoo.webp",
-  beaches: "/images/mykonos/beaches/elia-beach.webp",
+  restaurants: "/images/mykonos/restaurants/restaurant-mykonos.avif",
+  hotels: "/images/mykonos/hotels/hotel-mykonos.avif",
+  beaches: "/images/mykonos/beaches/barceloneta-mykonos.webp",
   transport: "/images/mykonos/attractions/little-venice-alefkandra.webp",
   prices: "/images/mykonos/attractions/chora-mykonos-town.webp",
   weather: "/images/mykonos/beaches/paraga-beach.webp",
-  shopping: "/images/mykonos/shopping/matoyianni-street.webp",
-  nightlife: "/images/mykonos/nightlife/cavo-paradiso.webp",
-  "with-kids": "/images/mykonos/with-kids/mykonos-waterpark.webp",
+  shopping: "/images/mykonos/shopping/artisan-shop-mykonos.webp",
+  nightlife: "/images/mykonos/nightlife/cocktail-bar-mykonos.webp",
+  "with-kids": "/images/mykonos/with-kids/aquarium-mykonos.webp",
   "day-trips": "/images/mykonos/day-trips/delos-unesco-ruiner.webp",
   events: "/images/mykonos/attractions/little-venice-alefkandra.webp",
 };
@@ -117,14 +117,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Delos", blurb: "Apollo's birthplace: a UNESCO island of temples and marble lions.", image: "/images/mykonos/attractions/delos-dagstrip.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Scorpios", blurb: "The cult beach club with a famous sunset ritual on Paraga Beach.", image: "/images/mykonos/restaurants/scorpios.webp" },
-  { name: "Kiki's Taverna", blurb: "Off-grid charcoal grilling above a wild northern beach — no electricity.", image: "/images/mykonos/restaurants/kikis-taverna.webp" },
-  { name: "Spilia", blurb: "Pristine seafood served inside a natural seaside cave.", image: "/images/mykonos/restaurants/spilia.webp" },
+  { name: "Scorpios", blurb: "The cult beach club with a famous sunset ritual on Paraga Beach.", image: "/images/mykonos/restaurants/restaurant-mykonos.avif" },
+  { name: "Kiki's Taverna", blurb: "Off-grid charcoal grilling above a wild northern beach — no electricity.", image: "/images/mykonos/restaurants/restaurant-mykonos.avif" },
+  { name: "Spilia", blurb: "Pristine seafood served inside a natural seaside cave.", image: "/images/mykonos/restaurants/restaurant-mykonos.avif" },
 ];
 const TRIP_PREVIEW = [
   { name: "Delos", blurb: "The sacred archaeological island, 15 minutes by boat.", image: "/images/mykonos/day-trips/delos-unesco-ruiner.webp" },
-  { name: "Santorini", blurb: "The caldera and the Oia sunset on a full-day catamaran trip.", image: "/images/mykonos/day-trips/santorini.webp" },
-  { name: "Naxos", blurb: "The greenest Cycladic island: long beaches and the Portara gate.", image: "/images/mykonos/day-trips/naxos.webp" },
+  { name: "Santorini", blurb: "The caldera and the Oia sunset on a full-day catamaran trip.", image: "/images/mykonos/day-trips/costa-brava-landscape-mykonos.webp" },
+  { name: "Naxos", blurb: "The greenest Cycladic island: long beaches and the Portara gate.", image: "/images/mykonos/day-trips/girona-mykonos.webp" },
 ];
 
 const WHY = [

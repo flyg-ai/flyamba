@@ -54,7 +54,7 @@ export default function RomeNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Rome Nightlife"
-      heroImage="/images/rome/nattliv/terrazza-caffarelli.webp"
+      heroImage="/images/rome/nightlife/cocktail-bar-rome.webp"
       intro="Rome's night begins gently with aperitivo — a spritz and a spread of snacks as the light softens — and unfolds from there. Trastevere's lanes buzz with bars, hidden speakeasies mix serious cocktails, rooftop terraces frame the domes at sunset, cellars host live jazz and blues, and a handful of clubs keep going until dawn. Here is where to drink and dance, from the first Negroni to the last dance floor, with areas, prices and tips."
       wide
     >

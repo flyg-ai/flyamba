@@ -54,7 +54,7 @@ export default function RomeWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Rome with Kids"
-      heroImage="/images/rome/med-barn/villa-borghese-parken.webp"
+      heroImage="/images/rome/with-kids/aquarium-rome.webp"
       intro="Ancient ruins can only hold small attention spans for so long — happily, Rome has plenty to keep children delighted. They can pedal boats and hire bikes in Villa Borghese, meet the animals at the Bioparco zoo, play their way through the Explora children's museum, train as gladiators on the Appian Way, and cool off on rainy days in hands-on museums. Here are the best family outings, with suggested ages, prices and practical tips."
       wide
     >

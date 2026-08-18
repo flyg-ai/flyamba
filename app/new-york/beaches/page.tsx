@@ -52,7 +52,7 @@ export default function NewYorkBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Best Beaches Near New York"
-      heroImage="/images/new-york/beaches/coney-island.webp"
+      heroImage="/images/new-york/beaches/barceloneta-new-york.webp"
       intro="New York has more beach than you might expect. City beaches like Coney Island, Brighton Beach and the surf sands of Rockaway are reachable by subway or ferry in under 90 minutes, while Long Island opens up wider, cleaner stretches — Jones Beach, Long Beach, car-free Fire Island and the glamorous Hamptons. The Atlantic warms to a swimmable 18–22°C from June to September. Here are the best beaches near the city, with how to reach each by subway, train, ferry or car, and tips on which are worth a day trip and which reward an overnight."
       wide
     >

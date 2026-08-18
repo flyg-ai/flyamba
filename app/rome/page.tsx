@@ -54,14 +54,14 @@ const NON_STOP = [
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/rome/sevardheter/colosseum.webp",
   restaurants: "/images/rome/restauranger/roscioli.webp",
-  hotels: "/images/rome/hotell/hotel-eden.webp",
+  hotels: "/images/rome/hotels/hotel-rome.avif",
   transport: "/images/rome/sevardheter/spanska-trappan.webp",
   prices: "/images/rome/sevardheter/trevi-fontanen.webp",
   weather: "/images/rome/sevardheter/piazza-navona.webp",
-  shopping: "/images/rome/shopping/via-dei-condotti.webp",
-  beaches: "/images/rome/strander/sperlonga.webp",
-  nightlife: "/images/rome/nattliv/terrazza-caffarelli.webp",
-  "with-kids": "/images/rome/med-barn/villa-borghese-parken.webp",
+  shopping: "/images/rome/shopping/artisan-shop-rome.webp",
+  beaches: "/images/rome/beaches/barceloneta-rome.webp",
+  nightlife: "/images/rome/nightlife/cocktail-bar-rome.webp",
+  "with-kids": "/images/rome/with-kids/aquarium-rome.webp",
   "day-trips": "/images/rome/dagsutflykter/tivoli-villa-deste-hadrians-villa.webp",
   events: "/images/rome/sevardheter/piazza-del-popolo.webp",
 };
@@ -81,12 +81,12 @@ const ATTRACTION_PREVIEW = [
 const EAT_PREVIEW = [
   { name: "Roscioli", blurb: "A revered deli-restaurant with definitive Roman pasta.", image: "/images/rome/restauranger/roscioli.webp" },
   { name: "Armando al Pantheon", blurb: "Family-run classics beside the Pantheon since 1961.", image: "/images/rome/restauranger/armando-al-pantheon.webp" },
-  { name: "Da Enzo al 29", blurb: "Beloved Trastevere trattoria worth the queue.", image: "/images/rome/restauranger/da-enzo.webp" },
+  { name: "Da Enzo al 29", blurb: "Beloved Trastevere trattoria worth the queue.", image: "/images/rome/restaurants/restaurant-rome.avif" },
 ];
 const BEACH_PREVIEW = [
-  { name: "Sperlonga", blurb: "A whitewashed clifftop town above turquoise water.", image: "/images/rome/strander/sperlonga.webp" },
+  { name: "Sperlonga", blurb: "A whitewashed clifftop town above turquoise water.", image: "/images/rome/beaches/beach-bar-rome.webp" },
   { name: "Lido di Ostia", blurb: "Rome's closest beach, reachable on a city train ticket.", image: "/images/rome/strander/ostia-lido.webp" },
-  { name: "Santa Marinella", blurb: "Cleaner, calmer, family-friendly sand up the coast.", image: "/images/rome/strander/santa-marinella.webp" },
+  { name: "Santa Marinella", blurb: "Cleaner, calmer, family-friendly sand up the coast.", image: "/images/rome/beaches/beach-sunset-rome.webp" },
 ];
 
 const NEARBY = [

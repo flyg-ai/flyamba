@@ -52,7 +52,7 @@ export default function MykonosBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Best Beaches in Mykonos"
-      heroImage="/images/mykonos/beaches/elia-beach.webp"
+      heroImage="/images/mykonos/beaches/barceloneta-mykonos.webp"
       intro="Mykonos has two very different coasts. The south is sheltered from the Meltemi wind and home to the island's famous organised beaches — from the party sands of Paradise to the boho glamour of Paraga and Scorpios. The north is wilder: whipped by the summer wind into a windsurf and kitesurf paradise at Ftelia, and dotted with empty, facility-free beaches like Agios Sostis and Fokos, reached only by rough tracks. This guide covers 8 of the best beyond the headline party beaches — relaxed, windswept and wild — with lounger prices, facilities and how to get to each. Most beaches are free to walk on; you only pay for loungers and shade."
       wide
     >

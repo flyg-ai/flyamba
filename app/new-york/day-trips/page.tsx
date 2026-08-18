@@ -51,7 +51,7 @@ export default function NewYorkDayTrips() {
       active="day-trips"
       crumb="Day Trips"
       h1="Best Day Trips from New York"
-      heroImage="/images/new-york/day-trips/philadelphia.webp"
+      heroImage="/images/new-york/day-trips/costa-brava-landscape-new-york.webp"
       intro="New York is the perfect launch pad for the north-east. In little more than an hour by Amtrak you can be walking the Revolutionary streets of Philadelphia; a Metro-North train carries you up the scenic Hudson Valley to riverside villages and glorious autumn colour; the Hampton Jitney reaches the beaches and old-money charm of Long Island's East End; and Storm King's monumental sculptures, spooky Sleepy Hollow and mighty Niagara Falls round out the options. Here are the best day trips and short escapes, with travel times, costs and tips on which are worth an overnight."
       wide
     >

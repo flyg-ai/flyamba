@@ -53,7 +53,7 @@ export default function NewYorkHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in New York"
-      heroImage="/images/new-york/hotels/the-plaza-hotel.webp"
+      heroImage="/images/new-york/hotels/hotel-new-york.avif"
       intro="New York's hotels run from iconic 1900s grande dames like The Plaza and The St. Regis to the most exclusive new address in the country, Aman New York, and on to hip boutiques and sharp budget stays. Where you sleep matters: Midtown for the classic first-timer experience, the Upper East Side for quiet elegance, SoHo and NoMad for boutique style, and the West Village or Lower East Side for downtown cool. This guide covers the best places to stay across every price band, with neighbourhoods, nightly rates in USD and tips on which area suits your trip — and remember city and hotel taxes add roughly 15% on top."
       wide
     >

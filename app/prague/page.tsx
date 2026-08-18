@@ -50,14 +50,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Old Town Square", blurb: "The medieval heart of the city and its Astronomical Clock.", image: "/images/prague/sevardheter/old-town-square.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Lokál", blurb: "Fresh-tank Pilsner Urquell and proper Czech pub classics.", image: "/images/prague/restauranger/lokl.webp" },
-  { name: "Field", blurb: "Prague's Michelin-starred temple to modern Czech produce.", image: "/images/prague/restauranger/field-restaurant.webp" },
+  { name: "Lokál", blurb: "Fresh-tank Pilsner Urquell and proper Czech pub classics.", image: "/images/prague/restaurants/restaurant-prague.avif" },
+  { name: "Field", blurb: "Prague's Michelin-starred temple to modern Czech produce.", image: "/images/prague/restaurants/restaurant-prague.avif" },
   { name: "Café Savoy", blurb: "A restored 1893 grand café under a soaring painted ceiling.", image: "/images/prague/restauranger/caf-savoy.webp" },
 ];
 const NIGHT_PREVIEW = [
-  { name: "U Zlatého Tygra", blurb: "A legendary, unspoilt Old Town beer hall pouring perfect pilsner.", image: "/images/prague/nattliv/u-zlatho-tygra.webp" },
+  { name: "U Zlatého Tygra", blurb: "A legendary, unspoilt Old Town beer hall pouring perfect pilsner.", image: "/images/prague/nightlife/cocktail-bar-prague.webp" },
   { name: "Hemingway Bar", blurb: "A world-ranked speakeasy of rum, absinthe and classic cocktails.", image: "/images/prague/nattliv/hemingway-bar.webp" },
-  { name: "Cross Club", blurb: "An extraordinary industrial art-club built from recycled machinery.", image: "/images/prague/nattliv/cross-club.webp" },
+  { name: "Cross Club", blurb: "An extraordinary industrial art-club built from recycled machinery.", image: "/images/prague/nightlife/flamenco-prague.webp" },
 ];
 
 const WHY = [

@@ -53,7 +53,7 @@ export default function AmsterdamNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Amsterdam Nightlife"
-      heroImage="/images/amsterdam/nattliv/paradiso.webp"
+      heroImage="/images/amsterdam/nightlife/cocktail-bar-amsterdam.webp"
       intro="Amsterdam's nightlife is among Europe's best and most varied. Legendary music venues Paradiso and the Melkweg anchor the buzzing Leidseplein, serious techno pounds beneath the A'DAM Toren, and world-class speakeasies pour cocktails behind unmarked doors — while centuries-old 'brown cafés' offer the cosy, jenever-soaked flip side. The famous Red Light District (De Wallen), just east of Dam Square, remains a curiosity to walk through, but note that photographing the windows is strictly forbidden and the neighbourhood is being gradually reshaped by the city. Here are the best bars, clubs and live-music spots for a great night out, with areas, styles and tips."
       wide
     >

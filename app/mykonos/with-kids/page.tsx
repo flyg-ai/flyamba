@@ -54,7 +54,7 @@ export default function MykonosWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Mykonos with Kids"
-      heroImage="/images/mykonos/with-kids/mykonos-waterpark.webp"
+      heroImage="/images/mykonos/with-kids/aquarium-mykonos.webp"
       intro="Mykonos is best known as an adults' island of beach clubs and nightlife, but it works surprisingly well for families if you know where to look. There's the island's only waterpark for a guaranteed fun day, a boat trip to ancient Delos that turns history into an adventure, the safe, calm family beaches of Ornos and Platys Gialos, and plenty to keep older kids busy — ATV tours, sailing trips, a farm visit and the maze-like fun of getting 'lost' in Chora. Here are 8 of the best family-friendly things to do, with suggested ages, prices and practical tips to make a Mykonos trip work with children."
       wide
     >

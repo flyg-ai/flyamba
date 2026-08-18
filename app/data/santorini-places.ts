@@ -181,7 +181,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Selene", slug: "selene", image: REST("selene.webp"),
+    name: "Selene", slug: "selene", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.7, reviewCount: 2100, price: "€€€€", type: "Modern Greek", area: "Pyrgos",
     tip: "Ask for a table on the vaulted terrace and let the tasting menu lead — the fava and the local cheeses are the signatures.",
     filterKeys: ["fine-dining", "greek", "views"],
@@ -190,7 +190,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "For decades Selene has set the benchmark for serious dining on Santorini, and its move to the hilltop village of Pyrgos only sharpened its focus on the island's own larder. The kitchen builds refined, contemporary dishes around ingredients grown in Santorini's volcanic soil — the intensely sweet cherry tomatoes, split-pea fava, white aubergine, capers and local goat and sheep cheeses — alongside fish from the surrounding Aegean. Expect elegant plating and a strong list of island Assyrtiko and Vinsanto wines, served either in a stone-vaulted dining room or on a terrace looking out over the vineyards. It is a special-occasion restaurant with prices to match, and booking well ahead is essential in high season. Selene also runs cooking classes and a more casual meze-and-wine bistro alongside the main room for those wanting the flavour without the full tasting-menu commitment. For anyone who wants to understand what makes Santorini's cuisine distinctive, this remains the island's definitive table."
   },
   {
-    name: "Metaxi Mas", slug: "metaxi-mas", image: REST("metaxi-mas.webp"),
+    name: "Metaxi Mas", slug: "metaxi-mas", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.7, reviewCount: 8900, price: "€€€", type: "Greek / Cretan", area: "Exo Gonia",
     tip: "Book days ahead for a terrace table at sunset; if it's full, the meze bar inside is just as good and easier to get into.",
     filterKeys: ["greek", "views", "local-favourite"],
@@ -199,7 +199,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Tucked discreetly beneath the church of Agios Charalambos in the village of Exo Gonia, Metaxi Mas has grown from a local secret into one of Santorini's most loved tavernas — a place islanders and returning visitors rate above the flashier caldera restaurants. The cooking is generous, homestyle Greek with a strong Cretan streak: slow-cooked lamb, wild greens, grilled octopus, fried cheese, and a fava and tomato-based mezes that showcase Santorini's produce. Portions are big, the wine is honest and reasonably priced, and the vine-shaded terrace looks east over the countryside toward the sea rather than the caldera, which keeps prices sane and the atmosphere relaxed. Its reputation means tables are hard won, so reserve several days in advance for dinner, particularly for a sunset slot on the terrace. If you can only fit in a couple of dinners on the island and want the real, unpretentious taste of Santorini rather than a view-tax menu, Metaxi Mas should be near the top of the list."
   },
   {
-    name: "Ambrosia", slug: "ambrosia", image: REST("ambrosia.webp"),
+    name: "Ambrosia", slug: "ambrosia", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.6, reviewCount: 2600, price: "€€€€", type: "Mediterranean", area: "Oia",
     tip: "Request a front-row caldera table when booking; it's one of Oia's most romantic sunset dinners, so dress up a little.",
     filterKeys: ["fine-dining", "views", "romantic"],
@@ -217,7 +217,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Housed in a beautifully restored 1800s sea captain's mansion on Oia's main street, 1800 Floga is one of the village's most established fine-dining names, blending heritage surroundings with contemporary Greek and Mediterranean cooking. The historic rooms retain their neoclassical character — high ceilings, period furniture and old family portraits — while the rooftop terrace opens onto that peerless Oia sunset over the caldera. The menu leans refined and creative, working seasonal Greek produce and Aegean seafood into carefully composed plates, supported by a well-chosen list of island and mainland wines and polished, formal service. As with Oia's other top tables, it's a special-occasion restaurant where you're paying for setting and craft as much as for the food, so book ahead and secure a rooftop table for the sunset if that's your priority. On a windy evening — not uncommon on the exposed cliff — the elegant interior rooms are an equally atmospheric fallback, and arguably show off the historic building better."
   },
   {
-    name: "To Psaraki", slug: "to-psaraki", image: REST("to-psaraki.webp"),
+    name: "To Psaraki", slug: "to-psaraki", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.6, reviewCount: 5200, price: "€€€", type: "Seafood", area: "Vlychada",
     tip: "Sit on the terrace above the marina and order whatever fish came in that morning; the raw and cured seafood starters are excellent.",
     filterKeys: ["seafood", "views", "local-favourite"],
@@ -226,7 +226,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Perched above the small marina at Vlychada on the island's south coast, To Psaraki — 'the little fish' — has built a devoted following for doing one thing exceptionally well: serving the freshest possible Aegean seafood in an unfussy, welcoming setting. The daily catch dictates the menu, from grilled whole fish sold by weight to octopus, prawns and a rotating cast of raw, cured and lightly cooked seafood starters that regulars rave about. Vegetables and salads lean on Santorini's own produce, and the wine list favours crisp local Assyrtiko that pairs naturally with the food. The terrace looks out over the bobbing fishing boats of the marina, an authentic, low-key harbour scene far removed from the caldera glamour, and prices — while not cheap for good fish anywhere — feel fair for the quality. It's popular with Greek visitors and in-the-know travellers, so reserve for dinner in peak season. Combine it with a morning on the dramatic grey cliffs of Vlychada beach next door for a fine south-coast day."
   },
   {
-    name: "Metaxi Mas Meze Bar / Candouni", slug: "candouni", image: REST("candouni.webp"),
+    name: "Metaxi Mas Meze Bar / Candouni", slug: "candouni", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.6, reviewCount: 1900, price: "€€€", type: "Traditional Greek", area: "Oia",
     tip: "It's set back off the tourist drag in a lovely garden courtyard — a quieter, cooler alternative to Oia's cliff-edge crush.",
     filterKeys: ["greek", "romantic", "quiet"],
@@ -235,7 +235,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Candouni offers a different side of dining in Oia — not a cliff-edge sunset spectacle, but an intimate, candlelit garden courtyard set back from the main street, where the focus is squarely on warm hospitality and honest Greek home cooking. Housed in a restored old building with a leafy walled terrace, it's a calm, romantic retreat from the crush that descends on Oia's caldera restaurants each evening. The kitchen turns out well-executed traditional dishes — slow-cooked meats, fresh fish, stuffed vegetables, island fava and mezes — using good local ingredients, and the setting under the bougainvillea makes for a genuinely lovely dinner without the premium the front-row view tables command. Service tends to be personal and unhurried. For couples who want the romance of an Oia evening but would rather trade the sunset panorama for a peaceful, cooler garden and more attention to the food itself, Candouni is an excellent choice. Book ahead in high season, as its modest size and good reputation mean tables fill quickly."
   },
   {
-    name: "Aktaion", slug: "aktaion", image: REST("aktaion.webp"),
+    name: "Aktaion", slug: "aktaion", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.5, reviewCount: 2300, price: "€€", type: "Traditional Taverna", area: "Firostefani",
     tip: "One of the island's oldest tavernas — go for honest, fairly priced classics and a caldera view without the Oia mark-up.",
     filterKeys: ["greek", "views", "budget", "local-favourite"],
@@ -244,7 +244,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Aktaion is one of Santorini's oldest tavernas, run by the same family for generations in the quieter village of Firostefani, a ten-minute caldera-path stroll from Fira. It represents an increasingly rare thing on the island: a genuine, traditional Greek taverna with a caldera view that hasn't priced itself into the stratosphere. The menu is comfortingly classic — Santorinian fava and tomato fritters (tomatokeftedes), grilled meats and fish, moussaka, stuffed vegetables and fresh salads — cooked without fuss and served in generous portions. The terrace enjoys a fine outlook over the caldera, and while it may lack the polish and Instagram gloss of the Oia hotspots, that's rather the point: this is where you come for the flavours of the island at a price locals would recognise. It's a reliable lunch or dinner stop, popular with families and repeat visitors who value substance over spectacle. For an authentic, good-value taste of old Santorini within easy reach of Fira, Aktaion is a dependable pick."
   },
   {
-    name: "Krinaki", slug: "krinaki", image: REST("krinaki.webp"),
+    name: "Krinaki", slug: "krinaki", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.6, reviewCount: 2000, price: "€€€", type: "Farm-to-Table Greek", area: "Finikia",
     tip: "It sits in sleepy Finikia just east of Oia; come for a relaxed dinner of garden vegetables and grilled fish away from the crowds.",
     filterKeys: ["greek", "local-favourite", "quiet"],
@@ -253,7 +253,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "In the tranquil, largely residential village of Finikia, a short walk or drive east of tourist-thronged Oia, Krinaki is a warm family taverna built on a farm-to-table philosophy. Much of what appears on the plate comes from the owners' own garden and local producers — sun-ripened tomatoes, greens, capers, cheeses and herbs — turned into honest, seasonal Greek cooking rather than showpiece plating. Expect classic mezes, fresh fish, slow-cooked meats and generous salads, paired with island wine at prices that feel fair given the quality and setting. The terrace is relaxed and low-key, catching a pleasant breeze, and because Finikia sees only a trickle of the visitors who pack Oia a few minutes away, dinner here feels calm and unhurried. It's the kind of place that reminds you Santorini has a farming and food culture beneath the caldera glamour. For travellers staying in or near Oia who want a genuine, produce-driven Greek meal without the sunset-strip prices and crush, Krinaki is a rewarding find. Reserve ahead in peak weeks."
   },
   {
-    name: "Lucky's Souvlaki", slug: "luckys-souvlaki", image: REST("luckys-souvlaki.webp"),
+    name: "Lucky's Souvlaki", slug: "luckys-souvlaki", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.6, reviewCount: 6700, price: "€", type: "Souvlaki / Street Food", area: "Fira",
     tip: "The cheapest good meal in Fira — grab a chicken gyros to go and eat it on the caldera steps for the price of a coffee elsewhere.",
     filterKeys: ["budget", "street-food", "greek", "quick"],
@@ -262,7 +262,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "On an island where a caldera-view dinner can cost more than a night's accommodation elsewhere, Lucky's Souvlaki is a genuine budget hero in the heart of Fira. This no-frills counter turns out the Greek street-food staples done right: pork and chicken souvlaki skewers, gyros wraps loaded with meat, tomato, onion and tzatziki, and crisp fries, all for a few euros. It's fast, filling and reliably tasty, which is why you'll find a mix of backpackers, local workers and savvy travellers queuing at all hours. There's limited seating, so most people grab their wrap to go and eat it perched on the caldera steps or on a bench with a view that costs nothing. For anyone watching their spending — or simply craving an honest, unpretentious meal after one too many elaborate tasting menus — Lucky's is invaluable, and it proves you don't need a big budget to eat well on Santorini. Cash is handy, portions are generous, and it stays open late for post-bar hunger."
   },
   {
-    name: "Pitogyros", slug: "pitogyros", image: REST("pitogyros.webp"),
+    name: "Pitogyros", slug: "pitogyros", image: "/images/santorini/restaurants/restaurant-santorini.avif",
     rating: 4.6, reviewCount: 4100, price: "€", type: "Gyros / Grill", area: "Oia",
     tip: "The best-value bite in pricey Oia — the pork gyros and homemade pita are consistently excellent for the money.",
     filterKeys: ["budget", "street-food", "greek", "quick"],
@@ -275,7 +275,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Canaves Oia", slug: "canaves-oia", image: HOT("canaves-oia.webp"),
+    name: "Canaves Oia", slug: "canaves-oia", image: "/images/santorini/hotels/hotel-santorini.avif",
     rating: 4.8, reviewCount: 1400, price: "€€€€", type: "Luxury cave suites", area: "Oia",
     tip: "Book a suite with a private plunge pool on the caldera edge; the sister property Canaves Epitome inland is a good-value alternative.",
     filterKeys: ["luxury", "caldera-view", "adults", "pool"],
@@ -284,7 +284,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Canaves Oia is one of the names that defined Santorini's luxury cave-hotel scene, and it remains a benchmark for high-end caldera-edge stays. Its suites are carved into the cliff in the traditional 'yposkafa' style — cool, vaulted, whitewashed spaces — but finished to a contemporary five-star standard, many with private plunge pools or terraces hanging over the caldera. There's a stylish infinity pool, a serious restaurant and wine cellar, a spa, and the kind of anticipatory service that arranges everything from private cruises to in-suite dining. The location on Oia's quieter northern edge means you're steps from the village yet slightly removed from its busiest lanes. It is expensive — firmly in the honeymoon and special-occasion bracket — and the group now runs several properties, including the larger, better-value Canaves Epitome inland and an adults-only Sunday retreat, giving a range of price points under the same trusted management. For travellers seeking the quintessential Oia luxury experience with polished service, Canaves is a safe and celebrated choice."
   },
   {
-    name: "Mystique, a Luxury Collection Hotel", slug: "mystique", image: HOT("mystique.webp"),
+    name: "Mystique, a Luxury Collection Hotel", slug: "mystique", image: "/images/santorini/hotels/hotel-santorini.avif",
     rating: 4.8, reviewCount: 1100, price: "€€€€", type: "Design luxury resort", area: "Oia",
     tip: "The Secret Wine Cave and Captain's Lounge are highlights; ask about the private caldera pool suites for the ultimate splurge.",
     filterKeys: ["luxury", "caldera-view", "adults", "pool"],
@@ -293,7 +293,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Part of Marriott's Luxury Collection, Mystique is one of Oia's most architecturally striking resorts, its suites and villas tumbling down the caldera cliff in sculpted whitewashed forms that blur the line between building and rock. The mood is more design-hotel sophistication than traditional Cycladic simplicity: muted natural materials, moody lighting and a grown-up, romantic atmosphere that suits couples and honeymooners. Signature touches include the Secret Wine Cave carved into the volcanic stone for private tastings, the Captain's Lounge, an excellent restaurant and a spa, plus infinity pools and premium suites with private caldera-facing plunge pools. As with all the top Oia addresses, the sunset views are extraordinary and the service is polished and discreet. Prices sit firmly at the luxury end, and the resort trades on atmosphere and design as much as on the view. For travellers who want the caldera-edge Santorini experience wrapped in a stylish, contemporary package with the reassurance of a global luxury brand behind it, Mystique is among the island's most desirable stays."
   },
   {
-    name: "Perivolas", slug: "perivolas", image: HOT("perivolas.webp"),
+    name: "Perivolas", slug: "perivolas", image: "/images/santorini/hotels/hotel-santorini.avif",
     rating: 4.8, reviewCount: 700, price: "€€€€", type: "Boutique cave houses", area: "Oia",
     tip: "The famous horizon-edge infinity pool is the shot everyone comes for; the whitewashed suites are serene and refreshingly minimalist.",
     filterKeys: ["luxury", "caldera-view", "adults", "pool"],
@@ -311,7 +311,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Andronis Boutique Hotel is the flagship of the well-regarded Andronis collection, and one of Oia's most photographed cliff-edge stays. Its suites are carved and stacked down the caldera wall in sinuous whitewashed forms, many with private terraces, jacuzzis or plunge pools angled at the sunset, and finished in a warm, contemporary style. The hotel packs a lot into a compact footprint: a beautiful infinity pool that hangs over the caldera, a spa, and Lauda, an acclaimed fine-dining restaurant that ranks among the best places to eat in Oia. Service is attentive and geared to couples and honeymooners, and the location puts you right in the heart of the village yet cocooned from its crowds. The broader Andronis group runs several properties across the island at different price points, so there are options if the flagship is booked or beyond budget. Prices here are firmly luxury, but the combination of dramatic architecture, a standout restaurant and prime caldera position makes it one of Oia's most complete high-end packages."
   },
   {
-    name: "Grace Hotel Santorini (Auberge)", slug: "grace-hotel", image: HOT("grace-hotel.webp"),
+    name: "Grace Hotel Santorini (Auberge)", slug: "grace-hotel", image: "/images/santorini/hotels/hotel-santorini.avif",
     rating: 4.7, reviewCount: 900, price: "€€€€", type: "Design luxury resort", area: "Imerovigli",
     tip: "Perched in Imerovigli at the caldera's highest point, its infinity pool and champagne lounge draw a stylish crowd; quieter than Oia.",
     filterKeys: ["luxury", "caldera-view", "adults", "pool"],
@@ -320,7 +320,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Set on the highest point of the caldera rim in Imerovigli — 'the balcony of the Aegean' — Grace Hotel Santorini, part of the Auberge Resorts Collection, offers a more contemporary, design-forward take on caldera luxury than the traditional cave hotels of Oia. Its clean-lined suites in white and soft neutrals step down the cliff, many with private pools or terraces, and the hotel's showpiece is a stunning cascading infinity pool that seems to pour toward the volcano. There's a champagne lounge, an accomplished restaurant, a spa and the kind of stylish, grown-up atmosphere that appeals to couples and design-minded travellers. The Imerovigli setting is a genuine advantage: you get arguably the finest sunset view on the island along with noticeably fewer crowds than Oia, while Fira's restaurants and nightlife are a short walk or drive away. Prices are firmly in the luxury bracket. For those who want top-tier Santorini indulgence with a modern aesthetic and a slightly quieter, more private base than the Oia hotspots, Grace is a superb choice."
   },
   {
-    name: "Astra Suites", slug: "astra-suites", image: HOT("astra-suites.webp"),
+    name: "Astra Suites", slug: "astra-suites", image: "/images/santorini/hotels/hotel-santorini.avif",
     rating: 4.8, reviewCount: 800, price: "€€€€", type: "Cave suites", area: "Imerovigli",
     tip: "Renowned for warm, personal service; the village-like layout of suites around the pool feels intimate rather than resort-like.",
     filterKeys: ["luxury", "caldera-view", "pool", "family"],
@@ -329,7 +329,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Astra Suites has spent decades quietly earning a reputation as one of Santorini's most warmly run hotels, consistently praised for service that turns first-time guests into loyal returnees. Set on the caldera rim in Imerovigli, its whitewashed cave suites are arranged like a miniature Cycladic village tumbling around a beautiful infinity pool, with the volcano and Oia laid out across the water beyond. The suites blend traditional carved-cave coolness with comfortable, understated modern furnishings, and many have private terraces or plunge pools facing the sunset. What sets Astra apart is less any single showpiece feature than the attentive, genuinely personal hospitality — staff who remember names, anticipate needs and help craft the trip. There's a good restaurant, a spa and the superb, less-crowded Imerovigli sunset outlook. While firmly a luxury property, it's often seen as slightly more relaxed and welcoming to couples and families than some of the adults-only Oia icons. For travellers who rate service and atmosphere as highly as design, Astra Suites is a perennial favourite."
   },
   {
-    name: "Caveland Hostel", slug: "caveland-hostel", image: HOT("caveland-hostel.webp"),
+    name: "Caveland Hostel", slug: "caveland-hostel", image: "/images/santorini/hotels/hotel-santorini.avif",
     rating: 4.6, reviewCount: 1300, price: "€", type: "Hostel", area: "Karterados",
     tip: "The island's best budget base — a converted winery with a pool and dorms; free shuttle links it to Fira and the beaches.",
     filterKeys: ["budget", "hostel", "pool", "social"],
@@ -338,7 +338,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Santorini has a reputation as a honeymoon splurge, but Caveland proves you can experience the island on a backpacker budget without sacrificing charm. Housed in a beautifully converted 18th-century winery in the village of Karterados, a short distance from Fira, it wraps dorms and simple private rooms around leafy courtyards and a genuinely inviting swimming pool — a rare luxury at this price. The atmosphere is sociable and laid-back, with communal kitchen and lounge areas, yoga sessions, barbecue nights and a mixed crowd of solo travellers, couples and groups swapping tips. A free shuttle connects guests to Fira and the beaches, solving the island's transport headache for those without a scooter. While you obviously won't get a caldera view or cave-suite polish, you get atmosphere, community and money left over to spend on boat trips, wine tastings and sunset drinks. For young and budget-conscious travellers who want to enjoy Santorini without the eye-watering room rates, Caveland is comfortably the island's standout hostel."
   },
   {
-    name: "Iconic Santorini", slug: "iconic-santorini", image: HOT("iconic-santorini.webp"),
+    name: "Iconic Santorini", slug: "iconic-santorini", image: "/images/santorini/hotels/hotel-santorini.avif",
     rating: 4.8, reviewCount: 600, price: "€€€€", type: "Boutique cave hotel", area: "Imerovigli",
     tip: "A small, adults-oriented boutique carved into the Skaros cliff; the suites are dramatic and the setting wonderfully private.",
     filterKeys: ["luxury", "caldera-view", "adults", "pool"],
@@ -360,7 +360,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Franco's Bar has been serving cocktails on Fira's caldera cliff since 1976, and it remains one of the most storied sunset spots on the island. The formula is simple and enduring: perfectly made classic cocktails, a soundtrack of classical music drifting over the terraces, attentive white-jacketed service, and a front-row seat as the sun melts into the caldera. The cascading terraces are cut into the cliff so that nearly every table has an unobstructed view, and at golden hour the place fills with couples toasting the moment. It is unashamedly upmarket — drinks are expensive and a reservation for a sunset table is effectively essential in high season — but for a special occasion or a romantic evening, few bars can match the setting or the sense of occasion. Come early to secure your spot, settle in with a negroni or a glass of champagne, and watch the sky perform. For a taste of classic, grown-up Santorini glamour rather than a club night, Franco's is the definitive choice in Fira."
   },
   {
-    name: "PK Cocktail Bar", slug: "pk-cocktail-bar", image: NAT("pk-cocktail-bar.webp"),
+    name: "PK Cocktail Bar", slug: "pk-cocktail-bar", image: "/images/santorini/nightlife/cocktail-bar-santorini.webp",
     rating: 4.5, reviewCount: 4200, price: "€€€", type: "Cocktail bar", area: "Fira",
     tip: "Its multi-level caldera terraces are a top sunset perch; book ahead or arrive an hour early for a front-row seat.",
     filterKeys: ["cocktails", "sunset", "views", "romantic"],
@@ -369,7 +369,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "PK Cocktail Bar has become one of Fira's most popular sunset venues, its tiered terraces stepping down the caldera cliff to give a huge number of tables that coveted volcano-and-sunset view. The vibe is a touch more contemporary and buzzy than the old-school elegance of Franco's next door, with a strong list of creative and classic cocktails, chilled music and a lively, international crowd. As the sun drops, every seat fills and the atmosphere builds, making it a great spot to start an evening. Because demand is so high, booking a sunset table in advance is strongly recommended in peak season, or you'll need to arrive well before to grab a place. Prices are on the higher side, as with all the caldera-edge bars, but the setting justifies a splurge for at least one memorable evening. After sunset it stays lively into the night. For travellers who want that iconic Fira sunset with a good drink in hand and a slightly younger, more energetic feel than the classic cocktail lounges, PK is a reliable favourite."
   },
   {
-    name: "Two Brothers Bar", slug: "two-brothers-bar", image: NAT("two-brothers-bar.webp"),
+    name: "Two Brothers Bar", slug: "two-brothers-bar", image: "/images/santorini/nightlife/flamenco-santorini.webp",
     rating: 4.5, reviewCount: 5600, price: "€", type: "Party bar", area: "Fira",
     tip: "The cheapest, rowdiest fun in Fira — cheap shots, loud music and a young crowd; it kicks off after midnight.",
     filterKeys: ["party", "budget", "lively", "late-night"],
@@ -378,7 +378,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "If the caldera cocktail lounges are Santorini's polished face, Two Brothers Bar is its wild younger sibling — a legendary, no-frills party bar in central Fira that's been fuelling budget nightlife for years. Famous for cheap drinks, potent shots and a raucous, shoulder-to-shoulder atmosphere, it draws a young, international crowd of backpackers, groups and anyone looking to let loose without spending a fortune. The music is loud, the drinks flow, and things typically get going late and rowdy, often spilling out into the surrounding lanes of Fira's compact bar strip. Don't expect views, sophistication or quiet conversation; this is about dancing, meeting people and a proper night out. It's the kind of place that features heavily in travellers' Santorini stories the next morning. For young and budget-minded visitors who've had their fill of romantic sunset dinners and want an unpretentious, high-energy party, Two Brothers is an island institution. Pace yourself with those cheap shots, keep an eye on your belongings, and stumble home knowing you've experienced the fun, unglamorous side of Fira after dark."
   },
   {
-    name: "Tango Bar", slug: "tango-bar", image: NAT("tango-bar.webp"),
+    name: "Tango Bar", slug: "tango-bar", image: "/images/santorini/nightlife/live-music-santorini.webp",
     rating: 4.4, reviewCount: 2400, price: "€€€", type: "Cocktail & music bar", area: "Fira",
     tip: "A caldera-edge cocktail bar that shifts from mellow sunset drinks to dancing later; the upstairs balcony is the sweet spot.",
     filterKeys: ["cocktails", "sunset", "lively", "views"],
@@ -387,7 +387,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Tango Bar occupies a prime caldera-edge spot in Fira and neatly bridges two moods of Santorini nightlife. In the late afternoon and at sunset it's a stylish cocktail bar, its balconies and terraces filling with couples and groups enjoying well-made drinks against the backdrop of the volcano and the sinking sun. As the evening wears on, the energy lifts, the music turns up, and it becomes one of Fira's livelier late-night spots for dancing without the full-on club commitment. The upstairs balcony is a favourite perch, catching both the view and the atmosphere. Prices sit in the usual caldera-bar bracket — not cheap, but fair for the setting — and the crowd is a sociable international mix. It's a good choice if you want somewhere that works for a romantic sunset drink and then keeps the night going in the same spot, saving you a bar-hop. For a versatile evening out in Fira that spans the golden-hour glamour and the after-dark buzz, Tango Bar covers both bases well."
   },
   {
-    name: "Koo Club", slug: "koo-club", image: NAT("koo-club.webp"),
+    name: "Koo Club", slug: "koo-club", image: "/images/santorini/nightlife/nightlife-bar-santorini.webp",
     rating: 4.2, reviewCount: 3800, price: "€€€", type: "Nightclub", area: "Fira",
     tip: "The island's biggest club — an open-air, multi-level space that peaks well after 1am; entry can include a drink.",
     filterKeys: ["club", "party", "late-night", "lively"],
@@ -396,7 +396,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Koo Club is the biggest and most famous nightclub on Santorini, and the natural destination once the bars start to wind down. Set across multiple open-air levels in Fira's nightlife quarter, it combines the island's easy climate with a proper club experience — big sound, DJs spinning mainstream and dance sets, bar-lined terraces and a crowd that ranges from holidaying twenty-somethings to anyone in the mood to dance under the stars. As is standard for Greek island clubbing, nothing much happens early; the venue fills and peaks well after 1am and runs into the small hours. There may be a cover charge on busier nights, sometimes including a drink, and cocktail prices are premium. It's the closest thing Santorini has to a Mykonos-style big-club night, though the island's overall scene stays smaller and more laid-back than its party-focused neighbour. For visitors who want to round off a night with real dancing rather than a quiet cocktail, Koo is the island's headline club and a Fira institution."
   },
   {
-    name: "Senor Zorba", slug: "senor-zorba", image: NAT("senor-zorba.webp"),
+    name: "Senor Zorba", slug: "senor-zorba", image: "/images/santorini/nightlife/rooftop-bar-night-santorini.webp",
     rating: 4.5, reviewCount: 2900, price: "€€", type: "Mezcaleria bar", area: "Perissa",
     tip: "A fun, tequila-and-mezcal bar on the Perissa beach strip; the beachy, boozy vibe is a good alternative to Fira's cliff bars.",
     filterKeys: ["party", "beach", "lively", "cocktails"],
@@ -405,7 +405,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Down on the long black-sand beach strip of Perissa, Senor Zorba brings a splash of Mexican colour to Santorini's nightlife with a tequila- and mezcal-fuelled party atmosphere that's a world away from the caldera cocktail lounges. This buzzy beach bar is a firm favourite with the younger, beach-based crowd staying in Perissa and Perivolos, offering a big range of agave spirits, margaritas and fun, sociable evenings that build from sunset drinks into a proper party. The setting — casual, beachy and unpretentious — makes it an easy place to meet people, and it's often livelier and better value than the more formal Fira scene. It works well as a base for a night out on the south coast, where a string of beach bars keeps things going. For visitors staying near Perissa who don't fancy the trek up to Fira, or anyone wanting a relaxed, boozy beach-bar night with a Mexican twist, Senor Zorba is a reliably good time. Expect it to get busy and loud as the evening rolls on."
   },
   {
-    name: "Wet Stories Beach Bar", slug: "wet-stories", image: NAT("wet-stories.webp"),
+    name: "Wet Stories Beach Bar", slug: "wet-stories", image: "/images/santorini/nightlife/cocktail-bar-santorini.webp",
     rating: 4.4, reviewCount: 2200, price: "€€€", type: "Beach club", area: "Perivolos",
     tip: "A stylish day-to-night beach club on Perivolos; come for sunbeds and cocktails by day and it morphs into a party after dark.",
     filterKeys: ["beach", "party", "cocktails", "lively"],
@@ -414,7 +414,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Perivolos, the southern continuation of Perissa's black-sand beach, is Santorini's beach-club heartland, and Wet Stories is one of its stylish flagships. It captures the day-to-night formula perfectly: by day it's a chic beach lounge of plush sunbeds, cabanas and cocktails where you can swim, sunbathe and graze on Mediterranean plates to a soundtrack of chilled house; by evening and into the night it ramps up into one of the liveliest party spots on the south coast, with DJs, dancing and a good-looking, sociable crowd. It offers the more contemporary, resort-style side of Santorini nightlife, an alternative to both the romantic caldera bars and the rowdy Fira party joints. Expect sunbed rental and minimum spends typical of a proper beach club, with premium drink prices to match. For visitors basing themselves on the south-coast beaches who want somewhere they can spend the whole day and roll straight into the evening without moving, Wet Stories delivers a polished, energetic beach-club experience under the Santorini sun and stars."
   },
   {
-    name: "Seaside by Notos", slug: "seaside", image: NAT("seaside.webp"),
+    name: "Seaside by Notos", slug: "seaside", image: "/images/santorini/nightlife/flamenco-santorini.webp",
     rating: 4.5, reviewCount: 1800, price: "€€€€", type: "Beach lounge bar", area: "Perivolos",
     tip: "The most upscale beach club on Perivolos; book a front cabana for a smart cocktails-and-sunset session by the water.",
     filterKeys: ["beach", "cocktails", "romantic", "upscale"],
@@ -423,7 +423,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Seaside by Notos is the more refined face of the Perivolos beach-club strip, aimed at visitors who want the sun-lounger-and-cocktail lifestyle with a touch more polish and a little less full-throttle party. Spread along the black sand, it pairs stylish sunbeds and cabanas with a genuinely good restaurant and bar, so you can drift from a lazy lunch and an afternoon swim into elegant sundowners without changing venue. The design leans smart and contemporary, the service is attentive, and the cocktails are well made, drawing a slightly older, more upscale crowd than the rowdier bars nearby. In the evening it settles into a sophisticated seaside lounge rather than a thumping club, making it ideal for couples and groups who want atmosphere over mayhem. As with all the south-coast beach clubs, expect sunbed fees and minimum spends, and prices toward the higher end. For those staying near Perissa and Perivolos who fancy a classy, relaxed day-to-dusk experience by the water — the beach equivalent of a caldera cocktail bar — Seaside by Notos hits the mark."
   },
   {
-    name: "V Lounge / Vibes Rooftop", slug: "vibes-rooftop", image: NAT("wet-stories.webp"),
+    name: "V Lounge / Vibes Rooftop", slug: "vibes-rooftop", image: "/images/santorini/nightlife/live-music-santorini.webp",
     rating: 4.3, reviewCount: 1200, price: "€€€", type: "Rooftop lounge", area: "Fira",
     tip: "For a rooftop cocktail with the caldera as backdrop, arrive around sunset; the pool-deck seating books up fast.",
     filterKeys: ["cocktails", "sunset", "views", "romantic"],
@@ -445,7 +445,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Atlantis Books is not just a shop but one of Oia's most beloved little institutions — a tiny, cave-like bookstore founded by a group of friends that has grown into a cult destination for booklovers the world over. Reached down a few steps off the main street, its whitewashed rooms are crammed floor to ceiling with English, Greek and multilingual titles, from Greek classics and travel writing to fiction and rare editions, all chosen with genuine care. Hand-painted signs, quirky decorations and a rooftop terrace with sea views add to the bohemian charm, and the young international staff who live and work there are full of passionate recommendations. It hosts occasional literary festivals and events, and simply browsing feels like stepping into a labour of love rather than a commercial venture. It's the perfect antidote to the island's identikit souvenir stalls, and a paperback bought here makes a far more meaningful memento of Santorini than a fridge magnet. Even non-readers should poke their head in to experience one of the most charming small bookshops anywhere in the Mediterranean."
   },
   {
-    name: "Oia Main Street (Nikolaou Nomikou)", slug: "oia-main-street", image: SHOP("oia-main-street.webp"),
+    name: "Oia Main Street (Nikolaou Nomikou)", slug: "oia-main-street", image: "/images/santorini/shopping/artisan-shop-santorini.webp",
     rating: 4.6, reviewCount: 12000, price: "€€€", type: "Boutique strip", area: "Oia",
     tip: "Best browsed in the morning before the crowds; look past the mass-market shops for genuine art galleries and jewellers.",
     filterKeys: ["boutiques", "art", "jewellery", "gifts"],
@@ -454,7 +454,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The marble-paved main street of Oia — officially Nikolaou Nomikou — is the island's most upmarket shopping promenade, a slow-moving pedestrian ribbon threading past some of Santorini's best galleries and boutiques with the caldera glinting between the buildings. Here you'll find serious art galleries showing contemporary Greek painters and sculptors, jewellers crafting pieces inspired by the sea and the island's blue-and-white palette, boutiques of resort wear and linen, and design stores selling ceramics and homeware. Interspersed among them are the inevitable souvenir shops, so a little discernment separates the genuinely lovely from the mass-produced. The setting makes browsing a pleasure in itself, and the light on the whitewashed lanes is magical, especially in the softer hours of morning and early evening. Prices reflect Oia's premium positioning, but this is the place to find a special, higher-end memento — a piece of original art, fine jewellery or handmade ceramics. Come early to enjoy the shops before the day-trippers arrive and the narrow lane becomes a shuffling sunset-bound crowd."
   },
   {
-    name: "Gold Street, Fira", slug: "fira-gold-street", image: SHOP("fira-gold-street.webp"),
+    name: "Gold Street, Fira", slug: "fira-gold-street", image: "/images/santorini/shopping/mall-santorini.webp",
     rating: 4.4, reviewCount: 6800, price: "€€€", type: "Jewellery district", area: "Fira",
     tip: "Prices are often negotiable, especially for gold by weight; compare a few shops and ask to see the hallmark before buying.",
     filterKeys: ["jewellery", "gold", "gifts"],
@@ -463,7 +463,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Fira's 'Gold Street' — the caldera-side lane officially named Ipapantis — is one of the densest concentrations of jewellery shops in Greece, a glittering run of stores selling gold, silver and gemstone pieces to a steady stream of visitors and honeymooners. Greece has a long goldsmithing tradition, and here you'll find everything from classical Greek key and Byzantine-inspired designs to contemporary pieces and diamond jewellery, much of it sold by weight at prices that are often open to negotiation. It's a place to shop with a little care: quality and value vary between shops, so it pays to compare, ask about gold purity and hallmarks, and haggle politely, particularly on higher-value items. Many couples buy a ring or a keepsake to mark a Santorini honeymoon or engagement, and the better shops offer certificates and international shipping. Even if jewellery isn't on your list, the street is worth a stroll for its caldera views and buzzing atmosphere. For serious buyers, though, Gold Street offers real choice and the chance to bring home a lasting, wearable memory of the island."
   },
   {
-    name: "Nikolas Pottery (Ceramic Art Studio)", slug: "nikolas-pottery", image: SHOP("nikolas-pottery.webp"),
+    name: "Nikolas Pottery (Ceramic Art Studio)", slug: "nikolas-pottery", image: "/images/santorini/shopping/outdoor-market-santorini.webp",
     rating: 4.7, reviewCount: 1400, price: "€€", type: "Ceramics studio", area: "Vothonas",
     tip: "Watch the potter throw pieces on the wheel; you can often buy straight from the workshop and even try the wheel yourself.",
     filterKeys: ["ceramics", "handmade", "art", "gifts"],
@@ -472,7 +472,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Santorini has a long ceramic tradition rooted in its volcanic clay, and family-run studios like Nikolas Pottery keep that craft alive, offering a refreshingly authentic alternative to mass-produced souvenirs. At these working workshops, tucked into the island's inland villages, you can watch a potter shape bowls, plates, mugs and decorative pieces on the wheel, glazed in the blues, whites and earthy tones that echo the island's landscape. Each piece is a genuine one-off, handmade on site, which makes it a far more meaningful keepsake than the identical trinkets in the tourist shops. Many studios welcome visitors to browse the shelves, chat with the makers about the process, and in some cases even try their own hand at the wheel or buy directly from the workshop at fair prices. Buying a handmade bowl or a set of ceramic tumblers here supports local artisans and gives you a functional, beautiful memento you'll use at home for years. For travellers who value craft and provenance over convenience, seeking out one of the island's pottery studios is a rewarding detour off the caldera trail."
   },
   {
-    name: "Gavalas Winery Shop", slug: "gavalas-winery", image: SHOP("gavalas-winery.webp"),
+    name: "Gavalas Winery Shop", slug: "gavalas-winery", image: "/images/santorini/shopping/shopping-street-santorini.webp",
     rating: 4.6, reviewCount: 1600, price: "€€", type: "Winery / Wine shop", area: "Megalochori",
     tip: "Buy the Vinsanto and a bottle of Assyrtiko straight from this old family winery; they can pack bottles safely for the flight home.",
     filterKeys: ["wine", "gifts", "local", "food"],
@@ -481,7 +481,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Wine is one of Santorini's great exports and its most rewarding thing to take home, and the shop at a historic family winery like Gavalas in Megalochori is a perfect place to buy it. The island's volcanic soil and ancient basket-trained vines produce wines found nowhere else: the crisp, mineral, saline-edged Assyrtiko white that has won international acclaim, and the luscious, amber Vinsanto, made from sun-dried grapes and aged for years. At a winery shop you can taste before you buy, learn about the unusual viticulture directly from the people who make it, and choose bottles far more interesting than anything in a supermarket. Staff will typically wrap and pack bottles securely for the journey home, and some can arrange shipping for larger orders. A bottle of good Santorini Assyrtiko or a Vinsanto dessert wine makes an excellent gift or a way to relive the trip long after you've left. Combining a winery-shop stop with a tasting and a wander around pretty Megalochori village turns a simple souvenir run into one of the more pleasurable afternoons on the island."
   },
   {
-    name: "Theodora Art Gallery", slug: "theodora-art", image: SHOP("theodora-art.webp"),
+    name: "Theodora Art Gallery", slug: "theodora-art", image: "/images/santorini/shopping/souvenir-shop-santorini.webp",
     rating: 4.6, reviewCount: 800, price: "€€€", type: "Art gallery", area: "Oia",
     tip: "One of several serious galleries in Oia; even if you're not buying, they're worth stepping into for contemporary Greek art.",
     filterKeys: ["art", "unique", "gifts", "boutiques"],
@@ -490,7 +490,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Oia has quietly become one of Greece's more interesting places to buy art, its main street dotted with galleries that punch well above what you'd expect of a small island village. Spaces like Theodora Art Gallery show contemporary painting, sculpture and mixed-media work by Greek and international artists, often inspired by the extraordinary light, colours and forms of the Aegean and the island itself. Wandering in is a pleasure whether or not you intend to buy — the works range from accessible pieces and prints to significant original artworks, and the cool, calm galleries offer a cultured pause from the bustle outside. For visitors looking for a truly special and personal souvenir, an original artwork or limited print carries far more meaning than the usual keepsakes, and reputable galleries can arrange careful packing and international shipping. Prices span a wide range, so there's often something for varied budgets alongside the headline pieces. Combining a browse through Oia's galleries with the village's boutiques and the famous Atlantis Books makes for a genuinely cultured afternoon's shopping, a side of Santorini beyond the sunsets and beaches."
   },
   {
-    name: "Oia Treasures", slug: "oia-treasures", image: SHOP("oia-treasures.webp"),
+    name: "Oia Treasures", slug: "oia-treasures", image: "/images/santorini/shopping/vintage-market-santorini.webp",
     rating: 4.5, reviewCount: 1100, price: "€€", type: "Gifts & crafts", area: "Oia",
     tip: "Good for tasteful, higher-quality souvenirs — ceramics, textiles and local products — a step up from the tat.",
     filterKeys: ["gifts", "handmade", "boutiques"],
@@ -499,7 +499,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Amid the sea of near-identical souvenir stalls that trail through Santorini's villages, curated shops like Oia Treasures stand out for offering keepsakes with genuine quality and taste. Rather than mass-produced trinkets, these stores focus on Greek-made goods — handmade ceramics and pottery in island blues and whites, woven textiles and linens, olive-wood kitchenware, natural cosmetics, local food products and thoughtfully designed gifts — the kind of things you'll actually want to keep or give. Browsing here is a more pleasant experience than the tourist-tat shops, with pieces displayed with care and staff who can tell you where things are made. Prices sit at a fair mid-range for the quality, higher than the cheap magnets and shot glasses but far more rewarding. For travellers who want to bring home something authentic and lasting from Santorini — a handmade bowl, a bottle of local olive oil, a linen throw — without the expense of fine art or jewellery, a curated gift shop like this hits the sweet spot. It's an easy stop while wandering Oia's photogenic lanes."
   },
   {
-    name: "Fira Central Shops", slug: "fira-central-shops", image: SHOP("fira-fira.webp"),
+    name: "Fira Central Shops", slug: "fira-central-shops", image: "/images/santorini/shopping/artisan-shop-santorini.webp",
     rating: 4.3, reviewCount: 4500, price: "€€", type: "Shopping district", area: "Fira",
     tip: "Fira has the island's widest range of shops and the fairest prices; stock up on wine, sandals and beachwear here rather than in Oia.",
     filterKeys: ["boutiques", "gifts", "jewellery", "wine"],
@@ -512,7 +512,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── With kids (7) ────────────────────────────────────────────────────────────
 export const WITH_KIDS: BcnPlace[] = [
   {
-    name: "Santorini Water Park (Kamari)", slug: "santorini-water-park", image: KID("santorini-water-park.webp"),
+    name: "Santorini Water Park (Kamari)", slug: "santorini-water-park", image: "/images/santorini/with-kids/aquarium-santorini.webp",
     rating: 4.3, reviewCount: 2100, price: "€€", area: "Kamari", ageGroup: "All ages", category: "Water park",
     tip: "A reliable half-day of slides and pools to break up the sightseeing; go in the morning before it gets hot and busy.",
     filterKeys: ["kids", "active", "cooling-off"],
@@ -521,7 +521,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Santorini is famous for romance and scenery rather than family thrills, so for parents travelling with children a water park near Kamari is a genuinely useful ace up the sleeve. With a cluster of water slides, splash pools and shallow areas for younger kids, it offers a few hours of pure fun and cooling-off that has nothing to do with clifftop views or archaeological sites — exactly the kind of break children need between the grown-up sightseeing. The east-coast location near Kamari's long beach makes it easy to combine with a beach day, and facilities typically include sunbeds, a snack bar and shaded areas for parents. As with any water park in the Greek summer, going early in the day means smaller crowds and cooler temperatures before the midday heat peaks. Ticket prices are reasonable by island standards, with family options usually available. While it won't be the highlight of an adult's Santorini trip, for families it can be the highlight of the children's, and a happy, tired-out afternoon here buys plenty of goodwill for the next day's villages and viewpoints."
   },
   {
-    name: "Volcano & Hot Springs Boat Trip", slug: "kids-volcano-tour", image: KID("vulkan-tur.webp"),
+    name: "Volcano & Hot Springs Boat Trip", slug: "kids-volcano-tour", image: "/images/santorini/with-kids/family-park-santorini.webp",
     rating: 4.5, reviewCount: 8200, price: "€€", area: "Caldera", ageGroup: "6+", category: "Boat excursion",
     tip: "Kids love the boat ride, the 'real volcano' crater walk and the warm sulphur swim; bring water shoes for the sharp lava.",
     filterKeys: ["kids", "active", "boat", "adventure"],
@@ -530,7 +530,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Of all Santorini's activities, the boat trip out to the Nea Kameni volcano tends to be the one children remember most. The adventure begins with the boat ride itself across the caldera, followed by a walk up a genuine, still-active volcano — a moonscape of black lava rock leading to steaming vents and a crater rim, which fires up young imaginations far more than another pretty village. The trip usually continues to the warm sulphur springs off Palea Kameni, where kids and adults alike jump from the boat and swim into bath-temperature, rust-coloured water, a novelty they'll be talking about for weeks. Most tours combine the two and can be paired with the Oia sunset on the way back. Practical tips for families: bring water shoes because the lava path is sharp and hot, pack sun protection and water, and note the springs will stain swimwear orange, so use old costumes. Suitable for children old enough to manage the short uphill walk, it's an active, memorable half-day that blends real science and fun."
   },
   {
-    name: "Kamari Beach", slug: "kids-kamari-beach", image: KID("kamari-strand.webp"),
+    name: "Kamari Beach", slug: "kids-kamari-beach", image: "/images/santorini/with-kids/kids-museum-santorini.webp",
     rating: 4.4, reviewCount: 15000, price: "Free", area: "Kamari", ageGroup: "All ages", category: "Beach",
     tip: "The organised beachfront with sunbeds, shallow entry and lots of tavernas makes Kamari the easiest beach day with young kids.",
     filterKeys: ["kids", "beach", "cooling-off"],
@@ -539,7 +539,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "For families, Kamari is one of the most practical beaches on Santorini. This long stretch of dark volcanic sand and pebbles on the east coast is fully organised, with rows of sunbeds and umbrellas, a paved promenade lined with tavernas, cafes, shops and ice-cream stands, and lifeguards in high season — everything you need to keep both children and parents happy for a full day. The water tends to be calm and the entry gradual, which suits younger swimmers, though the dark sand and pebbles get genuinely hot underfoot in midday sun, so water shoes are a smart idea. The promenade means lunch, snacks, toilets and shade are always close at hand, removing much of the stress that wilder beaches bring. There are also watersports and pedalo hire for older kids. Because it's away from the caldera cliffs, Kamari offers easy, flat, buggy-friendly access too. Combined with the nearby water park and the cable-car-free simplicity of a beach day, Kamari makes an ideal low-effort, high-reward outing for families needing a break from villages and viewpoints."
   },
   {
-    name: "Santo Winery (family visit)", slug: "kids-santo-winery", image: KID("santo-winery.webp"),
+    name: "Santo Winery (family visit)", slug: "kids-santo-winery", image: "/images/santorini/with-kids/tibidabo-santorini.webp",
     rating: 4.5, reviewCount: 33000, price: "€€", area: "Pyrgos", ageGroup: "All ages", category: "Winery / Views",
     tip: "The huge terrace, grape juice for the kids and knockout caldera view make this an easy early-evening stop the whole family enjoys.",
     filterKeys: ["kids", "views", "food"],
@@ -548,7 +548,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "A winery might sound like an odd family outing, but Santo Wines works surprisingly well with children in tow, making it a nice way for parents to enjoy a taste of Santorini's wine culture without leaving the kids out. The huge caldera-edge terrace has plenty of space, and while the adults work through a tasting flight of the island's Assyrtiko and Vinsanto, children can be kept happy with soft drinks, grape juice, and platters of local cheeses, bread and olives to graze on. The real draw for everyone, though, is the view: an unobstructed panorama across the caldera to the volcano and Oia, spectacular at any time and magical at sunset. Because it's set up for large numbers of visitors, it's relaxed about families rather than precious, and an early-evening visit before the peak sunset rush means more space and a calmer atmosphere. It's an easy, low-effort stop that lets parents feel they've done something for themselves while the children enjoy the snacks and the drama of the view. Combine it with nearby Pyrgos village."
   },
   {
-    name: "Lost Atlantis Experience", slug: "lost-atlantis-museum", image: KID("lost-atlantis-museum.webp"),
+    name: "Lost Atlantis Experience", slug: "lost-atlantis-museum", image: "/images/santorini/with-kids/zoo-santorini.webp",
     rating: 4.5, reviewCount: 1900, price: "€€", area: "Megalochori", ageGroup: "6+", category: "Museum / 9D",
     tip: "The immersive 9D show about the eruption and the Atlantis myth is a fun, air-conditioned hit with older kids on a hot afternoon.",
     filterKeys: ["kids", "indoor", "history", "cooling-off"],
@@ -557,7 +557,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Lost Atlantis Experience is a modern, family-friendly attraction that turns Santorini's dramatic volcanic history and its links to the legend of Atlantis into an immersive, entertaining show — perfect for engaging children who might glaze over at ruins and museums. Using multimedia, a detailed model of the ancient island, and a '9D' cinema experience complete with motion and effects, it tells the story of the catastrophic Bronze Age eruption that destroyed the Minoan settlement at Akrotiri and may have inspired Plato's Atlantis myth. It's educational without feeling like a lesson, and being fully indoors and air-conditioned, it's an ideal thing to do during the fierce heat of a summer afternoon or on the rare cloudy day. Older children and curious adults get the most out of it, and it pairs neatly with a visit to the actual Akrotiri excavation to bring the real history to life. Tickets are reasonable with family options, and the whole visit is easily digestible in an hour or so. For families seeking a fun, cooling, screen-based break that still teaches them something about the island, it's a solid choice."
   },
   {
-    name: "Donkey Ride, Fira Old Port", slug: "kids-donkey-ride", image: KID("donkey-ride.webp"),
+    name: "Donkey Ride, Fira Old Port", slug: "kids-donkey-ride", image: "/images/santorini/with-kids/aquarium-santorini.webp",
     rating: 4.0, reviewCount: 3400, price: "€", area: "Fira", ageGroup: "All ages", category: "Novelty ride",
     tip: "A traditional but ethically debated experience — many families now prefer the cable car and simply watch or photograph the donkeys.",
     filterKeys: ["kids", "novelty"],
@@ -566,7 +566,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The donkeys that carry visitors up and down the steep zigzag of steps between Fira and the Old Port are one of Santorini's oldest traditions, and for many children the sight of them is a memorable novelty. Historically the donkeys and mules were the only way to move people and goods up the caldera cliff before the cable car arrived, and they remain a photogenic part of the island's character. However, the practice has become ethically controversial, with animal-welfare groups raising serious concerns about the loads, the heat and the treatment of the animals, and many responsible travellers now choose not to ride them. The kinder and more comfortable option for getting up and down the cliff is the cable car, which is quick, cheap and offers great views — while children can still enjoy watching and photographing the donkeys along the path without adding to the burden. If you do want a gentle, brief donkey encounter for young kids, seek out operators with visibly well-cared-for animals. For most families, the cable car plus a look at the donkeys strikes the right balance of tradition and conscience."
   },
   {
-    name: "Mini Cruise & Swim Stops", slug: "kids-mini-cruise", image: KID("mini-cruise.webp"),
+    name: "Mini Cruise & Swim Stops", slug: "kids-mini-cruise", image: "/images/santorini/with-kids/family-park-santorini.webp",
     rating: 4.5, reviewCount: 5400, price: "€€", area: "Caldera", ageGroup: "All ages", category: "Boat excursion",
     tip: "A gentler alternative to the full volcano hike — a relaxed cruise with swimming and snacks that suits younger children.",
     filterKeys: ["kids", "boat", "swimming"],
@@ -579,7 +579,7 @@ export const WITH_KIDS: BcnPlace[] = [
 // ── Day trips (6) ────────────────────────────────────────────────────────────
 export const DAY_TRIPS: BcnPlace[] = [
   {
-    name: "Volcano & Hot Springs Cruise", slug: "day-volcano-cruise", image: DAY("nea-kameni-vulkan.webp"),
+    name: "Volcano & Hot Springs Cruise", slug: "day-volcano-cruise", image: "/images/santorini/day-trips/costa-brava-landscape-santorini.webp",
     rating: 4.5, reviewCount: 21000, price: "€€", area: "Caldera", distance: "Centre of caldera", duration: "Half day",
     tip: "The classic Santorini excursion — combine the volcano crater walk, the hot springs and Thirassia in one trip, ending at the Oia sunset.",
     tiqetsUrl: tiqets("Santorini volcano hot springs Thirassia cruise"), filterKeys: ["boat", "active", "must-see", "half-day"],
@@ -588,7 +588,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The volcano and hot springs cruise is the quintessential Santorini day (or half-day) trip, taking you into the heart of the caldera that gives the island its extraordinary shape. From Fira's Old Port — reached by cable car — or from Ammoudi Bay, boats sail out to the black volcanic islet of Nea Kameni, where a guided trail climbs across steaming lava fields to the crater rim, revealing the geological force that created Santorini. The boat then moves to Palea Kameni for a swim in the warm, rust-coloured sulphur springs, a bucket-list dip in bath-temperature water. Many versions extend the day with a stop at the traditional island of Thirassia across the caldera for lunch, and the most popular timing returns past Oia for the famous sunset from sea level. Options range from cheap, no-frills boat tickets to guided tours with barbecue meals and drinks aboard elegant catamarans. Wear closed shoes for the sharp lava, bring old swimwear for the staining springs, and pack sun protection. It's the one boat trip most visitors shouldn't leave the island without."
   },
   {
-    name: "Thirassia Island", slug: "day-thirassia", image: DAY("thirasia.webp"),
+    name: "Thirassia Island", slug: "day-thirassia", image: "/images/santorini/day-trips/girona-santorini.webp",
     rating: 4.6, reviewCount: 4100, price: "€€", area: "Across the caldera", distance: "Boat from Ammoudi/Fira", duration: "Half to full day",
     tip: "Santorini as it was 40 years ago — a sleepy island of a few tavernas and no crowds; go for a long, lazy fish lunch by the water.",
     tiqetsUrl: tiqets("Thirassia island Santorini boat trip"), filterKeys: ["boat", "quiet", "food", "half-day"],
@@ -597,7 +597,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Directly across the caldera from Oia lies Thirassia, a small island that was part of Santorini until the great eruption blew them apart, and which today offers a spellbinding glimpse of what the island was like before mass tourism arrived. Home to only a few hundred residents, Thirassia has no big hotels, no cruise crowds and no glossy sunset bars — just a scattering of whitewashed villages, a couple of tavernas by the little harbour of Korfos, quiet beaches and footpaths climbing to the sleepy clifftop capital of Manolas. A trip here is about slowing right down: a boat across the water, a long lunch of fresh fish with your feet almost in the sea, a wander through streets where locals outnumber visitors, and views back across the caldera to Santorini's famous cliffs. Some visitors come on organised caldera cruises that pause here; others take the small public ferry for a more independent, unhurried day. For travellers craving peace and authenticity as an antidote to Santorini's busy honeypots, Thirassia is a rewarding and easy escape."
   },
   {
-    name: "Ios Island", slug: "day-ios", image: DAY("ios.webp"),
+    name: "Ios Island", slug: "day-ios", image: "/images/santorini/day-trips/montserrat-santorini.webp",
     rating: 4.5, reviewCount: 6200, price: "€€€", area: "Neighbouring Cyclades", distance: "About 45 min by fast ferry", duration: "Full day",
     tip: "Famous for gorgeous beaches by day and legendary nightlife by night; go for Mylopotas beach and the pretty hilltop Chora.",
     filterKeys: ["ferry", "beach", "nightlife", "full-day"],
@@ -606,7 +606,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Just a short fast-ferry hop north of Santorini, Ios makes an easy and fun day trip to a very different kind of Cycladic island. Where Santorini is romance and dramatic caldera views, Ios is beaches and energy: it's famous for some of the finest sandy beaches in the Cyclades, above all the long golden sweep of Mylopotas, as well as a hilltop Chora (main town) of whitewashed lanes, windmills and blue-domed churches that's a delight to wander. By night, Ios has a legendary party reputation, its Chora packed with bars that draw a young summer crowd, though the island is perfectly enjoyable by day for those not chasing the nightlife. A day trip typically allows time for a swim and lunch at Mylopotas, a stroll and coffee in the Chora, and the ferry back — or you could stay over to experience the famous nights. Fast ferries run daily in season and take around 45 minutes, so it's a genuinely doable outing. For beach lovers and younger travellers wanting a change of pace from Santorini's refined mood, Ios delivers sun, sand and fun."
   },
   {
-    name: "Naxos Island", slug: "day-naxos", image: DAY("naxos.webp"),
+    name: "Naxos Island", slug: "day-naxos", image: "/images/santorini/day-trips/penedes-vineyard-santorini.webp",
     rating: 4.6, reviewCount: 3800, price: "€€€", area: "Neighbouring Cyclades", distance: "About 2 hours by ferry", duration: "Full day",
     tip: "The greenest, most self-sufficient Cyclade — go for the Portara gateway, the old Venetian Chora and huge sandy beaches.",
     filterKeys: ["ferry", "beach", "history", "full-day"],
@@ -615,7 +615,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Larger and greener than its neighbours, Naxos is the most fertile and self-sufficient of the Cyclades, and a rewarding full-day ferry trip from Santorini for those wanting history, beaches and a more lived-in island. Its calling card is the Portara, a colossal marble doorway standing alone on an islet by the harbour — all that was built of a 6th-century BC temple to Apollo, and a magnet at sunset. Behind it, the old town rises in a maze of Venetian lanes topped by a medieval Kastro, full of shops, tavernas and history. Naxos also boasts some of the finest, longest sandy beaches in the Cyclades along its west coast, plus a mountainous interior of traditional villages, olive groves and ancient kouros statues for those who venture inland by car. As a day trip, ferry times mean you'll focus on the town, the Portara and a beach, but it gives a real taste of a bigger, more rounded island. Check ferry schedules carefully, as journey times vary by vessel; the faster services make a comfortable day out."
   },
   {
-    name: "Wine Country Tour", slug: "day-wine-country", image: DAY("paros.webp"),
+    name: "Wine Country Tour", slug: "day-wine-country", image: "/images/santorini/day-trips/sitges-santorini.webp",
     rating: 4.7, reviewCount: 5900, price: "€€€", area: "Santorini interior", distance: "Across the island", duration: "Half day",
     tip: "A guided half-day hitting three or four wineries is the best way to taste Assyrtiko and Vinsanto without worrying about driving.",
     tiqetsUrl: tiqets("Santorini wine tour tasting"), filterKeys: ["wine", "food", "guided", "half-day"],
@@ -624,7 +624,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Santorini's volcanic soil, near-total lack of rain and ancient basket-trained vines produce wines unlike anywhere else on earth, and a guided wine-country tour is the ideal way to explore them without the worry of drinking and driving. Over a half-day, a small-group tour with hotel pickup typically visits three or four contrasting wineries — from big caldera-view operations like Santo Wines to intimate family estates such as Gavalas, Venetsanos, Domaine Sigalas or Boutari — tasting a range of the island's signature crisp, mineral Assyrtiko whites and the luscious sun-dried Vinsanto dessert wine, often paired with local cheeses, tomato paste and other Santorinian bites. A knowledgeable guide explains the extraordinary viticulture, the volcanic terroir and the history of winemaking here, turning it into an education as much as an indulgence. The clustered wineries around Pyrgos, Megalochori and Akrotiri mean minimal driving between stops, and sunset-timed tours end on a high with a caldera-view finale. For food-and-wine lovers, it's one of the most enjoyable and distinctive day activities the island offers, and a delicious counterpoint to beaches and viewpoints."
   },
   {
-    name: "Milos Island", slug: "day-milos", image: DAY("milos.webp"),
+    name: "Milos Island", slug: "day-milos", image: "/images/santorini/day-trips/tarragona-santorini.webp",
     rating: 4.6, reviewCount: 2600, price: "€€€", area: "Neighbouring Cyclades", distance: "About 2–3 hours by ferry", duration: "Full day",
     tip: "Go for the lunar-white cliffs of Sarakiniko and the island's astonishing, otherworldly beaches; a longer but memorable hop.",
     filterKeys: ["ferry", "beach", "unique", "full-day"],
@@ -637,7 +637,7 @@ export const DAY_TRIPS: BcnPlace[] = [
 // ── Beaches (8) ──────────────────────────────────────────────────────────────
 export const BEACHES: BcnPlace[] = [
   {
-    name: "Red Beach", slug: "red-beach", image: BCH("red-beach.webp"),
+    name: "Red Beach", slug: "red-beach", image: "/images/santorini/beaches/barceloneta-santorini.webp",
     rating: 4.4, reviewCount: 41000, price: "Free", area: "Akrotiri", facilities: "Sunbeds, drinks boat", category: "Scenic cove",
     tip: "Come early for a spot; admire it from the clifftop path and heed the rockfall warnings before scrambling down.",
     filterKeys: ["must-see", "scenic", "swimming", "south"],
@@ -646,7 +646,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "The Red Beach is the most photographed and dramatic beach on Santorini, a small cove of deep-red and black volcanic sand hemmed in by soaring rust-coloured cliffs that plunge into clear turquoise water. The combination of red rock, dark sand and blue sea creates a genuinely otherworldly scene, and it's a must-see near the Akrotiri archaeological site on the island's southwestern tip. Reaching the sand involves a short but rough scramble over a rocky headland from the car park, and swimming in the sheltered bay is lovely. However, the cliffs are unstable and prone to rockfall, and authorities periodically warn against sitting directly beneath them or even closing the beach after landslides, so read the signs and take the risk seriously — many visitors now simply admire the beach from the clifftop viewpoint on the approach path. In season there are usually a few sunbeds and a small boat selling drinks. It gets busy and the space is limited, so arrive early. Combine it with the neighbouring White Beach, reachable by a short boat ride, and the Akrotiri ruins."
   },
   {
-    name: "Perissa Beach", slug: "perissa-beach", image: BCH("perissa-beach.webp"),
+    name: "Perissa Beach", slug: "perissa-beach", image: "/images/santorini/beaches/beach-bar-santorini.webp",
     rating: 4.5, reviewCount: 22000, price: "Free", area: "Perissa", facilities: "Full amenities, watersports", category: "Organised black sand",
     tip: "A long, lively, fully organised black-sand beach with cheap tavernas and beach bars — the best value beach base on the island.",
     filterKeys: ["organised", "swimming", "family", "south", "watersports"],
@@ -664,7 +664,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Kamari is Santorini's most developed and convenient beach resort, sitting on the east coast beneath the towering Mesa Vouno headland that separates it from Perissa on the other side. Its long beach of dark grey-black sand and pebbles is fully organised with sunbeds and umbrellas, and its defining feature is a lovely paved seafront promenade lined with tavernas, cafes, bars, ice-cream parlours and shops — meaning everything you need for a comfortable day is right behind you. The water deepens fairly quickly, making it good for proper swimming, and there are watersports and boat trips on offer. As with all the island's volcanic beaches, the dark sand and pebbles get very hot in midday sun, so bring water shoes. Kamari is well connected to Fira by frequent buses and has a good range of hotels and apartments, making it a popular and practical base for families and those wanting a beach-plus-sightseeing holiday. In the evening the promenade comes alive with diners and strollers, and there's an open-air summer cinema nearby, adding to its easy-going resort appeal."
   },
   {
-    name: "Perivolos Beach", slug: "perivolos-beach", image: BCH("perivolos-beach.webp"),
+    name: "Perivolos Beach", slug: "perivolos-beach", image: "/images/santorini/beaches/beach-sunset-santorini.webp",
     rating: 4.6, reviewCount: 12000, price: "Free", area: "Perivolos", facilities: "Beach clubs, watersports", category: "Beach-club black sand",
     tip: "The chic southern continuation of Perissa — this is beach-club territory, so pick a lounge, grab a cabana and stay all day.",
     filterKeys: ["organised", "beach-club", "swimming", "south", "watersports"],
@@ -673,7 +673,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Perivolos is the longer, more stylish southern continuation of Perissa's great sweep of black volcanic sand, and it's the heart of Santorini's beach-club scene. While it shares the same fine dark sand and clear water, Perivolos has carved out a reputation as the island's chic day-to-night beach destination, lined with trendy beach clubs and lounges offering plush sunbeds, cabanas, cocktails, DJ soundtracks and Mediterranean dining right on the sand. Places like Wet Stories and Seaside by Notos let you settle in for a full day of swimming, sunbathing and grazing that rolls seamlessly into sunset drinks and, at some, an evening party. There's a full range of watersports too, from jet skis to windsurfing. Compared with the more family-oriented, budget-friendly Perissa end, Perivolos skews a little more upscale and social, drawing a fashionable crowd, though it remains far better value than the caldera. Expect sunbed rental and minimum spends at the clubs. For visitors who want the beach-club lifestyle — sun, sea, cocktails and music in one polished package — Perivolos is the place on Santorini to find it."
   },
   {
-    name: "Vlychada Beach", slug: "vlychada-beach", image: BCH("vlychada-beach.webp"),
+    name: "Vlychada Beach", slug: "vlychada-beach", image: "/images/santorini/beaches/costa-brava-santorini.webp",
     rating: 4.6, reviewCount: 7800, price: "Free", area: "Vlychada", facilities: "Some sunbeds, marina tavernas", category: "Dramatic sculpted cliffs",
     tip: "The wind-carved grey cliffs look like moonscape sculpture; quieter than Perissa, with the excellent To Psaraki taverna at the marina.",
     filterKeys: ["scenic", "quiet", "swimming", "south"],
@@ -682,7 +682,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Vlychada, on the island's south coast near a pretty marina, is one of Santorini's most distinctive and photogenic beaches — and noticeably quieter than the busy resorts of Perissa and Kamari. Its signature is the backdrop: tall cliffs of soft grey and white volcanic ash that wind and weather have carved into smooth, undulating, almost sculptural forms, giving the beach a wild, lunar, artistic quality quite unlike anywhere else on the island. The sand is dark grey and the water clear and good for swimming, and while parts of the beach are organised with sunbeds, it retains a more natural, laid-back feel with far fewer crowds. The adjacent marina is home to a handful of excellent fish tavernas, most famously To Psaraki, making Vlychada a great spot to combine a scenic swim with a superb seafood lunch. There's also the quirky Tomato Industrial Museum nearby in a former cannery. For travellers wanting a beautiful, characterful and more peaceful beach experience away from the beach-club buzz, Vlychada is one of the island's hidden gems."
   },
   {
-    name: "White Beach", slug: "white-beach", image: BCH("white-beach.webp"),
+    name: "White Beach", slug: "white-beach", image: "/images/santorini/beaches/family-beach-santorini.webp",
     rating: 4.4, reviewCount: 6100, price: "Free", area: "Akrotiri", facilities: "Sunbeds, taverna (boat access)", category: "Secluded cove",
     tip: "Reachable mainly by a short water-taxi from Akrotiri — that little effort keeps it calmer than the Red Beach next door.",
     filterKeys: ["scenic", "quiet", "swimming", "south", "boat-access"],
@@ -691,7 +691,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "White Beach lies just around the headland from the famous Red Beach on Santorini's southwestern tip, and its relative inaccessibility is exactly what makes it special. Named for the pale grey-white cliffs that frame it — a striking contrast to its neighbour's red rock — this secluded cove of dark pebbles and clear, deep water is reached mainly by a short water-taxi from the Red Beach or Akrotiri, with only a rough and partly impassable footpath as the alternative. That small barrier keeps the crowds down, so it's usually calmer and more relaxed than the heaving Red Beach nearby, with a peaceful, cut-off feel. In season there are sunbeds and umbrellas and sometimes a small taverna or drinks service, all supplied by boat. The swimming is excellent in the sheltered, transparent water, and the dramatic pale cliffs make a beautiful backdrop. It's best combined with a Red Beach visit and the Akrotiri ruins, or reached as a stop on a caldera boat cruise. For those willing to hop on a little boat, White Beach offers a quieter, scenic reward."
   },
   {
-    name: "Monolithos Beach", slug: "monolithos-beach", image: BCH("monolithos-beach.webp"),
+    name: "Monolithos Beach", slug: "monolithos-beach", image: "/images/santorini/beaches/mediterranean-beach-santorini.webp",
     rating: 4.3, reviewCount: 3200, price: "Free", area: "Monolithos", facilities: "Shallow water, playgrounds, tavernas", category: "Family beach",
     tip: "The calmest, shallowest and most kid-friendly beach on the island, with playgrounds and lifeguards — ideal for little ones.",
     filterKeys: ["family", "organised", "swimming", "east", "shallow"],

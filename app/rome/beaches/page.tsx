@@ -53,7 +53,7 @@ export default function RomeBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Best Beaches Near Rome"
-      heroImage="/images/rome/strander/sperlonga.webp"
+      heroImage="/images/rome/beaches/barceloneta-rome.webp"
       intro="Rome is not on the coast, but the Tyrrhenian Sea is closer than you think — Lido di Ostia is 40 minutes on a city train, and a string of sandier, prettier beaches lie within a day's reach along the Lazio coast. From family-friendly Santa Marinella and historic Anzio to postcard Sperlonga and the wild dunes of Sabaudia, here are the best beach escapes, with how to get there by train or car and what to expect."
       wide
     >

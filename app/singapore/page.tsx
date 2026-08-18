@@ -47,15 +47,15 @@ const NON_STOP = [
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/singapore/sevardheter/gardens-by-the-bay.webp",
-  restaurants: "/images/singapore/restauranger/odette.webp",
-  hotels: "/images/singapore/hotell/marina-bay-sands.webp",
+  restaurants: "/images/singapore/restaurants/restaurant-singapore.avif",
+  hotels: "/images/singapore/hotels/hotel-singapore.avif",
   transport: "/images/singapore/sevardheter/jewel-changi-airport.webp",
   prices: "/images/singapore/sevardheter/merlion-park.webp",
   weather: "/images/singapore/sevardheter/singapore-botanic-gardens.webp",
-  shopping: "/images/singapore/shopping/orchard-road.webp",
-  beaches: "/images/singapore/strander/palawan-beach.webp",
+  shopping: "/images/singapore/shopping/artisan-shop-singapore.webp",
+  beaches: "/images/singapore/beaches/barceloneta-singapore.webp",
   nightlife: "/images/singapore/nattliv/1-altitude.webp",
-  "with-kids": "/images/singapore/med-barn/singapore-zoo.webp",
+  "with-kids": "/images/singapore/with-kids/aquarium-singapore.webp",
   "day-trips": "/images/singapore/dagsutflykter/johor-bahru-malaysia.webp",
   events: "/images/singapore/sevardheter/chinatown.webp",
 };
@@ -73,14 +73,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Singapore Zoo", blurb: "Regularly rated the world's best zoo, in cage-free rainforest.", image: "/images/singapore/sevardheter/singapore-zoo.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Odette", blurb: "Julien Royer's three-Michelin-star modern French flagship.", image: "/images/singapore/restauranger/odette.webp" },
-  { name: "Hawker Chan", blurb: "The world's cheapest Michelin meal — soya chicken rice for S$6.", image: "/images/singapore/restauranger/hawker-chan.webp" },
-  { name: "Long Beach Seafood", blurb: "The self-proclaimed birthplace of black pepper crab.", image: "/images/singapore/restauranger/long-beach-seafood.webp" },
+  { name: "Odette", blurb: "Julien Royer's three-Michelin-star modern French flagship.", image: "/images/singapore/restaurants/restaurant-singapore.avif" },
+  { name: "Hawker Chan", blurb: "The world's cheapest Michelin meal — soya chicken rice for S$6.", image: "/images/singapore/restaurants/restaurant-singapore.avif" },
+  { name: "Long Beach Seafood", blurb: "The self-proclaimed birthplace of black pepper crab.", image: "/images/singapore/restaurants/restaurant-singapore.avif" },
 ];
 const BEACH_PREVIEW = [
-  { name: "Palawan Beach", blurb: "Sentosa's family beach and the 'southernmost point of Asia'.", image: "/images/singapore/strander/palawan-beach.webp" },
-  { name: "East Coast Park", blurb: "A 15 km ribbon of cycling paths, barbecues and seafood.", image: "/images/singapore/strander/east-coast-park.webp" },
-  { name: "Lazarus Island", blurb: "An idyllic, undeveloped white-sand escape by ferry.", image: "/images/singapore/strander/lazarus-island.webp" },
+  { name: "Palawan Beach", blurb: "Sentosa's family beach and the 'southernmost point of Asia'.", image: "/images/singapore/beaches/beach-bar-singapore.webp" },
+  { name: "East Coast Park", blurb: "A 15 km ribbon of cycling paths, barbecues and seafood.", image: "/images/singapore/beaches/beach-sunset-singapore.webp" },
+  { name: "Lazarus Island", blurb: "An idyllic, undeveloped white-sand escape by ferry.", image: "/images/singapore/beaches/costa-brava-singapore.webp" },
 ];
 
 const NEARBY = [

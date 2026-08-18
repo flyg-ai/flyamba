@@ -98,15 +98,15 @@ const NON_STOP = [
 
 const CATEGORY_IMAGES: Record<string, string> = {
   attractions: "/images/madrid/attractions/prado-museet.webp",
-  restaurants: "/images/madrid/restaurants/sobrino-de-botn.webp",
-  hotels: "/images/madrid/hotels/hotel-ritz.webp",
+  restaurants: "/images/madrid/restaurants/restaurant-madrid.avif",
+  hotels: "/images/madrid/hotels/hotel-madrid.avif",
   transport: "/images/madrid/attractions/puerta-del-sol.webp",
   prices: "/images/madrid/attractions/mercado-de-san-miguel.webp",
   weather: "/images/madrid/attractions/retiro-parken.webp",
-  shopping: "/images/madrid/shopping/el-corte-ingls-callao.webp",
-  nightlife: "/images/madrid/nightlife/corral-de-la-morera.webp",
-  "with-kids": "/images/madrid/with-kids/zoo-aquarium.webp",
-  "day-trips": "/images/madrid/day-trips/toledo.webp",
+  shopping: "/images/madrid/shopping/artisan-shop-madrid.webp",
+  nightlife: "/images/madrid/nightlife/cocktail-bar-madrid.webp",
+  "with-kids": "/images/madrid/with-kids/aquarium-madrid.webp",
+  "day-trips": "/images/madrid/day-trips/costa-brava-landscape-madrid.webp",
   events: "/images/madrid/attractions/plaza-mayor.webp",
 };
 
@@ -116,14 +116,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Retiro Park", blurb: "The UNESCO-listed green heart, with a boating lake and glass palace.", image: "/images/madrid/attractions/retiro-parken.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Sobrino de Botín", blurb: "The world's oldest restaurant, roasting suckling pig since 1725.", image: "/images/madrid/restaurants/sobrino-de-botn.webp" },
-  { name: "Mercado de San Miguel", blurb: "A 1916 iron-and-glass food hall of gourmet tapas.", image: "/images/madrid/restaurants/mercado-de-san-miguel.webp" },
-  { name: "Casa Dani", blurb: "The world's best tortilla española, per National Geographic.", image: "/images/madrid/restaurants/casa-dani.webp" },
+  { name: "Sobrino de Botín", blurb: "The world's oldest restaurant, roasting suckling pig since 1725.", image: "/images/madrid/restaurants/restaurant-madrid.avif" },
+  { name: "Mercado de San Miguel", blurb: "A 1916 iron-and-glass food hall of gourmet tapas.", image: "/images/madrid/restaurants/restaurant-madrid.avif" },
+  { name: "Casa Dani", blurb: "The world's best tortilla española, per National Geographic.", image: "/images/madrid/restaurants/restaurant-madrid.avif" },
 ];
 const TRIP_PREVIEW = [
-  { name: "Toledo", blurb: "A UNESCO 'city of three cultures', 33 min by high-speed train.", image: "/images/madrid/day-trips/toledo.webp" },
-  { name: "Segovia", blurb: "A colossal Roman aqueduct and a fairy-tale castle, 30 min away.", image: "/images/madrid/day-trips/segovia.webp" },
-  { name: "El Escorial", blurb: "Philip II's vast monastery-palace in the mountains.", image: "/images/madrid/day-trips/el-escorial.webp" },
+  { name: "Toledo", blurb: "A UNESCO 'city of three cultures', 33 min by high-speed train.", image: "/images/madrid/day-trips/girona-madrid.webp" },
+  { name: "Segovia", blurb: "A colossal Roman aqueduct and a fairy-tale castle, 30 min away.", image: "/images/madrid/day-trips/montserrat-madrid.webp" },
+  { name: "El Escorial", blurb: "Philip II's vast monastery-palace in the mountains.", image: "/images/madrid/day-trips/penedes-vineyard-madrid.webp" },
 ];
 
 const WHY = [

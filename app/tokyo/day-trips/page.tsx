@@ -53,7 +53,7 @@ export default function TokyoDayTrips() {
       active="day-trips"
       crumb="Day Trips"
       h1="Best Day Trips from Tokyo"
-      heroImage="/images/tokyo/dagsutflykter/mt-fuji-hakone.webp"
+      heroImage="/images/tokyo/day-trips/costa-brava-landscape-tokyo.webp"
       intro="Tokyo's superb rail network puts an extraordinary range of day trips within easy reach. In an hour or two you can be soaking in a Hakone onsen beneath Mount Fuji, wandering the ancient temples of Kamakura by the sea, marvelling at the golden shrines of UNESCO-listed Nikko, exploring cosmopolitan Yokohama and its huge Chinatown, or stepping back into the Edo period at Kawagoe. Here are the six best escapes from the capital, with travel times, costs and how to make the most of each."
       wide
     >

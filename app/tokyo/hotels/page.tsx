@@ -55,7 +55,7 @@ export default function TokyoHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Tokyo"
-      heroImage="/images/tokyo/hotell/park-hyatt-tokyo.webp"
+      heroImage="/images/tokyo/hotels/hotel-tokyo.avif"
       intro="Tokyo's accommodation is as varied as the city itself, from serene sky-high luxury and authentic ryokan hot-spring rituals to futuristic capsule pods and a hostel you sleep inside a library. Base yourself in Shinjuku or Shibuya for nightlife and transport, Ginza or Marunouchi for elegance and central sightseeing, or Asakusa for old-town charm on a budget. Here are the best hotels across every price bracket, with room rates, areas and booking tips."
       wide
     >

@@ -54,7 +54,7 @@ export default function ParisWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Paris With Kids"
-      heroImage="/images/paris/med-barn/cit-des-sciences.webp"
+      heroImage="/images/paris/with-kids/aquarium-paris.webp"
       intro="Paris is far more child-friendly than its grand reputation suggests. Between the big monuments you'll find Europe's largest science museum with hands-on zones for under-12s, gentle old-fashioned amusement parks, one of the world's oldest zoos in a botanical garden, an aquarium opposite the Eiffel Tower, toy boats to sail on the Tuileries ponds and a magical museum of antique fairground rides. Here are the outings that keep families happy, with age guidance, prices and Métro directions — Disneyland Paris features in our day-trips guide."
       wide
     >

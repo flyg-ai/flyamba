@@ -54,7 +54,7 @@ export default function MykonosHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Mykonos"
-      heroImage="/images/mykonos/hotels/cavo-tagoo.webp"
+      heroImage="/images/mykonos/hotels/hotel-mykonos.avif"
       intro="Mykonos is one of the most expensive islands in Greece to sleep on, but it delivers some of the Mediterranean's most spectacular hotels for the money. From the cliff-carved infinity pools of Cavo Tagoo and the intimate luxury of Bill & Coo to the design-led Belvedere with its Nobu, sunset-facing Katikies, family-friendly beach resorts, a well-priced central boutique and the island's only campsite, here are 8 places to stay for every budget — with nightly rates in USD, areas and booking tips. Rooms sell out and prices spike months ahead for July and August, so book as early as you can."
       wide
     >

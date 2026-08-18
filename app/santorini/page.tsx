@@ -104,16 +104,16 @@ const NEARBY = [
 const CAT_IMAGE: Record<string, string> = {
   "": "/images/santorini/sevardheter/caldera.webp",
   attractions: "/images/santorini/sevardheter/oia-solnedgang.webp",
-  restaurants: "/images/santorini/restauranger/metaxi-mas.webp",
-  hotels: "/images/santorini/hotell/canaves-oia.webp",
+  restaurants: "/images/santorini/restaurants/restaurant-santorini.avif",
+  hotels: "/images/santorini/hotels/hotel-santorini.avif",
   transport: "/images/santorini/sevardheter/fira.webp",
   prices: "/images/santorini/sevardheter/oia.webp",
   weather: "/images/santorini/sevardheter/caldera-utsikten.webp",
-  shopping: "/images/santorini/shopping/oia-main-street.webp",
-  beaches: "/images/santorini/strander/red-beach.webp",
+  shopping: "/images/santorini/shopping/artisan-shop-santorini.webp",
+  beaches: "/images/santorini/beaches/barceloneta-santorini.webp",
   nightlife: "/images/santorini/nattliv/francos-bar.webp",
-  "with-kids": "/images/santorini/med-barn/kamari-strand.webp",
-  "day-trips": "/images/santorini/dagsutflykter/thirasia.webp",
+  "with-kids": "/images/santorini/with-kids/aquarium-santorini.webp",
+  "day-trips": "/images/santorini/day-trips/costa-brava-landscape-santorini.webp",
   events: "/images/santorini/sevardheter/imerovigli.webp",
 };
 

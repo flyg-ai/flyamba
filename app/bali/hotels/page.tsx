@@ -53,7 +53,7 @@ export default function BaliHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Bali"
-      heroImage="/images/bali/hotels/four-seasons-sayan.webp"
+      heroImage="/images/bali/hotels/hotel-bali.avif"
       intro="Choosing where to stay in Bali is as much about the area as the hotel: jungle-clad Ubud for temples, rice fields and wellness; Seminyak and Canggu for beaches and nightlife; Uluwatu for clifftop drama and surf; and Nusa Dua for calm, family-friendly resort sands. From bucket-list Aman and Four Seasons villas to cool Canggu hostels, here are the best places to stay, with areas, prices and tips."
       wide
     >

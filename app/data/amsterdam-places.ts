@@ -270,7 +270,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Foodhallen is Amsterdam's original and best-known indoor food market, occupying part of De Hallen, a beautifully converted early-twentieth-century tram depot in the hip Oud-West district. Under one lofty roof, more than twenty stalls and bars dish up street food from around the world — Vietnamese bánh mì, Spanish jamón and croquettes, Dutch bitterballen, wood-fired pizza, dim sum, gourmet burgers, fresh oysters, Indonesian and Turkish plates — alongside central cocktail, wine and craft-beer bars. The format is simple and sociable: grab a communal table, then let everyone roam and order whatever they fancy, making it perfect for groups, families and indecisive eaters. It's lively, informal and reasonably priced, buzzing from lunch through late evening, and the wider De Hallen building also holds a boutique cinema, a library and independent shops, so it's easy to make a half-day of it. It can get very busy and loud at peak weekend times, so arrive a little early to bag a table. For a fun, flexible, budget-friendly meal that showcases Amsterdam's diverse food scene in one spot, Foodhallen is a dependable, enjoyable choice.",
   },
   {
-    name: "Rijks", slug: "rijks", image: RES("rijks.webp"),
+    name: "Rijks", slug: "rijks", image: "/images/amsterdam/restaurants/restaurant-amsterdam.avif",
     rating: 4.5, reviewCount: 5000, price: "€€€€", area: "Museum Quarter", type: "Fine Dining (Michelin)",
     tip: "The Michelin-starred restaurant of the Rijksmuseum — book the tasting menu for a dressed-up culture day.",
     filterKeys: ["fine-dining"],
@@ -279,7 +279,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Rijks is the acclaimed, Michelin-starred restaurant attached to the Rijksmuseum, occupying a sleek, high-ceilinged space in the museum's Philips Wing with its own street entrance so you don't need a museum ticket to dine. Under a celebrated kitchen, it takes inspiration from the museum's collection and the Netherlands' history of global trade, building modern, refined dishes around top Dutch produce enlivened with international spices and techniques — a nod to the country's Golden Age connections. The result is elegant, seasonal and confident, served à la carte at lunch or as multi-course tasting menus with thoughtful wine pairings, in a bright, contemporary dining room that's a world away from the museum crowds. It's a smart, celebratory choice for a special lunch or dinner, ideally paired with a morning among the Old Masters next door for a full day of Dutch culture high and low. Reservations are essential and the tasting menus, while pricey, are strong value for the standard. For fine dining with a genuine sense of place, rooted in Amsterdam's greatest museum, Rijks is one of the city's most rewarding tables.",
   },
   {
-    name: "The Seafood Bar", slug: "the-seafood-bar", image: RES("the-seafood-bar.webp"),
+    name: "The Seafood Bar", slug: "the-seafood-bar", image: "/images/amsterdam/restaurants/restaurant-amsterdam.avif",
     rating: 4.5, reviewCount: 14000, price: "€€€", area: "Museum Quarter / Centre", type: "Seafood",
     tip: "The chilled seafood platter is the signature — arrive early or expect a wait, it doesn't take many bookings.",
     filterKeys: ["seafood"],
@@ -306,7 +306,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Café de Reiger is a much-loved 'bruin café' (brown café) in the heart of the Jordaan, the classic Amsterdam institution defined by its dark timeworn wood, nicotine-toned walls, cluttered charm and unhurried, sociable atmosphere. Locals prop up the bar over glasses of beer and jenever, but it's also a proper eetcafé, with a kitchen turning out honest, generous bistro cooking: seasonal specials, good steaks, fish, hearty stews and classic Dutch and European comfort dishes, all sensibly priced and served without pretension. It's the kind of place that feels like it has been here forever (it more or less has), where the mood is warm, the lighting low and the conversation easy — exactly the neighbourhood experience visitors hope to find in the Jordaan. It doesn't take many bookings and fills with a mix of regulars and clued-up travellers, so go a little early for a table, especially at weekends. For an authentic taste of Amsterdam café culture — a drink, a plate of good food and a genuine local atmosphere far from the tourist traps — Café de Reiger is a perfect, characterful choice.",
   },
   {
-    name: "Pannenkoekenhuis Upstairs", slug: "upstairs-pancakes", image: RES("pannenkoekenhuis-upstairs.webp"),
+    name: "Pannenkoekenhuis Upstairs", slug: "upstairs-pancakes", image: "/images/amsterdam/restaurants/restaurant-amsterdam.avif",
     rating: 4.5, reviewCount: 3000, price: "€", area: "City Centre", type: "Dutch Pancakes",
     tip: "One of the smallest, steepest restaurants in the city — book, and mind the near-vertical staircase.",
     filterKeys: ["dutch", "budget"],
@@ -315,7 +315,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Pannenkoekenhuis Upstairs is a wonderfully quirky Amsterdam institution and one of the best places to try the Dutch pancake, a thin, plate-sized crêpe-meets-pancake served sweet or savoury. The catch, and the charm, is the setting: the restaurant sits at the top of one of the steepest, narrowest staircases in the city, in a minuscule attic room with just a handful of tables and a ceiling hung with dozens of colourful teapots. It's tiny, eccentric and utterly memorable. The pancakes themselves are the classic thing — big, freshly griddled and piled with toppings from bacon-and-cheese or apple to stroopwafel, ice cream and Dutch syrup — and they're cheap, filling and delicious. Because there are so few seats and the opening hours are limited to a few days a week, it's worth calling ahead or turning up right at opening to avoid disappointment. It's not somewhere for anyone unsteady on stairs, but for everyone else it's a delightful, budget-friendly and thoroughly local experience. For an authentic, offbeat taste of Amsterdam pancake culture in a setting you won't forget, Upstairs is hard to beat.",
   },
   {
-    name: "Restaurant Breda", slug: "breda", image: RES("restaurant-breda.webp"),
+    name: "Restaurant Breda", slug: "breda", image: "/images/amsterdam/restaurants/restaurant-amsterdam.avif",
     rating: 4.5, reviewCount: 3500, price: "€€€", area: "City Centre", type: "Modern European",
     tip: "The surprise tasting menu on a central canal corner is one of the city's best mid-range fine-dining deals.",
     filterKeys: ["fine-dining"],
@@ -328,7 +328,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Waldorf Astoria Amsterdam", slug: "waldorf-astoria", image: HOT("waldorf-astoria.webp"),
+    name: "Waldorf Astoria Amsterdam", slug: "waldorf-astoria", image: "/images/amsterdam/hotels/hotel-amsterdam.avif",
     rating: 4.8, reviewCount: 3000, price: "€€€€", area: "Canal Ring (Herengracht)", type: "Luxury",
     tip: "Six restored Golden Age canal palaces with a courtyard garden and Michelin dining — pure canal-side luxury.",
     filterKeys: ["luxury"],
@@ -337,7 +337,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Waldorf Astoria Amsterdam is arguably the city's most beautiful luxury hotel, occupying six adjoining seventeenth- and eighteenth-century canal palaces on the prestigious 'Golden Bend' of the Herengracht — the stretch where the wealthiest Golden Age merchants built their grandest homes. Behind the historic facades, the interiors blend period grandeur (a monumental Louis XIV staircase, ornate ceilings, antiques) with discreet modern five-star comfort, and a rare, tranquil private courtyard garden hides in the middle. Facilities are exceptional: the Guerlain spa, an elegant bar, and the Michelin-starred Spectrum restaurant for special-occasion dining. Rooms and suites are spacious and richly appointed, many overlooking the canal or the garden. This is destination-luxury for travellers who want to sleep inside Amsterdam's UNESCO heritage rather than a modern tower, with the canals literally at the door and the Museumplein a short walk or tram ride away. Rates are firmly at the top end, typically from around $650 a night and much higher for suites, making it a splurge or special-trip choice. For history, elegance and a genuine sense of place, it's the benchmark canal-side five-star in the city.",
   },
   {
-    name: "Pulitzer Amsterdam", slug: "pulitzer-amsterdam", image: HOT("pulitzer-amsterdam.webp"),
+    name: "Pulitzer Amsterdam", slug: "pulitzer-amsterdam", image: "/images/amsterdam/hotels/hotel-amsterdam.avif",
     rating: 4.7, reviewCount: 7000, price: "€€€€", area: "Canal Ring (Nine Streets)", type: "Luxury",
     tip: "25 connected canal houses in the Nine Streets — ask about the whimsically themed 'collector' suites.",
     filterKeys: ["luxury"],
@@ -346,7 +346,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Pulitzer Amsterdam is one of the city's most characterful luxury hotels, ingeniously spread across twenty-five interconnected seventeenth- and eighteenth-century canal houses that span a whole block between the Prinsengracht and Keizersgracht, in the heart of the boutique-lined Nine Streets. Wandering its warren of corridors, staircases and hidden garden courtyards feels like exploring a little canal-side village, and each house retains original features — beams, gables, quirky level changes — while the rooms mix Dutch heritage with playful contemporary design. Some 'collector's suites' are wonderfully themed around characters like the antique dealer or the book collector. There's a lovely garden, a well-regarded restaurant (Jansz), a cocktail bar and even the hotel's own vintage salon boat for private canal tours. The location is superb: steps from the Anne Frank House, the Jordaan and the best canal walking, yet tucked away and quiet. Rates sit in the upper-luxury bracket, typically from around $450 a night. For guests who want five-star comfort wrapped in genuine Golden Age atmosphere and a brilliant central location, the Pulitzer is one of Amsterdam's most memorable and romantic places to stay.",
   },
   {
-    name: "Conservatorium Hotel", slug: "conservatorium-hotel", image: HOT("conservatorium-hotel.webp"),
+    name: "Conservatorium Hotel", slug: "conservatorium-hotel", image: "/images/amsterdam/hotels/hotel-amsterdam.avif",
     rating: 4.8, reviewCount: 4000, price: "€€€€", area: "Museum Quarter", type: "Luxury Design",
     tip: "The soaring glass-roofed atrium lounge is a destination in itself — steps from the Van Gogh and Rijksmuseum.",
     filterKeys: ["luxury"],
@@ -355,7 +355,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Conservatorium Hotel is Amsterdam's leading design-luxury hotel, set in a grand nineteenth-century building that served first as a bank and then as the Sweelinck conservatory of music, on the doorstep of Museumplein in the smart Museum Quarter. A celebrated renovation by architect Piero Lissoni fused the monumental original brickwork with a soaring, light-flooded glass atrium that runs through the heart of the hotel, home to a stylish all-day lounge and brasserie that's a scene in itself. Rooms and duplex loft suites are large, contemporary and beautifully finished, and the facilities are top-tier: an acclaimed Akasha holistic spa with a pool, excellent restaurants and bars, and impeccable service. The location is unbeatable for culture lovers — the Van Gogh Museum, Rijksmuseum, Stedelijk and Vondelpark are all within a few minutes' walk, with the designer shops of PC Hooftstraat around the corner. Rates are high, typically from around $550 a night, reflecting its status as one of Europe's finest design hotels. For travellers who prioritise cutting-edge style, wellness and a prime museum-district base, the Conservatorium is the standout choice in Amsterdam.",
   },
   {
-    name: "The Dylan", slug: "the-dylan", image: HOT("the-dylan.webp"),
+    name: "The Dylan", slug: "the-dylan", image: "/images/amsterdam/hotels/hotel-amsterdam.avif",
     rating: 4.7, reviewCount: 3000, price: "€€€€", area: "Canal Ring (Keizersgracht)", type: "Boutique Luxury",
     tip: "Intimate, courtyard-hushed and home to Michelin-starred Vinkeles — book a canal-view room.",
     filterKeys: ["luxury", "boutique"],
@@ -364,7 +364,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Dylan is a jewel-box boutique hotel on the Keizersgracht, wrapped around a serene cobbled courtyard on a site that has been a theatre and a Catholic almshouse over its long history. With just forty individually designed rooms and suites, it feels intimate and exclusive, mixing the building's seventeenth-century bones with bold, elegant contemporary interiors in a range of styles and colour schemes. Its jewel is Restaurant Vinkeles, the Michelin-starred fine-dining room set in the property's original brick bread ovens, complemented by a chic bar, a brasserie and a private canal boat for guests. The location is idyllic and central — right by the Nine Streets shopping, walkable to the Anne Frank House, the Jordaan and the main museums — yet the courtyard setting keeps it wonderfully quiet. Attentive, personal service completes the picture. Rates are firmly luxury, typically from around $500 a night. For couples and design-conscious travellers who want a small, romantic, canal-side hideaway with serious dining credentials rather than a big-brand hotel, The Dylan is one of the most desirable addresses in Amsterdam.",
   },
   {
-    name: "The Hoxton, Herengracht", slug: "hoxton-herengracht", image: HOT("the-hoxton-herengracht.webp"),
+    name: "The Hoxton, Herengracht", slug: "hoxton-herengracht", image: "/images/amsterdam/hotels/hotel-amsterdam.avif",
     rating: 4.6, reviewCount: 6000, price: "€€€", area: "Canal Ring (Herengracht)", type: "Boutique",
     tip: "Cool, sociable and canal-side — the lobby and Lotti's restaurant draw locals too; book a canal-view 'Roomy'.",
     filterKeys: ["boutique"],
@@ -373,7 +373,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Hoxton, Herengracht brings the brand's signature blend of style, sociability and relative value to a beautiful row of five interconnected seventeenth-century canal houses on the Herengracht, in a prime central location. Behind the classic gabled facades, the interiors are warm, retro-modern and design-led, with cosy canal-view rooms in sizes from compact 'Shoebox' to roomier 'Biggy' categories. As with every Hoxton, the ground-floor spaces are a big part of the appeal: a lively, welcoming lobby that doubles as a co-working and hangout spot, and Lotti's, a stylish all-day restaurant and bar that pulls in locals as well as guests. The setting is excellent — steps from the Nine Streets, the flower market and the main museums, right on one of the grand canals — while rates, from around $230 a night, are notably gentler than the top-end canal palaces for a genuinely central, design-forward stay. It suits travellers who want a hip, well-located base with buzz and character rather than formal luxury or resort facilities. For style and a great canal-side address at a mid-to-upper price, the Hoxton is one of Amsterdam's most likeable choices.",
   },
   {
-    name: "Sir Adam Hotel", slug: "sir-adam-hotel", image: HOT("sir-adam-hotel.webp"),
+    name: "Sir Adam Hotel", slug: "sir-adam-hotel", image: "/images/amsterdam/hotels/hotel-amsterdam.avif",
     rating: 4.5, reviewCount: 4000, price: "€€€", area: "Amsterdam-Noord (A'DAM Toren)", type: "Design",
     tip: "Music-themed rooms high in the A'DAM Toren with huge IJ views — the free ferry to Centraal runs 24/7.",
     filterKeys: ["boutique"],
@@ -382,7 +382,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Sir Adam is a cool, music-inspired design hotel occupying several floors of the landmark A'DAM Toren, the revamped tower on the north bank of the IJ directly across the water from Centraal Station. Created with a rock-and-roll, creative-industries theme (there's a guitar in many rooms and a distinctly hip, youthful vibe), it offers stylish, contemporary rooms with floor-to-ceiling windows and jaw-dropping panoramic views over the harbour and the historic city skyline. The tower is a destination in its own right: it houses the A'DAM Lookout observation deck and 'Over the Edge' swing at the top, a revolving restaurant, a ground-floor all-day restaurant and bar, and a nightclub, so there's plenty of life on the doorstep. The catch — and for many the appeal — is the location in up-and-coming Amsterdam-Noord, reached by the free, frequent 24-hour GVB ferry that glides across to Centraal in five minutes, effectively putting you a short hop from the centre. Rates, from around $200 a night, are reasonable for the design and the views. For style-led travellers happy to trade a canal-side address for spectacular vistas and a buzzing tower, Sir Adam is a standout.",
   },
   {
-    name: "citizenM Amsterdam", slug: "citizenm-amsterdam", image: HOT("citizenm-south-axis.webp"),
+    name: "citizenM Amsterdam", slug: "citizenm-amsterdam", image: "/images/amsterdam/hotels/hotel-amsterdam.avif",
     rating: 4.5, reviewCount: 9000, price: "€€", area: "Various (South / centre)", type: "Design Value",
     tip: "Compact, tech-forward rooms at fair prices — control the mood lighting and blinds from a tablet.",
     filterKeys: ["boutique", "budget"],
@@ -391,7 +391,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "citizenM is the smart choice for travellers who want contemporary design and a great social vibe without a luxury price tag, with several locations around Amsterdam including the business district at Zuid (well connected by metro) and near Schiphol. The concept is clever and consistent: rooms are deliberately compact but cleverly kitted out, with a wall-to-wall king bed, powerful rain shower, and a tablet that controls the lighting, mood colours, blinds, TV and temperature. What you lose in floor space you gain in the generous, stylish communal areas — a 24-hour 'living room' lounge full of designer furniture and art, a self-service canteen-bar (canteenM) and fast self check-in kiosks. It's tech-forward, efficient and reliably comfortable, popular with solo travellers, couples and business visitors alike. The Zuid location is a quick metro ride from the centre and handy for the airport and RAI convention centre, while rates typically start around $150 a night, excellent value for the quality of design. It's not canal-side atmosphere, but for a modern, hassle-free, affordable-cool base with slick amenities, citizenM is a dependable and enjoyable Amsterdam option.",
   },
   {
-    name: "Qbic Hotel Amsterdam", slug: "qbic-hotel", image: HOT("qbic-hotel.webp"),
+    name: "Qbic Hotel Amsterdam", slug: "qbic-hotel", image: "/images/amsterdam/hotels/hotel-amsterdam.avif",
     rating: 4.3, reviewCount: 5000, price: "€", area: "Amsterdam WTC / Zuid", type: "Budget Design",
     tip: "Clever all-in-one 'Cubi' rooms keep costs down — a solid budget-design base with easy transit links.",
     filterKeys: ["budget"],
@@ -404,7 +404,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Nightlife (10) ───────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "Paradiso", slug: "paradiso", image: NAT("paradiso.webp"),
+    name: "Paradiso", slug: "paradiso", image: "/images/amsterdam/nightlife/cocktail-bar-amsterdam.webp",
     rating: 4.7, reviewCount: 22000, type: "Club / Live Music", area: "Leidseplein",
     tip: "Gigs early, club late in a former church — check the calendar; the main hall's stained glass is glorious.",
     filterKeys: ["clubs", "live-music"],
@@ -422,7 +422,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Melkweg ('Milky Way') is one of Amsterdam's great cultural institutions, occupying a former dairy factory just off Leidseplein and, like its neighbour Paradiso, born out of the city's freewheeling 1970s counterculture. Today it's a sprawling multi-space complex hosting a hugely varied programme: two main concert halls stage everything from indie, rock and pop to hip-hop, electronic and world music, while club nights, a cinema, a photography gallery, a theatre and a café-restaurant all share the building. That range means there's almost always something on, whether you want to catch a touring band, dance until dawn or take in a film. The atmosphere is relaxed, creative and inclusive, drawing a mixed crowd of locals, students and visitors. Along with Paradiso a few doors away, it makes the Leidseplein area the natural hub for a music-led night out in Amsterdam. Check the listings and book ahead for popular gigs and club nights, and note some events are 18-plus. For live music and clubbing with real character and history, the Melkweg is a must on any night-owl's Amsterdam itinerary.",
   },
   {
-    name: "Shelter", slug: "shelter", image: NAT("shelter.webp"),
+    name: "Shelter", slug: "shelter", image: "/images/amsterdam/nightlife/flamenco-amsterdam.webp",
     rating: 4.4, reviewCount: 6000, type: "Techno Club", area: "Amsterdam-Noord (A'DAM Toren)",
     tip: "Underground techno beneath the A'DAM Toren — no phones on the floor; go late and commit to the night.",
     filterKeys: ["clubs"],
@@ -431,7 +431,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Shelter is Amsterdam's premier underground techno club, hidden in the basement of the A'DAM Toren across the IJ from Centraal Station. Built for serious clubbers, it has a powerful, purpose-designed sound system, a stripped-back industrial space and a no-nonsense focus on the music, with a line-up of respected local and international house and techno DJs playing long sets into the late morning. It operates a strict no-phones-on-the-dancefloor policy to keep the atmosphere immersive and present, and the crowd is knowledgeable and there to dance. This is a proper late-night venue — things don't get going until well after midnight and run until dawn and beyond, in true Amsterdam club fashion — so pace yourself and plan your journey home. Getting there is easy even at night thanks to the free 24-hour GVB ferry that shuttles from behind Centraal to Buiksloterweg, a few minutes from the tower. Check the events calendar and buy tickets in advance for big-name nights, which sell out. For visitors who take their electronic music seriously and want the authentic Amsterdam techno experience, Shelter is the place.",
   },
   {
-    name: "Disco Dolly", slug: "disco-dolly", image: NAT("disco-dolly.webp"),
+    name: "Disco Dolly", slug: "disco-dolly", image: "/images/amsterdam/nightlife/live-music-amsterdam.webp",
     rating: 4.3, reviewCount: 9000, type: "Club", area: "City Centre",
     tip: "Central, unpretentious and free-flowing disco, house and party hits — a reliable mainstream night out.",
     filterKeys: ["clubs"],
@@ -449,7 +449,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Door 74 is Amsterdam's pioneering speakeasy and consistently one of its best cocktail bars, hidden behind an unmarked door near Rembrandtplein with no sign to give it away. In keeping with the Prohibition-era theme, it operates largely by reservation — you message to book, and the address and details follow — which keeps the intimate, dimly lit room civilised and unhurried. Inside, expert bartenders mix precise, inventive and classic cocktails from a rotating, often playfully themed menu, using quality spirits, house infusions and real craft, in a setting of low light, leather and vintage glamour. It helped kick off Amsterdam's serious cocktail scene and still sets the standard, regularly appearing on 'best bar' lists. Because it's small and reservation-led, it's a place to settle in for a couple of beautifully made drinks rather than a rowdy night, ideal for a date or a sophisticated start to the evening. Prices are premium but fair for the quality. Book ahead, especially at weekends, dress reasonably smart, and enjoy the thrill of finding the unmarked door. For cocktail lovers, Door 74 is an essential and atmospheric Amsterdam experience.",
   },
   {
-    name: "Tales & Spirits", slug: "tales-and-spirits", image: NAT("tales-spirits.webp"),
+    name: "Tales & Spirits", slug: "tales-and-spirits", image: "/images/amsterdam/nightlife/nightlife-bar-amsterdam.webp",
     rating: 4.6, reviewCount: 3500, type: "Cocktail Bar", area: "City Centre",
     tip: "Bespoke cocktails served in a menagerie of vintage and custom glassware — try the signature 'Ostrich Egg'.",
     filterKeys: ["bars"],
@@ -467,7 +467,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Café Chris, on the Bloemstraat in the Jordaan, claims to be the oldest bar in Amsterdam, said to have been serving since 1624 — reputedly a watering hole for the workers who built the nearby Westerkerk. Stepping inside is like entering a piece of living history: the small, wonderfully atmospheric room is all dark timeworn wood, old tiles, faded photographs and quirky details (including a famously eccentric toilet that flushes from behind the bar). This is the archetypal 'bruin café', the brown café at the heart of Amsterdam's drinking culture, where the point is not craft cocktails or a scene but a good glass of Dutch beer or jenever, easy conversation and a deeply local, unhurried atmosphere. It draws a loyal mix of neighbourhood regulars and curious visitors, and its age and character make it a lovely place to experience traditional Amsterdam bar life. There's no food to speak of and it's cash-friendly, so come for the drinks and the ambience. For anyone wanting to raise a glass in the city's oldest and most characterful brown café, in its prettiest neighbourhood, Café Chris is a gem.",
   },
   {
-    name: "Canvas", slug: "canvas", image: NAT("canvas.webp"),
+    name: "Canvas", slug: "canvas", image: "/images/amsterdam/nightlife/rooftop-bar-night-amsterdam.webp",
     rating: 4.4, reviewCount: 7000, type: "Rooftop Bar / Club", area: "Oost (Volkshotel)",
     tip: "Seventh-floor bar with skyline views by day, DJ-fuelled club nights at weekends — go up for sunset.",
     filterKeys: ["rooftop", "bars", "clubs"],
@@ -476,7 +476,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Canvas sits on the seventh floor of the Volkshotel, a creative-hub hotel in a former newspaper building in Amsterdam-Oost, and it's one of the best rooftop spots in the city to combine a great view with a proper night out. By day and early evening it's a relaxed bar-café with big windows and a terrace offering sweeping panoramic views over the eastern skyline and beyond — a lovely place for a coffee, a drink or sunset. At weekends it transforms: the DJs come on, the crowd fills in, and it turns into a lively rooftop club that runs late, mixing house, disco and eclectic sounds in an artsy, unpretentious setting. That day-to-night flexibility, plus the views and the creative Volkshotel vibe below (which also has a café, restaurant and workspaces), makes it a favourite with in-the-know locals and visitors alike. It's a little outside the tourist centre in the increasingly hip Oost district, easily reached by metro to Wibautstraat. Head up for sunset drinks and stay on for the club, or just enjoy the vista with a cocktail. For rooftop views with genuine nightlife energy, Canvas is a top Amsterdam pick.",
   },
   {
-    name: "Waterkant", slug: "waterkant", image: NAT("waterkant.webp"),
+    name: "Waterkant", slug: "waterkant", image: "/images/amsterdam/nightlife/cocktail-bar-amsterdam.webp",
     rating: 4.4, reviewCount: 8000, type: "Waterside Bar", area: "City Centre (Singelgracht)",
     tip: "Sunny canal-side terrace with Surinamese food and cheap drinks — packed the moment the sun comes out.",
     filterKeys: ["bars"],
@@ -485,7 +485,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Waterkant is one of central Amsterdam's most popular and enjoyable drinking spots, a lively waterside bar with a large terrace right on the Singelgracht canal, tucked (a little incongruously) beneath a car park near Leidseplein. Its formula is simple and irresistible on a sunny day: cheap drinks, tasty Surinamese street food (a nod to the Netherlands' cultural ties), a big canal-side deck packed with a young, relaxed, international crowd, and an easygoing, festive atmosphere that runs from afternoon into the night. On the first warm day of the year it's rammed, with people spilling along the water's edge, beers in hand, in one of the city's best examples of Amsterdam's love of waterside 'borrel' (after-work drinks) culture. Later in the evening and at weekends the vibe picks up further with DJs and a party feel. It's informal, affordable and central, making it a great spot to start a night out or simply while away a sunny afternoon by the water. Come early to grab terrace space when the sun's out, and don't skip the Surinamese roti or loempia. For laid-back canal-side drinking with real buzz, Waterkant is a winner.",
   },
   {
-    name: "Sugar Factory", slug: "sugar-factory", image: NAT("sugar-factory.webp"),
+    name: "Sugar Factory", slug: "sugar-factory", image: "/images/amsterdam/nightlife/flamenco-amsterdam.webp",
     rating: 4.3, reviewCount: 6000, type: "Night Theatre / Club", area: "Leidseplein",
     tip: "A 'night theatre' blending live performance, DJs and dancing — check the eclectic programme before you go.",
     filterKeys: ["clubs", "live-music"],
@@ -534,7 +534,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "De Bijenkorf ('The Beehive') is the Netherlands' most prestigious department store, and its flagship occupies a landmark building right on Dam Square in the heart of Amsterdam. Spread over several floors, it's the city's one-stop luxury and mid-to-upper shopping destination, gathering international designer and high-street fashion, a big beauty and cosmetics hall, accessories, watches, homeware, and a well-stocked food and gift section under one roof, all with a polished, contemporary feel. For visitors it's especially handy on a rainy day or when you want quality shopping without traipsing between boutiques, and the rooftop restaurant-café with its terrace overlooking Dam Square makes a pleasant break with a view. There's a tax-free shopping service for non-EU visitors, and seasonal displays (its Christmas windows are a city event) add to the appeal. It's more upmarket than the chain stores of the adjacent Kalverstraat but broad enough to suit most budgets in parts. Central, easy to reach and reliably good, De Bijenkorf is the natural choice for department-store shopping in Amsterdam, and its Dam Square location means you can fold it into general sightseeing with no detour at all.",
   },
   {
-    name: "PC Hooftstraat", slug: "pc-hooftstraat", image: SHO("pc-hooftstraat.webp"),
+    name: "PC Hooftstraat", slug: "pc-hooftstraat", image: "/images/amsterdam/shopping/artisan-shop-amsterdam.webp",
     rating: 4.4, reviewCount: 9000, type: "Luxury Avenue", area: "Museum Quarter",
     tip: "The city's designer flagship strip — combine window-shopping with the museums a block away.",
     filterKeys: ["luxury"],
@@ -592,7 +592,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "NEMO is the largest science museum in the Netherlands and an outstanding family attraction, housed in a striking green, ship-shaped building rising from the Oosterdok harbour east of Centraal Station. Its whole philosophy is learning by doing: across five floors, children can blow gigantic soap bubbles, run chemistry and physics experiments, set off chain reactions, explore how the human brain and body work, generate electricity, and play with light, water and machines in dozens of interactive stations. It's noisy, hands-on and genuinely absorbing, pitched to keep kids from roughly six upward busy for hours, though younger children enjoy plenty of it too, and it's a reliable rainy-day saviour. A brilliant bonus is free: the huge stepped rooftop terrace can be climbed without a museum ticket, giving one of the best views over the old city and a summer 'beach' and café. Buy tickets online to skip the queue, allow two to three hours inside, and reach it on an easy waterfront walk from Centraal. Educational, energetic and central, NEMO is a top pick for families visiting Amsterdam and endlessly popular with school groups and holidaymakers alike.",
   },
   {
-    name: "Micropia", slug: "micropia", image: KID("micropia.webp"),
+    name: "Micropia", slug: "micropia", image: "/images/amsterdam/with-kids/aquarium-amsterdam.webp",
     rating: 4.5, reviewCount: 9000, ageGroup: "8+ (all welcome)", price: "€16", area: "Plantage",
     tip: "The world's only microbe museum — the full-body scanner showing your own microbes is a hit with older kids.",
     tiqetsUrl: tiqets("Micropia Amsterdam"), filterKeys: ["indoor", "educational"],
@@ -628,7 +628,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Amsterdamse Bos ('Amsterdam Forest') is a huge green playground on the southern edge of the city — a 1930s-built woodland park three times the size of New York's Central Park, laced with lakes, canals, meadows and trails, and a wonderful free day out for families who want space and nature. There's an enormous amount to do: a much-loved goat farm (Geitenboerderij) where children can feed and pet the animals and buy fresh goat's-milk products, a pancake restaurant, playgrounds, a climbing forest, rowing and pedal boats to hire, an open-air theatre in summer, cycling and walking routes galore, and even a rowing course and stretches of open water for swimming in warm weather. Because it's so big, renting bikes is the best way to explore, and there's a visitor centre to help you plan. It sits toward Amstelveen and Schiphol, a tram or bus ride south of the centre, making it a proper escape into the countryside without leaving the city's reach. Most of it is completely free, with only some activities charged. For an active, outdoorsy, low-cost family day away from the museums and crowds, the Amsterdamse Bos is one of the best options around Amsterdam.",
   },
   {
-    name: "TunFun Speelpark", slug: "tunfun", image: KID("tunfun-speelpark.webp"),
+    name: "TunFun Speelpark", slug: "tunfun", image: "/images/amsterdam/with-kids/family-park-amsterdam.webp",
     rating: 4.4, reviewCount: 6000, ageGroup: "1–12 years", price: "€10.50", area: "City Centre (Waterlooplein)",
     tip: "A huge indoor playground in a former traffic underpass — the ultimate rainy-day rescue for younger kids.",
     filterKeys: ["indoor"],
@@ -650,7 +650,7 @@ export const WITH_KIDS: BcnPlace[] = [
 // ── Day trips (6) ────────────────────────────────────────────────────────────
 export const DAY_TRIPS: BcnPlace[] = [
   {
-    name: "Zaanse Schans", slug: "zaanse-schans", image: DAG("zaanse-schans.webp"),
+    name: "Zaanse Schans", slug: "zaanse-schans", image: "/images/amsterdam/day-trips/costa-brava-landscape-amsterdam.webp",
     rating: 4.5, reviewCount: 48000, distance: "18 km NW", duration: "Half day", area: "Zaanstreek",
     tip: "Go early to beat the tour buses — the working windmills open ~09:00/10:00 and the light is best.",
     tiqetsUrl: tiqets("Zaanse Schans"), filterKeys: ["culture", "nature"],
@@ -659,7 +659,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Zaanse Schans is the classic quick day trip from Amsterdam and the easiest place to see the Netherlands' iconic working windmills up close — a beautifully preserved collection of green wooden houses, barns and half a dozen historic windmills strung along the Zaan river, just seventeen minutes by train from Centraal. Once part of the world's first industrial zone, the windmills here still turn, grinding pigments, spices, oil and sawing wood, and you can climb inside several to see the giant machinery and gears working (a few euros each). Around them, an open-air-museum village gathers craft demonstrations and shops: a clog-maker carving traditional wooden shoes, a cheese farm offering tastings, a pewter workshop, a bakery museum and more, all free to wander through. It's undeniably touristy and gets very busy with coach groups by late morning, so the trick is to arrive early — soon after the mills open — to enjoy the postcard scenery and better light in relative calm. The village itself is free; you only pay to enter the windmills and some attractions. Reachable in under half a day round trip, it's an easy, photogenic and satisfying introduction to old Dutch industry and rural charm.",
   },
   {
-    name: "Keukenhof & Lisse", slug: "keukenhof", image: DAG("keukenhof-mars-maj.webp"),
+    name: "Keukenhof & Lisse", slug: "keukenhof", image: "/images/amsterdam/day-trips/girona-amsterdam.webp",
     rating: 4.6, reviewCount: 62000, distance: "35 km SW", duration: "Half / full day", area: "Bollenstreek (Lisse)",
     tip: "Only open mid-March to mid-May — book a combined bus-and-entry ticket and go on a weekday morning.",
     tiqetsUrl: tiqets("Keukenhof tulip gardens"), filterKeys: ["nature"],

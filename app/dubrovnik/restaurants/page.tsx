@@ -56,7 +56,7 @@ export default function DubrovnikRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Dubrovnik"
-      heroImage="/images/dubrovnik/restaurants/nautika.webp"
+      heroImage="/images/dubrovnik/restaurants/restaurant-dubrovnik.avif"
       intro="Dubrovnik dining is built on the Adriatic — pristine fish and shellfish, black cuttlefish risotto, Ston oysters and Pelješac wines — served everywhere from a Michelin-starred terrace on the harbour ramparts to tiny stone konobas down the Old Town lanes. It is also one of Croatia's pricier tables, so this guide spans the full range, from special-occasion fine dining to honest home cooking and cheap bakery bites, with prices, areas and booking tips."
       wide
     >

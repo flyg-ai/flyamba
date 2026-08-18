@@ -44,7 +44,7 @@ export default function BangkokHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Bangkok"
-      heroImage="/images/bangkok/hotell/mandarin-oriental-bangkok.webp"
+      heroImage="/images/bangkok/hotels/hotel-bangkok.avif"
       intro="Bangkok's hotels are among the best-value in the world, and where you stay shapes your whole trip. Base yourself on the Chao Phraya for river views and legendary service, in Sukhumvit for shopping, dining and nightlife on the Skytrain, or in Silom and Sathorn for a central, business-district feel. These 8 stays span riverside grandes dames, design boutiques and sociable hostels, with the areas, prices and transport links to help you choose."
       wide
     >

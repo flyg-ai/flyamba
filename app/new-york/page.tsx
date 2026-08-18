@@ -102,16 +102,16 @@ const NON_STOP = [
 
 const CATEGORY_IMAGES: Record<string, string> = {
   attractions: "/images/new-york/attractions/statue-of-liberty.webp",
-  restaurants: "/images/new-york/restaurants/katzs-delicatessen.webp",
-  hotels: "/images/new-york/hotels/the-plaza-hotel.webp",
+  restaurants: "/images/new-york/restaurants/restaurant-new-york.avif",
+  hotels: "/images/new-york/hotels/hotel-new-york.avif",
   transport: "/images/new-york/attractions/grand-central-terminal.webp",
   prices: "/images/new-york/attractions/times-square.webp",
   weather: "/images/new-york/attractions/central-park.webp",
-  shopping: "/images/new-york/shopping/fifth-avenue.webp",
-  nightlife: "/images/new-york/nightlife/employees-only.webp",
+  shopping: "/images/new-york/shopping/artisan-shop-new-york.webp",
+  nightlife: "/images/new-york/nightlife/cocktail-bar-new-york.webp",
   "with-kids": "/images/new-york/with-kids/american-museum-of-natural-history.webp",
-  "day-trips": "/images/new-york/day-trips/philadelphia.webp",
-  beaches: "/images/new-york/beaches/coney-island.webp",
+  "day-trips": "/images/new-york/day-trips/costa-brava-landscape-new-york.webp",
+  beaches: "/images/new-york/beaches/barceloneta-new-york.webp",
 };
 
 const ATTRACTION_PREVIEW = [
@@ -120,14 +120,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Brooklyn Bridge", blurb: "A sunset walk with the skyline behind you.", image: "/images/new-york/attractions/brooklyn-bridge.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Katz's Delicatessen", blurb: "Hand-carved pastrami on rye since 1888.", image: "/images/new-york/restaurants/katzs-delicatessen.webp" },
-  { name: "Le Bernardin", blurb: "Eric Ripert's three-Michelin-star seafood.", image: "/images/new-york/restaurants/le-bernardin.webp" },
-  { name: "Joe's Pizza", blurb: "The classic Greenwich Village slice since 1975.", image: "/images/new-york/restaurants/joes-pizza.webp" },
+  { name: "Katz's Delicatessen", blurb: "Hand-carved pastrami on rye since 1888.", image: "/images/new-york/restaurants/restaurant-new-york.avif" },
+  { name: "Le Bernardin", blurb: "Eric Ripert's three-Michelin-star seafood.", image: "/images/new-york/restaurants/restaurant-new-york.avif" },
+  { name: "Joe's Pizza", blurb: "The classic Greenwich Village slice since 1975.", image: "/images/new-york/restaurants/restaurant-new-york.avif" },
 ];
 const TRIP_PREVIEW = [
-  { name: "Philadelphia", blurb: "The birthplace of the USA, 75 min by train.", image: "/images/new-york/day-trips/philadelphia.webp" },
-  { name: "The Hamptons", blurb: "Glamorous beaches on Long Island's East End.", image: "/images/new-york/day-trips/the-hamptons.webp" },
-  { name: "Hudson Valley", blurb: "Riverside villages and glorious autumn colour.", image: "/images/new-york/day-trips/cold-spring.webp" },
+  { name: "Philadelphia", blurb: "The birthplace of the USA, 75 min by train.", image: "/images/new-york/day-trips/girona-new-york.webp" },
+  { name: "The Hamptons", blurb: "Glamorous beaches on Long Island's East End.", image: "/images/new-york/day-trips/montserrat-new-york.webp" },
+  { name: "Hudson Valley", blurb: "Riverside villages and glorious autumn colour.", image: "/images/new-york/day-trips/penedes-vineyard-new-york.webp" },
 ];
 
 const WHY = [

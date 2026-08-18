@@ -59,8 +59,8 @@ const WHY = [
 // Category card grid: pair each sub-nav category with an image + blurb.
 const CATEGORY_META: Record<string, { image: string; blurb: string }> = {
   attractions: { image: "/images/london/sevardheter/tower-bridge.webp", blurb: "The Tower, museums, palaces and the best views." },
-  restaurants: { image: "/images/london/restauranger/dishoom.webp", blurb: "From Dishoom to three-Michelin-star tables." },
-  hotels: { image: "/images/london/hotell/the-savoy.webp", blurb: "Where to stay, from grand dames to budget gems." },
+  restaurants: { image: "/images/london/restaurants/restaurant-london.avif", blurb: "From Dishoom to three-Michelin-star tables." },
+  hotels: { image: "/images/london/hotels/hotel-london.avif", blurb: "Where to stay, from grand dames to budget gems." },
   transport: { image: "/images/content/photo-1544620347-c4fd4a3d5957.avif", blurb: "The Tube, buses, Oyster, taxis and airport links." },
   prices: { image: "/images/content/photo-1579621970563-ebec7560ff3e.avif", blurb: "Daily budgets, food, hotels and entry fees." },
   weather: { image: "/images/content/photo-1504386106331-3e4e71712b38.avif", blurb: "Month-by-month climate and the best time to visit." },

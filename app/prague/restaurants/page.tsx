@@ -57,7 +57,7 @@ export default function PragueRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Prague"
-      heroImage="/images/prague/restauranger/lokl.webp"
+      heroImage="/images/prague/restaurants/restaurant-prague.avif"
       intro="Prague's dining scene has come a long way from pork-and-dumplings clichés. Today the city serves everything from Michelin-starred tasting menus and reinvented Bohemian classics to buzzing beer halls pouring fresh-tank pilsner, gilded belle-époque cafés and globe-trotting food halls — much of it at prices that put Western Europe to shame. Here are 10 of the best places to eat, from special-occasion splurges to great-value local favourites, with prices, opening hours and booking tips."
       wide
     >

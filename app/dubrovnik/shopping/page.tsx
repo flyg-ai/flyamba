@@ -54,7 +54,7 @@ export default function DubrovnikShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Dubrovnik"
-      heroImage="/images/dubrovnik/shopping/stradun.webp"
+      heroImage="/images/dubrovnik/shopping/artisan-shop-dubrovnik.webp"
       intro="Dubrovnik shopping is at its best when it stays local. Beyond the fridge magnets and Game of Thrones T-shirts of Stradun lie genuinely worthwhile buys: fragrant lavender and candied fruit at the Gundulić morning market, premium Croatian olive oils and truffles at Uje, curated 'made in Croatia' design at Kawa, delicate traditional filigree jewellery, and hand-made hats from an atelier open since 1858. Here is where to find the good stuff — and how to shop smart in an expensive walled city."
       wide
     >

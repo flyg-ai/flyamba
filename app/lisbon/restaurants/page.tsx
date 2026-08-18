@@ -55,7 +55,7 @@ export default function LisbonRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Lisbon"
-      heroImage="/images/lisbon/restauranger/cervejaria-ramiro.webp"
+      heroImage="/images/lisbon/restaurants/restaurant-lisbon.avif"
       intro="Lisbon has quietly become one of Europe's most exciting places to eat — a city where you can demolish a bucket of garlic prawns at a buzzing beer hall, graze across a dozen chefs at the Time Out Market, splurge on a two-Michelin-star tasting menu, and still spend less than you would in Paris or London. These are the restaurants and food stops worth planning your days around, from seafood institutions to the perfect pastel de nata."
       wide
     >

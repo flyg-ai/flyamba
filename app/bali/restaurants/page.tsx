@@ -55,7 +55,7 @@ export default function BaliRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Best Restaurants in Bali"
-      heroImage="/images/bali/restaurants/locavore.webp"
+      heroImage="/images/bali/restaurants/restaurant-bali.avif"
       intro="Bali's food scene spans everything from smoky roadside warungs to some of Asia's most acclaimed tasting menus. Try the island's definitive babi guling at Ibu Oka, dig into modern Indonesian cooking at Merah Putih, splurge on foraged fine dining at Locavore, or watch the sunset over a beachfront pasta at La Lucciola. Here are the restaurants worth booking, with areas, prices and insider tips."
       wide
     >

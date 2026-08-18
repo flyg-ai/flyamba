@@ -55,7 +55,7 @@ export default function DubaiRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Dubai"
-      heroImage="/images/dubai/restaurants/nobu-dubai.webp"
+      heroImage="/images/dubai/restaurants/restaurant-dubai.avif"
       intro="Few cities eat as globally as Dubai. Its huge international population supports everything from three-Michelin-star tasting menus and celebrity-chef glamour to the best-value shawarma, curry and grilled fish you'll ever eat, all within a short taxi ride. These are the tables worth planning around — the special-occasion showstoppers and the beloved cheap local institutions alike — with prices, what to order and how to book at each."
       wide
     >

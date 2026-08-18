@@ -228,7 +228,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ──────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Nobu Mykonos", slug: "nobu-mykonos", image: RES("nobu-mykonos.webp"),
+    name: "Nobu Mykonos", slug: "nobu-mykonos", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.6, reviewCount: 2400, price: "€€€€", area: "Belvedere Hotel, Chora", type: "Japanese-Peruvian",
     tip: "The Belvedere Hotel's outpost of Robert De Niro's Nobu empire — black cod miso, yellowtail jalapeño and the sashimi tasting. Book two weeks ahead.",
     filterKeys: ["fine"],
@@ -237,7 +237,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Nobu Mykonos is the island's outpost of Robert De Niro and chef Nobu Matsuhisa's globe-spanning Japanese-Peruvian empire, set within the stylish Belvedere Hotel on the upper edge of Chora. The menu delivers the signatures that made Nobu famous — black cod marinated in miso, yellowtail sashimi with jalapeño, rock-shrimp tempura, the new-style sashimi and a generous omakase tasting — executed with the precision and polish you would expect anywhere in the Nobu family, and served on a terrace with views over Mykonos Town and the sea. It is expensive (budget around €180 per person with drinks) and firmly a special-occasion choice rather than a casual meal, but the quality is reliably high and the setting glamorous. Reservations are essential and should be made at least two weeks ahead in July and August, when the island's dinner tables are booked solid. Pair it with a sunset cocktail in Little Venice beforehand for a full night of Mykonian gloss. For polished, internationally recognised fine dining with a sea view, Nobu is one of the island's safest bets.",
   },
   {
-    name: "Scorpios", slug: "scorpios", image: RES("scorpios.webp"),
+    name: "Scorpios", slug: "scorpios", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.5, reviewCount: 8900, price: "€€€€", area: "Paraga Beach", type: "Mediterranean / Beach Club",
     tip: "The island's cult beach club — the 19:30 sunset ritual is an experience in itself. Book a table on the sand two months ahead; table service is compulsory.",
     filterKeys: ["fine", "beach"],
@@ -246,7 +246,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Scorpios is Mykonos's cult beach club, a boho-luxe institution perched on the rocks above Paraga Beach that has become a template for the modern Mediterranean day-to-night destination. The kitchen turns out sharing-style Mediterranean plates — grilled fish and vegetables, mezze, slow-cooked meats — served at communal wooden tables under driftwood and linen, but the food is only half the story. Scorpios is really about the ritual: DJs building the mood through the afternoon, a barefoot, white-and-boho-clad crowd, and a celebrated sunset ceremony around 19:30 that draws everyone to the terrace as the light fades and the music swells. It runs seamlessly from lunch into a late, dancing night. Budget around €250 per person with drinks, and note that table service is compulsory and tables on the sand should be booked up to two months in advance in peak season. It is expensive, seductive and quintessentially Mykonos — less a restaurant than a whole evening's entertainment. For the island's signature blend of good food, great music and golden-hour theatre, Scorpios is unmissable.",
   },
   {
-    name: "Spilia Seaside Restaurant", slug: "spilia", image: RES("spilia.webp"),
+    name: "Spilia Seaside Restaurant", slug: "spilia", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.6, reviewCount: 3200, price: "€€€€", area: "Agia Anna (15 min)", type: "Greek Seafood / Cave",
     tip: "A literal cave carved into the seaside rock — sea urchin from its own pool and lobster on the menu. Book three weeks ahead, for lunch or sunset.",
     filterKeys: ["fine", "seafood"],
@@ -255,7 +255,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Spilia Seaside Restaurant is one of the most dramatic dining rooms in Greece — literally carved into a natural cave in the seaside rock at Agia Anna, with tables set so close to the Aegean that the water laps at your feet. The concept is pure sea-to-table theatre: much of the seafood is pulled straight from the restaurant's own rock pool, including sea urchin cracked open in front of you, alongside lobster, fresh fish, octopus and Greek mezze. The setting — stone walls, natural light filtering in, the sound of the waves — makes it feel like eating inside the island itself, and it is a favourite for a memorable lunch or a sunset dinner rather than a quick bite. Budget around €110 per person, and book at least three weeks ahead in high season, as its limited, unforgettable tables fill fast. It sits near Kalafatis on the southeast coast, about 15 minutes from Chora. For pristine seafood in a genuinely one-of-a-kind natural setting, Spilia is one of the island's most special and atmospheric tables.",
   },
   {
-    name: "Kiki's Taverna", slug: "kikis-taverna", image: RES("kikis-taverna.webp"),
+    name: "Kiki's Taverna", slug: "kikis-taverna", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.7, reviewCount: 7600, price: "€€", area: "Agios Sostis", type: "Greek Grill",
     tip: "No electricity, no reservations — arrive at noon to join the queue (expect a 1–2 hour wait). Charcoal-grilled fish and vegetables. A classic Mykonos institution since the 1960s.",
     filterKeys: ["taverna"],
@@ -264,7 +264,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Kiki's Taverna is the most famous of Mykonos's off-grid tavernas — a small, vine-shaded terrace above the remote northern beach of Agios Sostis, running with no electricity at all since it opened back in the 1960s. Everything comes off a charcoal grill: fresh fish, pork chops, chicken, and a spread of salads and grilled vegetables, all cooked over coals and served with local wine in a genuinely timeless, unhurried setting. There is no phone, no reservations and no way to book — you simply arrive around noon, put your name down, and wait, often one to two hours, with a glass of wine and the sea for company. That wait has become part of the legend, and the food more than justifies it: simple, generous, sun-warmed cooking at its best, for around €45 a head (bring cash). It is reached via the north-coast road, which ends a short walk from the sand. For an authentic, gloriously analogue taste of old Mykonos — a plate of grilled fish, a carafe of wine and no rush whatsoever — Kiki's is the island's most beloved table.",
   },
   {
-    name: "Kounelas Fish Tavern", slug: "kounelas", image: RES("kounelas.webp"),
+    name: "Kounelas Fish Tavern", slug: "kounelas", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.5, reviewCount: 4100, price: "€€€", area: "Chora", type: "Seafood Taverna",
     tip: "Mykonos's oldest fish taverna, since 1956 — point at the fish in the window, and it's weighed and grilled. Classic Greek service, no menu. Tables from 19:30.",
     filterKeys: ["taverna", "seafood"],
@@ -273,7 +273,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Kounelas Fish Tavern is Mykonos's oldest seafood taverna, serving the island since 1956 from a courtyard tucked into the back lanes of Chora. It works the traditional way: there is no printed menu to speak of — instead you go to the display of the day's catch, point at the fish you want, and it is weighed, priced, and grilled or fried to order, arriving simply dressed with olive oil, lemon and herbs. Alongside the fresh fish come classic Greek starters — taramosalata, grilled octopus, fried calamari, Greek salad, local cheeses — and honest house wine, all delivered with the brisk, warm service of a family taverna that has seen every kind of guest over seven decades. Budget around €60 per person depending on your fish. Tables start filling from about 19:30, and a reservation is wise in peak season. In a town increasingly given over to glossy fusion and beach-club prices, Kounelas is a reassuringly old-school, proudly Greek institution — the place to eat pristine grilled fish the way islanders have always eaten it, in an atmospheric courtyard in the heart of Chora.",
   },
   {
-    name: "M-eating", slug: "m-eating", image: RES("m-eating.webp"),
+    name: "M-eating", slug: "m-eating", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.6, reviewCount: 3800, price: "€€€", area: "Chora", type: "Modern Greek Fine Dining",
     tip: "Chef Pantelis Magoulas's modern-Greek restaurant — eight years running in the 'good cooking' category of the Greek Michelin guide. Book two weeks ahead.",
     filterKeys: ["fine"],
@@ -282,7 +282,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "M-eating is one of Chora's most respected fine-dining rooms, the personal project of chef Pantelis Magoulas, who has spent years reimagining traditional Greek dishes through a modern, produce-led lens. The kitchen champions top Greek ingredients — Mykonian cheeses, Aegean seafood, Greek beef and heirloom vegetables — and turns them into elegant, contemporary plates that stay recognisably rooted in Greek flavour rather than chasing international trends. The result has earned it a place for eight consecutive years in the 'good cooking' category of the Greek Michelin guide, and a loyal following among visitors who want serious cooking without the theatre of a beach club. The setting is an intimate, romantically lit courtyard-and-terrace space in central Chora, warm and unhurried, with attentive service and a strong Greek wine list. Budget around €80 per person, and book about two weeks ahead in high season, as its tables are among the most sought-after in town. For refined, confident modern Greek cuisine in an atmospheric Chora setting — the antithesis of the loud, pricey beach scene — M-eating is one of the island's most rewarding tables.",
   },
   {
-    name: "Funky Kitchen", slug: "funky-kitchen", image: RES("funky-kitchen.webp"),
+    name: "Funky Kitchen", slug: "funky-kitchen", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.5, reviewCount: 2900, price: "€€€", area: "Chora", type: "Modern Mediterranean",
     tip: "A local favourite in Chora — modern Greek-Mediterranean fusion with a creative menu that changes monthly, plus excellent cocktails. Book a week ahead.",
     filterKeys: ["fine"],
@@ -300,7 +300,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Fokos Taverna sits on one of the wildest, most remote beaches on Mykonos — Fokos, on the exposed north coast, reached only by a rough unpaved track about 25 minutes from Chora that really wants a 4WD or ATV. The reward for the effort is a gloriously simple taverna set right on the sand, with no electricity and no pretension, cooking a short menu of whatever is fresh: the day's grilled fish, slow-cooked meats, garden vegetables, homemade dips and salads, all paired with local wine and served to the sound of the waves. It is the antithesis of the beach-club scene — no DJ, no bottle service, just honest Greek cooking, a handful of tables and an empty beach. Lunch starts around 13:30, prices run about €50 per person, and it is cash only, so come prepared. Because of its isolation, it never feels crowded even in August, which is precisely the point. For travellers who want to escape the island's glamour and find the wild, quiet Mykonos of an earlier era, a long lazy lunch at Fokos is one of the most memorable meals on the island.",
   },
   {
-    name: "Joanna's Niko's Place", slug: "joannas-nikos", image: RES("joannas-nikos.webp"),
+    name: "Joanna's Niko's Place", slug: "joannas-nikos", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.6, reviewCount: 3400, price: "€€", area: "Megali Ammos", type: "Greek Taverna",
     tip: "Family-run since 1976 — country bread from its own oven, local goat's cheese and the day's catch. Five minutes from Chora, right on the beach. Book at weekends.",
     filterKeys: ["taverna", "seafood"],
@@ -309,7 +309,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Joanna's Niko's Place is a much-loved family-run taverna on Megali Ammos beach, just a five-minute walk south of Chora — close enough to be easy, far enough to feel like a genuine local spot rather than a tourist trap. Run by the same family since 1976, it does the simple things beautifully: country bread baked in its own oven, local Mykonian goat's cheese, the day's fresh catch from the grill, classic Greek salads, dips and slow-cooked dishes, all served on a terrace right above the sand with the sea and the sunset in front of you. The atmosphere is warm, unpretentious and thoroughly Greek, the kind of place where the owners remember returning guests and the pace is relaxed. Prices are reasonable by Mykonos standards (around €50 per person), and the beachfront setting makes it a lovely spot for a long lunch or a sunset dinner. Book ahead at weekends and in peak season, as its tables fill with a mix of locals and clued-up visitors. For honest home cooking, homemade bread and a beach-side sunset a short stroll from town, it is one of the island's most dependable pleasures.",
   },
   {
-    name: "Little Venice Restaurant", slug: "little-venice-restaurant", image: RES("little-venice.webp"),
+    name: "Little Venice Restaurant", slug: "little-venice-restaurant", image: "/images/mykonos/restaurants/restaurant-mykonos.avif",
     rating: 4.3, reviewCount: 5200, price: "€€€", area: "Little Venice", type: "Mediterranean / Sunset",
     tip: "Tables right on the waves in Little Venice — sunset seating from 19:00 (book a week ahead). Touristy, yes, but the location, with the Kato Mili windmills in view, is unbeatable.",
     filterKeys: ["seafood"],
@@ -322,7 +322,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ────────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Cavo Tagoo Mykonos", slug: "cavo-tagoo", image: HOT("cavo-tagoo.webp"),
+    name: "Cavo Tagoo Mykonos", slug: "cavo-tagoo", image: "/images/mykonos/hotels/hotel-mykonos.avif",
     rating: 4.8, reviewCount: 3600, price: "€€€€", area: "Tagoo (above Chora)", type: "Luxury",
     tip: "The island's most photographed hotel — an infinity pool 25 m above the sea and suites with their own outdoor plunge pools and Aegean views. Book 4–6 months ahead for July–August.",
     filterKeys: ["luxury"],
@@ -331,7 +331,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Cavo Tagoo is Mykonos's most photographed hotel and a byword for Cycladic design luxury, carved into the cliff on the Tagoo headland just above Chora. Its signature is an infinity pool that seems to spill off the rock 25 metres above the sea — complete with a sunken pool bar and resident fish — but the whole property is a study in whitewashed, sculptural Cycladic modernism, all clean curves, natural stone and dark timber against the blue. Rooms and suites are spacious and serene, and the top categories come with their own private outdoor plunge pools and uninterrupted Aegean views. Facilities match the setting: a well-regarded spa, a sushi bar and a destination restaurant, plus the kind of polished, discreet service expected at this level. The location is ideal — walkable to Chora's nightlife and dining, yet elevated and calm above the bustle. Rates are firmly at the top of the island's range, typically from around $1,950 a night in peak season, so it is a special-trip splurge. For iconic design, a legendary pool and a prime position above Mykonos Town, Cavo Tagoo is the benchmark.",
   },
   {
-    name: "Bill & Coo Suites", slug: "bill-coo-suites", image: HOT("bill-coo-suites.webp"),
+    name: "Bill & Coo Suites", slug: "bill-coo-suites", image: "/images/mykonos/hotels/hotel-mykonos.avif",
     rating: 4.8, reviewCount: 2100, price: "€€€€", area: "Megali Ammos", type: "Luxury",
     tip: "A Small Luxury Hotels icon — 33 suites with private pools, an infinity pool and the award-winning Beefbar restaurant. Five minutes from Chora. Book three months ahead.",
     filterKeys: ["luxury"],
@@ -340,7 +340,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Bill & Coo Suites is one of Mykonos's most refined boutique hideaways, a member of Small Luxury Hotels of the World set on the hillside above Megali Ammos beach, just five minutes from Chora. With only 33 suites, it feels intimate and grown-up, trading big-resort scale for personal service and design polish: crisp white minimalist interiors, many suites with their own private pools, and a celebrated infinity pool whose mirror-like surface has become one of the island's signature images at sunset. Dining is a genuine highlight — the property is home to an outpost of the acclaimed Beefbar, alongside sophisticated Mediterranean cooking — and there is a serene spa and the kind of attentive, unobtrusive service that defines the top tier. Its position strikes a fine balance, close enough to walk into Chora's dining and nightlife yet quiet and elevated above the crowds, with lovely sea views and sunsets. Rates sit in the upper-luxury bracket, typically from around $1,700 a night, and it skews toward couples rather than families. For intimate, design-led luxury with standout food a short stroll from town, Bill & Coo is among the island's very best.",
   },
   {
-    name: "Belvedere Hotel", slug: "belvedere-hotel", image: HOT("belvedere.webp"),
+    name: "Belvedere Hotel", slug: "belvedere-hotel", image: "/images/mykonos/hotels/hotel-mykonos.avif",
     rating: 4.6, reviewCount: 2800, price: "€€€€", area: "Chora (School of Fine Arts)", type: "Design / Luxury",
     tip: "The classic Belvedere — an 1850s villa converted into a design hotel, with an infinity pool and a Nobu restaurant. A central Chora position, five minutes from Little Venice. Book 2–3 months ahead.",
     filterKeys: ["luxury", "design"],
@@ -349,7 +349,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Belvedere Hotel is one of Mykonos's original design-luxury addresses, built around an elegant 1850s villa on the School of Fine Arts hill at the edge of Chora. Long a favourite of the fashion and celebrity set, it blends the historic bones of the old mansion with sleek contemporary interiors, all set around a stylish infinity pool with sweeping views over the town and out to sea. Its biggest draw for many is the food: the Belvedere is home to an outpost of the world-famous Nobu, serving Robert De Niro's Japanese-Peruvian cuisine, alongside a lively pool bar and Mediterranean dining. Rooms range from smart doubles to suites, and the vibe is chic, social and design-forward rather than sleepy. The location is excellent — elevated and relatively calm, yet only about five minutes' walk down into the heart of Chora, Little Venice and the nightlife. Rates typically start from around $970 a night, making it (in Mykonos terms) a slightly more attainable luxury than the island's cliff-top blockbusters. For style, a great pool, celebrated dining and an unbeatable-yet-central position, the Belvedere is a Mykonos classic.",
   },
   {
-    name: "Katikies Mykonos", slug: "katikies-mykonos", image: HOT("katikies-mykonos.webp"),
+    name: "Katikies Mykonos", slug: "katikies-mykonos", image: "/images/mykonos/hotels/hotel-mykonos.avif",
     rating: 4.7, reviewCount: 1700, price: "€€€€", area: "Agios Ioannis", type: "Luxury",
     tip: "The Katikies group's Mykonos outpost (famous from Santorini) — white-and-blue architecture, sunset views toward Delos and a cliffside infinity pool. Book four months ahead.",
     filterKeys: ["luxury"],
@@ -358,7 +358,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Katikies Mykonos brings the acclaimed Katikies group — long famous for its blue-and-white cliff hotels on Santorini — to the west coast of Mykonos, on the cliffs above Agios Ioannis. The look is the group's signature: dazzling whitewashed Cycladic architecture with pops of blue, cascading terraces, and a cliffside infinity pool that appears to merge with the Aegean. The setting is oriented for sunset, with romantic views across the water toward the sacred island of Delos, and the whole property has the hushed, adults-oriented, honeymoon feel of a proper cliff-top retreat. Rooms and suites are crisp and serene, many with private plunge pools and terraces facing the sunset, and there is a spa and refined Mediterranean dining to match. Agios Ioannis is quieter and more secluded than Chora — this is somewhere to unwind rather than fall out of a nightclub — but the town is only about ten minutes away by car or shuttle. Rates typically start from around $1,300 a night. For sunset-facing, blue-and-white Cycladic luxury and a serene, romantic mood, Katikies is one of the island's most desirable escapes.",
   },
   {
-    name: "Mykonos Grand Hotel & Resort", slug: "mykonos-grand", image: HOT("mykonos-grand.webp"),
+    name: "Mykonos Grand Hotel & Resort", slug: "mykonos-grand", image: "/images/mykonos/hotels/hotel-mykonos.avif",
     rating: 4.6, reviewCount: 2400, price: "€€€", area: "Agios Ioannis", type: "Luxury Resort",
     tip: "A five-star resort on Agios Ioannis beach — its own beach, two pools and a spa. Family-friendly with strong service. Book two months ahead.",
     filterKeys: ["luxury", "beach"],
@@ -367,7 +367,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Mykonos Grand Hotel & Resort is a full-service five-star resort spread along the sheltered western beach of Agios Ioannis, offering a more relaxed, resort-style stay than the island's cliff-top design boutiques. Its big advantages are space and amenities: direct access to its own stretch of sandy beach, two pools, a well-equipped spa and fitness centre, multiple restaurants and bars, and generous grounds — the kind of setup that makes it genuinely comfortable for families and for guests who want everything on site rather than heading into town for every meal. Rooms range from smart doubles to bungalows and suites with private pools, many with sea views toward Delos and famous Aegean sunsets. Service is attentive and the atmosphere is calmer and more traditional than the party-and-scene hotels closer to Chora, though the town is only about ten minutes away. Rates typically start from around $760 a night, making it relatively good value at the five-star level for Mykonos. For a beachfront resort with proper facilities, sunset views and a family-friendly feel — without sacrificing quality — the Mykonos Grand is a strong, dependable choice.",
   },
   {
-    name: "Rocabella Mykonos", slug: "rocabella-mykonos", image: HOT("rocabella-mykonos.webp"),
+    name: "Rocabella Mykonos", slug: "rocabella-mykonos", image: "/images/mykonos/hotels/hotel-mykonos.avif",
     rating: 4.5, reviewCount: 1900, price: "€€€", area: "Agios Stefanos", type: "Design",
     tip: "A design hotel on the cliff above Agios Stefanos beach — 53 rooms, an infinity pool and award-winning architecture. Five minutes from Chora with a shuttle.",
     filterKeys: ["design"],
@@ -376,7 +376,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Rocabella Mykonos is a smart, design-led hotel set on the cliff above Agios Stefanos beach on the northwest coast, offering a stylish stay a rung below the island's ultra-luxury blockbusters — and at a more approachable price. Its 53 rooms are contemporary and Cycladic in feel, many with sea views and some with private hot tubs, arranged around an attractive infinity pool that catches the famous Mykonos sunsets over the water. The architecture has won design recognition, and the whole property strikes a balance between chic and relaxed, without the price-gouging or attitude of the flashier venues. Agios Stefanos is a quieter, more residential pocket of the island, with a sheltered swimming beach right below and Chora only about five minutes away by car or the hotel shuttle — close enough for dinner and nightlife, far enough to sleep in peace. There is a restaurant, a pool bar and a spa on site. Rates typically start from around $650 a night. For design-hotel style, an infinity pool and sunset views at a more sensible Mykonos price, Rocabella is an appealing, well-located choice.",
   },
   {
-    name: "Hotel Andromeda", slug: "hotel-andromeda", image: HOT("hotel-andromeda.webp"),
+    name: "Hotel Andromeda", slug: "hotel-andromeda", image: "/images/mykonos/hotels/hotel-mykonos.avif",
     rating: 4.4, reviewCount: 1500, price: "€€", area: "Chora", type: "Mid-range Boutique",
     tip: "A boutique hotel right in Chora, five minutes from Little Venice — a pool, breakfast included and 28 rooms. Better value than the Belvedere. Book a month ahead.",
     filterKeys: ["design", "beach"],
@@ -385,7 +385,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hotel Andromeda is a friendly, well-priced boutique hotel right in the heart of Chora, offering something genuinely useful on Mykonos: a comfortable, stylish base within walking distance of everything, without the eye-watering rates of the cliff-top resorts. Its 28 rooms are neat and contemporary, there is a small pool and garden to cool off in, and breakfast is included — a welcome touch given how quickly costs add up on the island. The location is the real selling point: you are about five minutes' walk from Little Venice, the windmills, the town's best restaurants and its nightlife, so you can leave the car (or skip the car altogether) and simply walk everywhere, day and night. It makes an ideal choice for couples and friends who want to be in the middle of the action and prioritise position and value over resort facilities and private pools. Rates typically start from around $300 a night — modest by Mykonos standards for a central boutique with a pool. Book about a month ahead in high season. For a central, characterful and relatively affordable place to sleep in Chora, Andromeda is one of the smartest picks on the island.",
   },
   {
-    name: "Mykonos Camping", slug: "mykonos-camping", image: HOT("mykonos-camping.webp"),
+    name: "Mykonos Camping", slug: "mykonos-camping", image: "/images/mykonos/hotels/hotel-mykonos.avif",
     rating: 4.1, reviewCount: 2200, price: "€", area: "Paraga Beach", type: "Camping / Hostel",
     tip: "The island's only camping and hostel — tents plus bungalows, a pool and a bar, nearest to Paraga and Paradise. Book two weeks ahead (it fills in August).",
     filterKeys: ["budget"],
@@ -398,7 +398,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Beaches (8) ───────────────────────────────────────────────────────────────
 export const BEACHES: BcnPlace[] = [
   {
-    name: "Elia Beach", slug: "elia-beach", image: BEA("elia-beach.webp"),
+    name: "Elia Beach", slug: "elia-beach", image: "/images/mykonos/beaches/barceloneta-mykonos.webp",
     rating: 4.5, reviewCount: 9200, price: "€30–60 loungers", area: "Southeast coast", facilities: "Beach clubs, loungers, watersports",
     tip: "The island's longest beach at 800 m — a more relaxed atmosphere than Paradise, ideal for those who want beach-club service without the party tempo. It has a historically LGBTQ+ eastern end.",
     filterKeys: ["family"],
@@ -474,7 +474,7 @@ export const BEACHES: BcnPlace[] = [
 // ── Nightlife (8) ─────────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "Cavo Paradiso", slug: "cavo-paradiso", image: NAT("cavo-paradiso.webp"),
+    name: "Cavo Paradiso", slug: "cavo-paradiso", image: "/images/mykonos/nightlife/cocktail-bar-mykonos.webp",
     rating: 4.6, reviewCount: 11000, price: "€60–150", type: "Superclub", area: "Paradise Beach",
     tip: "Mykonos's most legendary club since 1993 — DJs like David Guetta, Solomun and Tale Of Us. A clifftop pool, from midnight until sunrise. Book bottle service for a table.",
     filterKeys: ["superclub"],
@@ -483,7 +483,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Cavo Paradiso is Mykonos's most legendary nightclub and one of the world's great open-air clubbing destinations, perched on the cliff above Paradise Beach and running since 1993. This is the venue that made Mykonos synonymous with world-class electronic music: its stage has hosted virtually every major name in dance, from David Guetta and Solomun to Tale Of Us, Black Coffee and countless others, and the setting — a clifftop terrace wrapped around a pool, open to the stars and the sea — is genuinely spectacular. The action doesn't even begin until around midnight and runs until sunrise, so this is a serious late-night commitment rather than a casual drink. Entry runs €60–150 depending on the headliner, and if you want a table you'll need to book bottle service in advance. Club buses ferry revellers from Chora late into the night, so you don't need to drive. It is loud, hedonistic, expensive and unforgettable — the beating heart of the island's after-dark reputation. For anyone who comes to Mykonos for the DJs and the dancefloor, a night at Cavo Paradiso is the definitive experience.",
   },
   {
-    name: "Paradise Club Mykonos", slug: "paradise-club", image: NAT("paradise-club.webp"),
+    name: "Paradise Club Mykonos", slug: "paradise-club", image: "/images/mykonos/nightlife/flamenco-mykonos.webp",
     rating: 4.4, reviewCount: 8700, price: "€50–100", type: "Beach Club / Nightclub", area: "Paradise Beach",
     tip: "A classic Paradise Beach club since 1991 — beach by day, club by night. Foam parties, DJ sets and a party crowd from around the world. Five minutes from Cavo Paradiso.",
     filterKeys: ["superclub", "beach"],
@@ -492,7 +492,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Paradise Club Mykonos is one of the island's classic party institutions, set right on the famous Paradise Beach and running since 1991 as the quintessential 'beach by day, club by night' venue. In daylight it operates as a buzzing beach club with pools, loungers and DJ sets; as the sun goes down it ramps up into a full-blown nightclub, complete with the foam parties, international DJs and wild, come-as-you-are energy that made Paradise Beach a household name among young travellers decades ago. The crowd is young, international and here to party, and the atmosphere is more accessible and less exclusive than the glossy bottle-service venues — this is where backpackers, students and first-time visitors come to experience the Mykonos party at its most unbuttoned. Entry and tables run around €50–100. It sits just five minutes from the even-more-legendary Cavo Paradiso on the cliff above, so a big night often takes in both. Buses run from Chora every 30 minutes in season, with late club buses afterward. For an accessible, high-octane slice of the classic Mykonos beach-party scene, Paradise Club delivers exactly that.",
   },
   {
-    name: "Scorpios", slug: "scorpios-nightlife", image: NAT("scorpios.webp"),
+    name: "Scorpios", slug: "scorpios-nightlife", image: "/images/mykonos/nightlife/live-music-mykonos.webp",
     rating: 4.5, reviewCount: 8900, price: "€100–250", type: "Beach Club / Sunset", area: "Paraga Beach",
     tip: "Mykonos's cult beach club — the 19:30 sunset ritual is an experience in itself. Book a table on the sand six weeks ahead; dress code is all-white or boho.",
     filterKeys: ["beach", "sunset"],
@@ -501,7 +501,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Scorpios is the definitive Mykonos beach club, a boho-luxe institution on the rocks above Paraga Beach that has redefined what a day-to-night destination can be. It is best known for its sunset ritual: around 19:30 each evening, as the light softens, drummers and DJs build a hypnotic, tribal-tinged soundtrack and the whole crowd gathers on the terrace to watch the sun sink into the Aegean — a genuinely atmospheric, almost ceremonial moment that has become one of the island's signature experiences. Around it, long driftwood communal tables serve sharing-style Mediterranean food, barefoot guests in white and boho drift between the loungers, and the party runs seamlessly late into the night. Budget €100–250 per person, expect table service, and book a table on the sand up to six weeks ahead in peak season; there is an all-white or boho dress code. It is expensive and undeniably a scene, but the setting, the music and that sunset moment make it more than worth experiencing once. For the island's most stylish, sensory blend of food, music and golden-hour theatre, Scorpios is unmissable.",
   },
   {
-    name: "Nammos", slug: "nammos-nightlife", image: NAT("nammos.webp"),
+    name: "Nammos", slug: "nammos-nightlife", image: "/images/mykonos/nightlife/nightlife-bar-mykonos.webp",
     rating: 4.4, reviewCount: 9600, price: "€150–500", type: "Beach Club / Restaurant", area: "Psarou Beach",
     tip: "Psarou Beach's iconic club — a table on the sand runs €200, champagne service is standard, and celebrities are common. Book two months ahead and dress up.",
     filterKeys: ["beach", "sunset"],
@@ -510,7 +510,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Nammos, on the sheltered sands of Psarou Beach, is the world's most famous beach club and the ultimate expression of Mykonos glamour. Since opening in 2003 it has built a global reputation as the place where wealth, celebrity and hedonism collide: tables on the sand from around €200, champagne on ice as standard, magnums delivered with sparklers, star DJs, and a guest list that regularly includes A-list celebrities, billionaires and the mega-yacht set moored just offshore. By day it is a (very upscale) restaurant and beach club; as the afternoon wears on it builds into a champagne-fuelled party that carries on late. Budget anywhere from €150 to €500-plus per person — this is unapologetically extravagant — and book a table up to two months ahead in July and August, when demand is ferocious; smart dress is expected. Even if you go just once to witness the spectacle, it is a quintessential Mykonos experience, the pinnacle of the island's see-and-be-seen scene. For pure, unabashed beach-club glamour and excess, nowhere else in the Mediterranean quite matches Nammos.",
   },
   {
-    name: "Jackie O' Town", slug: "jackie-o", image: NAT("jackie-o.webp"),
+    name: "Jackie O' Town", slug: "jackie-o", image: "/images/mykonos/nightlife/rooftop-bar-night-mykonos.webp",
     rating: 4.5, reviewCount: 6200, price: "€30–60", type: "LGBTQ+ Bar / Drag", area: "Chora (Old Port)",
     tip: "Mykonos's classic LGBTQ+ bar in Chora since the 1970s — drag shows, a dancefloor and an all-mixed crowd. Open late; the warmest gay bar on the island.",
     filterKeys: ["lgbtq"],
@@ -528,7 +528,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "180° Sunset Bar sits high on the Vromolimnos hill above Chora, on the ramparts of the old castle, and lays claim to the single best sunset view on Mykonos — a genuine 180-degree panorama over the town, the windmills, the harbour and the open Aegean, with the sun dropping toward Delos in the distance. It is a more refined, grown-up alternative to the crush of Little Venice below: a stylish clifftop terrace where you settle in with a well-made cocktail (around €25) and watch the sky change, with a calmer, more sophisticated crowd and a mellow soundtrack rather than a thumping party. Because the view is so sought-after, it is well worth booking a table for around 18:00 to be settled before the sunset itself (about 19:30 in midsummer). Budget €20–40 per person. It makes an ideal start to the evening — a peaceful, spectacular golden hour before you head down into the bars and clubs of Chora. For travellers who want the island's most jaw-dropping sunset without the elbow-to-elbow scrum of the waterfront bars, 180° is the place.",
   },
   {
-    name: "Astra", slug: "astra", image: NAT("astra.webp"),
+    name: "Astra", slug: "astra", image: "/images/mykonos/nightlife/cocktail-bar-mykonos.webp",
     rating: 4.4, reviewCount: 3900, price: "€25–50", type: "Cocktail Bar", area: "Chora (Matogianni)",
     tip: "A designer bar in the middle of Chora — handmade cocktails, striking modern Greek interiors and DJ sets from 22:00. A classic pre-club stop; standing room, queue system.",
     filterKeys: ["chora"],
@@ -537,7 +537,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Astra is one of Chora's most enduring and stylish cocktail bars, set right on the buzzing Matogianni Street in the heart of the old town. A long-running fixture of the island's nightlife, it is known for its striking design — the space has been reworked over the years by acclaimed Greek artists and designers, giving it a distinctive, artful look — and for taking its drinks seriously, with a menu of well-made, creative cocktails (around €18–22 each). As the evening builds, DJs take over from around 22:00 and the mood shifts from stylish aperitivo to full pre-club energy, making Astra a classic first stop of the night before people move on to the beach clubs and superclubs. It is compact and popular, so expect it to be standing-room and lively rather than a place to sit quietly, with a queue at peak times. Budget €25–50 per person. For a design-led, well-mixed start to a Mykonos night out — right in the centre of the action on Matogianni — Astra is a reliable and atmospheric choice that has kept its cool for decades.",
   },
   {
-    name: "Skandinavian Bar", slug: "skandinavian-bar", image: NAT("skandinavian-bar.webp"),
+    name: "Skandinavian Bar", slug: "skandinavian-bar", image: "/images/mykonos/nightlife/flamenco-mykonos.webp",
     rating: 4.3, reviewCount: 7100, price: "€8–15", type: "Pub / Dance Bar", area: "Chora (centre)",
     tip: "Mykonos's most affordable party bar since 1976 — beer €5, shots €4, a dancefloor. 'Nordic' in name only; the crowd is 100% mixed. Open 21:00–04:00.",
     filterKeys: ["chora"],
@@ -550,7 +550,7 @@ export const NIGHTLIFE: BcnPlace[] = [
 // ── Shopping (8) ──────────────────────────────────────────────────────────────
 export const SHOPPING: BcnPlace[] = [
   {
-    name: "Matogianni Street", slug: "matogianni-street", image: SHO("matoyianni-street.webp"),
+    name: "Matogianni Street", slug: "matogianni-street", image: "/images/mykonos/shopping/artisan-shop-mykonos.webp",
     rating: 4.5, reviewCount: 9800, price: "€€€", type: "Shopping Street", area: "Chora",
     tip: "The main shopping street — a mix of international designers and souvenir shops. Walk it early evening before the cruise crowds, and photograph the narrow whitewashed lanes with pink bougainvillea.",
     filterKeys: ["luxury", "souvenirs"],
@@ -568,7 +568,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Beyond the designer bustle of Matogianni, the atmospheric lanes of Little Venice offer a more artistic, browsable kind of shopping — a cluster of small art galleries, jewellery workshops and craft boutiques threaded through some of Chora's most beautiful streets, right beside the famous waterfront. This is the place to look for an original piece rather than a designer label: contemporary art and prints inspired by the Cyclades, handmade silver and gold jewellery (often produced on the island), ceramics, and design objects that make more meaningful souvenirs than mass-produced trinkets. Because it sits along the sunset-famous Little Venice shoreline, it is a lovely area to combine with a golden-hour drink — browse the galleries as the light softens, then settle at a waterfront bar to watch the sun go down. Prices are generally mid-range, though fine jewellery and original art naturally climb higher. The whole quarter rewards unhurried wandering, ducking in and out of little studios and shops between glimpses of the sea. For travellers who want to take home something authentic and island-made, the galleries and workshops of Little Venice are the most rewarding place to look.",
   },
   {
-    name: "LoLo", slug: "lolo", image: SHO("lolo.webp"),
+    name: "LoLo", slug: "lolo", image: "/images/mykonos/shopping/mall-mykonos.webp",
     rating: 4.4, reviewCount: 1400, price: "€€€", type: "Fashion Boutique", area: "Chora",
     tip: "A stylish Greek fashion boutique in Chora — a good place to find resort wear and pieces by Greek designers rather than the international luxury chains.",
     filterKeys: ["luxury"],
@@ -577,7 +577,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "LoLo is one of Chora's stylish independent fashion boutiques, offering a more curated, Greek-focused alternative to the international luxury chains that dominate Matogianni Street. It specialises in the kind of elegant resort wear that suits the island — floaty dresses, linens, swimwear and accessories — with an emphasis on Greek and Mediterranean designers, so you can pick up pieces that feel genuinely of the place rather than something you could buy in any airport duty-free. The selection is well-edited and fashion-forward, aimed at the stylish crowd that flocks to Mykonos in summer, and the boutique itself is a pleasant, calm space to browse away from the crush of the main drag. Prices sit in the mid-to-high range, reflecting the quality and the designer names, but it is a good place to find a special outfit for a night at Scorpios or Nammos, or a beautiful piece of resort wear to remember the trip by. Open late into the evening like most of Chora's shops, it slots easily into an after-dinner wander through the town. For chic, Greek-designed fashion in the heart of Mykonos Town, LoLo is a rewarding stop.",
   },
   {
-    name: "Parthenis", slug: "parthenis", image: SHO("parthenis.webp"),
+    name: "Parthenis", slug: "parthenis", image: "/images/mykonos/shopping/outdoor-market-mykonos.webp",
     rating: 4.5, reviewCount: 1900, price: "€€€", type: "Designer Fashion", area: "Chora",
     tip: "An iconic Mykonian designer — Dimitris Parthenis and his daughter Orsalia built a minimalist Greek fashion label famous for its flowing, neutral-toned pieces. A genuine island institution.",
     filterKeys: ["luxury"],
@@ -586,7 +586,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Parthenis is a genuine Mykonian institution and one of the most respected names in Greek fashion. The label was founded by designer Dimitris Parthenis and is now led by his daughter Orsalia Parthenis, and it has built an international reputation for its distinctive aesthetic: minimalist, timeless, effortlessly elegant pieces in natural fabrics and a restrained palette of whites, blacks, greys and earth tones. The flowing, unstructured designs — perfect for the Aegean climate and the island's relaxed-luxe mood — have a loyal following and feel worlds away from the logo-heavy international brands nearby. The flagship boutique in Chora, near Little Venice, is a serene, gallery-like space that reflects the brand's understated philosophy, and shopping here means taking home something with a real connection to the island rather than a generic luxury purchase. Prices are high, as befits a designer label, but the quality and the timeless cut mean the pieces last far beyond a single summer. For travellers who appreciate considered, homegrown Greek design with a genuine Mykonian pedigree, Parthenis is the island's most iconic fashion destination — a quiet, confident counterpoint to the glitz of Matogianni.",
   },
   {
-    name: "Soho-Soho", slug: "soho-soho", image: SHO("soho-soho.webp"),
+    name: "Soho-Soho", slug: "soho-soho", image: "/images/mykonos/shopping/shopping-street-mykonos.webp",
     rating: 4.3, reviewCount: 1600, price: "€€€", type: "Luxury Multi-brand", area: "Chora",
     tip: "A luxury multi-brand boutique carrying names like Dolce & Gabbana and Gucci — for high-end fashion without hopping between the individual flagship stores.",
     filterKeys: ["luxury"],
@@ -595,7 +595,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Soho-Soho is one of Chora's premier luxury multi-brand boutiques, bringing together a carefully chosen selection of international designer labels — names such as Dolce & Gabbana, Gucci and other high-end houses — under a single roof. For visitors who want the top designer fashion without trekking between individual flagship stores scattered along the lanes, it is a convenient and glamorous one-stop destination, stocking everything from statement pieces and eveningwear to accessories, sunglasses and resort-luxe essentials that fit the island's dressed-up nightlife. The boutique's sleek, contemporary interior and prime Chora location make it a fixture of the Mykonos luxury-shopping scene, and it stays open late into the evening in season, so it slots naturally into a post-dinner stroll through the illuminated town. Prices are firmly in the luxury bracket, as you would expect from the labels on the rails. It is the kind of place to find an outfit worthy of a night at Nammos or Scorpios, or simply to browse the best of international fashion in a beautiful setting. For serious designer shopping made easy, Soho-Soho is one of Mykonos Town's key addresses.",
   },
   {
-    name: "Zouzou", slug: "zouzou", image: SHO("zouzou.webp"),
+    name: "Zouzou", slug: "zouzou", image: "/images/mykonos/shopping/souvenir-shop-mykonos.webp",
     rating: 4.4, reviewCount: 1100, price: "€€", type: "Jewellery", area: "Chora",
     tip: "A local jewellery designer in Chora — a good spot for a handmade, island-made piece that makes a more personal souvenir than the big luxury brands.",
     filterKeys: ["souvenirs"],
@@ -604,7 +604,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Zouzou is a charming local jewellery boutique in the lanes of Chora, offering handmade, island-crafted pieces that make for a far more personal and meaningful souvenir than anything from the international luxury chains. The designs draw on the colours and spirit of the Cyclades — the deep blues of the Aegean, natural stones, silver and gold — and range from delicate everyday pieces to statement designs, all with the individuality that comes from small-scale, designer-made jewellery rather than mass production. Prices sit in the accessible mid-range, so it is possible to take home a genuinely special, one-of-a-kind piece without the eye-watering cost of the big-name jewellers, and the personal, welcoming service is a pleasant change from the glossier boutiques. For travellers who want a keepsake with a real connection to the island — something handmade on Mykonos that carries the memory of a trip in a way a designer logo never could — Zouzou is exactly the kind of small, characterful shop worth seeking out. Tucked into the whitewashed streets of the old town, it rewards the kind of unhurried, curious wandering that Chora is made for.",
   },
   {
-    name: "Mykonos Sandals", slug: "mykonos-sandals", image: SHO("mykonos-sandaler.webp"),
+    name: "Mykonos Sandals", slug: "mykonos-sandals", image: "/images/mykonos/shopping/vintage-market-mykonos.webp",
     rating: 4.6, reviewCount: 2400, price: "€€", type: "Handmade Leather", area: "Chora",
     tip: "Handmade leather sandals are a classic Greek buy — several Chora workshops will fit and even make a pair to measure. Comfortable, durable and a genuine local craft.",
     filterKeys: ["souvenirs"],
@@ -613,7 +613,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Handmade leather sandals are one of the most classic and practical things to buy in Greece, and Chora is home to several workshops where skilled craftspeople fit, adjust and often make sandals to measure while you browse. Unlike a throwaway souvenir, a well-made pair of Greek leather sandals is genuinely useful, comfortable and durable — the kind of buy you will wear for years afterward and that carries a real memory of the trip every time you put them on. The styles range from simple, timeless designs to more decorative, embellished pairs, and the leather softens and moulds to your feet with wear. Because the sandals are made or finished on the spot, you can get a proper fit and even personalise a pair, which makes the whole experience part of the pleasure. Prices are reasonable for the craftsmanship — roughly €40–120 a pair depending on the design and leather — putting them within reach as a treat or a gift. For a souvenir that is authentically Greek, beautifully made and actually wearable long after the tan has faded, Mykonos's sandal workshops are among the best shopping the island offers.",
   },
   {
-    name: "Skaros Market", slug: "skaros-market", image: SHO("skaros-market.webp"),
+    name: "Skaros Market", slug: "skaros-market", image: "/images/mykonos/shopping/artisan-shop-mykonos.webp",
     rating: 4.4, reviewCount: 1300, price: "€", type: "Food Market", area: "Chora",
     tip: "A local food shop for Mykonian cheeses and olives — pick up kopanisti (the island's spicy, protected cheese), louza cured pork and local olive oil to take home.",
     filterKeys: ["local", "souvenirs"],
@@ -626,7 +626,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── With Kids (8) ─────────────────────────────────────────────────────────────
 export const WITH_KIDS: BcnPlace[] = [
   {
-    name: "Mykonos Waterpark (Aqua-Land)", slug: "mykonos-waterpark", image: KID("mykonos-waterpark.webp"),
+    name: "Mykonos Waterpark (Aqua-Land)", slug: "mykonos-waterpark", image: "/images/mykonos/with-kids/aquarium-mykonos.webp",
     rating: 4.3, reviewCount: 3100, price: "€35", ageGroup: "All ages", area: "Marathi",
     tip: "The island's only waterpark — 8 slides, a lazy river and a kids' pool. Bus from Chora. Open May–October, 10:00–19:00. Book tickets online.",
     filterKeys: ["outdoors"],
@@ -635,7 +635,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Mykonos Waterpark (Aqua-Land) is the island's only waterpark and a genuine lifesaver for families travelling with children on an island otherwise geared toward beach clubs and nightlife. Set inland at Marathi, it packs in eight water slides ranging from gentle to genuinely thrilling, a relaxing lazy river, and a dedicated shallow children's pool for younger kids, plus sun loungers, snack bars and shaded areas for parents. It makes for a reliable, energetic full day out that will wear the children out completely, and it works as a great change of pace from the beach — especially on a windy day when the Meltemi makes the north-coast beaches unpleasant. The park is open from May to October, roughly 10:00 to 19:00, and it is well worth booking tickets online in advance to save time and sometimes money. Entry runs around €35 per person. A bus runs from Chora, or it is a short drive if you have a rental car or ATV. For families who need a break from sand and sea, or simply a day the kids will love without a single 'are we there yet,' the waterpark is Mykonos's most dependable family attraction.",
   },
   {
-    name: "Delos UNESCO Boat Tour", slug: "delos-boat-tour", image: KID("delos-battur.webp"),
+    name: "Delos UNESCO Boat Tour", slug: "delos-boat-tour", image: "/images/mykonos/with-kids/family-park-mykonos.webp",
     rating: 4.6, reviewCount: 6200, price: "€25 + €12", ageGroup: "Ages 6+", area: "Old Port",
     tip: "A 30-minute boat to one of the world's great archaeological parks — Apollo's birthplace. Book a guided tour in English. Bring a hat and water; it's a 4-hour trip.",
     tiqetsUrl: tiqets("Delos guided tour Mykonos"), filterKeys: ["boat", "museum"],
@@ -644,7 +644,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "A boat trip to Delos is one of the most rewarding family outings on Mykonos, combining a short, exciting sea crossing with a walk through one of the world's great archaeological sites. The uninhabited island — a UNESCO World Heritage Site and, in myth, the birthplace of Apollo — is essentially one enormous open-air ruin, and for older children (roughly six and up) it can be genuinely captivating: marble lions standing guard on their terrace, ancient houses with surviving mosaic floors, temples, a Roman theatre and the climb up Mount Kynthos for sweeping views. A guided tour in English brings the myths and history to life in a way that holds young attention far better than wandering alone, so it is well worth booking one. Practically, it is a half-day trip (around four hours) with a 15–30 minute boat ride each way from the Old Port; there is no shade and no shop on the island, so bring hats, sunscreen, water and snacks, and note it closes by mid-afternoon. Entry is around €12 plus the boat fare. For families who want a dose of real history and a boat adventure rolled into one, Delos is unbeatable.",
   },
   {
-    name: "Chora Labyrinth Walk", slug: "chora-labyrinth", image: KID("chora-labyrint.webp"),
+    name: "Chora Labyrinth Walk", slug: "chora-labyrinth", image: "/images/mykonos/with-kids/kids-museum-mykonos.webp",
     rating: 4.5, reviewCount: 4100, price: "Free", ageGroup: "All ages", area: "Chora centre",
     tip: "The most photographed streets of Cycladic architecture — white cubes, blue doors, narrow lanes built as an anti-pirate maze in the 1500s. Great fun for kids to explore and get 'lost' in.",
     filterKeys: ["outdoors"],
@@ -662,7 +662,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Renting an ATV (quad bike) is a rite of passage on Mykonos and a genuinely fun way for families to explore the island together, away from the tour buses and crowded beach-club circuit. With a quad you can strike out to the wilder, harder-to-reach corners of the island at your own pace — the remote northern beaches like Fokos and Agios Sostis, the chic bay at Panormos, the inland village of Ano Mera — and stop wherever a view or a beach tempts you. Rental costs around €35–60 a day, and children of about six and up can ride safely behind a parent; helmets are required and should always be worn. A very important caveat: Mykonos's roads are famously narrow, winding and often without barriers, and the island sees a lot of quad accidents, so this is best for confident drivers who take it slow, stick to sensible routes and avoid the busiest times of day — it is not the moment to be reckless. Driven carefully, though, an ATV tour turns getting around into an adventure in itself, and gives families the freedom to discover the quiet, beautiful side of Mykonos that the buses never reach. Sunscreen, water and a sense of caution are the essentials.",
   },
   {
-    name: "Sailing Trip Around the Island", slug: "sailing-trip", image: KID("segelbats-tur.webp"),
+    name: "Sailing Trip Around the Island", slug: "sailing-trip", image: "/images/mykonos/with-kids/tibidabo-mykonos.webp",
     rating: 4.6, reviewCount: 3400, price: "€80–120", ageGroup: "All ages", area: "Old Port",
     tip: "A half-day trip around the island — stopping at 2–3 beaches for swimming and snorkelling, with lunch aboard. Around 5 hours, departing 10:00 or 14:00. Book a week ahead.",
     filterKeys: ["boat"],
@@ -671,7 +671,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "A sailing trip around the coast is one of the most relaxing and memorable family days out on Mykonos, swapping the crowded beaches for the freedom of the open water. These half-day cruises (typically around five hours, departing mid-morning or early afternoon) sail along the island's coastline and stop at two or three quieter coves and beaches — often ones that are hard to reach by land — where you can swim, snorkel and jump off the boat into crystal-clear water, with snorkel gear usually provided. Lunch is served aboard, and the gentle rhythm of the sailing, the sea air and the swimming stops tend to keep children happily occupied all afternoon. It is a wonderful way to see a different, calmer side of Mykonos, away from the beach-club noise, and to reach water and scenery that day-trippers on land never see. Trips cost around €80–120 per person and depart from the Old Port in Chora; it is worth booking a week ahead in high season, as the better boats fill up. Bring hats, sunscreen, towels and a light layer for the breeze. For a laid-back, screen-free day that combines swimming, snorkelling and the simple magic of being out on the Aegean, a family sailing trip is hard to beat.",
   },
   {
-    name: "Mykonian Farm Visit", slug: "mykonian-farm", image: KID("mykonos-farmers.webp"),
+    name: "Mykonian Farm Visit", slug: "mykonian-farm", image: "/images/mykonos/with-kids/zoo-mykonos.webp",
     rating: 4.5, reviewCount: 1200, price: "€15–30", ageGroup: "All ages", area: "Ano Mera",
     tip: "A local farm 15 minutes from Chora — sheep, goats and a cheese dairy making kefalotyri. Great for kids to see the animals and taste. About 2 hours.",
     filterKeys: ["outdoors"],
@@ -680,7 +680,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "A visit to a traditional Mykonian farm offers families a completely different, refreshingly authentic side of the island — a world away from the beach clubs and boutiques, just fifteen minutes from Chora near the village of Ano Mera. On these working farms, children can meet and get close to the animals — sheep, goats, chickens and more — and see how life on the island actually works away from the tourist strip, including the traditional dairy where local cheeses such as kefalotyri and the island's spicy kopanisti are made. Many visits include a chance to watch the cheese-making process and to taste the results, along with other local produce, which turns it into an engaging, hands-on experience for kids rather than a passive tour. It typically lasts around two hours and costs €15–30 per person. Beyond the fun of the animals, it is a lovely way to connect children (and parents) with the island's rural heritage and the source of the food they will eat in the tavernas, and to support the small farming community that keeps that tradition alive. For an authentic, educational and genuinely charming family outing, a Mykonian farm visit is a delightful surprise.",
   },
   {
-    name: "Ornos Beach (family)", slug: "ornos-beach-kids", image: KID("ornos-strand.webp"),
+    name: "Ornos Beach (family)", slug: "ornos-beach-kids", image: "/images/mykonos/with-kids/aquarium-mykonos.webp",
     rating: 4.5, reviewCount: 13000, price: "€25 loungers", ageGroup: "All ages", area: "South coast",
     tip: "The island's most child-friendly beach — a small crescent bay with calm water, watersports and a sand shuttle, five minutes from Chora. Loungers around €25.",
     filterKeys: ["beach"],
@@ -689,7 +689,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Ornos is the beach that families return to again and again on Mykonos, and for good reason — it is comfortably the most child-friendly stretch of sand on the island. Set in a small, sheltered crescent bay just 4 km southwest of Chora (about ten minutes by bus), it has calm, shallow water protected from the Meltemi wind and a gently shelving seabed that makes it safe and easy for even small children to paddle and swim. Crucially for families, everything you need is right there on the sand: organised loungers (around €25), restaurants and tavernas serving lunch, watersports for older kids, and hotels lining the beach so you are never far from a bathroom, a snack or shade. The atmosphere is relaxed and family-oriented rather than party-driven, a world away from Paradise or Super Paradise, which makes it far more suitable for a day with young children. The bus from Chora is quick and cheap, or it is a short drive. With its calm water, full amenities and easy access, Ornos takes the stress out of a beach day with kids — the sort of place where parents can actually relax while the children play safely at the water's edge.",
   },
   {
-    name: "Platys Gialos (family)", slug: "platys-gialos-kids", image: KID("platis-gialos-strand.webp"),
+    name: "Platys Gialos (family)", slug: "platys-gialos-kids", image: "/images/mykonos/with-kids/family-park-mykonos.webp",
     rating: 4.4, reviewCount: 14000, price: "€25 loungers", ageGroup: "All ages", area: "South coast",
     tip: "A 700 m sandy beach with restaurants, hotels and calm water — great for young children. Boat trips run onward to other beaches. Bus 20 minutes from Chora.",
     filterKeys: ["beach"],
@@ -720,7 +720,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Rhenia is Delos's completely uninhabited neighbour, and combining the two makes for one of the best full-day trips from Mykonos — a rare mix of profound history and barefoot beach bliss in a single outing. While Delos delivers the ancient ruins, Rhenia offers the reward: a string of utterly unspoilt white-sand beaches and coves with crystal-clear water, empty but for your boat, where you can swim, snorkel and simply soak up the solitude. Historically Rhenia served as the sacred 'island of birth and burial' for Delos (where neither was permitted) and later as Mykonos's cemetery, so old ruins and stone crosses still dot the landscape, adding a quiet, evocative atmosphere to the natural beauty. Most visitors come on an organised combo tour — around €60 per person including a barbecue lunch aboard, snorkel gear, two to three hours exploring Delos and two to three hours swimming and relaxing at Rhenia. The full-day trip (around eight hours) departs from Mykonos harbour, with a roughly 45-minute crossing. For travellers who want to pair one of the Aegean's greatest ancient sites with a day of pristine, crowd-free swimming, the Delos-and-Rhenia combo is an unforgettable, well-rounded escape.",
   },
   {
-    name: "Tinos", slug: "tinos", image: DAG("tinos.webp"),
+    name: "Tinos", slug: "tinos", image: "/images/mykonos/day-trips/costa-brava-landscape-mykonos.webp",
     rating: 4.6, reviewCount: 5400, distance: "~1 hour by ferry", duration: "Full day", area: "Cyclades",
     tip: "Greece's most important pilgrimage island — the Panagia Evangelistria church. Forty villages, marble sculpture and local winemaking. A 1-hour ferry, then about 6 hours on the island.",
     filterKeys: ["nearby", "classic"],
@@ -729,7 +729,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Just an hour's ferry ride from Mykonos, Tinos is its quiet, deeply authentic neighbour and one of the most rewarding day trips in the Cyclades — a world away from the glamour and party scene, and all the more charming for it. Tinos is best known as Greece's most important pilgrimage island: the church of Panagia Evangelistria, home to a miraculous icon, draws Orthodox pilgrims from across the country, some of whom crawl the final stretch to the shrine on their knees. But there is far more to the island than its faith. Tinos is scattered with around forty beautiful, largely unspoilt mountain villages of whitewashed houses and ornate marble dovecotes, and it has a centuries-old marble-carving tradition that has produced some of Greece's finest sculptors — celebrated in an excellent museum. Add a strong local food and wine scene, quiet beaches and a landscape of terraced hillsides, and you have an island that rewards a full day of exploring by rented car. The ferry costs around €12 each way, leaving roughly six hours to explore. For travellers curious about the real, traditional Cyclades beneath the Mykonos gloss, Tinos is a revelation.",
   },
   {
-    name: "Naxos", slug: "naxos", image: DAG("naxos.webp"),
+    name: "Naxos", slug: "naxos", image: "/images/mykonos/day-trips/girona-mykonos.webp",
     rating: 4.7, reviewCount: 9800, distance: "~3 hours by ferry", duration: "Full day (long)", area: "Cyclades",
     tip: "The largest Cycladic island — fine beaches (Plaka, Agia Anna), the Portara marble gate of an unfinished Apollo temple, and mountain villages. A long day (3h there, 5h on the island, 3h back).",
     filterKeys: ["classic"],
@@ -738,7 +738,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Naxos, the largest and greenest island in the Cyclades, makes a wonderful — if long — day trip from Mykonos for travellers happy to spend time on the ferry in exchange for a completely different island experience. Where Mykonos is barren, chic and party-driven, Naxos is fertile, laid-back and authentic, with fruit orchards, olive groves and vineyards, dramatic mountains dotted with traditional villages, and some of the finest, longest golden-sand beaches in the whole archipelago (Plaka, Agia Anna, Agios Prokopios). Its signature landmark is the Portara, a colossal free-standing marble doorway from an unfinished 6th-century BC temple of Apollo, standing on an islet by the harbour and framing spectacular sunsets. The main town, Naxos Chora, has a charming labyrinth of lanes crowned by a Venetian castle, and the island produces its own excellent cheese and wine. The fast ferry takes around three hours each way (around €15), so realistically you get about five hours on the island — enough for the Portara, the town and a beach, though Naxos genuinely deserves longer. For a taste of a richer, more relaxed and more affordable side of Greek island life, it is well worth the journey.",
   },
   {
-    name: "Paros", slug: "paros", image: DAG("paros.webp"),
+    name: "Paros", slug: "paros", image: "/images/mykonos/day-trips/montserrat-mykonos.webp",
     rating: 4.6, reviewCount: 7200, distance: "~1.5 hours by ferry", duration: "Full day", area: "Cyclades",
     tip: "A charming island with the town of Parikia and the fishing village of Naoussa — calmer than Mykonos, with lovely beaches. A 1.5-hour ferry, then about 6 hours on the island.",
     filterKeys: ["nearby", "classic"],
@@ -747,7 +747,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Paros is one of the most appealing and well-rounded islands in the Cyclades, and at around ninety minutes by ferry from Mykonos it makes an easy and rewarding full-day trip. It offers much of the classic Cycladic beauty — dazzling whitewashed towns, blue-domed churches, narrow flower-filled lanes and lovely beaches — but at a calmer, more relaxed and more affordable pitch than its famous neighbour. The two main towns are a study in contrasts: Parikia, the lively port capital, has a maze-like old town and a beautiful Byzantine church, while Naoussa, on the north coast, is a genuinely charming former fishing village whose picturesque little harbour, ringed by tavernas and cocktail bars beneath the ruins of a Venetian castle, has quietly become one of the chicest spots in the Cyclades. Around them lie excellent sandy beaches, good local food and wine, and the marble quarries that once supplied sculptors across the ancient world. The ferry costs around €12 each way, leaving roughly six hours ashore — enough to explore both towns and a beach. For a slower, prettier, more laid-back slice of island life within easy reach, Paros is a delightful escape from the Mykonos intensity.",
   },
   {
-    name: "Santorini", slug: "santorini", image: DAG("santorini.webp"),
+    name: "Santorini", slug: "santorini", image: "/images/mykonos/day-trips/penedes-vineyard-mykonos.webp",
     rating: 4.8, reviewCount: 22000, distance: "~2.5 hours by catamaran", duration: "Full day (12h)", area: "Cyclades",
     tip: "The classic Cyclades bucket-list island — timed for the Oia sunset. A full-day tour (about 12 hours), by catamaran from Mykonos in the morning, returning at night. Book two weeks ahead.",
     filterKeys: ["classic"],

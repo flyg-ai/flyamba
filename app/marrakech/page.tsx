@@ -49,16 +49,16 @@ const NON_STOP: { city: string; price: number; iata: string; note?: string }[] =
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/marrakech/sevardheter/djemaa-el-fna.webp",
-  restaurants: "/images/marrakech/restauranger/nomad.webp",
-  hotels: "/images/marrakech/hotell/la-mamounia.webp",
+  restaurants: "/images/marrakech/restaurants/restaurant-marrakech.avif",
+  hotels: "/images/marrakech/hotels/hotel-marrakech.avif",
   transport: "/images/marrakech/sevardheter/koutoubia.webp",
   prices: "/images/marrakech/sevardheter/souker-basarerna.webp",
   weather: "/images/marrakech/sevardheter/majorelle.webp",
-  shopping: "/images/marrakech/shopping/souk-semmarine.webp",
-  beaches: "/images/marrakech/strander/essaouira-beach.webp",
-  nightlife: "/images/marrakech/nattliv/sky-bar-la-renaissance.webp",
-  "with-kids": "/images/marrakech/med-barn/kamelrid-palmeraie.webp",
-  "day-trips": "/images/marrakech/dagsutflykter/atlas-bergen.webp",
+  shopping: "/images/marrakech/shopping/artisan-shop-marrakech.webp",
+  beaches: "/images/marrakech/beaches/barceloneta-marrakech.webp",
+  nightlife: "/images/marrakech/nightlife/cocktail-bar-marrakech.webp",
+  "with-kids": "/images/marrakech/with-kids/aquarium-marrakech.webp",
+  "day-trips": "/images/marrakech/day-trips/costa-brava-landscape-marrakech.webp",
   events: "/images/marrakech/sevardheter/el-badi-palace.webp",
 };
 
@@ -75,14 +75,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Jardin Majorelle", blurb: "A dreamlike cobalt-blue garden saved by Yves Saint Laurent.", image: "/images/marrakech/sevardheter/jardin-majorelle.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Nomad", blurb: "Modern Moroccan cooking on a chic rooftop over the spice square.", image: "/images/marrakech/restauranger/nomad.webp" },
-  { name: "Dar Yacout", blurb: "A theatrical multi-course palace feast in a candlelit riad.", image: "/images/marrakech/restauranger/dar-yacout.webp" },
-  { name: "Chez Lamine", blurb: "Legendary pit-roasted mechoui lamb, carved by weight and eaten by hand.", image: "/images/marrakech/restauranger/chez-lamine.webp" },
+  { name: "Nomad", blurb: "Modern Moroccan cooking on a chic rooftop over the spice square.", image: "/images/marrakech/restaurants/restaurant-marrakech.avif" },
+  { name: "Dar Yacout", blurb: "A theatrical multi-course palace feast in a candlelit riad.", image: "/images/marrakech/restaurants/restaurant-marrakech.avif" },
+  { name: "Chez Lamine", blurb: "Legendary pit-roasted mechoui lamb, carved by weight and eaten by hand.", image: "/images/marrakech/restaurants/restaurant-marrakech.avif" },
 ];
 const BEACH_PREVIEW = [
-  { name: "Essaouira", blurb: "A breezy Atlantic port with a walled medina, windsurfing and fresh seafood.", image: "/images/marrakech/strander/essaouira-beach.webp" },
-  { name: "Taghazout", blurb: "Morocco's boho surf capital, with mellow point breaks and surf camps.", image: "/images/marrakech/strander/taghazout.webp" },
-  { name: "Oualidia", blurb: "A calm crescent lagoon famed for safe swimming and fresh oysters.", image: "/images/marrakech/strander/oualidia-beach.webp" },
+  { name: "Essaouira", blurb: "A breezy Atlantic port with a walled medina, windsurfing and fresh seafood.", image: "/images/marrakech/beaches/beach-bar-marrakech.webp" },
+  { name: "Taghazout", blurb: "Morocco's boho surf capital, with mellow point breaks and surf camps.", image: "/images/marrakech/beaches/beach-sunset-marrakech.webp" },
+  { name: "Oualidia", blurb: "A calm crescent lagoon famed for safe swimming and fresh oysters.", image: "/images/marrakech/beaches/costa-brava-marrakech.webp" },
 ];
 
 const NEARBY = [

@@ -56,7 +56,7 @@ export default function MarrakechWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Marrakech with Kids"
-      heroImage="/images/marrakech/med-barn/kamelrid-palmeraie.webp"
+      heroImage="/images/marrakech/with-kids/aquarium-marrakech.webp"
       intro="Marrakech can be an exotic, thrilling adventure for children — the trick is balancing the sensory intensity of the medina with plenty of hands-on fun and downtime. The nightly circus of Jemaa el-Fnaa, a swaying camel ride through the palm groves, a dawn balloon flight over the desert, a splash-filled day at the water park and a clip-clopping calèche around the ramparts all delight younger travellers, while gardens and film studios add variety. This guide gathers the best family experiences, with suggested age ranges, prices in dirhams and practical tips to keep everyone happy in the heat."
       wide
     >

@@ -53,7 +53,7 @@ export default function SingaporeHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Singapore"
-      heroImage="/images/singapore/hotell/marina-bay-sands.webp"
+      heroImage="/images/singapore/hotels/hotel-singapore.avif"
       intro="Singapore's hotels run from bucket-list icons to characterful boutique bolt-holes. You can swim in the world's most famous rooftop infinity pool at Marina Bay Sands, sip a Sling in the colonial splendour of Raffles, retreat to an island resort on Sentosa, or bed down in a restored shophouse in Chinatown. Accommodation is one of the pricier parts of a Singapore trip, so here are 8 standout stays across every budget and neighbourhood, with areas, prices and tips to help you choose."
       wide
     >

@@ -53,7 +53,7 @@ export default function MadridShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Madrid"
-      heroImage="/images/madrid/shopping/el-corte-ingls-callao.webp"
+      heroImage="/images/madrid/shopping/artisan-shop-madrid.webp"
       intro="Madrid's shopping ranges from the raucous Sunday flea market of El Rastro to the designer flagships of Salamanca's 'Golden Mile', taking in indie fashion and vintage in cool Chueca and Malasaña, the flagship-store cluster of Gran Vía, and Spain's great department store, El Corte Inglés, with its rooftop food terrace. There are gourmet food halls for edible souvenirs and characterful neighbourhood markets where locals actually shop. Here are eight of the city's best shopping destinations, with opening hours, areas and tips."
       wide
     >

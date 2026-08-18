@@ -72,7 +72,7 @@ export default function PraguePrices() {
       active="prices"
       crumb="Prices"
       h1="How Much Does Prague Cost?"
-      heroImage="/images/prague/nattliv/prague-beer-museum.webp"
+      heroImage="/images/prague/nightlife/cocktail-bar-prague.webp"
       intro="Prague is one of Europe's great-value city breaks — a beautiful capital where beer is cheaper than water, a hearty meal costs a few hundred koruna and much of the sightseeing is free. Here's a realistic breakdown of what a day costs at every level, plus typical prices in Czech koruna (Kč) for beer, food, transport, attractions and hotels, so you can plan your budget with confidence."
     >
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />

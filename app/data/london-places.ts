@@ -213,7 +213,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Dishoom", slug: "dishoom", image: R("dishoom.webp"), rating: 4.7, reviewCount: 34000,
+    name: "Dishoom", slug: "dishoom", image: "/images/london/restaurants/restaurant-london.avif", rating: 4.7, reviewCount: 34000,
     type: "Indian / Bombay Café", price: "$$", area: "Covent Garden (+ branches)", tip: "No dinner bookings for small groups — go early, or come for the legendary bacon naan breakfast.",
     filterKeys: ["indian", "budget"],
     description: "London's beloved Bombay-café chainlet serving all-day Irani food in gorgeous retro rooms — famous for the bacon naan roll.",
@@ -237,7 +237,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Barrafina brought the spirit of Barcelona's great counter tapas bars to London and earned a Michelin star doing it. Every branch works the same way: no reservations, a single L-shaped marble counter, and stools facing an open kitchen where chefs cook your food inches away. You put your name down, wait with a glass of sherry or cava, then eat some of the best Spanish small plates in the country — plump grilled prawns, jamón ibérico, tortilla, crispy pig's ears, seasonal specials chalked on the board, and superb seafood from the plancha. The atmosphere is convivial and theatrical, and chatting to the cooks about what's freshest is part of the experience. It's pricier than casual tapas — expect £40–55 a head with drinks — but the produce and precision justify it. Branches sit in Soho, on Adelaide Street near Covent Garden, and in Coal Drops Yard at King's Cross. Go early or mid-afternoon to minimise the queue, come ready to perch rather than settle, and trust the staff's recommendations for the daily catch.",
   },
   {
-    name: "Hawksmoor", slug: "hawksmoor", image: R("hawksmoor.webp"), rating: 4.6, reviewCount: 22000,
+    name: "Hawksmoor", slug: "hawksmoor", image: "/images/london/restaurants/restaurant-london.avif", rating: 4.6, reviewCount: 22000,
     type: "British Steakhouse", price: "$$$$", area: "Multiple (Seven Dials, Borough)", tip: "Come for the excellent-value express lunch, or the Sunday roast with bone-marrow gravy — book well ahead.",
     filterKeys: ["british"],
     description: "Britain's benchmark steakhouse, serving dry-aged native-breed beef and knockout Sunday roasts in handsome dining rooms.",
@@ -253,7 +253,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Gymkhana is one of London's most celebrated Indian restaurants, a two-Michelin-star Mayfair dining room from the Sethi family that conjures the atmosphere of a colonial-era gymkhana club with ceiling fans, dark wood, marble and leather banquettes. The cooking, though, is thrillingly contemporary and unafraid of big, spice-driven flavours, with a particular love of game: the wild muntjac deer biryani sealed under pastry, the suckling pig vindaloo, tandoori quail and the famous kid-goat methi keema with salli and pao. Regional dishes span the subcontinent, executed with fine-dining precision, and the drinks list — including inventive cocktails and a strong wine selection — matches the ambition. It's a proper splurge, with à la carte around £70–110 a head and tasting menus higher, so it suits a special occasion. Reservations are essential and open several weeks in advance, filling quickly. For a memorable, elevated Indian meal that ranks among the best in a city famous for the cuisine, Gymkhana is a standout, and its lively downstairs bar makes a fine spot for a pre-dinner drink.",
   },
   {
-    name: "St. John", slug: "st-john", image: R("st-john.webp"), rating: 4.5, reviewCount: 7000,
+    name: "St. John", slug: "st-john", image: "/images/london/restaurants/restaurant-london.avif", rating: 4.5, reviewCount: 7000,
     type: "British / Nose-to-Tail", price: "$$$", area: "Smithfield", tip: "Order the roast bone marrow with parsley salad and a Madeleine baked to order — a true London classic.",
     filterKeys: ["british"],
     description: "Fergus Henderson's pioneering nose-to-tail restaurant near Smithfield, a temple of honest, seasonal British cooking.",
@@ -261,7 +261,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "St. John is one of the most influential restaurants in modern Britain, the Smithfield institution where Fergus Henderson championed nose-to-tail eating — using the whole animal with respect and simplicity. Set in a former smokehouse near the old meat market, its pared-back, whitewashed dining room, hung with hooks and lit by daylight, is deliberately unshowy, letting the food speak. The signature roast bone marrow with parsley salad and toast has become a national classic, joined by dishes that change daily with the seasons: potted meats, offal done brilliantly, whole crab, seasonal greens and robust puddings. The famous Madeleines, baked to order, and the on-site bakery's Eccles cakes and sourdough are worth the trip alone. It's serious, seasonal British cooking without pretension, and the atmosphere is warm and convivial rather than hushed. Expect around £45–65 a head. Book ahead for the dining room, though the bar serves snacks and wine without a reservation. For a taste of the cooking that shaped a generation of British chefs, St. John remains essential — genuine, generous and quietly radical.",
   },
   {
-    name: "The Ledbury", slug: "the-ledbury", image: R("the-ledbury.webp"), rating: 4.7, reviewCount: 4500,
+    name: "The Ledbury", slug: "the-ledbury", image: "/images/london/restaurants/restaurant-london.avif", rating: 4.7, reviewCount: 4500,
     type: "Fine Dining", price: "$$$$", area: "Notting Hill", tip: "This three-Michelin-star tasting-menu destination books out months ahead — set a reminder for the release date.",
     filterKeys: ["fine-dining"],
     description: "Brett Graham's three-Michelin-star Notting Hill restaurant, a refined tasting-menu experience and one of London's very best.",
@@ -277,7 +277,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Brat is chef Tomos Parry's Michelin-starred ode to fire and Basque country cooking, set in a warm, buzzy first-floor room above a Shoreditch pub — brat being an old word for turbot. Everything centres on the open wood grill and hearth, which impart smoke and char to superb British produce. The signature dish is the whole wood-roasted turbot, its gelatinous flesh basted over the coals and served to share, but the grilled spider crab, smoked potatoes, wood-fired bread and, especially, the burnt Basque cheesecake are equally revered. The cooking is rustic yet precise, seasonal and produce-obsessed, and the atmosphere is lively and unpretentious. Expect to spend around £45–70 a head. The main dining room takes bookings and fills fast, while the associated Brat at Climpson's Arch and the walk-in upstairs bar offer more spontaneous options. It's a short walk from the bars and markets of Shoreditch and Spitalfields, making it a natural centrepiece for an East London evening. For distinctive, flame-driven cooking that has genuinely influenced the London scene, Brat is a must — book ahead and come hungry to share.",
   },
   {
-    name: "Hoppers", slug: "hoppers", image: R("hoppers.webp"), rating: 4.5, reviewCount: 9000,
+    name: "Hoppers", slug: "hoppers", image: "/images/london/restaurants/restaurant-london.avif", rating: 4.5, reviewCount: 9000,
     type: "Sri Lankan / Small Plates", price: "$$", area: "Soho / Marylebone", tip: "Order the bone-marrow varuval and a couple of egg hoppers; lunch is quieter than the no-booking dinner rush.",
     filterKeys: ["budget", "small-plates"],
     description: "A vibrant Sri Lankan and South Indian small-plates spot famous for its lacy fermented hoppers and fiery curries.",
@@ -285,7 +285,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Hoppers brings the roadside cooking of Sri Lanka and Tamil Nadu to central London with huge flavour and a lively, casual buzz. The namesake hoppers are bowl-shaped pancakes made from fermented rice and coconut, lacy and crisp at the edges — order the egg hopper with its runny yolk in the centre, scooped up with fiery sambols and curries. Beyond them, the menu of short eats, dosas, kari (curries) and roasts is a parade of bold spice: the bone-marrow varuval, black pork curry, and buttery karis are standouts, and it's easy to build a feast of shared plates. Prices are gentle for the quality, around £25–35 a head, making it one of the best-value exciting meals in the West End. The original Soho branch runs on a no-reservations basis at dinner (expect a wait or come at lunch), while the larger Marylebone and King's Cross sites take bookings. Order a few small plates, a hopper or two, and a tamarind or arrack-based cocktail. For vibrant, affordable, genuinely different food in the centre, Hoppers is a joy.",
   },
   {
-    name: "Rules", slug: "rules", image: R("rules.webp"), rating: 4.5, reviewCount: 11000,
+    name: "Rules", slug: "rules", image: "/images/london/restaurants/restaurant-london.avif", rating: 4.5, reviewCount: 11000,
     type: "Traditional British", price: "$$$$", area: "Covent Garden", tip: "London's oldest restaurant (est. 1798) — book the plush upstairs cocktail bar and order the game in season.",
     filterKeys: ["british"],
     description: "London's oldest restaurant, an 1798 Covent Garden institution serving classic British game, pies and puddings.",
@@ -297,7 +297,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "The Savoy", slug: "the-savoy", image: H("the-savoy.webp"), rating: 4.7, reviewCount: 14000,
+    name: "The Savoy", slug: "the-savoy", image: "/images/london/hotels/hotel-london.avif", rating: 4.7, reviewCount: 14000,
     type: "Luxury", price: "$$$$", area: "Strand / Covent Garden", tip: "Even if you don't stay, book afternoon tea in the Thames Foyer or a martini at the American Bar.",
     filterKeys: ["luxury", "central"],
     description: "A legendary art-deco and Edwardian grande dame on the Strand, with river views and the historic American Bar.",
@@ -305,7 +305,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Savoy is one of the world's most famous hotels, a byword for glamour since it opened in 1889 as Britain's first luxury hotel, complete with electric lights and ascending rooms. Straddling the Strand and the Thames between the City and the West End, it blends Edwardian and art-deco splendour across opulent rooms and suites, many looking over the river. Its public spaces are legends in their own right: the American Bar, one of the world's oldest and most awarded cocktail bars; the glittering Beaufort Bar; and the Thames Foyer, where afternoon tea is served under a glass dome. A Gordon Ramsay restaurant and a lavish spa complete the offering, and the hotel's own forecourt is the only street in Britain where you drive on the right. Rates are firmly in the splurge bracket, from around $800 a night, but even non-guests can soak up the history over a cocktail or tea. Superbly central for theatreland, Covent Garden and the river, it's the choice for a special-occasion stay steeped in old-world London luxury and impeccable service.",
   },
   {
-    name: "The Ritz London", slug: "the-ritz", image: H("the-ritz.webp"), rating: 4.7, reviewCount: 9000,
+    name: "The Ritz London", slug: "the-ritz", image: "/images/london/hotels/hotel-london.avif", rating: 4.7, reviewCount: 9000,
     type: "Luxury", price: "$$$$", area: "Piccadilly / Mayfair", tip: "Reserve the famous afternoon tea in the Palm Court weeks ahead, and note the smart dress code (jacket & tie for gents).",
     filterKeys: ["luxury", "central"],
     description: "The epitome of Belle Époque grandeur on Piccadilly, synonymous with luxury and its celebrated Palm Court afternoon tea.",
@@ -313,7 +313,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Ritz has been a synonym for luxury since César Ritz opened it in 1906, its name literally entering the language as an adjective for glamour. Overlooking Green Park on Piccadilly, this Louis XVI-inspired palace dazzles with gilded, chandeliered interiors, marble, silk and antiques across its lavish rooms and suites. The Ritz Restaurant, one of the most beautiful dining rooms in Europe, holds a Michelin star, while the legendary afternoon tea in the pastel-and-gold Palm Court is a bucket-list ritual — served daily to a piano soundtrack and booked out weeks in advance. The clubby Rivoli Bar and a discreet casino add to the sense of occasion. A firm dress code, with jacket and tie required for gentlemen in several areas, preserves its old-world formality. Rates start high, from around $900 a night, marking it as a true splurge. Its Mayfair location puts you steps from Bond Street shopping, the Royal Academy and St James's. For quintessential, unabashed British luxury and the grandest of afternoon teas, The Ritz remains the benchmark against which others are measured.",
   },
   {
-    name: "Claridge's", slug: "claridges", image: H("claridges.webp"), rating: 4.8, reviewCount: 8000,
+    name: "Claridge's", slug: "claridges", image: "/images/london/hotels/hotel-london.avif", rating: 4.8, reviewCount: 8000,
     type: "Luxury", price: "$$$$", area: "Mayfair", tip: "The art-deco lobby and afternoon tea are worth the visit alone; the seasonal foyer installations are a spectacle.",
     filterKeys: ["luxury"],
     description: "The art-deco jewel of Mayfair, a favourite of royalty and celebrities, blending timeless glamour with impeccable service.",
@@ -345,7 +345,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Hoxton, Shoreditch is the hotel that launched the Hoxton brand and helped define the affordable-cool boutique category. Sitting in the heart of creative East London, it nails a warm, retro-modern style across rooms that range from compact Shoebox to roomier categories, all sensibly priced — book early and you can find genuinely good rates for such a hip, central spot. The real heart of the place is the ground floor: a buzzy, plant-filled lobby lounge that doubles as a co-working space, meeting spot and all-day café-bar, spilling into a popular restaurant, so it feels plugged into the neighbourhood rather than sealed off from it. You're surrounded by Shoreditch's galleries, street art, independent shops, and some of London's best bars and restaurants, with the City and Liverpool Street a short walk or ride away. It suits younger travellers, solo trips and anyone who wants design, sociability and location over resort frills. Look out for the brand's free perks like the breakfast bag hung on your door. For stylish, well-located, value-conscious East London cool, the original Hoxton remains a top pick.",
   },
   {
-    name: "The Zetter Townhouse", slug: "zetter-townhouse", image: H("the-zetter-townhouse.webp"), rating: 4.6, reviewCount: 3500,
+    name: "The Zetter Townhouse", slug: "zetter-townhouse", image: "/images/london/hotels/hotel-london.avif", rating: 4.6, reviewCount: 3500,
     type: "Boutique", price: "$$$", area: "Clerkenwell / Marylebone", tip: "The eccentric, cocktail-focused ground-floor bar is a destination in itself — start your evening there.",
     filterKeys: ["boutique"],
     description: "A quirky, characterful boutique townhouse hotel packed with antiques and curios, with an acclaimed cocktail bar downstairs.",
@@ -353,7 +353,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Zetter Townhouse is a small, delightfully eccentric boutique hotel that feels like staying in the home of a well-travelled, slightly bohemian aristocrat. Its rooms and lounges are crammed with antiques, curiosities, oddball art and rich, playful colour, creating a cosy, characterful atmosphere miles from cookie-cutter hotel design. The star attraction is its ground-floor cocktail bar, a dimly lit, curio-filled snug that is regularly ranked among the world's best bars, serving inventive, house-made drinks in a wonderfully theatrical setting — reason enough to visit even without a room. There are two locations: the original in Clerkenwell, beside its sister hotel The Zetter on St John's Square, near Farringdon and the foodie streets of Exmouth Market; and a second in leafy Marylebone off Marylebone High Street. Both are intimate, personal and beautifully done, with rates from around $220 a night that undercut the grand hotels while offering far more personality. It suits couples and design-lovers who want charm, a great bar and a real sense of place. For quirky, characterful, cocktail-fuelled London hospitality, the Zetter Townhouse is a gem.",
   },
   {
-    name: "Premier Inn London County Hall", slug: "premier-inn-county-hall", image: H("premier-inn-county-hall.webp"), rating: 4.5, reviewCount: 16000,
+    name: "Premier Inn London County Hall", slug: "premier-inn-county-hall", image: "/images/london/hotels/hotel-london.avif", rating: 4.5, reviewCount: 16000,
     type: "Budget / Value", price: "$$", area: "South Bank / Waterloo", tip: "Unbeatable location for the price — book far ahead, as this branch sells out fast.",
     filterKeys: ["budget", "central"],
     description: "A reliable, great-value chain hotel in the landmark County Hall building, moments from the London Eye and South Bank.",
@@ -381,7 +381,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Ministry of Sound is one of the most famous nightclub brands in the world, and its original London home near Elephant & Castle has been a pillar of dance-music culture since 1991. Housed in a converted warehouse south of the river, its calling card is The Box, a room built around a bespoke, obsessively engineered sound system designed to deliver crystal-clear, body-shaking audio — an experience purists travel across the city for. Across its rooms it hosts marquee house, techno, trance and commercial-dance nights with a rotating cast of international DJs, drawing big, energetic crowds of clubbers who take their music and their late nights seriously. Doors open around 11pm and the party runs until dawn on Fridays and Saturdays. The brand's global reach — compilations, a record label, events worldwide — all traces back to this venue. Buy tickets in advance online for the best price and to guarantee entry on sold-out nights, and expect thorough security on the door. It's a proper superclub rather than a casual bar, so come to dance. For a classic big-room London clubbing night, it's a must-do.",
   },
   {
-    name: "Ronnie Scott's", slug: "ronnie-scotts", image: N("ronnie-scotts.webp"), rating: 4.6, reviewCount: 12000,
+    name: "Ronnie Scott's", slug: "ronnie-scotts", image: "/images/london/nightlife/cocktail-bar-london.webp", rating: 4.6, reviewCount: 12000,
     type: "Jazz Club", area: "Soho", tip: "Book a table for the main early show; the Late Late Show after 11pm is cheaper and gloriously intimate.",
     filterKeys: ["live-music"],
     description: "London's most legendary jazz club, a dimly lit Soho institution hosting world-class musicians nightly since 1959.",
@@ -389,7 +389,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Ronnie Scott's is Britain's most storied jazz venue, opened in Soho in 1959 by saxophonist Ronnie Scott and now a global byword for live jazz. The intimate, low-lit room, with its little lamp-lit tables clustered close to the stage, has hosted the giants of the genre over the decades — from Ella Fitzgerald and Miles Davis to Jimi Hendrix's last public performance — and it still books a superb nightly programme of international and British jazz, soul and blues. You can dine at a table during the main early show for the full supper-club experience, or grab a cheaper spot at the bar, and the later Late Late Show after 11pm offers a more relaxed, spontaneous, and affordable way to catch music into the small hours. The atmosphere is warm, reverent and quintessentially Soho. Book ahead for the acts you want, especially big names, and arrive on time as seating is allocated. Prices vary widely by performer. For an unforgettable night of world-class live music in a room dripping with history, Ronnie Scott's is one of London's great cultural institutions.",
   },
   {
-    name: "Nightjar", slug: "nightjar", image: N("nightjar.webp"), rating: 4.6, reviewCount: 5000,
+    name: "Nightjar", slug: "nightjar", image: "/images/london/nightlife/flamenco-london.webp", rating: 4.6, reviewCount: 5000,
     type: "Cocktail Bar", area: "Shoreditch", tip: "Reserve ahead for a table with live jazz; the theatrical, garnish-heavy cocktails are the whole point.",
     filterKeys: ["cocktail", "live-music"],
     description: "An award-winning, speakeasy-style basement cocktail bar in Shoreditch, pairing elaborate drinks with nightly live jazz.",
@@ -397,7 +397,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Nightjar is one of London's most celebrated cocktail bars, a subterranean, 1920s-inspired speakeasy near Old Street that has repeatedly featured on the World's 50 Best Bars list. Descend the stairs and you enter a low-lit, intimate room of dark wood and vintage glamour, where nightly live jazz and swing bands play to a seated crowd. The drinks are the star: an epic, storybook menu of historically researched and wildly inventive cocktails, arriving with theatrical, elaborate garnishes — smoke, sculptures, unusual vessels and flourishes that make each one an event, all built on serious technique and quality spirits. It's a place to settle in for the evening rather than a quick stop, and because it's small and hugely popular, reservations are essential, particularly for a table during the live music. There's a small cover charge for the entertainment. Expect to pay around £14–18 a cocktail, fair for drinks of this ambition. Set in the heart of buzzing Shoreditch, it makes a sophisticated start or centrepiece to an East London night. For cocktail lovers, it's an essential, atmospheric London experience.",
   },
   {
-    name: "Connaught Bar", slug: "connaught-bar", image: N("connaught-bar.webp"), rating: 4.7, reviewCount: 4000,
+    name: "Connaught Bar", slug: "connaught-bar", image: "/images/london/nightlife/live-music-london.webp", rating: 4.7, reviewCount: 4000,
     type: "Cocktail Bar", area: "Mayfair", tip: "Order a Martini from the table-side trolley — one of the best in the world, mixed in front of you.",
     filterKeys: ["cocktail"],
     description: "A multi-award-winning Mayfair hotel bar, repeatedly ranked the world's best, famous for its table-side martini trolley.",
@@ -465,7 +465,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Selfridges is Oxford Street's grandest and most fashion-forward department store, opened in 1909 by the pioneering American retailer Harry Gordon Selfridge, who transformed shopping into entertainment — the story dramatised in the hit TV series. Behind its imposing Edwardian façade, crowned by the Queen of Time statue, spreads a vast, buzzing emporium of designer fashion, beauty, accessories, homeware and food, laid out with real flair. It's celebrated for its theatrical, often provocative window displays, its enormous shoe department, an excellent food hall and restaurants, and the Corner Shop space that hosts imaginative rotating pop-ups and installations. More design-led and playful than its rivals, it's as much a cultural experience as a shop, and it consistently ranks among the world's best department stores. It sits at the western, Bond Street end of Oxford Street, the best stretch of London's busiest shopping thoroughfare, near the boutiques of St Christopher's Place and Marylebone. Entry is free and browsing is a pleasure even without buying. For a stylish, all-under-one-roof shopping hit with a sense of occasion, Selfridges is a London essential.",
   },
   {
-    name: "Liberty London", slug: "liberty-london", image: S("liberty-london.webp"), rating: 4.6, reviewCount: 42000,
+    name: "Liberty London", slug: "liberty-london", image: "/images/london/shopping/artisan-shop-london.webp", rating: 4.6, reviewCount: 42000,
     type: "Department Store", area: "Carnaby / Soho", tip: "The mock-Tudor building alone is worth the trip; browse the iconic Liberty-print fabrics and haberdashery.",
     filterKeys: ["luxury", "department"],
     description: "A gorgeous mock-Tudor emporium near Carnaby Street, beloved for its heritage fabrics, design and curated fashion.",
@@ -489,7 +489,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Oxford Street is London's, and Europe's, busiest shopping street — a mile-and-a-half run of around 300 shops stretching across the West End from Marble Arch to Tottenham Court Road. It's the home of the big high-street names and flagship stores: sprawling branches of the major British and international fashion chains, several department stores including Selfridges and John Lewis, and the vast Primark. This is mainstream, high-street shopping at scale rather than boutique or luxury browsing, and it can be relentlessly crowded, particularly on Saturdays and in the run-up to Christmas, when the famous festive lights are switched on above the street. For a more pleasant experience, focus on the smarter western stretch near Bond Street, dip into the calmer side streets like St Christopher's Place and Gees Court, or explore adjoining Regent Street with its grander architecture and stores. The intersecting Regent Street and nearby Carnaby lead to more distinctive shopping. Well served by four Tube stations plus the Elizabeth line, it's supremely accessible. For familiar high-street brands all in one place, Oxford Street delivers, though seasoned shoppers time their visit to dodge the worst of the crush.",
   },
   {
-    name: "Portobello Road Market", slug: "portobello-road-market", image: S("portobello-road-market.webp"), rating: 4.5, reviewCount: 66000,
+    name: "Portobello Road Market", slug: "portobello-road-market", image: "/images/london/shopping/mall-london.webp", rating: 4.5, reviewCount: 66000,
     type: "Antiques / Street Market", area: "Notting Hill", tip: "Go Saturday for the full antiques market, but arrive by 09:00 to beat the crowds along the famous pastel street.",
     filterKeys: ["markets"],
     description: "The world's largest antiques market, winding through pastel-hued Notting Hill with vintage, food and fashion stalls.",

@@ -56,7 +56,7 @@ export default function SantoriniWithKids() {
       active="with-kids"
       crumb="With kids"
       h1="Santorini with Kids"
-      heroImage="/images/santorini/med-barn/mini-cruise.webp"
+      heroImage="/images/santorini/with-kids/aquarium-santorini.webp"
       intro="Santorini is famous as a honeymoon island, but it works well with children too if you plan around them. The volcano boat trip is a genuine hit — a real crater to climb and warm springs to swim in — while family beaches like Kamari and shallow Monolithos, a water park, gentle caldera mini-cruises and the air-conditioned Lost Atlantis show fill the gaps between grown-up villages and viewpoints. Here are seven family-friendly outings, with age guidance, prices and practical tips."
       wide
     >

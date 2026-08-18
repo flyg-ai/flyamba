@@ -52,7 +52,7 @@ export default function MadridDayTrips() {
       active="day-trips"
       crumb="Day Trips"
       h1="Best Day Trips from Madrid"
-      heroImage="/images/madrid/day-trips/toledo.webp"
+      heroImage="/images/madrid/day-trips/costa-brava-landscape-madrid.webp"
       intro="Few capitals make a better base for day trips than Madrid. Spain's high-speed AVE trains put a string of extraordinary UNESCO cities within 90 minutes: medieval Toledo in just 33 minutes, Segovia with its colossal Roman aqueduct and fairy-tale castle in 30, cliff-hanging Cuenca in an hour. Add Philip II's monumental El Escorial, the perfectly walled city of Ávila, the royal gardens of Aranjuez, Cervantes' Alcalá de Henares and pretty Chinchón, and you have a week of unforgettable excursions. Here are eight of the best, with distances, transport and tips."
       wide
     >

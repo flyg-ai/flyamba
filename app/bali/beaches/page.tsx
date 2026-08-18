@@ -55,7 +55,7 @@ export default function BaliBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Best Beaches in Bali"
-      heroImage="/images/bali/beaches/padang-padang.webp"
+      heroImage="/images/bali/beaches/barceloneta-bali.webp"
       intro="Bali's coastline runs the full spectrum, from calm, family-safe resort sands to powerful surf breaks and hidden coves reached on foot. Swim in the sheltered water of Nusa Dua, chase the sunset from a Seminyak beach club, dine barefoot on grilled seafood at Jimbaran Bay, learn to surf at Kuta, or make the trek to the T-Rex cliff of Kelingking. Here are the beaches worth planning your days around, with facilities, safety notes and tips."
       wide
     >

@@ -235,7 +235,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Armando al Pantheon is proof that a restaurant can sit right beside one of the world's great tourist magnets and still cook with total integrity for locals. Run by the Gargioli family since 1961 and now in the hands of the third generation, this small, wood-panelled room a few steps from the Pantheon serves the Roman canon exactly as it should be: cacio e pepe, gricia, amatriciana and carbonara, hearty offal dishes like coda alla vaccinara (oxtail) and trippa for the adventurous, and a tender abbacchio scottadito, grilled lamb chops eaten with the fingers. The portions are honest, the ingredients seasonal and the prices fair for the quality and the location. Because it is tiny and famous, reservations are essential and often needed a week or more in advance, especially for dinner. Service is brisk and warm in equal measure, the wine list leans satisfyingly Roman, and the whole experience feels like being let in on a very old family secret. If you eat at only one classic trattoria in the historic centre, make it this one — just remember to book.",
   },
   {
-    name: "Da Enzo al 29", slug: "da-enzo-al-29", image: REST("da-enzo.webp"),
+    name: "Da Enzo al 29", slug: "da-enzo-al-29", image: "/images/rome/restaurants/restaurant-rome.avif",
     rating: 4.5, reviewCount: 11200, price: "€€", type: "Roman trattoria", area: "Trastevere",
     tip: "No dinner reservations — arrive by 12:15 or 19:00 sharp, or join the queue; the tonnarello cacio e pepe is the order.",
     filterKeys: ["roman", "casual", "trastevere"],
@@ -244,7 +244,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Da Enzo al 29 is the quintessential Roman trattoria — a handful of tables in a tiny room on a quiet cobbled lane in the eastern part of Trastevere, cooking a short, seasonal menu of the classics with produce sourced from the Lazio countryside and small artisan suppliers. The fried starters, the supplì (rice croquettes), the puntarelle in anchovy dressing when in season, and above all the pasta — carbonara, gricia and a benchmark tonnarello cacio e pepe — draw a devoted crowd of locals and clued-up visitors. Portions are generous, the house wine is cheap and cheerful, and the whole place hums with the unpretentious energy that defines Roman dining. The catch is that it is small and does not take reservations for the crush of the evening service, so either arrive right as it opens for lunch or dinner or be prepared to wait on the street, glass in hand. It is worth it. Finish with a homemade tiramisù. For a genuine taste of neighbourhood Trastevere without a tourist mark-up, few places do it better or more honestly.",
   },
   {
-    name: "Flavio al Velavevodetto", slug: "flavio-al-velavevodetto", image: REST("flavio-al-velavevodetto.webp"),
+    name: "Flavio al Velavevodetto", slug: "flavio-al-velavevodetto", image: "/images/rome/restaurants/restaurant-rome.avif",
     rating: 4.5, reviewCount: 8600, price: "€€", type: "Roman trattoria", area: "Testaccio",
     tip: "Built into Monte dei Cocci, a hill of ancient pottery shards — book a table by the glass wall to see it.",
     filterKeys: ["roman", "casual"],
@@ -253,7 +253,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Flavio al Velavevodetto sits in Testaccio, the old slaughterhouse district that is the ancestral home of Roman cucina povera — the resourceful, offal-rich cooking that turned humble ingredients into the city's most iconic dishes. The restaurant is literally built into Monte dei Cocci, an artificial hill made of the shattered terracotta amphorae that ancient Romans discarded here for centuries, and a glass panel in one room lets you see the layered shards. The food is the real draw: enormous, satisfying plates of cacio e pepe served in the pasta pan, carbonara, amatriciana and gricia, alongside polpette (meatballs), carciofi alla romana (braised artichokes) and the offal specialities like trippa and coda alla vaccinara for the curious. Prices are moderate for the quality and quantity, the atmosphere is warm and bustling, and there is a pleasant courtyard for warmer evenings. It is popular with Romans as well as visitors, so booking is wise, particularly at weekends. Combine a meal here with a wander around Testaccio's excellent food market and the non-Catholic cemetery where Keats and Shelley are buried nearby.",
   },
   {
-    name: "Pierluigi", slug: "pierluigi", image: REST("pierluigi.webp"),
+    name: "Pierluigi", slug: "pierluigi", image: "/images/rome/restaurants/restaurant-rome.avif",
     rating: 4.5, reviewCount: 6400, price: "€€€€", type: "Seafood", area: "Regola",
     tip: "The place for fresh fish in the historic centre — request a table on Piazza de' Ricci and let them advise on the catch.",
     filterKeys: ["seafood", "fine"],
@@ -271,7 +271,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Nonna Betta sits on Via del Portico d'Ottavia, the main street of Rome's Jewish Ghetto — one of the oldest Jewish communities in Europe, established here in 1555, whose distinctive cucina ebraico-romanesca is one of the city's great culinary treasures. The undisputed star is the carciofo alla giudia, a whole globe artichoke pressed flat and deep-fried until the leaves crisp into golden petals while the heart stays tender, a dish invented in these streets and worth ordering the moment you sit down. Beyond it, the menu roams through fried salt cod fillets (baccalà), zucchini flowers stuffed with mozzarella, hearty pastas and slow-cooked meats, all prepared kosher. The setting is warm and informal, with tables spilling onto the pedestrianised street beneath ancient ruins, and prices are reasonable for the historic centre. Because it observes Jewish dietary laws and the Sabbath, opening hours can shift around Friday evening and Saturday, so check before you go. A meal here is a delicious way to connect with a distinct and deeply rooted strand of Roman history that many visitors miss, right beside the ruins of the Portico d'Ottavia and the Great Synagogue.",
   },
   {
-    name: "Pizzeria ai Marmi", slug: "pizzeria-ai-marmi", image: REST("pizzeria-ai-marmi.webp"),
+    name: "Pizzeria ai Marmi", slug: "pizzeria-ai-marmi", image: "/images/rome/restaurants/restaurant-rome.avif",
     rating: 4.4, reviewCount: 8300, price: "€", type: "Roman pizzeria", area: "Trastevere",
     tip: "Nicknamed 'l'obitorio' for its marble tables — come for thin, blistered Roman pizza and fried starters, cash-friendly.",
     filterKeys: ["pizza", "casual", "trastevere"],
@@ -280,7 +280,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Pizzeria ai Marmi is a Trastevere institution and the archetype of the classic Roman pizzeria — loud, brisk, brightly lit and enormous fun. Its long marble-topped tables earned it the affectionate local nickname 'l'obitorio' (the morgue), but there is nothing sombre about the atmosphere, which is all clattering plates, shouted orders and communal energy. The pizza is the Roman style rather than the Neapolitan: bases stretched paper-thin and baked in a fierce wood-fired oven until the edges blister and crisp, arriving fast and cheap. Start with the fried supplì (rice and mozzarella croquettes), fiori di zucca (battered zucchini flowers with anchovy) and baccalà, then a pizza and a cold beer or carafe of house wine. It is one of the best-value proper meals in central Rome, popular with locals and visitors alike, and does not take reservations, so expect to queue at peak times — turnover is quick. It opens only for dinner and closes on Wednesdays. For a fast, boisterous, authentically Roman pizza night without ceremony or a big bill, it is hard to beat.",
   },
   {
-    name: "Pianostrada", slug: "pianostrada", image: REST("pianostrada.webp"),
+    name: "Pianostrada", slug: "pianostrada", image: "/images/rome/restaurants/restaurant-rome.avif",
     rating: 4.5, reviewCount: 5200, price: "€€€", type: "Modern Italian", area: "Regola",
     tip: "A women-led kitchen doing creative, veg-forward cooking and superb focaccia — the leafy courtyard is the seat to snag.",
     filterKeys: ["modern", "fine"],
@@ -289,7 +289,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Pianostrada offers a fresher, more modern counterpoint to Rome's traditional trattorias, and it has built a devoted following for it. Run by a mother-and-daughters team, the kitchen is proudly female-led and creative, taking Italian home cooking as its base and lifting it with vibrant vegetables, herbs and unexpected touches. The house-baked focaccia, split and stuffed to order, is legendary and reason enough to visit; beyond it the menu changes with the seasons and the market, spanning inventive pastas, gourmet burgers, generous vegetable plates and beautifully plated fish and meat, much of it lighter and greener than the Roman norm. The setting matches the food — a chic, contemporary dining room with an open kitchen and, best of all, a leafy internal courtyard that is one of the most pleasant places to eat in the centre on a warm evening. Prices sit in the mid-to-upper range but feel fair for the quality and originality. It is deservedly popular, so book ahead, particularly for a courtyard table. For travellers craving something modern, produce-driven and a little lighter after a run of hearty carbonara dinners, Pianostrada is a delight.",
   },
   {
-    name: "Hostaria Romana", slug: "hostaria-romana", image: REST("hostaria-romana.webp"),
+    name: "Hostaria Romana", slug: "hostaria-romana", image: "/images/rome/restaurants/restaurant-rome.avif",
     rating: 4.5, reviewCount: 9100, price: "€€", type: "Roman trattoria", area: "Trevi",
     tip: "A lively, graffiti-walled classic minutes from the Trevi Fountain — the bucatini all'amatriciana rarely disappoints.",
     filterKeys: ["roman", "casual"],
@@ -298,7 +298,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Hostaria Romana is a rare thing — a genuinely good, genuinely Roman trattoria within a few minutes' walk of the Trevi Fountain, an area otherwise thick with tourist traps. Family-run and always buzzing, it has two floors, the lower one a vaulted room whose walls diners are invited to cover in scrawled signatures and messages, adding to the convivial racket. The kitchen delivers the Roman repertoire with confidence and generosity: an antipasto buffet of vegetables and cured meats, then benchmark bucatini all'amatriciana, spaghetti alla carbonara and cacio e pepe, followed by saltimbocca alla romana, abbacchio and grilled meats. Portions are hearty, the house wine flows and prices remain reasonable given the prime location. Service is quick, friendly and used to a mix of Romans and visitors. Because word is well and truly out, booking ahead is strongly recommended, especially for dinner. It is the ideal place to eat properly before or after an evening visit to the floodlit Trevi, proving that you do not have to trek far from the big sights to find honest, satisfying Roman cooking at a fair price.",
   },
   {
-    name: "La Pergola", slug: "la-pergola", image: REST("la-pergola.webp"),
+    name: "La Pergola", slug: "la-pergola", image: "/images/rome/restaurants/restaurant-rome.avif",
     rating: 4.8, reviewCount: 3600, price: "€€€€", type: "Fine dining", area: "Monte Mario",
     tip: "Rome's only three-Michelin-star restaurant — book weeks ahead, observe the dress code, and take the rooftop terrace view.",
     filterKeys: ["fine", "modern"],
@@ -311,7 +311,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Hotel Eden", slug: "hotel-eden", image: HOT("hotel-eden.webp"),
+    name: "Hotel Eden", slug: "hotel-eden", image: "/images/rome/hotels/hotel-rome.avif",
     rating: 4.8, reviewCount: 2600, price: "€€€€", type: "5-star luxury", area: "Via Veneto",
     tip: "The rooftop La Terrazza restaurant and bar has one of the best skyline views in Rome — go for sunset drinks.",
     filterKeys: ["luxury", "central"],
@@ -320,7 +320,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hotel Eden is one of Rome's most historic luxury addresses, opened in 1889 and now part of the Dorchester Collection after a top-to-bottom restoration. Set on a quiet street above Via Veneto and a short walk from the Spanish Steps and Villa Borghese, it has long been a discreet favourite of visiting royalty, film stars and writers — Hemingway and Fellini among them. The mood is one of understated, deeply comfortable elegance rather than flashy glamour: warm Italian fabrics, marble bathrooms, antiques and impeccable, anticipatory service. Rooms and suites are generously sized for the historic centre, many with views over the rooftops. Its crowning glory is La Terrazza, the rooftop restaurant and bar, whose panorama sweeps across the domes and terracotta roofs of the city — worth booking for an aperitivo at sunset even if you are staying elsewhere. There is also a spa and an elegant lobby lounge. Prices are firmly in the special-occasion bracket, but for a landmark stay that combines old-world Roman grandeur with modern polish and a peerless location, the Eden is hard to top.",
   },
   {
-    name: "Hotel de Russie", slug: "hotel-de-russie", image: HOT("hotel-de-russie.webp"),
+    name: "Hotel de Russie", slug: "hotel-de-russie", image: "/images/rome/hotels/hotel-rome.avif",
     rating: 4.8, reviewCount: 2200, price: "€€€€", type: "5-star luxury", area: "Piazza del Popolo",
     tip: "The tiered Secret Garden and its Stravinskij Bar are a green oasis — book a garden-view room if you can.",
     filterKeys: ["luxury", "central"],
@@ -329,7 +329,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hotel de Russie occupies a prime position on Via del Babuino, moments from Piazza del Popolo at the top of the historic centre's shopping trident, and it is the flagship Rome property of the Rocco Forte group. Its signature is the Secret Garden: a series of terraced, fountain-dotted gardens climbing the Pincio hillside behind the hotel, a green and fragrant retreat in the middle of the city where guests take breakfast and cocktails among orange trees and roses. The interiors blend classical Roman elegance with cool contemporary design and a notable collection of art. Rooms and suites are calm and luxurious, the best of them overlooking that garden, and there is a serious spa with a pool. The Stravinskij Bar, spilling out into the garden courtyard, is one of the chicest spots in Rome for a Negroni and a favourite of the film and fashion crowd. Service is polished and warm. Like its peers it is expensive, but the combination of a superb location, that unique garden oasis and glamorous, buzzy public spaces makes it many travellers' first choice for a five-star Roman stay.",
   },
   {
-    name: "Palazzo Manfredi", slug: "palazzo-manfredi", image: HOT("palazzo-manfredi.webp"),
+    name: "Palazzo Manfredi", slug: "palazzo-manfredi", image: "/images/rome/hotels/hotel-rome.avif",
     rating: 4.8, reviewCount: 1900, price: "€€€€", type: "5-star boutique", area: "Colosseo",
     tip: "Book a Colosseum-view room or dine at the Michelin-starred Aroma rooftop — you eat metres from the amphitheatre.",
     filterKeys: ["luxury", "boutique"],
@@ -338,7 +338,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Palazzo Manfredi offers what is arguably the most dramatic hotel view in Rome: many of its rooms, and its celebrated rooftop, look straight across at the Colosseum, floodlit and monumental after dark. This is a small, refined boutique property — a converted palazzo with a fraction of the rooms of the big grand hotels, which gives it an intimate, residential feel and highly personal service. Interiors mix contemporary design with classical touches and quality fabrics, and the best suites frame that amphitheatre through their windows like a living painting. The jewel is Aroma, the Michelin-starred rooftop restaurant, where refined Italian tasting menus come with the Colosseum as an unforgettable backdrop; even non-guests book weeks ahead for a table at sunset. Because it sits right on the archaeological heart of the city, the Forum, Palatine and Domus Aurea are all within a short walk, and the Colosseo metro station is on the doorstep for reaching the rest of Rome. It is expensive and its size means it books up quickly, but for a romantic, view-driven stay steeped in ancient Rome, few hotels can compete.",
   },
   {
-    name: "Villa Spalletti Trivelli", slug: "villa-spalletti-trivelli", image: HOT("villa-spalletti-trivelli.webp"),
+    name: "Villa Spalletti Trivelli", slug: "villa-spalletti-trivelli", image: "/images/rome/hotels/hotel-rome.avif",
     rating: 4.8, reviewCount: 900, price: "€€€€", type: "5-star mansion", area: "Quirinale",
     tip: "A private aristocratic villa with just a dozen rooms, an honesty bar and a walled garden — book far ahead.",
     filterKeys: ["luxury", "boutique"],
@@ -347,7 +347,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Villa Spalletti Trivelli is one of Rome's most special places to stay — an aristocratic family mansion built in the early twentieth century, still owned by the noble family whose portraits line the walls, and run as an intimate hotel of barely a dozen rooms and suites. Staying here feels less like checking into a hotel than being a guest in a grand private home: there is a wood-panelled library, a formal drawing room, an honesty bar where you help yourself, a walled Italian garden facing the Quirinal Palace gardens opposite, and a small spa in the vaulted cellars. Antiques, tapestries, frescoes and family heirlooms fill the rooms, and the atmosphere is one of gracious, unhurried calm — a rare thing in the busy centre. The staff-to-guest ratio is high and the service correspondingly personal and warm. Breakfast and light meals are taken among the family furnishings or in the garden. It is centrally placed between the Trevi Fountain, the Quirinale and Via Veneto, yet feels utterly serene. For travellers who want luxury with soul and privacy rather than the scale of a grand hotel, it is a gem — book well ahead given its size.",
   },
   {
-    name: "Hotel Locarno", slug: "hotel-locarno", image: HOT("hotel-locarno.webp"),
+    name: "Hotel Locarno", slug: "hotel-locarno", image: "/images/rome/hotels/hotel-rome.avif",
     rating: 4.5, reviewCount: 2400, price: "€€€", type: "4-star boutique", area: "Piazza del Popolo",
     tip: "A wonderfully preserved Art Deco time-capsule — have a cocktail by the roaring fire or on the rooftop terrace.",
     filterKeys: ["boutique", "central"],
@@ -365,7 +365,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hotel Artemide is one of the most consistently well-reviewed four-star hotels in central Rome, and it earns that reputation through polished service and thoughtful comfort rather than headline glamour. It sits on Via Nazionale, a broad shopping street that puts you within walking distance of the Trevi Fountain, the Quirinale, the Colosseum area and Termini station, with the Repubblica metro just around the corner for everywhere else. Rooms are contemporary, quiet and comfortable, with good soundproofing from the busy street, quality bedding and modern bathrooms, and the staff are widely praised for going out of their way to help with restaurant bookings, tickets and directions. The breakfast buffet is generous and the hotel has a small spa and wellness area, plus a rooftop terrace and bar for a relaxed evening drink above the traffic. Family rooms and connecting options make it a practical choice for those travelling with children. It represents excellent value for its level and location, offering much of the ease of a luxury stay at a more accessible price. For a stress-free, central, well-serviced base in Rome, it is a safe and rewarding bet.",
   },
   {
-    name: "The Beehive", slug: "the-beehive", image: HOT("the-beehive.webp"),
+    name: "The Beehive", slug: "the-beehive", image: "/images/rome/hotels/hotel-rome.avif",
     rating: 4.6, reviewCount: 1600, price: "€", type: "Budget / boutique hostel", area: "Termini",
     tip: "A charming eco-conscious guesthouse steps from Termini — book a private room early or grab a dorm bed cheaply.",
     filterKeys: ["budget", "family"],
@@ -387,7 +387,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Nightlife (10) ───────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "Freni e Frizioni", slug: "freni-e-frizioni", image: NIGHT("freni-e-frizioni.webp"),
+    name: "Freni e Frizioni", slug: "freni-e-frizioni", image: "/images/rome/nightlife/cocktail-bar-rome.webp",
     rating: 4.4, reviewCount: 8900, type: "Cocktail & aperitivo bar", area: "Trastevere",
     tip: "Come at 19:00 for the aperitivo buffet — a cocktail (~€10) buys access to a generous spread of food.",
     filterKeys: ["cocktails", "wine"],
@@ -396,7 +396,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Freni e Frizioni — 'brakes and clutches' — takes its name from the old car workshop it occupies, and it has become one of the defining spots of Trastevere nightlife. The formula is simple and beloved: order a well-made cocktail or a glass of wine for around ten euros in the early evening and you get free run of the aperitivo buffet, a spread of pastas, salads, couscous and vegetables substantial enough to serve as a light dinner. As the sun goes down, the young, mixed crowd spills out of the industrial-chic interior onto the little piazza and the steps down toward the Tiber, drinks in hand, turning the whole street into an open-air party. The mixology is genuinely good, the vibe relaxed and bohemian, and it draws a healthy mix of Romans, students and visitors. It gets extremely busy at weekends, so arrive early to snag a spot and beat the queue at the bar. For an authentic, great-value introduction to the Roman aperitivo tradition in the city's liveliest nightlife quarter, it is a must.",
   },
   {
-    name: "The Jerry Thomas Speakeasy", slug: "the-jerry-thomas-speakeasy", image: NIGHT("the-jerry-thomas-speakeasy.webp"),
+    name: "The Jerry Thomas Speakeasy", slug: "the-jerry-thomas-speakeasy", image: "/images/rome/nightlife/flamenco-rome.webp",
     rating: 4.6, reviewCount: 3200, type: "Speakeasy cocktail bar", area: "Centro Storico",
     tip: "Members-only in style — check the website for the password and reserve; the classic cocktails are superb.",
     filterKeys: ["cocktails"],
@@ -405,7 +405,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Jerry Thomas Speakeasy kick-started Rome's craft-cocktail revolution when it opened in 2010, and it remains the city's most atmospheric hidden bar. Modelled on a Prohibition-era American speakeasy and named after the founding father of the cocktail, it hides behind an unmarked door in a lane near Campo de' Fiori; to get in you must reserve in advance and know the password, published on the bar's website. Inside, the tiny space is all dim lighting, vintage furnishings, jazz and a strict no-photos, dress-nicely house style that transports you to the 1920s. The bartenders are among the best in Italy, mixing meticulous classics and inventive originals from their own vermouth and spirits line, and the drinks are treated with real reverence rather than rushed out. It is small, exclusive and takes itself semi-seriously as theatre, which is exactly the appeal — this is a destination for a considered, grown-up night of great drinks rather than a rowdy bar crawl. Book ahead, dress the part, and settle in for expertly made cocktails in one of Rome's most distinctive nightspots.",
   },
   {
-    name: "Stravinskij Bar", slug: "stravinskij-bar", image: NIGHT("stravinskij-bar.webp"),
+    name: "Stravinskij Bar", slug: "stravinskij-bar", image: "/images/rome/nightlife/live-music-rome.webp",
     rating: 4.5, reviewCount: 2400, type: "Garden hotel bar", area: "Piazza del Popolo",
     tip: "Sit in the courtyard garden of Hotel de Russie for a Negroni among the orange trees — glamorous but relaxed.",
     filterKeys: ["cocktails"],
@@ -414,7 +414,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Stravinskij Bar is the bar of the Hotel de Russie, and it is one of the most glamorous places in Rome for a drink — yet far more relaxed than its five-star setting suggests. Its great asset is the location: tables spill out into the hotel's Secret Garden courtyard, a leafy, fountain-cooled oasis of orange trees and climbing plants tucked between Piazza del Popolo and the Pincio hillside, so you drink surrounded by greenery in the middle of the city. It has long been a favourite of the film, fashion and media set, and during festival season you may well spot a familiar face, but the mood is understated rather than flashy. The cocktails are impeccably made — the Negroni and the bar's own signatures are the things to order — and come with excellent nibbles, at prices that reflect the address. It works beautifully for a special aperitivo at golden hour, a romantic nightcap or an elegant meeting point before dinner. You do not need to be a hotel guest to visit; simply arrive, ideally with a booking for a garden table on a warm evening, and enjoy one of the chicest drinks in Rome.",
   },
   {
-    name: "Salotto 42", slug: "salotto-42", image: NIGHT("salotto-42.webp"),
+    name: "Salotto 42", slug: "salotto-42", image: "/images/rome/nightlife/nightlife-bar-rome.webp",
     rating: 4.3, reviewCount: 2100, type: "Book bar & lounge", area: "Pigna",
     tip: "A cosy design-book lounge facing a Roman temple — great for a wine or cocktail after visiting the Pantheon.",
     filterKeys: ["cocktails", "wine"],
@@ -423,7 +423,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Salotto 42 is a chic and characterful lounge bar set on Piazza di Pietra, one of the loveliest small squares in the historic centre, directly facing the towering Corinthian columns of the second-century Temple of Hadrian. Styled like an elegant living room — 'salotto' means sitting room — it is filled with vintage design furniture, coffee-table art and design books to browse, and low lighting that makes it as good for an afternoon coffee or an intimate conversation as for evening drinks. Run by an Italian-Swedish couple, it offers a well-chosen list of wines, cocktails and spirits alongside light bites, and by day serves brunch and snacks. Its great draw is the setting: bag one of the outdoor tables and you sip your drink with a floodlit ancient Roman temple as your backdrop, steps from the Pantheon yet on a piazza that stays refreshingly calm. It is a sophisticated, unhurried spot rather than a party venue, ideal for a stylish aperitivo, a nightcap after dinner, or a quiet daytime pause with a glass of wine and a good book. Booking is wise for the coveted piazza tables on warm evenings.",
   },
   {
-    name: "Terrazza Caffarelli", slug: "terrazza-caffarelli", image: NIGHT("terrazza-caffarelli.webp"),
+    name: "Terrazza Caffarelli", slug: "terrazza-caffarelli", image: "/images/rome/nightlife/rooftop-bar-night-rome.webp",
     rating: 4.6, reviewCount: 4600, type: "Rooftop bar", area: "Capitoline Hill",
     tip: "The café-bar atop the Capitoline Museums has a jaw-dropping free-to-enter terrace — perfect for sunset.",
     filterKeys: ["rooftop", "cocktails"],
@@ -432,7 +432,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Terrazza Caffarelli is the café and bar of the Capitoline Museums, and it hides one of the best and least-known rooftop panoramas in Rome — accessible, importantly, without buying a museum ticket, though you can combine the two. Perched on the Capitoline Hill behind Michelangelo's Piazza del Campidoglio, its broad open terrace looks out across a sea of terracotta rooftops, domes and bell towers, with the cupola of St Peter's in the distance, making it a magical spot to watch the sun set over the Eternal City. During the day it serves coffee, light lunches and snacks to museum-goers and those in the know; in the evening, especially in the warmer months, it becomes a relaxed aperitivo destination where you can nurse a well-priced cocktail or glass of prosecco against that extraordinary view. It is far calmer and more affordable than the rooftop bars of the luxury hotels, yet the outlook rivals any of them. Combine it with a visit to the superb Capitoline Museums, or simply come up for a sunset drink — it is a genuine local secret hiding in plain sight above the heart of Rome.",
   },
   {
-    name: "Zuma Bar", slug: "zuma-bar", image: NIGHT("zuma-bar.webp"),
+    name: "Zuma Bar", slug: "zuma-bar", image: "/images/rome/nightlife/cocktail-bar-rome.webp",
     rating: 4.4, reviewCount: 3800, type: "Rooftop lounge bar", area: "Via del Corso",
     tip: "The rooftop of Palazzo Fendi mixes Japanese-inspired cocktails with a stylish crowd — book a table for weekends.",
     filterKeys: ["rooftop", "cocktails"],
@@ -441,7 +441,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Zuma Rome is the Italian outpost of the international Zuma group, occupying the top floors of the flagship Palazzo Fendi on Via del Corso in the heart of the luxury shopping district near the Spanish Steps. It pairs a sleek, contemporary izakaya-style restaurant with a highly fashionable rooftop bar and terrace that is one of the city's premier see-and-be-seen destinations. The cocktail list draws on Japanese ingredients and techniques — think yuzu, shiso, sake and premium spirits — for polished, inventive drinks, backed by an extensive selection of sake and a sophisticated wine list, plus the option of the kitchen's celebrated small plates and sushi to share. The crowd is glamorous and international, the design slick, and the rooftop setting delivers stylish views over the surrounding rooftops. Prices are firmly at the premium end, in keeping with the Fendi address and the brand. It suits a dressed-up night out, a special celebration or a chic pre-dinner aperitivo rather than a casual drink. The rooftop is at its best in the warmer months, and booking a table is strongly advised, especially at weekends when it fills with Rome's fashionable set.",
   },
   {
-    name: "Big Mama", slug: "big-mama", image: NIGHT("big-mama.webp"),
+    name: "Big Mama", slug: "big-mama", image: "/images/rome/nightlife/flamenco-rome.webp",
     rating: 4.5, reviewCount: 2900, type: "Blues & jazz club", area: "Trastevere",
     tip: "Rome's 'home of the blues' — check the gig calendar and book for the headline nights; intimate live music every evening.",
     filterKeys: ["music"],
@@ -468,7 +468,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Goa Club is the beating heart of Rome's underground electronic scene and has been for decades, a fixture that serious clubbers rate as the best techno and house venue in the city. Set on Via Libetta in the post-industrial Ostiense district, alongside a cluster of other late-night venues, it has an intimate, atmospheric interior with strong sound and lighting and an exotic, low-lit décor that gives it a distinctive identity among Rome's clubs. The programming is what earns its reputation: a steady stream of respected resident and international guest DJs playing quality techno, house and electronica to a knowledgeable, dance-focused crowd that comes to move rather than pose. In true Roman and clubbing fashion, nothing gets going until well after midnight and the night runs until dawn, so pace yourself and arrive late. There is a cover charge, often including a drink, and the crowd skews cool and alternative rather than mainstream or bottle-service glossy. It typically operates on a Friday–Saturday club schedule during the cooler months and scales back in high summer. For visitors who want a genuine, credible night on the dance floor rather than a tourist club, Goa is the address.",
   },
   {
-    name: "Shari Vari Playhouse", slug: "shari-vari-playhouse", image: NIGHT("shari-vari.webp"),
+    name: "Shari Vari Playhouse", slug: "shari-vari-playhouse", image: "/images/rome/nightlife/live-music-rome.webp",
     rating: 4.1, reviewCount: 5100, type: "Nightclub", area: "Centro Storico",
     tip: "Central, multi-room and mainstream — different music on each floor makes it an easy, dress-up night near the Pantheon.",
     filterKeys: ["clubs"],
@@ -481,7 +481,7 @@ export const NIGHTLIFE: BcnPlace[] = [
 // ── Shopping (8) ─────────────────────────────────────────────────────────────
 export const SHOPPING: BcnPlace[] = [
   {
-    name: "Via dei Condotti", slug: "via-dei-condotti", image: SHOP("via-dei-condotti.webp"),
+    name: "Via dei Condotti", slug: "via-dei-condotti", image: "/images/rome/shopping/artisan-shop-rome.webp",
     rating: 4.6, reviewCount: 34000, type: "Luxury shopping street", area: "Spagna",
     tip: "Rome's most exclusive street — window-shop the flagships even if you're not buying, then coffee at historic Caffè Greco.",
     filterKeys: ["luxury"],
@@ -490,7 +490,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Via dei Condotti is the most prestigious shopping street in Rome, running arrow-straight from the foot of the Spanish Steps and lined with the flagship boutiques of the biggest names in Italian and international fashion — Gucci, Prada, Bulgari, Valentino, Hermès, Cartier and more. Even for those with no intention of buying, it is a glamorous stroll: the elegant window displays, the marble shopfronts and the well-heeled crowd are a spectacle in themselves, and the surrounding grid of streets (Via Borgognona, Via Frattina, Via del Babuino) extends the luxury quarter in every direction. The Roman jeweller Bulgari has its historic home here, and at number 86 sits the Antico Caffè Greco, open since 1760 and once frequented by Goethe, Keats and Casanova — a chance to rest amid gilded, antique-filled rooms over a (pricey) espresso. The area is at its most atmospheric in the early evening during the passeggiata, when Romans and visitors alike promenade beneath the lights. Whether you are splurging on a designer piece or simply soaking up the elegance, Via dei Condotti is the beating heart of high-end shopping in the Eternal City.",
   },
   {
-    name: "Via del Corso", slug: "via-del-corso", image: SHOP("via-del-corso.webp"),
+    name: "Via del Corso", slug: "via-del-corso", image: "/images/rome/shopping/mall-rome.webp",
     rating: 4.3, reviewCount: 41000, type: "High-street shopping", area: "Centro Storico",
     tip: "The go-to for mid-range and high-street brands — busiest on Saturday afternoons, so shop on a weekday morning.",
     filterKeys: ["highstreet"],
@@ -526,7 +526,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The market on Campo de' Fiori is the most centrally located and photogenic open-air market in Rome, filling the historic square every morning except Sunday beneath the brooding statue of Giordano Bruno. For centuries it has been the neighbourhood's food market, and its stalls still heap up fresh fruit and vegetables, herbs and flowers, but over the years it has tilted increasingly toward visitors, so alongside the produce you will find colourful displays of dried pasta in every shape, spice blends, truffle products, olive oils, limoncello and other packaged Italian delicacies that make excellent, easily transportable souvenirs and gifts. It is undeniably touristy and prices for the packaged goods are higher than at a supermarket, but the atmosphere, colour and photo opportunities are wonderful, and it remains a genuine working market where locals still shop for the freshest produce. Come in the morning while the stalls are in full swing, as everything packs away by early afternoon and the square shifts into its restaurant-and-bar evening mode. Combine a browse with a coffee at one of the surrounding cafés, and pick up some edible mementos to take a taste of Rome home with you.",
   },
   {
-    name: "Mercato Monti", slug: "mercato-monti", image: SHOP("mercato-monti.webp"),
+    name: "Mercato Monti", slug: "mercato-monti", image: "/images/rome/shopping/outdoor-market-rome.webp",
     rating: 4.4, reviewCount: 4200, type: "Vintage & design market", area: "Monti",
     tip: "A weekend-only indoor market of young designers and vintage — the coolest independent shopping in trendy Monti.",
     filterKeys: ["markets", "boutiques"],
@@ -535,7 +535,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Mercato Monti is a curated weekend market that captures the creative, independent spirit of Monti, the fashionable village-like district wedged between the Colosseum and Termini that has become Rome's hub for boutiques and vintage. Held indoors in a former hotel space on Via Leonina every Saturday and Sunday, it gathers a rotating cast of emerging local designers, vintage-clothing dealers, jewellery makers and craftspeople selling original fashion, accessories, prints and handmade objects you will not find on the high street. It is the antithesis of the chain-store Corso: small-scale, personal and full of one-off pieces, making it a great place to pick up a distinctive souvenir or gift and to support young Roman creatives. The market is only part of the appeal — the surrounding Monti neighbourhood is a joy to explore, with its ivy-clad lanes, independent boutiques, wine bars and the lovely Piazza della Madonna dei Monti, so a visit combines easily with a wander and an aperitivo. Note that it operates on weekends only and scales back over the summer, so time your visit accordingly. For stylish, independent, non-touristy shopping in one of Rome's most charming quarters, Mercato Monti is the place.",
   },
   {
-    name: "Eataly Roma", slug: "eataly-roma", image: SHOP("eataly-roma.webp"),
+    name: "Eataly Roma", slug: "eataly-roma", image: "/images/rome/shopping/shopping-street-rome.webp",
     rating: 4.4, reviewCount: 26000, type: "Food emporium", area: "Ostiense",
     tip: "Four floors of the best Italian food and wine under one roof — great for gifts and a graze; not central, so combine with Ostiense.",
     filterKeys: ["food"],
@@ -544,7 +544,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Eataly Roma is the flagship Rome branch of the famous Italian food emporium, an enormous four-storey complex occupying a converted air terminal beside Ostiense station that functions as market, food hall, restaurant cluster and cookery school all at once. Its shelves and counters showcase high-quality Italian produce from every region — cured meats and cheeses, fresh pasta, olive oils, chocolates, coffee, and a vast, well-organised wine department — much of it beautifully packaged and ideal for edible gifts and souvenirs to take home. Scattered across the floors are numerous themed eateries and counters where you can eat what you have been browsing, from pizza and pasta to seafood, gelato and craft beer, making it as good for a meal or a graze as for shopping. Because it sits a little south of the centre in the Ostiense district rather than among the main sights, it works best combined with a visit to that increasingly hip, street-art-covered neighbourhood, or as a stop on the way to or from the airport train. It is spacious, air-conditioned and open late, making it a comfortable refuge on a hot or rainy day. For anyone who loves Italian food and wants to bring some of it home, Eataly is a one-stop treasure trove.",
   },
   {
-    name: "La Rinascente", slug: "la-rinascente", image: SHOP("la-rinascente.webp"),
+    name: "La Rinascente", slug: "la-rinascente", image: "/images/rome/shopping/souvenir-shop-rome.webp",
     rating: 4.4, reviewCount: 19000, type: "Department store", area: "Tritone / Trevi",
     tip: "The Via del Tritone flagship has Roman aqueduct ruins in the basement and a rooftop terrace café with great views.",
     filterKeys: ["luxury", "highstreet"],
@@ -557,7 +557,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── With Kids (8) ────────────────────────────────────────────────────────────
 export const WITH_KIDS: BcnPlace[] = [
   {
-    name: "Villa Borghese Park", slug: "villa-borghese-park", image: KIDS("villa-borghese-parken.webp"),
+    name: "Villa Borghese Park", slug: "villa-borghese-park", image: "/images/rome/with-kids/aquarium-rome.webp",
     rating: 4.7, reviewCount: 96000, price: "Free", area: "Pinciano", ageGroup: "All ages",
     tip: "Hire a family bike or a rowing boat on the little lake, then let off steam before the Bioparco zoo next door.",
     filterKeys: ["outdoors"],
@@ -575,7 +575,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Bioparco di Roma is the city's zoological garden, set within the greenery of Villa Borghese, making it easy to combine with a day in the park. Founded in 1911 and since reformed along more modern, conservation-minded lines, it is home to around 200 animal species and roughly a thousand animals spread across 17 hectares of leafy grounds — giraffes, elephants, big cats, lemurs, bears, hippos and a reptile house among them. For families with younger children it is a dependable, self-contained day out: the paths are stroller-friendly, there are shaded picnic areas, a small train, a children's farm area and regular keeper talks and feeding sessions that hold little ones' attention. As with many older European zoos, enclosures vary in quality, and it works best treated as an enjoyable, educational green outing rather than a state-of-the-art wildlife park. Its position inside Villa Borghese is a real bonus, letting you fold in bike hire, the boating lake and playgrounds around a zoo visit. Buy tickets online to skip the queue on busy weekends, bring water and sun protection in summer, and allow two to three hours to see the highlights at a child's pace.",
   },
   {
-    name: "Explora Children's Museum", slug: "explora-childrens-museum", image: KIDS("explora-barnmuseet.webp"),
+    name: "Explora Children's Museum", slug: "explora-childrens-museum", image: "/images/rome/with-kids/family-park-rome.webp",
     rating: 4.4, reviewCount: 8600, price: "€10", area: "Flaminio", ageGroup: "Ages 0–11",
     tip: "Visits run in timed 1h45 sessions — book your slot online ahead, especially for weekends and rainy days.",
     filterKeys: ["hands-on", "rainy", "museums"],
@@ -584,7 +584,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Explora – Il Museo dei Bambini di Roma is the capital's dedicated children's museum, purpose-built for hands-on, learning-through-play discovery and aimed squarely at children up to about eleven. Rather than looking at exhibits behind glass, kids get to touch, build and role-play everything: a miniature town with a supermarket, bank, TV studio and doctor's surgery to act out; water-play tables; construction and mechanics zones; science and body experiments; and areas geared to the very youngest, including under-threes. Entry works in timed sessions of around one hour and forty-five minutes, which keeps numbers manageable and means booking your slot online in advance is strongly recommended, particularly on weekends, holidays and rainy days when it fills fast. There is an outdoor play area and garden for fine weather, plus a café and a good shop. Handily located just off Piazza del Popolo by the Flaminio metro, it makes an ideal change of pace from grown-up sightseeing and a genuine highlight for families with younger children. Note that most signage is in Italian, though the interactive nature of the exhibits means language is rarely a barrier to the fun.",
   },
   {
-    name: "Gladiator School", slug: "gladiator-school", image: KIDS("gladiatorskolan.webp"),
+    name: "Gladiator School", slug: "gladiator-school", image: "/images/rome/with-kids/kids-museum-rome.webp",
     rating: 4.6, reviewCount: 5400, price: "€25", area: "Appia Antica", ageGroup: "Ages 6+",
     tip: "Kids dress as gladiators and train with wooden swords — book the two-hour class run by the Gruppo Storico Romano.",
     filterKeys: ["hands-on"],
@@ -593,7 +593,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Gladiator School run by the Gruppo Storico Romano, a historical re-enactment association, is one of Rome's most memorable and genuinely fun family experiences. Held at their premises out on the ancient Appian Way, the two-hour class turns children and willing grown-ups into trainee gladiators: participants pull on a tunic, pick up a wooden gladius and shield, and are drilled by costumed instructors in the stances, moves and mock combat of the Roman arena, learning real history through their bodies rather than a textbook. The setting adds to the magic — the school sits amid the tombs and pines of the Appia Antica, close to where real gladiators once trained — and there is usually a small museum of replica armour, weapons and reconstructions to explore alongside the lesson, explaining daily life, the legions and the games. It is engaging, active and educational, a brilliant antidote to museum fatigue for kids aged roughly six and up, and adults invariably enjoy it just as much. Sessions must be booked in advance, and family packages are available. Combine it with a walk or bike ride along the atmospheric Appian Way for a memorable half-day away from the crowds.",
   },
   {
-    name: "Time Elevator Roma", slug: "time-elevator-roma", image: KIDS("time-elevator-rome.webp"),
+    name: "Time Elevator Roma", slug: "time-elevator-roma", image: "/images/rome/with-kids/tibidabo-rome.webp",
     rating: 4.0, reviewCount: 6100, price: "€12", area: "Trevi", ageGroup: "Ages 5+",
     tip: "A 45-min motion-simulator ride through 3,000 years of Roman history — a fun, air-conditioned rainy-day fix near the Trevi.",
     filterKeys: ["rainy", "hands-on"],
@@ -602,7 +602,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Time Elevator Roma is an entertaining multimedia attraction near the Trevi Fountain that packs three thousand years of Roman history into a fast, sensory 45-minute show — an easy, air-conditioned crowd-pleaser for families, and a handy refuge on a rainy or scorching day. Visitors strap into motion-simulator seats that tilt and shake in time with a big wraparound screen, wind, water-spray and other special effects, while a narrated 3D film races from the founding of Rome by Romulus and Remus, through the rise and fall of the empire, the Renaissance and the popes, to the modern city, with multilingual headsets making it accessible to international audiences. It is unashamedly a theme-park-style ride rather than a serious museum, so historians may find it broad-brush, but for children aged roughly five and up it is a fun, painless way to grasp the sweep of Rome's story and put the ruins they are seeing into context. Shows run frequently throughout the day, tickets are inexpensive, and the whole thing takes under an hour, so it slots neatly between other central sights. Note that very young children may find the motion and effects a little intense.",
   },
   {
-    name: "Leonardo da Vinci Experience", slug: "leonardo-da-vinci-experience", image: KIDS("leonardo-da-vinci-museet.webp"),
+    name: "Leonardo da Vinci Experience", slug: "leonardo-da-vinci-experience", image: "/images/rome/with-kids/zoo-rome.webp",
     rating: 4.3, reviewCount: 7200, price: "€9", area: "Piazza del Popolo", ageGroup: "Ages 5+",
     tip: "Kids can touch and operate full-size working models of Leonardo's machines — a small, hands-on rainy-day museum.",
     filterKeys: ["hands-on", "rainy", "museums"],
@@ -669,7 +669,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "One of the greatest day trips from Rome combines the electric city of Naples with the haunting ruins of Pompeii, the Roman town frozen in time by the eruption of Mount Vesuvius in AD 79. A high-speed train reaches Naples in around seventy minutes, from where the local Circumvesuviana line runs out to the archaeological site. Pompeii is vast and extraordinary — entire streets, houses with vivid frescoes and mosaics, shops, bathhouses, brothels, a forum and an amphitheatre, and the poignant plaster casts of victims caught in their final moments — offering an unrivalled window into ancient daily life beneath the still-active volcano. Given the distance, most visitors focus on Pompeii, arriving early to explore the shadeless ruins before the midday heat and allowing three or four hours. If time allows, a few hours in Naples add a completely different flavour: chaotic, characterful streets, the birthplace of pizza (eat one, it is a revelation), superb archaeological treasures in the national museum and views over the bay. It is a long, full day, so consider a guided tour to smooth the logistics, and wear sturdy shoes, sun protection and carry water for Pompeii.",
   },
   {
-    name: "Orvieto", slug: "orvieto", image: TRIP("orvieto.webp"),
+    name: "Orvieto", slug: "orvieto", image: "/images/rome/day-trips/costa-brava-landscape-rome.webp",
     rating: 4.7, reviewCount: 34000, price: "Train €8+", area: "120 km north", distance: "1 hour", duration: "Half day",
     tip: "A dramatic hilltop Umbrian town — ride the funicular up from the station and don't miss the golden cathedral façade.",
     filterKeys: ["half-day", "hill-towns", "train"],
@@ -678,7 +678,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Orvieto is one of the most dramatic and accessible hill towns near Rome, an ancient Umbrian settlement perched atop a sheer plateau of volcanic tufa that rises abruptly from the valley floor, just over an hour north by regional train. From the station at the base, a charming funicular hauls you up to the old town, a maze of medieval lanes, honey-coloured stone and quiet piazzas that feels a world away from the capital. Its crowning glory is the Duomo, a breathtaking Gothic cathedral whose façade is a riot of gold mosaic, sculpture and rose window that glows in the sun, while inside the San Brizio chapel holds Luca Signorelli's magnificent, apocalyptic fresco cycle. Beneath the town lies a labyrinth of Etruscan and medieval caves, wells and tunnels carved into the soft rock, which you can tour, including the astonishing St Patrick's Well with its double-helix staircase. Orvieto is also famed for its crisp white wine, best enjoyed over a leisurely Umbrian lunch. Compact enough for a relaxed half or full day, walkable, atmospheric and easy to reach by train, it is an ideal escape from the intensity of Rome into small-town Italy.",
   },
   {
-    name: "Castelli Romani & Castel Gandolfo", slug: "castelli-romani", image: TRIP("castel-gandolfo.webp"),
+    name: "Castelli Romani & Castel Gandolfo", slug: "castelli-romani", image: "/images/rome/day-trips/girona-rome.webp",
     rating: 4.5, reviewCount: 19000, price: "Train €3+", area: "25 km southeast", distance: "40 min", duration: "Half day",
     tip: "Escape to the wine-town hills — see the pope's lakeside palace at Castel Gandolfo and lunch on porchetta and Frascati.",
     filterKeys: ["half-day", "hill-towns", "train"],
@@ -700,7 +700,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Lido di Ostia is the seaside of Rome — the closest beach to the city and, thanks to the cheap urban train that runs there on an ordinary transport ticket, by far the easiest to reach without a car. This long sweep of dark golden sand at the mouth of the Tiber is where Romans have escaped the summer heat for generations, lined with a mix of private beach clubs (stabilimenti) that rent sunbeds and parasols and offer bars, restaurants and showers, and free public stretches for those who bring their own towel. It is more a lively, urban, easily accessible beach than a pristine idyll — the water and sand are decent rather than spectacular and it gets busy on hot weekends — but for a quick, affordable sea fix within 40 minutes of the centre it does the job well, and the seafront promenade has plenty of gelato and seafood. Families appreciate the shallow water and full facilities of the beach clubs. Go on a weekday to avoid the biggest crowds, and treat it as a convenient half-day dip rather than a destination beach; for cleaner, prettier sand, the coast further out rewards the extra travel time.",
   },
   {
-    name: "Santa Marinella", slug: "santa-marinella", image: BEACH("santa-marinella.webp"),
+    name: "Santa Marinella", slug: "santa-marinella", image: "/images/rome/beaches/barceloneta-rome.webp",
     rating: 4.4, reviewCount: 14000, area: "70 km northwest", facilities: "Sandy, calm, family, train station",
     tip: "Nicknamed the 'perla del Tirreno' — calmer, cleaner water than Ostia and an easy train ride; great for families.",
     filterKeys: ["family", "sandy", "train"],
@@ -709,7 +709,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Santa Marinella, on the coast north-west of Rome toward Civitavecchia, is one of the most popular and pleasant seaside escapes for Romans, and its position right on the regional train line makes it very doable without a car. Nicknamed the 'pearl of the Tyrrhenian', it has noticeably cleaner and calmer water than Ostia, sheltered by a natural bay and a small headland crowned by the Odescalchi castle, which keeps the sea gentle and shallow near the shore — ideal for families with young children who can paddle safely. The beach is a mix of soft sand and a lively seafront of beach clubs offering loungers and refreshments, alongside free public sections, with cafés, gelaterias and seafood restaurants close at hand. The train station sits just back from the beach, so you can step off and be on the sand within minutes, roughly an hour from central Rome. It gets busy on summer weekends when half the city seems to decamp here, so a weekday visit is more relaxed. For a proper day at a clean, family-friendly beach with real resort amenities and easy train access, Santa Marinella is one of the best options within reach of the capital.",
   },
   {
-    name: "Sperlonga", slug: "sperlonga", image: BEACH("sperlonga.webp"),
+    name: "Sperlonga", slug: "sperlonga", image: "/images/rome/beaches/beach-bar-rome.webp",
     rating: 4.7, reviewCount: 22000, area: "120 km southeast", facilities: "White sand, scenic old town, clear sea",
     tip: "The prettiest beach town near Rome — whitewashed hilltop old town above turquoise water; go for a full day, ideally by car.",
     filterKeys: ["sandy", "scenic"],
@@ -745,7 +745,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Gaeta is a beautiful and historic seaside town set on a rocky promontory partway between Rome and Naples, offering some of the best beaches and most atmospheric old-town charm on the Lazio coast. It has several fine sandy beaches to choose from — the long, popular Serapo beach beneath the headland, the picturesque Sant'Agostino with its clear water, and smaller coves — backed by a dramatic coastline of cliffs, including the famous Montagna Spaccata, a mountain split by deep fissures said to date from the moment of the Crucifixion, reached by a scenic clifftop sanctuary and staircase. The medieval old quarter, with its castle, tangle of alleys, churches and waterfront, adds real character and good seafood dining, and the town is also known for its tiella, a savoury stuffed double-crust pie. At around 140 kilometres it is a longer trip best done as a full day or an overnight, reached by train to Formia and a connecting bus, or more easily by car in under two hours. The combination of gorgeous swimmable beaches, clear water, striking scenery and a genuine historic town makes Gaeta one of the most rewarding coastal escapes in the region for those willing to travel a little further.",
   },
   {
-    name: "Sabaudia", slug: "sabaudia", image: BEACH("sabaudia.webp"),
+    name: "Sabaudia", slug: "sabaudia", image: "/images/rome/beaches/beach-sunset-rome.webp",
     rating: 4.6, reviewCount: 10000, area: "100 km southeast", facilities: "Wild dunes, national park, long sandy beach",
     tip: "A wild, dune-backed beach inside the Circeo National Park — cleaner and less built-up than the resort towns; drive for ease.",
     filterKeys: ["sandy", "scenic"],
@@ -754,7 +754,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Sabaudia offers a very different beach experience from the developed resorts closer to Rome: a long, wild and strikingly beautiful stretch of golden sand backed by high natural dunes and the coastal lakes and forests of the Circeo National Park, with the distinctive silhouette of Monte Circeo rising to the south. Because much of the coastline is protected parkland, it has escaped the wall-to-wall construction that lines other beaches, leaving a cleaner, more natural, more spacious shore where the dunes shield the sand and the sea is notably clear — a favourite of Romans in the know and, over the decades, of writers, artists and film stars drawn to its unspoiled feel. There are some beach clubs and facilities, but also plenty of free, undeveloped beach to spread out on, and the national park behind offers walking, birdwatching and the pretty rationalist-era town of Sabaudia itself. It is around 100 kilometres from Rome and, given patchy public transport, is much easier reached by car in about an hour and twenty minutes. For those who want a beautiful, natural, uncrowded beach day amid protected dunes and clear water rather than rows of loungers and beach bars, Sabaudia is one of the finest choices on the Lazio coast.",
   },
   {
-    name: "San Felice Circeo", slug: "san-felice-circeo", image: BEACH("san-felice-circeo.webp"),
+    name: "San Felice Circeo", slug: "san-felice-circeo", image: "/images/rome/beaches/costa-brava-rome.webp",
     rating: 4.5, reviewCount: 8400, area: "100 km southeast", facilities: "Scenic promontory, clear sea, marina, old town",
     tip: "A chic little resort below the mythical Monte Circeo — clear water, a pretty old town and boat trips to sea caves.",
     filterKeys: ["scenic", "sandy"],

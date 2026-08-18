@@ -55,7 +55,7 @@ export default function MykonosRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Mykonos"
-      heroImage="/images/mykonos/restaurants/scorpios.webp"
+      heroImage="/images/mykonos/restaurants/restaurant-mykonos.avif"
       intro="Mykonos has one of Greece's hottest dining scenes — Nobu arrived from Tokyo, Scorpios serves hours-long Mediterranean feasts at sunset, and Spilia sits inside a literal seaside cave. But the island also guards its soul in classic Greek tavernas: off-grid Kiki's grilling over charcoal above a wild beach, Kounelas weighing your fish since 1956, and family kitchens baking their own bread. Here are 10 of the island's best tables — fine-dining icons, beach clubs, seafood specialists and honest tavernas — with prices, areas and booking advice. Reserve well ahead in July and August, when the whole island books out."
       wide
     >

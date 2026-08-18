@@ -56,7 +56,7 @@ export default function SantoriniShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Santorini"
-      heroImage="/images/santorini/shopping/oia-main-street.webp"
+      heroImage="/images/santorini/shopping/artisan-shop-santorini.webp"
       intro="Santorini shopping goes well beyond fridge magnets. Oia's marble main street is lined with serious art galleries, jewellers and design boutiques; Fira's Gold Street glitters with gold sold by weight; and the island's real treasures are edible and drinkable — volcanic Assyrtiko and Vinsanto wines from historic cellars. Add the cult Atlantis Books and working pottery studios, and you have keepsakes worth carrying home. Here are the eight best places to shop."
       wide
     >

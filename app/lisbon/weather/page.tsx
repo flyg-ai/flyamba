@@ -23,7 +23,7 @@ const WEATHER: BcnPlace[] = [
     fullDescription: "Lisbon is a genuinely year-round destination — it's the sunniest capital in Europe, with a mild Atlantic-Mediterranean climate and over 280 days of sunshine a year — but the best time to visit is spring and early autumn. The ideal windows are late April through June and the month of September, when days are warm and reliably sunny (highs of 20–27°C), the sea is warm enough to swim, the light is beautiful, and yet the crowds and prices haven't hit their July–August peak. Spring brings blossom and green hills; September and early October offer summer warmth with a gentler pace and the ocean at its warmest after a season of heating. High summer (July and August) is hot, busy and pricier, and many local businesses close for holidays in August, though the beaches are at their best. Winter (November to February) is mild but wetter and quieter, with the cheapest flights and hotels and few queues — fine for city sightseeing if you don't mind some rain and shorter days. For most visitors chasing the classic Lisbon of sunshine, terraces and beach day trips without the crush, the shoulder seasons are the clear winners.",
   },
   {
-    name: "Spring (March–May)", slug: "spring", image: "/images/lisbon/dagsutflykter/sintra.webp",
+    name: "Spring (March–May)", slug: "spring", image: "/images/lisbon/day-trips/costa-brava-landscape-lisbon.webp",
     rating: 4.6, area: "Mar–May", filterKeys: [],
     tip: "A superb time to come — warm days, green landscapes and Easter and food festivals, but pack for the odd shower.",
     description: "Mild, blossoming and increasingly sunny, spring is one of the finest seasons in Lisbon.",
@@ -31,7 +31,7 @@ const WEATHER: BcnPlace[] = [
     fullDescription: "Spring is one of the loveliest times to experience Lisbon. Temperatures climb steadily from mild March highs around 15–17°C to warm, pleasant May days of 21–23°C, the light grows golden, and the surrounding countryside — especially the hills of Sintra and the Arrábida park — turns green and flower-strewn, making day trips particularly rewarding. There's still some Atlantic unpredictability, with the chance of showers, particularly earlier in the season, so a light rain jacket and layers are wise, but rainfall drops sharply as spring progresses and sunny days become the norm. Crowds are moderate and prices reasonable, well below the summer peak, giving you the sights, terraces and miradouros with breathing room. It's also a good season for events, from Easter celebrations to the Peixe em Lisboa food and wine festival. The sea is still on the cool side for swimming early on, warming toward late spring, so beaches are more for walking and surfing than lounging until May. For sightseeing, eating out on terraces and exploring the wider region in comfortable warmth without the summer intensity, spring is close to ideal — pack for sunshine but keep something for the occasional damp day.",
   },
   {
-    name: "Summer (June–September)", slug: "summer", image: "/images/lisbon/strander/praia-de-carcavelos.webp",
+    name: "Summer (June–September)", slug: "summer", image: "/images/lisbon/beaches/barceloneta-lisbon.webp",
     rating: 4.5, area: "Jun–Sep", filterKeys: [],
     tip: "Beach weather and festivals, but book ahead and start sightseeing early to dodge the midday heat and crowds.",
     description: "Hot, dry and buzzing — peak season for beaches, festivals and long, warm evenings.",
@@ -55,7 +55,7 @@ const WEATHER: BcnPlace[] = [
     fullDescription: "Lisbon's winter is mild by European standards but the wettest and quietest part of the year. Daytime highs hold at a gentle 12–16°C and hard frosts are almost unheard of, but this is the rainy season, with the Atlantic delivering spells of cloud, showers and the occasional blustery downpour, alongside plenty of crisp, bright, sunny days in between — the weather is changeable rather than consistently grim. Days are short, and the sea is too cold for swimming. The upside is that this is comfortably the cheapest and least crowded time to visit: flights dip to their lowest (February in particular is a bargain), hotels are affordable, and the major sights, viewpoints and museums can be enjoyed with barely a queue. It suits a culture-and-food focused city break — the Gulbenkian and Tile museums, the monasteries of Belém, long lunches, fado nights and cosy tascas — more than a beach trip. Christmas and New Year are a lively exception, when the city lights up, markets appear and Praça do Comércio hosts a big New Year's Eve fireworks display, briefly pushing prices back up. Pack warm layers, a waterproof and an umbrella, plan indoor options for the wet days, and you'll have Lisbon's charm largely to yourself at a fraction of the summer cost.",
   },
   {
-    name: "Sea Temperature & Beach Season", slug: "sea-beaches", image: "/images/lisbon/strander/praia-do-tamariz.webp",
+    name: "Sea Temperature & Beach Season", slug: "sea-beaches", image: "/images/lisbon/beaches/beach-bar-lisbon.webp",
     rating: 4.4, area: "Coast", filterKeys: [],
     tip: "The Atlantic here is bracing year-round — even in summer it rarely tops 20°C, so a wetsuit helps for longer swims.",
     description: "When to swim near Lisbon, and why the Atlantic stays cooler than you might expect.",

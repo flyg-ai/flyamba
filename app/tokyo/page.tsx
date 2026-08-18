@@ -67,12 +67,12 @@ const ATTRACTION_PREVIEW = [
   { name: "teamLab Planets", blurb: "An immersive, barefoot digital-art museum of water, light and infinite mirrors.", image: "/images/tokyo/sevardheter/teamlab-planets.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Sushi Saito", blurb: "A tiny three-star counter many call the finest sushi in Japan.", image: "/images/tokyo/restauranger/sushi-saito.webp" },
-  { name: "Ichiran Ramen", blurb: "Solo-booth tonkotsu ramen you customise to the last detail.", image: "/images/tokyo/restauranger/ichiran-ramen.webp" },
+  { name: "Sushi Saito", blurb: "A tiny three-star counter many call the finest sushi in Japan.", image: "/images/tokyo/restaurants/restaurant-tokyo.avif" },
+  { name: "Ichiran Ramen", blurb: "Solo-booth tonkotsu ramen you customise to the last detail.", image: "/images/tokyo/restaurants/restaurant-tokyo.avif" },
   { name: "Omoide Yokocho", blurb: "A smoky warren of tiny yakitori and drinking stalls by Shinjuku Station.", image: "/images/tokyo/restauranger/omoide-yokocho-shinjuku.webp" },
 ];
 const DAYTRIP_PREVIEW = [
-  { name: "Hakone & Mt Fuji", blurb: "Hot springs, a volcanic valley and postcard Fuji views on a scenic loop.", image: "/images/tokyo/dagsutflykter/mt-fuji-hakone.webp" },
+  { name: "Hakone & Mt Fuji", blurb: "Hot springs, a volcanic valley and postcard Fuji views on a scenic loop.", image: "/images/tokyo/day-trips/costa-brava-landscape-tokyo.webp" },
   { name: "Kamakura", blurb: "A seaside town of ancient temples and the Great Buddha, an hour away.", image: "/images/tokyo/dagsutflykter/kamakura.webp" },
   { name: "Nikko", blurb: "UNESCO-listed golden shrines among cedar forests and waterfalls.", image: "/images/tokyo/dagsutflykter/nikko.webp" },
 ];

@@ -55,7 +55,7 @@ export default function MarrakechShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Marrakech"
-      heroImage="/images/marrakech/shopping/souk-semmarine.webp"
+      heroImage="/images/marrakech/shopping/artisan-shop-marrakech.webp"
       intro="Marrakech is one of the world's great shopping cities, and its souks are the theatre where it all plays out. Traditionally each trade has its own quarter — spices and perfumes, blacksmiths, woodturners, leatherworkers, carpet dealers — so navigating the maze is half the fun and half the strategy. This guide maps the souks by trade, adds the calmer fixed-price concept stores and craft markets for stress-free browsing, and explains how to haggle, what typical souvenirs should cost, and how to spot quality so you buy well and pay fairly."
       wide
     >

@@ -53,7 +53,7 @@ export default function LisbonShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Lisbon"
-      heroImage="/images/lisbon/shopping/lx-factory.webp"
+      heroImage="/images/lisbon/shopping/artisan-shop-lisbon.webp"
       intro="Lisbon shopping is at its best when it's Portuguese — beautifully wrapped tinned fish, heritage soaps in vintage packaging, hand-painted ceramics, cork goods and treasures dug out of a centuries-old flea market. Add elegant Chiado, the creative boutiques of LX Factory and Príncipe Real, and the luxury flagships of Avenida da Liberdade, and there's something for every taste and budget. Here's where to go, and what to bring home."
       wide
     >

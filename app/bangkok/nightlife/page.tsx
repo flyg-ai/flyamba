@@ -44,7 +44,7 @@ export default function BangkokNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Bangkok Nightlife"
-      heroImage="/images/bangkok/nattliv/sky-bar-lebua.webp"
+      heroImage="/images/bangkok/nightlife/cocktail-bar-bangkok.webp"
       intro="Bangkok owns the night. This is the city that made rooftop drinking famous, where you can sip a cocktail 60 floors above the river, dial a secret code into a phone booth to reach a hidden Cuban bar, catch live jazz in a colonial lounge, or dance until 4am in Thong Lo. These 10 venues cover the full range — glamorous sky bars, theatrical speakeasies, live-music institutions and serious clubs — with the dress codes, prices and neighborhoods you need to plan a great night."
       wide
     >

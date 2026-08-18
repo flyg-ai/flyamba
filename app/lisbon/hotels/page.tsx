@@ -54,7 +54,7 @@ export default function LisbonHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Lisbon"
-      heroImage="/images/lisbon/hotell/four-seasons-ritz-lisbon.webp"
+      heroImage="/images/lisbon/hotels/hotel-lisbon.avif"
       intro="From palace hotels with river views to design-led boutiques hidden in the Alfama lanes and sociable hostels near the metro, Lisbon offers characterful places to stay at every price. The best base depends on your priorities — atmosphere in the old town, convenience in the Baixa and Chiado, or calm in leafy Lapa — and this guide covers the standout hotels in each, with prices, neighbourhoods and tips."
       wide
     >

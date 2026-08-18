@@ -54,7 +54,7 @@ export default function MadridHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Madrid"
-      heroImage="/images/madrid/hotels/hotel-ritz.webp"
+      heroImage="/images/madrid/hotels/hotel-madrid.avif"
       intro="Choosing where to stay in Madrid is as much about neighbourhood as price. The city's districts each suit a different traveller — central and buzzing around Sol and Gran Vía, elegant and calm in Salamanca and Chamberí, lively and local in La Latina and Malasaña. From the legendary Mandarin Oriental Ritz on the Paseo del Prado to design hotels with rooftop pools and superb-value hostales, here are eight standout places to stay across every budget, with areas and booking tips."
       wide
     >

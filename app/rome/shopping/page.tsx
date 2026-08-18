@@ -54,7 +54,7 @@ export default function RomeShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Rome"
-      heroImage="/images/rome/shopping/via-dei-condotti.webp"
+      heroImage="/images/rome/shopping/artisan-shop-rome.webp"
       intro="Rome shops on every level — the designer flagships of Via dei Condotti below the Spanish Steps, the high-street bustle of Via del Corso, characterful weekend markets, independent boutiques in Monti and gourmet food halls piled with edible souvenirs. Here is where to browse, bargain and buy, from luxury to flea market, with opening hours and tips on where locals actually shop."
       wide
     >

@@ -44,7 +44,7 @@ export default function BangkokRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Bangkok"
-      heroImage="/images/bangkok/restauranger/jay-fai.webp"
+      heroImage="/images/bangkok/restaurants/restaurant-bangkok.avif"
       intro="Few cities on earth eat as well as Bangkok. This is a place where a roadside stall can hold a Michelin star and a tasting menu can top the list of Asia's finest — where charcoal-fired woks, fiery southern curries and the world's most famous pad thai sit alongside progressive fine dining. These 10 restaurants span the full spectrum, from Jay Fai's legendary crab omelette to three-Michelin-star Sorn, each with the practical details to help you plan and book."
       wide
     >

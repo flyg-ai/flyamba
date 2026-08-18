@@ -61,14 +61,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Chatuchak Market", blurb: "15,000 stalls of crafts, fashion, art and food.", image: "/images/bangkok/sevardheter/chatuchak-weekend-market.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Jay Fai", blurb: "The Michelin-starred crab omelette cooked over charcoal.", image: "/images/bangkok/restauranger/jay-fai.webp" },
-  { name: "Sorn", blurb: "Three-Michelin-star southern Thai — Thailand's finest.", image: "/images/bangkok/restauranger/sorn.webp" },
-  { name: "Thipsamai", blurb: "Bangkok's most famous pad thai since 1966.", image: "/images/bangkok/restauranger/thip-samai-pad-thai.webp" },
+  { name: "Jay Fai", blurb: "The Michelin-starred crab omelette cooked over charcoal.", image: "/images/bangkok/restaurants/restaurant-bangkok.avif" },
+  { name: "Sorn", blurb: "Three-Michelin-star southern Thai — Thailand's finest.", image: "/images/bangkok/restaurants/restaurant-bangkok.avif" },
+  { name: "Thipsamai", blurb: "Bangkok's most famous pad thai since 1966.", image: "/images/bangkok/restaurants/restaurant-bangkok.avif" },
 ];
 const BEACH_PREVIEW = [
-  { name: "Koh Larn", blurb: "Turquoise water and white sand off Pattaya.", image: "/images/bangkok/strander/koh-samet-farja.webp" },
+  { name: "Koh Larn", blurb: "Turquoise water and white sand off Pattaya.", image: "/images/bangkok/beaches/barceloneta-bangkok.webp" },
   { name: "Bang Saen", blurb: "The closest proper beach, 90 minutes away.", image: "/images/bangkok/strander/bangsaen-beach.webp" },
-  { name: "Hua Hin", blurb: "A refined royal resort with markets and golf.", image: "/images/bangkok/strander/hua-hin.webp" },
+  { name: "Hua Hin", blurb: "A refined royal resort with markets and golf.", image: "/images/bangkok/beaches/beach-bar-bangkok.webp" },
 ];
 
 const NEARBY = [

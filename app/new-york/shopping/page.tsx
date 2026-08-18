@@ -53,7 +53,7 @@ export default function NewYorkShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in New York — Flagships, Markets & Boutiques"
-      heroImage="/images/new-york/shopping/fifth-avenue.webp"
+      heroImage="/images/new-york/shopping/artisan-shop-new-york.webp"
       intro="New York is a shopping city like no other, from the flagship-lined luxury of Fifth Avenue to the cobbled boutiques of SoHo, the food halls of Chelsea Market and the vintage stalls of the Brooklyn Flea. Whether you want designer labels, discount deals at Century 21, ten floors of everything at Macy's, or fresh produce at the Union Square Greenmarket, there's a district to match. Here are the best places to shop across every style and budget — and a reminder that 8.875% sales tax is added at the register, though clothing and shoes under $110 are tax-free in New York City."
       wide
     >

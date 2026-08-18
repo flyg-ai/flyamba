@@ -53,7 +53,7 @@ export default function NewYorkNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="New York Nightlife — Speakeasies, Jazz & Rooftop Bars"
-      heroImage="/images/new-york/nightlife/employees-only.webp"
+      heroImage="/images/new-york/nightlife/cocktail-bar-new-york.webp"
       intro="New York's nightlife is the most dynamic on earth — hidden speakeasies like Employees Only, PDT and Attaboy (all on the 'World's 50 Best Bars'), the historic Bemelmans piano bar, jazz clubs running since 1935 at the Village Vanguard, and Brooklyn's wild circus-club House of Yes. The city's neighbourhoods each have their own scene: the Lower East Side for hidden bars, the West Village for jazz, Chelsea and the Meatpacking District for clubs, and Williamsburg and Bushwick for something more underground. Here are the best places to go out, with prices, dress codes and tips — and a reminder to tip the bartender $1–2 a drink."
       wide
     >

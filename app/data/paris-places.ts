@@ -240,7 +240,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Septime, on a quiet street in the trend-setting 11th arrondissement, is arguably the restaurant that came to define modern Paris dining — relaxed, produce-obsessed and quietly brilliant. Chef Bertrand Grébaut holds a Michelin star (and a green star for sustainability) yet the room is stripped-back and unstuffy, all pale wood, exposed beams and easy service, worlds away from the hushed formality of old-guard gastronomy. There's no à la carte: you eat a surprise tasting menu built around whatever the day's small producers delivered — impeccable vegetables, line-caught fish, rare-breed meat and natural wines, plated with precision and restraint. It regularly appears on the World's 50 Best list, which makes its tables among the most fought-over in the city; reservations open three weeks in advance online and disappear within minutes, so set an alarm, and consider the more attainable weekday lunch. Its wine bar sibling Septime La Cave and the seafood spot Clamato next door offer walk-in alternatives. For a snapshot of where Paris cooking is heading, this is the essential address — creative, seasonal and genuinely exciting.",
   },
   {
-    name: "L'Ambroisie", slug: "lambroisie", image: R("lambroisie.webp"),
+    name: "L'Ambroisie", slug: "lambroisie", image: "/images/paris/restaurants/restaurant-paris.avif",
     rating: 4.6, reviewCount: 2000, type: "Haute Cuisine", price: "€€€€", area: "4th · Place des Vosges",
     tip: "Three Michelin stars in a Renaissance setting — book weeks ahead, dress up, and expect a serious bill.",
     filterKeys: ["fine-dining"],
@@ -258,7 +258,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Chez L'Ami Jean is one of Paris's most characterful bistros, a warm, noisy, rugby-mad room near the Eiffel Tower where chef Stéphane Jégo cooks big-hearted food rooted in the Basque Country and south-west France. This is bistronomy with the volume turned up: seasonal, market-driven cooking of real generosity and skill — game in autumn, superb fish, slow-cooked meats, punchy sauces — served in a cramped, convivial space where the tables are close and the atmosphere buzzes. The signature is dessert: an enormous, legendary riz au lait (rice pudding) served in a giant bowl with salted-caramel and praline for you to spoon over, so leave room. Portions throughout are hearty rather than dainty, and the wine list leans into gutsy south-western bottles. It's the sort of place that captures why people fall for Paris bistros — skilled cooking, zero pretension and a genuinely fun evening. It fills up and is small, so book ahead, and go hungry. Expect around €45–70 a head. For robust regional cooking with soul, a short walk from the Eiffel Tower, it's a standout.",
   },
   {
-    name: "Clamato", slug: "clamato", image: R("clamato.webp"),
+    name: "Clamato", slug: "clamato", image: "/images/paris/restaurants/restaurant-paris.avif",
     rating: 4.5, reviewCount: 3500, type: "Seafood", price: "€€€", area: "11th · Charonne",
     tip: "No bookings — arrive when it opens for oysters, small seafood plates and natural wine; it's Septime's laid-back sister.",
     filterKeys: ["seafood", "modern"],
@@ -267,7 +267,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Clamato is the relaxed, walk-in seafood sibling of the impossible-to-book Septime, sitting right next door in the 11th and offering a taste of the same kitchen's brilliance without the three-week reservation scramble. There's no set menu and no bookings: you turn up, grab a spot at a table or the counter, and order from a chalkboard of small, shareable plates that change with the day's catch — plump oysters, clams, ceviche, grilled fish, seasonal vegetables and the odd surprise — washed down with a well-chosen list of natural wines. The style is fresh, precise and produce-led, echoing Septime's philosophy in a lighter, sea-focused key, and the room is easy and lively rather than formal. Because it takes no reservations and is deservedly popular, the trick is to arrive right when it opens or accept a wait; going off-peak or for a late lunch helps. Prices are moderate for the quality, around €35–55 a head depending on your appetite for oysters. For excellent modern Paris seafood in a buzzy, unfussy setting, it's one of the best casual tables in the city.",
   },
   {
-    name: "Pink Mamma", slug: "pink-mamma", image: R("pink-mamma.webp"),
+    name: "Pink Mamma", slug: "pink-mamma", image: "/images/paris/restaurants/restaurant-paris.avif",
     rating: 4.5, reviewCount: 34000, type: "Trattoria", price: "€€", area: "9th · Pigalle",
     tip: "The four-floor design is a scene in itself — book online exactly when the app opens, or queue at opening for walk-ins.",
     filterKeys: ["modern"],
@@ -285,7 +285,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Le Jules Verne offers the ultimate Paris view with your dinner: it occupies the Eiffel Tower's second floor, 125 metres up, reached by its own private lift from the south pillar so you skip the tourist queues entirely. Under celebrated chef Frédéric Anton it holds a Michelin star, serving refined, modern French cuisine — precise, seasonal tasting and set menus of luxury produce — while floor-to-ceiling windows frame the Trocadéro, the Seine and the city stretching to the horizon. It is, unavoidably, an expensive special-occasion restaurant: dinner runs comfortably north of €275 a head, though the multi-course lunch (from around €160) delivers the same view and much of the cooking for less. The experience is as much about the setting and the sense of occasion as the plates, so a window table is worth booking for — reserve well in advance, as they go months ahead, and specify your preference. For a milestone celebration, a proposal or a once-in-a-lifetime Paris splurge, dining inside the Eiffel Tower is hard to beat. Dress smartly and allow a leisurely two to three hours.",
   },
   {
-    name: "Breizh Café", slug: "breizh-cafe", image: R("breizh-caf.webp"),
+    name: "Breizh Café", slug: "breizh-cafe", image: "/images/paris/restaurants/restaurant-paris.avif",
     rating: 4.4, reviewCount: 12000, type: "Crêperie", price: "€€", area: "3rd · Le Marais",
     tip: "The best galettes in Paris — order a savoury buckwheat one, a sweet one to follow, and a bowl of Breton cider.",
     filterKeys: ["budget"],
@@ -298,7 +298,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (7) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Le Bristol Paris", slug: "le-bristol", image: H("le-bristol.webp"),
+    name: "Le Bristol Paris", slug: "le-bristol", image: "/images/paris/hotels/hotel-paris.avif",
     rating: 4.8, reviewCount: 6000, type: "Palace", price: "€€€€", area: "8th · Faubourg Saint-Honoré",
     tip: "A true 'Palace'-rated hotel with a rooftop pool and a three-Michelin-star restaurant — book a garden-view room.",
     filterKeys: ["palace", "luxury"],
@@ -307,7 +307,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Le Bristol is one of a handful of Paris hotels awarded the official 'Palace' distinction, the rank above five stars reserved for the very finest, and it embodies old-world French luxury at its most polished. Set on the exclusive Rue du Faubourg Saint-Honoré near the Élysée Palace and the city's grandest fashion houses, it wraps around a large private French garden — a rare green oasis in central Paris — and hides a stunning teak-lined rooftop swimming pool with Eiffel Tower views. Service is impeccably discreet, the rooms and suites are classically elegant, and the gastronomy is legendary: Epicure holds three Michelin stars, and the hotel's resident cat, Fa-Raon, has become a beloved fixture. There's also a serene spa and one of the city's best afternoon teas. Rates start well over €1,000 a night, placing it firmly in the special-occasion or bucket-list bracket, but for travellers seeking the pinnacle of Parisian hospitality in a prime location for shopping and sights, it is a benchmark. Book garden-facing rooms and reserve dining well ahead.",
   },
   {
-    name: "Ritz Paris", slug: "ritz-paris", image: H("ritz-paris.webp"),
+    name: "Ritz Paris", slug: "ritz-paris", image: "/images/paris/hotels/hotel-paris.avif",
     rating: 4.8, reviewCount: 7000, type: "Palace", price: "€€€€", area: "1st · Place Vendôme",
     tip: "Book a cocktail at the Hemingway Bar even if you can't stay — it's the most storied bar in Paris.",
     filterKeys: ["palace", "luxury"],
@@ -325,7 +325,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Le Pavillon de la Reine is one of the most romantic hotels in Paris, a discreet five-star hidden behind a creeper-clad private courtyard directly on the historic Place des Vosges — you could walk past its gateway without realising the calm luxury within. The setting is unbeatable for exploring the Marais on foot, yet the ivy-draped courtyard and cosy, wood-beamed lounges with roaring fires make it feel like a secret retreat from the city. Rooms and suites are elegant and warm, mixing period touches with contemporary comfort, and there's an intimate spa and a pretty honesty-bar salon. It's smaller and more personal than the grand Palace hotels, which suits couples and travellers who want charm, character and a superb central location over sheer scale. Rates from around €450 a night make it a genuine luxury splurge but more attainable than the €1,000-plus palaces. With the Picasso Museum, the boutiques of the Marais and the cafés of the Place des Vosges on the doorstep, it's an idyllic, atmospheric base for a stylish Paris stay. Book a courtyard-facing room for the full effect.",
   },
   {
-    name: "Hôtel des Grands Boulevards", slug: "hotel-grands-boulevards", image: H("htel-des-grands-boulevards.webp"),
+    name: "Hôtel des Grands Boulevards", slug: "hotel-grands-boulevards", image: "/images/paris/hotels/hotel-paris.avif",
     rating: 4.5, reviewCount: 3000, type: "Boutique", price: "€€€", area: "2nd · Grands Boulevards",
     tip: "The glass-roofed courtyard restaurant and rooftop bar are destinations in themselves — great value for a design hotel.",
     filterKeys: ["boutique"],
@@ -334,7 +334,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Hôtel des Grands Boulevards is one of the most fashionable mid-range boutique hotels in Paris, occupying a late-eighteenth-century building in the lively 2nd arrondissement, a district full of covered passages, restaurants and nightlife. Designed by Dorothée Meilichzon, its rooms have a playful, canopy-bedded, neo-classical-meets-contemporary look, all in soft blues and warm woods, that feels distinctly Parisian and photogenic without being precious. The social heart is a gorgeous glass-roofed courtyard restaurant that draws locals as well as guests, and a seasonal rooftop bar with city views — both genuine destinations rather than afterthoughts. The location is excellent for exploring on foot: the Grands Boulevards, the Palais Garnier, the department stores and the Marais are all within easy reach, with good métro links close by. Rates from around €220 a night make it a smart choice for design-minded travellers who want style, atmosphere and a central address without palace prices. For couples and city-breakers after a hip, well-located and reasonably priced base with excellent food and drink on site, it's one of the best options in this bracket.",
   },
   {
-    name: "Hôtel Providence", slug: "hotel-providence", image: H("htel-providence.webp"),
+    name: "Hôtel Providence", slug: "hotel-providence", image: "/images/paris/hotels/hotel-paris.avif",
     rating: 4.5, reviewCount: 2200, type: "Boutique", price: "€€€", area: "10th · Strasbourg–Saint-Denis",
     tip: "Each room has its own private cocktail bar — a cult design hotel in the up-and-coming 10th.",
     filterKeys: ["boutique"],
@@ -343,7 +343,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hôtel Providence is a cult design-lover's boutique in the buzzy, increasingly hip 10th arrondissement, near the canal-side bars of Canal Saint-Martin and the restaurants of the Sentier. Its calling card is a lush, maximalist aesthetic — velvet, patterned wallpapers, brass, marble and rich jewel tones that channel a romantic, slightly decadent nineteenth-century Paris — and, most memorably, a private cocktail bar built into every room, stocked so you can mix your own drinks in your dressing gown. Downstairs, a gorgeous ground-floor bar and bistro spills onto a corner terrace and is a lovely spot in its own right. The rooms are on the compact side, as is typical for characterful central Paris hotels, but the style, atmosphere and the novelty of your own bar more than compensate. The location puts you in a real, unpolished, local neighbourhood full of nightlife and good food, well connected by métro to the main sights. Rates from around €180 a night make it a stylish, distinctive mid-range pick for younger travellers and couples who value design and personality over resort facilities. Atmospheric and fun, it's a memorable place to stay.",
   },
   {
-    name: "Hôtel Chopin", slug: "hotel-chopin", image: H("htel-chopin.webp"),
+    name: "Hôtel Chopin", slug: "hotel-chopin", image: "/images/paris/hotels/hotel-paris.avif",
     rating: 4.3, reviewCount: 3200, type: "Budget / Charming", price: "€€", area: "9th · Passage Jouffroy",
     tip: "Tucked inside a covered 1846 passage — quiet, characterful and a bargain for such a central location.",
     filterKeys: ["budget"],
@@ -401,7 +401,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Experimental Cocktail Club, tucked behind a discreet façade on a narrow street near the pedestrianised Rue Montorgueil, is the bar widely credited with kick-starting Paris's craft-cocktail renaissance when it opened in 2007. Styled as an intimate, low-lit speakeasy — exposed stone, candlelight, a hushed and grown-up mood — it draws a stylish crowd with expertly made drinks, from reinvented classics to inventive seasonal creations built on quality spirits and fresh ingredients by serious bartenders. Its success spawned an international group of bars, but the original Paris outpost retains its cool, insider feel. It's the sort of place to start or extend an evening with a couple of superb cocktails rather than a rowdy night out, and the surrounding Montorgueil and Sentier area is full of restaurants and bars to combine it with. Drinks run around €14–18, in line with the city's better cocktail bars. Because it's small and popular, it fills up late in the week; arrive early evening or come midweek to secure a seat at the bar. For beautifully crafted cocktails in an atmospheric, quintessentially Parisian setting, it remains a benchmark.",
   },
   {
-    name: "Le Perchoir Marais", slug: "le-perchoir", image: N("le-perchoir.webp"),
+    name: "Le Perchoir Marais", slug: "le-perchoir", image: "/images/paris/nightlife/cocktail-bar-paris.webp",
     rating: 4.3, reviewCount: 18000, type: "Rooftop Bar", area: "11th / 4th · Marais",
     tip: "Come for sunset views over the Paris rooftops; queues build fast in summer, so arrive early or on a weekday.",
     filterKeys: ["rooftop", "bars"],
@@ -428,7 +428,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Silencio is one of the most distinctive nightspots in Paris, a subterranean club conceived and designed down to the last detail by film director David Lynch, named after the mysterious club in his film Mulholland Drive. Descending several floors below the Grands Boulevards, you enter a series of surreal, gold-leafed and mirrored rooms — a forest-panelled lounge, a tiny concert stage, a smoking room, a cinema — that feel like stepping inside one of Lynch's dreamscapes. By day and early evening it operates as a private members' club for the city's creative set, hosting talks, concerts and film events, but from around midnight on the busiest nights it opens to the public for late DJ sets and dancing in a stylish, cinematic setting. It's atmospheric, exclusive and design-obsessed rather than a mainstream club, with a dress-to-impress crowd, a door policy and premium drink prices. Go late, look sharp, and treat it as a singular Paris experience — a chance to drink and dance inside a piece of art-directed cinema. A newer Silencio des Prés on the Left Bank extends the concept.",
   },
   {
-    name: "New Morning", slug: "new-morning", image: N("new-morning.webp"),
+    name: "New Morning", slug: "new-morning", image: "/images/paris/nightlife/flamenco-paris.webp",
     rating: 4.6, reviewCount: 5000, type: "Live Music", area: "10th · Château d'Eau",
     tip: "A legendary stage for jazz, blues, soul and world music — check the gig calendar and book the night that suits you.",
     filterKeys: ["live-music"],
@@ -437,7 +437,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "New Morning is one of Paris's most respected live-music venues, an intimate club in the 10th arrondissement that has hosted an extraordinary roll-call of legends since 1981 — Chet Baker, Dizzy Gillespie, Stan Getz, Prince and countless others have played its unassuming stage. Despite its fame, it remains refreshingly no-frills: a plain, black-walled room where the focus is entirely on the music and the closeness to the performers, with standing and limited seating giving a genuine sense of intimacy rarely found at bigger venues. The programming ranges widely across jazz, blues, soul, funk, Latin and world music, so any given night depends on who's booked — check the calendar and choose accordingly. It's a proper music-lover's venue rather than a see-and-be-seen spot, drawing a mixed, knowledgeable and passionate crowd. Tickets typically run €20–40 depending on the artist, and it's worth booking ahead for well-known names. For visitors who want to experience Paris's rich live-jazz and world-music heritage up close, in a historic and unpretentious setting, New Morning is a wonderful, authentic night out. Combine it with the bars and restaurants of the surrounding area.",
   },
   {
-    name: "Le Comptoir Général", slug: "le-comptoir-general", image: N("le-comptoir-gnral.webp"),
+    name: "Le Comptoir Général", slug: "le-comptoir-general", image: "/images/paris/nightlife/live-music-paris.webp",
     rating: 4.3, reviewCount: 21000, type: "Quirky Bar", area: "10th · Canal Saint-Martin",
     tip: "A wonderfully eccentric canal-side hideaway of jungle plants and vintage bric-a-brac — go for the vibe and rum cocktails.",
     filterKeys: ["bars"],
@@ -468,7 +468,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Le Bon Marché, founded in 1852, is widely considered the world's first modern department store and remains the most stylish and refined in Paris. Owned by luxury group LVMH and set on the smart Left Bank in Saint-Germain, it is smaller, calmer and more curated than the bustling Haussmann giants, with a beautifully designed interior — including a sculptural set of escalators — that makes browsing a pleasure rather than a scrum. Its selection is impeccably edited across high-end and directional fashion, beauty, homeware, books and design, with a strong eye for the contemporary and the covetable, and it regularly hosts art installations and themed events. The unmissable adjunct is La Grande Épicerie de Paris next door, a magnificent gourmet food hall packed with French produce, wine, patisserie, chocolate and delicacies — the ideal place to buy edible gifts and picnic supplies. It's free to browse, and its Left Bank location pairs naturally with the boutiques of Saint-Germain and the Bon Marché quarter. For elegant, unhurried, quality-focused shopping and a world-class food hall, it's the connoisseur's choice among Paris department stores.",
   },
   {
-    name: "Marché aux Puces de Saint-Ouen", slug: "marche-aux-puces", image: S("march-aux-puces-saint-ouen.webp"),
+    name: "Marché aux Puces de Saint-Ouen", slug: "marche-aux-puces", image: "/images/paris/shopping/artisan-shop-paris.webp",
     rating: 4.3, reviewCount: 42000, type: "Flea Market", area: "18th · Saint-Ouen (Clignancourt)",
     tip: "Go Saturday morning, head past the outer stalls into the covered markets like Vernaison and Dauphine for real antiques.",
     filterKeys: ["markets", "local"],
@@ -486,7 +486,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Merci is the concept store that defines the fashionable Haut Marais, instantly recognisable by the little red Fiat 500 parked in its cobbled entrance courtyard. Spread over three airy floors of a former nineteenth-century wallpaper factory, it curates an effortlessly chic mix of fashion, accessories, jewellery, homeware, stationery, furniture and design — its own label alongside carefully chosen brands — all displayed with the kind of understated taste that makes browsing a pleasure. What sets it apart is its ethos: founded by the family behind a children's-clothing brand, Merci donates its profits to charitable projects, so shopping here does some good. Beyond the retail, it's a lovely place to linger, with a light-filled Used Book Café among secondhand books, a café and a cantine, making it as much a destination to hang out as to shop. It's free to wander, photogenic throughout, and perfectly placed for exploring the boutiques, galleries and cafés of the surrounding Marais. For contemporary French style, design-led souvenirs and gifts with a conscience, in a beautiful setting, Merci is one of the most enjoyable shopping stops in Paris.",
   },
   {
-    name: "Rue Saint-Honoré", slug: "rue-saint-honore", image: S("rue-saint-honor.webp"),
+    name: "Rue Saint-Honoré", slug: "rue-saint-honore", image: "/images/paris/shopping/mall-paris.webp",
     rating: 4.5, reviewCount: 12000, type: "Luxury Fashion Street", area: "1st · Concorde / Vendôme",
     tip: "Window-shop the flagships from Concorde toward Palais Royal; the concept store Colette's spirit lives on at nearby Kitsuné.",
     filterKeys: ["luxury", "boutiques"],
@@ -495,7 +495,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Rue Saint-Honoré and its extension the Rue du Faubourg Saint-Honoré form the epicentre of luxury shopping in Paris, a long, elegant artery running through the 1st and 8th arrondissements past Place Vendôme and towards the Élysée. This is where the great French fashion and jewellery houses cluster — Hermès, Chanel, Dior, Cartier, Saint Laurent and dozens more flagships and ateliers — alongside chic multi-brand boutiques, perfumeries and the smart hotels of the area. Even for window-shoppers with no intention of buying, it's a fascinating stroll through the world of Parisian haute couture and haute joaillerie, with beautifully dressed windows and grand historic façades. It's also prime real estate for people-watching and for spotting the polished style of the Right Bank. The pedestrian-friendly stretch links naturally to the Tuileries, the Louvre and the jewellers of Place Vendôme, so it slots easily into a day's sightseeing. Most shops keep standard hours and many close on Sundays, so plan a weekday visit. For luxury flagships, elegant browsing and a sense of Paris's fashion heritage, it's the essential shopping street.",
   },
   {
-    name: "Rue des Rosiers & the Marais", slug: "rue-des-rosiers", image: S("rue-des-rosiers.webp"),
+    name: "Rue des Rosiers & the Marais", slug: "rue-des-rosiers", image: "/images/paris/shopping/outdoor-market-paris.webp",
     rating: 4.5, reviewCount: 20000, type: "Boutiques", area: "4th · Le Marais",
     tip: "The best area for independent and vintage boutiques — and the one place in Paris where most shops open on Sunday.",
     filterKeys: ["boutiques", "local"],
@@ -517,7 +517,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── With kids (7) ────────────────────────────────────────────────────────────
 export const WITH_KIDS: BcnPlace[] = [
   {
-    name: "Cité des Sciences et de l'Industrie", slug: "cite-des-sciences", image: K("cit-des-sciences.webp"),
+    name: "Cité des Sciences et de l'Industrie", slug: "cite-des-sciences", image: "/images/paris/with-kids/aquarium-paris.webp",
     rating: 4.5, reviewCount: 34000, ageGroup: "All ages", price: "€13", area: "19th · La Villette",
     tip: "The under-12 'Cité des Enfants' hands-on zones are brilliant — book a timed session for your child's age group.",
     filterKeys: ["indoor", "educational"],
@@ -535,7 +535,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Jardin d'Acclimatation is a much-loved children's amusement park and garden on the edge of the Bois de Boulogne, first opened in 1860 and recently refreshed with new attractions. It's aimed squarely at younger children and families, blending a leafy garden setting with about forty gentle rides — a vintage carousel, small roller coasters, boats, a little train, a hall of mirrors — alongside farm animals, playgrounds, a small zoo area, water games and green space for picnics. The pace is relaxed and old-fashioned in the best way, a world away from a high-adrenaline theme park, which makes it ideal for toddlers and primary-age kids. You can pay per ride or buy a wristband for unlimited access, and general garden entry is cheap at around €7. It sits right beside the Frank Gehry-designed Fondation Louis Vuitton art museum, so families can combine the two, and the vast Bois de Boulogne offers boating lakes and cycling nearby. Easy to reach on métro line 1, it's a charming, low-stress day out for young families looking for fresh air, gentle fun and space to roam without the intensity of a big attraction.",
   },
   {
-    name: "Ménagerie du Jardin des Plantes", slug: "menagerie-jardin-des-plantes", image: K("jardin-des-plantes-menagerie.webp"),
+    name: "Ménagerie du Jardin des Plantes", slug: "menagerie-jardin-des-plantes", image: "/images/paris/with-kids/family-park-paris.webp",
     rating: 4.3, reviewCount: 15000, ageGroup: "All ages", price: "€13", area: "5th · Latin Quarter",
     tip: "One of the world's oldest zoos, set in a botanical garden — pair it with the free Grande Galerie de l'Évolution nearby.",
     filterKeys: ["outdoor", "educational"],
@@ -553,7 +553,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Aquarium de Paris sits in the Trocadéro gardens directly opposite the Eiffel Tower, which makes it a genuinely handy, weatherproof family stop to pair with a tower visit. Built into the hillside, it houses thousands of fish and invertebrates across dozens of tanks, with a focus on the marine life of France's coasts and overseas territories, plus a shark tank, a large ray and shark basin, a mesmerising jellyfish display and a Koi carp pool. For younger children the big draws are the touch pool where they can stroke rays and small fish, daily feeding sessions, hands-on workshops and activities, and even a small cinema and play areas, all designed to keep families engaged. It's more compact than some European mega-aquariums, so a visit takes one to two hours, ideal for filling a rainy morning or resting little legs between sights. Adult entry is around €23 with cheaper children's tickets and under-3s free, so it's not the cheapest option, but its unbeatable location beside the Eiffel Tower and its child-focused activities make it a convenient, reliable pick for families exploring this part of Paris.",
   },
   {
-    name: "Musée Grévin", slug: "musee-grevin", image: K("muse-grvin.webp"),
+    name: "Musée Grévin", slug: "musee-grevin", image: "/images/paris/with-kids/kids-museum-paris.webp",
     rating: 4.3, reviewCount: 26000, ageGroup: "All ages", price: "€26", area: "9th · Grands Boulevards",
     tip: "Book online for a discount; the dazzling Hall of Mirrors and celebrity waxworks are a hit with older kids and teens.",
     filterKeys: ["indoor"],
@@ -562,7 +562,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Musée Grévin is Paris's famous wax museum, open since 1882 and set inside a beautiful building on the Grands Boulevards, reached through the historic Passage Jouffroy arcade. It's the Parisian equivalent of Madame Tussauds, with more than 200 astonishingly lifelike wax figures of French and international celebrities, historical figures, sports stars, musicians and film characters arranged in elaborate themed sets that kids and teens love posing alongside. Beyond the waxworks, the building itself is a draw: the dazzling Belle Époque Hall of Mirrors (Palais des Mirages), a magical mirrored light-and-sound illusion left from the 1900 World's Fair, and the ornate original theatre and marble staircase add real period grandeur. Interactive areas and photo opportunities keep families entertained for a couple of hours, making it a good indoor option in bad weather. Adult entry is around €26, noticeably cheaper if booked online in advance, with reductions for children. Its central location by the department stores and covered passages means it combines easily with shopping or a wander through the atmospheric arcades. For a fun, sheltered outing that appeals across ages — especially to older children and teenagers — it's a reliable crowd-pleaser.",
   },
   {
-    name: "Jardin des Tuileries", slug: "jardin-des-tuileries", image: K("tuileries-tradgardarna.webp"),
+    name: "Jardin des Tuileries", slug: "jardin-des-tuileries", image: "/images/paris/with-kids/tibidabo-paris.webp",
     rating: 4.7, reviewCount: 130000, ageGroup: "All ages", price: "Free", area: "1st · Between Louvre & Concorde",
     tip: "Free year-round; in summer a funfair with a big wheel sets up, and kids can sail toy boats on the round ponds.",
     filterKeys: ["free", "outdoor"],
@@ -571,7 +571,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Jardin des Tuileries is the elegant, wide-open formal garden stretching between the Louvre and the Place de la Concorde, laid out by André Le Nôtre in the seventeenth century and now a free and central spot for families to rest and play between the big sights. Its gravel paths, clipped trees, lawns, statues and two large octagonal ponds create a classic Parisian setting, and the ponds are perfect for the timeless pleasure of pushing a rented toy sailboat across the water. Green metal chairs let everyone flop down for a picnic or an ice cream, and there's a playground for younger children. The garden's biggest family draw comes in summer, when the Fête des Tuileries funfair sets up along one side with a giant Ferris wheel, carousel, rides and stalls (rides paid separately). Bordered by the Orangerie and Jeu de Paume museums and steps from the Louvre and the Musée d'Orsay across the river, it's superbly placed to break up a day of culture. Free, central, pretty and pram-friendly, it's an easy, restful outing that suits all ages, especially with the boats and, in season, the funfair.",
   },
   {
-    name: "Musée des Arts Forains", slug: "musee-des-arts-forains", image: K("muse-des-arts-forains.webp"),
+    name: "Musée des Arts Forains", slug: "musee-des-arts-forains", image: "/images/paris/with-kids/zoo-paris.webp",
     rating: 4.7, reviewCount: 9000, ageGroup: "All ages", price: "€18", area: "12th · Bercy",
     tip: "This private fairground museum is normally by appointment or open days — book ahead; kids can ride the antique carousels.",
     filterKeys: ["indoor"],

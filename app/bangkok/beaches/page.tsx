@@ -44,7 +44,7 @@ export default function BangkokBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Beaches Near Bangkok"
-      heroImage="/images/bangkok/strander/koh-samet-farja.webp"
+      heroImage="/images/bangkok/beaches/barceloneta-bangkok.webp"
       intro="Bangkok isn't a beach city, but the Gulf coast and its islands are surprisingly close — close enough for a day at the sea or an easy weekend escape. The nearest sands at Bang Saen buzz with Thai families, Koh Larn and Koh Samet deliver genuinely turquoise island water, and the royal resort towns of Hua Hin and Cha-Am add markets and gentle charm. These 6 escapes, plus the car-free river island of Koh Kret, cover every mood, with travel times, ferry fares and tips."
       wide
     >

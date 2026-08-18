@@ -53,7 +53,7 @@ export default function LisbonDayTrips() {
       active="day-trips"
       crumb="Day Trips"
       h1="Best Day Trips from Lisbon"
-      heroImage="/images/lisbon/dagsutflykter/sintra.webp"
+      heroImage="/images/lisbon/day-trips/costa-brava-landscape-lisbon.webp"
       intro="Some of the finest experiences on a Lisbon trip lie just outside the city. The fairytale palaces of Sintra and the genteel coast of Cascais are barely 40 minutes away by train, while a little further afield wait the medieval walls of Óbidos, the turquoise coves of the Arrábida park, the UNESCO-listed Alentejo city of Évora and the great pilgrimage sanctuary of Fátima. Here are the best day trips from Lisbon, with distances, how to get there and how to plan each."
       wide
     >

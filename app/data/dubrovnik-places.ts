@@ -263,7 +263,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Nautika", slug: "nautika", image: RES("nautika.webp"),
+    name: "Nautika", slug: "nautika", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.6, reviewCount: 4200, price: "€€€", area: "Pile", type: "Fine Dining",
     tip: "A clifftop setting that has hosted Bill Gates and visiting royalty — book the terrace for the two-fort view at sunset.",
     filterKeys: ["fine-dining", "romantic"],
@@ -272,7 +272,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Nautika is widely regarded as Dubrovnik's most prestigious restaurant, set just outside Pile Gate in a former maritime school with two elegant terraces — Penatur and Lovrijenac — that look straight out at the fortresses of Lovrijenac and Bokar and the open Adriatic beyond. It's the address the city rolls out for its most important guests, having hosted the likes of Bill Gates and visiting royalty, and the setting alone justifies the reputation, particularly as the sun drops behind the forts and the sea turns to copper. The kitchen focuses on refined seafood and modern Dalmatian cooking, with immaculate presentation, a deep wine list heavy on Croatian labels, and the polished, formal service you'd expect at this level. This is destination dining for a special occasion rather than a casual drop-in — expect white tablecloths, a smart dress code and prices to match — so reserve well ahead and request a terrace table for the view. For a celebratory dinner that pairs top-end food with one of the most romantic outlooks on the whole coast, Nautika is Dubrovnik's benchmark.",
   },
   {
-    name: "Restaurant 360", slug: "restaurant-360", image: RES("restaurant-360.webp"),
+    name: "Restaurant 360", slug: "restaurant-360", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.6, reviewCount: 3100, price: "€€€", area: "Old Town", type: "Michelin-Starred",
     tip: "The city's only Michelin star, built dramatically into the old harbour walls — go for the tasting menu and the sea-facing terrace.",
     filterKeys: ["fine-dining", "romantic"],
@@ -281,7 +281,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Restaurant 360 holds Dubrovnik's only Michelin star and enjoys one of the most theatrical settings of any restaurant in Croatia — built directly into the Old Town's ancient harbour ramparts, its terrace hovering above the water with the medieval port and the Adriatic spread out below. The name nods to the panoramic sweep, and dinner here is very much an occasion, combining that view with ambitious, contemporary tasting menus that reimagine Mediterranean and Dalmatian ingredients through precise modern technique. Expect several courses of beautifully plated, inventive dishes, an exceptional and extensive wine cellar (including a strong Croatian selection), and the kind of attentive, unhurried service that a Michelin star demands. It's seasonal, opening roughly from spring to autumn, and dinner-only, so it works best as the centrepiece of an evening rather than a quick meal. Prices are firmly at the top of the city's range, and smart dress and advance booking are both essential. For food lovers who want to combine Dubrovnik's Golden Age setting with genuinely accomplished gastronomy, 360 is the standout special-occasion table in the Old Town.",
   },
   {
-    name: "Proto", slug: "proto", image: RES("proto.webp"),
+    name: "Proto", slug: "proto", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.5, reviewCount: 5600, price: "€€€", area: "Old Town", type: "Seafood",
     tip: "A Dubrovnik institution since 1886 — this is the address for classic Adriatic seafood done properly. Book the rooftop terrace.",
     filterKeys: ["fine-dining", "romantic"],
@@ -290,7 +290,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Proto is one of Dubrovnik's most storied restaurants, trading since 1886 and long considered the Old Town's definitive address for classic Adriatic seafood. Tucked just off Stradun on the little street of Široka, it spreads across an elegant ground floor and a lovely upstairs terrace shaded by greenery, a welcome retreat from the busy lanes below. The menu is a tour of the coast's seafood traditions done properly rather than reinvented: oysters from nearby Ston, black cuttlefish risotto, grilled fresh fish sold by weight, shellfish, lobster and Dalmatian classics, matched with a strong list of Croatian wines. It has hosted its share of famous names over the decades and wears its history lightly, striking a balance between special-occasion polish and genuine, generous cooking. Because fish is priced by the kilo, it's worth asking the weight before you order so the bill holds no surprises. Reservations are wise, especially for the coveted terrace tables in high season. For travellers who want traditional, high-quality Adriatic seafood in a restaurant with more than a century of pedigree, Proto is a dependable Old Town classic.",
   },
   {
-    name: "Pantarul", slug: "pantarul", image: RES("pantarul.webp"),
+    name: "Pantarul", slug: "pantarul", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.6, reviewCount: 2800, price: "€€", area: "Lapad", type: "Modern Dalmatian",
     tip: "Chef Ana-Marija Bujić builds her menu around local produce and old family recipes — worth the short trip out to Lapad.",
     filterKeys: ["fine-dining", "local"],
@@ -308,7 +308,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Azur is one of Dubrovnik's more surprising and rewarding restaurants — a small, stylish spot in the quiet upper lanes of the Old Town that fuses Adriatic seafood and Mediterranean ingredients with the flavours and techniques of Southeast Asia. The result is a genuinely original menu: local fish and shellfish appearing in fragrant Thai-style curries, dumplings and noodle dishes, spiced and balanced in a way you simply won't find in the city's many traditional konobas. It's a welcome change of pace if you've been eating grilled fish and black risotto for days, and the cooking is confident and consistently well reviewed. The setting, on a peaceful side street away from the Stradun crowds, is intimate and relaxed, with tables spilling onto the lane in summer, and prices sit at a reasonable mid-range level that undercuts the fine-dining rooms. Because it's small and popular, booking ahead is sensible in high season. For adventurous eaters who want something creative and different — a clever east-meets-Adriatic crossover in an atmospheric corner of the Old Town — Azur is a standout and a refreshing addition to Dubrovnik's dining scene.",
   },
   {
-    name: "Kopun", slug: "kopun", image: RES("kopun.webp"),
+    name: "Kopun", slug: "kopun", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.5, reviewCount: 3900, price: "€€", area: "Old Town", type: "Dalmatian",
     tip: "Named for its signature dish — capon, an old Dubrovnik speciality. The terrace on quiet Bošković Square is one of the loveliest in the Old Town.",
     filterKeys: ["local", "family"],
@@ -317,7 +317,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Kopun takes its name from its signature dish — kopun, or capon, a historic Dubrovnik speciality — and its whole ethos is the revival of old Ragusan recipes that had largely disappeared from the city's menus. Set on the peaceful Ruđer Bošković Square beside the Jesuit church, at the top of the atmospheric flight of steps in the upper Old Town, it has one of the loveliest and calmest terrace settings in Dubrovnik, well away from the Stradun bustle. The kitchen focuses on traditional Dalmatian and specifically Dubrovnik cooking — the slow-cooked capon with pasta, local lamb, fresh fish, seasonal vegetables and old-fashioned desserts — using quality local ingredients and a genuine sense of culinary heritage. It's mid-priced, welcoming and equally suited to couples and families, and the combination of interesting, rooted food and a gorgeous square makes it a memorable choice. Because the terrace is deservedly popular on warm evenings, it's worth reserving ahead. For visitors who want to taste authentic, historic Dubrovnik dishes rather than generic tourist fare, in one of the Old Town's prettiest and most tranquil corners, Kopun is a delightful and characterful pick.",
   },
   {
-    name: "Lucin Kantun", slug: "lucin-kantun", image: RES("lucin-kantun.webp"),
+    name: "Lucin Kantun", slug: "lucin-kantun", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.6, reviewCount: 2600, price: "€€", area: "Old Town", type: "Dalmatian Tavern",
     tip: "A tiny, cash-friendly konoba doing simple grilled fish and homemade pasta really well — only a handful of tables, so book.",
     filterKeys: ["local"],
@@ -326,7 +326,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Lucin Kantun is a tiny, much-loved konoba (traditional tavern) tucked down a small lane just off Stradun, and a firm favourite with visitors seeking honest, home-style Dalmatian cooking without fuss or a tourist mark-up. With only a handful of tables inside and a few more out on the lane, it feels intimate and personal, and the short, focused menu does the simple things very well: freshly grilled fish, homemade pasta, seafood, good salads and a few daily specials driven by what's fresh, all cooked with care and served in generous portions. The atmosphere is relaxed and friendly, the sort of place where the owner might recommend a dish and pour you a glass of local wine, and prices are fair for the quality and the Old Town location. Because it's so small and its reputation has spread, tables go quickly in high season, so booking ahead — or arriving early — is essential. It's cash-friendly, so come prepared. For travellers who want a genuine, unpretentious taste of Dalmatian home cooking in an authentic little tavern rather than a slick tourist restaurant, Lucin Kantun is a real Old Town gem.",
   },
   {
-    name: "Taj Mahal", slug: "taj-mahal", image: RES("taj-mahal.webp"),
+    name: "Taj Mahal", slug: "taj-mahal", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.5, reviewCount: 4100, price: "€€", area: "Old Town", type: "Bosnian",
     tip: "Despite the name, this is a Bosnian restaurant, not Indian — go for the ćevapi, burek and slow-cooked stews under the sač.",
     filterKeys: ["local", "family"],
@@ -335,7 +335,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Taj Mahal is one of Dubrovnik's most enjoyable surprises: despite the name and the exotic decor, it is not an Indian restaurant at all but a long-running Bosnian one, styling itself the 'little emperor' of Bosnian cuisine. Tucked into a small Old Town lane and dressed in warm Ottoman-influenced style, it serves the hearty, comforting food of Bosnia and Herzegovina — ćevapi (grilled minced-meat fingers) with fluffy somun bread, flaky burek and other savoury pastries, slow-cooked meat and vegetable stews prepared under the sač (a bell-shaped lid buried in embers), stuffed vegetables and rich, syrupy desserts like baklava and tufahije. It's a flavourful, filling and comparatively affordable change from the seafood and pasta found in most of the city's restaurants, and the generous portions and friendly atmosphere make it a good choice for families and groups. Cosy inside and with a few tables on the lane, it can get busy, so booking is sensible in high season. For travellers curious to try authentic Bosnian home cooking — warm, meaty and satisfying — in the middle of the Old Town, Taj Mahal is a characterful and rewarding pick.",
   },
   {
-    name: "Dubrovnik Beer Factory", slug: "dubrovnik-beer-factory", image: RES("dubrovnik-beer-factory.webp"),
+    name: "Dubrovnik Beer Factory", slug: "dubrovnik-beer-factory", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.4, reviewCount: 4800, price: "€€", area: "Old Town", type: "Craft Beer & Grill",
     tip: "A big, buzzy hall for craft beer, burgers and live music in a former arsenal — a relaxed, good-value choice for groups.",
     filterKeys: ["budget", "family"],
@@ -344,7 +344,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Dubrovnik Beer Factory is a large, lively and relaxed spot in the Old Town that offers a welcome change from the city's smart seafood restaurants — a spacious hall set in a cavernous former arsenal, with high ceilings, long tables and a buzzy, informal atmosphere. The draw is craft beer: a good range of Croatian and local brews on tap, served alongside crowd-pleasing food like burgers, ribs, grilled meats, pub-style sharing plates and hearty mains that suit a casual night out. It regularly hosts live music and events, giving it more of a bar-and-hangout feel than a formal restaurant, and its size and communal seating make it a solid choice for groups, families with teenagers and anyone who just wants a laid-back meal and a good pint without ceremony. Prices are gentle by Old Town standards, which is part of its appeal in an expensive city. It gets busy and can be loud in the evenings, especially when there's music on, so it's better for a fun, sociable night than a quiet dinner. For affordable, easy-going food and a proper selection of craft beer in an atmospheric old building, the Beer Factory is a dependable Old Town crowd-pleaser.",
   },
   {
-    name: "Pekarna Trampolin", slug: "pekarna-trampolin", image: RES("pekarna-trampolin.webp"),
+    name: "Pekarna Trampolin", slug: "pekarna-trampolin", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
     rating: 4.5, reviewCount: 2100, price: "€", area: "Old Town", type: "Bakery",
     tip: "The best budget breakfast in the Old Town — flaky burek and pastries for around €5. Grab-and-go for a picnic on the walls.",
     filterKeys: ["budget", "local", "family"],
@@ -357,7 +357,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (10) ──────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Hotel Excelsior", slug: "hotel-excelsior", image: HOT("hotel-excelsior.webp"),
+    name: "Hotel Excelsior", slug: "hotel-excelsior", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.7, reviewCount: 3800, price: "€€€€", area: "Ploče", type: "Luxury (5★)",
     tip: "Five-star classic just east of the Old Town — the pool and many rooms look straight back at the walls and Lokrum.",
     filterKeys: ["luxury"],
@@ -366,7 +366,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Hotel Excelsior is one of Dubrovnik's grand five-star institutions, set on the Ploče shore just a short walk east of the Old Town, and long a favourite of visiting celebrities and dignitaries. Its great asset is the outlook: the seawater pool, terraces and many of the rooms and suites gaze straight back across the water at the floodlit Old Town walls and Lokrum island, one of the most iconic views in the city, spectacular by day and magical after dark. Behind a historic façade the interiors are contemporary and polished, with a spa, several restaurants and bars (including fine dining with that same wall-and-sea panorama), a private beach area and the slick service you'd expect at this level. The location is ideal — close enough to stroll into the Old Town in ten minutes, yet set apart enough to feel like a calm retreat by the sea. Rates are firmly luxury, typically from several hundred dollars a night and much higher in peak summer. For travellers who want a special-occasion, view-led five-star stay within easy reach of the Old Town, the Excelsior is one of Dubrovnik's benchmark addresses.",
   },
   {
-    name: "Villa Dubrovnik", slug: "villa-dubrovnik", image: HOT("villa-dubrovnik.webp"),
+    name: "Villa Dubrovnik", slug: "villa-dubrovnik", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.8, reviewCount: 1900, price: "€€€€", area: "Ploče", type: "Cliff-Villa Luxury (5★)",
     tip: "A serene, tiered five-star cut into the cliff with its own beach and boat shuttle to the Old Town — the most tranquil luxury in the city.",
     filterKeys: ["luxury", "boutique"],
@@ -375,7 +375,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Villa Dubrovnik is arguably the city's most serene luxury hotel — a sleek, contemporary property cascading down the cliffs just outside the Old Town in the Ploče area, all clean lines, natural stone and glass, with tier upon tier of rooms and terraces stepping down to the water. Every room faces the sea, most with a private balcony looking towards the Old Town and Lokrum, and the whole design is built around light, calm and the Adriatic view. Facilities are top-tier and beautifully understated: a spa, an infinity-edge pool, an acclaimed rooftop restaurant, a private pebble beach terrace and, charmingly, the hotel's own boat that shuttles guests around the headland into the Old Town, so you can arrive by sea. It's intimate and adults-oriented in feel, prized by honeymooners and anyone seeking a quiet, design-led retreat rather than a big resort. The setting means a short walk or boat ride to the sights, but the hotel is very much a destination in itself. Rates are at the very top of the market. For understated, tranquil, view-obsessed five-star luxury, Villa Dubrovnik is the city's most romantic choice.",
   },
   {
-    name: "Grand Villa Argentina", slug: "grand-villa-argentina", image: HOT("grand-villa-argentina.webp"),
+    name: "Grand Villa Argentina", slug: "grand-villa-argentina", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.6, reviewCount: 3200, price: "€€€€", area: "Ploče", type: "Cliff Resort (5★)",
     tip: "A cluster of grand villas and pools tumbling down the cliff right outside the walls — the closest big five-star to the Old Town.",
     filterKeys: ["luxury", "family"],
@@ -384,7 +384,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Grand Villa Argentina is a handsome five-star cliffside resort immediately east of the Old Town in Ploče — arguably the closest large luxury hotel to the walls, just a five-minute walk from Ploče Gate. It's really a small cluster of buildings, including grand historic villas, tumbling down the cliff to the sea, with a series of swimming pools (indoor and outdoor), sun terraces and a rocky bathing area all enjoying that classic view back towards the Old Town and Lokrum. The rooms and suites blend classic comfort with sea-facing balconies, and facilities include a spa, restaurants and bars, and direct access to the water. Its size and range of pools and services make it a bit more family- and group-friendly than the more boutique cliff hotels nearby, while still delivering full five-star polish and one of the best locations in the city for combining a resort feel with quick access to the sights. Rates are luxury-level, especially in high summer. For travellers who want a proper resort with multiple pools and sea views, yet want to be able to walk into the Old Town in minutes, the Grand Villa Argentina is an excellent choice.",
   },
   {
-    name: "Hilton Imperial Dubrovnik", slug: "hilton-imperial", image: HOT("hilton-imperial.webp"),
+    name: "Hilton Imperial Dubrovnik", slug: "hilton-imperial", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.6, reviewCount: 4600, price: "€€€", area: "Pile", type: "Historic Luxury (5★)",
     tip: "A grand 19th-century five-star literally steps from Pile Gate — the most convenient upmarket base for exploring on foot.",
     filterKeys: ["luxury", "central"],
@@ -393,7 +393,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Hilton Imperial Dubrovnik combines a grand 19th-century building with reliable five-star Hilton comforts and, above all, an unbeatable location — literally steps from Pile Gate, the western entrance to the Old Town, making it the most convenient upmarket base in the city for exploring on foot. Originally opened in 1897 and beautifully restored, it retains a stately, historic feel while offering thoroughly modern rooms and suites, an indoor pool and spa, a restaurant and a smart bar, and the consistency and loyalty perks that come with a major international brand. From the door you can be on Stradun in a couple of minutes, with the cable-car station, Fort Lovrijenac and the main bus stops all close by, so it's ideal for travellers who want to maximise sightseeing time and minimise transfers. Because it's just outside the walls rather than perched on the coast, sea views are limited compared with the cliff hotels, but the trade-off is that peerless central position and dependable service. Rates are high-end but often a touch more accessible than the top cliffside five-stars. For a polished, historic and supremely well-located luxury stay, the Hilton Imperial is a strong choice.",
   },
   {
-    name: "The Pučić Palace", slug: "pucic-palace", image: HOT("the-pucic-palace.webp"),
+    name: "The Pučić Palace", slug: "pucic-palace", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.5, reviewCount: 1400, price: "€€€€", area: "Old Town", type: "Palace Boutique (5★)",
     tip: "A 17th-century aristocratic palace with just 19 rooms right on the Gundulić market square — the ultimate stay inside the walls.",
     filterKeys: ["luxury", "boutique", "central"],
@@ -402,7 +402,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Pučić Palace is the definitive way to sleep inside Dubrovnik's walls in style — an intimate five-star boutique hotel occupying a restored 17th-century Baroque palace, once the home of a Ragusan noble family, right on the atmospheric Gundulić Square where the morning market sets up its stalls. With just 19 individually styled rooms and suites, it feels exclusive and personal, blending original features (stone, antiques, period detailing) with plush contemporary comfort, and putting you at the very centre of the Old Town, with Stradun, the cathedral and the main sights all on the doorstep. Facilities befit the setting: an elegant café-restaurant on the square, a rooftop terrace bar and refined, attentive service. The trade-off of a true Old Town address is that there's no pool or beach and the pedestrianised location means arriving with luggage on foot, but for many that's a small price for waking up in the middle of a living medieval city, market chatter drifting up from the square below. Rates are firmly luxury. For a romantic, characterful and utterly central boutique stay steeped in Dubrovnik's history, the Pučić Palace is unmatched.",
   },
   {
-    name: "Hotel Bellevue", slug: "hotel-bellevue", image: HOT("hotel-bellevue.webp"),
+    name: "Hotel Bellevue", slug: "hotel-bellevue", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.6, reviewCount: 2900, price: "€€€", area: "Above Miramare Bay", type: "Cliffside (5★)",
     tip: "Dramatically built into the cliff above its own pebble cove, with a lift down to the beach and a spa — great for a swim-focused stay.",
     filterKeys: ["luxury", "family"],
@@ -411,7 +411,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Hotel Bellevue is one of Dubrovnik's most dramatically situated five-stars, built into the cliff face above the sheltered pebble cove of Miramare Bay, a short distance west of the Old Town. The clever design means you enter at the top and the hotel descends the cliff below you, so rooms look out over the sea and the west-facing bay catches spectacular sunsets, while a lift takes guests straight down to the hotel's own private beach — a genuine rarity that makes it especially appealing for a swim- and sun-focused stay. Facilities include a well-regarded spa, indoor and outdoor pools, a restaurant and bars with those sunset views, and the beach cove below with loungers and water access. It's close enough to reach the Old Town on foot in around 15 minutes (or a quick bus/taxi) yet set in a calmer residential stretch of coast, balancing beach-resort relaxation with sightseeing convenience. The combination of private beach, spa and sunset outlook makes it a strong choice for couples and families who want plenty of time by the water. Rates are luxury but often a little below the Old Town cliff hotels. For a beach-and-view-led five-star, the Bellevue is excellent.",
   },
   {
-    name: "Hotel Kazbek", slug: "hotel-kazbek", image: HOT("hotel-kazbek.webp"),
+    name: "Hotel Kazbek", slug: "hotel-kazbek", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.6, reviewCount: 900, price: "€€€", area: "Gruž (Lapad)", type: "16th-Century Villa Boutique (4★)",
     tip: "A tiny 13-room boutique in a restored 16th-century summer villa with a courtyard and pool — a peaceful, characterful alternative to the Old Town.",
     filterKeys: ["boutique"],
@@ -420,7 +420,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hotel Kazbek is a jewel-box boutique hotel with just 13 rooms, set in a beautifully restored 16th-century Renaissance summer villa on the Gruž waterfront, a short ride from the Old Town. Once the aristocratic retreat of a Ragusan noble family, the building has been sensitively converted to blend original stone arches, beams and period character with refined contemporary comfort, arranged around a tranquil courtyard and a small pool. The intimate scale means a personal, quiet and romantic atmosphere quite different from the big cliff resorts, with attentive service, a good restaurant and a genuine sense of history. Its Gruž location puts it by the harbour where ferries and boat trips to the islands depart, with restaurants and everyday life close by, and the Old Town is a quick bus or taxi ride (or a longer waterfront walk) away. This is a stay for travellers who value character, calm and authenticity over resort facilities or an Old Town address, and who appreciate sleeping somewhere with real heritage. Rates are upper-mid-range, gentler than the top five-stars. For a small, historic and peaceful boutique base, Hotel Kazbek is a lovely find.",
   },
   {
-    name: "Hotel Lero", slug: "hotel-lero", image: HOT("hotel-lero.webp"),
+    name: "Hotel Lero", slug: "hotel-lero", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.3, reviewCount: 3400, price: "€€", area: "Lapad", type: "Midrange (4★)",
     tip: "A solid, well-priced four-star between Lapad and the Old Town — a 15-minute walk in, with a pool and reliable comfort.",
     filterKeys: ["central", "family"],
@@ -438,7 +438,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Apartments Placa offers a practical and more affordable way to stay right inside Dubrovnik's Old Town: self-catering apartments in the heart of the walled city, putting you steps from Stradun, the cathedral and the main sights, but with the space, kitchen and flexibility that suit families, groups and longer stays. Having a kitchen is a genuine money-saver in a city where eating out is expensive — you can shop at the Gundulić Square market or a local store and prepare some meals yourself — while the central location means you can come and go from the sights easily and experience the Old Town after the day-trippers have left. As with any Old Town accommodation, the pedestrianised setting means arriving on foot with your luggage over the cobbles, and there's no hotel-style reception, pool or daily service; you're trading those for space, independence and a prime location at a gentler price. The apartments are comfortable and well-reviewed for cleanliness and position. For budget-conscious families and groups who want the magic of sleeping within the walls without five-star rates, and value a kitchen and extra room, Apartments Placa is a sensible, good-value pick.",
   },
   {
-    name: "Hostel Angelina", slug: "hostel-angelina", image: HOT("hostel-angelina.webp"),
+    name: "Hostel Angelina", slug: "hostel-angelina", image: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
     rating: 4.4, reviewCount: 2200, price: "€", area: "Old Town", type: "Hostel",
     tip: "About the best budget bed inside the walls — dorms from around €30, with a little terrace and unbeatable Old Town position.",
     filterKeys: ["budget", "central"],
@@ -451,7 +451,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Nightlife (8) ────────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "Buža Bar", slug: "buza-bar-nightlife", image: NAT("buza-bar.webp"),
+    name: "Buža Bar", slug: "buza-bar-nightlife", image: "/images/dubrovnik/nightlife/cocktail-bar-dubrovnik.webp",
     rating: 4.6, reviewCount: 17000, price: "€6–8", area: "Old Town", type: "Cliff Bar",
     tip: "Head out through the marked hole in the south wall around 17:00 to claim a table before the sunset crowd. Cash only; no music but the sea.",
     filterKeys: ["view", "cocktails"],
@@ -460,7 +460,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "By night Buža — Croatian for 'hole' — is Dubrovnik's essential sundowner. You slip through an unmarked-looking gap in the southern city wall and emerge onto a cascade of rough limestone terraces clinging to the cliff above the open Adriatic, with nothing between you and the horizon but a plastic chair and a cold drink. There are two bars sharing the name: Buža I, smaller and higher up, and Buža II, a little lower and larger, both run on the same wonderfully simple formula of beer, wine, soft drinks and a short list of cocktails at €6–10, cash preferred, no food and no soundtrack beyond the waves crashing on the rocks below. The magic is the setting and the timing: arrive around 17:00 to be sure of a perch, order a Karlovačko or an Aperol, and watch the sun sink into the sea while the sky turns pink and gold over Lokrum island. In high summer the wait for a table can stretch to half an hour at peak sunset, so patience pays. Adventurous drinkers can even swim off the rocks below between rounds. It is touristy, yes, but it remains one of the most genuinely spectacular places to have a drink anywhere on the Dalmatian coast.",
   },
   {
-    name: "Culture Club Revelin", slug: "culture-club-revelin", image: NAT("culture-club-revelin.webp"),
+    name: "Culture Club Revelin", slug: "culture-club-revelin", image: "/images/dubrovnik/nightlife/flamenco-dubrovnik.webp",
     rating: 4.2, reviewCount: 6400, price: "€15–25", area: "Ploče Gate", type: "Nightclub",
     tip: "The city's only big club, set inside the 16th-century Revelin fortress — doors around 23:00, and it's regularly ranked among the world's most spectacular clubbing venues.",
     filterKeys: ["club", "live-music"],
@@ -478,7 +478,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "East West Beach Club on Banje Beach is Dubrovnik's smartest indoor-outdoor day-to-night venue, occupying the prime stretch of the city's closest beach just east of Ploče Gate. By day it is a polished beach club, renting loungers and parasols (around €25) on the pebbles with a restaurant and bar service and swimming straight off the shore. As the sun goes down it transforms: the loungers give way to a lounge-bar atmosphere, DJs take over, cocktails flow and the terrace fills with a well-dressed crowd — all set against one of the most photogenic backdrops imaginable, the floodlit medieval walls of the Old Town glowing across the water with Lokrum island silhouetted beyond. Cocktails run €10–15, in line with the upmarket setting, and the vibe is more chic sunset-and-cocktails than sweaty nightclub, making it a great choice for a stylish evening drink or a pre-dinner aperitivo by the sea. It occasionally hosts party nights and events in peak season. Because it combines a beach, a restaurant, sunset views and a bar in one spot right by the Old Town, it is an easy, atmospheric place to spend the transition from afternoon into evening. For glamour and that unbeatable wall-and-sea panorama, Banje is Dubrovnik's signature beach-club night out.",
   },
   {
-    name: "D'vino Wine Bar", slug: "dvino-wine-bar", image: NAT("dvino-wine-bar.webp"),
+    name: "D'vino Wine Bar", slug: "dvino-wine-bar", image: "/images/dubrovnik/nightlife/live-music-dubrovnik.webp",
     rating: 4.7, reviewCount: 3100, price: "€5–9/glass", area: "Old Town", type: "Wine Bar",
     tip: "The best place to taste Croatian wine — order a flight of three (Plavac Mali, Pošip, Dingač) with a cheese and pršut board on the lantern-lit lane.",
     filterKeys: ["wine"],
@@ -487,7 +487,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "D'vino is the Old Town's most beloved wine bar and the ideal introduction to Croatia's underrated but excellent wines. Tucked down the narrow lane of Palmotićeva just off Stradun, it is a small, convivial place with a handful of tables spilling out onto the alley under lanterns, run by knowledgeable, English-speaking staff who are happy to guide you through the list. The strength here is the focus on Croatian labels: robust reds from the indigenous Plavac Mali grape (including the prized Dingač and Postup from the nearby Pelješac peninsula), crisp whites from Pošip and Malvasia, and orange and dessert wines, many available by the glass. The signature move is a tasting flight — three or more small pours themed around a region or grape — paired with a board of local cheeses, pršut (Dalmatian cured ham) and olives, making a perfect light, grazing evening. Prices are fair, with glasses from €5–9 and flights from around €12, and the atmosphere is relaxed, chatty and low-key rather than a raucous night out. It is a lovely spot to while away a couple of hours early in the evening, learn something about Croatian viticulture, and escape the busier bars. For wine lovers, D'vino is the standout drinking address in Dubrovnik.",
   },
   {
-    name: "Troubadour Jazz Café", slug: "troubadour-jazz", image: NAT("troubadour.webp"),
+    name: "Troubadour Jazz Café", slug: "troubadour-jazz", image: "/images/dubrovnik/nightlife/nightlife-bar-dubrovnik.webp",
     rating: 4.5, reviewCount: 2400, price: "€6–10", area: "Old Town", type: "Live Music",
     tip: "A Dubrovnik institution on a quiet cathedral square with free live jazz on summer evenings — arrive early, as the tables fill fast when the music starts.",
     filterKeys: ["live-music", "cocktails"],
@@ -496,7 +496,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Troubadour Jazz Café is one of Dubrovnik's most atmospheric and long-running institutions, set on the intimate Bunićeva poljana square behind the cathedral. Founded by a member of a well-known Dubrovnik band, it has been a fixture of the city's evenings for decades and is best known for its live jazz sessions on summer nights, when musicians set up on the little square and the tables spill out under the stars between the honey-coloured stone buildings. The music — jazz, bossa nova, easy Latin grooves — is relaxed and romantic rather than showy, and the setting, in a hidden pocket of the Old Town away from the main drag, gives it a wonderfully mellow, slightly bohemian charm. Drinks run €6–10 and the focus is firmly on soaking up the ambience rather than serious cocktails or dancing. Because the square is small and the reputation large, tables fill up quickly once the music begins on peak summer evenings, so it pays to arrive early and settle in. Even outside the live-music season it remains a characterful spot for an evening drink in a lovely corner of the walled city. For a laid-back, music-filled night that captures the softer, more soulful side of Dubrovnik after dark, the Troubadour is a genuine classic.",
   },
   {
-    name: "Nonenina Cocktail Bar", slug: "nonenina", image: NAT("nonenina.webp"),
+    name: "Nonenina Cocktail Bar", slug: "nonenina", image: "/images/dubrovnik/nightlife/rooftop-bar-night-dubrovnik.webp",
     rating: 4.4, reviewCount: 2900, price: "€10–14", area: "Old Town", type: "Cocktail Bar",
     tip: "A stylish cocktail lounge with sofas on Bunićeva poljana — great for a well-made drink and people-watching in the heart of the Old Town.",
     filterKeys: ["cocktails"],
@@ -505,7 +505,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Nonenina is one of the Old Town's most stylish cocktail bars, sharing the pretty Bunićeva poljana square behind the cathedral with the Troubadour but offering a more polished, lounge-y experience. Its outdoor seating — plush cushions, low tables and sofas arranged across the square — makes it a comfortable and rather glamorous place to settle in for the evening, and it draws a fashionable crowd looking for a well-made drink in an atmospheric setting. The cocktail list is the main event, mixing the classics with signature creations and using fresh ingredients, and there is a decent selection of wines and spirits too; prices sit at the upper end, with cocktails around €10–14, reflecting both the quality and the prime Old Town location. The vibe is sophisticated and relaxed, ideal for a romantic drink, a pre- or post-dinner nightcap or simply lingering over a couple of cocktails while watching the world go by in one of Dubrovnik's loveliest small squares. Service is attentive and the setting genuinely special, with the warm stone of the surrounding buildings glowing under the lights. For travellers who want a proper cocktail in a chic, comfortable spot rather than a rowdy bar or a club, Nonenina is one of the best choices inside the walls, and a natural pairing with a jazz evening at its neighbour.",
   },
   {
-    name: "Dubrovnik Beer Factory", slug: "dubrovnik-beer-factory-nightlife", image: NAT("dubrovnik-beer-factory.webp"),
+    name: "Dubrovnik Beer Factory", slug: "dubrovnik-beer-factory-nightlife", image: "/images/dubrovnik/nightlife/cocktail-bar-dubrovnik.webp",
     rating: 4.4, reviewCount: 4800, price: "€4–7/beer", area: "Old Town", type: "Craft Beer & Live Music",
     tip: "A big, buzzy hall in a former arsenal with craft beer on tap and regular live music — the most relaxed, budget-friendly night out in the Old Town.",
     filterKeys: ["beer", "live-music"],
@@ -514,7 +514,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Dubrovnik Beer Factory offers the Old Town's most easy-going and affordable night out, a welcome antidote to the city's smart, pricey bars. Set in a vast former arsenal with soaring stone ceilings, long communal tables and a buzzy, informal atmosphere, it centres on craft beer — a rotating range of Croatian and local brews on tap, served at gentle prices of €4–7 a glass — alongside crowd-pleasing food like burgers, ribs and sharing plates. What makes it a nightlife destination rather than just a restaurant is the regular programme of live music, from local bands to acoustic sets, which fills the cavernous hall with a sociable, party energy on many evenings. The scale and communal seating make it ideal for groups, families with older teens and anyone who wants a laid-back, unpretentious evening over good beer and music without a big bill or a dress code. It can get loud and lively when a band is on, so it is better for a fun, sociable night than a quiet drink. The combination of an atmospheric historic building, a proper craft-beer selection, live music and fair prices makes it a reliable and enjoyable choice in an expensive city. For a relaxed, wallet-friendly night out in the heart of the walls, the Beer Factory is a dependable Old Town favourite.",
   },
   {
-    name: "Sky Bar Dubrovnik", slug: "sky-bar", image: NAT("sky-bar.webp"),
+    name: "Sky Bar Dubrovnik", slug: "sky-bar", image: "/images/dubrovnik/nightlife/flamenco-dubrovnik.webp",
     rating: 4.3, reviewCount: 1800, price: "€10–15", area: "Pile", type: "Rooftop Bar",
     tip: "A rooftop cocktail bar just outside Pile Gate with sweeping views over the Old Town and sea — time it for sunset and the golden hour over the walls.",
     filterKeys: ["cocktails", "view"],
@@ -527,7 +527,7 @@ export const NIGHTLIFE: BcnPlace[] = [
 // ── Shopping (8) ─────────────────────────────────────────────────────────────
 export const SHOPPING: BcnPlace[] = [
   {
-    name: "Stradun & Old Town Lanes", slug: "stradun-shopping", image: SHO("stradun.webp"),
+    name: "Stradun & Old Town Lanes", slug: "stradun-shopping", image: "/images/dubrovnik/shopping/artisan-shop-dubrovnik.webp",
     rating: 4.6, reviewCount: 22000, price: "Free", area: "Old Town", type: "Shopping Street",
     tip: "The main street and the lanes climbing off it hold most of the Old Town's shops — from souvenirs to jewellery. Prices are highest here; step a lane or two back for better value.",
     filterKeys: ["gifts", "fashion"],
@@ -536,7 +536,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Stradun, the Old Town's dead-straight limestone main street, and the maze of stepped lanes climbing off it form the heart of Dubrovnik's shopping. Along the polished thoroughfare and its side alleys you will find the full range of what the city sells: souvenir shops stacked with fridge magnets, Game of Thrones memorabilia and postcards; boutiques selling Croatian designer clothing and jewellery; gourmet stores full of olive oil, truffles, wine, rakija (fruit brandy) and lavender products from the islands; and specialist workshops making filigree jewellery, hats and gifts. As with everything in the walled city, the trade-off is convenience versus price — the shops directly on Stradun and around the busiest gates charge a premium, while stepping a lane or two back, or into the upper reaches of the Old Town, often turns up the same or better goods at gentler prices and with more character. The pedestrianised, car-free setting makes browsing a pleasure, especially in the softer light of early morning or evening after the cruise crowds thin. Beyond the obvious souvenirs, look out for genuinely local buys: Konavle embroidery, Dubrovnik filigree, quality olive oils and Croatian wines. It is less a single destination than the connective tissue of the whole Old Town shopping experience — wander, browse and let the lanes lead you.",
   },
   {
-    name: "Gundulić Square Market", slug: "gundulic-market", image: SHO("gundulic-market.webp"),
+    name: "Gundulić Square Market", slug: "gundulic-market", image: "/images/dubrovnik/shopping/mall-dubrovnik.webp",
     rating: 4.4, reviewCount: 6800, price: "€", area: "Old Town", type: "Open-Air Market",
     tip: "The morning market (from ~07:00) sells lavender sachets, candied orange peel, dried figs, local honey and rakija — great edible souvenirs straight from Konavle growers.",
     filterKeys: ["market", "food"],
@@ -545,7 +545,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Gundulić Square (Gundulićeva poljana), just off Stradun behind the cathedral, hosts Dubrovnik's charming daily morning market and is the best place in the Old Town to buy authentic, local edible souvenirs. Beneath the statue of the poet Ivan Gundulić, growers and traders from the surrounding Konavle countryside set up stalls from around seven in the morning, selling a fragrant array of local produce: bundles of dried lavender and lavender oil and sachets (a speciality of the nearby island of Hvar and the Dalmatian hinterland), candied orange and lemon peel, dried figs, homemade honey, olive oil, seasonal fruit and vegetables, nuts, and bottles of rakija and homemade liqueurs. It is a photogenic, atmospheric slice of everyday life in the walled city, and the goods make excellent gifts to take home — genuinely local, easy to pack and far more meaningful than mass-produced trinkets. Prices are reasonable and a little gentle haggling is acceptable. The market winds down by early afternoon, so come in the morning, ideally early before the cruise crowds arrive, when the light is lovely and the square is at its liveliest. Combine a visit with a coffee at one of the square's cafés and a browse of the surrounding lanes. For a taste of local Dubrovnik and the best food-based souvenirs in the Old Town, Gundulić market is a delight.",
   },
   {
-    name: "Uje Olive Oil & Gourmet", slug: "uje", image: SHO("uje.webp"),
+    name: "Uje Olive Oil & Gourmet", slug: "uje", image: "/images/dubrovnik/shopping/outdoor-market-dubrovnik.webp",
     rating: 4.6, reviewCount: 2600, price: "€€", area: "Old Town", type: "Gourmet Food",
     tip: "A smart Croatian gourmet chain — the place for quality Dalmatian olive oils, truffle products, sea salt, wines and beautifully packaged edible gifts.",
     filterKeys: ["food", "gifts"],
@@ -554,7 +554,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Uje is a smart Croatian gourmet food shop and one of the best places in Dubrovnik to buy high-quality edible souvenirs and gifts. The name comes from the old Dalmatian word for olive oil, and premium extra-virgin oils are the heart of the range — carefully sourced single-estate and regional Croatian oils that make a genuinely local and useful gift — but the shelves also carry an appealing array of other Dalmatian and Croatian delicacies: truffle products from Istria, flavoured and plain sea salt from the Adriatic pans, olives and tapenades, fig and citrus preserves, honey, wines, rakija and craft spirits, and chocolates, all attractively packaged. The shop is stylishly presented, a cut above the generic souvenir stores, and the staff can advise on and often let you taste the oils. Prices reflect the quality — oils from around €10, gift sets and specialist items higher — but you are buying the real thing rather than a mass-market trinket, and the products travel well and pack easily. With branches in several Croatian tourist towns, Uje has become a reliable name for authentic gourmet buys. For food-loving travellers wanting to take home a taste of Dalmatia — a bottle of proper Croatian olive oil, some truffle paste or a jar of local honey — Uje is the go-to gourmet address in the Old Town.",
   },
   {
-    name: "Kawa Gift Shop", slug: "kawa-gift-shop", image: SHO("kawa-gift-shop.webp"),
+    name: "Kawa Gift Shop", slug: "kawa-gift-shop", image: "/images/dubrovnik/shopping/shopping-street-dubrovnik.webp",
     rating: 4.8, reviewCount: 1900, price: "€€", area: "Ploče Gate", type: "Concept / Gifts",
     tip: "A curated concept store championing 'made in Croatia' design — the best spot for original, non-tacky souvenirs and gifts from independent Croatian makers.",
     filterKeys: ["gifts", "fashion"],
@@ -563,7 +563,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Kawa is a beautifully curated concept store just outside Ploče Gate that has become the go-to destination for original, high-quality Croatian souvenirs and gifts — the antidote to the mass-produced trinkets found in so many Old Town shops. Its guiding principle is to stock only products made in Croatia by independent designers, artisans and small producers, so browsing its well-designed shelves is a tour of the country's contemporary creative and culinary scene: stylish clothing and accessories, ceramics, prints and homewares, natural cosmetics and lavender products, craft spirits, gourmet foods, chocolates, wines and quirky design objects, all attractively presented and genuinely local. The staff are friendly and knowledgeable about the makers behind the products, and the whole ethos supports Croatian creativity rather than importing generic tourist tat. Prices are fair for the quality and originality, spanning small affordable gifts to more substantial design pieces. Its location just beyond the eastern gate, slightly away from the busiest crush, makes it a pleasant browse, and it is regularly cited by visitors as their favourite shop in the city. For travellers who want to take home something authentic, well-made and distinctly Croatian — a real gift rather than a fridge magnet — Kawa is the standout shopping stop in Dubrovnik and well worth seeking out.",
   },
   {
-    name: "Maria Store", slug: "maria-store", image: SHO("maria-store.webp"),
+    name: "Maria Store", slug: "maria-store", image: "/images/dubrovnik/shopping/souvenir-shop-dubrovnik.webp",
     rating: 4.4, reviewCount: 800, price: "€€€€", area: "Old Town", type: "Designer Fashion",
     tip: "Dubrovnik's high-fashion address — a multi-brand luxury boutique stocking international designer labels for those in the mood for a splurge.",
     filterKeys: ["fashion"],
@@ -572,7 +572,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Maria Store is Dubrovnik's premier luxury fashion destination, a multi-brand designer boutique that brings international high fashion to the medieval Old Town. Long established as the city's leading upmarket clothing address, it carries a carefully chosen selection of women's and men's designer labels — clothing, shoes, bags and accessories from major luxury houses and fashion-forward brands — displayed in a polished, contemporary retail space that would not look out of place in Milan or Paris. It caters to the well-heeled visitors who arrive on yachts and in the top cliff hotels, as well as anyone in the mood for a serious splurge or simply curious to browse. Prices are, unsurprisingly, at the luxury end, so this is aspirational window-shopping for many, but for those seeking designer pieces it is by far the most comprehensive option in the city, saving a trip to a bigger fashion capital. The presence of such a boutique reflects Dubrovnik's status as a glamorous, high-end holiday destination on the Adriatic. Even non-shoppers may enjoy the contrast of gleaming designer fashion housed within the ancient stone of the walled city. For visitors with a taste for luxury labels and the budget to match, or those needing a special outfit for a smart dinner or event, Maria Store is Dubrovnik's fashion flagship and the address to know.",
   },
   {
-    name: "Ronchi Hat Atelier", slug: "ronchi", image: SHO("ronchi.webp"),
+    name: "Ronchi Hat Atelier", slug: "ronchi", image: "/images/dubrovnik/shopping/vintage-market-dubrovnik.webp",
     rating: 4.7, reviewCount: 600, price: "€€€", area: "Old Town", type: "Artisan Hats",
     tip: "A tiny milliner's workshop open since 1858, hand-making hats to century-old designs — a wonderfully characterful, one-of-a-kind Dubrovnik buy.",
     filterKeys: ["fashion", "gifts"],
@@ -590,7 +590,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Dubrovnik Treasures specialises in one of the city's most distinctive traditional crafts: filigree jewellery, the intricate art of twisting and soldering fine threads of silver and gold into delicate, lace-like patterns. This technique has deep roots along the Dalmatian coast, and the shop's signature offering is the famous 'Dubrovnik button' (dubrovački puce), a spherical filigree bead traditionally worn as earrings, cufflinks and pendants and long associated with the folk costume of the surrounding Konavle region — an instantly recognisable, authentically local piece that makes a beautiful and meaningful souvenir or gift. Alongside the classic buttons, the range includes filigree earrings, necklaces, brooches, rings and pendants, as well as pieces incorporating coral and other stones, worked in both silver and gold. The craftsmanship is genuine and the designs draw on centuries of Dubrovnik tradition, setting these apart from the cheap costume jewellery sold in generic souvenir stalls. Prices span affordable silver pieces from around €30 up to more substantial gold work, so there is something for a range of budgets. Buying handmade filigree here supports a living local craft and gives you a wearable piece of Dubrovnik's heritage to take home. For travellers seeking an elegant, traditional and genuinely regional keepsake, filigree jewellery is one of the finest buys in the city, and Dubrovnik Treasures a reliable place to find it.",
   },
   {
-    name: "Lokrum & Souvenir Stalls", slug: "lokrum-market", image: SHO("lokrum-market.webp"),
+    name: "Lokrum & Souvenir Stalls", slug: "lokrum-market", image: "/images/dubrovnik/shopping/artisan-shop-dubrovnik.webp",
     rating: 4.2, reviewCount: 1500, price: "€", area: "Old Town", type: "Souvenirs",
     tip: "For classic, cheap souvenirs — magnets, prints, Game of Thrones gear and Croatia football shirts — the stalls and small shops near the gates are the place; always compare a couple before buying.",
     filterKeys: ["gifts"],
@@ -612,7 +612,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Aquapark Dubrovnik is the city's dedicated family water park, spread across a hillside site above the town with panoramic views out to the sea and islands. It is purpose-built to keep children and teenagers happily occupied for a whole day, with a good spread of attractions for different ages and nerve levels: a range of water slides from gentle to adrenaline-pumping, swimming pools, a relaxing lazy river to float around, a dedicated children's splash zone with smaller slides for little ones, plus sun terraces, loungers and food and drink outlets for parents. The elevated setting means the views are a bonus, and the whole complex is modern and well maintained. It operates seasonally through the warmer months, roughly June to September, when a day here makes a refreshing change from sightseeing in the heat and a guaranteed hit with kids who may have had their fill of medieval walls and museums. Tickets run around €25 for adults and €18 for children, with family options, and a free shuttle bus conveniently connects the park with the Pile Gate area, removing the hassle of getting up the hill. It can get busy at the height of summer, so arriving earlier in the day helps secure loungers. For families travelling with children who need a fun, active, splash-filled break from culture, Aquapark Dubrovnik is the obvious and dependable choice.",
   },
   {
-    name: "Dubrovnik Aquarium", slug: "dubrovnik-aquarium", image: KID("aquarium-dubrovnik.webp"),
+    name: "Dubrovnik Aquarium", slug: "dubrovnik-aquarium", image: "/images/dubrovnik/with-kids/aquarium-dubrovnik.webp",
     rating: 4.1, reviewCount: 2400, price: "€10", area: "Old Town", type: "Aquarium", ageGroup: "All ages",
     tip: "Set inside the cool stone chambers of St John Fortress — a great rainy-day or midday-heat option, with Adriatic sea life from octopus to loggerhead turtles.",
     filterKeys: ["indoor"],
@@ -621,7 +621,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Dubrovnik Aquarium offers a compact but enjoyable indoor activity for families, and its setting is part of the appeal: it occupies the cool, atmospheric stone chambers on the ground floor of St John Fortress, the great bastion guarding the entrance to the Old Town harbour. Run as part of the Institute for Marine and Coastal Research, it displays a variety of Adriatic Sea life in a series of tanks, giving children an accessible introduction to the creatures living in the waters they can see all around the city: colourful Mediterranean fish, octopus, moray eels, sea anemones, crabs, seahorses and, often a highlight, loggerhead sea turtles that have been rescued and rehabilitated. It is not a huge, modern mega-aquarium, so a visit takes perhaps 45 minutes to an hour, but that makes it an ideal, manageable stop for younger children and a genuinely useful option when you need to escape the fierce midday summer heat or a rare rainy day, the thick fortress walls keeping the interior naturally cool. Entry is inexpensive at around €10 for adults and €5 for children. Combining a marine-life visit with the chance to step inside one of the Old Town's mighty fortresses gives it added value. For families seeking a low-key, educational and weather-proof activity in the heart of the walled city, the aquarium is a solid choice.",
   },
   {
-    name: "Banje Beach", slug: "banje-beach-kids", image: KID("banje-beach.webp"),
+    name: "Banje Beach", slug: "banje-beach-kids", image: "/images/dubrovnik/with-kids/family-park-dubrovnik.webp",
     rating: 4.4, reviewCount: 15000, price: "Free", area: "Ploče", type: "Beach", ageGroup: "All ages",
     tip: "The closest beach to the Old Town, with shallow, clear water, pedalos and paddleboards to hire and the free public zone perfect for a family swim.",
     filterKeys: ["beach", "active"],
@@ -630,7 +630,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Banje is Dubrovnik's most convenient beach for families, a pebble strand just a three-minute walk east of Ploče Gate with the wonderful bonus of a postcard view back to the Old Town walls and Lokrum island. Its proximity means you can easily combine a morning of sightseeing with an afternoon swim without any transport, a real boon when travelling with children who need a break from walking and culture. The water is clear, turquoise and shelves gently near the shore, making it reasonably suited to a family paddle and swim, and there is plenty to keep older kids entertained: pedalos, kayaks and stand-up paddleboards to hire, and gentle watersports in season. The beach divides into the East West Beach Club section, where you can pay for loungers, parasols and full service including a restaurant and clean facilities (handy with young children), and a free public zone where you lay out your own towels. Being pebble rather than sand, water shoes are a good idea for little feet, and as a busy city beach it can get crowded at the height of summer, so arriving earlier in the day helps. Snacks and drinks are available but pricey, so bringing your own is sensible. For an easy, accessible family beach break right beside the Old Town, with services on hand and that iconic wall view, Banje is the natural choice.",
   },
   {
-    name: "Lokrum Island", slug: "lokrum-island-kids", image: KID("lokrum-island.webp"),
+    name: "Lokrum Island", slug: "lokrum-island-kids", image: "/images/dubrovnik/with-kids/kids-museum-dubrovnik.webp",
     rating: 4.7, reviewCount: 22000, price: "€27", area: "Lokrum (10 min by boat)", type: "Island", ageGroup: "All ages",
     tip: "A short boat ride to an island of wild peacocks, a salt-lake swimming spot, a botanical garden and a sittable Iron Throne — kids love the crossing and the roaming birds.",
     tiqetsUrl: tiqets("Lokrum island Dubrovnik"), filterKeys: ["boat", "active"],
@@ -639,7 +639,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Lokrum makes a wonderful family day out, combining a fun boat trip with a car-free island full of things to delight children. The crossing itself, a ten-minute ferry from the Old Town harbour that runs every half hour in summer, is an adventure for young ones, and once ashore the island is a safe, traffic-free natural playground. The undisputed stars for kids are the wild peacocks that roam freely across the island, strutting along paths and displaying their tails — descendants of birds introduced in the 1800s and utterly unbothered by visitors, they make for magical encounters and photos. Beyond the peacocks there is plenty to explore: the Mrtvo More or 'Dead Sea', a small saltwater lake connected to the sea where the calm, shallow, buoyant water is ideal and safe for children to swim; a botanical garden with cacti and exotic plants (and often rabbits); the atmospheric ruins of an 11th-century monastery to clamber around; shady pine forest trails; and a Game of Thrones exhibition with a replica Iron Throne the kids can sit on. Pack a picnic, water, sun protection and swimming things, as facilities are limited to one restaurant and a café, and note the last boat back leaves around 19:00. For a memorable, active, nature-filled family day just offshore, Lokrum is one of the very best things to do in Dubrovnik with children.",
   },
   {
-    name: "Mount Srđ Cable Car", slug: "mount-srd-kids", image: KID("mount-srd-linbana.webp"),
+    name: "Mount Srđ Cable Car", slug: "mount-srd-kids", image: "/images/dubrovnik/with-kids/tibidabo-dubrovnik.webp",
     rating: 4.7, reviewCount: 29000, price: "€27", area: "Srđ", type: "Cable Car", ageGroup: "All ages",
     tip: "A quick, thrilling ride to the 778 m summit for a jaw-dropping view — short enough for restless kids, and there's a café and a buggy-track adventure at the top.",
     tiqetsUrl: tiqets("Dubrovnik Cable Car"), filterKeys: ["active"],
@@ -648,7 +648,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Srđ cable car is a great family activity that packs a big reward into a short, low-effort trip. The ride itself, whisking you 778 metres up Mount Srđ in a little over four minutes, is a mini-adventure that most children find thrilling rather than daunting, and crucially it is quick enough not to test the patience of restless little ones. At the summit the payoff is spectacular: a vast panorama over the Old Town laid out like a toy model of red roofs and walls far below, Lokrum island, the Elafiti islands and, on clear days, views said to stretch as far as Italy — a wonderful way for kids to grasp the geography of the city they have been exploring. The top station has a café and restaurant where families can have a drink or a meal with the view, a souvenir shop, and space to walk around safely and take in the scenery. There is also the Napoleonic Imperial Fort housing a small museum, and buggy or off-road adventure activities sometimes operate on the mountain for older children and teens. Buy a return ticket, and consider timing the trip for late afternoon to catch the golden light, though be mindful of the last descent around 19:00. Strollers are manageable. For an easy, exciting, view-packed outing the whole family will remember, the cable car up Srđ is a Dubrovnik highlight.",
   },
   {
-    name: "Sea Kayaking Around the Walls", slug: "sea-kayaking-kids", image: KID("kajak-havet.webp"),
+    name: "Sea Kayaking Around the Walls", slug: "sea-kayaking-kids", image: "/images/dubrovnik/with-kids/zoo-dubrovnik.webp",
     rating: 4.7, reviewCount: 8500, price: "€30–40", area: "Old Town / Pile", type: "Adventure", ageGroup: "Ages 8+",
     tip: "A guided paddle beneath the city walls to a hidden beach and cave, with a swim stop — an unforgettable active outing for families with older kids and teens.",
     tiqetsUrl: tiqets("Dubrovnik sea kayaking tour"), filterKeys: ["active", "boat"],
@@ -657,7 +657,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Guided sea kayaking is one of Dubrovnik's most exhilarating activities and a brilliant adventure for families with older children and teenagers (operators generally set a minimum age of around eight). Launching from the little beach just outside Pile Gate or from the Old Town harbour, a typical three-hour guided tour takes you paddling along the base of the towering city walls — a genuinely awe-inspiring perspective, looking up at the fortifications from the water — before crossing towards Lokrum island and stopping at a hidden pebble beach and the famous Buža sea cave for a swim and snorkel in crystal-clear water. Guides lead the group, provide all the equipment and safety gear, brief beginners and keep an eye on everyone, so no experience is needed and the pace is manageable, though a reasonable level of fitness helps. Many tours include a snack or a glass of wine at the beach stop, and sunset departures add the magic of paddling back as the light turns golden on the walls. It is active, memorable and shows the city from an angle most visitors never see, giving energetic kids and teens a real sense of achievement. Bring sun protection, water shoes and a dry bag for valuables. For families wanting an active, adventurous shared experience rather than another museum, kayaking around the walls is a standout Dubrovnik outing.",
   },
   {
-    name: "Walking the City Walls", slug: "city-walls-kids", image: KID("stadsmurarna.webp"),
+    name: "Walking the City Walls", slug: "city-walls-kids", image: "/images/dubrovnik/with-kids/aquarium-dubrovnik.webp",
     rating: 4.8, reviewCount: 62000, price: "€35", area: "Old Town", type: "Walk", ageGroup: "Ages 6+",
     tip: "The famous wall walk is a real hit with kids who love castles — go at opening to beat the heat and crowds, bring water and hats, and let them count the towers and cannons.",
     tiqetsUrl: tiqets("Dubrovnik City Walls"), filterKeys: ["active"],
@@ -666,7 +666,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Walking Dubrovnik's complete circuit of medieval walls is the city's signature experience, and it can be a surprising hit with children, who often find the real-life castle setting far more exciting than the average museum. The unbroken 1,940-metre ring around the entire Old Town, up to 25 metres high, is packed with the things that fire young imaginations: massive round towers to climb, battlements and arrow-slits to peer through, old cannons pointing out to sea, and forever-changing views down over the maze of red rooftops on one side and the sparkling Adriatic on the other. For Game of Thrones-aware families there is the extra thrill of walking the walls of 'King's Landing'. That said, the walk needs a little planning with kids: it takes around 1.5 hours, there is almost no shade and a lot of steps, and in high summer the heat can be punishing, so the golden rules are to go right at opening (08:00) or later in the afternoon, bring plenty of water, hats and sunscreen, and take it at a relaxed pace with breaks. There are a few points where you can exit early or buy a drink. Younger children may tire, and a carrier can be easier than a stroller (which cannot be taken up). Turn it into a game — counting towers, spotting cannons, waving at the boats below — and the wall walk becomes a genuine adventure and the centrepiece of a family visit.",
   },
   {
-    name: "Elaphiti Islands Boat Trip", slug: "elafiti-kids", image: KID("elafiti-oarna.webp"),
+    name: "Elaphiti Islands Boat Trip", slug: "elafiti-kids", image: "/images/dubrovnik/with-kids/family-park-dubrovnik.webp",
     rating: 4.6, reviewCount: 9000, price: "€60", area: "Elafiti (from Gruž)", type: "Island Cruise", ageGroup: "All ages",
     tip: "A full-day island-hopping cruise with swimming stops and lunch aboard — kids love a day on the boat, and Lopud's sandy Šunj beach is one of the few in the region children can build sandcastles on.",
     tiqetsUrl: tiqets("Elafiti islands boat trip"), filterKeys: ["boat", "beach"],
@@ -679,7 +679,7 @@ export const WITH_KIDS: BcnPlace[] = [
 // ── Day Trips (7) ────────────────────────────────────────────────────────────
 export const DAY_TRIPS: BcnPlace[] = [
   {
-    name: "Kotor, Montenegro", slug: "kotor", image: DAG("kotor-montenegro.webp"),
+    name: "Kotor, Montenegro", slug: "kotor", image: "/images/dubrovnik/day-trips/costa-brava-landscape-dubrovnik.webp",
     rating: 4.7, reviewCount: 11000, price: "€50–100", area: "Montenegro", type: "Cross-Border Town", distance: "90 km / 2–2.5h",
     tip: "Bring your passport — this crosses into Montenegro. Leave by 07:00–08:00 to beat the border queues, which can hit 1–2 hours in peak summer.",
     tiqetsUrl: tiqets("Kotor day trip from Dubrovnik"), filterKeys: ["cross-border", "historic"],
@@ -688,7 +688,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Kotor, across the border in Montenegro, is one of the most rewarding day trips from Dubrovnik — a UNESCO-listed medieval town set deep within the spectacular Bay of Kotor, a serpentine, fjord-like inlet where sheer mountains plunge straight into the sea. The drive there is an attraction in itself, hugging the dramatic coastline of the bay past waterside villages and the two islets off Perast. Kotor's own walled old town is a labyrinth of atmospheric squares, churches and stone alleys, less polished and less crowded than Dubrovnik, guarded by 4.5 km of fortifications that zigzag improbably up the mountainside to St John's Fortress — a stiff climb of some 1,350 steps rewarded by a breathtaking view over the red roofs and the bay far below. Prices in Montenegro are noticeably lower than in Croatia. The catch is the border: Montenegro is not in the EU, so you must carry a passport, and the Debeli Brijeg crossing can back up badly in July and August, with waits of one to two hours, which is why organised tours (€50–100 per person) leave at dawn. Self-driving in a hire car gives more flexibility but check your insurance covers Montenegro (a green card may be needed). Allow a full day, returning by early evening. For dramatic scenery, a magnificent walled town and a taste of a second country, Kotor is a superb outing.",
   },
   {
-    name: "Mostar, Bosnia & Herzegovina", slug: "mostar", image: DAG("mostar-bosnien.webp"),
+    name: "Mostar, Bosnia & Herzegovina", slug: "mostar", image: "/images/dubrovnik/day-trips/girona-dubrovnik.webp",
     rating: 4.7, reviewCount: 9500, price: "€45–90", area: "Bosnia & Herzegovina", type: "Cross-Border Town", distance: "140 km / 3h",
     tip: "Come to see the iconic rebuilt Ottoman Stari Most bridge and its famous divers. Passport required; many tours pair it with the dervish house at Blagaj or Kravice waterfalls.",
     tiqetsUrl: tiqets("Mostar day trip from Dubrovnik"), filterKeys: ["cross-border", "historic"],
@@ -697,7 +697,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Mostar, in neighbouring Bosnia and Herzegovina, offers one of the most culturally fascinating day trips from Dubrovnik — a chance to step into a strikingly different world of Ottoman heritage, minarets and East-meets-West atmosphere within a few hours' drive. The town's centrepiece and symbol is the Stari Most (Old Bridge), a graceful single-arch stone bridge built by the Ottomans in 1566, destroyed during the war in 1993 and painstakingly rebuilt and reopened in 2004, now a UNESCO World Heritage Site; watching the local divers plunge from its 24-metre parapet into the emerald Neretva river below is an unforgettable spectacle. The cobbled old bazaar (Kujundžiluk) around it is a warren of coppersmiths, carpet sellers and Turkish-style cafés serving Bosnian coffee and grilled ćevapi, while poignant reminders of the 1990s conflict remain visible in shell-scarred and rebuilt buildings, adding a moving, reflective dimension to the visit. The journey takes around three hours each way, so most people come on an organised full-day tour (€45–90), which often bundles in other Herzegovinian highlights such as the beautiful Blagaj Tekke dervish monastery at the source of the Buna river, the Ottoman town of Počitelj, or the tiered Kravice waterfalls for a swim. A passport is essential as this crosses into non-EU Bosnia. It makes for a long but deeply rewarding day, combining stunning architecture, rich history and a taste of Bosnian culture and cuisine. For something genuinely different from the Adriatic coast, Mostar is exceptional.",
   },
   {
-    name: "Elaphiti Islands", slug: "elafiti", image: DAG("elafiti-oarna.webp"),
+    name: "Elaphiti Islands", slug: "elafiti", image: "/images/dubrovnik/day-trips/montserrat-dubrovnik.webp",
     rating: 4.6, reviewCount: 9000, price: "€40–60", area: "Adriatic (off Dubrovnik)", type: "Island Cruise", distance: "30–60 min by boat",
     tip: "The easiest, most relaxing day trip — a car-free three-island cruise with swimming stops and lunch aboard. Lopud's Šunj is one of the coast's rare sandy beaches.",
     tiqetsUrl: tiqets("Elafiti islands boat trip"), filterKeys: ["boat", "nature"],
@@ -706,7 +706,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The Elaphiti Islands make the easiest and most relaxing day trip from Dubrovnik — no borders, no long drives, just a short boat ride to a trio of tranquil, car-free islands strung out just off the coast. A standard full-day cruise departs Gruž harbour around nine in the morning and visits the three inhabited Elaphiti: Koločep, the smallest and greenest, with a pretty village and rocky swimming spots; Lopud, the most popular, home to Šunj, one of the very few natural sandy beaches on this predominantly pebbly coast, backed by pine and cypress woods; and Šipan, the largest, dotted with the summer villas of the old Ragusan nobility. The islands' complete absence of cars lends them a wonderfully peaceful, timeless atmosphere, and the day revolves around swimming in clear coves, strolling sleepy village lanes and enjoying lunch (typically fish or chicken with salad and wine) served aboard as the boat cruises between them. Prices run €40–60 for the full day including lunch. For more independence you can instead take the scheduled Jadrolinija public ferry from Gruž (€6–10 one-way) and explore one island at your own pace, or even stay overnight on Lopud. Bring swimming things, sun protection and a hat. Compared with the long, passport-controlled trips to Montenegro and Bosnia, the Elaphiti offer pure, low-effort Adriatic relaxation and beautiful scenery close to home. For a gentle, sun-and-sea day out, they are the perfect choice.",
   },
   {
-    name: "Ston & Pelješac Peninsula", slug: "ston-peljesac", image: DAG("peljeac-halvon.webp"),
+    name: "Ston & Pelješac Peninsula", slug: "ston-peljesac", image: "/images/dubrovnik/day-trips/penedes-vineyard-dubrovnik.webp",
     rating: 4.6, reviewCount: 4200, price: "€", area: "Pelješac", type: "Walls, Oysters & Wine", distance: "60 km / 1h",
     tip: "Climb the 'European Great Wall' of Ston, slurp just-harvested oysters at Mali Ston, then taste bold Plavac Mali reds at the Pelješac wineries — a foodie's dream day.",
     filterKeys: ["nature", "historic"],
@@ -724,7 +724,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Cavtat is the perfect easy, low-effort day (or half-day) trip from Dubrovnik — a pretty, relaxed coastal town just 15 km south, reachable in around 30 minutes on the number 10 bus from Pile Gate (about €6) or, more scenically, by a summer boat shuttle across the bay. Set on a sheltered wooded peninsula, Cavtat is older than Dubrovnik itself, founded by the ancient Greeks as Epidauros, and today offers a gentler, less crowded and more affordable counterpoint to the walled city. Its palm-lined seafront promenade (the Riva) is lined with cafés and restaurants at prices noticeably below the Old Town, and the calm, clear waters of its bays and coves make for lovely, easy swimming. Culturally it punches above its weight: it was the birthplace of Vlaho Bukovac, Croatia's most important 19th-century painter, whose childhood home is now the excellent Galerija Vlaho Bukovac (€5), displaying over 200 of his works and his preserved studio, while the hilltop cemetery holds the striking Račić Mausoleum sculpted by Ivan Meštrović. A gentle 45-minute walk around the pine-scented peninsula (the Rat) offers sea views and quiet spots to swim. With its unhurried pace, art, coves and value, Cavtat is ideal for a slower day away from the crowds, and its proximity makes it perfect if you only have half a day or want a relaxed family outing. For an easy, affordable and charming escape, Cavtat is hard to beat.",
   },
   {
-    name: "Mljet National Park", slug: "mljet", image: DAG("mljet-nationalpark.webp"),
+    name: "Mljet National Park", slug: "mljet", image: "/images/dubrovnik/day-trips/sitges-dubrovnik.webp",
     rating: 4.7, reviewCount: 5100, price: "€40–70", area: "Mljet Island", type: "National Park", distance: "1.5–2h by ferry",
     tip: "Croatia's greenest island — cycle or walk around two connected saltwater lakes and take the little boat to the island monastery. Go on a tour or the fast catamaran from Gruž.",
     filterKeys: ["nature"],
@@ -733,7 +733,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Mljet, one of the greenest and most unspoilt of Croatia's islands, is a beautiful nature-focused day trip from Dubrovnik, its western end protected as a national park of dense pine forest, two interconnected saltwater lakes and an idyllic island-within-a-lake. Reached by fast catamaran from Gruž harbour (around 1.5 hours) or on an organised boat tour, the park is a haven for gentle outdoor activity: you can walk or, better still, hire a bike to circle the shimmering Malo Jezero (Small Lake) and Veliko Jezero (Great Lake), whose warm, clear, sheltered waters are wonderful for swimming. A short boat ride (included in park entry) takes you across the Great Lake to the tiny islet of St Mary, where a 12th-century Benedictine monastery sits in serene isolation among the trees — one of the most photographed and tranquil spots in the country. Legend even holds that Odysseus was marooned on Mljet for seven years, and a cave on the coast bears his name. The island's tranquil, forested beauty and lack of crowds make it a restorative contrast to the bustle of Dubrovnik, ideal for those who love nature, cycling, walking and swimming in a pristine setting. Park entry is around €18 in summer, and organised tours (€40–70) handle the transfers and often include time in the park. Bring swimming things, comfortable shoes and water. For a peaceful, active day amid outstanding natural beauty, Mljet is a gem.",
   },
   {
-    name: "Split & Diocletian's Palace", slug: "split", image: DAG("split.webp"),
+    name: "Split & Diocletian's Palace", slug: "split", image: "/images/dubrovnik/day-trips/tarragona-dubrovnik.webp",
     rating: 4.6, reviewCount: 7200, price: "€", area: "Dalmatia (north)", type: "Historic City", distance: "230 km / 3h",
     tip: "Croatia's second city, built inside a living Roman emperor's palace. It's a long day by road, but the fast catamaran along the coast makes it more enjoyable in summer.",
     filterKeys: ["historic"],
@@ -755,7 +755,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Banje is Dubrovnik's most famous and convenient beach — a roughly 200-metre pebble strand just three minutes' walk east of Ploče Gate, with the unbeatable bonus of a postcard view across the water to the Old Town walls and Lokrum island. Its proximity to the historic centre makes it the easiest place for a swim between sightseeing, and it neatly splits into two halves: the section closest to town is run by the East West Beach Club, where around €25 gets you a lounger, parasol and access to a restaurant, bar, towels and clean facilities, while the far end is a free public zone where you spread your own towel and go without service. The water is clear and turquoise, shelving to about five metres a short way out, which makes it good for swimming and snorkelling, and there are pedalos, kayaks, paddleboards and gentle watersports to hire. As a pebble beach, water shoes help, and as the city's signature beach it gets busy in high summer, so early arrival pays. By night the beach club morphs into a stylish cocktail-and-DJ venue with the walls floodlit across the bay. Snacks and drinks are available but pricey. For the classic Dubrovnik beach experience, that iconic wall view and services close at hand right beside the Old Town, Banje is the essential choice.",
   },
   {
-    name: "Sveti Jakov Beach", slug: "sveti-jakov", image: BEA("sveti-jakov.webp"),
+    name: "Sveti Jakov Beach", slug: "sveti-jakov", image: "/images/dubrovnik/beaches/barceloneta-dubrovnik.webp",
     rating: 4.6, reviewCount: 6200, price: "Free", area: "Ploče (SE)", facilities: "Beach bar, loungers",
     tip: "A quieter local favourite reached by 160-odd steps down the cliff — the effort keeps crowds away, and the afternoon view of the sunlit Old Town is the best of any beach.",
     filterKeys: ["scenic", "pebble"],
@@ -764,7 +764,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Sveti Jakov (St James) is a beautiful, comparatively peaceful pebble beach tucked beneath the cliffs about two kilometres south-east of the Old Town, and a firm favourite with locals and in-the-know visitors seeking to escape the crowds at Banje. Getting there involves a little effort — a short bus ride (route 5 or 8) or walk followed by a descent of around 160 steps down the cliffside — and it is precisely this that keeps the beach quieter and more relaxed than the city-centre options. The reward at the bottom is a lovely stretch of pebbles and beautifully clear, turquoise water that is excellent for swimming and snorkelling, backed by greenery and enjoying a stunning, slightly distant view of the Old Town and Lokrum, which is especially magical in the afternoon and evening when the walls are bathed in golden light. There is a beach bar and restaurant above and loungers to rent, so you need not go without refreshments, though it retains a mellow, natural feel. The afternoon sun stays on the beach later than at many others, making it a great spot for a lazy day culminating in a scenic sunset swim. The climb back up the steps is the main drawback, so it suits the reasonably mobile rather than those with heavy gear or mobility issues. For a quieter, scenic and more local beach experience with a gorgeous outlook, Sveti Jakov is one of Dubrovnik's best.",
   },
   {
-    name: "Copacabana Beach (Babin Kuk)", slug: "copacabana-beach", image: BEA("copacabana-beach.webp"),
+    name: "Copacabana Beach (Babin Kuk)", slug: "copacabana-beach", image: "/images/dubrovnik/beaches/beach-bar-dubrovnik.webp",
     rating: 4.2, reviewCount: 5400, price: "Free", area: "Babin Kuk (Lapad)", facilities: "Watersports, bar, accessible",
     tip: "The best family beach — on the Lapad/Babin Kuk peninsula with shallow water, waterslides, jet-skis and a wheelchair-accessible entry. Bus 6 from the Old Town.",
     filterKeys: ["family", "pebble", "club"],
@@ -773,7 +773,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Copacabana Beach, on the Babin Kuk peninsula north-west of the centre in the Lapad area, is Dubrovnik's most family-friendly and activity-oriented beach, offering a completely different, more resort-style experience from the Old Town strands. A mixture of pebble and concrete terraces set on the peninsula facing the Elaphiti islands, it is geared squarely towards fun and convenience: the shallow, gently shelving water is ideal and safe for children, and there is a huge range of activities on offer, from inflatable waterslides and a floating aqua park to jet-skis, banana boats, pedalos, kayaks and stand-up paddleboards, plus loungers, parasols, showers, changing facilities and beach bars and restaurants. It is also one of the few beaches in the area with good accessibility, including a ramp and facilities enabling wheelchair users to reach the water. The abundance of things to do keeps children and teenagers thoroughly entertained, making it a top choice for families, though it means the beach has a busier, more commercial atmosphere than the quieter coves. It is reached easily by the number 6 bus from the Old Town/Pile (around 20 minutes), and pairs well with the leafy Lapad area's promenade, restaurants and other beaches. Sunsets here, looking out towards the islands, are lovely. For families wanting shallow water, plentiful activities, full facilities and easy access, Copacabana is Dubrovnik's premier family beach.",
   },
   {
-    name: "Lokrum Island Beaches", slug: "lokrum-island", image: BEA("lokrum-island.webp"),
+    name: "Lokrum Island Beaches", slug: "lokrum-island", image: "/images/dubrovnik/beaches/beach-sunset-dubrovnik.webp",
     rating: 4.7, reviewCount: 22000, price: "€27 boat", area: "Lokrum (10 min by boat)", facilities: "Salt lake, rocks, café",
     tip: "Swim off the rocks or in the buoyant 'Dead Sea' salt lake, and find the naturist FKK zone on the far side. Bring water shoes and a picnic; last boat back ~19:00.",
     tiqetsUrl: tiqets("Lokrum island Dubrovnik"), filterKeys: ["scenic", "family"],
@@ -782,7 +782,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Lokrum island, a lush green nature reserve just ten minutes by boat from the Old Town harbour, offers some of the most enjoyable and characterful swimming near Dubrovnik, combined with a lovely day of exploration. Rather than a single sandy beach, Lokrum's bathing is spread around its rocky coastline: flat rocks and small pebbly inlets where you can lay a towel and slip into gloriously clear, deep water, ideal for swimming and snorkelling, with some spots offering ladders for easier access. The island's most famous swimming feature is the Mrtvo More (Dead Sea), a small saltwater lake connected to the sea through underground channels, whose calm, warm, buoyant and shallow water is safe and fun, particularly good for children and less confident swimmers. There is also a designated naturist (FKK) area on the island's far, quieter side for those who wish to swim without costumes. Beyond the water, the island rewards with wild peacocks, a botanical garden, an atmospheric ruined monastery, shady pine forest trails and a Game of Thrones exhibition, so swimming can be interspersed with wandering and picnicking. Facilities are limited to a restaurant and a café, so bring water, snacks, sun protection and water shoes for the rocks. The €27 return boat ticket includes island entry, and the last boat back leaves around 19:00. For scenic, clear-water rock swimming combined with nature and history on a beautiful car-free island, Lokrum is a Dubrovnik highlight.",
   },
   {
-    name: "Bellevue (Miramare) Beach", slug: "bellevue-beach", image: BEA("bellevue-beach.webp"),
+    name: "Bellevue (Miramare) Beach", slug: "bellevue-beach", image: "/images/dubrovnik/beaches/costa-brava-dubrovnik.webp",
     rating: 4.4, reviewCount: 3800, price: "Free", area: "Miramare Bay", facilities: "Sheltered cove, sunset views",
     tip: "A sheltered pebble cove beneath the Hotel Bellevue, reached by a stairway down the cliff — west-facing, so it catches Dubrovnik's best beach sunsets.",
     filterKeys: ["scenic", "pebble"],
@@ -791,7 +791,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Bellevue Beach (also known as Miramare) is a pretty, sheltered pebble cove tucked beneath the cliffs of Miramare Bay, a short distance west of the Old Town, and one of the best spots near the city to enjoy calm swimming and a spectacular sunset. Enclosed by high cliffs on either side — with the dramatic Hotel Bellevue perched above — the cove feels secluded and protected, and its position makes the water pleasantly calm and sheltered from wind, good for swimming. It is reached by descending a fairly steep flight of steps down the cliff from the road above (the hotel has a lift for its guests), which keeps it a little quieter than the central beaches. The pebbles and clear water are lovely, and there are some facilities including loungers, though a good portion is oriented towards the hotel. The cove's key distinction is its westerly aspect: it faces the setting sun, making it arguably the finest beach near Dubrovnik for watching the sky blaze orange and pink over the Adriatic in the evening, a magical way to end a beach day. Because of the steps it is less suited to those with mobility difficulties or lots of gear, and space is limited so it fills up. It sits within a roughly 15-minute walk of the Old Town, or a short bus/taxi ride. For a sheltered, scenic cove swim crowned by the best sunset of any city beach, Bellevue is a beautiful choice.",
   },
   {
-    name: "Pasjača Beach", slug: "pasjaca-beach", image: BEA("pasjaca-beach.webp"),
+    name: "Pasjača Beach", slug: "pasjaca-beach", image: "/images/dubrovnik/beaches/family-beach-dubrovnik.webp",
     rating: 4.6, reviewCount: 4100, price: "Free", area: "Popovići (Konavle)", facilities: "Dramatic cliffs, no facilities",
     tip: "Regularly voted one of Europe's most beautiful beaches — a hidden pebble strand at the foot of towering cliffs, reached by a steep path and tunnel. Bring everything; there are no facilities.",
     filterKeys: ["scenic", "pebble"],
@@ -800,7 +800,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Pasjača Beach, dramatically set at the foot of towering cliffs below the village of Popovići in the Konavle region south of Dubrovnik, is one of the most spectacular beaches in Croatia and has repeatedly been voted among the most beautiful in Europe. Utterly different from the city beaches, it is a wild, remote and breathtaking spot: a strand of pale pebbles hidden beneath sheer, dizzying cliffs, lapped by exceptionally clear, deep turquoise water, and accessed only by a steep, winding path and a tunnel originally carved by locals to reach their fishing spots — an adventurous descent that is part of the experience and rewards the effort with a sense of secluded, dramatic beauty. Because of its remoteness and difficult access, it has no facilities whatsoever — no loungers, bars, toilets or shade — so you must bring everything you need, including water, food, sun protection and sturdy footwear for the path, and take all rubbish away. The steep access and lack of amenities make it unsuitable for young children, those with mobility issues or anyone wanting an easy beach day, and it can be dangerous or inaccessible in rough seas or bad weather, so check conditions. It is reached by car (around 30–40 minutes) or an organised trip, often combined with a visit to nearby Cavtat. For adventurous travellers seeking a jaw-dropping, unspoilt natural beach and a memorable swim beneath the cliffs, Pasjača is unforgettable, and worth every step of the journey down.",
   },
   {
-    name: "Šunj Beach (Lopud)", slug: "sunj-beach", image: BEA("sunj-beach.webp"),
+    name: "Šunj Beach (Lopud)", slug: "sunj-beach", image: "/images/dubrovnik/beaches/mediterranean-beach-dubrovnik.webp",
     rating: 4.6, reviewCount: 3600, price: "Free", area: "Lopud (Elaphiti)", facilities: "Sand, shallow water, beach bars",
     tip: "One of the region's only true sandy beaches, on car-free Lopud island — shallow, warm and perfect for kids. Take the ferry to Lopud, then a 20-minute walk across the island.",
     filterKeys: ["family", "sandy", "scenic"],
@@ -809,7 +809,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Šunj, on the car-free Elaphiti island of Lopud, is a genuine rarity on this predominantly pebbly and rocky coast: a proper natural sandy beach, and one of the best in the whole Dubrovnik region for families and anyone who prefers sand between their toes. Set in a sheltered, south-facing bay backed by pine, cypress and olive groves, it boasts a broad crescent of soft sand and, crucially, water that stays shallow and warm a long way out, gently shelving so that children can paddle and play safely — perfect for building sandcastles and easy swimming, a world away from the deep drop-offs at the city's rock beaches. The beautiful, relaxed setting and the absence of cars on Lopud lend it a wonderfully peaceful, away-from-it-all atmosphere. There are a couple of laid-back beach bars and restaurants and loungers to rent in season, so you can spend a full, comfortable day, though it retains a natural, low-key feel. Reaching it is part of the appeal: take the scheduled Jadrolinija ferry from Gruž harbour to Lopud (around 55 minutes), then either enjoy a pleasant 20-minute walk across the island or hop on one of the golf-buggy taxis. Many Elaphiti island-hopping boat tours also stop here. Bring sun protection and water. For families and sand-lovers willing to make the lovely journey out, Šunj offers the region's finest sandy-beach day, and a taste of tranquil island life.",
   },
   {
-    name: "Plat Beach", slug: "plat-beach", image: BEA("plat-beach.webp"),
+    name: "Plat Beach", slug: "plat-beach", image: "/images/dubrovnik/beaches/barceloneta-dubrovnik.webp",
     rating: 4.3, reviewCount: 1600, price: "Free", area: "Plat (Konavle)", facilities: "Quiet coves, loungers, bar",
     tip: "A string of quiet pebble coves south of the airport, near Cavtat — far calmer than the city beaches, with clear water and a relaxed, resort-village feel.",
     filterKeys: ["family", "pebble"],

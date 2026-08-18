@@ -53,7 +53,7 @@ export default function MykonosNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Mykonos Nightlife"
-      heroImage="/images/mykonos/nightlife/cavo-paradiso.webp"
+      heroImage="/images/mykonos/nightlife/cocktail-bar-mykonos.webp"
       intro="Mykonos has a nightlife reputation to rival Ibiza, and it starts early: sunset drinks in Little Venice or on the 180° clifftop terrace, then beach clubs like Scorpios and Nammos that build from golden hour into the small hours, then the legendary superclub Cavo Paradiso, where world-famous DJs play a clifftop pool from midnight to sunrise. It's also one of the world's great LGBTQ+ destinations, with Jackie O' at the heart of the scene. Here are 8 of the island's best bars and clubs — superclubs, beach clubs, sunset bars and the best-value party in town — with prices, areas and tips. Book tables well ahead in peak season."
       wide
     >

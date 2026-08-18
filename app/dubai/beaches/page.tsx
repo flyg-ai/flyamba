@@ -53,7 +53,7 @@ export default function DubaiBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Best Beaches in Dubai"
-      heroImage="/images/dubai/beaches/jbr-beach.webp"
+      heroImage="/images/dubai/beaches/barceloneta-dubai.webp"
       intro="Dubai's warm, calm Gulf coastline is one of its great free assets, and most of its best beaches cost nothing to enjoy. There's the buzzing, restaurant-backed sand of JBR, the sporty, kitesurf-friendly Kite Beach, the stylish pavilions of La Mer, the classic Jumeirah strip, and the surf and iconic Burj Al Arab views of Sunset Beach — plus a hidden 'secret beach' and a family-focused beach park. Here's where to swim and sunbathe, with facilities, the best times and tips."
       wide
     >

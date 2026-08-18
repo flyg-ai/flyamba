@@ -53,7 +53,7 @@ export default function MadridNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Madrid Nightlife"
-      heroImage="/images/madrid/nightlife/corral-de-la-morera.webp"
+      heroImage="/images/madrid/nightlife/cocktail-bar-madrid.webp"
       intro="Madrid barely sleeps — the night starts late (the first drink often around 10pm, clubs filling after 1am) and runs until dawn. The range is world-class: World's 50 Best cocktail bars like Salmon Guru, the most famous flamenco tablao on Earth at Corral de la Morería, jazz at the legendary Café Central, rooftop terraces, and clubs from the seven-floor Teatro Kapital to the vast Fabrik superclub. Here are 10 of the city's best evening and late-night spots, with opening times, areas and tips."
       wide
     >

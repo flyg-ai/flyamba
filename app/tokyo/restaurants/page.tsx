@@ -57,7 +57,7 @@ export default function TokyoRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Tokyo"
-      heroImage="/images/tokyo/restauranger/sushi-saito.webp"
+      heroImage="/images/tokyo/restaurants/restaurant-tokyo.avif"
       intro="Tokyo is, by almost any measure, the greatest food city on earth — home to more Michelin stars than any other and to thousands of tiny, obsessive specialists perfecting a single dish. Whether you are chasing a once-in-a-lifetime sushi omakase, the perfect bowl of ramen, a shatteringly crisp tonkatsu or a smoky night of yakitori and highballs in a back alley, this guide rounds up the restaurants worth planning your days around, with cuisines, price ranges and booking tips."
       wide
     >

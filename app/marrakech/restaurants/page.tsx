@@ -56,7 +56,7 @@ export default function MarrakechRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Marrakech"
-      heroImage="/images/marrakech/restauranger/nomad.webp"
+      heroImage="/images/marrakech/restaurants/restaurant-marrakech.avif"
       intro="Marrakech is a feast for the senses and the stomach alike. Moroccan cooking runs from slow-braised tagines, fluffy couscous and the sweet-savoury pastilla to pit-roasted mechoui lamb and mountains of little salads — and the city serves it every way, from a few-dirham stall on Jemaa el-Fnaa to a candlelit palace banquet. This guide covers the tables worth planning around, spanning traditional riads, modern rooftops, women-run kitchens and street-food legends, with typical prices, opening hours and tips on where alcohol is served."
       wide
     >

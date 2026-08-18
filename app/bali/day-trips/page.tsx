@@ -52,7 +52,7 @@ export default function BaliDayTrips() {
       active="day-trips"
       crumb="Day Trips"
       h1="Best Day Trips from Bali"
-      heroImage="/images/bali/day-trips/nusa-penida.webp"
+      heroImage="/images/bali/day-trips/costa-brava-landscape-bali.webp"
       intro="Bali makes a superb base for exploring beyond its shores. In a day you can boat across to the dramatic clifftops of Nusa Penida, climb an active volcano for sunrise on Mount Batur, snorkel with turtles off the car-free Gili Islands, dive into the temples and rice terraces of Ubud, or watch the sun set behind the sea temple of Tanah Lot. Here are the best day trips, with travel times, costs and tips — some so good you may want to stay overnight."
       wide
     >

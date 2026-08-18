@@ -55,7 +55,7 @@ export default function RomeHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Rome"
-      heroImage="/images/rome/hotell/hotel-eden.webp"
+      heroImage="/images/rome/hotels/hotel-rome.avif"
       intro="Rome rewards staying central — the historic core, Monti, Trastevere and the area around the Spanish Steps put the great sights on your doorstep, while Termini offers value and transport links. From landmark grand hotels and Colosseum-view boutiques to characterful mid-range gems and excellent budget guesthouses, these are the best places to stay for every budget, with neighbourhoods, prices and what makes each special."
       wide
     >

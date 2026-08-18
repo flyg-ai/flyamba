@@ -55,7 +55,7 @@ export default function MarrakechHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Marrakech"
-      heroImage="/images/marrakech/hotell/la-mamounia.webp"
+      heroImage="/images/marrakech/hotels/hotel-marrakech.avif"
       intro="Choosing where to stay is half the magic of Marrakech. The classic choice is a riad — a traditional house built around a hidden courtyard, opening from a plain medina lane into a tiled oasis of calm — but the city also has legendary grand palace hotels, sleek garden resorts on the outskirts and cheap, characterful guesthouses. This guide runs from the ultra-luxury of La Mamounia and the Royal Mansour to intimate boutique riads and backpacker beds, with nightly prices, the pros and cons of each area, and tips on getting to your door through the car-free lanes."
       wide
     >

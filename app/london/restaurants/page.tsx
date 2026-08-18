@@ -44,7 +44,7 @@ export default function LondonRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Best Restaurants in London"
-      heroImage="/images/london/restauranger/dishoom.webp"
+      heroImage="/images/london/restaurants/restaurant-london.avif"
       intro="London is one of the world's great eating cities, home to every cuisine imaginable and more Michelin stars than anywhere else in the UK. From cult Bombay cafés and bargain pasta counters to nose-to-tail British institutions and destination fine dining, here are 10 restaurants worth planning a meal around, with prices, areas and booking advice."
       wide
     >

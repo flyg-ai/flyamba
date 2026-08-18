@@ -57,7 +57,7 @@ export default function ViennaRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Vienna"
-      heroImage="/images/vienna/restauranger/figlmuller.webp"
+      heroImage="/images/vienna/restaurants/restaurant-vienna.avif"
       intro="Viennese cooking is hearty, imperial and steeped in ritual — the plate-swamping Wiener schnitzel, the emperor's boiled-beef Tafelspitz, rich goulash and, above all, the coffee-house culture of a Melange and a slice of Sachertorte enjoyed at leisure. These are the schnitzel houses, grand cafés, cosy Beisln and Michelin-starred tables that Viennese and clued-up visitors actually book, from a €10 giant schnitzel to a €235 tasting menu, with prices and what to order at each."
       wide
     >

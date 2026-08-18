@@ -56,7 +56,7 @@ export default function SantoriniDayTrips() {
       active="day-trips"
       crumb="Day trips"
       h1="Best Day Trips from Santorini"
-      heroImage="/images/santorini/dagsutflykter/thirasia.webp"
+      heroImage="/images/santorini/day-trips/costa-brava-landscape-santorini.webp"
       intro="Santorini sits in the heart of the Cyclades, so it's an easy launchpad for adventures beyond the caldera. The classic outing is the boat trip to the smoking volcano and its warm sulphur springs; from there you can escape the crowds on sleepy Thirassia, ferry-hop to beachy Ios, historic Naxos or the lunar landscapes of Milos, or spend a lazy half-day touring the island's volcanic wineries. Here are the six day trips worth the effort, with distances, durations and tips."
       wide
     >

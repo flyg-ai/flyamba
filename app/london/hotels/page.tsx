@@ -43,7 +43,7 @@ export default function LondonHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in London"
-      heroImage="/images/london/hotell/the-savoy.webp"
+      heroImage="/images/london/hotels/hotel-london.avif"
       intro="Choosing where to stay shapes any London trip, from legendary grande-dame hotels to design-led boutiques and dependable budget bases. This guide covers 8 of the best places to stay across neighbourhoods and price points — the iconic luxury names, the coolest boutiques and the smartest-value picks — with nightly rates and location tips."
       wide
     >

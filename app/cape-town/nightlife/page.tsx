@@ -53,7 +53,7 @@ export default function CapeTownNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Cape Town Nightlife: Bars & Clubs"
-      heroImage="/images/cape-town/nightlife/shimmy-beach-club.webp"
+      heroImage="/images/cape-town/nightlife/cocktail-bar-cape-town.webp"
       intro="Cape Town's nightlife spans world-ranked cocktail bars, hidden gin speakeasies and craft-brandy temples on buzzing Bree Street, the pubs and clubs of Long Street, glamorous waterfront beach clubs and cool indie hangouts in Tamboerskloof. This guide rounds up the best places for a night out, whatever your mood, with neighbourhoods, price guides and tips on when to go and where to book."
       wide
     >

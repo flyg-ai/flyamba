@@ -57,7 +57,7 @@ export default function SantoriniHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Santorini"
-      heroImage="/images/santorini/hotell/canaves-oia.webp"
+      heroImage="/images/santorini/hotels/hotel-santorini.avif"
       intro="Where you sleep shapes a Santorini trip more than almost anywhere. The caldera-edge villages of Oia and Imerovigli hold the iconic cave suites with infinity pools and sunset views — dreamy but pricey. The beach resorts of Kamari, Perissa and Perivolos offer better value and easy swimming, while inland villages and hostels keep costs sane. Here are eight standout stays across every budget, with the trade-offs of each area explained."
       wide
     >

@@ -52,7 +52,7 @@ export default function CapeTownHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Cape Town"
-      heroImage="/images/cape-town/hotels/silo-hotel.webp"
+      heroImage="/images/cape-town/hotels/hotel-cape-town.avif"
       intro="Cape Town offers some of the best-value luxury on earth, from world-ranked five-stars for a fraction of European prices to charming boutiques and clifftop villas over the Atlantic. This guide covers the standout places to stay — glamorous V&A Waterfront resorts, design-led landmarks, characterful City Bowl heritage hotels and Atlantic Seaboard hideaways — with neighbourhoods, price guides and booking tips to help you choose your base."
       wide
     >

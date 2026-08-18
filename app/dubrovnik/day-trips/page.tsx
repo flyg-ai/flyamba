@@ -52,7 +52,7 @@ export default function DubrovnikDayTrips() {
       active="day-trips"
       crumb="Day Trips"
       h1="Best Day Trips from Dubrovnik"
-      heroImage="/images/dubrovnik/day-trips/kotor-montenegro.webp"
+      heroImage="/images/dubrovnik/day-trips/costa-brava-landscape-dubrovnik.webp"
       intro="Few cities sit at such a crossroads. From Dubrovnik you can cross into Montenegro to the fjord-like Bay of Kotor, into Bosnia to Ottoman Mostar and its diving bridge, or hop by boat to a string of car-free islands, all in a day. Closer to home lie the oyster beds and wineries of the Pelješac peninsula, charming little Cavtat, the green lakes of Mljet and Roman Split up the coast. Here are the best day trips, with real distances, transport and tips — and don't forget your passport for the border runs."
       wide
     >

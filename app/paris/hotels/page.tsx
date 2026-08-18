@@ -54,7 +54,7 @@ export default function ParisHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Paris"
-      heroImage="/images/paris/hotell/le-bristol.webp"
+      heroImage="/images/paris/hotels/hotel-paris.avif"
       intro="Paris rewards a well-chosen base: stay central and you can walk to half the city's sights and reach the rest by Métro in minutes. This guide spans the full range, from the city's fabled 'Palace'-rated grande dames and a romantic five-star hidden on the Place des Vosges to design-led mid-range boutiques and a stylish hostel with a Sacré-Cœur view — with neighbourhoods, nightly rates, transport links and who each one suits."
       wide
     >

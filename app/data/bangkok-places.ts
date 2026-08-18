@@ -191,7 +191,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ──────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Gaggan", slug: "gaggan", image: R("gaggan-anand.webp"),
+    name: "Gaggan", slug: "gaggan", image: "/images/bangkok/restaurants/restaurant-bangkok.avif",
     rating: 4.7, reviewCount: 9000, price: "฿฿฿฿", type: "Progressive Indian", area: "Sukhumvit",
     tip: "Book weeks ahead; the emoji-menu tasting journey is theatrical, so go with an open mind and a free evening.",
     filterKeys: ["fine-dining", "michelin"],
@@ -200,7 +200,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Gaggan is the restaurant that put Bangkok on the world fine-dining map, and its reincarnation under chef Gaggan Anand remains one of the most exhilarating meals in Asia. The format is a long, playful tasting 'journey' presented as a menu of emojis, each standing for a course that riffs on Indian flavours through wildly inventive technique — bites you eat with your hands, dishes that surprise, provoke and make you laugh, all delivered with rock-music energy and plenty of chef interaction. It carries a Michelin star in the 2026 guide and regularly features near the top of Asia's best-restaurant lists. This is destination dining: a single seating, a set premium price, and a commitment of several hours, so it suits a special occasion rather than a casual dinner. Reservations open in advance and vanish quickly, so plan ahead and confirm the current location and format when you book. Dress smartly, arrive on time and surrender to the ride. For food-lovers building a trip around Bangkok's extraordinary restaurant scene, it's a bucket-list table well worth the splurge.",
   },
   {
-    name: "Sorn", slug: "sorn", image: R("sorn.webp"),
+    name: "Sorn", slug: "sorn", image: "/images/bangkok/restaurants/restaurant-bangkok.avif",
     rating: 4.8, reviewCount: 4000, price: "฿฿฿฿", type: "Southern Thai", area: "Sukhumvit / Sathorn",
     tip: "One of the hardest tables in Bangkok — reserve as far ahead as you possibly can and come hungry for a long southern feast.",
     filterKeys: ["fine-dining", "thai", "michelin"],
@@ -209,7 +209,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Sorn is the crowning achievement of Thai fine dining — awarded three Michelin stars in the 2026 Thailand guide, the first Thai restaurant to reach that pinnacle. Its focus is the cuisine of Thailand's south, a region of intense, spice-forward cooking, and the kitchen's obsession is provenance: rare heritage rice, specific coconuts, hand-picked crab, chillies and herbs sourced from tiny producers, treated with reverence rather than reinvention. The result is a long tasting menu of dishes that taste both utterly authentic and quietly perfected, from richly spiced curries to delicate seafood, served in an elegant colonial-style house. This is not fusion or spectacle but southern Thai cooking taken to its highest expression, and it demands time — expect a leisurely, multi-hour meal. Securing a table is famously difficult, with reservations released well ahead and snapped up almost instantly, so plan around it rather than hoping to walk in. Prices sit at the top of the Bangkok scale, matching the ingredients and the accolades. For serious food travellers, a meal at Sorn is a genuine highlight of any trip to Thailand.",
   },
   {
-    name: "Le Du", slug: "le-du", image: R("le-du.webp"),
+    name: "Le Du", slug: "le-du", image: "/images/bangkok/restaurants/restaurant-bangkok.avif",
     rating: 4.7, reviewCount: 6000, price: "฿฿฿฿", type: "Modern Thai", area: "Silom",
     tip: "The set tasting menu is the way to go; ask about the wine pairing, which leans into interesting, well-chosen bottles.",
     filterKeys: ["fine-dining", "thai", "michelin"],
@@ -227,7 +227,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Nahm made its name as one of the first restaurants to prove that serious, uncompromising Thai food deserved a place among the world's finest, and it remains a benchmark for refined traditional cooking in Bangkok. The kitchen mines old Thai recipe books and regional traditions to revive dishes that had all but disappeared, then executes them with proper, unapologetic seasoning — the sour, salty, spicy and sweet balance kept authentic rather than dialled down for foreign palates. Expect intensely flavoured relishes, jungle curries, elegant salads and delicate sweets, offered as a tasting menu or, rewardingly, à la carte so you can assemble a shared Thai meal the way locals eat. Set within a smart Sathorn hotel, the dining room is calm and grown-up, the service assured. It's a place for those who want to understand the depth and history of Thai cuisine rather than just its greatest hits, and the flavours can be genuinely fiery, so tell the staff your spice tolerance. Central, well connected to the MRT and BTS, and a reliable special-occasion choice, Nahm rewards booking ahead.",
   },
   {
-    name: "Paste Bangkok", slug: "paste-bangkok", image: R("paste-bangkok.webp"),
+    name: "Paste Bangkok", slug: "paste-bangkok", image: "/images/bangkok/restaurants/restaurant-bangkok.avif",
     rating: 4.6, reviewCount: 5000, price: "฿฿฿฿", type: "Refined Thai", area: "Ratchaprasong",
     tip: "Its perch inside Gaysorn Village makes it an easy, elegant dinner after shopping around the Ratchaprasong malls.",
     filterKeys: ["fine-dining", "thai", "michelin"],
@@ -236,7 +236,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Paste has quietly become one of Bangkok's most respected Thai restaurants, holding a Michelin star for its intelligent, ingredient-led take on the country's cuisine. The husband-and-wife team behind it dig deep into historical recipes and heirloom produce, then plate the results with contemporary finesse — vibrant salads, complex curries and refined versions of regional classics, each dish carefully balanced and often built on rare herbs and hand-pounded pastes that give the restaurant its name. The setting, on an upper floor of the smart Gaysorn Village mall in the Ratchaprasong shopping district, is chic and comfortable, with cocktails and a good wine list to match. That location makes it especially convenient: it links by skywalk to the Chit Lom BTS station and sits amid the city's best shopping, so it slots neatly into a day around CentralWorld and the Erawan Shrine. You can go all-in on the tasting menu or order à la carte to share, and the kitchen will adjust spice levels on request. Book ahead for dinner. For polished modern Thai in a central, accessible spot, Paste is a standout.",
   },
   {
-    name: "Jay Fai", slug: "jay-fai", image: R("jay-fai.webp"),
+    name: "Jay Fai", slug: "jay-fai", image: "/images/bangkok/restaurants/restaurant-bangkok.avif",
     rating: 4.3, reviewCount: 12000, price: "฿฿฿", type: "Michelin street food", area: "Old City",
     tip: "Expect a long wait and famously high prices for street food — go early, bring cash, and order the crab omelette.",
     filterKeys: ["street-food", "thai", "michelin", "local"],
@@ -245,7 +245,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Jay Fai is the most famous street-food cook in Thailand, a septuagenarian who fries her dishes over roaring charcoal woks while wearing ski goggles to shield her eyes from the flames — a ritual that has become a global culinary spectacle. Her humble shophouse on Maha Chai Road holds a Michelin star, a near-unheard-of honour for street food, earned by dishes cooked with obsessive care and premium ingredients: above all the drunken noodles and the fabled crab omelette, a plump golden parcel bursting with big chunks of crabmeat. That fame comes at a cost — prices are astonishingly high for street food, waits can stretch for hours, and she cooks every order herself, so patience is essential. Some prefer to admire the phenomenon and eat their crab omelette elsewhere; others consider the experience unmissable. If you go, arrive early or use any booking system in operation, bring cash, and set expectations accordingly. Either way, Jay Fai embodies the extraordinary depth of Bangkok's street-food culture, where a roadside stall can outshine white-tablecloth restaurants. Check current opening days before making the trip.",
   },
   {
-    name: "Thipsamai Pad Thai", slug: "thipsamai-pad-thai", image: R("thip-samai-pad-thai.webp"),
+    name: "Thipsamai Pad Thai", slug: "thipsamai-pad-thai", image: "/images/bangkok/restaurants/restaurant-bangkok.avif",
     rating: 4.3, reviewCount: 28000, price: "฿฿", type: "Pad Thai institution", area: "Old City",
     tip: "Order the signature pad thai wrapped in a thin egg omelette, and wash it down with their famous fresh orange juice.",
     filterKeys: ["street-food", "thai", "local"],
@@ -254,7 +254,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "If you eat one plate of pad thai in Bangkok, many locals will send you to Thipsamai, an old-city institution that has been frying the dish over charcoal on Maha Chai Road since 1966. Often dubbed the best pad thai in the city, its signature version comes cocooned in a paper-thin sheet of egg, the noodles beneath springy and smoky, studded with prawns, dried shrimp and pickled radish, with premium editions adding fat river prawns or crab. The queue outside in the evening is testament to its reputation, though it usually moves briskly, and the theatre of the cooks working a row of flaming woks is part of the appeal. Pair the noodles with the shop's renowned fresh-pressed orange juice, sold by the bottle. Prices climb with the fancier toppings but remain far more approachable than the city's Michelin street stalls, making it a satisfying, atmospheric and relatively affordable classic. It sits conveniently close to the Golden Mount and Jay Fai, so you can fold it into an evening exploring the historic quarter. Come hungry, bring cash and go early to beat the longest lines.",
   },
   {
-    name: "Bo.lan", slug: "bo-lan", image: R("bolan.webp"),
+    name: "Bo.lan", slug: "bo-lan", image: "/images/bangkok/restaurants/restaurant-bangkok.avif",
     rating: 4.5, reviewCount: 3000, price: "฿฿฿฿", type: "Sustainable Thai", area: "Sukhumvit",
     tip: "A pioneer of sustainable, seasonal Thai fine dining — the balance-focused tasting menu showcases proper old-recipe cooking.",
     filterKeys: ["fine-dining", "thai"],
@@ -272,7 +272,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Err, from the team behind the fine-dining restaurant Bo.lan, is their fun, casual counterpoint — an 'urban rustic' Thai eatery tucked in the historic Rattanakosin district behind Wat Pho, decked out in playful retro Thai style. The menu celebrates the snacks, grilled skewers, cured meats, dips and drinking food of everyday Thailand, made with the same care for good ingredients but served in a relaxed, shareable, un-precious way. Think smoky charcoal-grilled pork, crispy pork belly, spicy relishes with fresh vegetables, sausages and moreish nibbles, washed down with Thai-inflected craft cocktails, local craft beer and house infusions. Prices sit comfortably in the mid-range, far below the group's flagship, making it an ideal, characterful place to eat and drink after a morning at the Grand Palace, Wat Pho and Wat Arun, all within walking or short-boat distance. The atmosphere is convivial and design-conscious, popular with in-the-know locals and travellers alike. As with many Bangkok spots, opening days can vary, so it's worth checking before you go. For approachable, well-made Thai food with personality in the old city, Err is a great shout.",
   },
   {
-    name: "Supanniga Eating Room", slug: "supanniga-eating-room", image: R("supanniga-eating-room.webp"),
+    name: "Supanniga Eating Room", slug: "supanniga-eating-room", image: "/images/bangkok/restaurants/restaurant-bangkok.avif",
     rating: 4.4, reviewCount: 11000, price: "฿฿", type: "Regional Thai", area: "Multiple branches",
     tip: "Great for grandmother-style Thai from Trat and Khon Kaen; the Tha Tien riverside branch has knockout Wat Arun views.",
     filterKeys: ["thai", "local"],
@@ -285,7 +285,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ────────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Mandarin Oriental Bangkok", slug: "mandarin-oriental-bangkok", image: H("mandarin-oriental-bangkok.webp"),
+    name: "Mandarin Oriental Bangkok", slug: "mandarin-oriental-bangkok", image: "/images/bangkok/hotels/hotel-bangkok.avif",
     rating: 4.8, reviewCount: 12000, price: "฿฿฿฿", type: "Riverside legend", area: "Bang Rak (riverside)",
     tip: "Even if you don't stay, book the storied Authors' Lounge for a classic colonial-style afternoon tea.",
     filterKeys: ["luxury", "riverside"],
@@ -312,7 +312,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Siam is one of Bangkok's most beautiful and characterful luxury hotels — an intimate, all-suite-and-villa retreat set on the river in the leafy, historic Dusit district, well away from the downtown crush. Designed in a striking black-and-white Art Deco style by celebrated architect Bill Bensley, it is filled with the owners' remarkable collection of Thai antiques, vintage photographs and curiosities, so it feels more like a stylish private mansion than a hotel. Accommodation is generous and individual, from lofty suites to riverside pool villas with their own plunge pools, and the property packs in a spa, a Muay Thai ring, a Thai cooking school, a screening room and a gracious riverside restaurant. The mood throughout is calm, personal and pampering, with attentive service and a fraction of the footfall of the bigger riverside names. Its Dusit location is peaceful but a little removed, so most guests rely on the hotel's shuttle boat down to Sathorn pier and the Skytrain, or on Grab. For design lovers and honeymooners seeking a romantic, secluded and utterly distinctive stay, The Siam is a gem.",
   },
   {
-    name: "The Sukhothai Bangkok", slug: "sukhothai-bangkok", image: H("sukhothai-bangkok.webp"),
+    name: "The Sukhothai Bangkok", slug: "sukhothai-bangkok", image: "/images/bangkok/hotels/hotel-bangkok.avif",
     rating: 4.7, reviewCount: 6000, price: "฿฿฿฿", type: "Serene luxury", area: "Sathorn",
     tip: "The lotus-pond gardens and low-rise pavilions make it an oasis; the Sunday brunch is a Bangkok institution.",
     filterKeys: ["luxury", "central"],
@@ -330,7 +330,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "137 Pillars Suites brings a dose of colonial-era romance to the fashionable Sukhumvit sois around Thong Lo and Ekkamai. Its name and style nod to a historic teak mansion in Chiang Mai, and the theme carries through in dark woods, plantation shutters, brass and heritage photography, giving the modern tower a warm, characterful feel. As the name says, it's all suites — generously sized, with big bathrooms and a smart, residential comfort — and every guest gets attentive host service that handles everything from unpacking to reservations. Perched high up are the standout facilities: a rooftop infinity pool and the clubby Jack Bain's Bar, both offering fine views over the low-rise Sukhumvit neighbourhood. The location puts you in the heart of Bangkok's best dining, café and nightlife district, steps from Thong Lo's bars and restaurants and a short walk to the BTS for quick trips downtown. It's more intimate and personal than the big international towers, with rates that, while luxurious, sit below the top riverside tier. For a stylish, spacious and well-located base with boutique warmth and excellent service, 137 Pillars is a lovely pick.",
   },
   {
-    name: "Ariyasom Villa", slug: "ariyasom-villa", image: H("ariyasom-villa.webp"),
+    name: "Ariyasom Villa", slug: "ariyasom-villa", image: "/images/bangkok/hotels/hotel-bangkok.avif",
     rating: 4.7, reviewCount: 2000, price: "฿฿฿", type: "Heritage boutique", area: "Sukhumvit (Nana)",
     tip: "A hidden 1940s family villa with just 24 rooms and a lovely garden pool — book early, as it sells out fast.",
     filterKeys: ["boutique", "central"],
@@ -348,7 +348,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Bangkok Marriott Marquis Queen's Park is a big, dependable four-to-five-star hotel that makes an excellent-value base in the prime Sukhumvit district. With well over a thousand rooms across twin towers, it offers the consistency and facilities of a major international property: comfortable, contemporary rooms, two large rooftop swimming pools, a fitness centre and spa, and a strong line-up of restaurants and bars, including the Japanese-inspired Akira Back and the popular Abar rooftop lounge. Its location is a key selling point — beside Benjasiri Park and a short walk from the Phrom Phong BTS station, it puts you among the shopping malls, restaurants, cafés and nightlife of central Sukhumvit, with the whole Skytrain network at your door for effortless sightseeing. It's popular with both leisure travellers and business guests, and while it lacks the intimate character of the city's boutiques, it delivers space, amenities and reliability at rates that undercut the luxury names. For families, first-timers or anyone who values a large, professionally run hotel in a convenient, connected location, the Marriott Marquis is a smart, comfortable and reasonably priced choice in the thick of the action.",
   },
   {
-    name: "Lub d Bangkok Silom", slug: "lub-d-bangkok", image: H("lub-d-bangkok.webp"),
+    name: "Lub d Bangkok Silom", slug: "lub-d-bangkok", image: "/images/bangkok/hotels/hotel-bangkok.avif",
     rating: 4.4, reviewCount: 8000, price: "฿", type: "Design hostel", area: "Silom",
     tip: "Sociable, spotless and cheap, with dorms and privates right by the BTS — ideal for solo travellers and backpackers.",
     filterKeys: ["budget", "central"],
@@ -361,7 +361,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Nightlife (10) ────────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "Sky Bar at Lebua", slug: "sky-bar-lebua", image: N("sky-bar-lebua.webp"),
+    name: "Sky Bar at Lebua", slug: "sky-bar-lebua", image: "/images/bangkok/nightlife/cocktail-bar-bangkok.webp",
     rating: 4.4, reviewCount: 41000, type: "Rooftop bar", area: "Bang Rak (riverside)",
     tip: "Come for sunset, dress smart (no shorts or flip-flops), and expect premium prices for that vertigo-inducing gold dome view.",
     filterKeys: ["rooftop"],
@@ -370,7 +370,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Sky Bar at lebua is the rooftop that made Bangkok's sky-high drinking scene world-famous, immortalised in 'The Hangover Part II' and still one of the most jaw-dropping vantage points in the city. Set on the 63rd floor of the lebua State Tower near the river, it centres on a glowing golden dome and a bar that juts out over the edge of the building, with nothing between you and a vertiginous, uninterrupted panorama of the Chao Phraya snaking through the glittering metropolis far below. It's an unforgettable spot for a sunset drink, when the sky turns and the city lights flicker on. That spectacle comes at a price: cocktails are expensive, the smart-casual dress code (no shorts, vests or open shoes) is strictly enforced, and it can get busy and touristy. But for a once-in-a-trip 'wow' moment, few places compete. Arrive a little before sunset to claim a good position, and consider dinner at the tower's sister venues if you want a table. Book or check current entry policies ahead, and hold onto your phone at the railing — it's a very long way down.",
   },
   {
-    name: "Vertigo & Moon Bar", slug: "vertigo-moon-bar", image: N("vertigo-and-moon-bar.webp"),
+    name: "Vertigo & Moon Bar", slug: "vertigo-moon-bar", image: "/images/bangkok/nightlife/flamenco-bangkok.webp",
     rating: 4.5, reviewCount: 18000, type: "Rooftop bar", area: "Sathorn",
     tip: "The open-air Moon Bar wraps 360 degrees around the tower's summit — arrive for sunset and grab an edge seat.",
     filterKeys: ["rooftop"],
@@ -397,7 +397,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Above Eleven, atop the Fraser Suites tower near Nana, carved out its niche as one of the first rooftop bars to pair the sky-high views with a proper culinary identity — in this case a Peruvian-Japanese, or Nikkei, kitchen turning out ceviche, tiraditos, anticuchos and sushi to go with its cocktails. The design leans playful, with an 'urban garden' theme of greenery and quirky New York-inspired touches wrapped around an open-air terrace that looks out over the buzzing lower-Sukhumvit skyline. It's a lively, see-and-be-seen spot that works equally well for an inventive dinner, a round of pisco sours at sunset, or a late-night drink with a DJ soundtrack as the evening heats up. Prices are high but not in the stratospheric riverside-rooftop bracket, and the dress code is smart-casual rather than formal. The Nana location is handy for the central Sukhumvit hotel cluster and the BTS. With its food-and-view combination, distinctive look and energetic atmosphere, Above Eleven is a great choice for anyone who wants their rooftop night to include a memorable meal as well as the panorama. Booking a table is recommended at busy times.",
   },
   {
-    name: "The Bamboo Bar", slug: "the-bamboo-bar", image: N("the-bamboo-bar.webp"),
+    name: "The Bamboo Bar", slug: "the-bamboo-bar", image: "/images/bangkok/nightlife/live-music-bangkok.webp",
     rating: 4.7, reviewCount: 3000, type: "Jazz bar", area: "Bang Rak (riverside)",
     tip: "One of Asia's oldest jazz bars — settle in for a live set and a classic cocktail in gorgeous colonial surroundings.",
     filterKeys: ["live-music"],
@@ -406,7 +406,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Bamboo Bar inside the Mandarin Oriental is one of the oldest and most storied jazz bars in Asia, a glamorous throwback that has been drawing music-lovers and sophisticates since 1953. Dressed in colonial-tropical style — dark rattan, leopard-print banquettes, palms and low golden light — it feels like stepping into a more elegant era, and the atmosphere is pure old-world Bangkok romance. Nightly (or near-nightly) live sets feature accomplished resident and visiting jazz musicians and vocalists, often flown in from around the world, playing to a refined, appreciative crowd. The cocktail list is a serious affair, blending classics with Thai-influenced creations, mixed with the precision you'd expect of the hotel. It's an intimate, grown-up night out rather than a raucous one, ideal for couples or anyone who wants live music, great drinks and genuine glamour by the river. Prices match the setting and a smart dress code applies, but for the ambience and the calibre of music it's worth it. Reach it via the hotel's shuttle boat from the Saphan Taksin Skytrain. Check the performance schedule and consider reserving, as the best jazz nights fill up.",
   },
   {
-    name: "Maggie Choo's", slug: "maggie-choos", image: N("maggie-choos.webp"),
+    name: "Maggie Choo's", slug: "maggie-choos", image: "/images/bangkok/nightlife/nightlife-bar-bangkok.webp",
     rating: 4.3, reviewCount: 9000, type: "Speakeasy", area: "Bang Rak (Silom)",
     tip: "Enter through the noodle-shop-style doorway into an opium-den fantasy; go for the weekend cabaret and swing nights.",
     filterKeys: ["speakeasy", "live-music"],
@@ -415,7 +415,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Maggie Choo's is one of Bangkok's most atmospheric and theatrical bars — a subterranean speakeasy hidden beneath a Silom Road hotel and entered, cinematically, through what looks like a humble noodle shop. Inside unfolds a fantastical, dimly lit world evoking a 1930s Shanghai opium den or old Chinatown teahouse: vaulted brick, chesterfield sofas, hanging lanterns, ornate screens and, famously, performers in cheongsams draped on swings. It's as much a show as a bar, with a rotating programme of live music — swing, jazz, soul and lounge — plus cabaret and burlesque-tinged performances, especially at weekends when the place really comes alive. The cocktails are creative and the setting endlessly Instagrammable, making it a favourite for a fun, dressed-up night that feels a world away from the rooftop scene. Prices are reasonable for the spectacle on offer, and the dress code is relaxed smart-casual. It's central and easy to reach from the Skytrain in the Silom/Bang Rak district. Arrive earlier for a seat or later for the fullest party atmosphere. For something more characterful and playful than a standard bar, Maggie Choo's is a Bangkok must.",
   },
   {
-    name: "The Iron Fairies", slug: "the-iron-fairies", image: N("iron-fairies.webp"),
+    name: "The Iron Fairies", slug: "the-iron-fairies", image: "/images/bangkok/nightlife/rooftop-bar-night-bangkok.webp",
     rating: 4.4, reviewCount: 11000, type: "Speakeasy", area: "Sukhumvit (Thong Lo)",
     tip: "Come for the fairy-dust industrial fantasy and nightly live jazz; the burgers are a surprise hit for a late bite.",
     filterKeys: ["speakeasy", "live-music", "sukhumvit"],
@@ -433,7 +433,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Havana Social transports you from the sois of Sukhumvit to pre-revolution Cuba, and getting in is half the fun: you head down a graffiti-lined alley off Soi 11, step into an old-fashioned phone booth, and dial a secret code to unlock the door. Beyond lies a lively, colourful recreation of a 1940s Havana bar — distressed walls, vintage tiles, Latin posters, warm lighting and a long bar stocked with rum. The focus is Cuban spirit in every sense: expertly made rum cocktails and mojitos, cigars, and a soundtrack of salsa, son and Latin jazz, with regular live music and salsa nights that get the floor moving. It's a fun, high-energy alternative to the cooler cocktail dens, drawing a mixed crowd of locals, expats and travellers up for a dance and a party. Prices are reasonable for the quality and theatre, and the dress code is casual-smart. Its Soi 11 location is in the thick of one of central Sukhumvit's busiest nightlife strips, so it's easy to combine with other bars and clubs nearby. For rum, rhythm and a hidden-entrance thrill, Havana Social delivers.",
   },
   {
-    name: "Saxophone Pub", slug: "saxophone-pub", image: N("saxophone-pub.webp"),
+    name: "Saxophone Pub", slug: "saxophone-pub", image: "/images/bangkok/nightlife/cocktail-bar-bangkok.webp",
     rating: 4.6, reviewCount: 13000, type: "Live music pub", area: "Victory Monument",
     tip: "A Bangkok institution for live jazz, blues and reggae — grab a mezzanine table, order a beer and stay for the band.",
     filterKeys: ["live-music", "local"],
@@ -442,7 +442,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Saxophone Pub is a Bangkok institution — a warm, brick-walled, two-level live-music haunt near Victory Monument that has been the beating heart of the city's jazz and blues scene since 1987. Unlike the polished hotel bars, it's an unpretentious, gloriously atmospheric spot beloved by locals, musicians and in-the-know travellers, where you can nurse a cold beer at a mezzanine table looking down on a stage that hosts a rotating line-up of accomplished house and guest bands. The music ranges across jazz, blues, reggae, funk and rock, played with real skill and passion late into the night, and the crowd is friendly, mixed and there for the sound rather than to be seen. There's decent Thai and Western pub food, affordable drinks and none of the dress-code fuss of the rooftops. It's a little away from the main tourist bar districts, but easily reached from the Victory Monument Skytrain station. For anyone who values genuine live music and an authentic, unglossy Bangkok night out over sky-high views and premium cocktails, Saxophone is essential — arrive mid-evening for a good seat and settle in for the long haul.",
   },
   {
-    name: "Beam", slug: "beam", image: N("beam-bangkok.webp"),
+    name: "Beam", slug: "beam", image: "/images/bangkok/nightlife/flamenco-bangkok.webp",
     rating: 4.2, reviewCount: 8000, type: "Nightclub", area: "Sukhumvit (Thong Lo)",
     tip: "Thong Lo's serious dance club — check who's spinning, go after midnight, and prepare for a big sound system.",
     filterKeys: ["clubs", "sukhumvit"],
@@ -455,7 +455,7 @@ export const NIGHTLIFE: BcnPlace[] = [
 // ── Shopping (8) ──────────────────────────────────────────────────────────────
 export const SHOPPING: BcnPlace[] = [
   {
-    name: "ICONSIAM", slug: "iconsiam", image: S("iconsiam.webp"),
+    name: "ICONSIAM", slug: "iconsiam", image: "/images/bangkok/shopping/artisan-shop-bangkok.webp",
     rating: 4.6, reviewCount: 88000, type: "Luxury riverside mall", area: "Khlong San (riverside)",
     tip: "Don't miss SOOK SIAM, the indoor floating-market food hall recreating all 77 Thai provinces on the ground floor.",
     filterKeys: ["malls", "luxury", "riverside"],
@@ -464,7 +464,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "ICONSIAM is Bangkok's most spectacular shopping destination, a vast, gleaming riverside complex on the Thonburi bank that opened in 2018 and instantly redefined the city's mall scene. It gathers hundreds of stores from global luxury houses to Thai designers, plus Southeast Asia's first Apple Store on the river and an Emporium of high-end brands, across soaring, light-filled atriums. But its masterstroke is SOOK SIAM, an enormous indoor 'floating market' and cultural hall on the ground floor that recreates the crafts, architecture and, above all, the food of all 77 Thai provinces under one roof — a delicious, atmospheric way to graze through regional specialities in air-conditioned comfort. Outside, a riverside boardwalk hosts a nightly music-and-water fountain show against the skyline, and the new Gold Line Skytrain and free shuttle boats make getting there part of the fun. Beyond shopping, there are cinemas, restaurants galore and frequent cultural events and installations. Whether you're there to browse luxury, eat your way around Thailand or simply marvel at the architecture and river views, ICONSIAM is a full half-day out and a genuine attraction in its own right. Entry is free.",
   },
   {
-    name: "Siam Paragon", slug: "siam-paragon", image: S("siam-paragon.webp"),
+    name: "Siam Paragon", slug: "siam-paragon", image: "/images/bangkok/shopping/mall-bangkok.webp",
     rating: 4.6, reviewCount: 132000, type: "Luxury mall", area: "Pathum Wan (Siam)",
     tip: "The basement Gourmet Market and food hall are a foodie highlight; the same complex holds SEA LIFE aquarium for families.",
     filterKeys: ["malls", "luxury"],
@@ -482,7 +482,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "CentralWorld is one of the largest shopping complexes in Southeast Asia, a giant of the Ratchaprasong district that blends mid-market and upscale retail across an almost overwhelming number of floors and zones. Anchored by the Zen and Central department stores, it holds hundreds of fashion, beauty, tech and lifestyle shops spanning high-street to premium, plus a huge spread of restaurants, cafés, a cinema, a bowling alley and regular events in its atriums and outdoor plaza. That plaza, facing the busy intersection, is famous nationwide as the stage for Bangkok's enormous New Year's Eve countdown, when tens of thousands gather for the fireworks. The location could hardly be more central or connected: elevated skywalks link it directly to the Chit Lom and Siam BTS stations and to neighbouring malls and hotels, and the incense-wreathed Erawan Shrine sits just across the road. It's a place to shop, eat, watch a film or simply escape the heat for a few hours, with something at almost every price point. Free to enter and open late, CentralWorld is a reliable, all-purpose anchor for a day or evening in the Ratchaprasong shopping heartland.",
   },
   {
-    name: "EmQuartier & The Emporium", slug: "emquartier", image: S("emquartier.webp"),
+    name: "EmQuartier & The Emporium", slug: "emquartier", image: "/images/bangkok/shopping/outdoor-market-bangkok.webp",
     rating: 4.5, reviewCount: 76000, type: "Upscale mall", area: "Sukhumvit (Phrom Phong)",
     tip: "The spiralling Helix Quartier of restaurants is a dining destination in itself, with a leafy sky garden up top.",
     filterKeys: ["malls", "luxury"],
@@ -491,7 +491,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "EmQuartier and its older sibling The Emporium face each other across the Phrom Phong BTS station in the affluent heart of Sukhumvit, together forming one of Bangkok's most stylish shopping hubs (now joined by the newer Emsphere to complete the 'Em District'). EmQuartier is the design showpiece, a cluster of interconnected buildings around dramatic atriums, a cascading indoor waterfall and the Helix Quartier — a slowly spiralling ramp lined with dozens of restaurants that has become a dining destination in its own right, topped by a lush open-air sky garden. Inside you'll find international fashion, beauty and lifestyle brands pitched at the upscale end, along with tech, homeware and a good gourmet supermarket. The Emporium opposite offers more luxury retail and department-store shopping in a smart, calmer setting. The whole complex is polished, contemporary and beautifully air-conditioned, popular with well-heeled locals and expats from the surrounding neighbourhood. Its Phrom Phong location, directly on the Skytrain and beside Benjasiri Park, makes it effortless to reach and to combine with the restaurants and nightlife of central Sukhumvit. Free to enter, it's ideal for stylish browsing, a great meal or a cool afternoon out.",
   },
   {
-    name: "Terminal 21", slug: "terminal-21", image: S("terminal-21.webp"),
+    name: "Terminal 21", slug: "terminal-21", image: "/images/bangkok/shopping/shopping-street-bangkok.webp",
     rating: 4.5, reviewCount: 98000, type: "Themed mall", area: "Sukhumvit (Asok)",
     tip: "Each floor mimics a world city (Paris, Tokyo, London...) — the themed restrooms are a quirky, must-photograph gimmick.",
     filterKeys: ["malls", "bargains"],
@@ -500,7 +500,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Terminal 21 is Bangkok's most entertaining mid-range mall, built around a playful travel theme that turns a shopping trip into a tour of the world. Styled as an airport — complete with 'departures' signage and staff in flight-attendant-style uniforms — each floor is themed after a different global city: the ground level is a Roman-inspired 'Caribbean', with others evoking Paris, Tokyo, London, Istanbul and San Francisco, right down to a Golden Gate Bridge, a giant Tokyo lucky cat and famously elaborate themed restrooms that visitors queue to photograph. Beyond the gimmick, it's a genuinely useful mall, packed with hundreds of small, affordable fashion, accessory and gadget stalls aimed at a younger, budget-conscious crowd, making it a good spot for cheap clothes and souvenirs. Its real ace, though, is Pier 21, a cheap and cheerful food court on the upper floors serving tasty Thai and international dishes at rock-bottom prices — one of the best-value meals in central Bangkok. Sitting right on top of the Asok BTS and Sukhumvit MRT interchange, it's supremely convenient. Free, fun and affordable, Terminal 21 is a great stop for families, browsers and bargain-hunters alike.",
   },
   {
-    name: "MBK Center", slug: "mbk-center-shopping", image: S("mbk-center.webp"),
+    name: "MBK Center", slug: "mbk-center-shopping", image: "/images/bangkok/shopping/souvenir-shop-bangkok.webp",
     rating: 4.3, reviewCount: 96000, type: "Bargain bazaar mall", area: "Pathum Wan",
     tip: "The place for phones, tech, repairs and souvenirs — haggle hard, and hit the food court for a cheap lunch.",
     filterKeys: ["bargains", "markets"],
@@ -509,7 +509,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "MBK Center is Bangkok's classic bargain mall, an eight-floor maze of roughly 2,000 small shops and stalls that trades in volume, variety and negotiation rather than luxury polish. It's the go-to place for anything tech and telecoms — new and used mobile phones, cases, cameras, accessories and on-the-spot repairs fill entire floors — alongside clothing, watches, jewellery, leather goods, luggage and a huge range of Thai souvenirs, much of it open to friendly haggling. Compared with the glossy malls nearby, MBK feels more like a covered market, busy, slightly chaotic and great fun for a treasure hunt, and it's where many locals and travellers head to pick up a SIM card, fix a cracked screen or stock up on cheap gifts before flying home. The upper levels hold a large, well-priced food court with dishes from across Thailand, plus a cinema and entertainment zone. Air-conditioned and endlessly browsable, it's an ideal rainy-day or too-hot option, connected by skybridge to the National Stadium BTS and the wider Siam shopping district. Bring cash for the small vendors, be ready to bargain politely, and treat it as a bazaar rather than a quick shop.",
   },
   {
-    name: "Platinum Fashion Mall", slug: "platinum-fashion-mall", image: S("platinum-fashion-mall.webp"),
+    name: "Platinum Fashion Mall", slug: "platinum-fashion-mall", image: "/images/bangkok/shopping/vintage-market-bangkok.webp",
     rating: 4.3, reviewCount: 44000, type: "Wholesale fashion", area: "Pratunam",
     tip: "Prices drop sharply if you buy three or more pieces — it's a wholesale market, so shop in multiples and haggle.",
     filterKeys: ["bargains", "markets"],
@@ -540,7 +540,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Safari World is Bangkok's largest open zoo and animal theme park, a full family day out on the city's northeastern fringe. It splits into two halves. The Safari Park is a drive-through reserve where you tour (in your own car, a Grab, or the park's coach) past free-roaming zebras, giraffes, rhinos, lions, tigers, bears and herds of deer spread across large landscaped enclosures, giving kids a taste of a real safari without leaving the city. The adjoining Marine Park is more of a traditional theme park, with a packed schedule of animal shows — dolphins, sea lions, orangutans and exotic birds — plus a Wild West stunt spectacular and feeding sessions, walk-through habitats and rides. There's a lot of walking and sun, so bring hats, water and sunscreen, and pace the show times, which are the highlights. Note that some visitors have mixed feelings about the animal-show format, so it suits families comfortable with that style of attraction. Getting there is easiest by taxi, Grab or an organised tour, as it's well beyond the Skytrain network. Booking the combined ticket online usually saves money and time.",
   },
   {
-    name: "SEA LIFE Bangkok Ocean World", slug: "sea-life-bangkok", image: K("sea-life-bangkok-ocean-world.webp"),
+    name: "SEA LIFE Bangkok Ocean World", slug: "sea-life-bangkok", image: "/images/bangkok/with-kids/aquarium-bangkok.webp",
     rating: 4.4, reviewCount: 39000, price: "฿฿", ageGroup: "All ages", area: "Pathum Wan (Siam)",
     tip: "Right under Siam Paragon — an ideal air-conditioned rainy-day or midday-heat escape; book online to skip the counter.",
     tiqetsUrl: tiqets("SEA LIFE Bangkok Ocean World"), filterKeys: ["animals", "indoor"],
@@ -549,7 +549,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "SEA LIFE Bangkok Ocean World, in the basement of the Siam Paragon mall, is one of the largest aquariums in Southeast Asia and a brilliant, easy day out with children right in the centre of the city. Across a series of themed zones it houses thousands of marine creatures — sharks, rays, sea turtles, giant groupers, penguins, seahorses, jellyfish, octopuses and clownfish among them — culminating in a walk-through glass tunnel where fish and sharks glide overhead. Interactive touch pools, feeding sessions, a glass-bottom boat ride and optional extras like a behind-the-scenes tour or diving with the sharks keep older kids engaged, while the whole thing is comfortably air-conditioned, making it an ideal refuge from Bangkok's heat or an afternoon downpour. Its location could not be more convenient, directly beneath Siam Paragon and connected to the Siam BTS interchange, so you can combine it with shopping, the food hall and the wider Siam district. Allow around two hours. Booking tickets online in advance is cheaper than at the door and lets you skip the queue. For families, it's one of the most reliable and central attractions in the city, whatever the weather.",
   },
   {
-    name: "KidZania Bangkok", slug: "kidzania-bangkok", image: K("kidzania-bangkok.webp"),
+    name: "KidZania Bangkok", slug: "kidzania-bangkok", image: "/images/bangkok/with-kids/family-park-bangkok.webp",
     rating: 4.4, reviewCount: 14000, price: "฿฿", ageGroup: "Ages 4–14", area: "Pathum Wan (Siam)",
     tip: "Aimed at 4–14s; get there early so kids can fit in several role-play 'jobs' and earn and spend their KidZos.",
     tiqetsUrl: tiqets("KidZania Bangkok"), filterKeys: ["indoor"],
@@ -558,7 +558,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "KidZania Bangkok, on the fifth floor of Siam Paragon, is an inspired indoor edutainment attraction where children run a scaled-down city and try out the adult world of work through hands-on role-play. Dressed in real uniforms, kids aged roughly four to fourteen can become pilots flying a mock cockpit, doctors and surgeons in a hospital, firefighters racing to put out a 'blaze', TV presenters, chefs, dentists, police officers, scientists and dozens more across realistic themed establishments. Crucially, they earn KidZania's own currency, 'KidZos', for the jobs they do and can then spend or save it, weaving in gentle lessons about money and responsibility alongside the fun. It's wonderfully immersive and genuinely educational, and because it's indoor and air-conditioned it makes a superb heat- or rain-proof day out. Parents can watch and relax while children explore semi-independently, and the central Siam Paragon location makes it easy to reach on the BTS and combine with the mall and aquarium. Sessions are usually timed, and arriving early lets kids pack in more activities before it gets busy. Check current opening days and book ahead in school holidays. For families with primary-age children, it's a standout.",
   },
   {
-    name: "Dream World", slug: "dream-world", image: K("dream-world.webp"),
+    name: "Dream World", slug: "dream-world", image: "/images/bangkok/with-kids/kids-museum-bangkok.webp",
     rating: 4.3, reviewCount: 33000, price: "฿฿", ageGroup: "All ages", area: "Thanyaburi (Pathum Thani)",
     tip: "Buy the all-inclusive Super Visa pass for unlimited rides, and don't miss the year-round indoor 'Snow Town'.",
     tiqetsUrl: tiqets("Dream World Bangkok"), filterKeys: ["theme-parks"],
@@ -567,7 +567,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Dream World is a much-loved, old-school amusement park just north of Bangkok in Pathum Thani, and a perennial favourite for a full family fun-day. It's divided into whimsical themed lands — Dream Gardens, Fantasy Land, Adventure Land — packed with attractions to suit all ages, from gentle carousels, a cable car and a scenic train for little ones to bigger thrills like a hanging roller coaster, log flume, sky coaster and haunted mansion for older kids and teens. A signature draw is Snow Town, an indoor sub-zero zone where you can play in real snow and toboggan down a slope year-round — a novelty and a welcome cool-down in the tropical heat. There are colourful gardens and photo spots, parades and shows, and plenty of food outlets throughout. The best-value approach is the all-inclusive pass that bundles entry with unlimited rides and Snow Town. Being well outside the city, it's reached most easily by Grab, taxi or an organised tour rather than public transport, so factor in travel time. Expect a lot of walking and sun, and bring hats and water. For families wanting a traditional theme-park day with rides and snow, Dream World delivers.",
   },
   {
-    name: "Siam Park City", slug: "siam-park-city", image: K("siam-park-city.webp"),
+    name: "Siam Park City", slug: "siam-park-city", image: "/images/bangkok/with-kids/tibidabo-bangkok.webp",
     rating: 4.3, reviewCount: 28000, price: "฿฿", ageGroup: "All ages", area: "Khan Na Yao",
     tip: "Combine the water park and amusement rides in one ticket; go on a weekday to dodge the local weekend crowds.",
     filterKeys: ["theme-parks"],
@@ -594,7 +594,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Bangkok Butterfly Garden and Insectarium is a delightful and completely free little attraction beside the green expanse of Wachirabenchathat (Rot Fai) Park, near Chatuchak. Its centrepiece is a large dome-shaped netted garden, landscaped with tropical plants, ponds and waterfalls, through which hundreds of butterflies of many species flutter freely, often landing close enough for children to watch in wonder — a gentle, magical experience and a great chance for budding photographers. An adjoining building houses an insectarium and small exhibition explaining the butterflies' life cycle and displaying other insects, adding an educational angle for curious kids. Being outdoors and green, with shady paths, it makes a peaceful, low-key contrast to the frenzy of the nearby Chatuchak Weekend Market, and pairs perfectly as a calming add-on for families who need a breather from the stalls and crowds. The surrounding Rot Fai and Chatuchak parks offer more space to run around, cycle or picnic. It's compact, so a visit takes under an hour, but the fact that it's free, charming and easily reached by MRT makes it excellent value. For a quiet, nature-filled moment with young children in the north of the city, it's a lovely find.",
   },
   {
-    name: "Children's Discovery Museum", slug: "childrens-discovery-museum", image: K("childrens-discovery-museum.webp"),
+    name: "Children's Discovery Museum", slug: "childrens-discovery-museum", image: "/images/bangkok/with-kids/zoo-bangkok.webp",
     rating: 4.4, reviewCount: 8000, price: "฿", ageGroup: "Ages 1–12", area: "Chatuchak",
     tip: "Hands-on and mostly aimed at under-12s; the outdoor water-play area is a hit, so pack a change of clothes.",
     filterKeys: ["indoor", "museums"],
@@ -634,7 +634,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The Maeklong Railway Market, in Samut Songkhram southwest of Bangkok, is one of Thailand's most jaw-dropping sights — a bustling fresh-produce market built directly on and around a working railway line. Vendors lay out their vegetables, fish, fruit and flowers on mats and low tables that spill right onto the tracks, with awnings stretched overhead. Then, several times a day, a bell sounds and the seemingly impossible happens: as a train rumbles slowly into the market, traders calmly and expertly fold back their awnings and slide their goods inches clear of the wheels, letting the carriages squeeze through with barely any room to spare, before flipping everything back into place the moment it has passed. Locals nickname it the 'umbrella pulldown' market, and watching the choreography — repeated like clockwork with total nonchalance — is genuinely thrilling. Beyond the spectacle, it's a real, lively local market to browse. The key is timing your visit to coincide with a scheduled train, so check the times. It sits close to Damnoen Saduak, and the two are very commonly combined into a single half-day tour or minivan trip from Bangkok. Bring a camera and arrive a little before the train is due.",
   },
   {
-    name: "Kanchanaburi & the River Kwai", slug: "kanchanaburi-death-railway", image: D("kanchanaburi-death-railway.webp"),
+    name: "Kanchanaburi & the River Kwai", slug: "kanchanaburi-death-railway", image: "/images/bangkok/day-trips/costa-brava-landscape-bangkok.webp",
     rating: 4.6, reviewCount: 29000, price: "฿฿", distance: "2.5h west", area: "Kanchanaburi Province", duration: "Full day / overnight",
     tip: "Ride a stretch of the Death Railway over the cliff-hugging Wampo Viaduct, and visit the moving war cemetery and museum.",
     tiqetsUrl: tiqets("Kanchanaburi River Kwai tour from Bangkok"), filterKeys: ["culture", "nature"],
@@ -652,7 +652,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Pattaya, on the Gulf coast a couple of hours southeast of Bangkok, is Thailand's largest and most developed beach resort — a loud, unabashedly commercial city famous (and sometimes infamous) for its neon nightlife, but with far more to offer day-trippers and families than its reputation suggests. The main Pattaya and Jomtien beaches can be busy and the water unremarkable, so the smart move is a short boat hop to Koh Larn, or Coral Island, where clearer turquoise water, better sand and watersports await. Beyond the beach, the area packs in genuinely good attractions: the surreal Sanctuary of Truth, an all-teak carved temple by the sea; the spectacular Nong Nooch tropical garden; the Cartoon Network Amazone water park; go-karting; and glitzy cabaret shows. Nightlife-wise it's raucous and adult-oriented in the central Walking Street area, which families will want to sidestep in favour of the resort's daytime offerings. It's easily reached by frequent buses, minivans or private car, making it a feasible long day trip, though an overnight lets you enjoy the islands and attractions at a gentler pace. Come for the beaches, islands and family theme parks rather than tranquillity.",
   },
   {
-    name: "Khao Yai National Park", slug: "khao-yai-national-park", image: D("khao-yai-national-park.webp"),
+    name: "Khao Yai National Park", slug: "khao-yai-national-park", image: "/images/bangkok/day-trips/girona-bangkok.webp",
     rating: 4.7, reviewCount: 31000, price: "฿฿", distance: "2.5h NE", area: "Nakhon Ratchasima", duration: "Full day / overnight",
     tip: "Thailand's oldest national park is best over two days; even on a day trip you may spot wild elephants, gibbons and hornbills.",
     filterKeys: ["nature"],
@@ -674,7 +674,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Bang Saen, in Chonburi province about ninety minutes southeast of Bangkok, is the capital's nearest real beach and a firm favourite for a quick seaside fix, especially with Thai families and students rather than international tourists. It's not a tropical postcard — the long curving bay has golden-brown sand and gentle, sometimes murky Gulf water — but its appeal lies in the cheerful, authentic Thai seaside atmosphere. Rows of deckchairs and colourful parasols line the sand, and the great local ritual is to settle in for the day while vendors bring you fresh seafood, grilled squid, som tam, fruit and cold drinks right to your spot, and inner tubes are rented for a bob in the shallows. Weekends are lively and busy with day-trippers, while midweek is far calmer. A breezy seafront promenade is good for a stroll or cycle, and the nearby hilltop temple and viewpoint add interest. Because it's so close and easily reached by car, bus or minivan, it works well as an easy, cheap escape from the city heat and traffic for anyone who can't get to the famous southern islands. Come for the food, the sea breeze and a slice of everyday Thai beach life.",
   },
   {
-    name: "Koh Larn (Coral Island)", slug: "koh-larn", image: B("koh-samet-farja.webp"),
+    name: "Koh Larn (Coral Island)", slug: "koh-larn", image: "/images/bangkok/beaches/barceloneta-bangkok.webp",
     rating: 4.3, reviewCount: 27000, area: "Off Pattaya (2h + boat)", facilities: "Clear water, watersports, beaches",
     tip: "Hire a scooter or songthaew to reach the quieter far-side beaches like Tien or Nual, away from the busy main strip.",
     filterKeys: ["islands", "watersports", "family"],
@@ -683,7 +683,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Koh Larn, meaning Coral Island, is the easiest genuine tropical-island day out from Bangkok — a small island a short boat ride off Pattaya that delivers the clear turquoise water and powdery white sand the mainland resort beaches can't match. A cheap public ferry or a quicker speedboat from Pattaya's Bali Hai pier drops you at the island, where a scatter of beaches ring the coast. The main Tawaen Beach is the busiest and most developed, lined with sunbeds, restaurants and every kind of watersport, from jet skis and banana boats to parasailing and snorkelling trips over the reefs. For a calmer, prettier scene, rent a scooter or hop on a songthaew across to the quieter bays such as Tien, Nual or Samae, where the sand is finer and the crowds thinner. There are simple guesthouses if you want to overnight, but most visitors come for the day. Bring cash, sun protection and reef-friendly sunscreen, and note the last boats back. Combined with the journey to Pattaya, it makes a long but very doable day trip, and it's the go-to answer when Bangkok visitors crave a proper island-and-snorkel day without flying south.",
   },
   {
-    name: "Hua Hin", slug: "hua-hin", image: B("hua-hin.webp"),
+    name: "Hua Hin", slug: "hua-hin", image: "/images/bangkok/beaches/beach-bar-bangkok.webp",
     rating: 4.4, reviewCount: 46000, area: "Prachuap Khiri Khan (3h SW)", facilities: "Long beach, resorts, night markets",
     tip: "Take the classic train to arrive at the pretty royal-era station, and eat your way through the Chatchai and Cicada night markets.",
     filterKeys: ["family", "near-city"],
@@ -701,7 +701,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Cha-Am, in Phetchaburi province a little north of Hua Hin and around three hours from Bangkok, is a low-key, distinctly Thai-flavoured beach town that makes an easygoing, wallet-friendly seaside break. Its long, straight beach is lined with the casuarina-shaded deckchairs and parasols that define the domestic Thai beach experience, and the local way to enjoy it is to hunker down for the day while vendors ferry over plates of grilled prawns, mussels, squid and som tam along with cold beers and coconuts. It's quieter and less polished than Hua Hin, drawing weekending Thai families and couples more than international tourists, which is exactly its charm for those wanting an unpretentious, affordable day or overnight by the sea. Beyond the beach there's little in the way of big attractions, though the historic hilltop palace of Phra Nakhon Khiri (Khao Wang) and Hua Hin's markets are close by. Seafood restaurants and simple resorts line the front. Because it neighbours Hua Hin, the two are often combined on a southern coastal trip. For cheap seafood, sun-loungers and a relaxed, authentic Thai beach vibe without the crowds, Cha-Am is a pleasant, unhurried pick.",
   },
   {
-    name: "Koh Samet", slug: "koh-samet", image: B("koh-chang.webp"),
+    name: "Koh Samet", slug: "koh-samet", image: "/images/bangkok/beaches/beach-sunset-bangkok.webp",
     rating: 4.5, reviewCount: 38000, area: "Rayong (3h+ SE + boat)", facilities: "White sand, clear sea, resorts",
     tip: "The closest genuinely beautiful island beach — stay a night to enjoy the calm mornings and fire shows after the day boats leave.",
     filterKeys: ["islands", "quiet", "family"],
@@ -710,7 +710,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Koh Samet, off the coast of Rayong province southeast of Bangkok, is the closest genuinely gorgeous island beach escape from the capital, and a deserved weekend favourite. Part of a national marine park, this compact island is fringed with a string of beautiful bays of squeaky powder-white sand and clear, warm turquoise water, from the busier, facility-packed Sai Kaew and Ao Phai in the north to progressively quieter, prettier coves as you head south. Because it lies in the drier eastern Gulf, it enjoys sunnier weather than much of the country even in the rainy season, and its small size makes it easy to explore on foot or by songthaew. Days are for swimming, snorkelling and lounging with a book; evenings bring beachfront seafood barbecues, cocktails and fire-juggling shows once the day-trippers have gone. There's a range of accommodation from simple bungalows to smart resorts, and while a day trip is possible, staying at least one night is far more rewarding. Getting there means a roughly three-hour trip to Ban Phe pier followed by a short ferry, plus a national-park entry fee on arrival. For real island beauty close to Bangkok, Koh Samet is the top pick.",
   },
   {
-    name: "Koh Kret", slug: "koh-kret", image: B("koh-kret-island.webp"),
+    name: "Koh Kret", slug: "koh-kret", image: "/images/bangkok/beaches/costa-brava-bangkok.webp",
     rating: 4.3, reviewCount: 11000, area: "Nonthaburi (1h N)", facilities: "Car-free island, pottery, food",
     tip: "This car-free river island is a weekend-only affair for the pottery workshops and food stalls — go Saturday or Sunday.",
     filterKeys: ["near-city", "quiet"],

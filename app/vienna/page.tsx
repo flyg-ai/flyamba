@@ -46,13 +46,13 @@ const NON_STOP = [
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/vienna/sevardheter/schonbrunn-slott.webp",
-  restaurants: "/images/vienna/restauranger/figlmuller.webp",
+  restaurants: "/images/vienna/restaurants/restaurant-vienna.avif",
   hotels: "/images/vienna/hotell/hotel-sacher-wien.webp",
   transport: "/images/vienna/sevardheter/wiener-staatsoper.webp",
   prices: "/images/vienna/sevardheter/karlskirche.webp",
   weather: "/images/vienna/sevardheter/belvedere.webp",
   shopping: "/images/vienna/shopping/graben.webp",
-  nightlife: "/images/vienna/nattliv/loos-american-bar.webp",
+  nightlife: "/images/vienna/nightlife/cocktail-bar-vienna.webp",
   "with-kids": "/images/vienna/med-barn/prater-riesenrad.webp",
   "day-trips": "/images/vienna/dagsutflykter/hallstatt.webp",
   events: "/images/vienna/sevardheter/rathaus.webp",
@@ -71,9 +71,9 @@ const ATTRACTION_PREVIEW = [
   { name: "Belvedere & Klimt", blurb: "A Baroque palace holding Klimt's golden 'The Kiss'.", image: "/images/vienna/sevardheter/belvedere.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Figlmüller", blurb: "The plate-swamping Wiener schnitzel, an institution since 1905.", image: "/images/vienna/restauranger/figlmuller.webp" },
+  { name: "Figlmüller", blurb: "The plate-swamping Wiener schnitzel, an institution since 1905.", image: "/images/vienna/restaurants/restaurant-vienna.avif" },
   { name: "Café Sacher", blurb: "The birthplace of the Original Sacher-Torte behind the Opera.", image: "/images/vienna/restauranger/caf-sacher.webp" },
-  { name: "Plachutta Wollzeile", blurb: "The temple of Tafelspitz, the emperor's favourite boiled beef.", image: "/images/vienna/restauranger/plachutta-wollzeile.webp" },
+  { name: "Plachutta Wollzeile", blurb: "The temple of Tafelspitz, the emperor's favourite boiled beef.", image: "/images/vienna/restaurants/restaurant-vienna.avif" },
 ];
 
 const NEARBY = [

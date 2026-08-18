@@ -54,7 +54,7 @@ export default function DubrovnikWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Dubrovnik with Kids"
-      heroImage="/images/dubrovnik/with-kids/lokrum-island.webp"
+      heroImage="/images/dubrovnik/with-kids/aquarium-dubrovnik.webp"
       intro="Dubrovnik is a surprisingly rewarding city with children — the real-life castle walls thrill young knights and Game of Thrones fans alike, while beyond the Old Town lie a hillside water park, an aquarium tucked inside a fortress, family beaches, boat trips to a peacock-filled island and a cable car with a summit view. Here are the best things to do in Dubrovnik with kids, with suggested ages, prices and practical tips to keep everyone happy in the summer heat."
       wide
     >

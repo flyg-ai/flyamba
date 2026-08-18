@@ -53,7 +53,7 @@ export default function SingaporeBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Best Beaches in Singapore"
-      heroImage="/images/singapore/strander/palawan-beach.webp"
+      heroImage="/images/singapore/beaches/barceloneta-singapore.webp"
       intro="Singapore is a city of the tropics, and warm, swimmable water is never far away. Sentosa's trio of imported-sand beaches — family-friendly Palawan, lively Siloso and stylish Tanjong — headline the scene, but locals flock to the 15 km ribbon of East Coast Park for cycling and seafood, escape to laid-back Changi, or take a ferry to the untouched white sand of Lazarus Island. Here are 7 of the best beaches and coastal escapes, with facilities, atmosphere and how to reach each one."
       wide
     >

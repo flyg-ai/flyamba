@@ -256,7 +256,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ──────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Nobu Dubai", slug: "nobu-dubai", image: RES("nobu-dubai.webp"),
+    name: "Nobu Dubai", slug: "nobu-dubai", image: "/images/dubai/restaurants/restaurant-dubai.avif",
     rating: 4.6, reviewCount: 9000, price: "$$$$", area: "Atlantis The Palm", type: "Japanese Fusion",
     tip: "The Atlantis branch of Nobu Matsuhisa's global chain — the black cod miso and yellowtail jalapeño are world-class. Book two weeks ahead for a window table facing Palm Jumeirah; the Sunday brunch is legendary.",
     filterKeys: ["fine-dining", "view"],
@@ -265,7 +265,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Nobu Dubai is the Atlantis The Palm branch of chef Nobu Matsuhisa's globe-spanning restaurant empire, and one of the city's most reliably excellent high-end tables. The signature dishes that made the brand famous are all here and executed beautifully: black cod miso, yellowtail sashimi with jalapeño, rock-shrimp tempura and an array of new-style sushi that blends Japanese precision with Peruvian brightness. The dining room is sleek and buzzing, set within the pink megaresort at the tip of Palm Jumeirah, and the best tables look out over the water. It's a place for a dressed-up dinner or the celebrated weekend brunch, which turns the full menu into a lavish, free-flowing feast. Prices are high — around a hundred and sixty-five dollars a head for dinner and more for brunch — so approach it as a special occasion rather than a casual meal. Reservations are essential, ideally two weeks ahead for a window table facing the Gulf, and it pairs perfectly with a day exploring Atlantis and the Palm. Polished, dependable and quintessentially Dubai.",
   },
   {
-    name: "Zuma Dubai", slug: "zuma-dubai", image: RES("zuma.webp"),
+    name: "Zuma Dubai", slug: "zuma-dubai", image: "/images/dubai/restaurants/restaurant-dubai.avif",
     rating: 4.6, reviewCount: 11000, price: "$$$$", area: "DIFC", type: "Modern Japanese",
     tip: "Robatayaki grill, a sushi bar and 250 sakés in the heart of the financial district. The two-course set lunch (around $76) is Dubai's best-hidden fine-dining deal, with a late-night bar upstairs.",
     filterKeys: ["fine-dining"],
@@ -274,7 +274,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Zuma Dubai is the Middle East flagship of the international modern-Japanese izakaya brand, and a fixture of the DIFC financial district's dining and social scene. The menu is built for sharing across three kitchens: a robatayaki grill turning out miso-marinated black cod and grilled meats, a sushi and sashimi bar, and the main kitchen sending out dishes like spicy edamame, rice hot-pot and tempura. The saké list runs to some 250 bottles, and the sleek, split-level room with its central bar hums with a well-dressed after-work crowd that stays late. It's serious, contemporary cooking in a glamorous setting, popular enough that reservations are essential, especially in the evening. The insider move is the two-course set lunch at around seventy-six dollars — a genuine bargain for food of this standard — while dinner runs closer to a hundred and fifty a head. The upstairs bar is one of DIFC's best spots for a cocktail before or after the meal. For polished Japanese food with real energy in the heart of the modern city, Zuma is a dependable Dubai favourite.",
   },
   {
-    name: "Pierchic", slug: "pierchic", image: RES("pierchic.webp"),
+    name: "Pierchic", slug: "pierchic", image: "/images/dubai/restaurants/restaurant-dubai.avif",
     rating: 4.7, reviewCount: 6500, price: "$$$$", area: "Madinat Jumeirah", type: "Seafood",
     tip: "A wooden pier stretching into the Gulf with the Burj Al Arab behind — Dubai's most romantic classic. Lobster bisque, French oysters and Dover sole tableside; sunset tables book three weeks ahead.",
     filterKeys: ["fine-dining", "view"],
@@ -283,7 +283,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Pierchic is Dubai's most romantic restaurant, set at the end of a wooden pier that reaches out into the Arabian Gulf from the Madinat Jumeirah resort, with the sail-shaped Burj Al Arab framed behind it. The kitchen keeps the focus firmly on top-quality seafood: lobster bisque, French oysters, Dover sole filleted tableside, langoustines and beautifully simple grilled fish, all served against an unbeatable backdrop of water and sky. As the sun drops and the Burj Al Arab lights up, few tables in the city are more special, which is exactly why couples come here for anniversaries and proposals. It's expensive — around a hundred and ninety dollars a head — and the experience is unhurried and dressed-up rather than casual. Reservations are essential, and the sought-after sunset tables book up around three weeks in advance, so plan ahead. Combine it with a wander through the atmospheric Souk Madinat Jumeirah beforehand. For a once-in-a-trip romantic dinner that captures both Dubai's coastal beauty and its flair for the dramatic, Pierchic is hard to beat.",
   },
   {
-    name: "Nathan Outlaw at Al Mahara", slug: "nathan-outlaw-al-mahara", image: RES("al-mahara-burj-al-arab.webp"),
+    name: "Nathan Outlaw at Al Mahara", slug: "nathan-outlaw-al-mahara", image: "/images/dubai/restaurants/restaurant-dubai.avif",
     rating: 4.6, reviewCount: 4200, price: "$$$$", area: "Burj Al Arab", type: "Seafood",
     tip: "A restaurant wrapped around a cylindrical aquarium inside the Burj Al Arab, with Cornish seafood chef Nathan Outlaw's menu. Dinner only, jacket required; tasting menus run around $325.",
     filterKeys: ["fine-dining", "view"],
@@ -310,7 +310,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Trèsind Studio is Dubai's most celebrated fine-dining restaurant and the UAE's first to earn three Michelin stars, an intimate 20-seat room where chef Himanshu Saini serves an ever-evolving multi-course tasting menu — often around sixteen courses — that reimagines the vast, regional diversity of Indian cooking through a modern, technically dazzling lens. Each menu is themed and changes with the seasons, moving from street-food riffs to refined, deconstructed classics, with immaculate plating and playful surprises throughout. Because there are so few seats and demand is enormous, this is one of the hardest tables to secure in the city; booking around two months ahead is realistic, and the tasting menu runs to roughly two hundred and sixty dollars a head. It's a proper occasion — a slow, theatrical, several-hour experience rather than a quick dinner — and among the most rewarding meals in the Middle East for anyone who loves ambitious cooking. For a lighter, cheaper taste of the same kitchen's ideas, its sibling Tresind offers a modern-Indian à la carte menu at around half the price. But the Studio is the destination.",
   },
   {
-    name: "La Petite Maison", slug: "la-petite-maison", image: RES("la-petite-maison.webp"),
+    name: "La Petite Maison", slug: "la-petite-maison", image: "/images/dubai/restaurants/restaurant-dubai.avif",
     rating: 4.6, reviewCount: 8500, price: "$$$", area: "DIFC", type: "French / Mediterranean",
     tip: "A Niçoise classic transplanted to Dubai — burrata, tagliatelle and whole grilled fish. Lunch is liveliest, when the DIFC bankers pile in; evenings are quieter and more romantic.",
     filterKeys: ["fine-dining"],
@@ -319,7 +319,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "La Petite Maison, universally known as LPM, is a much-loved import of the Niçoise original, bringing the sunny cooking of the French Riviera and Mediterranean to the heart of Dubai's DIFC district. There are no starters or mains in the traditional sense — instead a long menu of vibrant small and large plates designed for sharing: creamy burrata with tomato, warm prawns with lemon, ratatouille, tagliatelle, and whole grilled fish brought to the table, all built on top produce and simple, confident technique. The room is bright, white and always buzzing, with a bar scene and a well-heeled crowd that makes it as much about the atmosphere as the food. Lunch is at its liveliest, when DIFC's bankers and professionals fill every table; evenings are a touch quieter and more romantic. Expect to pay around a hundred and five dollars a head. Reservations are essential, particularly at lunch. For polished, generous Mediterranean cooking in a glamorous, energetic setting — and a taste of Dubai's smart business-district social scene — LPM is a reliably excellent choice.",
   },
   {
-    name: "Arabian Tea House", slug: "arabian-tea-house", image: RES("arabian-tea-house.webp"),
+    name: "Arabian Tea House", slug: "arabian-tea-house", image: "/images/dubai/restaurants/restaurant-dubai.avif",
     rating: 4.5, reviewCount: 16000, price: "$", area: "Al Fahidi", type: "Emirati",
     tip: "A white courtyard full of vintage furniture in the heart of Al Fahidi — the Emirati breakfast (luqaimat, balaleet, khameer) is around $18. No alcohol, but 60 kinds of tea; traditionally closed Fridays.",
     filterKeys: ["local", "budget"],
@@ -328,7 +328,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "The Arabian Tea House is the loveliest place to try traditional Emirati food in Dubai, set in a serene white courtyard shaded by a tree and filled with vintage furniture and turquoise benches in the heart of the historic Al Fahidi quarter. It's a world away from the city's mall-based dining: relaxed, unhurried and genuinely atmospheric. The star is the Emirati breakfast — a spread of luqaimat (sweet dumplings in date syrup), balaleet (sweet vermicelli with egg), khameer bread, cheeses, dates and eggs — while the wider menu runs to mezze, salunas (stews), grills and traditional desserts. There's no alcohol, but a menu of some sixty teas and traditional drinks like karak and camel-milk options. Prices are gentle by Dubai standards, with breakfast around eighteen dollars and a full meal about twenty-two a head. It's traditionally closed on Fridays, so plan around that. Come in the morning for the breakfast, sit in the courtyard, and combine it with a walk through Al Fahidi's wind-tower lanes and an abra ride across the Creek for a perfect slow, cultural half-day.",
   },
   {
-    name: "Al Ustad Special Kabab", slug: "al-ustad-special-kabab", image: RES("al-ustad-special-kabab.webp"),
+    name: "Al Ustad Special Kabab", slug: "al-ustad-special-kabab", image: "/images/dubai/restaurants/restaurant-dubai.avif",
     rating: 4.5, reviewCount: 12000, price: "$", area: "Bur Dubai", type: "Iranian",
     tip: "A family grill open since 1978 — even Sheikh Mohammed has eaten here. No menu, just kebab, rice and bread. Take a number at the door, and dodge the queue by going between 14:30 and 17:00.",
     filterKeys: ["local", "budget"],
@@ -337,7 +337,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Al Ustad Special Kabab is one of Dubai's most-loved institutions, a family-run Iranian grill in Bur Dubai that has been packing them in since 1978 — its walls covered in photographs of decades of happy diners, reportedly including Sheikh Mohammed himself. There's essentially no menu: you come for perfectly charcoal-grilled kebabs — chicken and lamb — served with fragrant rice, grilled tomatoes, fresh herbs and warm bread, and that's the whole, glorious point. It's cheap, generous and utterly authentic, the antithesis of Dubai's glossy mall restaurants, and it draws a devoted mix of locals, workers and clued-up travellers. Because it doesn't take reservations and fills fast, there's often a queue and a take-a-number system at the door; the insider trick is to arrive in the quiet window between 14:30 and 17:00. A full meal costs around fourteen dollars a head, cash is king, and the atmosphere is loud, friendly and timeless. For a taste of the old, everyday Dubai that existed long before the skyscrapers — honest food, huge value and real character — Al Ustad is essential.",
   },
   {
-    name: "Bu Qtair", slug: "bu-qtair", image: RES("bu-qtair.webp"),
+    name: "Bu Qtair", slug: "bu-qtair", image: "/images/dubai/restaurants/restaurant-dubai.avif",
     rating: 4.5, reviewCount: 9500, price: "$", area: "Jumeirah Fishing Harbour", type: "Seafood (local)",
     tip: "A tin shack by the fishing harbour in Jumeirah — coast-caught fish grilled while you wait, with curry sauce, rice and chapati. No reservations, no menu: just point at the fish you want.",
     filterKeys: ["local", "budget"],
@@ -350,7 +350,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Nightlife (10) ────────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "White Dubai", slug: "white-dubai", image: NAT("white-dubai.webp"),
+    name: "White Dubai", slug: "white-dubai", image: "/images/dubai/nightlife/cocktail-bar-dubai.webp",
     rating: 4.4, reviewCount: 14000, price: "Entry ~$54", area: "Meydan Racecourse", type: "Mega-club",
     tip: "The flagship of Dubai nightlife — a 7,000-capacity rooftop club on the Meydan grandstand, with David Guetta, Tiësto and Hardwell residencies. Fri & Sat, October–May (closed in summer); VIP tables from ~$1,360.",
     filterKeys: ["club", "rooftop"],
@@ -359,7 +359,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "White Dubai is the flagship of the city's famous nightlife scene — a vast open-air club perched on the roof of the Meydan racecourse grandstand, with a capacity of around 7,000 and a line-up that reads like an electronic-music hall of fame, with residencies and appearances from the likes of David Guetta, Tiësto and Hardwell. It opens on Friday and Saturday nights during the cooler season, roughly October to May, and closes over the summer when the rooftop setting becomes unbearable in the 45-degree heat. Like most top Dubai clubs, it runs on table service: entry is around fifty-four dollars, but the real experience is a VIP table, which starts around 1,360 dollars for bottles and setup for a group. Solo visitors and those without a booking can face long waits to get in. The dress code is elegant — no sportswear or shorts — and the crowd is glossy and international. For a big, high-production night out with world-class DJs under the stars, White is the definitive Dubai club; just book a table ahead and come dressed to impress.",
   },
   {
-    name: "Zero Gravity", slug: "zero-gravity", image: NAT("zero-gravity.webp"),
+    name: "Zero Gravity", slug: "zero-gravity", image: "/images/dubai/nightlife/flamenco-dubai.webp",
     rating: 4.4, reviewCount: 19000, price: "Entry ~$54", area: "Skydive Dubai", type: "Beach Club",
     tip: "A beach-club mecca beside the skydiving drop zone — pool, beach, dance floor and rooftop DJs all day Sunday. Pool & beach pass ~$54 with credit; Friday nights flip into EDM club mode until 04:00.",
     filterKeys: ["beach-club", "club"],
@@ -377,7 +377,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Drai's Dubai is the local outpost of the famous Las Vegas nightclub brand, occupying a rooftop at the Meydan Hotel with a capacity of around 1,200 and a reputation for pulling in top-tier international DJs. It's a polished, high-energy venue that captures the Vegas formula of bottle service, dramatic production and a see-and-be-seen crowd, transplanted to the Dubai skyline. A signature quirk is the Sunday programme, where a lavish brunch rolls seamlessly into a full club night, letting you party from afternoon into the early hours; ladies frequently get complimentary entry until midnight. Entry runs around sixty-eight dollars, with tables priced well above that, and — as everywhere in Dubai's top clubs — a booking makes the night far smoother. The dress code is elegant, and the atmosphere leans glamorous rather than underground. Open on weekend nights during the cooler season, it's one of the city's marquee party addresses. For visitors chasing a big, Vegas-style club night with headline DJs and a glossy crowd, Drai's is a reliable pick — reserve a table ahead for the best experience.",
   },
   {
-    name: "The Act Dubai", slug: "the-act-dubai", image: NAT("the-act.webp"),
+    name: "The Act Dubai", slug: "the-act-dubai", image: "/images/dubai/nightlife/live-music-dubai.webp",
     rating: 4.5, reviewCount: 6200, price: "Entry ~$54", area: "Shangri-La", type: "Show Club",
     tip: "A Las Vegas-style burlesque supper club — acrobats, fire performers and avant-garde fashion between courses. Dinner and show runs around $163; there's nothing else quite like it in the region.",
     filterKeys: ["club"],
@@ -386,7 +386,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Act Dubai is one of the city's most distinctive nights out — a theatrical supper club at the Shangri-La modelled on Las Vegas burlesque cabaret, where dinner is punctuated by a rolling programme of live entertainment: acrobats, aerialists, fire performers, dancers and avant-garde fashion, all staged around and above the tables through the evening. It's part restaurant, part show, part club, building from a sit-down dinner into a late-night party as the performances heat up. There's genuinely nothing else quite like it in the region, which makes it a memorable choice for a special celebration or a group night with a difference. A dinner-and-show package runs around a hundred and sixty-three dollars, with entry alone around fifty-four, and reservations are essential given the seated, cabaret format. The dress code is elegant, and the crowd comes ready for a glamorous evening. For visitors who want more than a straightforward club — a full, theatrical night of dining, spectacle and dancing rolled into one — The Act delivers a uniquely Dubai blend of dinner and decadence. Book a table well ahead, especially at weekends.",
   },
   {
-    name: "Iris Dubai", slug: "iris-dubai", image: NAT("iris-dubai.webp"),
+    name: "Iris Dubai", slug: "iris-dubai", image: "/images/dubai/nightlife/nightlife-bar-dubai.webp",
     rating: 4.4, reviewCount: 9000, price: "Entry ~$27", area: "The Oberoi", type: "Rooftop Bar",
     tip: "A garden-themed rooftop bar on the 36th floor with a Burj Khalifa view, live music and a late-night club mode. Its Sunday brunch is among the city's best-rated; booking is always required.",
     filterKeys: ["rooftop", "cocktail"],
@@ -395,7 +395,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Iris Dubai is one of the city's most popular rooftop lounges, occupying the 36th floor of The Oberoi hotel in Business Bay, with a garden theme of greenery and warm lighting and a direct view across to Burj Khalifa. It strikes a nice balance between a relaxed cocktail-and-shisha lounge earlier in the evening and a livelier, DJ-driven late-night spot as the night goes on, with live music adding to the atmosphere. The cocktail list is strong, prices are premium (from around nineteen dollars a drink), and entry is a relatively modest twenty-seven or so, though booking is always required and tables go fast. Its Sunday brunch is consistently rated among the best in the city. The crowd is stylish and international, and the Burj Khalifa backdrop makes it a photogenic choice for a special night. For visitors who want the glamour and skyline views of Dubai's rooftop scene in a slightly more laid-back, garden setting than the mega-clubs — good cocktails, a great view and a buzz without a full-on club commitment — Iris is an excellent, reliably atmospheric pick. Reserve ahead, especially at weekends.",
   },
   {
-    name: "Siddharta Lounge by Buddha-Bar", slug: "siddharta-lounge", image: NAT("siddharta-lounge.webp"),
+    name: "Siddharta Lounge by Buddha-Bar", slug: "siddharta-lounge", image: "/images/dubai/nightlife/rooftop-bar-night-dubai.webp",
     rating: 4.4, reviewCount: 7000, price: "Entry free", area: "Grosvenor House, Marina", type: "Asian Lounge",
     tip: "Marina views and a pan-Asian menu that gives way to house DJs later in the evening. The Sunday brunch (~$80) comes with free-flowing Möet; Buddha statues and red light set the mood.",
     filterKeys: ["cocktail", "rooftop"],
@@ -453,7 +453,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Dubai Mall is the world's largest shopping centre by total area and far more than a place to shop — it's an all-day destination in its own right, and one of the most visited buildings on earth. Beyond its 1,200-plus stores, spanning everything from high-street brands to the Fashion Avenue luxury wing, it houses the Dubai Aquarium with its vast viewing window and 33,000 animals, an Olympic-size ice rink, a 26-screen cinema, the KidZania role-play city, a VR park and a waterfall sculpture. Just outside, the Dubai Fountain stages free light-and-water shows every 30 minutes each evening, and the mall connects directly to Burj Khalifa's observation decks. It's cool, cavernous and easy to spend a whole day in, especially welcome during the summer heat. Entry is free, it opens from around 10:00 until midnight, and the Metro Red Line drops you at its door via an air-conditioned bridge. Whether you're here to shop the flagship brands, entertain the kids, catch the fountains or simply escape the heat, Dubai Mall is the beating retail heart of the city — go on a weekday to dodge the biggest crowds.",
   },
   {
-    name: "Mall of the Emirates", slug: "mall-of-the-emirates", image: SHO("mall-of-the-emirates.webp"),
+    name: "Mall of the Emirates", slug: "mall-of-the-emirates", image: "/images/dubai/shopping/artisan-shop-dubai.webp",
     rating: 4.6, reviewCount: 140000, price: "$$$", area: "Al Barsha", type: "Mega-mall",
     tip: "700 shops with Ski Dubai built in — you can watch skiers from the mall's cafés. Directly on the Metro Red Line, it's one of the easiest big malls to reach.",
     filterKeys: ["malls", "luxury"],
@@ -462,7 +462,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Mall of the Emirates is one of Dubai's original mega-malls and still among its best, a long-established Al Barsha landmark with around 700 shops spanning international high-street names, department stores and a luxury wing. Its headline feature is Ski Dubai, the Middle East's largest indoor ski resort, whose snow slope is built right into the complex — you can sit in the mall's cafés and restaurants and watch skiers and snowboarders through the glass, a surreal Dubai touch. Beyond the shops and the slope, there's a large cinema, a family entertainment centre, a Magic Planet arcade and a strong line-up of restaurants and food courts. It's fully air-conditioned and easy to lose a day in, particularly in summer. Entry is free, hours run from around 10:00 to midnight, and — a big practical plus — it sits directly on the Metro Red Line with its own station, making it one of the simplest major malls to reach without a taxi. For shopping, snow, dining and family entertainment under one roof, with unbeatable transport links, Mall of the Emirates is a Dubai essential, and a natural pairing with a Ski Dubai session.",
   },
   {
-    name: "Gold Souk", slug: "gold-souk-shopping", image: SHO("gold-souk.webp"),
+    name: "Gold Souk", slug: "gold-souk-shopping", image: "/images/dubai/shopping/mall-dubai.webp",
     rating: 4.4, reviewCount: 41000, price: "$$", area: "Deira", type: "Gold Market",
     tip: "Haggle 30–40% on the making charge — around ten tonnes of gold are on display across 700+ shops. Evenings are busiest; the gold price itself is fixed to a posted daily gram rate.",
     filterKeys: ["markets", "luxury"],
@@ -471,7 +471,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The Gold Souk in Deira is not only Dubai's most atmospheric shopping experience but one of its great free spectacles — over 700 shops along covered lanes, their windows a wall of glittering 18-, 21-, 22- and 24-carat jewellery, from delicate rings to elaborate bridal sets weighing kilos. What makes buying here refreshingly transparent is the pricing system: the daily rate per gram is posted on an official electronic board in the middle of the souk, and every shop must honour it, so the gold itself isn't negotiable — but the making charge for the craftsmanship is, and this is where you can haggle 30 to 40 percent off with patience and good humour. Even if you're not buying, wandering the lanes among the dazzling displays is an essential slice of old-trading-Dubai, best in the evening when the air cools and the souk hums. It's easily reached via the Green Line to Al Ras, and sits a short walk from the fragrant Spice Souk and the Creek's abra stations. Come with a rough idea of the day's gold price, negotiate on the making charge, and enjoy one of Dubai's most authentic shopping traditions.",
   },
   {
-    name: "Spice Souk", slug: "spice-souk-shopping", image: SHO("spice-souk.webp"),
+    name: "Spice Souk", slug: "spice-souk-shopping", image: "/images/dubai/shopping/outdoor-market-dubai.webp",
     rating: 4.3, reviewCount: 22000, price: "$", area: "Deira", type: "Spice Market",
     tip: "Saffron from around $1 a gram, plus custom spice blends, dried lime, frankincense and rose water. Haggle hard — start at half the opening price — and it's open on weekends too.",
     filterKeys: ["markets", "souvenirs"],
@@ -480,7 +480,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The Spice Souk in Deira is one of Dubai's most sensory and affordable shopping spots, a small warren of wooden-roofed lanes lined with sacks and jars of saffron, cardamom, cinnamon, cumin, turmeric, dried lime (loomi), rose water, frankincense and oud. Dubai is one of the world's great saffron trading hubs, and here you can buy it for a fraction of European prices — from around a dollar a gram — along with custom spice blends the merchants will mix for you, and fragrant incense that makes an evocative, lightweight souvenir. The souk is compact, perhaps 30 to 40 shops, but intense and colourful, and the traders are generous with samples and stories about origin and use. Haggling is expected and part of the fun: the opening price is usually about double the realistic one, so start at half and negotiate cheerfully. It's open through the week, including weekends, and best in the low evening light when the colours glow. A five-minute walk from the Gold Souk and beside the Creek's abra stations, it slots neatly into an old-Dubai afternoon — bring a little cash and an empty bag to fill.",
   },
   {
-    name: "Dubai Marina Mall", slug: "dubai-marina-mall", image: SHO("dubai-marina-mall.webp"),
+    name: "Dubai Marina Mall", slug: "dubai-marina-mall", image: "/images/dubai/shopping/shopping-street-dubai.webp",
     rating: 4.4, reviewCount: 38000, price: "$$", area: "Dubai Marina", type: "Mall",
     tip: "Smaller and more manageable than Dubai Mall, right on the waterfront — pair it with a Marina Walk stroll and a canal-side dinner.",
     filterKeys: ["malls"],
@@ -489,7 +489,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Dubai Marina Mall is a smaller, more relaxed alternative to the city's overwhelming mega-malls, set right on the waterfront in the heart of the Marina district. With a manageable spread of around 130 stores across several floors — a mix of fashion, beauty, homeware and everyday essentials — plus a cinema, a supermarket and a good selection of cafés and restaurants, it's the kind of place you can actually navigate in an afternoon without a map. Its real appeal is the location: it opens directly onto the Marina Walk promenade, so a shopping trip pairs perfectly with a stroll along the canal among the yachts and skyscrapers, and a meal at one of the many waterside restaurants nearby. It's fully air-conditioned, a welcome refuge from the Marina heat, free to enter and open from around 10:00 to 22:00. The Metro Red Line and the Dubai Tram both stop close by. For visitors staying in the Marina or JBR who want convenient, unstressful shopping combined with a waterfront walk and dinner, Dubai Marina Mall is an easy, enjoyable choice — go in the evening when the whole district comes alive.",
   },
   {
-    name: "Ibn Battuta Mall", slug: "ibn-battuta-mall", image: SHO("ibn-battuta-mall.webp"),
+    name: "Ibn Battuta Mall", slug: "ibn-battuta-mall", image: "/images/dubai/shopping/souvenir-shop-dubai.webp",
     rating: 4.5, reviewCount: 52000, price: "$$", area: "Jebel Ali", type: "Themed Mall",
     tip: "Six courts themed on the travels of Ibn Battuta — China, India, Persia, Egypt, Tunisia and Andalusia — make it a shopping trip and a sightseeing experience in one.",
     filterKeys: ["malls"],
@@ -498,7 +498,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Ibn Battuta Mall is one of Dubai's most distinctive shopping centres, and worth visiting as much for its architecture as its stores. Named after the great 14th-century Moroccan explorer Ibn Battuta, it's divided into six themed courts inspired by the lands he journeyed through — China, India, Persia, Egypt, Tunisia and Andalusia — each elaborately decorated with domes, mosaics, murals, a full-size Chinese junk and a replica of a Persian astronomical clock, turning a simple shopping trip into a genuine sightseeing experience. Alongside the spectacle it's a proper working mall, with around 270 shops covering high-street fashion, electronics and homeware, plus a large cinema and a wide choice of restaurants and food courts. It's fully air-conditioned, free to enter and open from around 10:00 to 22:00, and — a big practical bonus — it sits directly on the Metro Red Line with its own station. For families and curious travellers who want their retail therapy served with a side of theatre and history, Ibn Battuta is a fun, photogenic and easily reached alternative to Dubai's more conventional malls — allow time simply to wander and admire the themed courts.",
   },
   {
-    name: "Souk Madinat Jumeirah", slug: "souk-madinat-jumeirah", image: SHO("souk-madinat-jumeirah.webp"),
+    name: "Souk Madinat Jumeirah", slug: "souk-madinat-jumeirah", image: "/images/dubai/shopping/vintage-market-dubai.webp",
     rating: 4.6, reviewCount: 61000, price: "$$", area: "Jumeirah", type: "Modern Souk",
     tip: "A modern, air-conditioned take on a traditional Arabian souk — winding lanes of boutiques and galleries with waterways, abras and Burj Al Arab views. Lovely at sunset.",
     filterKeys: ["souvenirs"],
@@ -507,7 +507,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Souk Madinat Jumeirah is a beautifully designed modern reinvention of a traditional Arabian marketplace, set within the sprawling Madinat Jumeirah resort in the shadow of the Burj Al Arab. Rather than the raw hustle of the old Deira souks, this is a polished, air-conditioned version: winding wood-and-stone lanes lined with boutiques, art galleries, craft shops and stalls selling carpets, lanterns, jewellery, textiles and souvenirs, threaded through with waterways where traditional abra boats glide past. It doubles as a dining and nightlife destination, with dozens of restaurants, bars and cafés — many with waterside terraces framing the Burj Al Arab — plus a theatre and easy access to the resort's beaches. It's free to enter, open late (until around 23:00), and especially magical at sunset and after dark, when the lanes are lit and the sail-shaped hotel glows behind. It's a taxi ride from the centre, with no direct Metro. For visitors who want to shop for higher-quality souvenirs and crafts in a genuinely atmospheric, photogenic setting — and combine it with dinner and a stroll — Souk Madinat Jumeirah is one of the most enjoyable spots in the city.",
   },
   {
-    name: "The Outlet Village", slug: "the-outlet-village", image: SHO("the-outlet-village.webp"),
+    name: "The Outlet Village", slug: "the-outlet-village", image: "/images/dubai/shopping/artisan-shop-dubai.webp",
     rating: 4.4, reviewCount: 24000, price: "$$", area: "Jebel Ali", type: "Outlet Mall",
     tip: "A designer outlet with 30–70% off — styled like a Tuscan village, it's the place for discounted luxury and premium brands away from the full-price malls.",
     filterKeys: ["luxury", "malls"],
@@ -520,7 +520,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── Hotels (8) ────────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Burj Al Arab Jumeirah", slug: "burj-al-arab", image: HOT("burj-al-arab.webp"),
+    name: "Burj Al Arab Jumeirah", slug: "burj-al-arab", image: "/images/dubai/hotels/hotel-dubai.avif",
     rating: 4.7, reviewCount: 26000, price: "$$$$", type: "Luxury icon", area: "Jumeirah",
     tip: "The sail-shaped hotel marketed as the world's only 'seven-star' — all-suite, with butler service. If a stay is out of reach, book afternoon tea or dinner to get past the private bridge.",
     filterKeys: ["luxury", "beach", "icon"],
@@ -529,7 +529,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Burj Al Arab is the hotel that put Dubai on the global luxury map — a 321-metre tower shaped like the billowing sail of a dhow, standing on its own artificial island 280 metres off Jumeirah Beach and connected to the mainland by a private, guarded bridge. Opened in 1999 and long marketed as the world's only 'seven-star' hotel, it is entirely made up of duplex suites, the smallest of which is around 170 square metres, each coming with a personal butler, a chauffeured Rolls-Royce fleet and a level of gilded, marble-and-gold-leaf opulence that has to be seen to be believed. There is a helipad near the top (used over the years for everything from tennis matches to Formula 1 stunts), several destination restaurants including the aquarium-wrapped Al Mahara, and the Skyview Bar high above the Gulf. A night here is firmly in the special-occasion, thousands-of-dollars bracket, but even non-guests can experience it by booking afternoon tea, a cocktail or a meal, which grants access across the bridge. As an emblem of Dubai's ambition and appetite for spectacle, nothing else quite compares — it remains the city's most photographed and most aspirational address.",
   },
   {
-    name: "Atlantis The Palm", slug: "atlantis-the-palm", image: HOT("atlantis-the-palm.webp"),
+    name: "Atlantis The Palm", slug: "atlantis-the-palm", image: "/images/dubai/hotels/hotel-dubai.avif",
     rating: 4.6, reviewCount: 62000, price: "$$$$", type: "Resort", area: "Palm Jumeirah",
     tip: "Staying here means free unlimited access to the Aquaventure water park and the Lost Chambers aquarium — a huge win for families. Ask for a room facing the Palm and the Dubai skyline.",
     filterKeys: ["luxury", "beach", "family"],
@@ -538,7 +538,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Atlantis The Palm is the vast, unmistakably pink resort that crowns the outer crescent of Palm Jumeirah, and one of Dubai's great family destinations. Opened in 2008 with a famously extravagant party, it wraps more than 1,500 rooms around a huge central archway and a world of on-site attractions that make it a holiday in itself. Guests get free unlimited access to Aquaventure, one of the world's largest water parks, with record-breaking slides, a private beach and a lazy river, and to The Lost Chambers Aquarium, home to 65,000 marine animals amid mock-Atlantis ruins. There are more than 20 restaurants, including outposts from Nobu, Gordon Ramsay and other big names, plus a dolphin and sea-lion experience, a spa and kids' clubs. The signature Underwater Suites have floor-to-ceiling windows straight into the aquarium. Rooms are comfortable rather than cutting-edge, and the scale means it can feel busy, but for families the sheer concentration of activities — especially the free water-park access — is unbeatable value at the luxury end. Its glossier 2023 neighbour, Atlantis The Royal, offers a more adults-and-design-focused alternative next door. For a self-contained, activity-packed Dubai beach base, Atlantis is hard to beat.",
   },
   {
-    name: "One&Only The Palm", slug: "oneonly-the-palm", image: HOT("oneonly-the-palm.webp"),
+    name: "One&Only The Palm", slug: "oneonly-the-palm", image: "/images/dubai/hotels/hotel-dubai.avif",
     rating: 4.8, reviewCount: 4200, price: "$$$$", type: "Boutique luxury", area: "Palm Jumeirah",
     tip: "An intimate, adults-in-mind Moorish-Andalusian retreat on a quiet western frond of the Palm, with a private beach and the acclaimed restaurant by Gregoire. Arrive by the resort's private yacht transfer.",
     filterKeys: ["luxury", "boutique", "beach"],
@@ -547,7 +547,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "One&Only The Palm is the antithesis of Dubai's big, buzzy megaresorts — a small, hushed and deeply exclusive retreat set on a secluded frond on the western side of Palm Jumeirah, with its own private beach looking back across the water to the Marina skyline. Built in an elegant Moorish-Andalusian style of low buildings, courtyards, fountains and lush gardens rather than a single tower, it has just over 90 rooms, suites and villas, which lends it an intimate, residential calm you rarely find in the city. The service is famously anticipatory and personal, and the resort is a favourite for honeymoons and grown-up escapes. Dining is a highlight, with a celebrated restaurant overseen by a Michelin-pedigree chef, and there is a serene ESPA spa, a beautiful pool and a private jetty from which a boat can whisk you to the sister One&Only Royal Mirage. It is expensive, adults-oriented in feel and quite removed from the action, which is precisely the point: guests come for privacy, romance and refined comfort rather than water parks and nightlife. For travellers who want Dubai's luxury without its noise, One&Only The Palm is one of the most special stays in the emirate.",
   },
   {
-    name: "Raffles Dubai", slug: "raffles-dubai", image: HOT("raffles-dubai.webp"),
+    name: "Raffles Dubai", slug: "raffles-dubai", image: "/images/dubai/hotels/hotel-dubai.avif",
     rating: 4.6, reviewCount: 9800, price: "$$$$", type: "5-star", area: "Wafi / Oud Metha",
     tip: "A pyramid-shaped landmark next to Wafi Mall, more central and better value than the beach resorts. The rooftop botanical garden and the Long Bar (home of the Singapore Sling) are highlights.",
     filterKeys: ["luxury", "central"],
@@ -565,7 +565,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Armani Hotel Dubai is the ultimate address for anyone who wants to sleep inside the world's tallest building: designer Giorgio Armani personally conceived the hotel, which occupies several of the lower floors of Burj Khalifa, and every detail reflects his signature aesthetic of understated, minimalist elegance. In place of Dubai's usual gold-and-marble maximalism, the interiors are all soft neutral tones, sleek lines, fine fabrics and quiet sophistication, with a 'lifestyle manager' assigned to each guest in lieu of a traditional butler. Rooms and suites are calm and beautifully finished, and the best of them look straight out over the Dubai Fountain and Downtown. The hotel's restaurants carry the Armani name — the Italian Armani/Ristorante and the Japanese-Indian Armani/Amal among them — and several open onto terraces overlooking the fountain shows, giving diners a front-row seat. There is also a serene Armani/SPA. The location is unbeatable for exploring Downtown: the Dubai Mall, the observation decks and the fountain are all within the building or steps away. For design lovers and those who want to be at the very centre of modern Dubai, in supremely tasteful surroundings, the Armani Hotel is a singular and stylish choice.",
   },
   {
-    name: "Rove Downtown", slug: "rove-downtown", image: HOT("rove-downtown.webp"),
+    name: "Rove Downtown", slug: "rove-downtown", image: "/images/dubai/hotels/hotel-dubai.avif",
     rating: 4.5, reviewCount: 21000, price: "$$", type: "Midscale", area: "Downtown Dubai",
     tip: "A hip, well-run midscale hotel with Burj Khalifa views at a fraction of the luxury rates — a rooftop pool, 24-hour gym and self-service laundry. Book a higher floor facing the tower.",
     filterKeys: ["central", "family", "value"],
@@ -574,7 +574,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Rove Downtown is the flagship of the homegrown Rove chain, a joint venture between Emaar and Meraas designed to fill the gap between Dubai's budget and luxury extremes, and it does so brilliantly. Aimed at younger travellers, families and anyone who wants location and comfort without a five-star price tag, it offers bright, contemporary, cleverly designed rooms — compact but well thought out, with good beds, fast free Wi-Fi and quirky local-art touches — in a superb Downtown position within walking distance of the Dubai Mall, the fountain and Burj Khalifa. The facilities punch well above the price: a rooftop swimming pool with views of the tower, a 24-hour gym, a relaxed all-day café-restaurant, a games area and self-service laundry, the last a genuine boon for longer stays. Doubles often go for around a hundred and ten dollars, a fraction of the nearby luxury hotels, making it outstanding value for the location. The vibe is casual, social and design-led rather than formal. There are several other Rove hotels around the city (at the Marina, La Mer, Expo and elsewhere), but the Downtown branch has the best position. For travellers who want to be central, comfortable and connected without overspending, Rove Downtown is one of the smartest choices in Dubai.",
   },
   {
-    name: "Premier Inn Dubai", slug: "premier-inn-dubai", image: HOT("premier-inn-dubai.webp"),
+    name: "Premier Inn Dubai", slug: "premier-inn-dubai", image: "/images/dubai/hotels/hotel-dubai.avif",
     rating: 4.4, reviewCount: 13000, price: "$", type: "Budget chain", area: "Various (Airport, Barsha, Ibn Battuta)",
     tip: "The reliable British budget chain has several Dubai branches, often beside the Metro — the Ibn Battuta and Airport locations are the handiest. Consistent, comfortable and cheap, with a good-value breakfast.",
     filterKeys: ["budget", "family", "value"],
@@ -583,7 +583,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Premier Inn is the familiar British budget hotel chain, and its several Dubai branches bring that same formula of reliable, comfortable, no-surprises accommodation at a genuinely affordable price to a city where value can be hard to find. The locations are chosen with practicality in mind: there are branches next to Dubai International Airport (ideal for early flights or layovers), at Al Barsha near the Mall of the Emirates, beside Ibn Battuta Mall and its Metro station, and in Dubai Investment Park, several of them within easy reach of a Metro stop. The rooms are exactly what regular Premier Inn guests will expect — clean, quiet, well air-conditioned and equipped with the chain's famously comfortable beds — while each hotel has a pool, a gym, a restaurant and a good-value breakfast. Doubles frequently go for around seventy dollars, a standout price for Dubai, making the chain a favourite of budget-conscious families, business travellers and anyone who would rather spend their money on experiences than on a room. You trade the glamour, beachfront and dining spectacle of the luxury hotels for dependability and low cost, but for a comfortable, affordable and conveniently located base — especially near the airport or the Metro — Premier Inn is one of the safest bets in the city.",
   },
   {
-    name: "Citymax Bur Dubai", slug: "citymax-bur-dubai", image: HOT("citymax-bur-dubai.webp"),
+    name: "Citymax Bur Dubai", slug: "citymax-bur-dubai", image: "/images/dubai/hotels/hotel-dubai.avif",
     rating: 4.3, reviewCount: 15000, price: "$", type: "Budget", area: "Bur Dubai",
     tip: "A cheerful budget hotel in the heart of old Bur Dubai, walking distance from the Creek, the souks and Al Fahidi. Rooftop pool, lively bars on site, and Metro links to the whole city.",
     filterKeys: ["budget", "central", "value"],
@@ -605,7 +605,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Aquaventure at Atlantis The Palm is one of the largest and most thrilling water parks on earth, and the single best day out in Dubai for families and adrenaline-seekers alike. Spread across the resort's grounds, it packs in dozens of slides and attractions for every age and nerve level, from record-breaking near-vertical drops and slides that shoot you through a shark-filled lagoon, to gentler rides, a long lazy river with rapids and wave surges, a dedicated children's play area with mini-slides, and a kilometre-long private beach for cooling off between rides. Signature attractions include the Leap of Faith, a stomach-dropping near-vertical plunge, and the newer Trident and Poseidon towers with their tangle of high-speed slides. Because it's built into a marine resort, some rides pass through or beside aquariums teeming with rays and sharks, adding a real wow factor. Entry is around ninety-five dollars for adults, but it's completely free for guests staying at Atlantis, which makes a night there surprisingly good value for families. Rent a cabana for shade and a base, bring reef shoes and plenty of sunscreen, and visit on a weekday to minimise queues. It's an easy full day, and children of almost any age will find plenty to love.",
   },
   {
-    name: "Wild Wadi Waterpark", slug: "wild-wadi-waterpark", image: KID("wild-wadi-waterpark.webp"),
+    name: "Wild Wadi Waterpark", slug: "wild-wadi-waterpark", image: "/images/dubai/with-kids/aquarium-dubai.webp",
     rating: 4.5, reviewCount: 41000, price: "$74", area: "Jumeirah", ageGroup: "All ages",
     tip: "Smaller and more central than Aquaventure, right beside the Burj Al Arab. The Jumeirah Sceirah is a near-vertical speed slide; a wristband system means you pay nothing extra inside.",
     tiqetsUrl: tiqets("Wild Wadi Waterpark Dubai"), filterKeys: ["outdoors", "thrills", "water"],
@@ -614,7 +614,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Wild Wadi is Dubai's original water park, smaller and more central than Aquaventure and set right beside the Burj Al Arab in Jumeirah, so you ride the slides with the famous sail-shaped hotel as your backdrop. Themed loosely around the Arabian folk tales of Juha, it packs some 30 rides and attractions into a compact, well-run site that works beautifully for families with a mix of ages. There's a full range of thrills: the Jumeirah Sceirah, a near-vertical speed slide that drops you from 32 metres, tandem tube rides, a wave pool, a long lazy river, and an interlinked master-blaster system that uses jets to shoot you uphill as well as down. For younger children there's Juha's Journey, a gentler lazy river, and a dedicated kids' play area with small slides and water-play. A single ticket covers everything inside — there are no extra charges — and a smart wristband system stores your locker and cashless spending. At around seventy-four dollars for adults it's a touch cheaper than Aquaventure, and its central location and manageable size make it easy to combine with a Jumeirah beach day. Bring sunscreen and reef shoes, and note the seasonal hours, which extend into the evening in the hotter months.",
   },
   {
-    name: "Dubai Aquarium & Underwater Zoo", slug: "dubai-aquarium", image: KID("dubai-aquarium.webp"),
+    name: "Dubai Aquarium & Underwater Zoo", slug: "dubai-aquarium", image: "/images/dubai/with-kids/family-park-dubai.webp",
     rating: 4.5, reviewCount: 96000, price: "$44", area: "Dubai Mall", ageGroup: "Ages 2–12",
     tip: "The giant tank is free to view from the Dubai Mall walkway — pay only for the tunnel walk-through, the Underwater Zoo and the glass-bottom boat. Cage snorkelling with the sharks is bookable for older kids.",
     tiqetsUrl: tiqets("Dubai Aquarium Underwater Zoo"), filterKeys: ["indoor", "animals", "rainy"],
@@ -623,7 +623,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Dubai Aquarium is one of the world's largest suspended aquariums and a centrepiece of the Dubai Mall, home to more than 33,000 aquatic animals across 140 species, including one of the biggest collections of sand tiger sharks anywhere. Its vast main viewing panel — a record-holder in its own right — is free to admire from the mall's walkway, which alone delights younger children as sharks, rays and shoals of fish drift past overhead. For a fee you can go further: walk through the 48-metre glass tunnel that passes right through the tank with the marine life all around you, explore the multi-level Underwater Zoo above with its penguins, crocodiles (including the enormous 'King Croc'), otters and reptiles, or take a glass-bottom boat across the top of the tank. Older, braver children and adults can even book cage snorkelling or a shark dive. It's fully indoor and air-conditioned, making it a reliable option on a scorching or rainy day, and its position inside the Dubai Mall means you can easily combine it with shopping, the aquarium's neighbours (the ice rink, the fountain), and lunch. Buy the combo online for a small saving, and allow a couple of hours to see the tunnel and the zoo at a child's pace.",
   },
   {
-    name: "KidZania Dubai", slug: "kidzania-dubai", image: KID("kidzania-dubai.webp"),
+    name: "KidZania Dubai", slug: "kidzania-dubai", image: "/images/dubai/with-kids/kids-museum-dubai.webp",
     rating: 4.4, reviewCount: 18000, price: "$40", area: "Dubai Mall", ageGroup: "Ages 4–16",
     tip: "A kid-sized role-play city where children earn and spend their own currency working as pilots, surgeons, firefighters and more. Best for ages 4–12; allow at least three hours to try several jobs.",
     tiqetsUrl: tiqets("KidZania Dubai"), filterKeys: ["indoor", "hands-on", "rainy"],
@@ -632,7 +632,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "KidZania Dubai, on the second floor of the Dubai Mall, is one of the most engaging and educational indoor attractions in the city for children — a scaled-down, remarkably detailed replica city where kids run the show. Across an 80,000-square-foot 'town' with its own streets, vehicles, shops and institutions, children aged roughly four to sixteen role-play more than 80 real-world professions: they can fly a plane in the cockpit, perform surgery in the hospital, fight fires and race to an emergency in a real fire truck, work as a chef, a journalist, a police officer, a dentist or a factory worker, and much more. Crucially, they earn the city's own currency ('kidZos') for the work they do and can then spend or save it, learning about money, work and how a society functions in the process. Parents can watch from cafés and viewing areas or accompany younger ones, while older children roam more independently with a security wristband system keeping everyone safe. It's fully indoor and air-conditioned, ideal for a hot or rainy day, and genuinely absorbing — allow at least three hours so children can try several jobs. A brilliant blend of play and learning, KidZania is a highlight for families with primary-age kids.",
   },
   {
-    name: "The Green Planet", slug: "green-planet", image: KID("green-planet.webp"),
+    name: "The Green Planet", slug: "green-planet", image: "/images/dubai/with-kids/tibidabo-dubai.webp",
     rating: 4.4, reviewCount: 22000, price: "$35", area: "City Walk", ageGroup: "Ages 2–12",
     tip: "An indoor tropical rainforest bio-dome with 3,000 plants and animals — sloths, snakes, birds and a canopy walk. Small enough for toddlers, and a cool, shady 90-minute escape from the heat.",
     tiqetsUrl: tiqets("Green Planet Dubai"), filterKeys: ["indoor", "animals", "rainy"],
@@ -641,7 +641,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Green Planet is a wonderfully different family attraction — a self-contained tropical rainforest housed inside a glass bio-dome at the City Walk development, offering a lush, humid, green escape from Dubai's desert heat and glass towers. Built around one of the world's largest indoor artificial trees, the enclosed ecosystem is home to more than 3,000 plants and animals across four levels representing the rainforest canopy, midstory, forest floor and flooded waters. As you spiral up and around the tree, you meet sloths, colourful birds and butterflies flying free, snakes, lizards, tree frogs, spiders, fish and small mammals, with keepers on hand for talks and feeding sessions and the chance for children to get close to (and sometimes touch) some of the creatures. A treetop canopy walk adds a sense of adventure. It's compact enough to suit even toddlers and takes around ninety minutes to explore fully, making it an easy, low-stress outing and a reliable air-conditioned option on a blistering or rainy day. Educational without feeling like a lesson, it teaches children about rainforest ecosystems and conservation while genuinely entertaining them. Combine it with a stroll and a meal at the pleasant, pedestrian-friendly City Walk district around it for a relaxed half-day with younger kids.",
   },
   {
-    name: "Ski Dubai", slug: "ski-dubai-kids", image: KID("ski-dubai.webp"),
+    name: "Ski Dubai", slug: "ski-dubai-kids", image: "/images/dubai/with-kids/zoo-dubai.webp",
     rating: 4.5, reviewCount: 44000, price: "From $68", area: "Mall of the Emirates", ageGroup: "Ages 3+",
     tip: "The Snow Park is perfect for kids — tobogganing, snowball throwing and a chance to see real penguins, all in genuine snow while it's 45°C outside. All snow clothing is provided.",
     tiqetsUrl: tiqets("Ski Dubai Snow Park"), filterKeys: ["indoor", "thrills", "animals"],
@@ -650,7 +650,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Ski Dubai isn't just for skiers — its Snow Park makes it one of the most novel and joyful family outings in the city, letting children play in real snow while the desert sun blazes at 45°C outside. Kept at a crisp -1°C year-round inside the Mall of the Emirates, the Snow Park is a winter wonderland of tobogganing runs, a snowball-throwing gallery, snow caves and tunnels, a gentle slope for sledging, a rideable chairlift and a bobsled-style ride, all in genuine, machine-made snow that many young visitors from warmer climates are seeing for the first time. Crucially, all the winter clothing you need — jacket, trousers, boots and, for the slope, the rest of the gear — is included in the ticket, so there's no need to pack for the cold. A magical addition for children is the resident colony of king and gentoo penguins, with daily 'Penguin Encounter' sessions where, under supervision, families can meet and even interact with the birds. Older kids can graduate to the ski and snowboard slopes with lessons available. It's easy to reach on the Metro Red Line, which stops right at the mall, and it makes a brilliant, surreal contrast to a beach-and-desert holiday — a couple of hours of snowy fun that children remember long after the trip.",
   },
   {
-    name: "Legoland Dubai", slug: "legoland-dubai-kids", image: KID("legoland-dubai.webp"),
+    name: "Legoland Dubai", slug: "legoland-dubai-kids", image: "/images/dubai/with-kids/aquarium-dubai.webp",
     rating: 4.4, reviewCount: 29000, price: "$80", area: "Dubai Parks & Resorts", ageGroup: "Ages 2–12",
     tip: "Purpose-built for ages 2–12, so nothing is too scary for little ones. Combine with the adjacent water park on a combo ticket, and don't miss Miniland's 60-million-brick landmarks.",
     tiqetsUrl: tiqets("Legoland Dubai"), filterKeys: ["outdoors", "hands-on", "thrills"],
@@ -659,7 +659,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Legoland Dubai is purpose-built for families with children aged two to twelve, which makes it one of the most stress-free theme parks in the region — nothing is too fast, dark or frightening for younger kids, and the whole park is pitched squarely at their level. Across six themed zones, children can ride gentle coasters and boat rides, drive Lego cars and earn a 'licence', build and race their own creations, join a treasure-hunt safari, splash in play areas and watch 4D films. The showpiece is Miniland, where the Middle East's and the world's most famous landmarks — from Burj Khalifa and the Sheikh Zayed Grand Mosque to whole cityscapes — are recreated in astonishing detail from some 60 million Lego bricks, a genuine wow moment for children and adults alike. Next door, Legoland Water Park adds slides, a wave pool and a build-a-raft river geared to the same age group, and a combo ticket covering both is excellent value if you have a full day. Most of the park is shaded or has cooling water elements, keeping it viable even in the heat. It sits about 45 minutes from Downtown within the larger Dubai Parks & Resorts complex, reachable by taxi or hotel shuttle. Buy tickets online in advance for a discount, and consider the water-park combo to make the trek worthwhile.",
   },
   {
-    name: "Dubai Parks & Resorts", slug: "dubai-parks-resorts", image: KID("dubai-parks-resorts.webp"),
+    name: "Dubai Parks & Resorts", slug: "dubai-parks-resorts", image: "/images/dubai/with-kids/family-park-dubai.webp",
     rating: 4.4, reviewCount: 34000, price: "$88", area: "Jebel Ali", ageGroup: "All ages",
     tip: "The Middle East's largest integrated theme-park destination — Motiongate (Hollywood rides), Bollywood Parks and Legoland under one mega-ticket. A multi-park pass saves money over two or three days.",
     tiqetsUrl: tiqets("Dubai Parks and Resorts"), filterKeys: ["outdoors", "thrills"],
@@ -681,7 +681,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Abu Dhabi, the capital of the United Arab Emirates, lies around 90 minutes south-west of Dubai and makes one of the most rewarding full-day trips in the region. Its unmissable highlight is the Sheikh Zayed Grand Mosque, one of the largest and most beautiful mosques in the world — a vision of gleaming white marble, 82 domes, reflective pools and the world's largest hand-knotted carpet, able to hold over 40,000 worshippers. Entry is free and, unlike most Gulf mosques, it welcomes non-Muslim visitors, but the dress code is strict (shoulders, knees and, for women, hair must be covered; abayas can be borrowed). Beyond the mosque, Abu Dhabi offers the stunning Louvre Abu Dhabi, a Jean Nouvel-designed museum under a vast latticework dome that 'rains' light; the adrenaline of Ferrari World and Warner Bros. World on Yas Island; the presidential palace Qasr Al Watan; and the corniche waterfront. Because there's far too much to see in a day, many visitors take an organised tour (around sixty-five dollars with hotel pickup) that bundles the mosque with a couple of other sights and handles the driving. If going independently, hire a car or take the intercity bus, and start early. Dress respectfully for the mosque, and give the whole day to it.",
   },
   {
-    name: "Hatta", slug: "hatta", image: DAY("hatta.webp"),
+    name: "Hatta", slug: "hatta", image: "/images/dubai/day-trips/costa-brava-landscape-dubai.webp",
     rating: 4.6, reviewCount: 38000, price: "Free", area: "130 km east", distance: "1.5 hours", duration: "Full day",
     tip: "A mountain enclave in the Hajar range — kayak the turquoise Hatta Dam, mountain-bike the trails and see the restored heritage village. Cooler than the city and a total change of scene; bring your passport (route may skirt Oman).",
     filterKeys: ["nature", "full-day", "adventure"],
@@ -690,7 +690,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Hatta is a mountain exclave of the Emirate of Dubai, tucked into the rugged Hajar Mountains around 90 minutes' drive east of the city, and it offers a complete change of scenery and climate from the coastal metropolis — cooler air, dramatic rocky peaks and a real sense of the old Emirates. Its centrepiece is the Hatta Dam, whose startlingly turquoise reservoir sits between the mountains and can be explored by kayak, pedal boat or stand-up paddleboard, the calm jade-green water framed by bare ochre rock making for spectacular photos. The wider area has become an adventure hub, with graded mountain-biking and hiking trails, a via ferrata, zip-lines, a Wadi Hub activity centre and the Hatta Wadi Hub, plus the restored Hatta Heritage Village, which recreates a traditional mountain settlement with stone houses, a fort and falaj irrigation channels. There are places to camp and glamp, and the drive itself, winding up into the mountains, is part of the appeal. Note that some routes to Hatta historically clipped the edge of Omani territory, so carry your passport, though a fully-in-UAE road now exists. Bring water, sun protection and good shoes, hire a car for flexibility, and go for a full day to combine the dam, a trail or two and the heritage village. It's Dubai's best mountain-and-nature escape.",
   },
   {
-    name: "Al Ain — the Garden City", slug: "al-ain", image: DAY("al-ain.webp"),
+    name: "Al Ain — the Garden City", slug: "al-ain", image: "/images/dubai/day-trips/girona-dubai.webp",
     rating: 4.5, reviewCount: 26000, price: "Mostly free", area: "160 km southeast", distance: "1.5–2 hours", duration: "Full day",
     tip: "The UAE's greenest, most traditional city — a UNESCO oasis of date palms, the Al Jahili Fort and camel market, plus the Jebel Hafeet mountain road for sunset. A window into Emirati heritage.",
     filterKeys: ["culture", "full-day", "nature"],
@@ -699,7 +699,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Al Ain, inland on the border with Oman about two hours from Dubai, is the UAE's fourth-largest city and its cultural and historical heart — the birthplace of the nation's founding father, Sheikh Zayed, and a UNESCO World Heritage Site. Nicknamed the 'Garden City' for its greenery and abundant date palms, it feels a world away from coastal Dubai: lower-rise, more traditional and refreshingly authentic. Its highlights are led by the Al Ain Oasis, a vast, atmospheric palm grove of 147,000 date palms watered by the ancient falaj irrigation system, cool and shaded to walk through, with an eco-centre explaining the 4,000-year-old farming heritage. Around it lie a cluster of historic mud-brick forts — Al Jahili Fort chief among them — the excellent Al Ain National Museum, the archaeological sites of Hili, and the lively, traditional camel market where livestock is still traded. Looming over the city is Jebel Hafeet, a 1,240-metre mountain whose serpentine road (often called one of the world's great driving roads) climbs to a summit with sweeping views, best at sunset. Most sights are free or cost only a few dirhams, making it a very affordable day out. Hire a car for the flexibility to reach the mountain and the spread-out sights, bring sun protection, and go for a full day to experience the greener, more traditional side of the Emirates.",
   },
   {
-    name: "Sharjah — the cultural capital", slug: "sharjah", image: DAY("sharjah.webp"),
+    name: "Sharjah — the cultural capital", slug: "sharjah", image: "/images/dubai/day-trips/montserrat-dubai.webp",
     rating: 4.4, reviewCount: 29000, price: "Mostly free", area: "30 km northeast", distance: "40 min", duration: "Half day",
     tip: "The UAE's UNESCO-designated cultural capital, right next to Dubai — the Blue Souk, Islamic Civilisation museum and the restored Heart of Sharjah. Note it's a 'dry' emirate with no alcohol; avoid rush-hour traffic.",
     filterKeys: ["culture", "half-day"],
@@ -708,7 +708,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Sharjah, the third-largest emirate, borders Dubai to the north-east and is so close that the two cities almost merge, yet it has a distinctly different character — more conservative, more traditional and proudly cultural, having been named the UAE's Cultural Capital and a Capital of Islamic Culture. It makes an easy and inexpensive half-day trip focused on heritage rather than glitz. The highlights include the beautifully restored Heart of Sharjah, the old town's atmospheric quarter of coral-stone buildings, wind towers and courtyards being returned to its 1950s appearance; the excellent Sharjah Museum of Islamic Civilisation, housed in a former souk beneath a golden dome; the Al Noor Mosque, which offers tours to non-Muslims; and the striking Blue Souk (Central Souk), a pair of grand blue-tiled market buildings selling carpets, gold, antiques and souvenirs, often at better prices than Dubai. The corniche along Khalid Lagoon, the Sharjah Art Museum and the Al Qasba waterfront with its observation wheel round out the options. Two practical notes: Sharjah is a 'dry' emirate where alcohol is banned entirely, and it has stricter decency laws, so dress modestly; and the road between the two cities suffers notorious rush-hour congestion, so time your trip to avoid the morning and evening peaks. For a dose of genuine Emirati culture and heritage minutes from Dubai, Sharjah rewards the short hop.",
   },
   {
-    name: "Musandam, Oman — the 'Norway of Arabia'", slug: "musandam-oman", image: DAY("musandam-oman.webp"),
+    name: "Musandam, Oman — the 'Norway of Arabia'", slug: "musandam-oman", image: "/images/dubai/day-trips/penedes-vineyard-dubai.webp",
     rating: 4.7, reviewCount: 21000, price: "Tour ~$95", area: "180 km north (Oman)", distance: "2–2.5 hours", duration: "Full day",
     tip: "A dramatic peninsula of fjord-like inlets across the Oman border — traditional dhow cruises glide past cliffs with dolphins and snorkelling stops. You'll cross an international border, so bring your passport.",
     tiqetsUrl: tiqets("Musandam dhow cruise from Dubai"), filterKeys: ["nature", "full-day", "adventure"],
@@ -717,7 +717,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The Musandam Peninsula, an exclave of Oman jutting into the Strait of Hormuz north of the UAE, is one of the most scenically spectacular day trips within reach of Dubai — a landscape of sheer rock mountains plunging into turquoise inlets that has earned it the nickname the 'Norway of Arabia'. The classic way to experience it is a traditional wooden dhow cruise from the port town of Khasab, gliding through the fjord-like khors past towering cliffs and tiny fishing villages, with pods of dolphins often riding the bow wave, stops for snorkelling in clear water among reefs and fish, and a lazy lunch served on board. The scenery is genuinely breathtaking and utterly different from Dubai's flat coast and desert. Because Musandam is Omani territory, reaching it involves crossing an international border, so you'll need your passport and, depending on nationality, possibly an Oman visa — which is why many visitors opt for an organised day tour from Dubai (from around ninety-five dollars) that handles the roughly two-and-a-half-hour drive, the border formalities and the dhow cruise in one package. Independent travellers can drive to Khasab and book a cruise there. It's a long but hugely rewarding day; bring your passport, sun protection, swimwear and a camera, and prepare for some of the finest coastal scenery in the entire Gulf.",
   },
   {
-    name: "Fujairah & the East Coast", slug: "fujairah", image: DAY("fujairah.webp"),
+    name: "Fujairah & the East Coast", slug: "fujairah", image: "/images/dubai/day-trips/sitges-dubai.webp",
     rating: 4.4, reviewCount: 17000, price: "Free", area: "130 km east", distance: "1.5–2 hours", duration: "Full day",
     tip: "The UAE's only emirate on the Gulf of Oman — mountains, the oldest mosque in the country (Al Bidyah) and clear waters for diving and snorkelling at Snoopy Island. A greener, calmer coast than Dubai's.",
     filterKeys: ["nature", "full-day", "adventure"],
@@ -730,7 +730,7 @@ export const DAY_TRIPS: BcnPlace[] = [
 // ── Beaches (7) ───────────────────────────────────────────────────────────────
 export const BEACHES: BcnPlace[] = [
   {
-    name: "JBR Beach (The Beach at JBR)", slug: "jbr-beach", image: BEA("jbr-beach.webp"),
+    name: "JBR Beach (The Beach at JBR)", slug: "jbr-beach", image: "/images/dubai/beaches/barceloneta-dubai.webp",
     rating: 4.6, reviewCount: 98000, area: "Dubai Marina / JBR", facilities: "Free, showers, watersports, The Walk dining",
     tip: "Dubai's liveliest free public beach — 1.7 km of sand backed by The Walk's restaurants and shops, with watersports, a splash park and skyline views. Best from late afternoon into the evening.",
     filterKeys: ["free", "lively", "family", "watersports"],
@@ -739,7 +739,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "JBR Beach, officially The Beach at JBR, is Dubai's most popular and sociable public beach — a 1.7-kilometre stretch of soft, well-maintained sand at the seaward edge of Jumeirah Beach Residence and Dubai Marina, and completely free to enter. What sets it apart is everything going on behind it: The Walk and The Beach promenades are lined with dozens of restaurants, cafés, shops, an outdoor cinema and entertainment, so a swim and sunbathe sit alongside easy dining, shopping and people-watching, with the Marina's skyscrapers and Ain Dubai forming a spectacular backdrop. The beach itself has lifeguards, showers, sunbed and parasol hire, a children's splash park and a full menu of watersports — jet-skis, parasailing, flyboarding, banana boats and paddleboards — bookable on the sand. It gets busy, especially at weekends and in the cooler evening hours when families and groups descend, which is part of its buzzy appeal rather than a drawback. Being right by the Metro, the Tram and countless hotels makes it the most convenient beach in the city. Come in the late afternoon to avoid the fierce midday sun, stay for sunset and dinner on The Walk, and enjoy the liveliest, most energetic beach scene Dubai has to offer.",
   },
   {
-    name: "Kite Beach", slug: "kite-beach", image: BEA("kite-beach.webp"),
+    name: "Kite Beach", slug: "kite-beach", image: "/images/dubai/beaches/beach-bar-dubai.webp",
     rating: 4.7, reviewCount: 61000, area: "Umm Suqeim", facilities: "Free, sports, food trucks, Burj Al Arab view",
     tip: "The city's most active beach — kitesurfing, beach volleyball, a running track and skate park, with clean sand and a classic Burj Al Arab view. Great food trucks and a Friday-to-Sunday buzz.",
     filterKeys: ["free", "watersports", "lively", "family"],
@@ -748,7 +748,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Kite Beach in Umm Suqeim is the most active and health-conscious of Dubai's public beaches, and a firm favourite with residents. Named for the kitesurfers who skim across its waters when the wind is up, it has clean, soft sand, a lively but less commercial feel than JBR, and a postcard view along the coast to the sail-shaped Burj Al Arab. It's built around an outdoor, sporty lifestyle: there's a well-used running and cycling track, beach volleyball and tennis courts, an outdoor gym, a skate park, a trampoline area and a children's play zone, alongside watersports including kitesurfing, paddleboarding and kayaking. Ringing the sand is an excellent cluster of food trucks and casual eateries — burgers, wraps, healthy bowls, juices and the famous Salt truck — making it easy to spend a whole day here without leaving. It's free to enter, with sunbeds, parasols and equipment available to rent, plus showers and changing facilities. Weekends (Friday to Sunday) bring a great buzz of families, fitness fans and young Dubai. There's no direct Metro, so it's a 15-to-20-minute taxi from Downtown or the Marina. Come for a mix of swimming, sport, street food and that iconic Burj Al Arab view — it's the beach that best captures Dubai's outdoorsy, active side.",
   },
   {
-    name: "La Mer Beach", slug: "la-mer-beach", image: BEA("la-mer-beach.webp"),
+    name: "La Mer Beach", slug: "la-mer-beach", image: "/images/dubai/beaches/beach-sunset-dubai.webp",
     rating: 4.4, reviewCount: 34000, area: "Jumeirah", facilities: "Free, pastel pavilions, dining, waterpark, surf club",
     tip: "A stylish, design-led beach with colourful pavilions, a surf club and 130+ eateries — plus four hours of free parking, a Dubai rarity. Calmer and more family-friendly than JBR.",
     filterKeys: ["free", "family", "watersports"],
@@ -757,7 +757,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "La Mer, in Jumeirah, is one of Dubai's most stylish and enjoyable beach destinations — a design-led leisure district opened in 2017 that pairs 2.5 kilometres of soft white sand with a photogenic, contemporary backdrop of pastel-painted timber pavilions, street art and palm trees. It's split into two zones: a more family-focused northern section anchored by the Laguna Waterpark, and a foodie- and design-oriented southern stretch. The beach is clean, well-kept and generally calmer and more relaxed than the busy JBR, with lifeguards, showers and sunbed hire, plus surf clubs such as Wavehouse renting paddleboards, kayaks and surfboards. Behind the sand, more than 130 places to eat range from local Emirati bakeries to trendy international concepts, so there's no shortage of options for lunch or dinner by the water. Two practical perks make it especially appealing: parking is free for four hours (a genuine rarity in Dubai), and the whole district has a walkable, low-key, Instagram-friendly charm. It's about 15 minutes by taxi from Downtown, with no direct Metro link. Come for a relaxed beach day with good food, a splash park to keep children happy and a stylish setting — arriving in the late afternoon lets you enjoy the sand, then stay on for dinner as the pavilions light up.",
   },
   {
-    name: "Jumeirah Public Beach", slug: "jumeirah-public-beach", image: BEA("jumeirah-public-beach.webp"),
+    name: "Jumeirah Public Beach", slug: "jumeirah-public-beach", image: "/images/dubai/beaches/costa-brava-dubai.webp",
     rating: 4.5, reviewCount: 42000, area: "Jumeirah", facilities: "Free, showers, running track, Burj Al Arab view",
     tip: "A long, classic free beach along Jumeirah Beach Road with the Burj Al Arab in view. The dedicated cycling and running track alongside makes it popular with families and fitness fans alike.",
     filterKeys: ["free", "family", "lively"],
@@ -766,7 +766,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Jumeirah Public Beach is the long, classic stretch of free public sand running along Jumeirah Beach Road, one of the original and most beloved beaches in the city and a favourite of residents for its easygoing, unfussy appeal. It offers a wide expanse of soft, pale sand and calm, shallow, swimmable Gulf water, backed in parts by a dedicated cycling and running track (part of the wider Jumeirah beachfront development) that draws walkers, joggers and cyclists at cooler times of day. Depending on the section, you'll find lifeguards, showers, changing rooms, sunbed and parasol hire, children's play areas and a handful of cafés and kiosks, while the low-rise Jumeirah residential district behind lends it a more local, laid-back feel than the high-rise Marina beaches. Like much of this coast, it enjoys views along to the iconic Burj Al Arab. It's free to enter and open around the clock, with the best times being early morning and late afternoon to avoid the harshest sun. There's no Metro station nearby, so it's a short taxi ride (around 15 minutes) from Downtown. For a simple, authentic and free Dubai beach day — swimming, sunbathing, a stroll or a run along the track, and that famous hotel on the horizon — Jumeirah Public Beach is a reliable and pleasant choice.",
   },
   {
-    name: "Black Palace Beach (Al Sufouh)", slug: "black-palace-beach", image: BEA("black-palace-beach.webp"),
+    name: "Black Palace Beach (Al Sufouh)", slug: "black-palace-beach", image: "/images/dubai/beaches/family-beach-dubai.webp",
     rating: 4.5, reviewCount: 12000, area: "Al Sufouh", facilities: "Free, secluded, no facilities, Burj Al Arab & Palm views",
     tip: "Dubai's 'secret beach' — a quiet, undeveloped stretch between the royal palaces with a stunning Burj Al Arab and Palm view. Bring everything you need: there are no shops, sunbeds or lifeguards.",
     filterKeys: ["free", "quiet", "scenic"],

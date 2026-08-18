@@ -55,7 +55,7 @@ export default function PragueHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Prague"
-      heroImage="/images/prague/hotell/four-seasons-prague.webp"
+      heroImage="/images/prague/hotels/hotel-prague.avif"
       intro="Prague rewards staying central: base yourself in the Old Town, the Jewish Quarter or across the river in charming Malá Strana and the best sights are all on foot. The city's hotels range from world-class riverside luxury and hotels set inside working monasteries to characterful design boutiques and stylish budget stays that cost a fraction of Western European rates. Here are 8 of the best places to stay for every budget, with nightly prices, standout features and location tips."
       wide
     >

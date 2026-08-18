@@ -54,7 +54,7 @@ export default function DubrovnikNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Dubrovnik Nightlife"
-      heroImage="/images/dubrovnik/nightlife/buza-bar.webp"
+      heroImage="/images/dubrovnik/nightlife/cocktail-bar-dubrovnik.webp"
       intro="Dubrovnik's nightlife is more about spectacular settings than all-night raving. The essential experience is a sunset drink at Buža, a bar reached through a hole in the city wall with terraces hanging over the sea; from there the evening can run to wine flights and live jazz in hidden squares, cocktails on a rooftop or beach club with the floodlit walls as a backdrop, or the city's one true nightclub, staged inside a 16th-century fortress. Here are the best places to drink after dark, with prices and tips."
       wide
     >

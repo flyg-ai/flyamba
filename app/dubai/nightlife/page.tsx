@@ -53,7 +53,7 @@ export default function DubaiNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Dubai Nightlife"
-      heroImage="/images/dubai/nightlife/white-dubai.webp"
+      heroImage="/images/dubai/nightlife/cocktail-bar-dubai.webp"
       intro="Dubai's nightlife is glossier and more high-production than you might expect — world-famous DJs at the White mega-club, day-to-night beach clubs like Zero Gravity, sky-high rooftop bars gazing at the Burj Khalifa, Vegas-style show clubs and the city's legendary weekend brunches. A key thing to know: alcohol is served only at licensed venues, almost all attached to hotels, and it's pricey. Here's where to drink and dance, from casual pubs to VIP tables, with areas, prices and tips."
       wide
     >

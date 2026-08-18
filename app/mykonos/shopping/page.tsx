@@ -52,7 +52,7 @@ export default function MykonosShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Mykonos"
-      heroImage="/images/mykonos/shopping/matoyianni-street.webp"
+      heroImage="/images/mykonos/shopping/artisan-shop-mykonos.webp"
       intro="Shopping in Mykonos runs from international high fashion to genuinely local craft. The whitewashed lanes of Chora — above all bougainvillea-draped Matogianni Street — are lined with the big luxury names, while the galleries of Little Venice and homegrown labels like Parthenis offer something more considered and Greek. Beyond the designer racks, the real treasures are island-made: handmade leather sandals fitted to your feet, local jewellery, and edible specialities like the spicy Mykonian cheese kopanisti. Here are 8 of the best places to shop and browse, with opening hours, areas and tips — from luxury boutiques to the local food market."
       wide
     >

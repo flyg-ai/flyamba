@@ -54,7 +54,7 @@ export default function BaliNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Bali Nightlife"
-      heroImage="/images/bali/nightlife/potato-head-beach-club.webp"
+      heroImage="/images/bali/nightlife/cocktail-bar-bali.webp"
       intro="Bali's nightlife is defined by the sunset: it starts on the sand and carries into the small hours. Toast the golden hour at Seminyak's iconic beach clubs Potato Head and Ku De Ta, watch surfers from the clifftop at Single Fin, dance beneath the cathedral arches of Mirror, sip craft cocktails at Ubud's Night Rooster, or join the legendary parties at Canggu's Old Man's. Here are the best spots for a night out, with areas, opening times and tips."
       wide
     >

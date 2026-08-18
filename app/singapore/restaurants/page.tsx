@@ -55,7 +55,7 @@ export default function SingaporeRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Singapore"
-      heroImage="/images/singapore/restauranger/maxwell-food-centre.webp"
+      heroImage="/images/singapore/restaurants/restaurant-singapore.avif"
       intro="Singapore is arguably the greatest food city on Earth, where a Michelin-starred hawker stall plates chicken rice for a few dollars, three-star French temples sit minutes from open-air food centres, and Chinese, Malay, Indian and Peranakan flavours collide on every street. From chilli crab and laksa to fine-dining tasting menus, here are 10 essential places to eat, spanning hawker legends to world-ranked restaurants, with prices, hours and insider tips."
       wide
     >

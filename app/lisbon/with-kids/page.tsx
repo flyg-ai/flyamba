@@ -52,7 +52,7 @@ export default function LisbonWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Lisbon with Kids"
-      heroImage="/images/lisbon/med-barn/oceanrio.webp"
+      heroImage="/images/lisbon/with-kids/aquarium-lisbon.webp"
       intro="Lisbon is a surprisingly easy city to enjoy with children. The rattling yellow trams are a ride in themselves, the world-class Oceanário and the cable-car zoo headline a strong roster of family attractions, and the flat, modern riverside of Parque das Nações gives little legs room to run. Add hands-on science museums, adventure playgrounds and beaches a short train away, and there's plenty to fill a family trip. Here are the best things to do in Lisbon with kids, with ages, prices and tips."
       wide
     >

@@ -55,7 +55,7 @@ export default function ViennaNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Vienna Nightlife"
-      heroImage="/images/vienna/nattliv/loos-american-bar.webp"
+      heroImage="/images/vienna/nightlife/cocktail-bar-vienna.webp"
       intro="Vienna's night has many moods. It might start with a cocktail in Adolf Loos's tiny 1908 masterpiece or a glass of Grüner Veltliner in a wine bar, unfold in the vineyard Heurigen of Grinzing over young wine and Schrammel music, or head to the canal, where legendary clubs like Flex and Grelle Forelle pump techno until dawn. Add world-class jazz cellars, rooftop bars and cavernous beer halls — plus the old 'Bermuda Triangle' quarter near the canal — and here is where to drink and dance, with areas, prices and tips."
       wide
     >

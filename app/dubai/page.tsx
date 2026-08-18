@@ -37,14 +37,14 @@ const NON_STOP = [
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/dubai/attractions/burj-khalifa.webp",
-  restaurants: "/images/dubai/restaurants/nobu-dubai.webp",
-  hotels: "/images/dubai/hotels/burj-al-arab.webp",
+  restaurants: "/images/dubai/restaurants/restaurant-dubai.avif",
+  hotels: "/images/dubai/hotels/hotel-dubai.avif",
   transport: "/images/dubai/attractions/dubai-marina.webp",
   prices: "/images/dubai/attractions/gold-souk.webp",
   weather: "/images/dubai/attractions/desert-safari.webp",
   shopping: "/images/dubai/shopping/dubai-mall.webp",
-  beaches: "/images/dubai/beaches/jbr-beach.webp",
-  nightlife: "/images/dubai/nightlife/white-dubai.webp",
+  beaches: "/images/dubai/beaches/barceloneta-dubai.webp",
+  nightlife: "/images/dubai/nightlife/cocktail-bar-dubai.webp",
   "with-kids": "/images/dubai/with-kids/aquaventure-waterpark.webp",
   "day-trips": "/images/dubai/day-trips/abu-dhabi.webp",
   events: "/images/dubai/attractions/global-village.webp",
@@ -63,13 +63,13 @@ const ATTRACTION_PREVIEW = [
   { name: "Museum of the Future", blurb: "A calligraphy-wrapped silver ring of immersive tomorrow-gazing.", image: "/images/dubai/attractions/museum-of-the-future.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Nobu Dubai", blurb: "World-class Japanese-Peruvian fusion with Palm Jumeirah views.", image: "/images/dubai/restaurants/nobu-dubai.webp" },
-  { name: "Zuma Dubai", blurb: "The glamorous modern-Japanese izakaya of the DIFC financial district.", image: "/images/dubai/restaurants/zuma.webp" },
-  { name: "Al Ustad Special Kabab", blurb: "A legendary, cheap Iranian kebab house going since 1978.", image: "/images/dubai/restaurants/al-ustad-special-kabab.webp" },
+  { name: "Nobu Dubai", blurb: "World-class Japanese-Peruvian fusion with Palm Jumeirah views.", image: "/images/dubai/restaurants/restaurant-dubai.avif" },
+  { name: "Zuma Dubai", blurb: "The glamorous modern-Japanese izakaya of the DIFC financial district.", image: "/images/dubai/restaurants/restaurant-dubai.avif" },
+  { name: "Al Ustad Special Kabab", blurb: "A legendary, cheap Iranian kebab house going since 1978.", image: "/images/dubai/restaurants/restaurant-dubai.avif" },
 ];
 const BEACH_PREVIEW = [
-  { name: "JBR Beach", blurb: "Dubai's liveliest free beach, backed by The Walk's restaurants and watersports.", image: "/images/dubai/beaches/jbr-beach.webp" },
-  { name: "Kite Beach", blurb: "The sporty beach for kitesurfing, volleyball and food trucks, with a Burj Al Arab view.", image: "/images/dubai/beaches/kite-beach.webp" },
+  { name: "JBR Beach", blurb: "Dubai's liveliest free beach, backed by The Walk's restaurants and watersports.", image: "/images/dubai/beaches/beach-bar-dubai.webp" },
+  { name: "Kite Beach", blurb: "The sporty beach for kitesurfing, volleyball and food trucks, with a Burj Al Arab view.", image: "/images/dubai/beaches/beach-sunset-dubai.webp" },
   { name: "Sunset Beach", blurb: "The best spot for that iconic Burj Al Arab photo — and Dubai's surf beach.", image: "/images/dubai/beaches/sunset-beach-umm-suqeim.webp" },
 ];
 

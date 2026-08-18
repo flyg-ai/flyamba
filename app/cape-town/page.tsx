@@ -98,14 +98,14 @@ const NON_STOP = [
 
 const CATEGORY_IMAGES: Record<string, string> = {
   attractions: "/images/cape-town/attractions/table-mountain.webp",
-  restaurants: "/images/cape-town/restaurants/la-colombe.webp",
-  hotels: "/images/cape-town/hotels/silo-hotel.webp",
+  restaurants: "/images/cape-town/restaurants/restaurant-cape-town.avif",
+  hotels: "/images/cape-town/hotels/hotel-cape-town.avif",
   beaches: "/images/cape-town/beaches/camps-bay-beach.webp",
   transport: "/images/cape-town/attractions/chapmans-peak.webp",
   prices: "/images/cape-town/attractions/va-waterfront.webp",
   weather: "/images/cape-town/attractions/lions-head.webp",
-  shopping: "/images/cape-town/shopping/the-watershed.webp",
-  nightlife: "/images/cape-town/nightlife/shimmy-beach-club.webp",
+  shopping: "/images/cape-town/shopping/artisan-shop-cape-town.webp",
+  nightlife: "/images/cape-town/nightlife/cocktail-bar-cape-town.webp",
   "with-kids": "/images/cape-town/with-kids/boulders-pingviner.webp",
   "day-trips": "/images/cape-town/day-trips/stellenbosch-vingardar.webp",
   events: "/images/cape-town/attractions/kirstenbosch.webp",
@@ -117,14 +117,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Robben Island", blurb: "Nelson Mandela's prison, guided by former inmates.", image: "/images/cape-town/attractions/robben-island.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "La Colombe", blurb: "Africa's top-ranked restaurant, above Constantia.", image: "/images/cape-town/restaurants/la-colombe.webp" },
-  { name: "Gold Restaurant", blurb: "A 14-dish pan-African feast with live drumming.", image: "/images/cape-town/restaurants/gold-restaurant.webp" },
-  { name: "Mama Africa", blurb: "Game grills and marimba on buzzing Long Street.", image: "/images/cape-town/restaurants/mama-africa.webp" },
+  { name: "La Colombe", blurb: "Africa's top-ranked restaurant, above Constantia.", image: "/images/cape-town/restaurants/restaurant-cape-town.avif" },
+  { name: "Gold Restaurant", blurb: "A 14-dish pan-African feast with live drumming.", image: "/images/cape-town/restaurants/restaurant-cape-town.avif" },
+  { name: "Mama Africa", blurb: "Game grills and marimba on buzzing Long Street.", image: "/images/cape-town/restaurants/restaurant-cape-town.avif" },
 ];
 const TRIP_PREVIEW = [
   { name: "Stellenbosch", blurb: "The wine capital, 45 minutes east among the vines.", image: "/images/cape-town/day-trips/stellenbosch-vingardar.webp" },
-  { name: "Hermanus", blurb: "World-class land-based whale watching (May–Dec).", image: "/images/cape-town/day-trips/hermanus-valar.webp" },
-  { name: "Franschhoek", blurb: "The Wine Tram and the Cape's finest restaurants.", image: "/images/cape-town/day-trips/franschhoek.webp" },
+  { name: "Hermanus", blurb: "World-class land-based whale watching (May–Dec).", image: "/images/cape-town/day-trips/costa-brava-landscape-cape-town.webp" },
+  { name: "Franschhoek", blurb: "The Wine Tram and the Cape's finest restaurants.", image: "/images/cape-town/day-trips/girona-cape-town.webp" },
 ];
 
 const WHY = [

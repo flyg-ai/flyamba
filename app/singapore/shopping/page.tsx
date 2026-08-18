@@ -54,7 +54,7 @@ export default function SingaporeShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Singapore"
-      heroImage="/images/singapore/shopping/orchard-road.webp"
+      heroImage="/images/singapore/shopping/artisan-shop-singapore.webp"
       intro="Shopping is close to a national sport in Singapore, and the choice runs from glittering luxury malls to chaotic street markets. Orchard Road's air-conditioned megamalls line up the world's designer labels, Haji Lane hides indie boutiques and street art, Bugis Street and the 24-hour Mustafa Centre deliver bargains, and even the airport's Jewel is a retail spectacle. Here are 8 of the best places to shop, with areas, opening hours and tips including how to reclaim the 9% GST when you fly home."
       wide
     >

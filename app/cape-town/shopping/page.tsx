@@ -53,7 +53,7 @@ export default function CapeTownShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Cape Town"
-      heroImage="/images/cape-town/shopping/the-watershed.webp"
+      heroImage="/images/cape-town/shopping/artisan-shop-cape-town.webp"
       intro="Cape Town shopping runs from the polished V&A Waterfront and Africa's biggest malls to buzzing craft markets, curated design halls, bohemian Long Street vintage and weekend farmers' and flea markets. This guide gathers the best places to browse and buy — for South African design, souvenirs, antiques and fresh local food — with opening hours, what to expect and tips on where to haggle."
       wide
     >

@@ -197,7 +197,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Field Restaurant", slug: "field-restaurant", image: R("field-restaurant.webp"),
+    name: "Field Restaurant", slug: "field-restaurant", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.7, reviewCount: 3400, price: "€€€€", type: "Michelin-starred", area: "Old Town",
     tip: "Book weeks ahead; the tasting menu with wine pairing is the special-occasion splurge in Prague.",
     filterKeys: ["fine-dining", "international"],
@@ -206,7 +206,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Field is Prague's culinary standard-bearer, holding a Michelin star since 2016 and consistently ranked the best restaurant in the country. Chef Radek Kašpárek marries local, seasonal Czech and Moravian produce — game, root vegetables, foraged herbs, freshwater fish — with the precision and whimsy of modern fine dining, and the plating leans into a playful farm-and-field theme, with edible 'soil', vegetables served with their own miniature garden tools and dishes that surprise as much as they satisfy. The setting is bright and contemporary rather than stuffy, the service polished but warm, and the wine list strong on Moravian bottles you won't find abroad. Multi-course tasting menus are the way to experience it, ideally with the paired wine flight; à la carte is available at lunch. For a Michelin-level meal, it remains excellent value by Western European standards, but it is Prague's hottest table, so reserve well in advance. This is the place to book for an anniversary, a celebration, or simply to see how far Czech cuisine has travelled.",
   },
   {
-    name: "La Degustation Bohême Bourgeoise", slug: "la-degustation", image: R("la-degustation.webp"),
+    name: "La Degustation Bohême Bourgeoise", slug: "la-degustation", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.7, reviewCount: 1900, price: "€€€€", type: "Michelin-starred", area: "Old Town",
     tip: "Sit at the counter to watch the open kitchen plate every course — it's dinner as theatre.",
     filterKeys: ["fine-dining", "czech"],
@@ -224,7 +224,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Café Savoy is Prague's most beautiful café-restaurant, a jewel of the belle époque reopened after a loving restoration by the respected Ambiente group. Dating to 1893, its centrepiece is a magnificent neo-Renaissance gilded ceiling, restored to its full painted glory and best admired from a corner table over a leisurely meal. The kitchen takes its food as seriously as its surroundings: the celebrated breakfasts run from fresh pastries and homemade preserves to eggs and a legendary Savoy omelette, while lunch and dinner deliver polished versions of Czech and French bistro classics — beef tartare prepared tableside, roast duck, schnitzel, and a patisserie counter of cakes and its own baked bread. Prices are higher than a neighbourhood pub but fair for the quality and the setting, and the atmosphere is bustling and grand without being stuffy. Sitting just across the Legion Bridge near Petřín and the National Theatre, it makes an ideal start to a day of sightseeing or a treat after it. Reservations are wise, especially for the popular weekend breakfast.",
   },
   {
-    name: "Café Imperial", slug: "cafe-imperial", image: R("caf-imperial.webp"),
+    name: "Café Imperial", slug: "cafe-imperial", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.6, reviewCount: 9500, price: "€€€", type: "Grand Café", area: "New Town",
     tip: "The Art Deco tiled hall is a listed monument — go for the room even if you only order coffee and cake.",
     filterKeys: ["cafe", "czech", "international"],
@@ -233,7 +233,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Café Imperial is one of Prague's grand coffee-house survivors and, thanks to its astonishing interior, one of its most photographed. Opened in 1914, the hall is sheathed from floor to vaulted ceiling in intricate Art Deco ceramic tiles and mosaics — a protected cultural monument that has hosted writers, artists and, legend has it, the odd flying doughnut in its more raucous past. Today, under the Ambiente group and celebrity chef Zdeněk Pohlreich, it serves a broad all-day menu of well-executed Czech and international dishes: schnitzel, roast duck, goulash and dumplings alongside pastas, fish and a strong breakfast offering. The atmosphere is lively and grand rather than hushed, popular with locals and visitors alike, and prices are reasonable given the spectacular room. It sits handily beside the Municipal House and the Powder Tower on the edge of the Old Town, making it a natural refuelling stop. Whether for a full meal, a weekend breakfast or simply coffee and a slice of cake beneath those glittering tiles, the Imperial delivers a taste of Prague's café-society heyday.",
   },
   {
-    name: "Lokál", slug: "lokal", image: R("lokl.webp"),
+    name: "Lokál", slug: "lokal", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.6, reviewCount: 14000, price: "€€", type: "Czech Pub", area: "Old Town",
     tip: "Order the tankové pivo (tank beer) — unpasteurised Pilsner Urquell delivered fresh, poured to order.",
     filterKeys: ["czech", "beer-hall", "budget"],
@@ -242,7 +242,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Lokál reinvented the Czech pub for the modern age, proving that traditional beer-hall food and drink could be done with pride and quality rather than tired tourist shortcuts. The formula, rolled out across several branches, is simple and brilliant: long communal tables, a daily-changing chalkboard of Czech classics — svíčková (beef in cream sauce with dumplings), goulash, fried cheese, schnitzel, roast pork — made from good ingredients, and, crucially, exceptional unpasteurised Pilsner Urquell served straight from the tank (tankové pivo) and poured by skilled staff to order. The beer is famously fresh and cheap, the portions generous, and the buzzing, no-frills atmosphere authentically Czech. The Dlouhá street branch in the Old Town is the best known and handiest for visitors, but all the Lokáls deliver the same reliable, great-value experience beloved by locals. It is the ideal introduction to Czech pub culture: order a beer, point at the chalkboard, and settle in. Reservations help at peak dinner times, but a spot at the bar is usually findable. Cash and card both accepted.",
   },
   {
-    name: "U Modré Kachničky", slug: "u-modre-kachnicky", image: R("u-modr-kachniky.webp"),
+    name: "U Modré Kachničky", slug: "u-modre-kachnicky", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.5, reviewCount: 4200, price: "€€€", type: "Traditional Czech", area: "Malá Strana",
     tip: "The name means 'The Blue Duckling' — so of course order the roast duck, its signature dish.",
     filterKeys: ["czech", "fine-dining"],
@@ -251,7 +251,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "U Modré Kachničky — 'The Blue Duckling' — is one of the most atmospheric traditional restaurants in Prague, tucked down a quiet Malá Strana side street below the castle. Spread through a warren of small, candlelit rooms crammed with antiques, oil paintings, hunting trophies and painted ceilings, it feels like dining in a Bohemian aristocrat's private residence, intimate and richly old-world. The kitchen specialises in the hearty game and duck dishes at the heart of Czech cuisine: the signature roast duck with red cabbage and dumplings is the thing to order, but the menu ranges across venison, wild boar, rabbit, pheasant and other seasonal game, often in rich fruit or wine sauces, alongside classic starters and homemade desserts. Portions are generous and prices sit at the higher end for traditional Czech food, reflecting the quality and the romantic setting. It is a favourite for special dinners and couples, and reservations are strongly recommended, especially in the evening. For a genuinely characterful, old-Prague meal away from the tourist canteens, the little Blue Duckling is hard to beat.",
   },
   {
-    name: "Kampa Park", slug: "kampa-park", image: R("kampa-park.webp"),
+    name: "Kampa Park", slug: "kampa-park", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.5, reviewCount: 5600, price: "€€€€", type: "Riverside Fine Dining", area: "Malá Strana",
     tip: "Reserve a riverside terrace table at dusk — the Charles Bridge view is the reason to come.",
     filterKeys: ["fine-dining", "international"],
@@ -260,7 +260,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Kampa Park has for decades been Prague's go-to address for a special-occasion dinner with a view, and its setting is unbeatable: a terrace on the very edge of the Vltava on Kampa Island, directly beneath the arches of Charles Bridge, looking across the water to the illuminated Old Town. Little wonder it has drawn a long list of visiting celebrities and heads of state over the years. The kitchen serves polished modern international cuisine with a Mediterranean and seafood lean — fresh fish, lobster, steaks and seasonal dishes — plated with fine-dining precision, backed by an extensive wine list and slick, formal service. It is unashamedly at the top end of Prague pricing, and you are certainly paying a premium for that magical location, but for a romantic evening or a milestone celebration the combination of candlelit riverside tables and the floodlit bridge overhead is genuinely special. Book well ahead and specifically request a terrace table by the water for the full effect, ideally timed for sunset. Even the interior rooms are elegant, but the terrace is the reason to come.",
   },
   {
-    name: "Sansho", slug: "sansho", image: R("sansho.webp"),
+    name: "Sansho", slug: "sansho", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.6, reviewCount: 2800, price: "€€€", type: "Asian Fusion", area: "New Town",
     tip: "There's no fixed menu — tell them how hungry and adventurous you are and let the kitchen decide.",
     filterKeys: ["international", "fine-dining"],
@@ -269,7 +269,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Sansho broke the mould when it opened, bringing genuinely exciting Asian flavours and a nose-to-tail ethos to a Prague dining scene then dominated by pork and dumplings. Founded by British-trained chef Paul Day, who also runs his own farm supplying the meat, it works without a printed menu: you tell the staff your appetite and any dislikes, and a succession of vibrant, sharing-style dishes arrives family-style at the table. The cooking roams across Southeast and East Asia — think fragrant beef rendang, pork-belly bao, curries, fresh herbs and chilli heat — built on top-quality, ethically raised Czech produce, so it feels both global and local at once. The room is relaxed, buzzy and informal, the value excellent for the quality, and the format encourages a convivial, exploratory meal best enjoyed with a group. It has been a critics' darling and a local favourite for years, a reliable antidote to heavy traditional fare. Lunch offers a shorter, cheaper set option; dinner is the full feast. Reservations are recommended, and coming hungry with an open mind is essential.",
   },
   {
-    name: "V Zátiší", slug: "v-zatisi", image: R("v-zti.webp"),
+    name: "V Zátiší", slug: "v-zatisi", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.5, reviewCount: 2600, price: "€€€", type: "Modern European", area: "Old Town",
     tip: "The set lunch menu is one of the best fine-dining bargains in the historic centre.",
     filterKeys: ["fine-dining", "international", "czech"],
@@ -278,7 +278,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "V Zátiší — 'the still life' — was one of the very first restaurants to bring serious, contemporary fine dining to Prague after the fall of communism, and it has remained a dependable favourite ever since. Set in an elegant, art-filled room near the Bethlehem Chapel in the Old Town, it offers a more refined, quieter alternative to the beer halls, with attentive service and a menu that bridges elevated Czech classics and modern European cooking. Expect beautifully presented plates of local game and beef, roast duck and svíčková reimagined with finesse, alongside international dishes and Indian-inflected specials (a nod to its sister restaurant), plus a well-chosen wine list. The set lunch menu is a genuine bargain for cooking of this standard and a smart way to sample the kitchen without the full evening spend. Comfortable, grown-up and consistent rather than flashy, it suits a relaxed celebration dinner or a civilised business lunch. Reservations are advisable, particularly at weekends. For a polished sit-down meal in the heart of the old city, V Zátiší has earned its long-standing reputation.",
   },
   {
-    name: "Manifesto Market Anděl", slug: "manifesto-market", image: R("manifesto-market-andel.webp"),
+    name: "Manifesto Market Anděl", slug: "manifesto-market", image: "/images/prague/restaurants/restaurant-prague.avif",
     rating: 4.4, reviewCount: 7800, price: "€€", type: "Food Hall", area: "Smíchov",
     tip: "Great for groups who can't agree — everyone picks a different stall and shares one big table.",
     filterKeys: ["international", "budget", "cafe"],
@@ -291,7 +291,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Four Seasons Hotel Prague", slug: "four-seasons-prague", image: H("four-seasons-prague.webp"),
+    name: "Four Seasons Hotel Prague", slug: "four-seasons-prague", image: "/images/prague/hotels/hotel-prague.avif",
     rating: 4.8, reviewCount: 3600, price: "€€€€", type: "5★ Luxury", area: "Old Town (riverside)",
     tip: "Request a river-view room in the Baroque wing — the Charles Bridge panorama is worth the upgrade.",
     filterKeys: ["luxury", "old-town"],
@@ -300,7 +300,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Four Seasons occupies an enviable position on the very edge of the Vltava, moments from Charles Bridge, spread across three linked historic buildings — a Baroque palace, a neo-Classical house and a modern wing — that give it real character alongside the expected polish. This is Prague's benchmark five-star address, offering the impeccable service, spacious rooms and flawless attention to detail the brand is known for, and its trump card is the view: the best rooms and its acclaimed restaurant, Bar & Grill by chef Jan Horký, look directly across the water to the illuminated bridge and castle. Guests enjoy a spa, elegant lounges and one of the finest riverside terraces in the city for a drink at sunset. It is unapologetically expensive, but for a landmark-view splurge, a honeymoon or a special celebration it is hard to top for location and refinement. Even non-guests can book the restaurant or terrace to sample the setting. Central enough to walk everywhere in the Old Town, Malá Strana and the Jewish Quarter, it is the definitive luxury base in Prague.",
   },
   {
-    name: "Mandarin Oriental Prague", slug: "mandarin-oriental-prague", image: H("mandarin-oriental-prague.webp"),
+    name: "Mandarin Oriental Prague", slug: "mandarin-oriental-prague", image: "/images/prague/hotels/hotel-prague.avif",
     rating: 4.8, reviewCount: 1800, price: "€€€€", type: "5★ Luxury", area: "Malá Strana",
     tip: "The spa occupies a Renaissance chapel with a glass-floored view of exposed Gothic foundations — book a treatment.",
     filterKeys: ["luxury"],
@@ -354,7 +354,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Art Deco Imperial Hotel offers four-star comfort with genuine period character, occupying a 1914 building whose crowning glory — the astonishing ceramic-tiled Café Imperial on the ground floor — sets the tone for the whole property. Rooms carry an Art Deco theme with elegant furnishings and modern comforts, and while they vary in size, the overall feel is one of tasteful historic charm at a more accessible price than the city's top five-stars. Guests enjoy a small pool and fitness area, and, best of all, complimentary entry plus a discount at the celebrated café downstairs, one of Prague's most beautiful rooms and a destination in its own right. The location on the edge of the Old Town and New Town is superb: the Municipal House, Powder Tower, Náměstí Republiky and its shopping are all on the doorstep, with the Old Town Square a short walk away. For travellers who want atmosphere, a great central location and a taste of belle-époque Prague without the luxury price tag, the Art Deco Imperial is a reliable and characterful mid-range-to-upper choice. Book directly for the best café perks.",
   },
   {
-    name: "Miss Sophie's Downtown", slug: "miss-sophies", image: H("miss-sophies.webp"),
+    name: "Miss Sophie's Downtown", slug: "miss-sophies", image: "/images/prague/hotels/hotel-prague.avif",
     rating: 4.6, reviewCount: 4300, price: "€€", type: "Boutique / Budget", area: "New Town",
     tip: "A design-hostel-turned-hotel — grab a private room for boutique style at a fraction of Old Town prices.",
     filterKeys: ["budget", "boutique", "mid-range"],
@@ -367,7 +367,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Nightlife (10) ───────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "Karlovy Lázně", slug: "karlovy-lazne", image: N("karlovy-lzn.webp"),
+    name: "Karlovy Lázně", slug: "karlovy-lazne", image: "/images/prague/nightlife/cocktail-bar-prague.webp",
     rating: 4.0, reviewCount: 21000, type: "Mega Club", area: "Old Town",
     tip: "Five floors, five music styles — one ticket covers them all, so club-hop upward through the night.",
     filterKeys: ["clubs"],
@@ -385,7 +385,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Hemingway Bar is regularly ranked among the world's best cocktail bars, a dimly lit, intimate den on a quiet Old Town lane dedicated to the spirit and tastes of its literary namesake. The focus is on serious craft: an encyclopaedic rum selection, a proper absinthe ritual complete with fountain and sugar, and a menu of impeccably balanced classic and signature cocktails mixed by some of the most skilled bartenders in the city. The atmosphere is hushed and grown-up, all low light, leather and vintage detail, a world away from the raucous mega-clubs nearby, and the staff are famously happy to craft a bespoke drink around your preferences if you let them. Because it is small and in constant demand, a reservation is essential, especially at weekends, and there is a smart-casual, no-large-groups sensibility to preserve the mood. Prices are higher than a pub but very fair for cocktails of this calibre by international standards. For a refined, memorable evening of exceptional drinks and old-world charm, the Hemingway is Prague's benchmark cocktail experience and well worth planning ahead for.",
   },
   {
-    name: "U Zlatého Tygra", slug: "u-zlateho-tygra", image: N("u-zlatho-tygra.webp"),
+    name: "U Zlatého Tygra", slug: "u-zlateho-tygra", image: "/images/prague/nightlife/flamenco-prague.webp",
     rating: 4.6, reviewCount: 6800, type: "Traditional Pub", area: "Old Town",
     tip: "Regulars rule the tables — arrive right at opening to snag a spot, and don't order food, just beer.",
     filterKeys: ["beer-halls"],
@@ -394,7 +394,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "U Zlatého Tygra — 'The Golden Tiger' — is one of Prague's most famous and fiercely traditional beer halls, a smoky-legend of a pub that has changed little in decades. It was the favourite haunt of the celebrated writer Bohumil Hrabal, whose regular corner is commemorated, and it once hosted a memorable pint shared by President Václav Havel and US President Bill Clinton. The single serious purpose here is beer: superbly kept, unpasteurised Pilsner Urquell, poured with practised care and set down almost before your previous glass is empty. The atmosphere is authentically local and famously gruff — communal tables are guarded by loyal regulars, the waiters are brisk, and this is a place for drinking and conversation rather than dining. Getting a seat can be a challenge, so arrive right as it opens in mid-afternoon. It offers a genuine, unvarnished slice of old Prague pub culture that the polished tourist bars can't replicate. Embrace the etiquette — sit where you're told, keep the beers coming, tip modestly — and you'll experience the real thing. An essential stop for beer pilgrims.",
   },
   {
-    name: "Prague Beer Museum", slug: "prague-beer-museum", image: N("prague-beer-museum.webp"),
+    name: "Prague Beer Museum", slug: "prague-beer-museum", image: "/images/prague/nightlife/live-music-prague.webp",
     rating: 4.5, reviewCount: 9200, type: "Craft Beer Pub", area: "Old Town",
     tip: "It's a pub, not a museum — order the tasting paddle to sample five Czech craft beers at once.",
     filterKeys: ["beer-halls"],
@@ -403,7 +403,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Despite the name, the Prague Beer Museum is not a museum but a bustling, beer-focused pub — and a brilliant one for exploring the breadth of Czech brewing beyond the ubiquitous Pilsner Urquell. Its main Dlouhá street branch keeps more than thirty rotating taps of Czech craft and regional beers, from hoppy pale ales and dark lagers to specialities from small independent breweries you'd struggle to find elsewhere. The signature move is the tasting paddle: a wooden board of five different beers you choose yourself, perfect for sampling styles and finding a new favourite in one sitting. The atmosphere is convivial and busy, popular with both curious visitors and beer-loving locals, and it serves solid pub food to soak it all up. Central, welcoming and open late, it makes an ideal spot to begin a night out on lively Dlouhá street, which is lined with bars and clubs. Prices are very reasonable, and knowledgeable staff can steer you through the ever-changing tap list. For anyone wanting to go deeper into Czech beer culture in a relaxed, hands-on way, this is one of the best and most enjoyable places in the city.",
   },
   {
-    name: "Cross Club", slug: "cross-club", image: N("cross-club.webp"),
+    name: "Cross Club", slug: "cross-club", image: "/images/prague/nightlife/nightlife-bar-prague.webp",
     rating: 4.6, reviewCount: 8400, type: "Underground Club", area: "Holešovice",
     tip: "The industrial-scrap interior is worth a visit alone — go for a drink even if you don't stay to rave.",
     filterKeys: ["clubs", "live-music"],
@@ -421,7 +421,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Roxy is a Prague institution and one of the city's most respected music venues, set in a beautifully faded former Art Deco cinema on Dlouhá street. For decades it has been at the heart of the capital's electronic-music culture, its sloped floor and central location hosting an eclectic programme that spans cutting-edge international and local DJs, live bands, world music, and everything from techno and drum and bass to reggae and experimental sounds. The atmosphere is credible and music-focused, drawing a mixed crowd of locals and in-the-know visitors rather than pure stag-party traffic, and its associated NoD space upstairs adds an experimental arts and theatre dimension. Because the line-up varies so widely from night to night, it's worth checking what's on before you go — you might catch a legendary DJ, an intimate gig or a themed party. Entry prices depend on the event, and drinks are reasonably priced. Central, historic and genuinely important to the city's nightlife, the Roxy offers a more authentic and musically serious alternative to the mega-clubs a few streets away, and remains a firm favourite on the Dlouhá strip.",
   },
   {
-    name: "Reduta Jazz Club", slug: "reduta-jazz-club", image: N("reduta-jazz-club.webp"),
+    name: "Reduta Jazz Club", slug: "reduta-jazz-club", image: "/images/prague/nightlife/rooftop-bar-night-prague.webp",
     rating: 4.5, reviewCount: 3200, type: "Jazz Club", area: "New Town",
     tip: "This is where Clinton played sax in 1994 — book the early set for a table close to the stage.",
     filterKeys: ["live-music"],
@@ -430,7 +430,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Reduta is Prague's oldest jazz club, opened in 1958, and remains the most storied place in the city to hear live jazz in an intimate, old-fashioned setting. Its most famous moment came in 1994, when US President Bill Clinton, on a state visit, borrowed a saxophone and played a couple of numbers on its small stage — an instrument now displayed in the club. Beyond the anecdote, Reduta offers nightly concerts across traditional, swing, modern and fusion jazz in a low-ceilinged, red-velvet cellar that oozes smoky mid-century atmosphere, with tables close to the musicians and a proper listening-room feel. It draws a mix of locals, aficionados and curious travellers, and the quality of the resident and guest performers is consistently high. Because seating is limited and intimate, booking ahead secures a good spot near the stage, and arriving early lets you settle in with a drink before the music starts. Centrally located on Národní street near the National Theatre, it makes an easy, civilised evening out and a wonderful antidote to the club scene. For jazz lovers, a night at Reduta is one of Prague's most rewarding after-dark experiences.",
   },
   {
-    name: "Cloud 9 Sky Bar & Lounge", slug: "cloud-9-sky-bar", image: N("cloud-9.webp"),
+    name: "Cloud 9 Sky Bar & Lounge", slug: "cloud-9-sky-bar", image: "/images/prague/nightlife/cocktail-bar-prague.webp",
     rating: 4.5, reviewCount: 2900, type: "Rooftop Bar", area: "New Town",
     tip: "Go at golden hour for the panoramic terrace, then stay as the city lights come on and the DJ starts.",
     filterKeys: ["rooftop", "cocktail-bars"],
@@ -439,7 +439,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Cloud 9 Sky Bar & Lounge sits on the ninth floor of the Hilton Prague, offering one of the best panoramic vantage points in the city from its stylish indoor lounge and open-air summer terrace. The sweeping views take in the river, the castle in the distance and the sprawl of the city, making it a magnet for a sophisticated sundowner. The vibe is upscale and contemporary — well-made cocktails, sparkling wine, a resident DJ spinning laid-back beats, and a smart-casual crowd of hotel guests, locals and visitors after a more polished night than the beer halls offer. It comes into its own at sunset, when the terrace glows and the lights of Prague flicker on below, and it stays lively into the small hours at weekends. Prices are naturally higher than a traditional pub, reflecting the setting and the cocktails, but reasonable for a rooftop bar of this quality. Slightly removed from the Old Town near the Florenc transport hub, it's an easy metro ride and a refreshing change of scene. For glamorous drinks with a view, Cloud 9 is among Prague's premier rooftop destinations.",
   },
   {
-    name: "Palác Akropolis", slug: "palac-akropolis", image: N("palac-akropolis.webp"),
+    name: "Palác Akropolis", slug: "palac-akropolis", image: "/images/prague/nightlife/flamenco-prague.webp",
     rating: 4.6, reviewCount: 4700, type: "Music Club", area: "Žižkov",
     tip: "The beating heart of bohemian Žižkov — grab a beer in the quirky café-bar before the gig upstairs.",
     filterKeys: ["live-music", "clubs"],
@@ -448,7 +448,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Palác Akropolis is the cultural cornerstone of Žižkov, Prague's famously bohemian, pub-dense neighbourhood, and a much-loved fixture of the city's alternative scene since the 1990s. Housed in a characterful old building, it's a multi-purpose culture-house rolling a concert hall, club, theatre and a wonderfully quirky café-bar into one, decorated with the distinctive fantastical designs of Czech artist František Skála. The programming is eclectic and consistently interesting, spanning live indie, world, electronic and Czech bands, DJ nights, theatre and film, drawing a young, creative, local crowd. The atmosphere is unpretentious, arty and genuinely Czech, a world away from the Old Town tourist bars, and the café-bar is a great spot for a cheap beer and people-watching even without a ticket to a show. Set in the heart of Žižkov, which boasts more pubs per capita than almost anywhere in Europe, it makes the perfect launchpad for a night exploring the district's raucous, down-to-earth drinking scene. For visitors who want to tap into Prague's living independent culture and nightlife, Palác Akropolis is essential and endlessly rewarding.",
   },
   {
-    name: "U Sudu", slug: "u-sudu", image: N("u-sudu.webp"),
+    name: "U Sudu", slug: "u-sudu", image: "/images/prague/nightlife/live-music-prague.webp",
     rating: 4.5, reviewCount: 6100, type: "Wine & Beer Cellar", area: "New Town",
     tip: "Keep going down — the labyrinth of vaulted cellars runs far deeper than the small street-level bar suggests.",
     filterKeys: ["beer-halls", "cocktail-bars"],
@@ -488,7 +488,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Havelská Market is the last surviving traditional open-air market in the historic core, trading on the same Old Town street since 1232. Running down the middle of Havelská, its rows of stalls under colourful awnings offer a mix of fresh produce — fruit, vegetables, nuts and flowers, still bought by locals — alongside souvenirs and crafts aimed at visitors: wooden toys, marionettes, ceramics, painted eggs, magnets and other Czech mementoes. It's an atmospheric and convenient place to browse just a couple of minutes from the Old Town Square, good for picking up fresh fruit for a picnic or affordable gifts, though prices on souvenirs can be inflated for the tourist trade, so it pays to compare and gently haggle. The setting, framed by the baroque St Gall's Church and handsome townhouses, is charming, and the market makes an easy, pleasant stop while sightseeing rather than a shopping destination in itself. Cash is preferred at most stalls. For a quick browse, a snack of fresh fruit, or a handful of cheap and cheerful souvenirs in the very centre of the old city, Havelská delivers a slice of everyday, historic Prague.",
   },
   {
-    name: "Manufaktura", slug: "manufaktura", image: S("manufaktura.webp"),
+    name: "Manufaktura", slug: "manufaktura", image: "/images/prague/shopping/artisan-shop-prague.webp",
     rating: 4.6, reviewCount: 5100, type: "Czech Cosmetics & Crafts", area: "Old Town",
     tip: "The beer- and wine-based cosmetics make genuinely Czech, easy-to-pack gifts to take home.",
     filterKeys: ["souvenirs", "czech-design"],
@@ -497,7 +497,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Manufaktura is the go-to shop for tasteful, genuinely Czech souvenirs and gifts, a home-grown chain that has done much to revive traditional crafts and natural cosmetics. Its bright, welcoming stores — several dotted around the Old Town and beyond — stock an appealing range built around Czech heritage: natural bath and beauty products made with distinctively local ingredients such as beer, wine, thermal spa salts and herbs, all beautifully packaged and ideal for gifts. Alongside the cosmetics you'll find handmade wooden toys, traditional Krkonoše wooden crafts, ceramics, straw decorations, blueprint textiles (the UNESCO-listed indigo-dyed fabric), scented candles and other well-made keepsakes that feel a cut above the mass-produced tat sold on the street stalls. Prices are reasonable for the quality, staff are helpful, and the products are compact and easy to pack. It's the perfect place to solve your souvenir and gift shopping in one civilised stop, whether for beer-scented soap, a wooden toy for a child, or a bottle of spa cosmetics. For authentic, attractively presented Czech gifts without the kitsch, Manufaktura is reliably the best option in the city centre.",
   },
   {
-    name: "Moser", slug: "moser", image: S("moser-glass.webp"),
+    name: "Moser", slug: "moser", image: "/images/prague/shopping/mall-prague.webp",
     rating: 4.7, reviewCount: 1400, type: "Bohemian Crystal", area: "New Town",
     tip: "Even browsers are welcome — the flagship's chandeliered showroom is like a small crystal museum.",
     filterKeys: ["czech-design", "souvenirs"],
@@ -506,7 +506,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Moser is the most illustrious name in Bohemian crystal, a luxury glassmaker founded in Karlovy Vary in 1857 whose lead-free, hand-cut and hand-engraved pieces have graced the tables of kings, emperors, sultans and presidents — earning it the nickname 'the glass of kings'. Its flagship showroom on Na Příkopě is a destination in itself: a grand, chandelier-lit space displaying exquisite vases, glasses, decanters, bowls and decorative objects in Moser's signature jewel tones and crystal clarity, presented like the works of art they are. Bohemian glass and crystal are among the Czech Republic's most celebrated exports, and while Moser sits firmly at the luxury end, browsing its showroom is a pleasure whatever your budget, offering a lesson in the craft and heritage behind the region's glassmaking. Smaller pieces and glassware make cherished, if pricey, keepsakes, and the staff can arrange shipping. For those seeking more affordable crystal, plenty of other shops around the centre sell Bohemian glass, but for the finest quality and a genuinely special gift or investment piece, Moser is the definitive Czech crystal house and a beautiful place to visit.",
   },
   {
-    name: "Náplavka Farmers' Market", slug: "naplavka-farmers-market", image: S("nplavka-farmers-market.webp"),
+    name: "Náplavka Farmers' Market", slug: "naplavka-farmers-market", image: "/images/prague/shopping/outdoor-market-prague.webp",
     rating: 4.7, reviewCount: 6900, type: "Farmers' Market", area: "New Town (riverbank)",
     tip: "Saturday mornings only — come early and hungry, and stay for a riverside beer as the market winds down.",
     filterKeys: ["markets", "food"],
@@ -515,7 +515,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The Náplavka farmers' market is one of the most enjoyable local experiences in Prague, held every Saturday morning along the Rašínovo nábřeží embankment on the banks of the Vltava. Stretching for several hundred metres beside the water, it gathers dozens of stalls from regional farmers, bakers, cheesemakers, butchers and small producers selling fresh fruit and vegetables, cheeses, cured meats, breads and pastries, honey, flowers and preserves, alongside a lively line-up of street-food and drink vendors dishing up everything from grilled sausages and burgers to coffee, fresh juice and, of course, beer. The riverside setting, with the Vyšehrad fort rising downstream, makes it a wonderful place simply to soak up the atmosphere, and it draws a happy, sociable crowd of locals doing their weekend shopping and lingering over brunch by the water. Come early for the best produce and to beat the crowds, bring some cash, and plan to stay a while and eat. The wider Náplavka embankment, with its converted vault bars and summer events, is a great riverside hangout in its own right. For a taste of contemporary local life, the Saturday market is a must.",
   },
   {
-    name: "Kubista", slug: "kubista", image: S("kubista.webp"),
+    name: "Kubista", slug: "kubista", image: "/images/prague/shopping/shopping-street-prague.webp",
     rating: 4.6, reviewCount: 900, type: "Design Store", area: "Old Town",
     tip: "Set in the Cubist House of the Black Madonna — visit the little Cubism museum upstairs while you're there.",
     filterKeys: ["czech-design", "souvenirs"],
@@ -524,7 +524,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Kubista is a small but special design shop celebrating one of the Czech lands' most distinctive contributions to 20th-century art and design: Cubism. Uniquely, Czech architects and designers extended Cubism from painting into buildings, furniture, ceramics and everyday objects in the years around 1910–1914, and Kubista sits fittingly inside the House of the Black Madonna, Josef Gočár's masterpiece of Cubist architecture and home to the Museum of Czech Cubism upstairs. The shop sells beautifully made reproductions and originals of Czech Cubist and modernist design — angular ceramics, coffee sets, glassware, jewellery, furniture and design books — alongside pieces inspired by the Art Deco and functionalist movements that followed. These are distinctive, museum-quality objects you won't find in the souvenir stalls, making them memorable gifts for design lovers or a special keepsake of Prague's rich modern-design heritage. Prices reflect the craftsmanship and exclusivity. Combining a browse here with the small but fascinating Cubism museum in the same building, and a coffee in the wonderful Cubist Grand Café Orient one floor up, makes for a rewarding stop for anyone interested in design and architecture.",
   },
   {
-    name: "Palladium", slug: "palladium", image: S("palladium.webp"),
+    name: "Palladium", slug: "palladium", image: "/images/prague/shopping/souvenir-shop-prague.webp",
     rating: 4.5, reviewCount: 34000, type: "Shopping Mall", area: "New Town",
     tip: "Rainy-day rescue — 200+ shops and a big food court under one roof, all central.",
     filterKeys: ["malls", "fashion", "food"],
@@ -546,7 +546,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Prague Zoo is consistently ranked among the finest zoos in the world, and it's a superb day out for families. Spread across a large, hilly site in the leafy Troja district north of the centre, it's divided into a lower and upper section connected by a chairlift that glides over the enclosures — a highlight for children in itself. The zoo is celebrated for its conservation work, most famously breeding the critically endangered Przewalski's horse, and its 5,000-plus animals across some 600 species include gorillas, elephants, big cats, polar bears, penguins, giraffes and a walk-through Indonesian jungle pavilion. Thoughtfully designed enclosures, plenty of playgrounds, picnic spots and eateries, and the pleasant riverside setting make it easy to spend a full day here. In summer you can arrive in style by riverboat from the city centre, combining a scenic Vltava cruise with the visit, and the adjacent Troja Château and its baroque gardens make a lovely add-on. Good value and genuinely world-class, Prague Zoo is arguably the single best family attraction in the city and well worth the short trip out from the centre.",
   },
   {
-    name: "Petřín Mirror Maze", slug: "petrin-mirror-maze", image: K("petn-kullen-mirror-maze.webp"),
+    name: "Petřín Mirror Maze", slug: "petrin-mirror-maze", image: "/images/prague/with-kids/aquarium-prague.webp",
     rating: 4.4, reviewCount: 8200, price: "120 Kč", area: "Petřín Hill", ageGroup: "Ages 3+",
     tip: "Combine with the funicular ride and the lookout tower for a fun, low-cost half-day on the hill.",
     filterKeys: ["outdoors", "rainy-day"],
@@ -555,7 +555,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Petřín Mirror Maze (Zrcadlové bludiště) is a delightfully old-fashioned family attraction crowning Petřín Hill, housed in a miniature mock-Gothic castle built for the 1891 Jubilee Exhibition. Inside, a small labyrinth of mirrored corridors challenges children (and adults) to find their way out, giggling as they bump into their own reflections, before opening into a hall of distorting funhouse mirrors that stretch, squash and warp everyone into comic shapes — guaranteed to produce peals of laughter and silly photos. There's also a detailed diorama depicting the 1648 battle on Charles Bridge against the Swedes, adding a dash of history. It's inexpensive, quick and doesn't demand much time, making it an easy, cheerful add-on to a trip up Petřín, which itself offers the funicular ride, the Eiffel-like lookout tower, gardens and playgrounds — a whole afternoon of low-cost family fun with wonderful views thrown in. On a rainy day, the covered maze provides a welcome dose of indoor entertainment. Small children and primary-age kids enjoy it most. Combine it with the funicular and tower on a single Petřín outing for the best value and variety.",
   },
   {
-    name: "Prague Planetarium", slug: "prague-planetarium", image: K("planetarium-praha.webp"),
+    name: "Prague Planetarium", slug: "prague-planetarium", image: "/images/prague/with-kids/family-park-prague.webp",
     rating: 4.5, reviewCount: 4600, price: "150 Kč", area: "Stromovka", ageGroup: "Ages 5+",
     tip: "Check the schedule for an English or family-friendly show, and pair it with a run around Stromovka park.",
     filterKeys: ["rainy-day", "outdoors"],
@@ -564,7 +564,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Prague Planetarium, on the edge of the vast Stromovka park in Holešovice, is one of the largest planetariums in the world, with a huge projection dome that immerses audiences in the night sky and beyond. Its programme of shows spans the stars, planets and constellations, space exploration and astronomy, some tailored specifically for children and families, using modern projection technology to create spectacular, enveloping visuals overhead. It's an engaging, educational treat for curious kids and a great indoor option when the weather turns, though it's worth checking the schedule in advance for show times and language, as many are in Czech (some cater to English speakers or are largely visual). The planetarium sits right beside the Výstaviště exhibition grounds and the beautiful, sprawling Stromovka park, so a visit combines easily with fresh air, playgrounds and space to run around — as well as the nearby Sea World aquarium and the historic Křižík fountain in summer. Affordable and enriching, it makes a rewarding half-day for families with school-age children interested in space and science, and a welcome change of pace from the historic sightseeing in the centre.",
   },
   {
-    name: "National Technical Museum", slug: "national-technical-museum", image: K("technical-national-museum.webp"),
+    name: "National Technical Museum", slug: "national-technical-museum", image: "/images/prague/with-kids/kids-museum-prague.webp",
     rating: 4.7, reviewCount: 12000, price: "260 Kč", area: "Letná", ageGroup: "Ages 4+",
     tip: "The vast transport hall of vintage cars, planes and trains hanging overhead is the wow moment for kids.",
     filterKeys: ["museums", "rainy-day"],
@@ -573,7 +573,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The National Technical Museum (Národní technické muzeum) is one of Prague's best family attractions, a treasure trove of transport, science, industry and technology that captivates children and adults alike. Its showstopper is the grand Transport Hall, a soaring space packed with gleaming vintage cars, motorcycles, locomotives, aeroplanes suspended overhead and even a hot-air balloon, tracing the history of getting around — an instant hit with kids. Beyond it, dozens of exhibitions explore astronomy, printing, photography, architecture, mining (with a walk-through mock coal mine in the basement), household technology, measurement and more, many with interactive elements that invite hands-on exploration. It's spacious, engaging and educational without feeling like a lecture, and the sheer variety means there's something to grab every age and interest. Set near the green expanse of Letná park, with its beer garden and playgrounds and superb views over the river, it combines well with outdoor time. Reasonably priced with family tickets available, and entirely indoors, it's an ideal rainy-day plan or a rewarding half-day whatever the weather. For inquisitive children — especially those who love vehicles and gadgets — it's one of the most enjoyable museums in the city.",
   },
   {
-    name: "Sea World Praha", slug: "sea-world-praha", image: K("sea-world-praha.webp"),
+    name: "Sea World Praha", slug: "sea-world-praha", image: "/images/prague/with-kids/tibidabo-prague.webp",
     rating: 4.3, reviewCount: 5400, price: "320 Kč", area: "Holešovice", ageGroup: "All ages",
     tip: "Small but colourful — good as a short indoor stop paired with the neighbouring planetarium or park.",
     filterKeys: ["animals", "rainy-day"],
@@ -582,7 +582,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Sea World (Mořský svět) is the largest saltwater aquarium in the Czech Republic, tucked inside the Výstaviště exhibition grounds in Holešovice. Though compact compared with the giant aquariums of coastal cities, it delivers plenty of colour and wonder for younger children, with tanks recreating tropical seas and coral reefs teeming with vividly patterned fish, alongside sharks, stingrays, moray eels, seahorses, clownfish and other marine life. Highlights include a large reef tank and touch pools, and the whole visit is easily managed in an hour or so, making it a perfect bite-sized indoor activity rather than a full day out. Its real strength is its location: it sits right beside the Prague Planetarium and the vast Stromovka park, and close to the funfair and summer fountain shows at Výstaviště, so you can easily string together an aquarium visit, a star show, a playground and a picnic into a varied family day in this green corner of the city. It's an especially good choice on a wet or cold day when you need a warm, engaging indoor option for small children. Affordable and cheerful, Sea World is a reliable little crowd-pleaser for families with young kids.",
   },
   {
-    name: "Kingdom of Railways", slug: "kingdom-of-railways", image: K("kingdom-of-railways.webp"),
+    name: "Kingdom of Railways", slug: "kingdom-of-railways", image: "/images/prague/with-kids/zoo-prague.webp",
     rating: 4.6, reviewCount: 6700, price: "260 Kč", area: "Smíchov", ageGroup: "All ages",
     tip: "Press the interactive buttons to trigger trains, cars and tiny events — kids can spend an hour just here.",
     filterKeys: ["rainy-day", "museums"],
@@ -640,7 +640,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Karlštejn is the most popular castle day trip from Prague, and with good reason: this grand, turreted Gothic fortress, rising dramatically from wooded hills above a pretty village, is one of the most striking castles in the country. It was founded in 1348 by Emperor Charles IV as a fortified treasury to safeguard the Bohemian crown jewels and the imperial regalia of the Holy Roman Empire, as well as his collection of holy relics. Its crowning glory is the exquisite Chapel of the Holy Cross, its walls encrusted with over 2,000 semi-precious stones and gilded panels — access is strictly limited and requires the special Route II tour, which must be booked well in advance. The standard Route I tour takes in the imperial residence and halls. Reaching it is straightforward: a direct 40-minute train from Prague drops you in the village, from where a scenic 20–25 minute walk uphill (past souvenir stalls and eateries) leads to the gates. The setting, the views and the history make it a satisfying half-day escape, easily combined with a walk in the surrounding Bohemian Karst countryside. Go early to beat the crowds.",
   },
   {
-    name: "Terezín Memorial", slug: "terezin", image: D("terezn.webp"),
+    name: "Terezín Memorial", slug: "terezin", image: "/images/prague/day-trips/costa-brava-landscape-prague.webp",
     rating: 4.7, reviewCount: 14000, price: "Bus ~90 Kč", area: "North Bohemia", distance: "1h north", duration: "Half/full day",
     tip: "A sombre, moving visit — allow a guided tour to fully understand the fortress town's harrowing history.",
     tiqetsUrl: tiqets("Terezin day trip from Prague"), filterKeys: ["history"],
@@ -649,7 +649,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Terezín (Theresienstadt), an hour north of Prague, is a profoundly moving and important place to visit — a former 18th-century garrison town that the Nazis turned into a Jewish ghetto and transit camp during the Second World War. Tens of thousands died here of disease and starvation, and it served as a way station from which some 88,000 people were deported to the extermination camps further east; it was also cynically used as a propaganda 'model ghetto' shown to Red Cross inspectors to disguise the reality of the Holocaust. Today the memorial encompasses the Ghetto Museum, the barracks and the chilling Small Fortress prison, with its cells, execution grounds and the notorious 'Arbeit Macht Frei' gate, alongside cemeteries and a memorial to the dead. It is a sombre, harrowing but deeply worthwhile experience, best approached with time and, ideally, a guided tour or audio guide to fully grasp the human stories behind the sites. Not a trip for young children, it offers older visitors an unforgettable, unflinching encounter with 20th-century history. Reachable by direct bus, it makes a meaningful half or full day, and a powerful counterpoint to Prague's fairytale beauty.",
   },
   {
-    name: "Karlovy Vary", slug: "karlovy-vary", image: D("karlovy-vary.webp"),
+    name: "Karlovy Vary", slug: "karlovy-vary", image: "/images/prague/day-trips/girona-prague.webp",
     rating: 4.7, reviewCount: 29000, price: "Bus ~160 Kč", area: "West Bohemia", distance: "2h west", duration: "Full day",
     tip: "Buy a traditional porcelain sipping cup, taste the hot springs, and try the herbal Becherovka liqueur.",
     tiqetsUrl: tiqets("Karlovy Vary day trip from Prague"), filterKeys: ["nature", "history"],
@@ -658,7 +658,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Karlovy Vary (Carlsbad), two hours west of Prague, is the grandest of the Czech spa towns, a genteel belle-époque resort strung along a wooded river valley that has drawn emperors, tsars, composers and aristocrats to take its curative waters for centuries. Its handsome centre is lined with pastel-coloured 19th-century buildings and ornate colonnades sheltering the town's dozen-plus hot mineral springs, where visitors sip the warm, mineral-rich (and famously odd-tasting) water from traditional spouted porcelain cups sold everywhere as souvenirs. Strolling the elegant promenade between the Mill Colonnade, the Market Colonnade and the geyser-like Vřídlo hot spring, browsing the spa shops, and riding the funicular up to the Diana lookout tower for views over the rooftops fills a pleasant full day. The town is also famous for its herbal Becherovka liqueur, its glassmaking heritage (Moser crystal), traditional spa wafers, and its international film festival each summer. A relaxed, refined and picturesque contrast to Prague's medieval bustle, Karlovy Vary makes a lovely full-day excursion, especially for those who enjoy architecture, gentle strolling and a taste of old European spa culture. Comfortable direct buses make the journey easy.",
   },
   {
-    name: "Dresden (Germany)", slug: "dresden", image: D("dresden-tyskland.webp"),
+    name: "Dresden (Germany)", slug: "dresden", image: "/images/prague/day-trips/montserrat-prague.webp",
     rating: 4.7, reviewCount: 22000, price: "Train ~350 Kč", area: "Saxony, Germany", distance: "2h15 north", duration: "Full day",
     tip: "Bring your passport (it's another country) and euros — the baroque old town is a short walk from the station.",
     tiqetsUrl: tiqets("Dresden day trip from Prague"), filterKeys: ["history"],

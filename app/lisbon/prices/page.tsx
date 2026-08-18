@@ -23,7 +23,7 @@ const PRICES: BcnPlace[] = [
     fullDescription: "Lisbon remains one of Western Europe's best-value capital cities — noticeably cheaper than Paris, London or Amsterdam — though prices have climbed in recent years as the city's popularity has soared. As a rough per-person, per-day guide excluding flights: a budget traveller staying in hostel dorms, eating at local tascas and markets, and using public transport can get by on around $60–90 a day. A mid-range visitor in a comfortable 3–4 star hotel or good apartment, eating out at proper restaurants with wine, taking the odd taxi and paying for daily attractions, should budget roughly $140–200 a day. At the luxury end — a five-star or design hotel, fine dining, private tours and taxis everywhere — you'll spend $350 a day and up, easily more in peak season. Couples sharing a room bring the mid-range figure down considerably, since accommodation is the single biggest expense. Compared with other European city breaks, your money simply goes further here: a good dinner, a cross-city Metro ride and a museum entry all cost less than you'd expect, which is a big part of Lisbon's enduring appeal.",
   },
   {
-    name: "Food & Drink Prices", slug: "food-drink", image: "/images/lisbon/restauranger/manteigaria.webp",
+    name: "Food & Drink Prices", slug: "food-drink", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.6, area: "Eating out", filterKeys: [],
     tip: "The prato do dia (daily lunch special) at a neighbourhood tasca is the best-value meal in the city.",
     description: "Real prices for coffee, pastries, the daily lunch special, dinner and drinks in Lisbon.",
@@ -47,7 +47,7 @@ const PRICES: BcnPlace[] = [
     fullDescription: "Lisbon's attractions are moderately priced, and a lot of the city's best experiences cost nothing at all. Among the paid highlights: the Jerónimos Monastery cloister is €12, Belém Tower €8, São Jorge Castle €15, the National Tile Museum €8, the Gulbenkian €10, and the top family draw, the Oceanário, €25 (€17 for children). Crucially, many state-run museums and monuments — including Jerónimos, Belém Tower and the Tile Museum — are free on the first Sunday of every month, and several offer reduced rates for children, students and seniors. Better still, some of Lisbon's most memorable sights are permanently free: wandering the medieval Alfama, riding up to the miradouro viewpoints for their spectacular panoramas, exploring the Baixa's grand squares, browsing the Feira da Ladra flea market and strolling Belém's riverfront cost nothing. For those planning to pack in several paid attractions, the Lisboa Card (available for 24, 48 or 72 hours) bundles unlimited public transport with free or discounted entry to many sights and can work out cheaper than paying individually — do the maths against your planned itinerary. Overall, a couple of paid attractions a day, mixed with the city's abundant free sights, keeps sightseeing costs very reasonable.",
   },
   {
-    name: "Hotels & Tourist Tax", slug: "accommodation-costs", image: "/images/lisbon/hotell/memmo-alfama.webp",
+    name: "Hotels & Tourist Tax", slug: "accommodation-costs", image: "/images/lisbon/hotels/hotel-lisbon.avif",
     rating: 4.3, area: "Where to stay", filterKeys: [],
     tip: "Book 6–8 weeks ahead in shoulder season for the best rates, and remember the small nightly city tax paid at checkout.",
     description: "What a bed costs in Lisbon across the seasons, from hostel dorms to palace hotels, plus the city tax.",

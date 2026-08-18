@@ -55,7 +55,7 @@ export default function MadridWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Madrid with Kids"
-      heroImage="/images/madrid/with-kids/zoo-aquarium.webp"
+      heroImage="/images/madrid/with-kids/aquarium-madrid.webp"
       intro="Madrid is a surprisingly brilliant city for families, with green space, animals, theme parks and hands-on museums all within easy reach. Rowing boats and puppet theatre in Retiro park, giant pandas at the Zoo Aquarium, playgrounds and splash fountains along the 10-kilometre Madrid Río, roller coasters at Warner and the Parque de Atracciones, plus rainy-day rescues like the planetarium, railway museum and Micropolix children's city. Here are 10 of the best family attractions, with ages, prices and tips."
       wide
     >

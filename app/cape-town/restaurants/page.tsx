@@ -56,7 +56,7 @@ export default function CapeTownRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Cape Town"
-      heroImage="/images/cape-town/restaurants/la-colombe.webp"
+      heroImage="/images/cape-town/restaurants/restaurant-cape-town.avif"
       intro="Cape Town ranks among the world's great food cities, with four restaurants in the 50 Best Restaurants Africa top ten and a scene that runs from cliff-top fine dining to gospel-soundtracked township feasts. This guide gathers the standout places to eat — pan-African grills, fresh Atlantic seafood, glamorous tasting menus and unbeatable-value food halls — with cuisines, neighbourhoods, prices and booking tips so you can plan every meal."
       wide
     >

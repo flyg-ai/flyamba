@@ -71,7 +71,7 @@ const NEARBY = [
 const CATEGORY_CARDS: { slug: string; label: string; blurb: string; image: string }[] = [
   { slug: "attractions", label: "Attractions", blurb: "The Eiffel Tower, Louvre, Notre-Dame and 18 more must-see sights.", image: "/images/paris/sevardheter/eiffeltornet-la-tour-eiffel.webp" },
   { slug: "restaurants", label: "Restaurants", blurb: "From historic bouillons to Michelin-starred neo-bistros.", image: "/images/paris/restauranger/le-comptoir-du-relais.webp" },
-  { slug: "hotels", label: "Hotels", blurb: "Palace grande dames, boutique hideaways and stylish budget stays.", image: "/images/paris/hotell/le-bristol.webp" },
+  { slug: "hotels", label: "Hotels", blurb: "Palace grande dames, boutique hideaways and stylish budget stays.", image: "/images/paris/hotels/hotel-paris.avif" },
   { slug: "transport", label: "Transport", blurb: "The Métro, RER, airports and how to get around the city.", image: "/images/paris/sevardheter/arc-de-triomphe.webp" },
   { slug: "prices", label: "Prices", blurb: "What a trip to Paris really costs, from flights to a daily budget.", image: "/images/destinations/flights-paris.avif" },
   { slug: "weather", label: "Weather", blurb: "When to go — season by season, month by month.", image: "/images/paris/sevardheter/jardin-du-luxembourg.webp" },

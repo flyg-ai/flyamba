@@ -54,7 +54,7 @@ export default function MarrakechNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Marrakech Nightlife: Bars, Rooftops & Clubs"
-      heroImage="/images/marrakech/nattliv/sky-bar-la-renaissance.webp"
+      heroImage="/images/marrakech/nightlife/cocktail-bar-marrakech.webp"
       intro="Marrakech nightlife has two very different faces. Within the medina, evenings are mostly about atmosphere — the nightly carnival of Jemaa el-Fnaa, mint tea on rooftop terraces and a handful of licensed bars — while the new town of Gueliz and the hotel district of Hivernage host the glamorous other side: cocktail rooftops, theatrical dinner-cabarets, late-opening clubs and Palmeraie pool parties. One important thing to understand is alcohol: this is a Muslim city, so drink is served only in licensed venues, not in the souks or on the street, and dressier spots enforce a smart code. This guide covers the best of both worlds, with opening hours, prices and what to expect."
       wide
     >

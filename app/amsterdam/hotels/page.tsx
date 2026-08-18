@@ -53,7 +53,7 @@ export default function AmsterdamHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Amsterdam"
-      heroImage="/images/amsterdam/hotell/pulitzer-amsterdam.webp"
+      heroImage="/images/amsterdam/hotels/hotel-amsterdam.avif"
       intro="Amsterdam's most memorable hotels put you right inside its Golden Age heritage — five-star canal palaces on the Herengracht, boutique hideaways wrapped around hidden courtyards, and design-led towers with sweeping IJ views — alongside sharp, affordable modern stays for tighter budgets. This guide covers the best places to stay across every price band, with neighbourhoods, nightly rates in USD and tips on which area suits your trip."
       wide
     >

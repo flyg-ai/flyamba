@@ -53,7 +53,7 @@ export default function BaliShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Bali"
-      heroImage="/images/bali/shopping/ubud-art-market.webp"
+      heroImage="/images/bali/shopping/artisan-shop-bali.webp"
       intro="Shopping in Bali runs from colourful, haggle-friendly craft markets to chic designer boutiques and breezy beachfront malls. Bargain for sarongs, carvings and textiles at the Ubud and Sukawati art markets, browse local designers along Seminyak's Jalan Laksmana, hunt for boho fashion at Canggu's bazaars, or escape the heat in Kuta's Beachwalk mall. Here are the best places to shop, with opening hours, prices and bargaining tips."
       wide
     >

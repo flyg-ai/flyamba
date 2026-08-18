@@ -211,7 +211,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Belcanto", slug: "belcanto", image: RE("belcanto.webp"),
+    name: "Belcanto", slug: "belcanto", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.7, reviewCount: 4200, price: "€€€€", type: "Fine dining", area: "Chiado",
     tip: "Book the tasting menu weeks ahead; the lunch menu is the most affordable way in.",
     filterKeys: ["fine-dining", "portuguese"],
@@ -220,7 +220,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Belcanto is the summit of Lisbon fine dining — chef José Avillez's two-Michelin-starred flagship, tucked discreetly beside the São Carlos opera house in Chiado. Avillez takes the touchstones of Portuguese cooking — bacalhau, suckling pig, the sweet convent pastries — and reimagines them as witty, technically dazzling tasting menus, plated with the kind of theatre that has made him the country's most celebrated chef. Dishes arrive as edible illusions and clever narratives ('the garden', a dessert trolley of Portuguese sweets), each paired with an exceptional, largely Portuguese wine list that showcases the country's less-exported regions. The dining room is intimate and formal without stiffness, the service polished and warm. It is, inevitably, expensive and requires booking well in advance, but for a special-occasion splurge it delivers one of the finest meals in the Iberian Peninsula. Those wanting the cooking at a gentler price can seek out Avillez's more casual ventures nearby — Cantinho do Avillez and the Bairro do Avillez food hall — but Belcanto is where he performs at full stretch.",
   },
   {
-    name: "Cervejaria Ramiro", slug: "cervejaria-ramiro", image: RE("cervejaria-ramiro.webp"),
+    name: "Cervejaria Ramiro", slug: "cervejaria-ramiro", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.6, reviewCount: 39000, price: "€€€", type: "Seafood", area: "Intendente",
     tip: "Order the garlic prawns, tiger prawns and a bread-and-beer, and finish with the traditional steak sandwich (prego).",
     filterKeys: ["seafood", "portuguese"],
@@ -229,7 +229,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Cervejaria Ramiro is a Lisbon institution and the city's most famous seafood hall, a no-frills, brightly lit, always-buzzing temple to shellfish that has been packing them in since 1956. The formula is gloriously simple: point at whatever looks good in the tanks and ice — garlic-drenched prawns, giant tiger prawns, percebes (goose barnacles), clams, crab, lobster — and it arrives cracked, grilled or sizzling in garlic butter, to be demolished with your hands, plenty of bread and jugs of cold draught beer. There's no starter-main structure; you just keep ordering plates until you're done, then traditionally finish with a prego, a garlicky steak sandwich, 'for the road'. Anthony Bourdain's visit sealed its international fame, so expect a queue and a wait — put your name down and have a beer while you do. It's not cheap once the shellfish adds up, and the atmosphere is more canteen than romantic, but for the freshness, the buzz and the sheer Lisbon-ness of it, Ramiro is close to unmissable. Cash and card both accepted; go hungry.",
   },
   {
-    name: "Cantinho do Avillez", slug: "cantinho-do-avillez", image: RE("cantinho-do-avillez.webp"),
+    name: "Cantinho do Avillez", slug: "cantinho-do-avillez", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.5, reviewCount: 6800, price: "€€€", type: "Modern Portuguese", area: "Chiado",
     tip: "The Algarve prawns and the 'exploding olives' are the signatures — book a table, it fills nightly.",
     filterKeys: ["portuguese", "fine-dining"],
@@ -247,7 +247,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "A Cevicheria brought a jolt of Latin American colour to Lisbon's Príncipe Real, and it remains one of the city's most fun places to eat. Chef Kiko Martins — a well-travelled TV cook — fuses Peruvian ceviche technique with Portuguese seafood and a sense of theatre, from the enormous ceramic octopus sprawling across the ceiling to the fresh, zingy, citrus-cured fish that keeps the small room permanently packed. Expect classic and creative ceviches, tiradito, warm sharing plates and excellent pisco sours mixed at the tiny bar. The catch is the strict no-reservations policy: put your name on the list, accept there may be a wait, and spend it with a cocktail on the pavement outside, watching the smart Príncipe Real crowd go by. Turnover is fairly quick and the pay-off is worth it — bright, punchy, generous food in a genuinely lively setting. It sits in one of Lisbon's most enjoyable neighbourhoods for a wander, full of concept stores and leafy squares, so time your visit around a stroll and go hungry, ideally slightly off-peak.",
   },
   {
-    name: "Manteigaria", slug: "manteigaria", image: RE("manteigaria.webp"),
+    name: "Manteigaria", slug: "manteigaria", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.7, reviewCount: 22000, price: "€", type: "Bakery", area: "Chiado",
     tip: "Wait for the bell — they ring it when a fresh tray comes out of the oven. Eat it standing at the marble counter.",
     filterKeys: ["portuguese", "budget"],
@@ -256,7 +256,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "If Pastéis de Belém has the history, Manteigaria has the fervent local following, and many Lisboetas will tell you it bakes the best pastel de nata in the city. Set in a former butter shop (manteiga means butter) on the corner of Largo de Camões in Chiado, it's a stand-up affair: a marble counter, an open kitchen where you can watch the pastry chefs rolling, filling and blistering trays of tarts, and a little bell that rings each time a fresh batch emerges from the oven. Eaten warm, dusted with cinnamon, the tart is all shatteringly crisp layered pastry and molten, faintly caramelised custard — the platonic ideal, and at around €1.30 the best-value treat in town. There's no seating to speak of, which is the point: order at the counter, take an espresso, and demolish one (or three) on the spot. Branches have since opened at the Time Out Market and elsewhere, but the Chiado original, wonderfully central and always busy, is the one to seek out on any walk through the centre.",
   },
   {
-    name: "Cervejaria Trindade", slug: "cervejaria-trindade", image: RE("cervejaria-trindade.webp"),
+    name: "Cervejaria Trindade", slug: "cervejaria-trindade", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.3, reviewCount: 14000, price: "€€€", type: "Beer hall", area: "Chiado",
     tip: "Come for the tiled 19th-century hall as much as the food — the steak and the seafood platters are the safe orders.",
     filterKeys: ["portuguese", "seafood"],
@@ -265,7 +265,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Cervejaria Trindade bills itself as the oldest beer hall in Lisbon, and its setting alone justifies a visit: a cavernous former friary dining room from 1836, its walls sheathed floor to ceiling in vivid 19th-century azulejo tiles depicting allegorical figures of the elements and the seasons, beneath high vaulted ceilings. It's touristy and the cooking is solid rather than spectacular, but it's a handsome, atmospheric place to sit down to hearty Portuguese staples — grilled steaks with a fried egg, fresh fish, seafood rice, clams and platters of shellfish — washed down, appropriately, with cold draught Sagres, the brewery it's long been associated with. Service is brisk and used to visitors, portions are generous, and there's a leafy back terrace for warmer evenings. Come for the history and the tiles, order simply from the grill or the shellfish counter, and you'll eat well in one of the city's most photogenic dining rooms. It sits right on the edge of Bairro Alto, making it a convenient sit-down dinner before a night out in the bars above.",
   },
   {
-    name: "Clube de Jornalistas", slug: "clube-de-jornalistas", image: RE("clube-de-jornalistas.webp"),
+    name: "Clube de Jornalistas", slug: "clube-de-jornalistas", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.5, reviewCount: 2400, price: "€€€", type: "Portuguese", area: "Lapa",
     tip: "Ask for a table in the interior courtyard garden — it's one of the loveliest, quietest dinner settings in Lisbon.",
     filterKeys: ["portuguese", "fine-dining"],
@@ -274,7 +274,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Also known as Restaurante do Clube de Jornalistas, this elegant spot occupies a restored 18th-century townhouse in the embassy district of Lapa, and it's one of Lisbon's most quietly romantic places to dine. The interior rooms are hung with contemporary art and photography, but the coveted tables are outside, in a leafy, candlelit interior courtyard that feels a world away from the tourist crush of the centre. The kitchen turns out refined, seasonal Portuguese cooking with modern, well-travelled touches — think fresh fish, thoughtful vegetable dishes and a good, fairly priced wine list — served by warm, professional staff at a relaxed pace. It's popular with a well-heeled local crowd and in-the-know visitors staying in the nearby palace hotels, and it makes an ideal choice for a special but unstuffy dinner. Because it's slightly off the beaten track in Lapa, it rarely feels overrun, and reservations (especially for the garden) are worth making. Pair it with a stroll through the grand streets of Lapa and Estrela, or a visit to the nearby Basílica da Estrela beforehand.",
   },
   {
-    name: "Time Out Market", slug: "time-out-market-food", image: RE("time-out-market.webp"),
+    name: "Time Out Market", slug: "time-out-market-food", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.4, reviewCount: 96000, price: "€€", type: "Food hall", area: "Cais do Sodré",
     tip: "Split up: one person queues at a Michelin-chef counter while another grabs the shared table and the drinks.",
     filterKeys: ["portuguese", "budget"],
@@ -283,7 +283,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "For sheer variety and a low-stress introduction to Portuguese food, the Time Out Market in the Mercado da Ribeira is hard to beat — which is exactly why it's one of the city's busiest eating spots. Around a hall of long communal tables, some 30-plus stalls represent many of Lisbon's best chefs, restaurants and food producers: signature dishes from Michelin-starred kitchens, fresh seafood, steaks, petiscos, sushi, burgers, cheese and charcuterie, wine, craft beer and, of course, Manteigaria's pastéis de nata. It's ideal for groups who can never agree, or anyone wanting to graze across several cuisines in one sitting without booking or ceremony. The trade-off is that it's touristy, noisy and pricier than a backstreet tasca, and finding a seat at peak times demands teamwork. Go slightly off-peak, send one person to hunt down a table while the others queue, and you'll eat genuinely well. It sits right by Cais do Sodré, so it doubles as the perfect fuel stop before a night on Pink Street or an early train out to Cascais.",
   },
   {
-    name: "O Trevo", slug: "o-trevo", image: RE("o-trevo.webp"),
+    name: "O Trevo", slug: "o-trevo", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.4, reviewCount: 5600, price: "€", type: "Snack bar", area: "Chiado",
     tip: "Order the bifana (pork sandwich) — Bourdain's favourite here — with a cold imperial beer, standing at the bar.",
     filterKeys: ["portuguese", "budget"],
@@ -292,7 +292,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "O Trevo is exactly the kind of unpretentious, standing-room snack bar that anchors real Lisbon eating — a small, functional room right on Praça Luís de Camões where locals stop for a quick, cheap and delicious bite. Its claim to fame is the bifana: thin slices of pork simmered in a garlicky, lightly spiced sauce and stuffed into a soft crusty roll, eaten standing at the counter with a squirt of mustard or piri-piri and a small cold beer (imperial). Anthony Bourdain famously declared it one of his favourite sandwiches in the world, a plaque and a photo inside proudly attest, and the queue at lunchtime confirms the locals agree. Beyond the bifana there are prego steak sandwiches, pastéis de nata (they make a respectable one), rissóis and other counter snacks, all at prices that shame the tourist cafés a few streets away. It's not a place to linger over a long meal — it's a fast, authentic, budget-friendly refuel in a prime central spot, perfect between sights or before a night out in nearby Bairro Alto.",
   },
   {
-    name: "Ground Burger", slug: "ground-burger", image: RE("ground-burger.webp"),
+    name: "Ground Burger", slug: "ground-burger", image: "/images/lisbon/restaurants/restaurant-lisbon.avif",
     rating: 4.5, reviewCount: 8900, price: "€€", type: "Burgers", area: "Avenidas Novas",
     tip: "A reliable, high-quality break from Portuguese food — the dry-aged beef burgers and craft beers are the draw.",
     filterKeys: ["budget"],
@@ -305,7 +305,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Four Seasons Hotel Ritz Lisbon", slug: "four-seasons-ritz", image: HO("four-seasons-ritz-lisbon.webp"),
+    name: "Four Seasons Hotel Ritz Lisbon", slug: "four-seasons-ritz", image: "/images/lisbon/hotels/hotel-lisbon.avif",
     rating: 4.7, reviewCount: 4300, price: "€€€€", type: "5★ Luxury", area: "Avenida da Liberdade",
     tip: "Even non-guests can use the rooftop running track and enjoy the art collection and afternoon tea.",
     filterKeys: ["luxury"],
@@ -314,7 +314,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Four Seasons Hotel Ritz Lisbon is the city's most storied luxury address, a 1959 modernist landmark overlooking the Eduardo VII park at the top of the grand Avenida da Liberdade. Behind its restrained façade lies one of Portugal's finest hotel art collections — original tapestries, sculptures and paintings commissioned from leading mid-century Portuguese artists fill the public rooms. The generously sized bedrooms and suites, many with private terraces, look out over the park and the castle beyond, while the spa, the acclaimed CURA restaurant and a rooftop fitness terrace with a running track and panoramic city views round out the experience. Service is impeccable in the discreet Four Seasons manner, and the location puts the luxury shopping of Avenida da Liberdade at the door with the historic centre a short walk or taxi downhill. It is expensive, unashamedly so, but for a special-occasion stay it delivers old-world grandeur with contemporary polish. Even if you're not staying, the afternoon tea and the art-filled lobby are worth experiencing.",
   },
   {
-    name: "Olissippo Lapa Palace", slug: "lapa-palace", image: HO("olissippo-lapa-palace.webp"),
+    name: "Olissippo Lapa Palace", slug: "lapa-palace", image: "/images/lisbon/hotels/hotel-lisbon.avif",
     rating: 4.8, reviewCount: 2100, price: "€€€€", type: "5★ Palace", area: "Lapa",
     tip: "Ask for a room in the original palace wing with a Tagus view, and swim in the terraced garden pool.",
     filterKeys: ["luxury"],
@@ -332,7 +332,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Bairro Alto Hotel occupies a beautifully restored 18th-century building right on Praça Luís de Camões, at the meeting point of elegant Chiado and lively Bairro Alto — arguably the best-connected luxury address in central Lisbon. A comprehensive renovation gave it a sophisticated, contemporary-classic look, with plush, sound-insulated rooms (welcome, given the nightlife nearby), a well-regarded restaurant and impeccable service. Its crown jewel is the rooftop terrace bar, whose panorama sweeps across the Baixa rooftops to the river and the far bank — one of the loveliest sunset-drink spots in the city and popular enough that even non-guests should reserve. The location is unbeatable for exploring on foot: the shops of Chiado, the viewpoints, the tram routes and the bars of Bairro Alto are all at the door, with the Baixa and riverfront a gentle downhill stroll. It's a member of The Leading Hotels of the World and prices accordingly, but for travellers who want five-star comfort in the very heart of the action, it's a superb choice.",
   },
   {
-    name: "Memmo Alfama", slug: "memmo-alfama", image: HO("memmo-alfama.webp"),
+    name: "Memmo Alfama", slug: "memmo-alfama", image: "/images/lisbon/hotels/hotel-lisbon.avif",
     rating: 4.6, reviewCount: 3400, price: "€€€", type: "4★ Boutique", area: "Alfama",
     tip: "The wine terrace and red-tiled plunge pool overlook the Alfama rooftops — the reason to book here.",
     filterKeys: ["boutique", "central"],
@@ -341,7 +341,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Memmo Alfama was one of the first design hotels to open in the ancient Alfama district, and it remains a favourite for travellers who want style, character and a real neighbourhood setting over a big central avenue. Tucked down a narrow lane near the cathedral, its entrance is easy to miss — which is part of the charm — and inside it opens up into bright, contemporary, uncluttered rooms, many with views over the tumbling terracotta rooftops toward the river. The signature space is the wine bar and sun terrace with a striking red-tiled plunge pool, a perfect perch for a glass of Portuguese wine as the light fades over Alfama. It's intimate (around 40-plus rooms), calm and beautifully judged, offering a boutique experience at a gentler price than the palace hotels. The trade-off is Alfama's steep, cobbled streets, which mean some walking and a taxi to the door with luggage, but that immersion in the oldest, most atmospheric quarter — fado, viewpoints and tram 28 at the doorstep — is exactly why people love it.",
   },
   {
-    name: "Santiago de Alfama", slug: "santiago-de-alfama", image: HO("santiago-de-alfama.webp"),
+    name: "Santiago de Alfama", slug: "santiago-de-alfama", image: "/images/lisbon/hotels/hotel-lisbon.avif",
     rating: 4.7, reviewCount: 1700, price: "€€€", type: "5★ Boutique", area: "Alfama",
     tip: "A 15th-century building sensitively restored — ask about the excavated medieval remains under the hotel.",
     filterKeys: ["boutique", "central"],
@@ -350,7 +350,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Santiago de Alfama is a jewel-box boutique hotel occupying a lovingly restored 15th-century palace on the winding climb between the cathedral and São Jorge Castle, in the very heart of the old town. The multi-year restoration preserved original stone arches, beams and even excavated archaeological remains, weaving them into just 19 individually designed rooms that pair antique bones with plush contemporary comfort. The result feels intimate and personal, more like staying in a grand private home than a hotel, with warm, attentive service, a good in-house restaurant (Café Audrey) and a small terrace catching the Alfama light. Its position deep in the medieval lanes means history is literally on the doorstep — fado houses, miradouros, the castle and tram 28 are all a short (if steep) walk away. As with all Alfama hotels, the cobbled hills demand comfortable shoes and a taxi with luggage, but for travellers who want to sleep inside the city's most storied quarter with five-star finishes, this is one of Lisbon's most characterful stays. It's small, so it books up early.",
   },
   {
-    name: "The Vintage Lisboa", slug: "the-vintage-lisboa", image: HO("the-vintage-lisboa.webp"),
+    name: "The Vintage Lisboa", slug: "the-vintage-lisboa", image: "/images/lisbon/hotels/hotel-lisbon.avif",
     rating: 4.6, reviewCount: 2600, price: "€€€", type: "5★ Design", area: "Avenida da Liberdade",
     tip: "The rooftop bar and small pool are a quiet retreat a block off the main avenue's luxury shopping.",
     filterKeys: ["boutique", "central"],
@@ -359,7 +359,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Vintage Lisboa is a polished, contemporary five-star set on a quiet street just off the grand Avenida da Liberdade, offering a stylish and comfortable base within easy reach of both the historic centre and the city's smartest shopping. Recently refreshed, its interiors mix mid-century-inspired design with warm colours and considered detail, and the rooms are among the more generously sized in this bracket. A rooftop terrace with a bar and a small plunge pool provides a welcome retreat above the city, especially in warm weather, and there's a decent restaurant and helpful, friendly service. The location strikes a sweet spot: away from the noise and steep cobbles of the old town, but a short walk or metro hop from Marquês de Pombal, the Baixa and the sights, with the flagship boutiques of the Avenida on the doorstep. It's a good-value choice for travellers who want reliable design-hotel comfort and modern amenities in a central-but-calm setting, without the palace-hotel price tag. The metro at Avenida makes airport and citywide connections simple.",
   },
   {
-    name: "Internacional Design Hotel", slug: "internacional-design-hotel", image: HO("internacional-design-hotel.webp"),
+    name: "Internacional Design Hotel", slug: "internacional-design-hotel", image: "/images/lisbon/hotels/hotel-lisbon.avif",
     rating: 4.4, reviewCount: 4100, price: "€€€", type: "4★ Design", area: "Rossio",
     tip: "Ask for a themed room facing Rossio square — you're right on top of the Baixa's sights and metro.",
     filterKeys: ["boutique", "central"],
@@ -368,7 +368,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Internacional Design Hotel enjoys one of the most central locations in Lisbon, overlooking the lively Rossio square in the middle of the Baixa, with the metro, the funiculars, the trams and virtually every downtown sight within a short walk. Its concept is a playful one: four floors, each decorated in a distinct design theme (from urban to Zen), giving the rooms more personality than the usual four-star. The best of them look straight out onto the wave-patterned cobbles and fountains of Rossio, though square-facing rooms can catch some street noise — light sleepers should ask for a quieter side. There's a well-liked ground-floor restaurant and bar spilling onto the square, and the staff are used to helping first-time visitors get their bearings. For travellers who prioritise being in the absolute thick of things — steps from Rossio and Restauradores stations, the Santa Justa lift, Chiado and the riverfront squares — over a resort-style hush, it's a stylish, sensibly priced and supremely convenient choice, ideal for a short, sightseeing-packed city break.",
   },
   {
-    name: "Generator Lisbon", slug: "generator-lisbon", image: HO("generator-lisbon.webp"),
+    name: "Generator Lisbon", slug: "generator-lisbon", image: "/images/lisbon/hotels/hotel-lisbon.avif",
     rating: 4.3, reviewCount: 6700, price: "€", type: "Hostel / Budget", area: "Avenida da Liberdade",
     tip: "Book a private twin for hotel-like comfort at hostel prices; the rooftop bar has great avenue views.",
     filterKeys: ["budget"],
@@ -390,7 +390,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Bairro Alto is the beating heart of Lisbon nightlife and unlike anywhere else in the city. Rather than a few big venues, it's a dense grid of narrow streets packed with dozens of tiny, often single-room bars, each with its own niche — rock, reggae, fado, indie, LGBTQ+, cheap shots — and the tradition is to buy a drink and take it out onto the cobbles, where the whole neighbourhood becomes one sprawling, roaming open-air party. It's cheap, democratic and gloriously informal: no dress codes, no big cover charges, just bar-hopping and street-drinking that builds through the evening and runs into the early hours, spilling down toward Cais do Sodré as the night deepens. The mix is young but broad, locals and visitors together, and the mood is generally friendly. Start with sunset drinks at the São Pedro de Alcântara viewpoint at the top of the Glória funicular, then dive into the lanes. Keep valuables secure in the crush, bring some cash for the smallest bars, and simply follow the noise.",
   },
   {
-    name: "Pensão Amor", slug: "pensao-amor", image: NA("penso-amor.webp"),
+    name: "Pensão Amor", slug: "pensao-amor", image: "/images/lisbon/nightlife/cocktail-bar-lisbon.webp",
     rating: 4.4, reviewCount: 11000, type: "Cocktail bar", area: "Cais do Sodré",
     tip: "It's a former brothel on Pink Street — explore the burlesque rooms and the erotic bookshop upstairs.",
     filterKeys: ["bars"],
@@ -399,7 +399,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Pensão Amor is the most characterful bar on Rua Nova do Carvalho — the famous 'Pink Street' whose road surface is painted bubblegum pink and whose row of bars and clubs forms the epicentre of Cais do Sodré nightlife. Housed in a former riverside brothel from the district's rougher sailors'-quarter past, it leans fully into that history: a warren of theatrically decadent rooms dripping with red velvet, gilt, murals and vintage erotica, complete with an adult bookshop, burlesque and cabaret performances, and a knowingly risqué cocktail list. It's atmospheric, fun and unlike a standard bar, drawing a mixed crowd from after-work drinkers to pre-club revellers. Pink Street itself has transformed over the past decade from red-light zone to one of the city's liveliest nightlife strips, buzzing late into the night, so Pensão Amor makes a perfect starting point before moving on to the surrounding clubs and, for the stamina-blessed, Lux Frágil across the district. Come early evening to appreciate the surreal decor over a cocktail, or later for the full, raucous swing of it.",
   },
   {
-    name: "Lux Frágil", slug: "lux-fragil", image: NA("lux-frgil.webp"),
+    name: "Lux Frágil", slug: "lux-fragil", image: "/images/lisbon/nightlife/flamenco-lisbon.webp",
     rating: 4.4, reviewCount: 13000, type: "Nightclub", area: "Santa Apolónia",
     tip: "The riverside terrace is the secret weapon — dance downstairs, then watch the sunrise over the Tagus up top.",
     filterKeys: ["clubs"],
@@ -408,7 +408,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Lux Frágil is the club that put Lisbon on the international clubbing map and remains its most iconic venue, occupying a converted riverside warehouse near Santa Apolónia, part-owned by actor John Malkovich and run with impeccable music taste since 1998. Spread over multiple levels, it combines a dark, pounding main dancefloor programming top-tier international and Portuguese electronic DJs, a more eclectic upstairs bar, and — the ace up its sleeve — a rooftop terrace overlooking the Tagus where you can catch a breather and, if you last the distance, the sunrise over the river. The crowd is stylish and the door can be selective on the busiest nights, so dress the part and arrive after 1am, when Lisbon's night truly gets going. It's the serious clubber's choice, a step up in scale and reputation from the bar-hopping of Bairro Alto and Pink Street, and a genuine highlight for anyone who loves electronic music. Check the line-up in advance, bring ID, and pace yourself — nights here run long and end with the dawn.",
   },
   {
-    name: "Park Bar", slug: "park-bar", image: NA("park-bar.webp"),
+    name: "Park Bar", slug: "park-bar", image: "/images/lisbon/nightlife/live-music-lisbon.webp",
     rating: 4.5, reviewCount: 15000, type: "Rooftop bar", area: "Bairro Alto",
     tip: "Take the lift to the top floor of the car park — the entrance is genuinely hidden inside a parking garage.",
     filterKeys: ["bars"],
@@ -417,7 +417,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Park is the rooftop bar that everyone means when they talk about Lisbon's hidden gems — and it's hidden in the most improbable place, on top of a multi-storey car park in Bairro Alto. Finding it is half the fun: walk into the unpromising concrete garage on Calçada do Combro, take the lift to the fifth floor, climb a final flight of stairs, and emerge onto a lush, plant-filled terrace with sofas, a bar, DJs and one of the best sunset views in the city, looking out over the bell towers of the Santa Catarina church to the river and the 25 de Abril bridge beyond. It's stylish but relaxed, popular with a young, international-leaning crowd, and the go-to spot for sundowners before a night in the surrounding bars. Cocktails and craft beer are the order of the day, and there's occasional food. Arrive well before sunset to grab a good seat, as it fills quickly on warm evenings. Note it's weather-dependent and seasonal, so check it's open, and be prepared for a queue at peak times.",
   },
   {
-    name: "Rio Maravilha", slug: "rio-maravilha", image: NA("rio-maravilha.webp"),
+    name: "Rio Maravilha", slug: "rio-maravilha", image: "/images/lisbon/nightlife/nightlife-bar-lisbon.webp",
     rating: 4.4, reviewCount: 9800, type: "Rooftop bar", area: "Alcântara",
     tip: "The pink statue reaching toward Cristo Rei across the river frames the perfect sunset photo — arrive early.",
     filterKeys: ["bars"],
@@ -426,7 +426,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Rio Maravilha crowns the LX Factory creative complex in Alcântara, and its rooftop terrace has become one of Lisbon's essential sunset spots. The pay-off is the view: a wide-open panorama across the Tagus to the towering 25 de Abril bridge and, on the far bank, the Cristo Rei statue — a scene playfully mirrored by the bar's own pastel figure of a woman reaching out toward the horizon, one of the city's most photographed installations. Below the terrace, the venue is a full bar-restaurant serving Portuguese-with-a-twist small plates and cocktails, so you can make an evening of it, but most people come for a drink as the light drops behind the bridge. It draws a hip, mixed crowd and gets busy at golden hour, especially at weekends, so arrive early to claim a terrace table. Being part of LX Factory, it pairs perfectly with an afternoon browsing the shops, bookshop and street art below, before heading up for sundowners. There's often music later on, extending the night once the sun is down.",
   },
   {
-    name: "Pavilhão Chinês", slug: "pavilhao-chines", image: NA("pavilho-chins.webp"),
+    name: "Pavilhão Chinês", slug: "pavilhao-chines", image: "/images/lisbon/nightlife/rooftop-bar-night-lisbon.webp",
     rating: 4.5, reviewCount: 8600, type: "Cocktail bar", area: "Príncipe Real",
     tip: "Play a game of pool in the back room, and let the waistcoated waiters mix you a classic cocktail.",
     filterKeys: ["bars"],
@@ -435,7 +435,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Pavilhão Chinês is one of Lisbon's most memorable bars, a hushed, wonderfully strange cocktail lounge on the edge of Príncipe Real that feels like drinking inside a cabinet of curiosities. Every wall and ceiling of its succession of dimly lit, green-panelled rooms is crammed floor-to-ceiling with an obsessive collection of antiques and oddities behind glass — toy soldiers, model planes, porcelain, hats, clocks, military figurines and thousands of other objects amassed over decades. Waistcoated waiters glide between velvet armchairs delivering an extensive menu of classic and creative cocktails, and there's a full-size billiards room at the back for a game between drinks. It's atmospheric, unhurried and utterly unique, drawing a mixed crowd of locals, couples and curious visitors who come as much to marvel at the decor as to drink. It sits a short walk from the Bairro Alto bars and the São Pedro de Alcântara viewpoint, making it a wonderful, more civilised way to start or punctuate a night out. Come early for a quiet look at the collection before the rooms fill; the cocktails are well made if not cheap.",
   },
   {
-    name: "Hot Clube de Portugal", slug: "hot-clube-de-portugal", image: NA("hot-clube-de-portugal.webp"),
+    name: "Hot Clube de Portugal", slug: "hot-clube-de-portugal", image: "/images/lisbon/nightlife/cocktail-bar-lisbon.webp",
     rating: 4.6, reviewCount: 3200, type: "Jazz club", area: "Príncipe Real",
     tip: "Book ahead for the tiny cellar stage, or catch a free set on the garden terrace in summer.",
     filterKeys: ["live-music"],
@@ -444,7 +444,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Hot Clube de Portugal is a Lisbon institution and one of the oldest continuously running jazz clubs in Europe, staging live music since 1948. Set on the leafy Praça da Alegria near Avenida da Liberdade, its heart is a tiny, low-ceilinged brick cellar where the audience sits almost on top of the musicians, creating the kind of close, electric atmosphere that made its reputation. The programme mixes established Portuguese and international jazz names with the students and graduates of its own respected jazz school, so you might catch anything from bebop to contemporary experimentation on any given night. After a fire destroyed the original venue, it was faithfully rebuilt and also gained a lovely garden terrace, where sets are staged in the warmer months under the open sky. It's a world away from the club-and-bar scene elsewhere — a place for listening, with a knowledgeable, appreciative crowd. Tickets are affordable and the intimate room means it sells out, so book ahead for the cellar. For live music lovers, it's one of the most rewarding nights out in the city.",
   },
   {
-    name: "Ministerium Club", slug: "ministerium", image: NA("ministerium.webp"),
+    name: "Ministerium Club", slug: "ministerium", image: "/images/lisbon/nightlife/flamenco-lisbon.webp",
     rating: 4.1, reviewCount: 4700, type: "Nightclub", area: "Baixa",
     tip: "Housed in a wing of Praça do Comércio — arrive after 2am for the peak of the house and techno sets.",
     filterKeys: ["clubs"],
@@ -453,7 +453,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Ministerium Club enjoys one of the most dramatic settings of any Lisbon nightspot — a converted wing of the monumental Praça do Comércio, right on the riverfront, its high arched interior giving the dancefloor a grand, historic backdrop for thoroughly modern electronic music. It leans toward house and techno, hosting resident and visiting DJs across weekend nights, and pulls a stylish, dance-focused crowd who come to move rather than pose. The main room's soundsystem and lighting are serious, and the location — steps from the metro and the riverside — makes it easy to reach and easy to combine with a night that starts in the nearby bars of Cais do Sodré or Bairro Alto. Like most Lisbon clubs, it doesn't get going until well after midnight and runs until dawn, so arrive late and pace yourself. There can be a door policy on the busiest nights, so dress reasonably smart. For clubbers who want big-room electronic music in a spectacular central setting without trekking out to the riverside warehouses, Ministerium is a strong, atmospheric choice.",
   },
   {
-    name: "Foxtrot", slug: "foxtrot", image: NA("foxtrot.webp"),
+    name: "Foxtrot", slug: "foxtrot", image: "/images/lisbon/nightlife/live-music-lisbon.webp",
     rating: 4.5, reviewCount: 5100, type: "Cocktail bar", area: "Príncipe Real",
     tip: "A speakeasy feel since 1978 — ring the bell to enter, then settle into a velvet booth for a classic cocktail.",
     filterKeys: ["bars"],
@@ -462,7 +462,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Foxtrot is a beautifully atmospheric cocktail bar that has been serving Lisbon since 1978, hidden behind an easy-to-miss door in the smart Príncipe Real district — ring the bell to be let in, speakeasy-style. Inside, it's a lovingly preserved world of Art Nouveau and Art Deco detail: stained glass, dark polished wood, brass, vintage posters, velvet booths and a scattering of eclectic antiques, with a small garden terrace and a billiards table adding to the old-world charm. It's a place for conversation and well-made classic cocktails rather than dancing or DJs, drawing a relaxed, grown-up crowd who value character and comfort over hype. The lighting is low, the pace unhurried, and the whole feel is of a secret club that time forgot. It makes an ideal spot for an intimate drink to start or end an evening, and it sits within easy reach of the Bairro Alto and Príncipe Real scenes if you want to move on. Come for the atmosphere and the craft of the drinks; it's one of the most characterful and civilised bars in the city.",
   },
   {
-    name: "Tasca do Chico (Fado)", slug: "tasca-do-chico", image: NA("tasca-mastai.webp"),
+    name: "Tasca do Chico (Fado)", slug: "tasca-do-chico", image: "/images/lisbon/nightlife/nightlife-bar-lisbon.webp",
     rating: 4.4, reviewCount: 8300, type: "Fado tavern", area: "Bairro Alto",
     tip: "Arrive early for a stool, order petiscos and wine, and hush when the singing starts — it's free but tip generously.",
     filterKeys: ["live-music", "fado"],
@@ -484,7 +484,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "A Vida Portuguesa is the loveliest place in Lisbon to shop for gifts and souvenirs with genuine character, a celebration of Portugal's traditional brands and craftsmanship revived and beautifully presented. Founded by a journalist on a mission to rescue heritage products, its stores are treasure troves of nostalgic, high-quality Portuguese goods: fragrant Claus Porto and Ach Brito soaps in gorgeous vintage wrappers, colourful ceramics and azulejo tiles, artfully tinned sardines, embroidered linens, retro toothpaste and cosmetics, notebooks, honey and pencils — all displayed in wooden cabinets amid old-world charm. The original Chiado branch occupies a former perfumery with painted ceilings, while the larger Largo do Intendente store adds a ceramics-filled courtyard feel. Prices are fair for the quality, and almost everything makes a distinctive, packable present that actually says 'Portugal' rather than generic tourist tat. It's the antidote to the fridge-magnet shops, and a pleasure to browse even if you buy little. Come here for considered gifts, stock up on the beautifully packaged soaps, and enjoy one of the city's most atmospheric retail spaces.",
   },
   {
-    name: "Avenida da Liberdade", slug: "avenida-da-liberdade", image: SH("avenida-da-liberdade.webp"),
+    name: "Avenida da Liberdade", slug: "avenida-da-liberdade", image: "/images/lisbon/shopping/artisan-shop-lisbon.webp",
     rating: 4.5, reviewCount: 21000, type: "Luxury boulevard", area: "Avenida da Liberdade",
     tip: "Window-shop the international luxury flagships, then relax at a shaded kiosk-café on the central promenade.",
     filterKeys: ["luxury"],
@@ -493,7 +493,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Avenida da Liberdade is Lisbon's answer to the Champs-Élysées — a broad, 90-metre-wide boulevard laid out in the 1880s, lined with trees, patterned cobblestone promenades, fountains and shaded kiosk-cafés, running uphill from the Baixa to the Marquês de Pombal roundabout. Today it's the city's luxury shopping address, home to the flagship boutiques of international houses like Louis Vuitton, Prada, Gucci, Dior, Cartier and Michael Kors, interspersed with Portuguese designers, upscale hotels and theatres. Even if the designer prices aren't for you, the avenue is a pleasure to stroll: the central pedestrian promenades are wide and green, dotted with statues and pavement art, and the kiosks make perfect coffee stops for people-watching. It's also a cultural artery, hosting parts of the June Santos Populares festivities and lined with grand Belle Époque architecture. Combine a wander here with a visit to the Eduardo VII park at the top for city views, or the Baixa's squares at the bottom. For luxury shopping or simply an elegant promenade, the Avenida is Lisbon at its most gracious.",
   },
   {
-    name: "Chiado", slug: "chiado-shopping", image: SH("chiado.webp"),
+    name: "Chiado", slug: "chiado-shopping", image: "/images/lisbon/shopping/mall-lisbon.webp",
     rating: 4.6, reviewCount: 18000, type: "Shopping district", area: "Chiado",
     tip: "Mix Portuguese heritage brands with high-street flagships on Rua Garrett and Rua do Carmo, then browse Bertrand.",
     filterKeys: ["fashion", "gifts"],
@@ -502,7 +502,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Chiado is Lisbon's most refined shopping quarter, the historic retail heart of the city where locals have shopped for well over a century. Its spine is the pedestrianised Rua Garrett, curving up from the Baixa, along which you'll find an appealing mix of Portuguese heritage names, jewellers, leather-goods makers, high-street flagships and international brands, alongside the elegant Armazéns do Chiado shopping centre. This is also literary Lisbon: Bertrand, recognised as the oldest operating bookshop in the world (since 1732), sits here, near the famous A Brasileira café with its bronze statue of the poet Fernando Pessoa. Around the main streets, side lanes hide independent boutiques, ceramics shops, glove-makers and the flagship of A Vida Portuguesa, while historic pastelarias offer a sweet pause. It's a district for unhurried browsing rather than bargain-hunting, blending shopping with sightseeing — the São Carlos opera, the Carmo ruins and the Santa Justa lift are all close by. Come for a couple of hours to combine some smart retail with coffee, culture and one of the city's most graceful streetscapes, then drift up into Bairro Alto.",
   },
   {
-    name: "Feira da Ladra", slug: "feira-da-ladra", image: SH("feira-da-ladra.webp"),
+    name: "Feira da Ladra", slug: "feira-da-ladra", image: "/images/lisbon/shopping/outdoor-market-lisbon.webp",
     rating: 4.3, reviewCount: 12000, type: "Flea market", area: "Alfama / Graça",
     tip: "Go early on Tuesday or Saturday and haggle gently — best for vintage azulejo tiles, prints and curiosities.",
     filterKeys: ["market", "vintage"],
@@ -511,7 +511,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Feira da Ladra — literally the 'thieves' market' — is Lisbon's famous open-air flea market, held every Tuesday and Saturday on the Campo de Santa Clara behind the domed National Pantheon, on the edge of Alfama. It has run in some form for centuries, and it's a wonderfully chaotic sprawl of stalls and blankets selling everything from genuine antiques, vintage azulejo tiles, old prints, coins, records, watches and second-hand books to retro clothing, handmade crafts and a fair amount of pure junk. Half the pleasure is the treasure-hunt: patient rummaging can turn up characterful, portable souvenirs — a single antique tile, an old Lisbon photograph, a piece of costume jewellery — far more memorable than shop-bought trinkets, and gentle haggling is expected. Go early for the best pickings and a calmer browse, bring cash and small change, and keep an eye on your belongings in the crowds. The market's hilltop setting, with the Pantheon and river views nearby and the tram 28 route close at hand, makes it an atmospheric outing whether or not you buy anything. It's one of the most authentic, local mornings in the city.",
   },
   {
-    name: "Conserveira de Lisboa", slug: "conserveira-de-lisboa", image: SH("conserveira-de-lisboa.webp"),
+    name: "Conserveira de Lisboa", slug: "conserveira-de-lisboa", image: "/images/lisbon/shopping/shopping-street-lisbon.webp",
     rating: 4.7, reviewCount: 6100, type: "Tinned fish", area: "Baixa",
     tip: "The staff still hand-wrap each colourful tin in paper — buy a mixed selection of the Tricana sardines as gifts.",
     filterKeys: ["gifts", "food"],
@@ -520,7 +520,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Conserveira de Lisboa is a jewel of a shop and a window into one of Portugal's proudest food traditions: tinned fish, or conservas, elevated to an art form. Trading since 1930 from the same little Baixa storefront near the river, it's a beautifully preserved time capsule, its wooden shelves stacked floor to ceiling with hundreds of colourful, retro-labelled tins of sardines, mackerel, tuna, cod and octopus in olive oil, tomato, spiced and lemon varieties, under its own historic brands like Tricana and Prata do Mar. The ritual is part of the charm: choose your tins and the staff wrap each one by hand in printed paper tied with string, turning a humble can into a gift-worthy object. Far from a tourist gimmick, quality Portuguese conservas are genuinely delicious and prized, and they make ideal souvenirs — light, unbreakable, long-lasting and unmistakably Portuguese. Prices are very reasonable, so it's easy to assemble a mixed selection for friends back home or a picnic. Even non-shoppers should step inside to admire the vintage interior. It's a short walk from Praça do Comércio, easily folded into a Baixa stroll.",
   },
   {
-    name: "Embaixada", slug: "embaixada", image: SH("embaixada.webp"),
+    name: "Embaixada", slug: "embaixada", image: "/images/lisbon/shopping/souvenir-shop-lisbon.webp",
     rating: 4.5, reviewCount: 7400, type: "Concept gallery", area: "Príncipe Real",
     tip: "Explore the Moorish-revival palace floor by floor — each room is a different independent Portuguese designer.",
     filterKeys: ["fashion", "gifts"],
@@ -529,7 +529,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Embaixada is one of Lisbon's most distinctive shopping experiences, a curated concept gallery set inside the Ribeiro da Cunha Palace, a striking 19th-century neo-Moorish (Arabian-revival) mansion on the leafy Praça do Príncipe Real. Rather than a conventional store, its ornate rooms and central atrium each house a different independent Portuguese brand or designer — fashion, jewellery, homeware, ceramics, cosmetics, children's clothing and concept boutiques — so browsing becomes a journey through both cutting-edge Portuguese design and gorgeous historic architecture. It leans upscale and design-conscious, ideal for finding original, contemporary gifts and clothing you won't see elsewhere, and there's a lovely gin bar and courtyard café for a pause. The surrounding Príncipe Real district is one of the city's most fashionable, full of concept stores, antique shops, garden squares and good restaurants like A Cevicheria nearby, so Embaixada anchors an enjoyable afternoon of stylish browsing. Even if you don't buy, the palace interior alone — tiled, galleried and beautifully restored — is worth stepping inside to admire. It's a refined counterpoint to the flea markets and heritage stores elsewhere in the city.",
   },
   {
-    name: "LX Factory Shops", slug: "lx-factory-shops", image: SH("lx-factory.webp"),
+    name: "LX Factory Shops", slug: "lx-factory-shops", image: "/images/lisbon/shopping/vintage-market-lisbon.webp",
     rating: 4.5, reviewCount: 14000, type: "Creative market", area: "Alcântara",
     tip: "Best on a Sunday when the outdoor market adds stalls to the permanent design shops and the famous bookshop.",
     filterKeys: ["market", "gifts"],
@@ -538,7 +538,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Beyond its bars and restaurants, the LX Factory complex in Alcântara is a rewarding place to shop for the creative and the offbeat, its cobbled lanes between converted industrial buildings lined with independent design boutiques, studios and concept stores. You'll find Portuguese fashion and accessories, homeware and ceramics, cork goods, art prints, vintage and craft stalls, plus the unmissable Ler Devagar — a former printworks turned soaring, multi-storey bookshop where towering shelves and a flying-bicycle sculpture make it one of the world's most photogenic bookstores. On Sundays, an outdoor market adds antiques, crafts, food and vintage stalls, giving the whole place a festive buzz, and there are plenty of cafés and the Landeau chocolate-cake counter for breaks. It's a great spot to hunt for distinctive, contemporary Portuguese gifts and design pieces away from the mainstream high street, wrapped up with street art, river-and-bridge views and a genuinely creative atmosphere. Since it sits between the centre and Belém, it's easy to combine shopping here with a visit to the monuments, ideally finishing with sunset drinks on the Rio Maravilha rooftop above.",
   },
   {
-    name: "Centro Comercial Colombo", slug: "colombo", image: SH("centro-comercial-colombo.webp"),
+    name: "Centro Comercial Colombo", slug: "colombo", image: "/images/lisbon/shopping/artisan-shop-lisbon.webp",
     rating: 4.5, reviewCount: 62000, type: "Shopping mall", area: "Benfica",
     tip: "The rainy-day and family option — one of Iberia's biggest malls, with hundreds of shops and a big food court.",
     filterKeys: ["fashion", "family"],
@@ -551,7 +551,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── With kids (8) ────────────────────────────────────────────────────────────
 export const WITH_KIDS: BcnPlace[] = [
   {
-    name: "Oceanário de Lisboa", slug: "oceanario-kids", image: KI("oceanrio.webp"),
+    name: "Oceanário de Lisboa", slug: "oceanario-kids", image: "/images/lisbon/with-kids/aquarium-lisbon.webp",
     rating: 4.7, reviewCount: 112000, price: "€25", ageGroup: "All ages", area: "Parque das Nações",
     tip: "The sea otters are the kids' favourite — check the feeding times posted at the entrance.",
     tiqetsUrl: tiqets("Oceanario de Lisboa"), filterKeys: ["all-ages", "indoor"],
@@ -560,7 +560,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Oceanário de Lisboa is the undisputed champion of family days out in the city, and one of the finest aquariums anywhere. Its brilliant design keeps children captivated: a single colossal central tank, viewable from two floors, holds sharks, rays, shoals of fish and a beloved sunfish, while four themed ocean zones let kids meet playful sea otters, comical puffins, tropical reef fish and more, all beautifully lit and clearly signed. It's fully indoors, air-conditioned and pushchair-friendly, making it a perfect option whatever the weather, and it engages toddlers and teenagers alike (adults too). Allow around two hours, check the otter and feeding times on arrival, and book a timed ticket online to avoid queues and school-group crushes — the earliest slot is calmest. Afterwards, the surrounding Parque das Nações, the modern Expo '98 district, offers a pram-friendly riverside promenade, a cable car ride kids love, fountains to splash in and the hands-on Pavilhão do Conhecimento science museum next door, so you can easily build a full, low-stress family day around it.",
   },
   {
-    name: "Lisbon Zoo", slug: "lisbon-zoo", image: KI("lisboa-zoo.webp"),
+    name: "Lisbon Zoo", slug: "lisbon-zoo", image: "/images/lisbon/with-kids/family-park-lisbon.webp",
     rating: 4.5, reviewCount: 47000, price: "€24", ageGroup: "2–12", area: "Sete Rios",
     tip: "Ride the cable car over the enclosures, and time your visit around the dolphin presentation.",
     filterKeys: ["all-ages", "outdoor"],
@@ -569,7 +569,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Jardim Zoológico de Lisboa is one of the oldest zoos in Europe and a dependable, crowd-pleasing family day out, conveniently sitting right above its own metro stop at Sete Rios. Home to hundreds of species — big cats, primates, giraffes, elephants, reptiles and a large aviary — it's spread across pleasant, leafy grounds that make for an easy day of wandering with children. The standout extra is the cable car that glides over parts of the zoo, giving a bird's-eye view of the enclosures that kids adore, and there are regular animal presentations, including a popular dolphin show, plus a reptile house, a small farm area and a children's playground. It's well maintained and clearly laid out, with plenty of shade, cafés and picnic spots for breaks. Being fully accessible by metro makes it stress-free to reach, and you can easily spend three to four hours here. Buy tickets online to skip the entrance queue, check the show and feeding schedule when you arrive to plan your route, and bring sun protection in summer, as much of the visit is outdoors.",
   },
   {
-    name: "Pavilhão do Conhecimento", slug: "pavilhao-do-conhecimento", image: KI("pavilho-do-conhecimento.webp"),
+    name: "Pavilhão do Conhecimento", slug: "pavilhao-do-conhecimento", image: "/images/lisbon/with-kids/kids-museum-lisbon.webp",
     rating: 4.5, reviewCount: 15000, price: "€12", ageGroup: "3–14", area: "Parque das Nações",
     tip: "Everything is hands-on — let kids loose on the 'unfinished house' construction exhibit and the bikes over a wire.",
     filterKeys: ["all-ages", "indoor"],
@@ -578,7 +578,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Pavilhão do Conhecimento — Lisbon's interactive science museum, or Ciência Viva centre — is a superb rainy-day and any-day option for families with curious children, sitting conveniently next to the Oceanário in Parque das Nações. Its whole philosophy is hands-on: rather than glass cases, it's full of experiments, machines and challenges kids can touch, push, build and ride, from a high-wire bicycle demonstrating balance and gravity to an 'unfinished house' where little ones don hard hats to lay bricks and lift materials, plus optical illusions, physics puzzles and rotating exhibitions. There's a dedicated zone for the youngest children (under-6s), so toddlers aren't left out, and staff run activities and demonstrations. It's genuinely educational without feeling like school, and children happily spend two to three hours here. Being fully indoors and air-conditioned, it's ideal when the weather turns or the heat builds, and pairing it with the neighbouring aquarium and the wider Expo district — cable car, fountains, riverside — makes for an easy, engaging family day entirely reachable by metro to Oriente. Book online at busy times.",
   },
   {
-    name: "KidZania Lisboa", slug: "kidzania", image: KI("kidzania-lisboa.webp"),
+    name: "KidZania Lisboa", slug: "kidzania", image: "/images/lisbon/with-kids/tibidabo-lisbon.webp",
     rating: 4.4, reviewCount: 9800, price: "€20", ageGroup: "3–14", area: "Almada (Dolce Vita Tejo)",
     tip: "Kids role-play real jobs and earn 'kidZos' to spend — best for ages 4–12; adults wait in the lounge.",
     filterKeys: ["all-ages", "indoor"],
@@ -587,7 +587,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "KidZania Lisboa is an immersive indoor 'city' built entirely to child scale, where children role-play adult professions in realistic settings — piloting a plane, treating patients as a doctor, fighting fires, reporting the news, running a shop or a kitchen — earning and spending their own currency, 'kidZos', as they go. It's brilliantly conceived edutainment that keeps children aged roughly four to fourteen absorbed and independent for hours, learning about work, money and teamwork while thinking they're just playing. Parents accompany little ones or relax in designated adult areas while older kids roam the safe, staffed environment on their own. It's a favourite for birthdays, school holidays and rainy days, being fully indoors and weatherproof. The main location is across the river near Almada rather than in the city centre, so it's most easily reached by car or taxi and is best planned as a dedicated half-day rather than squeezed between central sights. Sessions and opening days vary by season and school holidays, so check the schedule and book ahead, especially in peak periods. For families travelling with primary-age children, it's a genuine highlight.",
   },
   {
-    name: "Parque das Nações", slug: "parque-das-nacoes", image: KI("parque-das-naes.webp"),
+    name: "Parque das Nações", slug: "parque-das-nacoes", image: "/images/lisbon/with-kids/zoo-lisbon.webp",
     rating: 4.6, reviewCount: 38000, price: "Free", ageGroup: "All ages", area: "Parque das Nações",
     tip: "Ride the riverside cable car between the Oceanário and the Vasco da Gama tower — a hit with kids.",
     filterKeys: ["all-ages", "outdoor"],
@@ -596,7 +596,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Parque das Nações, the sleek riverside district built for the 1998 World Expo, is one of the most family-friendly parts of Lisbon — flat, modern, pram-friendly and full of open space, a welcome contrast to the steep cobbles of the old town. Along its landscaped waterfront you'll find wide traffic-free promenades for scooting and cycling, interactive fountains children love to run through on hot days, gardens, playgrounds, public art and the striking Vasco da Gama tower and bridge views. The star for kids is the Telecabine cable car, which glides along the river between the Oceanário and the tower, giving lovely views over the Tagus. The district also holds the Oceanário and the Pavilhão do Conhecimento science museum, so you can combine several family attractions in one easy, walkable area, with plenty of casual restaurants and the Vasco da Gama shopping centre for meals, snacks and rainy spells. It's all reachable by metro to Oriente, Santiago Calatrava's dramatic station being a sight in itself. For a relaxed, low-stress day with children, this modern quarter is hard to beat.",
   },
   {
-    name: "Monsanto Forest Park", slug: "monsanto-park", image: KI("monsanto-park.webp"),
+    name: "Monsanto Forest Park", slug: "monsanto-park", image: "/images/lisbon/with-kids/aquarium-lisbon.webp",
     rating: 4.5, reviewCount: 18000, price: "Free", ageGroup: "All ages", area: "Monsanto",
     tip: "Head for the Parque Recreativo do Alto da Serafina or Alvito playgrounds — huge, adventurous and free.",
     filterKeys: ["all-ages", "outdoor"],
@@ -605,7 +605,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Parque Florestal de Monsanto is Lisbon's great green lung — a sprawling 10-square-kilometre hilltop forest to the west of the centre, planted in the 20th century and now the city's largest park, offering families a proper dose of nature and space to burn off energy. Within it are several dedicated recreational parks, notably the Parque Recreativo do Alto da Serafina and the Parque Recreativo do Alvito, which feature large, imaginative adventure playgrounds, climbing structures, picnic areas, gentle trails and open lawns — all free to use and rarely crowded. There are walking and cycling routes through the woods, viewpoints over the city, and the quirky Panorâmico de Monsanto, a derelict-turned-street-art viewpoint popular for its graffiti and vistas. Because it's a hilly forest spread over a wide area and not directly on the metro, it's best reached by bus, taxi or car, and works well as a half-day escape rather than a quick stop — pack a picnic and make an outing of it. For families craving playgrounds, greenery and fresh air away from the tourist crush, Monsanto is a refreshing, budget-friendly change of pace.",
   },
   {
-    name: "Museu dos Coches", slug: "museu-dos-coches", image: KI("museu-dos-coches.webp"),
+    name: "Museu dos Coches", slug: "museu-dos-coches", image: "/images/lisbon/with-kids/family-park-lisbon.webp",
     rating: 4.6, reviewCount: 24000, price: "€10", ageGroup: "4+", area: "Belém",
     tip: "Kids love the fairytale golden carriages — it's compact enough to pair with the Belém monuments.",
     tiqetsUrl: tiqets("National Coach Museum Lisbon"), filterKeys: ["all-ages", "indoor"],
@@ -614,7 +614,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Museu Nacional dos Coches — the National Coach Museum — holds one of the world's finest collections of historic royal and ceremonial carriages, and it turns out to be a surprise hit with children, who are wide-eyed at the fairytale procession of gilded, elaborately painted 17th- to 19th-century coaches lined up like something from a storybook. The showpieces are the enormous, over-the-top Baroque carriages built for Portuguese royalty and papal ambassadors, dripping with gold leaf, sculpted cherubs and allegorical figures — genuinely jaw-dropping craftsmanship that needs no explanation to impress young visitors. Housed in a striking modern purpose-built gallery in Belém (with the original 18th-century royal riding school across the way), it's spacious, well-lit and easy to walk around in under an hour, making it an ideal, weather-proof addition to a Belém day alongside the monastery, tower and custard tarts. It's inexpensive, especially for children, and free on the first Sunday of the month. For families, it offers a short, visually spectacular culture stop that even sightseeing-weary kids tend to enjoy, sandwiched neatly between the bigger Belém monuments and a pastel de nata reward.",
   },
   {
-    name: "Tram 28 Ride", slug: "tram-28-ride", image: KI("tram-28-ritten.webp"),
+    name: "Tram 28 Ride", slug: "tram-28-ride", image: "/images/lisbon/with-kids/kids-museum-lisbon.webp",
     rating: 4.5, reviewCount: 58000, price: "€3.20", ageGroup: "All ages", area: "Central",
     tip: "Kids love the rattly climb — board early at Martim Moniz for a window seat before it packs out.",
     filterKeys: ["all-ages", "outdoor"],
@@ -627,7 +627,7 @@ export const WITH_KIDS: BcnPlace[] = [
 // ── Day trips (6) ────────────────────────────────────────────────────────────
 export const DAY_TRIPS: BcnPlace[] = [
   {
-    name: "Sintra", slug: "sintra", image: DA("sintra.webp"),
+    name: "Sintra", slug: "sintra", image: "/images/lisbon/day-trips/costa-brava-landscape-lisbon.webp",
     rating: 4.8, reviewCount: 138000, price: "Train €5", distance: "40 min west", area: "Sintra",
     tip: "Take the 08:00 train, book Pena Palace online for the first slot, and do the quieter Quinta da Regaleira after.",
     tiqetsUrl: tiqets("Sintra day trip Lisbon"), duration: "Full day",
@@ -637,7 +637,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Sintra is the day trip no first-time visitor to Lisbon should miss — a lush, hilly wonderland of romantic palaces, Moorish ruins and enchanted gardens wrapped in cool forest and frequent mist, a UNESCO World Heritage cultural landscape just 40 minutes away by train. Its icon is the Palácio da Pena, a wildly colourful 19th-century Romanticist fantasy of red-and-yellow towers and turrets crowning a peak, but Sintra rewards a full day: the ruined hilltop Castelo dos Mouros with its ramparts and views, the elegant Palácio Nacional with its conical chimneys in the town centre, and the mysterious Quinta da Regaleira with its symbolist gardens and the spiral 'Initiation Well'. The catch is its popularity — it gets extremely busy, and the hilltop sights are spread out and steep — so strategy matters: take an early train from Rossio station, buy timed palace tickets online, and use the 434/435 tourist buses, tuk-tuks or a taxi to link the hilltop sites rather than walking up. Give it a full day, wear layers for the microclimate, and combine it with Cascais on the loop back if energy allows.",
   },
   {
-    name: "Cascais & Estoril", slug: "cascais-estoril", image: DA("cascais-estoril.webp"),
+    name: "Cascais & Estoril", slug: "cascais-estoril", image: "/images/lisbon/day-trips/girona-lisbon.webp",
     rating: 4.6, reviewCount: 64000, price: "Train €5", distance: "40 min west", area: "Cascais",
     tip: "The train hugs the coast the whole way — sit on the left, and walk the promenade between Estoril and Cascais.",
     duration: "Half to full day",
@@ -647,7 +647,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Cascais is the easiest and most relaxing escape from Lisbon — a stylish former fishing village turned upmarket seaside town, reached by a lovely 40-minute train ride from Cais do Sodré that hugs the Atlantic coast the entire way. Once the summer retreat of the Portuguese royal family, it retains a genteel charm: a pretty marina, cobbled pedestrian streets full of restaurants and shops, sandy town beaches, elegant villas, the Paula Rego museum (Casa das Histórias) and the dramatic Boca do Inferno sea cliff a short walk away. Its neighbour Estoril, one stop before, adds a grand belle-époque promenade, a famous casino (said to have inspired Ian Fleming's first Bond novel) and a long beachfront you can stroll between the two towns. Together they make a flexible half- or full-day trip: swim, lunch on grilled fish by the marina, browse the boutiques, or rent a bike for the scenic coastal path out toward the wild Guincho beach and Cabo da Roca, mainland Europe's westernmost point. It's calmer and less demanding than Sintra, and the two can be combined into a single loop on the well-connected regional buses.",
   },
   {
-    name: "Óbidos", slug: "obidos", image: DA("bidos.webp"),
+    name: "Óbidos", slug: "obidos", image: "/images/lisbon/day-trips/montserrat-lisbon.webp",
     rating: 4.7, reviewCount: 41000, price: "Bus €8", distance: "1h north", area: "Óbidos",
     tip: "Walk the full castle walls (no railings — mind the drop), and try a ginjinha cherry liqueur in a chocolate cup.",
     duration: "Half to full day",
@@ -657,7 +657,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Óbidos is a storybook medieval village about an hour north of Lisbon, and one of the prettiest small towns in Portugal — a compact cluster of whitewashed, bougainvillea-draped houses trimmed in blue and yellow, threaded by narrow cobbled lanes and encircled entirely by imposing 14th-century castle walls you can walk right around. Once given by Portuguese kings to their queens as a wedding gift, it now charms visitors with its flower-filled streets, artisan shops, tiny churches, a hilltop castle (part of which is a pousada hotel) and the local speciality of ginjinha, a sweet cherry liqueur traditionally served in an edible chocolate cup. Walking the unguarded ramparts for views over the terracotta rooftops and surrounding countryside is the highlight, though the lack of railings means care is needed. It's small enough to see in a few hours, so it makes a relaxed half-day, though it also hosts atmospheric festivals — a medieval market in summer, a chocolate festival in spring and a magical Christmas village in winter — worth timing a visit around. Reached easily by direct bus from Lisbon, it's a gentle, photogenic contrast to the bigger city sights.",
   },
   {
-    name: "Setúbal & Arrábida", slug: "setubal-arrabida", image: DA("setbal-arrbida.webp"),
+    name: "Setúbal & Arrábida", slug: "setubal-arrabida", image: "/images/lisbon/day-trips/penedes-vineyard-lisbon.webp",
     rating: 4.7, reviewCount: 22000, price: "Train €5", distance: "1h south", area: "Setúbal",
     tip: "Combine fresh grilled cuttlefish (choco frito) in Setúbal with the turquoise coves of the Arrábida natural park.",
     duration: "Full day",
@@ -667,7 +667,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "South of the Tagus, the Setúbal Peninsula offers one of Lisbon's most rewarding and less-touristed day trips, combining great seafood with genuinely spectacular coastline. Setúbal itself is a lively working port at the mouth of the Sado estuary, celebrated for its fresh fish and above all choco frito — crisp fried cuttlefish — best eaten at a bustling local restaurant, and its market is one of the country's finest. The real showstopper, though, is the adjacent Parque Natural da Arrábida, a range of limestone hills cloaked in Mediterranean scrub that plunge to a string of astonishingly beautiful beaches — Praia dos Galápinhos, Praia do Portinho da Arrábida and others — where turquoise water laps white sand beneath green cliffs, some of the prettiest beaches in Portugal. From the Sado estuary you may also spot resident bottlenose dolphins on a boat trip, and the wine village of Azeitão nearby produces excellent Moscatel and cheeses. Because the park's coves are hard to reach by public transport, this trip is best with a car or an organised tour; allow a full day to pair Arrábida's beaches, a seafood lunch and perhaps a dolphin-watching outing or wine tasting.",
   },
   {
-    name: "Évora", slug: "evora", image: DA("vora.webp"),
+    name: "Évora", slug: "evora", image: "/images/lisbon/day-trips/sitges-lisbon.webp",
     rating: 4.7, reviewCount: 34000, price: "Train €12", distance: "1.5h east", area: "Évora",
     tip: "See the eerie Chapel of Bones and the Roman Temple, then lunch on Alentejo pork and a glass of local red.",
     tiqetsUrl: tiqets("Evora day trip Lisbon"), duration: "Full day",
@@ -677,7 +677,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Évora, the historic capital of the sun-baked Alentejo plains about 90 minutes east of Lisbon, is a beautifully preserved walled city and a UNESCO World Heritage Site that rewards a full day's exploring. Its compact old town is a maze of whitewashed lanes and grand monuments layering two thousand years of history: the striking Roman Temple (often called the Temple of Diana) with its Corinthian columns, the Gothic cathedral, and the macabre yet mesmerising Capela dos Ossos — the Chapel of Bones, its walls and pillars lined with the bones and skulls of thousands, above the chilling inscription 'we bones, lying here, await yours'. Beyond the sights, Évora is a wonderful place to eat and drink: the Alentejo is one of Portugal's great gastronomic and wine regions, so lunch on hearty pork-and-clam or black-pork dishes, sheep's cheese and a glass of robust local red is a highlight in itself. The surrounding countryside holds prehistoric megaliths and cork oak plantations for those with a car. Reachable by direct train or bus, Évora offers a deeper, slower, more Portuguese experience than the coastal trips — history, atmosphere and exceptional food in equal measure.",
   },
   {
-    name: "Fátima", slug: "fatima", image: DA("ftima.webp"),
+    name: "Fátima", slug: "fatima", image: "/images/lisbon/day-trips/tarragona-lisbon.webp",
     rating: 4.6, reviewCount: 52000, price: "Bus €13", distance: "1.5h north", area: "Fátima",
     tip: "Visit the vast sanctuary and the humble shepherds' village of Aljustrel; pair it with medieval Tomar if driving.",
     duration: "Half to full day",
@@ -691,7 +691,7 @@ export const DAY_TRIPS: BcnPlace[] = [
 // ── Beaches (8) ──────────────────────────────────────────────────────────────
 export const BEACHES: BcnPlace[] = [
   {
-    name: "Praia de Carcavelos", slug: "praia-de-carcavelos", image: ST("praia-de-carcavelos.webp"),
+    name: "Praia de Carcavelos", slug: "praia-de-carcavelos", image: "/images/lisbon/beaches/barceloneta-lisbon.webp",
     rating: 4.4, reviewCount: 31000, area: "Carcavelos", facilities: "Surf, bars, showers, lifeguards",
     tip: "The closest big beach to Lisbon — take the Cascais train, and try a surf lesson at one of the beachfront schools.",
     filterKeys: ["surf", "family"],
@@ -700,7 +700,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Praia de Carcavelos is the go-to beach for Lisbon residents and visitors alike — the largest, widest and most easily reached stretch of sand on the Estoril coast, just 25 minutes from the city on the Cascais train. Its broad expanse of golden sand backed by a promenade, a 17th-century fort and a line of beach bars and restaurants gives it a lively, sociable feel, especially on summer weekends. Consistent Atlantic waves make it one of the region's most popular surf beaches, with several surf schools offering lessons and board hire right on the sand, ideal for beginners wanting to try the sport. Full facilities — lifeguards in season, showers, sunbed rental, volleyball and plenty of places to eat and drink — make it comfortable for a full day, and its accessibility means it's the natural choice if you want a proper beach without renting a car. The water is bracing and cooler than the Mediterranean, so it's more refreshing than warm. Come early on hot weekends to claim space, keep valuables secure, and finish with grilled fish or a sunset drink at a beachfront bar before the easy train back to the city.",
   },
   {
-    name: "Costa da Caparica", slug: "costa-da-caparica", image: ST("costa-da-caparica.webp"),
+    name: "Costa da Caparica", slug: "costa-da-caparica", image: "/images/lisbon/beaches/beach-bar-lisbon.webp",
     rating: 4.5, reviewCount: 28000, area: "Almada (south bank)", facilities: "Long sands, bars, surf, mini-train",
     tip: "In summer hop the seasonal 'transpraia' mini-train south to progressively wilder, quieter beaches.",
     filterKeys: ["surf", "family"],
@@ -709,7 +709,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Just across the river on the Setúbal Peninsula, the Costa da Caparica is the Lisbon area's great beach playground — a virtually uninterrupted 15-kilometre ribbon of golden Atlantic sand backed by dunes, and a firm favourite escape for city dwellers in summer. Near the town of Costa da Caparica the beaches are lively and fully serviced, with bars, restaurants, sunbeds, surf schools and an easygoing holiday atmosphere, while a charming seasonal narrow-gauge mini-train, the transpraia, trundles south along the coast, dropping beachgoers at a succession of progressively quieter, wilder and more natural beaches, some with a relaxed or naturist bent, all the way to the unspoilt dunes at the end of the line. This means you can pick your scene — family-friendly and buzzy near town, or empty and elemental further out. The waves are reliable, making it another strong surf destination, and the west-facing sands deliver beautiful sunsets. Reached by bus, or the more scenic ferry-plus-bus combination across the Tagus, it's an easy and rewarding day out; bring supplies for the remoter stretches, where facilities thin out, and enjoy some of the best open-Atlantic beach near the capital.",
   },
   {
-    name: "Praia do Guincho", slug: "praia-do-guincho", image: ST("praia-do-guincho.webp"),
+    name: "Praia do Guincho", slug: "praia-do-guincho", image: "/images/lisbon/beaches/beach-sunset-lisbon.webp",
     rating: 4.6, reviewCount: 24000, area: "Cascais", facilities: "Surf, kitesurf, wild dunes, restaurants",
     tip: "Windy and wild — great for kitesurfers and photographers, but bring a windbreak and skip it on gusty days for swimming.",
     filterKeys: ["surf", "nature"],
@@ -718,7 +718,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Praia do Guincho is the dramatic, untamed antidote to the sheltered town beaches — a magnificent sweep of golden sand and dunes set within the wild Sintra-Cascais Natural Park, backed by the green Serra de Sintra and pounded by powerful Atlantic surf. Its steady, strong winds and big rolling waves have made it a world-class destination for surfing, windsurfing and especially kitesurfing, hosting international competitions, while its cinematic scenery has starred in films (including the James Bond opening of On Her Majesty's Secret Service). That same wind means it's more a beach for watersports, walking and sheer natural beauty than for lazy sunbathing — a windbreak is essential, and the strong currents and cold water demand respect from swimmers. A handful of excellent seafood restaurants perched above the sand make it a superb spot for a long, scenic lunch with the ocean crashing below. It's a short drive or bus ride from Cascais, and pairs perfectly with a Cascais or Sintra day; nearby is Cabo da Roca, the westernmost point of continental Europe. Come for the wild grandeur, the surf and the sunsets rather than a gentle paddle.",
   },
   {
-    name: "Praia do Tamariz (Estoril)", slug: "praia-do-tamariz", image: ST("praia-do-tamariz.webp"),
+    name: "Praia do Tamariz (Estoril)", slug: "praia-do-tamariz", image: "/images/lisbon/beaches/costa-brava-lisbon.webp",
     rating: 4.3, reviewCount: 16000, area: "Estoril", facilities: "Calm, family, promenade, pools",
     tip: "The sheltered bay and seawater pool make it one of the calmest, most family-friendly beaches on the line.",
     filterKeys: ["family"],
@@ -736,7 +736,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "The town beaches of Cascais — chiefly Praia da Ribeira, Praia da Rainha and Praia da Conceição — are a cluster of small, sheltered sandy coves tucked right into the heart of the chic resort town, moments from the marina, the pedestrian shopping streets and the train station, making them among the most convenient beaches in the whole Lisbon region. Their protected position gives calm, gentle water that's ideal for families and easy swimming, and the town setting means you're never more than a few steps from a café, ice cream, seafood restaurant or shop. The trade-off is size: these pretty little beaches are compact and fill up quickly on warm summer days, so they work best as a refreshing swim woven into a day of exploring Cascais rather than a spot to spread out for hours. Their charm lies in that blend of beach and town life — you can sunbathe, dip in the sea, then wander straight into the cobbled centre for lunch or drinks. For a wider, sandier stretch, nearby Carcavelos or the wild Guincho are a short hop away, but for sheer convenience paired with the appeal of Cascais itself, the town coves are hard to beat.",
   },
   {
-    name: "Praia Grande", slug: "praia-grande", image: ST("praia-grande.webp"),
+    name: "Praia Grande", slug: "praia-grande", image: "/images/lisbon/beaches/family-beach-lisbon.webp",
     rating: 4.6, reviewCount: 15000, area: "Sintra coast", facilities: "Big waves, surf, cliffs, restaurants",
     tip: "One of the best surf beaches on the Sintra coast — check the dinosaur footprints in the cliffs at the north end.",
     filterKeys: ["surf", "nature"],
@@ -745,7 +745,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Praia Grande, on the rugged Atlantic coast west of Sintra, lives up to its name — a long, broad sweep of sand hemmed by tall dark cliffs, exposed to the open ocean and blessed with some of the most consistent surf near Lisbon. It's a favourite of surfers and bodyboarders, hosting national and international competitions, and its powerful, reliable waves suit improvers and experienced riders, with schools and hire on hand; the same exposure means strong currents, so swimmers should heed the flags and lifeguards. Beyond the surf, the beach has a wild, scenic grandeur and a couple of geological curiosities: fossilised dinosaur footprints are preserved in the cliff face at the northern end, a genuine 100-million-year-old trackway, and there's a large seawater pool nearby for calmer swimming. A handful of restaurants and cafés above the sand make it easy to spend a full day, and its west-facing aspect delivers spectacular sunsets over the Atlantic. It pairs naturally with a Sintra visit, a short drive or bus ride away through the natural park, offering a bracing dose of wild coast to balance the town's palaces and forests. Bring layers, as the coast can be breezy even when Sintra is calm.",
   },
   {
-    name: "Praia do Magoito", slug: "praia-do-magoito", image: ST("praia-do-magoito.webp"),
+    name: "Praia do Magoito", slug: "praia-do-magoito", image: "/images/lisbon/beaches/mediterranean-beach-lisbon.webp",
     rating: 4.6, reviewCount: 8200, area: "Sintra coast", facilities: "Wild, natural, dunes, restaurant",
     tip: "Quieter than its neighbours — the fossil dune and cliff backdrop make it a beautiful, less-crowded escape.",
     filterKeys: ["nature", "surf"],
@@ -754,7 +754,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Praia do Magoito is one of the quieter, wilder gems of the Sintra coast, a beautiful stretch of golden sand within the protected Sintra-Cascais Natural Park that sees far fewer crowds than the better-known surf beaches nearby. Its defining feature is the dramatic natural backdrop: high cliffs and, most remarkably, a protected fossilised dune — an ancient consolidated sand formation of real geological interest — rising behind the beach, giving it a rugged, untouched character. The open Atlantic setting brings good waves for surfing and bodyboarding and refreshing, sometimes bracing water, along with wonderful sunsets and a genuine sense of nature. A boardwalk provides access down to the sand, and there's a beach restaurant for lunch, but facilities are lower-key than at the busier resorts, part of its unspoilt appeal. Because public transport is limited and seasonal, it's most easily reached by car, which helps keep visitor numbers down and rewards those who make the effort with space and tranquillity. It makes an excellent addition to a Sintra day for anyone with wheels who wants to trade the palace crowds for a stretch of wild, scenic coast, or simply a calmer beach away from the mainstream spots.",
   },
   {
-    name: "Ericeira", slug: "ericeira", image: ST("ericeira.webp"),
+    name: "Ericeira", slug: "ericeira", image: "/images/lisbon/beaches/barceloneta-lisbon.webp",
     rating: 4.7, reviewCount: 29000, area: "1h northwest", facilities: "World surf reserve, town, restaurants",
     tip: "A World Surfing Reserve — watch the pros at Ribeira d'Ilhas, then eat fresh seafood in the whitewashed old town.",
     filterKeys: ["surf", "nature"],

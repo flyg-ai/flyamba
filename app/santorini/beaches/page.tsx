@@ -56,7 +56,7 @@ export default function SantoriniBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Best Beaches in Santorini"
-      heroImage="/images/santorini/strander/red-beach.webp"
+      heroImage="/images/santorini/beaches/barceloneta-santorini.webp"
       intro="Forget golden sand — Santorini's volcanic origins give it beaches found almost nowhere else on earth: the astonishing Red Beach beneath rust-coloured cliffs, long stretches of jet-black sand at Perissa, Kamari and Perivolos, the sculpted moon-grey cliffs of Vlychada, and the secluded, boat-access White Beach. This guide covers all eight, with the facilities, the crowds, the dark sand that burns bare feet, and which beach suits families, parties or quiet swims."
       wide
     >

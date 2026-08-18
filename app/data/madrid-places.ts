@@ -263,7 +263,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Sobrino de Botín", slug: "sobrino-de-botin", image: RES("sobrino-de-botn.webp"),
+    name: "Sobrino de Botín", slug: "sobrino-de-botin", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.5, reviewCount: 24000, price: "€€€", area: "Centro (near Plaza Mayor)", type: "World's oldest restaurant",
     tip: "The Guinness-certified oldest restaurant in the world, open since 1725 — roast suckling pig is the signature, and Hemingway wrote it into 'The Sun Also Rises'.",
     filterKeys: ["lokalt", "romantisk", "fine-dining"],
@@ -272,7 +272,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Sobrino de Botín, on Calle de Cuchilleros just off Plaza Mayor, holds the Guinness World Record as the oldest restaurant on Earth, continuously open since 1725. Its wood-fired oven — said never to have gone cold in three centuries — is the heart of the kitchen, and the signature dish is cochinillo asado, Castilian roast suckling pig with crackling so crisp it is traditionally cut with the edge of a plate; roast lamb (cordero asado) is the other classic. The restaurant is woven into literary history too: Ernest Hemingway ended The Sun Also Rises with a meal here, and Goya is said to have washed dishes in its kitchen as a young man. Spread across several floors of a seventeenth-century building with vaulted brick cellars and timeworn dining rooms, it is atmospheric, formal and reliably busy with visitors and Madrileños marking special occasions alike. Reservations are essential. It is not cheap and unashamedly traditional rather than innovative, but for a taste of centuries-old Castilian roasting in a genuinely historic setting, it remains one of Madrid's essential tables.",
   },
   {
-    name: "Casa Lucio", slug: "casa-lucio", image: RES("casa-lucio.webp"),
+    name: "Casa Lucio", slug: "casa-lucio", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.5, reviewCount: 11000, price: "€€€", area: "La Latina", type: "Traditional Castilian",
     tip: "Order the huevos rotos — fried eggs broken over crisp potatoes and ham. A magnet for royalty and celebrities on Cava Baja.",
     filterKeys: ["lokalt", "fine-dining"],
@@ -281,7 +281,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Casa Lucio is one of Madrid's most storied traditional restaurants, set on Cava Baja in the tapas-thick heart of La Latina. Its most famous dish is disarmingly humble: huevos rotos, or 'broken eggs' — fried eggs tumbled over a bed of crisp fried potatoes, often with jamón, so that the runny yolks bind the whole plate together. It sounds simple, but Casa Lucio's version is legendary, and the restaurant has become a pilgrimage for lovers of honest Castilian cooking. Beyond the eggs, the menu runs to classic Madrid fare: grilled meats, stews, callos (tripe) and seasonal specialities, all done with generosity and care. Founded by Lucio Blázquez, the restaurant has hosted a remarkable roll-call of guests over the decades, from the Spanish royal family to visiting heads of state and film stars, yet it retains a warm, old-Madrid dining-room feel rather than any sense of exclusivity. Reservations are essential, especially at weekends, as it stays consistently full. For traditional Madrileño cooking with real pedigree and atmosphere, Casa Lucio is a benchmark.",
   },
   {
-    name: "Mercado de San Miguel", slug: "mercado-san-miguel-food", image: RES("mercado-de-san-miguel.webp"),
+    name: "Mercado de San Miguel", slug: "mercado-san-miguel-food", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.4, reviewCount: 67000, price: "€", area: "Centro (Sol)", type: "Gourmet food hall",
     tip: "The 1916 Art Nouveau market with 30-plus tapas stalls — touristy but a great way to graze many dishes in one sitting.",
     filterKeys: ["budget", "lokalt", "familj"],
@@ -290,7 +290,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Just off Plaza Mayor, the Mercado de San Miguel is Madrid's most famous covered food market and an easy, enjoyable place to eat your way around Spanish tapas in one sitting. Housed in a graceful iron-and-glass building of 1916, it was rescued from decline and reopened in 2009 as a gourmet market rather than a produce one, and its 33 stalls now sell small plates by the piece rather than raw ingredients. Grazers can work their way from Galician oysters served with lemon to slices of jamón ibérico de bellota, croquetas, stuffed olives, fresh seafood, Iberian cheeses, churros and gelato, washing it all down at a wine bar pouring dozens of Spanish wines by the glass. It is livelier and more expensive than the city's neighbourhood markets, and firmly on the tourist trail, but the quality is generally high and the format is perfect for groups and indecisive eaters who want to sample lots of things at once. Open from 10am to midnight daily, it is calmest around 12:30 and 6pm. Come hungry, bring a card, and treat it as a tasting tour of Spanish flavours.",
   },
   {
-    name: "DiverXO", slug: "diverxo", image: RES("diverxo.webp"),
+    name: "DiverXO", slug: "diverxo", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.7, reviewCount: 5000, price: "€€€€", area: "Chamartín", type: "3 Michelin stars",
     tip: "Chef Dabiz Muñoz's avant-garde tasting menu runs around €365, and bookings open three months ahead — set an alarm.",
     filterKeys: ["fine-dining"],
@@ -299,7 +299,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "DiverXO is Madrid's most celebrated restaurant and the only one in the city to hold three Michelin stars, the creation of chef Dabiz Muñoz — one of the most inventive and flamboyant figures in world gastronomy. Set inside the NH Eurobuilding hotel in the Chamartín business district, it delivers not a meal so much as a theatrical, boundary-dissolving experience: a long avant-garde tasting menu, priced around €365, that fuses Spanish ingredients with bold Asian and global influences, plated on elaborate canvases and delivered by a kitchen brigade that treats service as performance. Muñoz's cooking is playful, technically dazzling and deliberately provocative, and the restaurant's flying-pig motif has become a symbol of Spanish culinary ambition. Demand is extraordinary: bookings typically open around three months in advance and are snapped up almost immediately, so securing a table requires planning and a fast finger the moment reservations release. It is expensive, singular and not for every taste, but for serious food lovers it is a bucket-list destination and the summit of Madrid's dining scene. Approach it as an event, and book the instant the calendar opens.",
   },
   {
-    name: "Taberna Laredo", slug: "taberna-laredo", image: RES("taberna-laredo.webp"),
+    name: "Taberna Laredo", slug: "taberna-laredo", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.5, reviewCount: 3500, price: "€€", area: "Salamanca", type: "Modern tapas",
     tip: "Jamón ibérico and inventive small plates in an elegant Salamanca setting — a favourite for a smart lunch.",
     filterKeys: ["fine-dining", "romantisk"],
@@ -308,7 +308,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Taberna Laredo is a polished modern taberna in the smart Salamanca district, a favourite of Madrileños who want elevated tapas without the formality of fine dining. The kitchen builds its reputation on two pillars: superb raw materials — above all excellent jamón ibérico and seasonal produce — and a genuinely creative hand, turning out inventive small plates that update classic Spanish flavours with contemporary technique and presentation. The result is a menu that reads as familiar yet delivers surprises, from carefully sourced Iberian ham and cheeses to imaginative seasonal dishes and a thoughtful, well-chosen wine list. The setting is elegant but relaxed, making it equally suited to a lingering business lunch, a date or a treat between shopping on the nearby designer streets. It sits a notch above the casual tapas bars of La Latina in both price and refinement, yet remains far more accessible than the city's Michelin rooms, hitting a sweet spot that's hard to find. Reservations are recommended given its popularity with locals. For creative, produce-led tapas in a stylish neighbourhood setting, Taberna Laredo is one of Salamanca's most reliable and rewarding tables.",
   },
   {
-    name: "Chocolatería San Ginés", slug: "chocolateria-san-gines", image: RES("chocolatera-san-gins.webp"),
+    name: "Chocolatería San Ginés", slug: "chocolateria-san-gines", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.5, reviewCount: 52000, price: "€", area: "Centro (Sol)", type: "Churros & chocolate",
     tip: "Open since 1894 and famously best at 5am after a night out — churros dunked in thick hot chocolate.",
     filterKeys: ["budget", "familj", "lokalt"],
@@ -317,7 +317,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Chocolatería San Ginés is a Madrid institution, tucked down a small passageway near Puerta del Sol and serving churros con chocolate almost around the clock since 1894. The formula could not be simpler or more perfect: ridged, freshly fried churros (and thicker porras) delivered hot and crisp, alongside a cup of chocolate so thick you can practically stand a spoon in it, made for dunking. Generations of Madrileños have made it a ritual, and it is famous above all as the last stop of a big night out — there is a long tradition of ending the small hours here, around 5am, with churros and chocolate before bed, which is why it keeps such extraordinary hours. The green-and-white marble interior, with its old photographs and bustling waiters, has a timeless, slightly theatrical charm, and by day it fills with families, tourists and locals alike. It is cheap, quick and utterly delicious, and its central location makes it easy to fold into any itinerary — or any night out. For an authentic, sugar-dusted taste of Madrid at any hour, San Ginés is essential.",
   },
   {
-    name: "Casa Dani", slug: "casa-dani", image: RES("casa-dani.webp"),
+    name: "Casa Dani", slug: "casa-dani", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.5, reviewCount: 9000, price: "€€", area: "Salamanca", type: "Tortilla española",
     tip: "Named the world's best tortilla española by National Geographic — inside the Mercado de la Paz market.",
     filterKeys: ["budget", "lokalt", "familj"],
@@ -326,7 +326,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Casa Dani is a beloved, unpretentious restaurant tucked inside the Mercado de la Paz, the neighbourhood food market in the otherwise upscale Salamanca district. Its claim to fame is simple but weighty: its tortilla española — the classic Spanish potato omelette — was named the best in the world by National Geographic, and Madrileños queue to eat it, soft and just-set in the middle in the way aficionados prize. Beyond the famous tortilla, Casa Dani is a proper working-market eatery, dishing out generous, keenly priced home-style Spanish cooking and one of the best-value menús del día (fixed-price lunch menus) in the city, drawing a loyal crowd of local workers, families and clued-up visitors. The atmosphere is busy, noisy and thoroughly authentic — you eat elbow to elbow amid the bustle of the market rather than in any polished dining room, which is exactly the appeal. It is open for lunch on weekdays and Saturdays, closing on Sundays, and does not take the airs of its smart surroundings. For an inexpensive, genuinely local meal built around a world-champion tortilla, Casa Dani is a Madrid must.",
   },
   {
-    name: "Estado Puro", slug: "estado-puro", image: RES("estado-puro.webp"),
+    name: "Estado Puro", slug: "estado-puro", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.4, reviewCount: 8000, price: "€€", area: "Cortes", type: "Modern tapas",
     tip: "Chef Paco Roncero's playful, innovative take on tapas in a historic building near the Prado.",
     filterKeys: ["lokalt", "fine-dining"],
@@ -335,7 +335,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Estado Puro is the accessible, tapas-focused venture of acclaimed chef Paco Roncero, occupying a stylish spot in a historic building in the Cortes district, an easy walk from the Prado and the Paseo del Arte museums. The concept is 'tapas in their purest state' with a contemporary twist: Roncero takes beloved Spanish classics — the tortilla, patatas bravas, croquetas, gazpacho — and reworks them with the technique and imagination of a fine-dining kitchen, producing playful, beautifully presented small plates that are recognisably traditional yet freshly surprising. His famous deconstructed dishes and inventive presentations bring a bit of avant-garde flair at prices far below a formal tasting menu, making it a smart way to sample modern Spanish cooking without a special-occasion budget. The setting is sleek and design-conscious, with a lively bar-and-restaurant buzz, and its central location makes it ideal before or after a museum visit. It suits food-curious travellers who want creativity and quality in a relaxed, informal format. For inventive, chef-driven tapas that respect Spanish tradition while gently pushing it forward, Estado Puro is one of central Madrid's most enjoyable modern tables.",
   },
   {
-    name: "Ten Con Ten", slug: "ten-con-ten", image: RES("ten-con-ten.webp"),
+    name: "Ten Con Ten", slug: "ten-con-ten", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.5, reviewCount: 7000, price: "€€€", area: "Salamanca", type: "Fashionable brasserie",
     tip: "A favourite of the Madrid elite — rice dishes and seafood in a buzzy, see-and-be-seen Salamanca dining room.",
     filterKeys: ["fine-dining", "romantisk"],
@@ -344,7 +344,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Ten Con Ten is one of the most fashionable restaurants in Salamanca, Madrid's most elegant district, and a long-standing favourite of the city's well-heeled crowd. Set on Calle de Ayala in a handsome space with a soaring ceiling, a lively central bar and a glamorous, see-and-be-seen atmosphere, it draws a stylish mix of local society, professionals and visitors who come as much for the buzz as for the food. The kitchen turns out polished, crowd-pleasing Spanish cooking with an emphasis on excellent rice dishes (arroces) and fresh seafood, alongside quality meats and market produce, all served with a slick, energetic style of service that matches the room. It manages to feel simultaneously smart and sociable — dressy enough for a special dinner yet relaxed enough for a long, wine-fuelled lunch — which is a big part of its enduring appeal. Given its popularity and the reservation-hungry Salamanca scene, booking well ahead is essential, particularly for prime weekend slots. For a taste of chic, contemporary Madrid dining with great rice and seafood and a real sense of occasion, Ten Con Ten is a reliable and glamorous choice.",
   },
   {
-    name: "Casa Julio", slug: "casa-julio", image: RES("casa-julio.webp"),
+    name: "Casa Julio", slug: "casa-julio", image: "/images/madrid/restaurants/restaurant-madrid.avif",
     rating: 4.6, reviewCount: 6000, price: "€", area: "Malasaña", type: "Croquetas",
     tip: "Madrid's best croquetas, hands down — tiny, always packed and no reservations, so come off-peak.",
     filterKeys: ["budget", "lokalt"],
@@ -357,7 +357,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Mandarin Oriental Ritz", slug: "hotel-ritz", image: HOT("hotel-ritz.webp"),
+    name: "Mandarin Oriental Ritz", slug: "hotel-ritz", image: "/images/madrid/hotels/hotel-madrid.avif",
     rating: 4.8, reviewCount: 6000, price: "€€€€", area: "Paseo del Prado", type: "Luxury",
     tip: "Mandarin Oriental-run and beloved of royalty — the grande dame of Madrid hotels, on the art kilometre.",
     filterKeys: ["luxury", "central"],
@@ -366,7 +366,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Mandarin Oriental Ritz is Madrid's most legendary luxury hotel, a Belle Époque grande dame that opened in 1910 at the wish of King Alfonso XIII and reopened after a meticulous restoration under Mandarin Oriental. It occupies a prime position on the Paseo del Prado, directly on the 'art kilometre' between the Prado, Thyssen-Bornemisza and Reina Sofía, and looks out over the leafy boulevard and the Neptune fountain. Behind its stately façade, the interiors blend restored period grandeur — soaring ceilings, chandeliers, antiques and a glorious garden terrace — with discreet, contemporary five-star comfort, a spa, and acclaimed restaurants that draw Madrileños as well as guests. Long the choice of royalty, heads of state and celebrities, it retains an air of old-world glamour and impeccable, personal service. Rooms and suites are spacious and richly finished, many overlooking the gardens or the boulevard. Rates sit firmly at the top of the market, making it a special-occasion or bucket-list stay. For history, elegance and an unbeatable museum-district location, the Ritz is the benchmark grand hotel of Madrid.",
   },
   {
-    name: "Four Seasons Madrid", slug: "four-seasons-madrid", image: HOT("four-seasons-madrid.webp"),
+    name: "Four Seasons Madrid", slug: "four-seasons-madrid", image: "/images/madrid/hotels/hotel-madrid.avif",
     rating: 4.8, reviewCount: 4000, price: "€€€€", area: "Centro (Canalejas)", type: "Luxury",
     tip: "The 200-room Canalejas complex — seven restored historic buildings with a rooftop pool near Sol.",
     filterKeys: ["luxury", "central"],
@@ -375,7 +375,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Four Seasons Madrid is the city's most talked-about modern luxury hotel, the centrepiece of the vast Centro Canalejas Madrid development just steps from Puerta del Sol. It occupies a complex of seven restored historic buildings — grand former bank headquarters dating from the early twentieth century — whose ornate façades, salvaged staircases and heritage details have been woven into a sleek contemporary hotel of around 200 rooms and suites. Facilities are extensive and polished: a full spa, a fitness centre, several restaurants and bars, and a coveted rooftop terrace with a pool and sweeping views over the rooftops of central Madrid. Service follows the brand's famously attentive standard, and the interiors strike a confident balance between historic Madrileño character and cool, current design. The location could hardly be more central, placing the shops of Gran Vía, the Prado and the old-town lanes all within a short walk. Rates are at the upper end of the luxury bracket. For travellers who want brand-new, design-led five-star comfort with a rooftop pool in the very heart of the city, the Four Seasons is Madrid's leading contemporary luxury address.",
   },
   {
-    name: "Gran Hotel Inglés", slug: "gran-hotel-ingles", image: HOT("gran-hotel-ingls.webp"),
+    name: "Gran Hotel Inglés", slug: "gran-hotel-ingles", image: "/images/madrid/hotels/hotel-madrid.avif",
     rating: 4.7, reviewCount: 3000, price: "€€€", area: "Barrio de las Letras", type: "Historic luxury",
     tip: "Madrid's oldest five-star, open since 1886 — a beautifully restored boutique in the literary quarter.",
     filterKeys: ["luxury", "boutique"],
@@ -384,7 +384,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Gran Hotel Inglés is Madrid's oldest luxury hotel, first opened in 1886 and reborn after a lavish restoration as a jewel-box five-star boutique. It stands on Calle Echegaray in the Barrio de las Letras, the historic literary quarter once home to Cervantes and Lope de Vega and now full of atmospheric tabernas, wine bars and independent shops — one of the most characterful and central places to stay in the city. The restoration preserved and celebrated the building's Belle Époque bones while layering in a rich, contemporary Art Deco-influenced design of dark woods, brass, marble and moody colours, giving the interiors a glamorous, clubby feel. With a relatively small number of individually styled rooms and suites, it feels intimate and exclusive, complemented by an elegant restaurant, a stylish bar, a spa and gym, and warm, personal service. Its location puts the Prado, Puerta del Sol and the tapas of Huertas all within a short stroll. Rates are firmly luxury but often gentler than the very grandest palaces. For history, design and a brilliant location in Madrid's most soulful neighbourhood, the Gran Hotel Inglés is a standout.",
   },
   {
-    name: "Hotel URSO", slug: "hotel-urso", image: HOT("hotel-urso.webp"),
+    name: "Hotel URSO", slug: "hotel-urso", image: "/images/madrid/hotels/hotel-madrid.avif",
     rating: 4.7, reviewCount: 2500, price: "€€€", area: "Alonso Martínez", type: "Boutique",
     tip: "A 78-room boutique in a restored palace, with a Natura Bissé spa in the elegant Chamberí district.",
     filterKeys: ["luxury", "boutique"],
@@ -393,7 +393,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hotel URSO is one of Madrid's most elegant boutique hotels, occupying a beautifully restored early-twentieth-century palace on the border of the smart Alonso Martínez and Chamberí districts, a little north of the tourist bustle yet still central and superbly connected. With just 78 rooms and suites, it offers an intimate, design-led experience: the aristocratic bones of the original mansion — grand staircase, high ceilings, period details — have been paired with a calm, sophisticated contemporary interior in soft tones and quality materials. A particular draw is the URSO Spa by Natura Bissé, a serious wellness facility with treatments from the celebrated Spanish skincare brand, alongside a fitness area, a chic cocktail bar and a well-regarded restaurant. The surrounding neighbourhood is one of Madrid's most pleasant and genuinely local, full of good restaurants, wine bars and handsome architecture, and the Chueca and Malasaña nightlife districts are within easy walking distance. Service is attentive and personal in keeping with the boutique scale. For travellers who prefer a stylish, tranquil, design-conscious base with excellent spa facilities over a big-brand hotel, URSO is one of the most appealing choices in the city.",
   },
   {
-    name: "Only YOU Hotel Atocha", slug: "only-you-atocha", image: HOT("only-you-atocha.webp"),
+    name: "Only YOU Hotel Atocha", slug: "only-you-atocha", image: "/images/madrid/hotels/hotel-madrid.avif",
     rating: 4.5, reviewCount: 5000, price: "€€", area: "Atocha", type: "Design",
     tip: "A characterful design hotel that opened in 2019, full of personality and detail near Atocha station.",
     filterKeys: ["boutique"],
@@ -411,7 +411,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Dear Hotel Madrid enjoys one of the best locations in the city, right at the western end of Gran Vía by Plaza de España, putting the shopping, theatres and architecture of Madrid's grand boulevard literally on the doorstep. Its signature feature is the rooftop: a terrace bar and open-air pool with sweeping views over Gran Vía's early-twentieth-century skyline and out toward the mountains, a wonderful spot for a drink at sunset and a genuine highlight in a city where rooftop views are prized. Below, the hotel offers sleek, contemporary rooms with floor-to-ceiling windows, many enjoying excellent city views, in a bright, modern style. It hits a smart mid-range price point, offering design, a rooftop pool and a prime central address for considerably less than the luxury hotels, which makes it deservedly popular. The location is ideal for first-time visitors who want to be in the thick of things, with metro links at Plaza de España reaching the whole city and the Royal Palace and old town within walking distance. For stylish, well-priced accommodation with a standout rooftop right on Gran Vía, the Dear Hotel is one of Madrid's most appealing choices.",
   },
   {
-    name: "Generator Madrid", slug: "generator-madrid", image: HOT("generator-madrid.webp"),
+    name: "Generator Madrid", slug: "generator-madrid", image: "/images/madrid/hotels/hotel-madrid.avif",
     rating: 4.3, reviewCount: 7000, price: "€", area: "Alonso Martínez", type: "Design hostel",
     tip: "Dorm beds from €28, private rooms around €85, plus a gym and pool — a slick, sociable budget base.",
     filterKeys: ["budget"],
@@ -420,7 +420,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Generator Madrid brings the popular design-hostel brand's signature blend of style, sociability and value to a great location in the lively Alonso Martínez area, on the edge of the Chueca and Malasaña nightlife districts. It bridges the gap between a traditional hostel and a budget-design hotel: alongside affordable dorm beds (from around €28), it offers smart, hotel-standard private rooms (from around €85) that suit couples and solo travellers who want privacy without a big price tag. The interiors are contemporary and characterful, and the social spaces are a big part of the appeal — a stylish bar and lounge, communal areas designed for meeting other travellers, and, unusually for the category, a gym and a pool. That mix of low prices, good design and genuine facilities makes it a standout choice for younger and budget-minded visitors who still want somewhere cool and comfortable to stay. The central-north location is well connected by metro and within walking distance of the nightlife, restaurants and shopping of Chueca, Malasaña and Chamberí. For sociable, design-conscious accommodation that keeps costs down without feeling basic, Generator Madrid is one of the best-value options in the city.",
   },
   {
-    name: "Hostal Central Palace", slug: "hostal-central-palace", image: HOT("hostal-central-palace.webp"),
+    name: "Hostal Central Palace", slug: "hostal-central-palace", image: "/images/madrid/hotels/hotel-madrid.avif",
     rating: 4.2, reviewCount: 3000, price: "€", area: "Centro (Sol)", type: "Budget",
     tip: "Family-run with double rooms from around €40 a night — an unbeatable location overlooking Sol and Ópera.",
     filterKeys: ["budget", "family"],
@@ -433,7 +433,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Nightlife (10) ───────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "Salmon Guru", slug: "salmon-guru", image: NAT("salmon-guru.webp"),
+    name: "Salmon Guru", slug: "salmon-guru", image: "/images/madrid/nightlife/cocktail-bar-madrid.webp",
     rating: 4.7, reviewCount: 9000, type: "Cocktail Bar", area: "Centro (near Sol)",
     tip: "A World's 50 Best Bars regular — the theatrical, inventive cocktails of Diego Cabrera. Opens 19:00.",
     filterKeys: ["cocktail", "bars"],
@@ -442,7 +442,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Salmon Guru is Madrid's most celebrated cocktail bar and a fixture on the World's 50 Best Bars list, the creation of acclaimed bartender Diego Cabrera. Tucked into the Barrio de las Letras near Puerta del Sol, it is famous for theatrical, inventive drinks served in elaborate glassware and vessels, backed by serious technique, house infusions and a playful, comic-book-inflected sense of design that makes the whole room feel like a set. The menu ranges from reworked classics to wildly original signatures, and the bartenders' skill and showmanship have made it a pilgrimage for cocktail lovers from around the world. It opens around 7pm and gets busy, so its popularity means you may have to wait or plan ahead, especially at weekends. The setting is colourful, buzzy and fun rather than hushed and exclusive, which sets it apart from stricter speakeasies, and the quality of the drinks fully justifies the reputation. Prices are premium but fair for the craft on show. For anyone serious about cocktails — or simply after Madrid's most exciting, internationally recognised drinking experience — Salmon Guru is an essential and unforgettable stop.",
   },
   {
-    name: "Angelita", slug: "angelita", image: NAT("angelita.webp"),
+    name: "Angelita", slug: "angelita", image: "/images/madrid/nightlife/flamenco-madrid.webp",
     rating: 4.6, reviewCount: 3500, type: "Cocktail & Wine Bar", area: "Malasaña",
     tip: "A neo-bistro upstairs and a cocktail-and-wine bar below, with a wall of wine fridges. Opens 19:00.",
     filterKeys: ["cocktail", "bars"],
@@ -451,7 +451,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Angelita is one of Madrid's most enticing drinks destinations, a stylish venue near Malasaña that cleverly combines two experiences in one address. Upstairs is a neo-bistro restaurant serving thoughtful modern cooking, while downstairs a warm, intimate cellar bar is the real draw for night owls — a serious cocktail and wine bar whose standout feature is a wall of wine fridges housing an ambitious, wide-ranging list. That dual focus means you can settle in for expertly made cocktails or explore an exceptional selection of wines by the glass, guided by knowledgeable staff who clearly care about both disciplines. The mood is sophisticated but relaxed and welcoming rather than exclusive, striking a balance that suits a pre-dinner aperitivo, a lingering evening of tasting, or a nightcap after exploring the neighbourhood. Run by a team with real hospitality pedigree, it has become a favourite of Madrileños who take their drinking seriously without wanting a scene. Opening around 7pm, it is ideal for easing into a Madrid night at the civilised end of the spectrum. For creative cocktails and a genuinely impressive wine offering in one characterful spot, Angelita is a standout.",
   },
   {
-    name: "Corral de la Morería", slug: "corral-de-la-moreria", image: NAT("corral-de-la-morera.webp"),
+    name: "Corral de la Morería", slug: "corral-de-la-moreria", image: "/images/madrid/nightlife/live-music-madrid.webp",
     rating: 4.7, reviewCount: 6000, type: "Flamenco Tablao", area: "Centro",
     tip: "The world's most famous flamenco tablao, open since 1956 — and it holds a Michelin star for its dining room too. Opens 19:00.",
     filterKeys: ["live"],
@@ -460,7 +460,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Corral de la Morería is the most famous flamenco tablao in the world, staging performances since 1956 in the old Morería quarter near the Royal Palace. Over nearly seven decades it has hosted the greatest names in flamenco, and its stage retains an almost sacred reputation among aficionados as the place to see the art form at its most intense and authentic. Nightly shows bring together virtuoso guitarists, singers whose voices carry the raw duende at flamenco's heart, and dancers whose footwork and passion fill the intimate room, delivering the kind of goosebump-raising performance that has made it a bucket-list experience for visitors to Madrid. Unusually for a tablao, it also takes its food seriously: the venue is home to a Michelin-starred restaurant and a separate gastronomic space, so you can pair world-class flamenco with genuinely accomplished dining rather than the perfunctory dinner-and-show format common elsewhere. Shows and dinner packages should be booked in advance, and it sits at the premium end of the price scale, but the quality justifies it. For an unforgettable, top-tier flamenco experience in the city where the tablao tradition thrives, Corral de la Morería is the definitive choice.",
   },
   {
-    name: "Café Central", slug: "cafe-central", image: NAT("caf-central.webp"),
+    name: "Café Central", slug: "cafe-central", image: "/images/madrid/nightlife/nightlife-bar-madrid.webp",
     rating: 4.6, reviewCount: 8000, type: "Jazz Club", area: "Plaza del Ángel",
     tip: "Madrid's most famous jazz club since 1982, in a beautiful Art Deco room — live sets nightly. Opens from 13:00.",
     filterKeys: ["live"],
@@ -469,7 +469,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Café Central is Madrid's most famous jazz club and one of the most respected live-music venues in Europe, running an almost nightly programme of concerts since 1982. Set in a beautiful Art Deco room on Plaza del Ángel, just off the buzzing Plaza Santa Ana in the Huertas district, it pairs gorgeous surroundings — mirrors, marble and warm lighting — with consistently excellent programming that spans local Spanish jazz talent and touring international names across styles from bebop and Latin jazz to fusion and beyond. The intimacy of the room, where you sit close to the stage, makes for a genuinely special listening experience, and the club's long history and reputation mean it regularly appears on lists of the world's best jazz venues. It opens from early afternoon as a café and bar, with the live sets taking over in the evenings; there is usually a modest cover charge that varies with the act. For music lovers, it is an essential Madrid night out, and even casual visitors will find the combination of great playing and elegant surroundings memorable. Check the schedule and, for well-known performers, book ahead, as the best nights fill quickly.",
   },
   {
-    name: "Taberna El Sur", slug: "taberna-el-sur", image: NAT("taberna-el-sur.webp"),
+    name: "Taberna El Sur", slug: "taberna-el-sur", image: "/images/madrid/nightlife/rooftop-bar-night-madrid.webp",
     rating: 4.4, reviewCount: 2500, type: "Live Music", area: "Lavapiés",
     tip: "Flamenco and jazz most nights in bohemian Lavapiés — casual, local and atmospheric. Opens 20:00.",
     filterKeys: ["live"],
@@ -487,7 +487,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The 1862 Dry Bar is one of Malasaña's most beloved cocktail bars, an elegant, dimly lit spot whose name references the year Jerry Thomas published the first-ever bartending guide — a nod to its serious, classics-focused approach. Set over two levels on Calle del Pez, with a cosy cellar feel, it channels a Prohibition-era mood of low light, dark wood and vintage glamour, and it is particularly known for its expertise with whiskey and precisely made classic cocktails, from Old Fashioneds to Manhattans and beyond. The bartenders are skilled and knowledgeable, happy to mix a faithful classic or steer you toward something new, and the unhurried, grown-up atmosphere makes it a place to settle in and savour a couple of beautifully made drinks rather than a raucous night out. That focus on craft and comfort has made it a long-standing favourite among Madrid's cocktail crowd and a reliable recommendation for visitors wanting quality drinks in an atmospheric setting. Opening around 6pm, it works well both as a sophisticated start to the evening and as a late-night refuge. For classic cocktails, a strong whiskey selection and genuine bartending pedigree in the heart of Malasaña, 1862 is a standout.",
   },
   {
-    name: "Dry Cosmopolitan", slug: "dry-cosmopolitan", image: NAT("dry-cosmopolitan.webp"),
+    name: "Dry Cosmopolitan", slug: "dry-cosmopolitan", image: "/images/madrid/nightlife/cocktail-bar-madrid.webp",
     rating: 4.5, reviewCount: 3000, type: "Rooftop Cocktail Bar", area: "Gran Vía / Paseo de Gracia area",
     tip: "The rooftop terrace bar atop a landmark Gran Vía-area hotel — cocktails with a view. Opens 18:00.",
     filterKeys: ["rooftop", "cocktail", "bars"],
@@ -496,7 +496,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Dry Cosmopolitan is the rooftop member of Madrid's respected Dry cocktail-bar family, perched atop a landmark hotel in the central Gran Vía area and pairing serious, well-made cocktails with one of the city's coveted terrace views. Where much of Madrid's best cocktail culture happens in intimate cellar bars, this venue offers the opposite: an open-air rooftop setting where you can sip a expertly balanced drink while looking out over the rooftops and skyline of the capital, a wonderful way to enjoy the city's famous evening light and warm summer nights. The cocktail programme carries the quality and craft the Dry name is known for, delivered in a stylish, contemporary space that draws a smart, sociable crowd. It works beautifully as a glamorous start to a night out, a sunset drinks spot, or a special-occasion setting, and the terrace makes it especially appealing in the warmer months when Madrileños live outdoors. Opening around 6pm, it sits at the upper end of the price scale in keeping with its rooftop position and polished drinks. For cocktails with a view in the heart of the city, Dry Cosmopolitan is one of Madrid's most enjoyable rooftop bars.",
   },
   {
-    name: "Teatro Kapital", slug: "teatro-kapital", image: NAT("teatro-kapital.webp"),
+    name: "Teatro Kapital", slug: "teatro-kapital", image: "/images/madrid/nightlife/flamenco-madrid.webp",
     rating: 4.3, reviewCount: 22000, type: "Nightclub", area: "Atocha",
     tip: "Madrid's legendary seven-floor megaclub, each level a different music style, in a converted theatre. Opens 23:30.",
     filterKeys: ["klubb", "clubs"],
@@ -505,7 +505,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Teatro Kapital is Madrid's most famous megaclub and a rite of passage on the city's late-night scene, set inside a grand former theatre near Atocha station. Its signature is scale and variety: seven floors, each dedicated to a different style of music and atmosphere, so a single ticket lets you roam from commercial house and reggaeton to hip-hop, Latin, R&B and chill-out lounges, all under one enormous roof. The theatrical setting — tiered balconies, a huge main dancefloor and dramatic lighting — adds to the spectacle, and the sheer size means it draws big, energetic crowds of Madrileños, students, tourists and the occasional celebrity. Like all Madrid clubs it runs on the city's famously late schedule, opening around 11:30pm and going until roughly 6am, so this is a place to arrive late and commit to the night. Entry usually costs around €15–20 and often includes a drink, and dress codes apply, so check ahead and avoid trainers on busier nights. It is mainstream and unashamedly party-focused rather than underground, but for a big, high-energy night out across multiple genres, Teatro Kapital is a Madrid institution.",
   },
   {
-    name: "Fabrik", slug: "fabrik", image: NAT("fabrik.webp"),
+    name: "Fabrik", slug: "fabrik", image: "/images/madrid/nightlife/live-music-madrid.webp",
     rating: 4.4, reviewCount: 14000, type: "Superclub", area: "Humanes (outskirts)",
     tip: "Madrid's biggest club, holding up to 8,000 — a destination superclub for electronic music on the city's southern edge. Opens 23:00.",
     filterKeys: ["klubb", "clubs"],
@@ -514,7 +514,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Fabrik is Madrid's biggest and most serious nightclub, a genuine superclub on the scale of the great European electronic-music temples, located in Humanes on the southern outskirts of the city. Capable of holding up to around 8,000 people, it is a purpose-built destination venue with a powerful sound system, spectacular production, huge indoor spaces and outdoor areas, and a line-up of top international and Spanish DJs playing house, techno and electronic music through the night and often well into the following day. This is not a casual drop-in spot but a planned event: its famous parties (including long-running club nights) draw dedicated clubbers from across the region, and the marathon sessions run in true Madrid style until late morning. Because it sits outside the city, most people reach it by dedicated club buses that run from central Madrid, or by car, so plan your transport both ways in advance. Tickets and prices vary by event and headliner, and big nights sell out, so buy ahead. For visitors who take their electronic music and clubbing seriously and want the full, large-scale Spanish superclub experience, Fabrik is Madrid's premier destination.",
   },
   {
-    name: "Independance Club", slug: "independance-club", image: NAT("independance-club.webp"),
+    name: "Independance Club", slug: "independance-club", image: "/images/madrid/nightlife/nightlife-bar-madrid.webp",
     rating: 4.2, reviewCount: 5000, type: "Nightclub", area: "Plaza Callao",
     tip: "A central student-friendly club by Plaza Callao — around €10 entry including a drink. Opens midnight.",
     filterKeys: ["klubb", "clubs"],
@@ -527,7 +527,7 @@ export const NIGHTLIFE: BcnPlace[] = [
 // ── Shopping (8) ─────────────────────────────────────────────────────────────
 export const SHOPPING: BcnPlace[] = [
   {
-    name: "El Corte Inglés Callao", slug: "el-corte-ingles-callao", image: SHO("el-corte-ingls-callao.webp"),
+    name: "El Corte Inglés Callao", slug: "el-corte-ingles-callao", image: "/images/madrid/shopping/artisan-shop-madrid.webp",
     rating: 4.4, reviewCount: 22000, type: "Department Store", area: "Centro",
     tip: "Spain's flagship department store — head to the rooftop Gourmet Experience for food and skyline views.",
     filterKeys: ["lyx", "kopcentrum", "sondag"],
@@ -536,7 +536,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "El Corte Inglés is Spain's great department-store institution, and its landmark branch on Plaza Callao, just off Gran Vía, is one of the best one-stop shopping destinations in Madrid. Spread over many floors, it gathers international and Spanish fashion, beauty and cosmetics, accessories, homeware, electronics, books and a well-stocked supermarket and gourmet food hall under one roof, catering to every budget from high-street to designer. For visitors it is especially handy on a hot afternoon or when you want to cover a lot of shopping ground efficiently, with the bonus of tax-free shopping services for non-EU travellers. The real highlight, though, is on top: the rooftop Gourmet Experience, a cluster of quality food counters and restaurants with an open terrace offering superb views over the rooftops of central Madrid toward the mountains — a great spot for a drink or a bite whether or not you have shopped. Its Sunday opening (unusual for Spain) and central location make it easy to fit into any itinerary. For dependable, wide-ranging department-store shopping with a view, El Corte Inglés Callao is Madrid's obvious choice.",
   },
   {
-    name: "El Rastro", slug: "el-rastro-shopping", image: SHO("el-rastro.webp"),
+    name: "El Rastro", slug: "el-rastro-shopping", image: "/images/madrid/shopping/mall-madrid.webp",
     rating: 4.4, reviewCount: 44000, type: "Flea Market", area: "La Latina",
     tip: "The Sunday flea market — antiques, vintage and curiosities. Haggle hard, then head to Cava Baja for tapas.",
     filterKeys: ["marknader", "vintage", "sondag", "markets"],
@@ -545,7 +545,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "El Rastro is not only a Madrid sightseeing highlight but also its greatest shopping experience for bargain-hunters and the curious — Spain's oldest and Europe's largest open-air flea market, held every Sunday and public holiday since 1740. More than a thousand stalls sprawl across eight connected streets around the Ribera de Curtidores in La Latina, selling a vast jumble of vintage and second-hand clothing, antiques, vinyl records, books, leather goods, jewellery, crafts, textiles and pure bric-a-brac. The heart of the action is on Plaza de Cascorro and the main drag, but seasoned shoppers know the best finds hide in the side streets like Calle Carlos Arniches. Haggling is not just accepted but expected — opening prices are typically inflated 30–50% above what sellers will accept, so negotiate with a smile. Official hours run 09:00 to 15:00, though traders start packing up around 2pm, so go earlier for the best pickings and the full atmosphere. The ritual is to browse the market and then dive into the Sunday tapas and vermouth scene along nearby Cava Baja. For vintage treasures and authentic local colour, El Rastro is unmissable.",
   },
   {
-    name: "Mercado de Motores", slug: "mercado-de-motores", image: SHO("mercado-de-motores.webp"),
+    name: "Mercado de Motores", slug: "mercado-de-motores", image: "/images/madrid/shopping/outdoor-market-madrid.webp",
     rating: 4.5, reviewCount: 6000, type: "Design Market", area: "Atocha",
     tip: "A pop-up design and vintage market held one weekend a month inside the old Railway Museum.",
     filterKeys: ["marknader", "sondag", "markets"],
@@ -554,7 +554,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Mercado de Motores is one of Madrid's most atmospheric and enjoyable markets, a pop-up design and vintage fair held for one weekend each month inside the wonderful Museo del Ferrocarril (Railway Museum), housed in the historic Delicias station. The setting alone makes it worth the trip: you browse among beautifully preserved antique steam locomotives and carriages beneath the station's grand nineteenth-century iron-and-glass roof, an evocative backdrop for a market. The stalls themselves gather independent designers, artisans and vintage sellers offering handmade jewellery, clothing, prints, ceramics, homeware, second-hand and retro finds and quirky gifts, alongside food trucks and stands, live music and a relaxed, creative, family-friendly vibe. It draws a hip, local crowd and has become a beloved fixture on the city's monthly calendar — a lovely way to spend a weekend afternoon shopping for something original while enjoying the trains, food and atmosphere. Because it only runs on specific weekends, check the dates before planning around it, and note entry is typically free. For unique, design-led and vintage shopping in a genuinely memorable industrial-heritage setting, Mercado de Motores is one of Madrid's most charming market experiences.",
   },
   {
-    name: "Mercado de San Miguel", slug: "mercado-san-miguel-shopping", image: SHO("mercado-de-san-miguel.webp"),
+    name: "Mercado de San Miguel", slug: "mercado-san-miguel-shopping", image: "/images/madrid/shopping/shopping-street-madrid.webp",
     rating: 4.4, reviewCount: 67000, type: "Gourmet Market", area: "Sol",
     tip: "A gourmet food hall for tasting rather than groceries — touristy but a great spot to sample Spanish delicacies.",
     filterKeys: ["marknader", "sondag", "markets"],
@@ -563,7 +563,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Beside Plaza Mayor, the Mercado de San Miguel is Madrid's most famous covered market — an elegant iron-and-glass hall of 1916 that reopened in 2009 as a gourmet destination rather than a traditional produce market. While it is above all a place to eat and drink, it doubles as a shopping stop for food lovers, offering the chance to taste and buy top Spanish delicacies in one beautiful space: jamón ibérico de bellota, artisan cheeses, olive oils, tinned seafood conservas, wines, sweets and other edible souvenirs make excellent gifts to take home. Its 33 stalls let you graze on oysters, croquetas, cured meats and pastries while you browse, washing it down with Spanish wine or vermouth by the glass. It is undeniably touristy and pricier than the city's neighbourhood markets, but the quality is generally good and the setting is a delight, making it a convenient and enjoyable spot to pick up gourmet Spanish products and gifts. Open daily from 10am to midnight and quietest in the early afternoon, its central location by Plaza Mayor means you can easily fold a browse and a bite into general sightseeing.",
   },
   {
-    name: "Chueca & Malasaña", slug: "chueca-malasana", image: SHO("chueca-malasaa.webp"),
+    name: "Chueca & Malasaña", slug: "chueca-malasana", image: "/images/madrid/shopping/souvenir-shop-madrid.webp",
     rating: 4.5, reviewCount: 12000, type: "Boutique Districts", area: "Chueca / Malasaña",
     tip: "The best areas for indie fashion and vintage — Calle Fuencarral is the spine, with Sunday opening.",
     filterKeys: ["vintage", "sondag", "boutiques"],
@@ -572,7 +572,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The neighbouring districts of Chueca and Malasaña are the epicentre of Madrid's independent and alternative shopping scene, a world away from the chain stores of Gran Vía. Their grid of lively streets is packed with indie fashion boutiques, streetwear and sneaker shops, Spanish and international designers, and a superb concentration of vintage and second-hand stores, interspersed with cool cafés, record shops, bookshops and concept stores. The pedestrianised Calle Fuencarral, running between the two, is the retail spine — a bustling strip of fashion and lifestyle shops — while the surrounding side streets reward wandering with quirkier, more original finds. Chueca, the heart of Madrid's LGBTQ+ community, brings a stylish, design-conscious edge, while bohemian Malasaña leans vintage, creative and youthful, its shops reflecting the neighbourhood's La Movida heritage. Together they make the best area in the city for shoppers who want personality, individuality and local design rather than global labels, and many shops open on Sundays, unusually for Spain. Combine browsing with coffee and people-watching for a quintessentially cool Madrid afternoon. For indie fashion, streetwear and vintage treasure-hunting, Chueca and Malasaña are Madrid's most rewarding shopping districts.",
   },
   {
-    name: "Plaza de España Shopping", slug: "plaza-espana-shopping", image: SHO("plaza-espaa-shopping.webp"),
+    name: "Plaza de España Shopping", slug: "plaza-espana-shopping", image: "/images/madrid/shopping/vintage-market-madrid.webp",
     rating: 4.3, reviewCount: 9000, type: "Flagship Stores", area: "Gran Vía",
     tip: "Big flagships including the Apple Store and a Primark flagship cluster around the western end of Gran Vía.",
     filterKeys: ["kopcentrum", "sondag"],
@@ -581,7 +581,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The area around Plaza de España, at the grand western end of Gran Vía, is one of central Madrid's busiest mainstream shopping zones, home to a cluster of major flagship stores and high-street names. Here you'll find the impressive Apple Store, an enormous multi-floor Primark flagship, and the big Spanish and international fashion brands — Zara, Mango, H&M and the like — that make Gran Vía Madrid's principal high-street shopping artery, alongside cinemas, cafés and the theatres that give the boulevard its 'Spanish Broadway' nickname. It is the natural counterpart to the independent boutiques of Chueca and Malasaña: this is where to come for reliable, well-known brands, big flagship experiences and one-stop high-street shopping in a lively, tourist-friendly setting, with the bonus of Sunday opening. The recently redesigned Plaza de España itself, with its greenery and the Cervantes monument, plus the nearby Templo de Debod and Royal Palace, means you can easily combine shopping with sightseeing. Well served by metro at Plaza de España and Gran Vía, it is central and easy to reach. For flagship stores and familiar high-street brands in the heart of the city, the Plaza de España and Gran Vía strip is Madrid's go-to.",
   },
   {
-    name: "Mercado de Chamberí", slug: "mercado-de-chamberi", image: SHO("mercado-de-chamber.webp"),
+    name: "Mercado de Chamberí", slug: "mercado-de-chamberi", image: "/images/madrid/shopping/artisan-shop-madrid.webp",
     rating: 4.5, reviewCount: 4000, type: "Neighbourhood Market", area: "Chamberí",
     tip: "A renovated local food market and neighbourhood favourite — far more authentic than the tourist food halls.",
     filterKeys: ["marknader", "markets"],
@@ -603,7 +603,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── With kids (10) ───────────────────────────────────────────────────────────
 export const WITH_KIDS: BcnPlace[] = [
   {
-    name: "Retiro Park", slug: "parque-del-retiro", image: KID("parque-del-retiro.webp"),
+    name: "Retiro Park", slug: "parque-del-retiro", image: "/images/madrid/with-kids/aquarium-madrid.webp",
     rating: 4.8, reviewCount: 165000, ageGroup: "All ages", price: "Free", area: "Centre",
     tip: "Rowing boats on the lake, a puppet theatre and a big playground make it a perfect family half-day — all free to roam.",
     filterKeys: ["utomhus", "gratis", "0-5", "6-12", "outdoor", "free"],
@@ -612,7 +612,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "El Retiro is not just Madrid's most beautiful park but also one of its best free family days out, a huge 118-hectare green space in the heart of the city that keeps children happily occupied for hours. The star attraction for families is the Estanque Grande, the large rectangular lake where you can hire a rowing boat (around €6 per 30 minutes) and let the kids help splash across the water beneath the grand Alfonso XII monument. Beyond the boating, there is a large playground, wide traffic-free paths perfect for scooters and running, and, on weekends, the wonderful tradition of a puppet theatre (teatro de títeres) and street performers near the Palacio de Cristal, especially on Sunday around noon when the whole park comes alive with picnicking Madrileño families, buskers and dancers. The glass Palacio de Cristal and its pond, the rose garden and plenty of ice-cream and drink kiosks add to the appeal, and there's ample shade and open lawn for a picnic. Central, free and endlessly varied, El Retiro is the easiest and most reliable family outing in Madrid, as enjoyable for parents as for children.",
   },
   {
-    name: "Zoo Aquarium de Madrid", slug: "zoo-aquarium", image: KID("zoo-aquarium.webp"),
+    name: "Zoo Aquarium de Madrid", slug: "zoo-aquarium", image: "/images/madrid/with-kids/family-park-madrid.webp",
     rating: 4.4, reviewCount: 34000, ageGroup: "All ages", price: "€24", area: "Casa de Campo",
     tip: "Home to giant pandas and a dolphin show, with around 500 species — plan a full day in the Casa de Campo park.",
     tiqetsUrl: tiqets("Zoo Aquarium Madrid"), filterKeys: ["utomhus", "heldag", "0-5", "6-12", "outdoor"],
@@ -621,7 +621,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Zoo Aquarium de Madrid, set within the vast Casa de Campo park on the western edge of the city, is one of the capital's most popular family attractions and easily fills a full day out. Home to around 500 species, its biggest draw is its giant pandas — Madrid's zoo is one of the few in Europe to house them, and it has a strong track record of successful panda births, making the panda enclosure a must-see. Alongside the classic zoo animals — big cats, giraffes, elephants, primates and more — it combines an aquarium and a dolphinarium under one ticket, with a popular dolphin show among the scheduled attractions, plus a birds-of-prey display and other animal presentations through the day. That variety, and the large, green setting, make it engaging for children of all ages, with plenty of space, cafés and picnic spots. Getting there can be part of the fun: as well as the metro, you can arrive on the Teleférico cable car that glides over the Casa de Campo. Buy tickets online to save time and check the daily show timetable on arrival. For a classic, animal-filled family day, the Zoo Aquarium is a Madrid favourite.",
   },
   {
-    name: "Parque Warner Madrid", slug: "warner-bros-park", image: KID("warner-bros-park.webp"),
+    name: "Parque Warner Madrid", slug: "warner-bros-park", image: "/images/madrid/with-kids/kids-museum-madrid.webp",
     rating: 4.4, reviewCount: 28000, ageGroup: "6–12 & teens", price: "€43", area: "San Martín de la Vega",
     tip: "A big Warner Bros theme park 45 minutes southwest, with Looney Tunes and DC Super Heroes zones — a full day of rides.",
     filterKeys: ["utomhus", "heldag", "6-12", "tonaringar", "outdoor"],
@@ -630,7 +630,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Parque Warner Madrid is a large Warner Bros-themed amusement park about 45 minutes southwest of the city in San Martín de la Vega, and a full-day thrill for families with older children and teenagers. Divided into themed zones based on Warner's famous properties, it brings together the slapstick world of Looney Tunes (Bugs Bunny, Daffy Duck and friends) with the action of DC Super Heroes (Batman, Superman) and Hollywood movie-lot and Wild West areas, mixing gentle rides and shows for younger kids with serious roller coasters and high-adrenaline attractions for thrill-seekers. There are live shows, parades, character meet-and-greets, a water-park section (Parque Warner Beach) in summer, and plenty of food and shopping, making it easy to spend a whole day. Because it lies outside the city, plan your transport: it is reached by Cercanías commuter train plus a connecting bus, or more easily by car, and opening days are seasonal, so always check the calendar before going. Buying tickets online and off-peak brings the price down from the on-the-day rate. For families whose children love theme parks, superheroes and cartoons, Parque Warner is Madrid's biggest and most exciting day-trip attraction.",
   },
   {
-    name: "Madrid Río", slug: "madrid-rio", image: KID("madrid-ro.webp"),
+    name: "Madrid Río", slug: "madrid-rio", image: "/images/madrid/with-kids/tibidabo-madrid.webp",
     rating: 4.6, reviewCount: 30000, ageGroup: "All ages", price: "Free", area: "Arganzuela",
     tip: "A 10 km riverside park along the Manzanares with playgrounds, splash fountains and cycle paths — free and great for all ages.",
     filterKeys: ["utomhus", "gratis", "0-5", "6-12", "outdoor", "free"],
@@ -639,7 +639,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Madrid Río is a triumph of modern urban planning and one of the best free family spaces in the city — a 10-kilometre linear park created along the banks of the Manzanares river after a busy motorway was buried underground in 2011, transforming the south of Madrid. Stretching from the Royal Palace area down past the Matadero cultural centre, it is packed with things for children to do: imaginative, well-designed playgrounds dotted along its length, popular splash fountains and 'urban beaches' where kids can cool off on hot days, plenty of green lawns for picnics, and long, flat, traffic-free paths ideal for cycling, scooting and skating. Landmark bridges (including a striking domed pedestrian bridge with ceramic murals) connect the two banks, and there are cafés, sports facilities and the pine-scented slopes toward the Casa de Campo nearby. Because it is completely free, always open and so varied, it is a brilliant low-cost outing for families of all ages, and it pairs perfectly with a visit to the adjacent Matadero, which has its own children's activities. Rent bikes to explore its full length, or simply let the little ones loose on the playgrounds and fountains for a relaxed, active afternoon in the sun.",
   },
   {
-    name: "Parque de Atracciones", slug: "parque-de-atracciones", image: KID("parque-de-atracciones.webp"),
+    name: "Parque de Atracciones", slug: "parque-de-atracciones", image: "/images/madrid/with-kids/zoo-madrid.webp",
     rating: 4.4, reviewCount: 21000, ageGroup: "6–12 & teens", price: "€35", area: "Casa de Campo",
     tip: "Madrid's in-city amusement park in the Casa de Campo — reach it easily by bus from Batán metro. A full day of rides.",
     filterKeys: ["utomhus", "heldag", "6-12", "tonaringar", "outdoor"],
@@ -648,7 +648,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Parque de Atracciones de Madrid is the city's long-standing amusement park, conveniently located within the huge Casa de Campo park on the western side of Madrid — far easier to reach than the out-of-town theme parks, since it sits right by its own metro stop. It packs a great variety of rides into its grounds, from gentle carousels, a Ferris wheel and family attractions for younger children to serious white-knuckle roller coasters, drop towers and spinning thrill rides that appeal to teenagers and adrenaline-seekers, along with live shows and seasonal events (its Halloween programming is especially popular). That spread of intensity makes it a good choice for mixed-age families, where little ones and thrill-hungry teens can each find plenty to enjoy, and there are cafés, snack stands and shaded spots throughout. Because it is in the city rather than beyond it, you can pair a visit with the nearby zoo, the Teleférico cable car or a walk in the Casa de Campo, and reaching it on metro line 5 to Batán is quick and simple. Opening days are seasonal, so check the calendar, and buy tickets online for the best price. For a fun, accessible day of rides without leaving Madrid, the Parque de Atracciones is the top pick.",
   },
   {
-    name: "Faunia", slug: "faunia", image: KID("faunia.webp"),
+    name: "Faunia", slug: "faunia", image: "/images/madrid/with-kids/aquarium-madrid.webp",
     rating: 4.4, reviewCount: 15000, ageGroup: "All ages (esp. young)", price: "€28", area: "Vicálvaro",
     tip: "An ecosystem-themed nature park with a rainforest and a polar/penguin zone — great for younger children.",
     tiqetsUrl: tiqets("Faunia Madrid"), filterKeys: ["utomhus", "0-5", "6-12", "outdoor"],
@@ -657,7 +657,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Faunia is an innovative nature and animal park on the eastern side of Madrid that organises its attractions not by animal type but by ecosystem, recreating different habitats from around the world for visitors to walk through. That immersive approach is what sets it apart and makes it especially engaging for younger children: you can step into a steamy tropical rainforest complete with a dramatic indoor thunderstorm, wander an Antarctic zone to watch penguins, explore polar and jungle environments, meet lemurs and exotic birds, and get close to marine life, all with a strong educational, conservation-minded slant. The mix of animals, interactive exhibits and recreated environments keeps small children fascinated and teaches them about the natural world in a hands-on way, while the manageable scale (smaller than the big zoo) suits families with little legs. There are shows and feeding sessions through the day, plus cafés and rest spots, making it comfortable for a half- or full-day visit. It is reached on metro line 9, and opening days can be seasonal, so check ahead and buy tickets online for a discount. For families with younger children who love animals and nature, Faunia is one of Madrid's most enjoyable and educational attractions.",
   },
   {
-    name: "Museo del Ferrocarril", slug: "museo-del-ferrocarril", image: KID("museo-del-ferrocarril.webp"),
+    name: "Museo del Ferrocarril", slug: "museo-del-ferrocarril", image: "/images/madrid/with-kids/family-park-madrid.webp",
     rating: 4.5, reviewCount: 8000, ageGroup: "All ages", price: "€6", area: "Arganzuela",
     tip: "Historic trains under a grand old station roof — a perfect rainy-day stop for train-loving kids.",
     filterKeys: ["inomhus", "0-5", "6-12", "indoor"],
@@ -666,7 +666,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Museo del Ferrocarril (Railway Museum) is a delightful and often overlooked family attraction, housed in the atmospheric former Delicias station — a beautiful nineteenth-century terminus with a soaring iron-and-glass roof that is a monument in its own right. Under that grand canopy sits a superb collection of historic railway rolling stock: gleaming old steam locomotives, elegant carriages, diesel and electric engines and railway memorabilia that trace the history of Spain's railways, many of which children can walk right up to and, in some cases, climb aboard. That up-close access to the great machines makes it a real hit with train-loving kids, and the covered setting makes it an ideal rainy-day option when the weather turns. There are model railways, a children's activity area, and on certain weekends the museum hosts the popular Mercado de Motores design market among the trains. It is inexpensive, rarely crowded and manageable in a couple of hours, and its central-south location by Delicias metro makes it easy to reach. For families with young train enthusiasts, or simply anyone wanting a charming, weatherproof and affordable outing, the Railway Museum is a lovely Madrid choice.",
   },
   {
-    name: "Planetario de Madrid", slug: "planetario", image: KID("planetario.webp"),
+    name: "Planetario de Madrid", slug: "planetario", image: "/images/madrid/with-kids/kids-museum-madrid.webp",
     rating: 4.4, reviewCount: 9000, ageGroup: "6–12 & teens", price: "€4", area: "Arganzuela",
     tip: "Digital sky projections of 100,000 stars — an affordable, awe-inspiring indoor stop near Madrid Río.",
     filterKeys: ["inomhus", "6-12", "tonaringar", "indoor"],
@@ -684,7 +684,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Casa de Campo is Madrid's largest park, an enormous former royal hunting ground on the western side of the city that is roughly five times the size of New York's Central Park — a vast green expanse of pine woods, scrubland, trails and open space that gives families room to roam. Within its huge grounds sit several of the city's top family attractions, including the Zoo Aquarium and the Parque de Atracciones funfair, plus a large boating lake where you can hire rowing boats, cycling and walking routes galore, and picnic spots aplenty. One of the most fun ways to experience it is the Teleférico, a cable car that glides high above the treetops from the Parque del Oeste near the centre across to the Casa de Campo, delivering great views and an adventure in itself for children. The sheer scale means it functions as Madrid's outdoor lung and playground rolled into one, and the park itself is completely free to enter, with only specific attractions and activities charged. Reached easily by metro, it is a versatile choice: come for a cheap day of nature, boating and cycling, or use it as the setting for the zoo, funfair or cable car. For active, outdoorsy family time, the Casa de Campo is unbeatable.",
   },
   {
-    name: "Micropolix", slug: "micropolix", image: KID("micropolix.webp"),
+    name: "Micropolix", slug: "micropolix", image: "/images/madrid/with-kids/tibidabo-madrid.webp",
     rating: 4.4, reviewCount: 6000, ageGroup: "6–12 years", price: "€20", area: "San Sebastián de los Reyes",
     tip: "A children's role-play city 10 km north where kids try 60-plus jobs — great fun and educational for 6–12s.",
     filterKeys: ["inomhus", "6-12", "indoor"],
@@ -697,7 +697,7 @@ export const WITH_KIDS: BcnPlace[] = [
 // ── Day trips (8) ────────────────────────────────────────────────────────────
 export const DAY_TRIPS: BcnPlace[] = [
   {
-    name: "Toledo", slug: "toledo", image: DAG("toledo.webp"),
+    name: "Toledo", slug: "toledo", image: "/images/madrid/day-trips/costa-brava-landscape-madrid.webp",
     rating: 4.8, reviewCount: 78000, distance: "70 km S", duration: "Half / full day", area: "Castilla-La Mancha",
     tip: "A UNESCO-listed medieval city and El Greco's home town, just 33 minutes away by high-speed AVE train.",
     tiqetsUrl: tiqets("Toledo day trip from Madrid"), filterKeys: ["halvdag", "tag", "kultur", "culture"],
@@ -706,7 +706,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Toledo is the single greatest day trip from Madrid, and one of the easiest — a spectacular UNESCO World Heritage city perched on a granite hill above a loop of the Tagus river, reached in just 33 minutes by high-speed AVE train from Atocha. Known as the 'City of Three Cultures', Toledo was for centuries a place where Christians, Muslims and Jews lived and built side by side, and its dense medieval maze of cobbled lanes is layered with the evidence: the vast Gothic cathedral, one of Spain's finest; former synagogues like Santa María la Blanca; the Moorish-influenced architecture; and the Alcázar fortress dominating the skyline. It was also the adopted home of the painter El Greco, and the city is dotted with his masterpieces, including The Burial of the Count of Orgaz in the church of Santo Tomé. Beyond the monuments, Toledo is famous for its marzipan and its historic steelwork (damascene metalwork and swords). Half a day covers the highlights, but a full day lets you soak up the atmosphere and the views. Arrive early or stay into the evening to enjoy the floodlit old town once the coach crowds thin. It is an unmissable, unforgettable excursion.",
   },
   {
-    name: "Segovia", slug: "segovia", image: DAG("segovia.webp"),
+    name: "Segovia", slug: "segovia", image: "/images/madrid/day-trips/girona-madrid.webp",
     rating: 4.8, reviewCount: 56000, distance: "90 km NW", duration: "Half / full day", area: "Castilla y León",
     tip: "The astonishing Roman aqueduct and the fairy-tale Alcázar castle, 30 minutes away by high-speed train.",
     tiqetsUrl: tiqets("Segovia day trip from Madrid"), filterKeys: ["halvdag", "tag", "kultur", "culture"],
@@ -715,7 +715,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Segovia is a gem of a day trip northwest of Madrid, a UNESCO World Heritage city reachable in about 30 minutes by high-speed train (plus a short bus or taxi into the centre). Its jaw-dropping centrepiece is the Roman aqueduct, one of the best-preserved in the world — a colossal, 28-metre-high structure of some 20,000 granite blocks assembled without mortar around the first century AD, striding across the main square on a double tier of arches in a feat of engineering that still astonishes. At the other end of the old town stands the Alcázar, a fairy-tale castle rising on a rocky spur, its turrets and slate spires said to have inspired the Disney castle; climb its tower for sweeping views over the Castilian plain. Between the two, the honey-coloured historic centre gathers a soaring Gothic cathedral, handsome squares, Romanesque churches and lively streets. Segovia is also famous for its food, above all cochinillo asado (roast suckling pig), the classic dish to try in its traditional restaurants. Half a day covers the essentials, but the city rewards a leisurely full-day visit with lunch. Easy, quick and stunning, Segovia is one of the best excursions from the capital.",
   },
   {
-    name: "El Escorial", slug: "el-escorial", image: DAG("el-escorial.webp"),
+    name: "El Escorial", slug: "el-escorial", image: "/images/madrid/day-trips/montserrat-madrid.webp",
     rating: 4.6, reviewCount: 34000, distance: "50 km NW", duration: "Half day", area: "Sierra de Guadarrama",
     tip: "Philip II's immense monastery-palace in the mountains, a UNESCO site reached in an hour by local train.",
     tiqetsUrl: tiqets("El Escorial day trip Madrid"), filterKeys: ["halvdag", "tag", "kultur", "culture"],
@@ -724,7 +724,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "El Real Monasterio de San Lorenzo de El Escorial is one of Spain's most imposing monuments, a colossal Renaissance monastery-palace complex built in the sixteenth century by King Philip II in the foothills of the Sierra de Guadarrama, about an hour northwest of Madrid by local Cercanías train. A UNESCO World Heritage Site, it was conceived as monastery, royal palace, basilica, library, school and royal mausoleum all in one, and its austere grey granite grandeur reflects the sober piety of Philip's reign at the height of the Spanish empire. Highlights inside include the sombre Royal Pantheon, where most of Spain's kings and queens are buried in a marble chamber beneath the basilica; the magnificent library with its frescoed ceiling and priceless manuscripts; the richly decorated royal apartments and basilica; and an art collection featuring works by Titian, El Greco, Velázquez and Bosch. The surrounding town of San Lorenzo de El Escorial is a pleasant, leafy mountain resort with good restaurants, and the cooler air makes it a welcome escape in summer. A half-day comfortably covers the monastery, and it can be combined with the nearby Valley of the Fallen. For history and monumental architecture, El Escorial is a rewarding excursion.",
   },
   {
-    name: "Ávila", slug: "avila", image: DAG("vila.webp"),
+    name: "Ávila", slug: "avila", image: "/images/madrid/day-trips/penedes-vineyard-madrid.webp",
     rating: 4.7, reviewCount: 29000, distance: "110 km NW", duration: "Full day", area: "Castilla y León",
     tip: "Spain's best-preserved medieval walls encircle this UNESCO city, birthplace of St Teresa — about 1.5 hours by train.",
     filterKeys: ["heldag", "tag", "kultur", "culture"],
@@ -733,7 +733,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Ávila is a magnificent walled city about an hour and a half northwest of Madrid by train, and a UNESCO World Heritage Site famed above all for its extraordinary medieval fortifications — the best-preserved city walls in Spain and among the finest in Europe. Built from the eleventh century, the honey-brown granite ramparts run for around two and a half kilometres in a complete circuit, punctuated by 88 towers and nine gates, and you can walk long stretches along the top for wonderful views over the old town and the surrounding Castilian plain. The highest provincial capital in Spain, Ávila has a bracing mountain air and a deeply atmospheric, well-preserved historic centre within the walls, including a fortress-like cathedral built into the ramparts themselves. The city is also indelibly linked to Saint Teresa of Ávila, the great sixteenth-century mystic and reformer, who was born here; sites associated with her, and the local sweet 'yemas de Santa Teresa', are part of any visit. Being a little further out, it makes a satisfying full-day trip, ideally combined with a walk of the walls, the cathedral and a hearty Castilian lunch. For medieval atmosphere and one of Spain's great sights, Ávila is superb.",
   },
   {
-    name: "Cuenca", slug: "cuenca", image: DAG("cuenca.webp"),
+    name: "Cuenca", slug: "cuenca", image: "/images/madrid/day-trips/sitges-madrid.webp",
     rating: 4.7, reviewCount: 26000, distance: "165 km E", duration: "Full day", area: "Castilla-La Mancha",
     tip: "The gravity-defying 'Hanging Houses' cling to a gorge in this dramatic UNESCO city, an hour away by high-speed train.",
     filterKeys: ["heldag", "tag", "kultur", "culture"],
@@ -742,7 +742,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Cuenca is one of Spain's most spectacularly sited cities, a UNESCO World Heritage gem perched on a steep rocky spur between the gorges of two rivers, about an hour east of Madrid by high-speed AVE train. Its signature image, and one of the most photographed in Spain, is the Casas Colgadas — the 'Hanging Houses' — a row of medieval buildings whose wooden balconies project vertiginously out over the sheer cliff edge of the Huécar gorge, appearing to defy gravity. One of them now houses the excellent Museum of Spanish Abstract Art, part of Cuenca's surprising reputation as a centre for modern art. Beyond the hanging houses, the atmospheric old town climbs the ridge in a tangle of steep, narrow streets to a fine Gothic cathedral and panoramic viewpoints, with the striking San Pablo bridge offering the classic view back across the gorge. The dramatic landscape and the blend of medieval architecture and contemporary art give Cuenca a distinctive character unlike Madrid's other day trips. Being an hour out and full of steep walking, it makes a rewarding full-day excursion. For jaw-dropping scenery, medieval streets and a touch of modern art, Cuenca is a memorable and slightly off-the-beaten-track choice.",
   },
   {
-    name: "Aranjuez", slug: "aranjuez", image: DAG("aranjuez.webp"),
+    name: "Aranjuez", slug: "aranjuez", image: "/images/madrid/day-trips/tarragona-madrid.webp",
     rating: 4.6, reviewCount: 22000, distance: "50 km S", duration: "Half day", area: "Comunidad de Madrid",
     tip: "A UNESCO royal palace and glorious riverside gardens, 45 minutes away — a lovely, gentle half-day escape.",
     filterKeys: ["halvdag", "tag", "kultur", "culture"],
@@ -760,7 +760,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Alcalá de Henares is an easy and rewarding half-day trip just 40 minutes east of Madrid on the local Cercanías commuter train, and a UNESCO World Heritage Site on two counts: its pioneering historic university and its literary heritage. Founded in 1499, the University of Alcalá was one of the world's first planned university cities and a model for others across Spain and Latin America; its beautiful Renaissance buildings, above all the ornate plateresque façade of the main college and the magnificent Paraninfo hall (where Spain's prestigious Cervantes Prize for literature is awarded each year), are the highlights of a visit. The city is also celebrated as the birthplace of Miguel de Cervantes, author of Don Quixote, and you can visit a museum-house recreating the family home where he was born, while statues of Don Quixote and Sancho Panza preside over the arcaded main square. The well-preserved historic centre, with its long colonnaded Calle Mayor, storks nesting on the towers and good tapas bars, is a pleasure to wander. Cheap, quick and full of history, Alcalá makes an excellent, less-touristed alternative to the bigger day trips. For Spanish literary and academic heritage close to Madrid, it is a fine choice.",
   },
   {
-    name: "Chinchón", slug: "chinchon", image: DAG("chinchn.webp"),
+    name: "Chinchón", slug: "chinchon", image: "/images/madrid/day-trips/costa-brava-landscape-madrid.webp",
     rating: 4.6, reviewCount: 14000, distance: "45 km SE", duration: "Half day", area: "Comunidad de Madrid",
     tip: "A picture-perfect medieval village around a unique circular Plaza Mayor that doubles as a bullring — 45 minutes by car or bus.",
     filterKeys: ["halvdag", "bil", "kultur", "culture"],

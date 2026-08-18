@@ -55,7 +55,7 @@ export default function DubrovnikHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Dubrovnik"
-      heroImage="/images/dubrovnik/hotels/villa-dubrovnik.webp"
+      heroImage="/images/dubrovnik/hotels/hotel-dubrovnik.avif"
       intro="Choosing where to stay in Dubrovnik is really a choice between three worlds: the glamorous cliff hotels of Ploče, whose pools and terraces gaze back at the floodlit walls; the atmospheric boutiques and apartments inside the car-free Old Town itself; and the better-value, beach-friendly stays out in leafy Lapad and Gruž. This guide covers the best options across every budget, from a €500-a-night cliff villa to a €30 dorm bed within the walls, with areas, prices and honest trade-offs."
       wide
     >

@@ -44,7 +44,7 @@ export default function BangkokShopping() {
       active="shopping"
       crumb="Shopping"
       h1="Shopping in Bangkok"
-      heroImage="/images/bangkok/shopping/iconsiam.webp"
+      heroImage="/images/bangkok/shopping/artisan-shop-bangkok.webp"
       intro="Bangkok is one of Asia's great shopping cities, swinging effortlessly between air-conditioned luxury malls and sweaty, bargain-packed markets. Browse global flagships and riverside spectacle at ICONSIAM and Siam Paragon, haggle over gadgets at MBK, buy clothes by the armful in wholesale Pratunam, or lose a whole weekend in the 15,000 stalls of Chatuchak. These 8 destinations cover every style and budget, with tips on getting there and getting a deal."
       wide
     >

@@ -52,7 +52,7 @@ export default function LisbonBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Best Beaches Near Lisbon"
-      heroImage="/images/lisbon/strander/praia-do-guincho.webp"
+      heroImage="/images/lisbon/beaches/barceloneta-lisbon.webp"
       intro="One of Lisbon's great advantages is that Atlantic beaches are barely a train ride away. In under an hour you can be on the wide golden sands of Carcavelos, the family coves of Estoril, the endless dunes of Costa da Caparica or the wild, windswept surf of Guincho and the Sintra coast. Here are the best beaches near the capital, from easy town sands reachable without a car to world-class surf breaks, with how to get to each."
       wide
     >

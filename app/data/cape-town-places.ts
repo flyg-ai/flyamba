@@ -237,7 +237,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ──────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "La Colombe", slug: "la-colombe", image: RES("la-colombe.webp"),
+    name: "La Colombe", slug: "la-colombe", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.8, reviewCount: 6000, price: "$$$$", area: "Constantia", type: "Modern Fine Dining",
     tip: "Ranked #1 on the 50 Best Restaurants Africa list — book four to six weeks ahead.",
     filterKeys: ["fine-dining"],
@@ -246,7 +246,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "La Colombe is Cape Town's most decorated restaurant and a fixture at the very top of the 50 Best Restaurants Africa list, where it has repeatedly ranked number one. Perched on the Silvermist Wine Estate high above Constantia Nek, with forest and mountain views, it is the flagship of chef-patron Scot Kirton's group and delivers a refined, theatrical eight-course tasting experience. The signature is the 'Forest Floor' course, a playful, foraged-looking dish that has become one of South African fine dining's most photographed plates, alongside precise seafood, game and dessert courses drawing on French technique and Asian accents. Service is polished but warm, the wine pairings showcase the Cape's best cellars, and the setting — cool, green and hushed above the city — makes it a genuine destination rather than a casual dinner. It's an event to plan a trip around: reservations open weeks in advance and the sought-after slots go quickly, so book four to six weeks ahead, ideally through your hotel concierge. For anyone wanting to understand why Cape Town is considered one of the world's great dining cities, La Colombe is the essential table.",
   },
   {
-    name: "The Test Kitchen", slug: "the-test-kitchen", image: RES("the-test-kitchen.webp"),
+    name: "The Test Kitchen", slug: "the-test-kitchen", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.7, reviewCount: 5000, price: "$$$$", area: "Woodstock", type: "Modern Fine Dining",
     tip: "Luke Dale-Roberts' legendary tasting menu made this Cape Town's most celebrated restaurant — book one to two months ahead.",
     filterKeys: ["fine-dining"],
@@ -255,7 +255,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "The Test Kitchen, in the Old Biscuit Mill complex in the up-and-coming Woodstock district, is the restaurant that put Cape Town on the global fine-dining map. Chef Luke Dale-Roberts' celebrated multi-course tasting menu — a boundary-pushing journey through South African produce reworked with world technique — earned it a long run as the number-one restaurant in Africa and international acclaim before its original incarnation closed in 2021. Dale-Roberts has since evolved the concept, and the name remains synonymous with the city's culinary ambition. In its classic form the experience unfolded over two rooms, moving guests from a 'dark' opening act to a 'light' second half, each course a small piece of theatre built on impeccable ingredients and bold flavour. It was, and remains, the benchmark against which Cape Town's other top tables are measured, and a pilgrimage for serious food lovers. Because demand vastly outstrips the small number of seats, booking one to two months in advance is essential. For travellers who want to trace the roots of the Cape's fine-dining boom, this is where the modern story began — ambitious, inventive and world-class.",
   },
   {
-    name: "Chefs Warehouse Beau Constantia", slug: "chefs-warehouse-beau-constantia", image: RES("chefs-warehouse.webp"),
+    name: "Chefs Warehouse Beau Constantia", slug: "chefs-warehouse-beau-constantia", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.7, reviewCount: 4000, price: "$$$", area: "Constantia", type: "Tapas Fine Dining",
     tip: "Liam Tomlin's 'Tapas for Two' menu is served on a cliff-edge terrace at the Beau Constantia estate — book three weeks ahead.",
     filterKeys: ["fine-dining"],
@@ -264,7 +264,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Chefs Warehouse at Beau Constantia is one of Cape Town's most loved fine-dining experiences, and one of its most scenic — the restaurant clings to a hillside at the boutique Beau Constantia wine estate on Constantia Nek, with a glass-fronted room and terrace looking out over vineyards to the mountains and sea beyond. The concept, from chef Liam Tomlin, is a no-choice eight-course 'Tapas for Two' menu: a shared parade of small, globe-trotting plates that move from delicate seafood to bold, spice-driven dishes, each designed to be split between two diners so a couple can taste the whole menu together. Many courses are paired with Beau Constantia's own wines, made on the estate. The cooking is confident and generous rather than fussy, the value strong for the standard, and the setting genuinely spectacular, especially at golden hour. It's relaxed enough for a long, celebratory lunch yet serious about the food, which explains its enduring popularity and consistent place among the region's best. Seats are limited and it books out well ahead, so reserve around three weeks in advance and time your booking for the sunset if you can.",
   },
   {
-    name: "Gold Restaurant", slug: "gold-restaurant", image: RES("gold-restaurant.webp"),
+    name: "Gold Restaurant", slug: "gold-restaurant", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.5, reviewCount: 9000, price: "$$$", area: "Green Point", type: "Pan-African",
     tip: "A 14-course tasting menu drawn from 14 African countries, with interactive djembe drumming before dinner — a fun, authentic night out. Book a week ahead.",
     filterKeys: ["african"],
@@ -273,7 +273,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Gold Restaurant in Green Point is Cape Town's most enjoyable introduction to the food of the wider African continent — a festive, interactive dining experience that pairs a 14-dish tasting menu with live entertainment. The set menu travels across 14 African countries, moving from Cape Malay curries and West African stews to Moroccan tagines and East African grilled dishes, served as a generous succession of small plates so you sample the whole continent in one sitting. The evening begins with an interactive djembe drumming session that gets the whole room playing, and continues with roving Mali puppetry and traditional song and dance between courses, giving the meal a warm, celebratory, slightly theatrical atmosphere that families and groups love. It leans more toward accessible, crowd-pleasing flavours than cutting-edge gastronomy, and is unashamedly aimed at visitors — but it does what it does very well, with authentic dishes and a genuine sense of fun. It's a reliable choice for a lively first or last night in the city, especially with a group. Book about a week in advance, arrive hungry, and be ready to join in with the drumming.",
   },
   {
-    name: "Kloof Street House", slug: "kloof-street-house", image: RES("kloof-street-house.webp"),
+    name: "Kloof Street House", slug: "kloof-street-house", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.5, reviewCount: 8000, price: "$$", area: "Gardens", type: "Modern Bistro",
     tip: "Cape Town's most photographed restaurant — a Victorian house dripping with chandeliers. Book a week ahead and ask for a window table upstairs.",
     filterKeys: ["bistro"],
@@ -291,7 +291,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Bombay Brasserie brings the Taj group's signature Indian fine dining to Cape Town, set inside the grand Taj Cape Town hotel, itself housed in the landmark former Reserve Bank building on Wale Street. The dining room is a piece of theatre in its own right — an opulent, jewel-toned space themed around Indian royalty, with chandeliers, rich fabrics and a sense of colonial-era glamour that makes it one of the city's most striking places to eat. The kitchen, led by an Indian executive chef, sends out refined, multi-course modern Indian cuisine: familiar classics elevated with finesse alongside more contemporary, regional dishes, plush sauces and careful spicing, plus a strong vegetarian selection. It's a dressed-up, special-occasion sort of restaurant rather than a casual curry house, with prices to match its five-star setting, though still excellent value by international standards. Its central location makes it easy to combine with a night in the City Bowl, and it pairs naturally with a cocktail at the hotel's elegant Twankey Bar beforehand. Book one to two weeks ahead. For polished Indian fine dining in a genuinely glamorous room, Bombay Brasserie is Cape Town's standout.",
   },
   {
-    name: "Codfather", slug: "codfather", image: RES("codfather.webp"),
+    name: "Codfather", slug: "codfather", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.4, reviewCount: 7000, price: "$$", area: "Camps Bay", type: "Seafood",
     tip: "A Camps Bay institution since 1995 — there's no menu; you pick your fish from the display and it's weighed and priced by the gram. The whole grilled fish is the speciality. Book a week ahead.",
     filterKeys: ["seafood"],
@@ -300,7 +300,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Codfather is a Camps Bay institution, serving fresh seafood on the beachside strip since 1995 and still one of Cape Town's most enjoyable places to eat fish. Its signature is the no-menu format: rather than ordering from a card, you walk up to the ice display of the day's catch — line fish, prawns, crayfish, oysters and more — choose what you fancy, and it's weighed, priced by the gram and cooked to order, most famously as a whole grilled fish. There's also a well-regarded sushi bar for those who want their seafood raw. The atmosphere is relaxed and buzzy rather than formal, and the location is a big part of the appeal, a short stroll from the sand with the Twelve Apostles as a backdrop. Because everything is priced by weight and quality, it can add up, so ask about prices as you choose, but for freshness and choice it's hard to beat. It's popular and central to Camps Bay's dining scene, so book about a week ahead, especially in summer, and aim for an early-evening table to pair dinner with a sunset over the Atlantic. A dependable, quintessentially Cape Town seafood experience.",
   },
   {
-    name: "Mama Africa", slug: "mama-africa", image: RES("mama-africa.webp"),
+    name: "Mama Africa", slug: "mama-africa", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.4, reviewCount: 6000, price: "$$", area: "Long Street", type: "Pan-African",
     tip: "A Long Street classic — an African grill mix of springbok, kudu and ostrich, with a live marimba band. Book a 6:30pm table for the best of the show.",
     filterKeys: ["african"],
@@ -309,7 +309,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Mama Africa is a long-standing Long Street landmark and one of the most fun, atmospheric places in central Cape Town to try South African and pan-African food. Behind a green-painted facade and a bar shaped like a giant snake, the room fills nightly with the sound of a live marimba band, giving dinner a warm, celebratory, distinctly African beat. The menu is built for curious visitors: an African grill mix lets you sample game meats such as springbok, kudu and ostrich, alongside crocodile, Cape Malay curries, pap and other continental dishes, so a table can taste widely in one meal. It's touristy, lively and unpretentious rather than a gourmet destination, and that's exactly the point — it's about the whole experience of music, dancing, sharing plates and soaking up the buzz of Long Street's nightlife strip right outside. The staff are welcoming, the portions generous and the mood infectious, making it a great choice for groups and for a first or last night in the city. Book a table for around 6:30pm to catch the band in full swing, and stay on for a drink as Long Street comes alive after dark.",
   },
   {
-    name: "Mzansi", slug: "mzansi", image: RES("mzansi.webp"),
+    name: "Mzansi", slug: "mzansi", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.6, reviewCount: 2000, price: "$$", area: "Langa Township", type: "South African",
     tip: "A warm township restaurant in Langa with gospel music and a home-style set menu by Nomonde Siyaka. Book three days ahead; you'll need transport (an Uber or tour).",
     filterKeys: ["african"],
@@ -318,7 +318,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Mzansi (a colloquial name for South Africa) is a warm, family-run township restaurant in Langa, Cape Town's oldest township, offering one of the city's most genuine and heartfelt dining experiences. Run by chef and host Nomonde Siyaka, it serves a generous home-style set menu of traditional South African dishes — samp and beans, chakalaka, pap, stews, grilled meats and vegetables — eaten shebeen-style at communal tables, often accompanied by live gospel singing and dancing that draws diners in. More than a meal, it's an evening of hospitality and cultural exchange, a chance to share food and stories with local families in a neighbourhood most visitors never reach, and a small, direct way to support the township economy. The welcome is genuine and the atmosphere joyful rather than staged. Because it sits in Langa, you'll need to arrange transport — an Uber, a private driver or, ideally, a guided township tour that includes dinner, which also adds context and local introductions. Book about three days ahead, as it's a small operation. For travellers who want to taste real South African home cooking and see a side of Cape Town beyond the mountain and the Waterfront, Mzansi is a memorable, meaningful choice.",
   },
   {
-    name: "Eastern Food Bazaar", slug: "eastern-food-bazaar", image: RES("eastern-food-bazaar.webp"),
+    name: "Eastern Food Bazaar", slug: "eastern-food-bazaar", image: "/images/cape-town/restaurants/restaurant-cape-town.avif",
     rating: 4.4, reviewCount: 14000, price: "$", area: "City Centre", type: "Indian / Halal Food Hall",
     tip: "Cape Town's best-value halal food hall — a dozen Indian, Pakistani and Middle Eastern counters under one roof. Lunch comes in under $5. No booking needed; just grab a tray.",
     filterKeys: ["african", "budget"],
@@ -331,7 +331,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "The Silo Hotel", slug: "the-silo-hotel", image: HOT("silo-hotel.webp"),
+    name: "The Silo Hotel", slug: "the-silo-hotel", image: "/images/cape-town/hotels/hotel-cape-town.avif",
     rating: 4.8, reviewCount: 2000, price: "$$$$", area: "V&A Waterfront", type: "Design Luxury",
     tip: "Set in a converted 1924 grain silo above Zeitz MOCAA, all 28 rooms have faceted windows framing Table Mountain and the harbour. Book eight to ten weeks ahead.",
     filterKeys: ["luxury", "boutique"],
@@ -340,7 +340,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Silo Hotel is Cape Town's most spectacular design hotel, occupying the upper floors of a converted 1924 grain silo at the V&A Waterfront — the same building whose lower levels house the Zeitz MOCAA contemporary art museum. Architect Thomas Heatherwick carved the original concrete tubes into the museum's soaring atrium, while the hotel above is crowned with vast, pillowed glass windows that bulge outward from each room, framing panoramic views of Table Mountain, the harbour and the Atlantic. The 28 rooms and suites are individually designed by Liz Biden in bold, jewel-toned, art-filled style, a world away from minimalist hotel norms, and the rooftop bar and pool offer one of the city's great views. Regularly named among the best hotels in the world (including Condé Nast Traveler's global top ten), it pairs its dramatic setting with impeccable service, a spa and excellent dining. Rates sit firmly at the top of the market, typically from around $1,140 a night, making it a bucket-list splurge. For travellers who want the single most photographed hotel view in Cape Town and cutting-edge design in a landmark building, The Silo is the definitive choice — book eight to ten weeks ahead.",
   },
   {
-    name: "Ellerman House", slug: "ellerman-house", image: HOT("ellerman-house.webp"),
+    name: "Ellerman House", slug: "ellerman-house", image: "/images/cape-town/hotels/hotel-cape-town.avif",
     rating: 4.9, reviewCount: 1000, price: "$$$$", area: "Bantry Bay", type: "Boutique Villa",
     tip: "Just 13 rooms in a 1906 clifftop mansion above the Atlantic, with a private beach, infinity pool and South Africa's finest private art collection. Nine hectares of gardens.",
     filterKeys: ["luxury"],
@@ -349,7 +349,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Ellerman House is one of South Africa's most exclusive places to stay — an intimate 13-room boutique hotel in a grand 1906 Edwardian mansion perched on the cliffs of Bantry Bay, on the Atlantic Seaboard, with the ocean stretching out below. Built for shipping magnate Sir John Ellerman and run today as a discreet, all-suite retreat, it feels more like staying in a billionaire's private home than a hotel: nine hectares of terraced gardens tumble toward the sea, an infinity pool hangs above the Atlantic, and the house holds one of the finest private collections of South African art and wine anywhere, displayed throughout the public rooms and a dedicated gallery and wine cellar. With so few rooms, service is deeply personal and largely inclusive — meals, drinks, snacks and much of the minibar come as standard — and the atmosphere is hushed, elegant and utterly private, a favourite of honeymooners and those seeking a low-key luxury escape close to the city. Rates run from around $1,050 a night. For travellers who prize privacy, art, gardens and Atlantic views over a big-name brand, Ellerman House is Cape Town's most refined boutique address.",
   },
   {
-    name: "One&Only Cape Town", slug: "one-and-only-cape-town", image: HOT("oneonly-cape-town.webp"),
+    name: "One&Only Cape Town", slug: "one-and-only-cape-town", image: "/images/cape-town/hotels/hotel-cape-town.avif",
     rating: 4.7, reviewCount: 5000, price: "$$$$", area: "V&A Waterfront", type: "Luxury Resort",
     tip: "A 131-room island resort at the V&A Marina — Table Mountain on one side, the harbour on the other. The spa is rated among the world's top ten. Book six to eight weeks ahead.",
     filterKeys: ["luxury"],
@@ -358,7 +358,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "One&Only Cape Town is the city's flagship resort-style luxury hotel, occupying its own landscaped island in the V&A Marina at the heart of the Waterfront — a rare combination of a self-contained resort with a genuinely central location. Its 131 rooms and suites are among the largest in the city, spread between a main building and the palm-fringed Marina Rise island, with sweeping views of Table Mountain on one side and the harbour and marina on the other. Facilities are extensive and geared to indulgence: a large spa on its own private island, rated among the best in the world, an outdoor pool, and a strong line-up of restaurants, including outposts from celebrated South African and international chefs. The blend of space, glamour, buzzing bars and a location within walking distance of the Waterfront's shops, aquarium and Robben Island ferries makes it especially popular with families, honeymooners and anyone wanting resort comforts without leaving the city. Rates typically start from around $905 a night. For polished, spacious, family-friendly five-star luxury with mountain views and everything on the doorstep, One&Only is Cape Town's benchmark big-name resort — book six to eight weeks ahead in high season.",
   },
   {
-    name: "Cape Grace", slug: "cape-grace", image: HOT("cape-grace.webp"),
+    name: "Cape Grace", slug: "cape-grace", image: "/images/cape-town/hotels/hotel-cape-town.avif",
     rating: 4.8, reviewCount: 3000, price: "$$$$", area: "V&A Waterfront", type: "Classic Luxury",
     tip: "A 121-room classic on its own quay at the V&A Marina — the Bascule Bar stocks over 470 whiskies. Cape Town luxury done in warm, traditional style.",
     filterKeys: ["luxury"],
@@ -376,7 +376,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Cape Cadogan is one of Cape Town's most charming boutique hotels, a small, characterful retreat set in a pair of beautifully restored Victorian and Georgian villas (a national heritage building) in the leafy, central Gardens district. With just 13 individually styled rooms and suites, it feels intimate and residential rather than corporate, blending period features — high ceilings, wooden floors, elegant proportions — with contemporary, uncluttered interiors, plus a garden, a swimming pool and a relaxed honesty bar and lounge. The atmosphere is calm, personal and grown-up, which makes it especially popular with couples and independent travellers who want somewhere stylish and quiet with a genuine sense of place. The location is a real strength: it sits among the Gardens and Kloof Street cafés, bars and restaurants, at the foot of Table Mountain and Lion's Head for hikes, with the city centre a short walk away and the V&A Waterfront about five minutes by taxi. Rates are excellent value for the quality, typically from around $170 a night. For travellers who prefer an intimate, design-conscious boutique with heritage charm over a big hotel, Cape Cadogan is one of the loveliest bases in the city.",
   },
   {
-    name: "Cape Heritage Hotel", slug: "cape-heritage-hotel", image: HOT("cape-heritage-hotel.webp"),
+    name: "Cape Heritage Hotel", slug: "cape-heritage-hotel", image: "/images/cape-town/hotels/hotel-cape-town.avif",
     rating: 4.5, reviewCount: 1500, price: "$$", area: "Bo-Kaap / Heritage Square", type: "Historic Hotel",
     tip: "A 1771 heritage hotel on the edge of Bo-Kaap with 17 rooms and 250 years of history — the restaurants and bars of Heritage Square are in the same block.",
     filterKeys: ["boutique"],
@@ -385,7 +385,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Cape Heritage Hotel is a characterful boutique stay in one of the oldest surviving buildings in Cape Town — part of Heritage Square, a beautifully restored 18th-century block on the edge of the Bo-Kaap in the heart of the City Bowl, dating to 1771. Its 17 rooms are individually decorated with a mix of Cape colonial and contemporary style, each different in size and character thanks to the age and quirks of the building, giving it a genuinely historic, one-of-a-kind feel that chain hotels can't match. The real bonus is the setting: the hotel wraps around a leafy cobbled courtyard shared with Heritage Square's excellent restaurants, wine bar and cocktail spots (including one built around what's said to be South Africa's oldest grape vine), so some of the city's best food and drink is literally steps from your room. The central location puts the Bo-Kaap, Long Street, the Company's Garden and the city's museums within easy walking distance. Rates are very reasonable for the location and charm, typically from around $145 a night. For travellers who want to sleep inside Cape Town's history in a lively, walkable part of the centre, the Cape Heritage is a distinctive, well-priced choice.",
   },
   {
-    name: "Grand Daddy Hotel", slug: "grand-daddy-hotel", image: HOT("grand-daddy-hotel.webp"),
+    name: "Grand Daddy Hotel", slug: "grand-daddy-hotel", image: "/images/cape-town/hotels/hotel-cape-town.avif",
     rating: 4.4, reviewCount: 3000, price: "$$", area: "Long Street", type: "Boutique Design",
     tip: "33 rooms plus seven vintage Airstream caravans parked on the rooftop as quirky suites — a boutique with a signature gimmick, right on Long Street for nightlife.",
     filterKeys: ["boutique"],
@@ -394,7 +394,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Grand Daddy Hotel is one of Cape Town's most fun and distinctive places to stay, a boutique-design hotel right on buzzy Long Street in the middle of the city's nightlife strip. Alongside its 33 stylish, individually decorated rooms, its signature is the rooftop 'Airstream Penthouse Trailer Park': seven vintage American Airstream caravans, each themed and kitted out as a quirky, self-contained suite, parked on the roof with views over the City Bowl — a genuinely unique, playful place to sleep and a favourite for a novelty stay or a photo-worthy night. The hotel leans into its creative, tongue-in-cheek personality throughout, with a rooftop cinema, a lively cocktail bar and a relaxed restaurant, drawing a younger, design-conscious crowd. The Long Street location is ideal for anyone who wants to be in the thick of the action, steps from the city's bars, clubs, cafés and shops, though light sleepers should note it can be noisy at weekends. It's central for exploring the City Bowl, Bo-Kaap and the museums on foot. Rates are affordable for the style and location, typically from around $135 a night. For a hip, characterful and well-placed base with a real sense of humour, the Grand Daddy is a Cape Town original.",
   },
   {
-    name: "The Cape Milner", slug: "the-cape-milner", image: HOT("the-cape-milner.webp"),
+    name: "The Cape Milner", slug: "the-cape-milner", image: "/images/cape-town/hotels/hotel-cape-town.avif",
     rating: 4.4, reviewCount: 3000, price: "$$", area: "Tamboerskloof", type: "Mid-Range Hotel",
     tip: "57 rooms at the foot of Signal Hill, with Table Mountain views from the higher floors, a pool and restaurant — good value for couples and business travellers.",
     filterKeys: ["boutique"],
@@ -416,7 +416,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Cause Effect Cocktail Kitchen is one of Cape Town's most acclaimed bars, sitting on the fashionable Bree Street strip in the City Bowl and regularly recognised on the extended World's 50 Best Bars list. Founded by Kurt Schlechter, it doubles as a temple to South African brandy — the country's underrated national spirit — championing local distillers alongside a menu of inventive, technically ambitious cocktails that borrow from molecular mixology. The bar runs a small, intimate cocktail-kitchen counter experience where a handful of guests are guided through a curated flight, as well as the main room for walk-in drinks and small plates. The atmosphere is stylish but relaxed and knowledgeable rather than stuffy, with genuinely passionate bartenders keen to introduce visitors to Cape brandy and local flavours. As part of the Bree Street scene, it anchors one of the city's best areas for a bar crawl, surrounded by restaurants and other drinking spots. Book ahead, especially for the counter experience, which seats only a small group. For serious cocktails with a distinctly South African accent, and a chance to discover the country's brandy heritage, Cause Effect is one of Cape Town's essential drinking destinations.",
   },
   {
-    name: "The Gin Bar", slug: "the-gin-bar", image: NAT("the-gin-bar.webp"),
+    name: "The Gin Bar", slug: "the-gin-bar", image: "/images/cape-town/nightlife/cocktail-bar-cape-town.webp",
     rating: 4.5, reviewCount: 3000, type: "Gin Speakeasy", area: "Wale Street",
     tip: "South Africa's first gin bar, hidden behind a chocolate shop with 60-plus local gins. Just 12 seats and no reservations — go early to grab a spot in the courtyard.",
     filterKeys: ["cocktail", "gin"],
@@ -425,7 +425,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Gin Bar is one of Cape Town's most charming hidden drinking spots — a speakeasy-style courtyard bar reached by walking through the Honest Chocolate café on Wale Street and out into a leafy, candlelit back yard that feels a world away from the city outside. Billed as South Africa's first dedicated gin bar, it showcases the country's booming craft-gin scene, pouring more than 60 local gins from distillers such as Inverroche, Wilderer and Six Dogs, served straight, as perfect gin and tonics, or in a short list of well-made cocktails, with knowledgeable staff on hand to guide you through the botanicals. The setting is intimate and atmospheric, with just a handful of tables and seats in the courtyard, and no reservations, so it works best as an early-evening or afternoon stop before dinner rather than a big-group night out. Its central City Bowl location makes it easy to combine with the bars and restaurants of Bree and Long Streets. Go early to secure a spot, especially at weekends. For a relaxed, atmospheric introduction to South African craft gin in a genuinely hidden setting, The Gin Bar is a Cape Town gem.",
   },
   {
-    name: "Mother's Ruin", slug: "mothers-ruin", image: NAT("mothers-ruin.webp"),
+    name: "Mother's Ruin", slug: "mothers-ruin", image: "/images/cape-town/nightlife/flamenco-cape-town.webp",
     rating: 4.5, reviewCount: 2500, type: "Gin & Cocktail Bar", area: "Bree Street",
     tip: "A Bree Street gin bar focused on South African distillers (Inverroche, Wilderer, Six Dogs) and classic cocktails. Book a few days ahead.",
     filterKeys: ["cocktail", "gin"],
@@ -434,7 +434,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Mother's Ruin is a warm, welcoming gin and cocktail bar on Bree Street, at the heart of Cape Town's best drinking strip, run with an Australian-South African sensibility and a genuine love of the local spirits scene. As the name (an old nickname for gin) suggests, the focus is firmly on gin: the bar champions South African craft distillers such as Inverroche, Wilderer and Six Dogs, serving them in classic gin and tonics, thoughtfully built cocktails and tasting flights, with friendly, clued-up bartenders happy to steer you toward something new. The mood is unpretentious and sociable, more neighbourhood cocktail bar than exclusive speakeasy, which makes it an easy, enjoyable place to settle in for a few drinks either side of dinner. Its Bree Street location means you're surrounded by great restaurants and other bars, so it slots neatly into an evening exploring the City Bowl's food and drink scene. It's small and popular, so it's worth booking a few days ahead, especially on weekends. For approachable, gin-forward drinks in a relaxed, characterful setting on Cape Town's liveliest bar street, Mother's Ruin is a reliable and likeable choice.",
   },
   {
-    name: "The Orphanage Cocktail Emporium", slug: "the-orphanage", image: NAT("orphanage.webp"),
+    name: "The Orphanage Cocktail Emporium", slug: "the-orphanage", image: "/images/cape-town/nightlife/live-music-cape-town.webp",
     rating: 4.4, reviewCount: 3000, type: "Classic Cocktail Bar", area: "Bree Street",
     tip: "A 1920s-themed Bree Street bar with waistcoated, moustachioed bartenders and expertly made classics. Expect a small cover charge after 10pm at weekends.",
     filterKeys: ["cocktail"],
@@ -443,7 +443,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Orphanage Cocktail Emporium is a stylish, long-running cocktail bar on the corner of Bree and Orphan Streets (which lends it its name), a fixture of Cape Town's City Bowl nightlife. Decked out with a 1920s Prohibition-era theme — vintage fittings, low lighting and bartenders in waistcoats — it strikes a balance between a dressed-up speakeasy and an accessible neighbourhood bar, drawing a mixed crowd of locals and visitors looking for well-made drinks in an atmospheric setting. The cocktail list runs from expertly executed classics to inventive house creations, and the bartenders take real pride in their craft, making it a favourite for anyone who cares about what's in the glass. As the evening wears on it gets busier and livelier, with a small cover charge sometimes applied later at weekends, and it works well both as a sophisticated early-evening stop and as a spot to settle in for the night. Its prime Bree Street position puts it among the best restaurants and bars in the city, ideal for a crawl. For classic and creative cocktails with vintage charm on Cape Town's premier bar street, The Orphanage is a dependable, atmospheric pick.",
   },
   {
-    name: "Modular", slug: "modular", image: NAT("modular.webp"),
+    name: "Modular", slug: "modular", image: "/images/cape-town/nightlife/nightlife-bar-cape-town.webp",
     rating: 4.2, reviewCount: 4000, type: "Nightclub", area: "Long Street",
     tip: "Long Street's biggest club — Friday and Saturday nights, international DJs and a two-level dance floor with 1,200 capacity. A younger, high-energy crowd.",
     filterKeys: ["clubs"],
@@ -452,7 +452,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Modular is Long Street's biggest and best-known nightclub, the anchor of Cape Town's main downtown party strip and the go-to for a big, high-energy night out. Spread over two levels with a large dance floor and a capacity of around 1,200, it programmes commercial and electronic dance music, house and hip-hop, hosting resident and touring international DJs on its busiest Friday and Saturday nights. The crowd skews young — students, twenty-somethings and visitors looking to dance until the early hours — and the atmosphere is loud, packed and unpretentious, exactly what most people come to Long Street for. As part of the dense cluster of bars, pubs and clubs along the street, it's easy to fold into a night that starts with drinks at nearby rooftop bars and ends on the dance floor here. Expect a cover charge, queues at peak times and the usual big-club energy. It's not for those after a quiet cocktail, but for a full-throttle late night in the middle of the city's nightlife, Modular delivers. Keep an eye on your belongings and pre-arrange an Uber home, as Long Street gets very busy after midnight.",
   },
   {
-    name: "Planet Bar (Mount Nelson)", slug: "planet-bar", image: NAT("planet-bar.webp"),
+    name: "Planet Bar (Mount Nelson)", slug: "planet-bar", image: "/images/cape-town/nightlife/rooftop-bar-night-cape-town.webp",
     rating: 4.6, reviewCount: 2000, type: "Hotel Bar", area: "Gardens",
     tip: "The Mount Nelson Hotel's elegant bar, going since 1899, with colonial glamour and 200-plus single malts. A classic Cape Town spot for afternoon or evening cocktails.",
     filterKeys: ["cocktail"],
@@ -461,7 +461,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Planet Bar is the elegant cocktail bar of the Belmond Mount Nelson Hotel, the famous pink grande dame of Cape Town that has stood in the leafy Gardens district since 1899. Stepping in is a change of pace from the city's buzzy Bree and Long Street scenes: this is a place for polished, unhurried drinks amid colonial-era glamour, with plush interiors, a starry ceiling motif and a gorgeous garden terrace for warm evenings under the trees. The bar is known for its accomplished cocktails and an impressive collection of more than 200 whiskies and single malts, served with the impeccable, gracious service you'd expect of the hotel. It draws a smart, grown-up crowd — hotel guests, locals marking special occasions and visitors wanting a taste of old-world Cape Town — and works beautifully for a sophisticated aperitif, a nightcap or the hotel's celebrated afternoon tea earlier in the day. Set in nine hectares of gardens yet only a short walk from the city centre, it offers a serene, refined alternative to the louder downtown bars. For classic cocktails and colonial elegance in one of the city's most storied hotels, Planet Bar is a Cape Town institution worth dressing up for.",
   },
   {
-    name: "Shimmy Beach Club", slug: "shimmy-beach-club", image: NAT("shimmy-beach-club.webp"),
+    name: "Shimmy Beach Club", slug: "shimmy-beach-club", image: "/images/cape-town/nightlife/cocktail-bar-cape-town.webp",
     rating: 4.3, reviewCount: 8000, type: "Beach Club", area: "V&A Waterfront",
     tip: "Cape Town's premier beach club — pool, dance floor and restaurant, with Sunday sessions the peak. Table bookings come with a minimum spend.",
     filterKeys: ["beach", "clubs"],
@@ -470,7 +470,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Shimmy Beach Club is Cape Town's flashiest and best-known beach club, set in a dramatic spot on the water's edge in the working harbour beside the V&A Waterfront, with its own private beach, swimming pools, restaurant, cocktail bars and dance floor all rolled into one glamorous complex. The vibe is Mediterranean-style luxury-party: think day beds and cabanas, bottle service, sushi and grills, DJs and a dressed-to-impress crowd, with the experience flowing seamlessly from lazy daytime lounging by the pool into full club energy after dark. Its famous Sunday sessions are the highlight of the week, drawing big crowds and top DJs, and it also hosts major events and international acts through the summer season. Table and cabana bookings come with a minimum spend, and there's often a smart dress code, so it's more upscale bottle-service club than casual bar. For visitors it offers a very different night (or afternoon) out from the City Bowl's cocktail bars — sun, water, music and glamour with the ocean as a backdrop. Book a table ahead for busy Sundays and summer events, dress up, and pre-arrange transport, as it's a short taxi from the centre.",
   },
   {
-    name: "The Power and the Glory", slug: "the-power-and-the-glory", image: NAT("the-power-the-glory.webp"),
+    name: "The Power and the Glory", slug: "the-power-and-the-glory", image: "/images/cape-town/nightlife/flamenco-cape-town.webp",
     rating: 4.4, reviewCount: 3000, type: "Indie Bar", area: "Tamboerskloof",
     tip: "Cape Town's coolest indie bar — an old converted building in Tamboerskloof with local bands and a young, vinyl-and-craft-beer crowd.",
     filterKeys: ["cocktail"],
@@ -483,7 +483,7 @@ export const NIGHTLIFE: BcnPlace[] = [
 // ── Shopping (8) ──────────────────────────────────────────────────────────────
 export const SHOPPING: BcnPlace[] = [
   {
-    name: "V&A Waterfront", slug: "va-waterfront-shopping", image: SHO("va-waterfront.webp"),
+    name: "V&A Waterfront", slug: "va-waterfront-shopping", image: "/images/cape-town/shopping/artisan-shop-cape-town.webp",
     rating: 4.7, reviewCount: 128000, type: "Shopping Mall", area: "V&A Waterfront",
     tip: "The city's biggest shopping destination — some 450 stores from local design to global brands, open until 21:00 daily, all with a harbour and Table Mountain backdrop.",
     filterKeys: ["mall", "sunday"],
@@ -492,7 +492,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The V&A Waterfront is Cape Town's biggest and most popular shopping destination, wrapping a huge retail offering around a still-active working harbour with Table Mountain as a backdrop. Its centrepiece is the Victoria Wharf mall, home to some 450 stores ranging from international fashion and beauty brands to South African designers, jewellers selling local diamonds and gold, outdoor and safari outfitters, and gift and craft shops, all under one roof and open late, until around 9pm daily. Beyond the mall, the wider precinct holds the Watershed craft-and-design market, food halls, specialty stores and dozens of restaurants and bars, so you can easily combine shopping with a meal, a harbour walk or a visit to the aquarium and Zeitz MOCAA. It's polished, safe and family-friendly, which makes it an easy, weatherproof option and a reliable place to find both everyday items and quality South African souvenirs, from local wine and rooibos to Cape crafts. Prices range from budget to luxury, and there's tax-free shopping for overseas visitors. Central, scenic and open every day, the Waterfront is the natural first stop for shopping in Cape Town, and pleasant to browse even if you buy nothing at all.",
   },
   {
-    name: "Greenmarket Square", slug: "greenmarket-square", image: SHO("greenmarket-square.webp"),
+    name: "Greenmarket Square", slug: "greenmarket-square", image: "/images/cape-town/shopping/mall-cape-town.webp",
     rating: 4.3, reviewCount: 14000, type: "Craft Market", area: "City Centre",
     tip: "A historic cobbled square in the City Bowl packed with African craft and curio stalls — haggling is expected. Closed Sundays.",
     filterKeys: ["markets", "souvenirs"],
@@ -501,7 +501,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Greenmarket Square is one of Cape Town's oldest public spaces — a handsome cobbled square in the heart of the City Bowl, ringed by historic buildings and shaded by trees, that has served as a market since the 18th century (and, less proudly, as a former slave market, a history the city now acknowledges). Today it's the classic place to shop for African arts, crafts and souvenirs: rows of open-air stalls sell wooden carvings and masks, beadwork and jewellery, printed fabrics and clothing, paintings, curios and trinkets from across the continent, sold by traders from South Africa and further north. Bargaining is very much part of the experience and expected, so haggle politely for the best price. The square is lively and colourful, backed by cafés and the striking Old Town House, and it's an easy, atmospheric stop while exploring the city centre on foot. As with any busy tourist market, keep an eye on your belongings and your phone. It runs Monday to Saturday and closes on Sundays. For memorable, affordable African souvenirs and a slice of Cape Town's layered history in one central, walkable spot, Greenmarket Square is the obvious choice.",
   },
   {
-    name: "The Watershed", slug: "the-watershed", image: SHO("the-watershed.webp"),
+    name: "The Watershed", slug: "the-watershed", image: "/images/cape-town/shopping/outdoor-market-cape-town.webp",
     rating: 4.5, reviewCount: 9000, type: "Design Market", area: "V&A Waterfront",
     tip: "150-plus curated stalls of South African design and craft under one roof at the Waterfront — a step up in quality from the street curio markets.",
     filterKeys: ["souvenirs", "sunday"],
@@ -510,7 +510,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The Watershed is the V&A Waterfront's craft-and-design market, a large, bright, thoughtfully curated hall that gathers more than 150 South African designers, artisans and small brands under one roof — a significant step up in quality and originality from the street curio stalls. Spread over two levels in a beautifully renovated industrial building, it showcases the best of contemporary South African creativity: fashion and accessories, jewellery, ceramics, homeware, textiles, leather goods, art and design-led souvenirs, much of it locally made and ethically produced, so you can buy genuine, high-quality pieces that support local makers. Because it's indoors, air-conditioned and part of the safe, family-friendly Waterfront precinct, it's a comfortable, hassle-free place to browse and buy, with fixed prices rather than the haggling of the outdoor markets, and staff often on hand from the brands themselves. It's the ideal spot to find distinctive gifts and keepsakes — a piece of Cape jewellery, a designer bag, local ceramics — that feel a cut above the usual souvenir. Open daily, including Sundays, and easy to combine with the rest of the Waterfront's shops, restaurants and attractions, the Watershed is Cape Town's best one-stop shop for quality South African design.",
   },
   {
-    name: "Long Street", slug: "long-street-shopping", image: SHO("long-street.webp"),
+    name: "Long Street", slug: "long-street-shopping", image: "/images/cape-town/shopping/shopping-street-cape-town.webp",
     rating: 4.4, reviewCount: 21000, type: "Vintage & Bookshops", area: "City Centre",
     tip: "The City Bowl's most characterful shopping street — Victorian buildings full of vintage clothing, antiques, records and second-hand bookshops, alongside the bars.",
     filterKeys: ["vintage", "sunday"],
@@ -519,7 +519,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Long Street is the most characterful shopping (and nightlife) street in Cape Town's City Bowl, a long, lively strip of ornate Victorian buildings with wrought-iron balconies that houses an eclectic, bohemian mix of independent shops between its bars, cafés and clubs. By day it's the place to hunt for the offbeat and second-hand: vintage clothing boutiques, antique dealers, record shops, curio and craft stores, streetwear and, famously, some of the city's best second-hand bookshops, including the wonderful multi-storey Clarke's Bookshop, a treasure trove for African literature and rare titles. It's a browsing street rather than a mall — the pleasure is in wandering, ducking into cluttered shops and turning up something unexpected — and it has a scruffy, creative, authentically urban energy quite different from the polished Waterfront. It's central and walkable, easy to combine with Greenmarket Square, the Bo-Kaap and the city's museums, and it transforms into one of Cape Town's main nightlife hubs after dark. As on any busy city street, stay aware of your belongings. For vintage finds, books, records and one-of-a-kind pieces in an atmospheric historic setting, Long Street is Cape Town's most enjoyable shopping wander.",
   },
   {
-    name: "Woodstock Exchange", slug: "woodstock-exchange", image: SHO("woodstock-exchange.webp"),
+    name: "Woodstock Exchange", slug: "woodstock-exchange", image: "/images/cape-town/shopping/souvenir-shop-cape-town.webp",
     rating: 4.5, reviewCount: 4000, type: "Concept Stores", area: "Woodstock",
     tip: "A creative hub of concept stores, studios and a café in the arty Woodstock district — design, fashion and homeware from local makers. Open Sundays.",
     filterKeys: ["souvenirs", "sunday"],
@@ -528,7 +528,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Woodstock Exchange is a stylish creative hub in the heart of Woodstock, the once-industrial, now increasingly hip district just east of the city centre that has become the focus of Cape Town's design and art scene. Housed in a converted building on Albert Road, it brings together a curated mix of concept stores, design studios, workshops and small independent brands under one roof, alongside a good café — a place to browse contemporary South African fashion, homeware, furniture, jewellery, ceramics and design-led goods, often direct from the makers who create them on site. It has a relaxed, industrial-cool feel and reflects the wider regeneration of Woodstock, which is also home to the Saturday Neighbourgoods Market at the nearby Old Biscuit Mill (a foodie institution) and a celebrated open-air street-art scene, so it's easy to make a half-day of exploring the area. Because it's a working creative community rather than a tourist market, it offers a more authentic, less souvenir-driven shopping experience, ideal for design lovers seeking something original. Open daily, including Sundays, and a short hop from the centre, Woodstock Exchange is a great stop for anyone wanting to see and buy from Cape Town's contemporary creative scene.",
   },
   {
-    name: "Oranjezicht City Farm Market", slug: "oranjezicht-city-farm-market", image: SHO("oranjezicht-farmers.webp"),
+    name: "Oranjezicht City Farm Market", slug: "oranjezicht-city-farm-market", image: "/images/cape-town/shopping/vintage-market-cape-town.webp",
     rating: 4.6, reviewCount: 7000, type: "Farmers' Market", area: "Granger Bay",
     tip: "A superb Saturday farmers' market at Granger Bay by the Waterfront — organic produce, artisanal food and street eats with mountain and sea views. Go early.",
     filterKeys: ["markets"],
@@ -546,7 +546,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Canal Walk is one of the largest shopping malls in Africa, a vast, family-oriented retail and entertainment complex at Century City, about 15 to 20 minutes north-east of central Cape Town. Under a grand, light-filled domed roof, it holds more than 400 stores across every category — international and South African fashion, electronics, homeware, beauty, sportswear, jewellery and department stores — alongside a large cinema, an extensive food court, restaurants and regular events and exhibitions, all open late until around 9pm every day. It's a modern, air-conditioned, all-in-one destination geared to serious, convenient shopping rather than atmosphere or local character, which makes it a reliable choice for a rainy day, for finding specific items or brands, or for travelling families who want everything in one place. Because it's out of the centre, most visitors reach it by car, Uber or the MyCiti bus. While it lacks the charm of the Waterfront or the city's markets, its sheer scale and range mean you'll find almost anything you need, often at competitive prices. For comprehensive, comfortable mall shopping with cinemas and dining attached, Canal Walk is Cape Town's biggest and most complete option.",
   },
   {
-    name: "Milnerton Flea Market", slug: "milnerton-flea-market", image: SHO("milnerton-flea.webp"),
+    name: "Milnerton Flea Market", slug: "milnerton-flea-market", image: "/images/cape-town/shopping/artisan-shop-cape-town.webp",
     rating: 4.2, reviewCount: 5000, type: "Flea Market", area: "Milnerton",
     tip: "Cape Town's best flea market for antiques, oddities and genuine bargains — a ramshackle weekend treasure hunt along the coast. Go early with cash.",
     filterKeys: ["markets", "vintage", "sunday"],
@@ -559,7 +559,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── With Kids (7) ─────────────────────────────────────────────────────────────
 export const WITH_KIDS: BcnPlace[] = [
   {
-    name: "Two Oceans Aquarium", slug: "two-oceans-aquarium-kids", image: KID("two-oceans-aquarium.webp"),
+    name: "Two Oceans Aquarium", slug: "two-oceans-aquarium-kids", image: "/images/cape-town/with-kids/aquarium-cape-town.webp",
     rating: 4.6, reviewCount: 34000, ageGroup: "All ages (3+)", price: "$13", area: "V&A Waterfront",
     tip: "South Africa's largest aquarium — seven exhibits, a 10-metre shark tunnel and daily penguin feeds. Indoor and air-conditioned, so it's a great rainy-day plan.",
     tiqetsUrl: tiqets("Two Oceans Aquarium Cape Town"), filterKeys: ["animals", "indoor", "toddlers"],
@@ -577,7 +577,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Boulders Beach in Simon's Town is a magical family outing — one of the few places on earth where children can watch thousands of wild penguins waddle across a beach just metres away. A colony of around 3,000 African penguins lives among the giant granite boulders here, protected within Table Mountain National Park, and raised wooden boardwalks let families walk right over and alongside the nesting birds without disturbing them, so even small children get an unforgettable close-up view. At the adjacent Foxy Beach, the sheltered, boulder-fringed shallows are calm and relatively safe for a paddle or swim, and penguins often join swimmers in the water, which delights kids of all ages. The endangered African penguin is smaller than its Antarctic cousins, with pink eye-patches, and the setting — turquoise water, big smooth rocks, comical birds — is as photogenic as it is fun. Go in the morning to beat the tour buses and see the colony at its liveliest, bring hats and sunscreen, and note the water is chilly on the Atlantic side but warmer here on False Bay. Combine it with a Cape Peninsula drive taking in Boulders, Cape Point and Chapman's Peak for a full, varied family day out.",
   },
   {
-    name: "Cape Town Science Centre", slug: "cape-town-science-centre", image: KID("cape-town-science-centre.webp"),
+    name: "Cape Town Science Centre", slug: "cape-town-science-centre", image: "/images/cape-town/with-kids/family-park-cape-town.webp",
     rating: 4.5, reviewCount: 6000, ageGroup: "4–14 years", price: "$4", area: "Observatory",
     tip: "A hands-on science museum with 250-plus interactive exhibits — robots, optical illusions and physics play. Fits about three hours and is a brilliant rainy-day option.",
     filterKeys: ["toddlers", "indoor"],
@@ -586,7 +586,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Cape Town Science Centre in Observatory is one of the city's best indoor family attractions and a genuine rainy-day saviour, built entirely around the idea of learning by doing. Across a large hall it packs in more than 250 hands-on, interactive exhibits covering physics, maths, engineering, biology and technology: children can build and test structures, play with robots and circuits, experiment with light, sound, magnets and optical illusions, and take part in the science shows and workshops that run through the day, especially in the school holidays. It's pitched squarely at curious kids from around four to fourteen, with enough variety to keep a wide age range busy for a couple of hours or more, and it's educational without ever feeling like a lesson — everything invites touching, trying and tinkering. Because it's indoors, affordable and central-ish (about ten minutes from the city centre), it's an easy, low-cost plan when the weather turns or when Table Mountain is under cloud. There's a shop with science kits and toys, and staff on hand to explain the exhibits. Allow around three hours. For an engaging, brain-stretching and budget-friendly family outing in Cape Town, the Science Centre is hard to beat.",
   },
   {
-    name: "Kirstenbosch Botanical Garden", slug: "kirstenbosch-kids", image: KID("kirstenbosch.webp"),
+    name: "Kirstenbosch Botanical Garden", slug: "kirstenbosch-kids", image: "/images/cape-town/with-kids/kids-museum-cape-town.webp",
     rating: 4.8, reviewCount: 58000, ageGroup: "All ages", price: "$5", area: "Newlands",
     tip: "528 hectares of gardens with the Boomslang treetop canopy walk, wide lawns for running and a great outdoor summer-concert scene on Sundays. Bring a picnic.",
     tiqetsUrl: tiqets("Kirstenbosch Botanical Garden Cape Town"), filterKeys: ["park", "toddlers"],
@@ -595,7 +595,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Kirstenbosch Botanical Garden is a wonderful, low-stress family day out, combining one of the world's most beautiful gardens with acres of space for children to roam. Spread across 528 hectares on Table Mountain's eastern slopes, it has broad, gently sloping lawns perfect for running, picnicking and rolling, wide easy paths for pushchairs, and enough variety to keep families happy for hours. The star feature for kids is the Boomslang canopy walkway, a curving 130-metre steel bridge that snakes through the treetops 12 metres above the ground, giving a gentle thrill and great views — included in the entry price. There are also fragrance and useful-plant gardens to touch and smell, streams, sculpture, birdlife and a good café and shop. In summer (December to March), the famous Sunday sunset concerts turn the natural grass amphitheatre into a relaxed, family-friendly picnic party with music, blankets and children playing on the lawns as the sun goes down — a lovely, quintessentially Cape Town experience. Bring a picnic, hats and sunscreen, allow a few hours, and combine it with the surrounding Constantia and Newlands area. Beautiful, spacious and affordable, Kirstenbosch is one of the best places in Cape Town to relax outdoors with children.",
   },
   {
-    name: "Table Mountain Cableway", slug: "table-mountain-cableway-kids", image: KID("taffelberget.webp"),
+    name: "Table Mountain Cableway", slug: "table-mountain-cableway-kids", image: "/images/cape-town/with-kids/tibidabo-cape-town.webp",
     rating: 4.9, reviewCount: 96000, ageGroup: "All ages (5+)", price: "$21", area: "Table Mountain",
     tip: "The five-minute cableway ride to the 1,086-metre summit is a big hit with kids, with a revolving car and 360-degree views. Level paths up top make it easy for families. It closes in high wind.",
     tiqetsUrl: tiqets("Table Mountain cableway Cape Town"), filterKeys: ["park", "toddlers"],
@@ -604,7 +604,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Riding the cableway to the top of Table Mountain is a highlight for children and adults alike, and one of the easiest ways for families to enjoy the city's greatest natural landmark. The cable car glides from the Lower Cable Station up to the 1,086-metre summit in about five minutes, and its floor slowly rotates as it climbs, giving everyone on board a full 360-degree view over the city, the coast and the ocean — a genuine thrill for kids without any of the effort of the hike. At the top, level, well-made pathways loop around the plateau, making it easy to explore with children (though not ideal for pushchairs on the rougher sections), with lookout points over Robben Island, Lion's Head, Camps Bay and the Cape Peninsula, plus a café and toilets. Rock hyraxes (dassies) sun themselves on the rocks and are a hit with younger visitors. Because the cableway only runs in calm, clear conditions and closes on windy or very cloudy days, check the status the same morning and go early before the midday cloud rolls in. Book online to skip the queue. For an unforgettable, effortless family adventure with jaw-dropping views, the Table Mountain cableway is a Cape Town must.",
   },
   {
-    name: "World of Birds", slug: "world-of-birds", image: KID("world-of-birds.webp"),
+    name: "World of Birds", slug: "world-of-birds", image: "/images/cape-town/with-kids/zoo-cape-town.webp",
     rating: 4.5, reviewCount: 8000, ageGroup: "All ages (3+)", price: "$9", area: "Hout Bay",
     tip: "Africa's largest bird park — 3,000 birds and small primates in 100 walk-through aviaries. About two hours, and 30 minutes south of the centre.",
     filterKeys: ["animals", "toddlers"],
@@ -613,7 +613,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "World of Birds in Hout Bay is the largest bird park in Africa and a lovely, low-key family outing, home to around 3,000 birds and small animals across roughly 100 large landscaped aviaries. What makes it special for children is that many of the aviaries are walk-through, so families step right inside and wander among the free-flying birds — from flamingos, cranes, owls and birds of prey to colourful parrots and tiny finches — for a close, immersive encounter that's far more engaging than looking through bars. Alongside the birds, the park keeps small primates and other creatures, including its famous squirrel monkeys, and there's a popular 'Monkey Jungle' where, at set times, visitors can sit among the playful monkeys. Shady paths, gardens, a café and picnic spots make it easy and relaxed to explore at a toddler's pace, and the whole visit takes around two hours. Set in Hout Bay about 30 minutes south of the city, it combines well with the harbour, a seal-island boat trip or a drive along Chapman's Peak. Affordable, hands-on and gently educational, World of Birds is a charming, crowd-free alternative to the bigger attractions and a reliable hit with younger children.",
   },
   {
-    name: "Camps Bay Beach", slug: "camps-bay-beach-kids", image: KID("camps-bay-strand.webp"),
+    name: "Camps Bay Beach", slug: "camps-bay-beach-kids", image: "/images/cape-town/with-kids/aquarium-cape-town.webp",
     rating: 4.7, reviewCount: 47000, ageGroup: "All ages", price: "Free", area: "Camps Bay",
     tip: "Cape Town's most photogenic beach — white sand under the Twelve Apostles, with a tidal pool and grassy lawns. The Atlantic water is cold (about 14°C), so it's more for building sandcastles than swimming.",
     filterKeys: ["beach", "toddlers"],
@@ -635,7 +635,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Stellenbosch is the capital of the Cape Winelands and the classic day trip from Cape Town — South Africa's second-oldest town, founded in 1679, set among more than 200 wine estates within a 30-km radius. Its historic core is beautifully preserved, with whitewashed, gabled Cape Dutch buildings, oak-lined streets and a lively university-town energy, making the town itself worth a wander alongside the wineries. A typical day mixes tastings at three or four estates — Spier, Boschendal, Tokara, Delaire Graff and Kanonkop are among the classics — with a long lunch on a wine farm (Babylonstoren is famously photogenic) and time to stroll the town. The estates are set against gorgeous mountain-and-vineyard scenery, and many pair their wines with cheese, chocolate or full restaurant menus. You can drive yourself in about 45 minutes (South Africa drives on the left, and roads are good), but a guided wine tour, from around $43 per person, is the relaxed, safe choice since it includes transport, lunch and tastings so nobody has to worry about driving after wine. Don't miss neighbouring Franschhoek and its hop-on-hop-off Wine Tram. For beautiful scenery, superb wine and food, and a taste of historic South Africa, the Stellenbosch winelands are an unmissable day out.",
   },
   {
-    name: "Franschhoek & the Wine Tram", slug: "franschhoek", image: DAG("franschhoek.webp"),
+    name: "Franschhoek & the Wine Tram", slug: "franschhoek", image: "/images/cape-town/day-trips/costa-brava-landscape-cape-town.webp",
     rating: 4.8, reviewCount: 38000, distance: "75 km E", duration: "Full day", area: "Franschhoek",
     tip: "This French Huguenot village (founded 1688) has the region's best restaurants and the Wine Tram, a hop-on-hop-off tram-and-bus that links nine estates so no one has to drive.",
     tiqetsUrl: tiqets("Franschhoek Wine Tram"), filterKeys: ["wine"],
@@ -644,7 +644,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Franschhoek, an hour east of Cape Town, is the most romantic and gastronomic corner of the Cape Winelands — a small, exquisitely pretty village founded in 1688 by French Huguenot refugees, whose legacy lives on in the estate names, the food culture and the town's proud culinary reputation. Ringed by dramatic mountains and vineyards, its handsome main street is lined with art galleries, boutiques and some of South Africa's most acclaimed restaurants, making it a foodie destination as much as a wine one. The undisputed star attraction is the Franschhoek Wine Tram, a hop-on-hop-off open-sided tram and tram-bus that trundles between nine wine estates along the valley, letting you taste your way around the region at your own pace without anyone having to drive — a brilliant, relaxed and safe way to spend a day among the vineyards. Beyond the tram, the town rewards a wander, and La Petite Ferme and the historic Boschendal estate are highlights. It works as a day trip in its own right or combined with neighbouring Stellenbosch, just 15 minutes away. Book Wine Tram tickets in advance, as popular lines sell out. For beautiful scenery, superb food and effortless wine-tasting, Franschhoek is a Cape Town day trip to savour.",
   },
   {
-    name: "Hermanus Whale Watching", slug: "hermanus-whale-watching", image: DAG("hermanus-valar.webp"),
+    name: "Hermanus Whale Watching", slug: "hermanus-whale-watching", image: "/images/cape-town/day-trips/girona-cape-town.webp",
     rating: 4.7, reviewCount: 21000, distance: "120 km SE", duration: "Full day", area: "Hermanus (Walker Bay)",
     tip: "The world's best land-based whale watching, from May to December — southern right whales (up to 50 tonnes) come into Walker Bay. A 12-km cliff path follows the coast; boat trips get you closer.",
     filterKeys: ["water"],
@@ -653,7 +653,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Hermanus, on Walker Bay about 90 minutes to two hours south-east of Cape Town, is renowned as one of the best places in the world to watch whales from dry land. Between roughly May and December, southern right whales migrate up from Antarctic waters to calve and mate in the sheltered bay, coming remarkably close to shore — often just metres from the cliffs — where you can watch these 50-tonne giants breach, spy-hop and slap their tails without ever setting foot on a boat. A 12-km cliff path traces the coastline through the town, dotted with viewpoints and benches, and Hermanus even has a 'whale crier' who blows a kelp horn to signal where whales have been spotted. The town itself is a pleasant seaside resort with good restaurants, craft shops and a laid-back feel, and the surrounding Hemel-en-Aarde valley is a rising wine region worth a detour. For an even closer encounter, licensed boat trips (around $50) take you out onto the bay. Outside whale season it remains an enjoyable coastal day trip. It's an easy, rewarding drive or organised tour from Cape Town, and in season it's genuinely one of the great wildlife experiences you can have without a safari.",
   },
   {
-    name: "Gansbaai Shark Cage Diving", slug: "gansbaai-shark-cage-diving", image: DAG("hajdykning-gansbaai.webp"),
+    name: "Gansbaai Shark Cage Diving", slug: "gansbaai-shark-cage-diving", image: "/images/cape-town/day-trips/montserrat-cape-town.webp",
     rating: 4.6, reviewCount: 12000, distance: "160 km SE", duration: "Full day", area: "Gansbaai",
     tip: "Some of the world's best cage diving with great whites and copper sharks, run by operators like Marine Dynamics and Shark Lady. Season roughly April to October, peaking July–September.",
     filterKeys: ["water", "nature"],
@@ -693,7 +693,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Camps Bay is Cape Town's most glamorous and photographed beach — a kilometre of soft white sand facing the Atlantic, framed by the twelve rocky peaks of the Twelve Apostles range and backed by a palm-lined promenade of fashionable restaurants and cocktail bars. It's the city's see-and-be-seen beach, buzzing on summer weekends with sunbathers, celebrities and visitors, and its restaurant strip along Victoria Road makes it as much an eating-and-drinking destination as a swimming one. The catch is the water: the Benguela current keeps the Atlantic here bracingly cold at 14 to 17°C year round, so it's better for paddling, sunbathing and sundowners than long swims, though a sheltered tidal pool at the southern end offers safer, warmer bathing for children. The setting, especially at sunset when the light turns the mountains gold and the sky pink over the sea, is simply spectacular. Amenities are excellent, with lifeguards in summer, grassy lawns behind the sand, and everything you need on the strip behind. It can get windy and very busy on peak days, so go early for space or late for the sunset. Beautiful, lively and superbly equipped, Camps Bay is the quintessential Cape Town beach.",
   },
   {
-    name: "Clifton 4th Beach", slug: "clifton-4th-beach", image: BEA("clifton-4th-beach.webp"),
+    name: "Clifton 4th Beach", slug: "clifton-4th-beach", image: "/images/cape-town/beaches/barceloneta-cape-town.webp",
     rating: 4.7, reviewCount: 29000, area: "Clifton (10 min)", facilities: "Sheltered, white sand, lifeguards",
     tip: "The most family-friendly of Clifton's four coves — white sand, granite boulders sheltering it from the wind and calmer water. Five minutes by taxi from Camps Bay.",
     filterKeys: ["atlantic", "family"],
@@ -720,7 +720,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Muizenberg, on the warmer False Bay side of the peninsula about 45 minutes from the city, is Cape Town's surf capital and one of its most family-friendly beaches. A long, wide, gently shelving stretch of white sand meets consistent, forgiving waves that are ideal for beginners, and the beachfront is lined with surf schools and board-hire shops offering lessons from around $11 — making this the place to catch your first wave. The water, warmed by the Indian Ocean's Agulhas current, is far more swimmable than the Atlantic side, at 16 to 22°C, and lifeguards patrol in season, so it's a reassuring choice for families and swimmers as well as surfers. The beach is fronted by the famous 'Surfer's Corner' and a photogenic row of brightly painted Victorian bathing huts in rainbow colours — one of Cape Town's most Instagrammed sights — behind which sits a relaxed strip of cafés, ice-cream shops and surf stores. The wider Muizenberg village has a laid-back, slightly bohemian seaside feel and is easily reached by the scenic False Bay train line. Warm(er) water, easy waves, good facilities and buckets of charm make Muizenberg the most all-round enjoyable swimming-and-surfing beach near Cape Town.",
   },
   {
-    name: "Llandudno", slug: "llandudno", image: BEA("llandudno.webp"),
+    name: "Llandudno", slug: "llandudno", image: "/images/cape-town/beaches/beach-bar-cape-town.webp",
     rating: 4.7, reviewCount: 14000, area: "Llandudno (20 min)", facilities: "Undeveloped, dramatic cliffs, sunset spot",
     tip: "The quietest, most unspoilt of the Atlantic Seaboard beaches — no development on the sand, dramatic granite cliffs and a legendary sunset. Bring your own water and snacks.",
     filterKeys: ["atlantic"],
@@ -738,7 +738,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Noordhoek Beach, also known as Long Beach, is Cape Town's longest and one of its wildest and most spectacular stretches of sand — an eight-kilometre sweep of pale beach backed by dunes and wetlands at the southern foot of Chapman's Peak, about 35 minutes south of the city. Reached via the breathtaking Chapman's Peak Drive from Hout Bay, or over the pass from the south, it's a huge, open, largely undeveloped expanse where you can walk for miles with the wind and surf and barely see another soul, a complete contrast to the manicured Camps Bay. It's famous for horse riding along the sand — several stables offer beach rides from around $19 an hour, a magical way to experience the setting — and for the wreck of the SS Kakapo, a steamer beached here in 1900, whose rusting remains poke through the sand. The Atlantic water is cold and the beach is exposed, with strong currents and no lifeguards, so it's better suited to walking, riding, kite-flying and photography than swimming. The nearby Noordhoek Farm Village offers cafés, shops and a relaxed country feel. Vast, dramatic and gloriously uncrowded, Noordhoek is the beach to head for when you want wild, open nature.",
   },
   {
-    name: "Kalk Bay", slug: "kalk-bay-beach", image: BEA("kalk-bay.webp"),
+    name: "Kalk Bay", slug: "kalk-bay-beach", image: "/images/cape-town/beaches/beach-sunset-cape-town.webp",
     rating: 4.5, reviewCount: 12000, area: "Kalk Bay (40 min)", facilities: "Working harbour, tidal pools, cafés & shops",
     tip: "A charming False Bay fishing village with a working harbour, tidal pools and a vibrant café-and-antiques strip. The famous Kalky's serves fish and chips right on the quay.",
     filterKeys: ["falsebay"],

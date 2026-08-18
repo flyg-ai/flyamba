@@ -99,14 +99,14 @@ const NON_STOP = [
 const CATEGORY_IMAGES: Record<string, string> = {
   attractions: "/images/amsterdam/sevardheter/rijksmuseum.webp",
   restaurants: "/images/amsterdam/restauranger/moeders.webp",
-  hotels: "/images/amsterdam/hotell/pulitzer-amsterdam.webp",
+  hotels: "/images/amsterdam/hotels/hotel-amsterdam.avif",
   transport: "/images/amsterdam/sevardheter/canal-ring.webp",
   prices: "/images/amsterdam/sevardheter/dam-torget.webp",
   weather: "/images/amsterdam/sevardheter/vondelpark.webp",
   shopping: "/images/amsterdam/shopping/de-negen-straatjes.webp",
-  nightlife: "/images/amsterdam/nattliv/paradiso.webp",
+  nightlife: "/images/amsterdam/nightlife/cocktail-bar-amsterdam.webp",
   "with-kids": "/images/amsterdam/med-barn/artis-zoo.webp",
-  "day-trips": "/images/amsterdam/dagsutflykter/zaanse-schans.webp",
+  "day-trips": "/images/amsterdam/day-trips/costa-brava-landscape-amsterdam.webp",
   events: "/images/amsterdam/sevardheter/jordaan-kvarteret.webp",
 };
 
@@ -121,8 +121,8 @@ const EAT_PREVIEW = [
   { name: "De Kas", blurb: "Farm-to-table dining inside a working greenhouse.", image: "/images/amsterdam/restauranger/de-kas.webp" },
 ];
 const TRIP_PREVIEW = [
-  { name: "Zaanse Schans", blurb: "Working windmills and wooden houses, 20 min away.", image: "/images/amsterdam/dagsutflykter/zaanse-schans.webp" },
-  { name: "Keukenhof", blurb: "The world's greatest tulip garden (spring only).", image: "/images/amsterdam/dagsutflykter/keukenhof-mars-maj.webp" },
+  { name: "Zaanse Schans", blurb: "Working windmills and wooden houses, 20 min away.", image: "/images/amsterdam/day-trips/girona-amsterdam.webp" },
+  { name: "Keukenhof", blurb: "The world's greatest tulip garden (spring only).", image: "/images/amsterdam/day-trips/montserrat-amsterdam.webp" },
   { name: "Giethoorn", blurb: "The car-free 'Venice of the North'.", image: "/images/amsterdam/dagsutflykter/giethoorn.webp" },
 ];
 

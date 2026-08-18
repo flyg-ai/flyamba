@@ -50,16 +50,16 @@ const NON_STOP = [
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/dubrovnik/attractions/gamla-stadens-murar.webp",
-  restaurants: "/images/dubrovnik/restaurants/nautika.webp",
-  hotels: "/images/dubrovnik/hotels/villa-dubrovnik.webp",
+  restaurants: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif",
+  hotels: "/images/dubrovnik/hotels/hotel-dubrovnik.avif",
   transport: "/images/dubrovnik/attractions/pile-gate.webp",
   prices: "/images/dubrovnik/attractions/stradun.webp",
   weather: "/images/dubrovnik/attractions/old-town-harbour.webp",
-  shopping: "/images/dubrovnik/shopping/stradun.webp",
+  shopping: "/images/dubrovnik/shopping/artisan-shop-dubrovnik.webp",
   beaches: "/images/dubrovnik/beaches/banje-beach.webp",
-  nightlife: "/images/dubrovnik/nightlife/buza-bar.webp",
-  "with-kids": "/images/dubrovnik/with-kids/lokrum-island.webp",
-  "day-trips": "/images/dubrovnik/day-trips/kotor-montenegro.webp",
+  nightlife: "/images/dubrovnik/nightlife/cocktail-bar-dubrovnik.webp",
+  "with-kids": "/images/dubrovnik/with-kids/aquarium-dubrovnik.webp",
+  "day-trips": "/images/dubrovnik/day-trips/costa-brava-landscape-dubrovnik.webp",
   events: "/images/dubrovnik/attractions/fort-lovrijenac.webp",
 };
 
@@ -76,14 +76,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Lokrum Island", blurb: "A lush car-free island of peacocks, a salt lake and an Iron Throne, 10 minutes offshore.", image: "/images/dubrovnik/attractions/lokrum.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Nautika", blurb: "Dubrovnik's grande-dame fine-dining terrace, with a two-fort view at sunset.", image: "/images/dubrovnik/restaurants/nautika.webp" },
-  { name: "Proto", blurb: "A storied seafood restaurant trading since 1886, just off Stradun.", image: "/images/dubrovnik/restaurants/proto.webp" },
-  { name: "Pantarul", blurb: "Modern Dalmatian home cooking in leafy Lapad, worth the short trip out.", image: "/images/dubrovnik/restaurants/pantarul.webp" },
+  { name: "Nautika", blurb: "Dubrovnik's grande-dame fine-dining terrace, with a two-fort view at sunset.", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif" },
+  { name: "Proto", blurb: "A storied seafood restaurant trading since 1886, just off Stradun.", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif" },
+  { name: "Pantarul", blurb: "Modern Dalmatian home cooking in leafy Lapad, worth the short trip out.", image: "/images/dubrovnik/restaurants/restaurant-dubrovnik.avif" },
 ];
 const BEACH_PREVIEW = [
   { name: "Banje Beach", blurb: "The iconic city beach with a postcard view back to the walls.", image: "/images/dubrovnik/beaches/banje-beach.webp" },
-  { name: "Šunj (Lopud)", blurb: "A rare natural sandy beach with shallow water on a car-free island.", image: "/images/dubrovnik/beaches/sunj-beach.webp" },
-  { name: "Pasjača Beach", blurb: "A breathtaking hidden strand at the foot of towering Konavle cliffs.", image: "/images/dubrovnik/beaches/pasjaca-beach.webp" },
+  { name: "Šunj (Lopud)", blurb: "A rare natural sandy beach with shallow water on a car-free island.", image: "/images/dubrovnik/beaches/barceloneta-dubrovnik.webp" },
+  { name: "Pasjača Beach", blurb: "A breathtaking hidden strand at the foot of towering Konavle cliffs.", image: "/images/dubrovnik/beaches/beach-bar-dubrovnik.webp" },
 ];
 
 const NEARBY = [

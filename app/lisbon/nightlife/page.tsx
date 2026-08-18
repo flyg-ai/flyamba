@@ -53,7 +53,7 @@ export default function LisbonNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Lisbon Nightlife"
-      heroImage="/images/lisbon/nattliv/park-bar.webp"
+      heroImage="/images/lisbon/nightlife/cocktail-bar-lisbon.webp"
       intro="Lisbon goes out late and goes out well. The night starts with sundowners at a hidden rooftop bar, rolls into the roaming street party of Bairro Alto and the pink-painted lanes of Cais do Sodré, and — for the committed — ends at dawn on the riverside terrace of Lux Frágil. Between it all runs the soulful thread of fado, sung in tiny taverns across Alfama and Bairro Alto. Here's where to drink, dance and listen, from cocktail curiosities to the city's best clubs."
       wide
     >

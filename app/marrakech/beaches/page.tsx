@@ -54,7 +54,7 @@ export default function MarrakechBeaches() {
       active="beaches"
       crumb="Beaches"
       h1="Beaches near Marrakech & the Atlantic Coast"
-      heroImage="/images/marrakech/strander/essaouira-beach.webp"
+      heroImage="/images/marrakech/beaches/barceloneta-marrakech.webp"
       intro="Marrakech itself sits well inland, on a plain between the desert and the mountains, so it has no beach of its own — but Morocco's wild Atlantic coast is close enough for a day trip or an easy overnight. Head west for the breezy, walled port of Essaouira; south for the surf villages of Taghazout and Sidi Kaouki and the family resort of Agadir; or to the calm lagoons of Oualidia and the historic sands of El Jadida. This guide covers the best coastal escapes within reach of the Red City, with driving times, how to get there and what each shore is really like."
       wide
     >

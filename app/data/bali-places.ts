@@ -265,7 +265,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Beaches (8) ───────────────────────────────────────────────────────────────
 export const BEACHES: BcnPlace[] = [
   {
-    name: "Nusa Dua Beach", slug: "nusa-dua-beach", image: BEA("nusa-dua-beach.webp"),
+    name: "Nusa Dua Beach", slug: "nusa-dua-beach", image: "/images/bali/beaches/barceloneta-bali.webp",
     rating: 4.5, reviewCount: 24000, price: "Free", area: "Nusa Dua", facilities: "Full",
     tip: "Calm resort setting — safe for children, with lifeguards, sun loungers and water sports on tap.",
     filterKeys: ["calm", "family", "facilities"],
@@ -274,7 +274,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Nusa Dua Beach is Bali's most polished and protected stretch of sand, set within the island's gated luxury-resort enclave on the southeastern Bukit Peninsula. Unlike the powerful surf beaches of the west coast, the water here is calm and clear, sheltered by an offshore reef, which makes it genuinely safe for swimming and ideal for families with young children. The sand is soft and white, the beachfront is immaculately kept, and a paved coastal promenade links the big resorts, making it easy to stroll between hotels, cafés and water-sports operators. You'll find everything on hand: lifeguards, sun loungers, parasols, jet skis, banana boats, snorkelling trips and beachside massages. It's more manicured and less characterful than Bali's bohemian beaches — this is polished resort territory rather than raw local life — but for a relaxed, hassle-free day by safe water, it's hard to beat. Combine a swim with a walk to the nearby Water Blow, where waves crash spectacularly through a rocky gap, and you have an easy, comfortable beach day suited to all ages.",
   },
   {
-    name: "Seminyak Beach", slug: "seminyak-beach-beaches", image: BEA("seminyak-beach.webp"),
+    name: "Seminyak Beach", slug: "seminyak-beach-beaches", image: "/images/bali/beaches/beach-bar-bali.webp",
     rating: 4.4, reviewCount: 48000, price: "Free", area: "Seminyak", facilities: "Full",
     tip: "The place for sunsets and beach clubs — grab a bean bag at Potato Head or Ku De Ta as the sun drops.",
     filterKeys: ["lively", "facilities"],
@@ -283,7 +283,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Seminyak Beach is the social heart of upscale Bali — a five-kilometre golden strand backed by the island's most famous beach clubs, boutiques and restaurants. It's wide, walkable and best known for its sunsets, when the whole crowd migrates to bean bags and infinity pools at icons like Potato Head Beach Club (built from 6,600 recycled window shutters) and Ku De Ta for cocktails as the sun sinks into the Indian Ocean. During the day it's a lively, stylish scene of surfers, sunbathers, vendors and beach masseuses, with plenty of loungers and warungs along the sand. Be aware, though, that the surf is powerful and the rip currents genuinely dangerous, so swimming is only advisable where lifeguards patrol — the pools at the beach clubs are the safer bet for a dip. For atmosphere, people-watching and that quintessential Bali sunset-drink ritual, Seminyak Beach delivers better than anywhere. Come mid-afternoon to claim a good spot, stay for the golden hour, and let the DJ sets carry you into the evening.",
   },
   {
-    name: "Jimbaran Bay", slug: "jimbaran-bay", image: BEA("jimbaran-bay.webp"),
+    name: "Jimbaran Bay", slug: "jimbaran-bay", image: "/images/bali/beaches/beach-sunset-bali.webp",
     rating: 4.5, reviewCount: 26000, price: "Free", area: "Jimbaran", facilities: "Full",
     tip: "Come at dusk for the famous grilled-seafood dinner — dozens of restaurants set tables right on the sand as the sun sets.",
     filterKeys: ["calm", "facilities", "family"],
@@ -292,7 +292,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Jimbaran Bay is a long, sheltered crescent of pale sand on the neck of the Bukit Peninsula, best known for one thing: its sunset seafood dinners. As evening falls, dozens of beachfront restaurants set out tables and candles directly on the sand, and you choose your fresh fish, prawns, lobster and squid by weight before it's grilled over coconut husks and served with rice, sambal and lime — all with your feet in the sand and the sun sinking into the sea. It's one of Bali's most romantic and memorable meals. By day the bay is calmer than the west-coast surf beaches, making it reasonable for a swim, and the working fishing beach at the northern end, where colourful jukung boats land the morning catch and the lively fish market trades, is worth a wander. Home to several luxury resorts, Jimbaran balances resort comfort with authentic fishing-village character. Come for a lazy afternoon on the sand, then stay for that legendary barefoot seafood feast as the sky turns orange — it's an essential Bali experience.",
   },
   {
-    name: "Padang Padang", slug: "padang-padang", image: BEA("padang-padang.webp"),
+    name: "Padang Padang", slug: "padang-padang", image: "/images/bali/beaches/costa-brava-bali.webp",
     rating: 4.5, reviewCount: 21000, price: "$1", area: "Uluwatu", facilities: "Partial",
     tip: "A tiny, pretty cove reached through a gap in the rocks — famous as an 'Eat Pray Love' filming location. Go early; it's small and fills up fast.",
     filterKeys: ["calm", "facilities"],
@@ -301,7 +301,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Padang Padang (officially Pantai Labuan Sait) is one of Bali's prettiest small beaches, tucked into the cliffs of the Bukit Peninsula near Uluwatu. Its charm is in the arrival: you descend a steep stone staircase and squeeze through a narrow cleft between huge boulders before the little cove suddenly opens up — a compact crescent of soft white sand hemmed by rocks and clear turquoise water. It gained fame as a filming location for the Julia Roberts movie 'Eat Pray Love', and it's a lovely spot to swim and sunbathe, calmer and more sheltered than many south-coast beaches. Just offshore lies one of Bali's most revered surf breaks — a fast, barrelling left-hander that draws expert surfers and hosts international competitions, so it's a great place to watch the pros even if you don't paddle out yourself. Because the beach is genuinely small, it fills quickly; arrive early in the day to claim space on the sand, bring water and sunscreen, and enjoy one of the island's most photogenic little coves before the afternoon crowds arrive.",
   },
   {
-    name: "Kuta Beach", slug: "kuta-beach", image: BEA("kuta-beach.webp"),
+    name: "Kuta Beach", slug: "kuta-beach", image: "/images/bali/beaches/family-beach-bali.webp",
     rating: 4.2, reviewCount: 66000, price: "Free", area: "Kuta", facilities: "Full",
     tip: "The classic spot to learn to surf — gentle, even waves, soft sand and cheap lessons everywhere. A backpacker institution.",
     filterKeys: ["lively", "facilities"],
@@ -310,7 +310,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Kuta Beach is where Bali's tourism story began — the long, sweeping strand where Australian surfers first discovered forgiving beginner waves in the 1970s, and still the island's most famous (and busiest) beach. Its 2.5 kilometres of grey-gold sand meet even, rolling waves breaking over a soft sandy bottom, which makes it the classic place to take your first surf lesson; local surf schools line the beach offering board hire and cheap tuition. The scene is loud, lively and unpretentious — vendors, masseuses, sunbathers and hundreds of learner surfers — and the sunsets are genuinely spectacular, drawing crowds to the beach bars each evening. It's not the place for tranquillity or pristine nature, and the water quality can suffer in the wet season, but for energy, people-watching, an easy surf lesson and a sundowner, Kuta remains a rite of passage. Everything you need is right behind the sand: bars, malls, cheap eats and the moving Bali Bombing Memorial on nearby Jalan Legian. Come to learn to surf, watch the sun go down, and soak up Bali's original beach-party atmosphere.",
   },
   {
-    name: "Echo Beach", slug: "echo-beach", image: BEA("echo-beach.webp"),
+    name: "Echo Beach", slug: "echo-beach", image: "/images/bali/beaches/mediterranean-beach-bali.webp",
     rating: 4.4, reviewCount: 18000, price: "Free", area: "Canggu", facilities: "Partial",
     tip: "Canggu's cool surf-and-sunset beach — black volcanic sand, a reef break for intermediates and a strip of beach bars behind.",
     filterKeys: ["lively", "facilities"],
@@ -328,7 +328,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Bias Tugel (also called Blue Lagoon's little sister or 'Little Virgin Beach') is a hidden gem near the ferry port of Padang Bai in eastern Bali — a small, secluded cove of soft white sand and clear turquoise water that feels a world away from the island's busier resorts. Reaching it is part of the appeal: you park near Padang Bai and walk about 15 minutes over the rocky headland along a rough path, which keeps the crowds away and the atmosphere blissfully quiet. There are only a couple of simple warungs selling drinks, coconuts and basic snacks, and no loungers or lifeguards, so come prepared with your own water, sunscreen and shade. The swimming is decent when the sea is calm, though waves and currents can pick up, so take care. With its powdery sand, framing cliffs and away-from-it-all feel, Bias Tugel is perfect for travellers who want a slice of untouched, low-key Bali beach — bring a picnic, a book and a sense of adventure, and you'll likely have this pretty cove almost to yourself.",
   },
   {
-    name: "Nusa Penida — Kelingking", slug: "kelingking-beach", image: BEA("nusa-penida-kelingking.webp"),
+    name: "Nusa Penida — Kelingking", slug: "kelingking-beach", image: "/images/bali/beaches/barceloneta-bali.webp",
     rating: 4.7, reviewCount: 39000, price: "$1", area: "Nusa Penida", facilities: "None",
     tip: "The T-Rex-shaped cliff is Bali's most famous view — reached by a 45-minute boat and a rough drive. The climb down to the sand is steep and slippery; many just admire it from the top.",
     filterKeys: ["calm", "day-trip"],
@@ -341,7 +341,7 @@ export const BEACHES: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Locavore", slug: "locavore", image: RES("locavore.webp"),
+    name: "Locavore", slug: "locavore", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.7, reviewCount: 4500, price: "$$$", area: "Ubud", type: "Fine Dining",
     tip: "A Michelin-recognised, farm-to-table tasting-menu destination — book weeks ahead.",
     filterKeys: ["fine-dining", "romantic"],
@@ -350,7 +350,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Locavore is the restaurant that put Ubud — and arguably Bali — on the international fine-dining map. As its name suggests, the kitchen is built around a rigorous local-and-foraged philosophy, sourcing almost everything from Indonesian farmers, fishermen and its own network of growers, then transforming it into intricate, playful, multi-course tasting menus that have earned it a place among Asia's most acclaimed tables. Expect a long, theatrical procession of small, beautifully composed plates showcasing ingredients you've likely never encountered, matched with thoughtful wine or a non-alcoholic 'juice pairing' of house ferments and infusions, all delivered with polished, knowledgeable service in a sleek open-kitchen setting. It's a genuine destination-dining experience — an event to plan your Ubud trip around rather than a casual drop-in — and reservations are essential, often needed weeks in advance. It's not cheap by Bali standards, but for the creativity, the sustainability ethos and the sheer level of the cooking, it's superb value against comparable restaurants worldwide. For food lovers, a meal at Locavore is one of the highlights of a trip to Bali.",
   },
   {
-    name: "Mama San", slug: "mama-san", image: RES("mama-san.webp"),
+    name: "Mama San", slug: "mama-san", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.5, reviewCount: 6000, price: "$$", area: "Seminyak", type: "Asian Fusion",
     tip: "Chef Will Meyrick's glamorous 1920s Shanghai-style room, serving bold pan-Asian street food.",
     filterKeys: ["local", "romantic"],
@@ -359,7 +359,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Mama San is one of Seminyak's most stylish and enduringly popular restaurants, the creation of celebrated chef Will Meyrick, who built his reputation travelling Asia's markets and hawker stalls in search of authentic street food. The result is a menu of bold, punchy, pan-Asian dishes — spanning Thai, Vietnamese, Chinese, Indian and Indonesian influences — reworked with real skill and served in generous, shareable portions perfect for a group. The setting is a huge part of the appeal: a glamorous, dimly lit two-storey space evoking a 1920s Shanghai supper club, all leather banquettes, warm lighting and a buzzing cocktail bar upstairs. It's atmospheric enough for a special dinner or date yet relaxed and lively rather than stuffy, which is why it stays busy year after year. The cocktails are excellent and the vibe convivial, making it a great spot to settle in for the evening. Reservations are recommended, especially at weekends. For inventive, flavour-packed Asian cooking in one of Seminyak's most seductive rooms, Mama San is a reliable and thoroughly enjoyable choice.",
   },
   {
-    name: "Warung Babi Guling Ibu Oka", slug: "ibu-oka", image: RES("warung-babi-guling-ibu-oka.webp"),
+    name: "Warung Babi Guling Ibu Oka", slug: "ibu-oka", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.4, reviewCount: 9000, price: "$", area: "Ubud", type: "Balinese Classic",
     tip: "The island's most famous babi guling (Balinese roast suckling pig), served since 1970 — go early before it sells out.",
     filterKeys: ["budget", "local"],
@@ -368,7 +368,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Warung Babi Guling Ibu Oka is an Ubud institution and the most famous place on the island to try babi guling — the Balinese ceremonial dish of spit-roast suckling pig, rubbed with a rich paste of turmeric, garlic, ginger, chilli and lemongrass, and slow-roasted until the skin turns to glassy crackling. Serving since 1970 and made internationally famous by Anthony Bourdain, it dishes up a classic plate of tender pork, crispy skin, spiced vegetables, blood sausage and rice that captures the essence of Balinese home cooking. This is a no-frills warung experience — simple surrounds, communal energy, and food that sells out by early afternoon, so it pays to arrive around lunchtime rather than late. It's cheap, generous and utterly authentic, a world away from Seminyak's polished dining rooms, and eating here is as much a cultural experience as a meal. Note that babi guling is pork, so it isn't halal. For a genuine, affordable taste of Bali's most iconic dish in the town that does it best, Ibu Oka is a must — just come hungry and come early.",
   },
   {
-    name: "Naughty Nuri's", slug: "naughty-nuris", image: RES("naughty-nuris.webp"),
+    name: "Naughty Nuri's", slug: "naughty-nuris", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.4, reviewCount: 12000, price: "$", area: "Ubud", type: "BBQ Ribs",
     tip: "Legendary barbecue pork ribs and famously strong, cheap martinis — casual, lively and great for groups.",
     filterKeys: ["budget", "family"],
@@ -377,7 +377,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Naughty Nuri's Warung is one of Ubud's most beloved and boisterous eateries, a smoky roadside grill house that has built a cult following on two things: its barbecue pork ribs and its famously strong, cheap martinis. The ribs are the star — marinated, slow-cooked and finished over a charcoal grill out front, they arrive sticky, tender and generously portioned, and they've drawn a devoted crowd of locals, expats and travellers (and a few celebrity chefs) for years. Pair them with the legendary martini, shaken hard and poured stiff for just a few dollars, and you have the makings of a raucous, feel-good night. The setting is deliberately casual and rough-around-the-edges: communal tables, a lively open-grill atmosphere and a soundtrack of chatter and clinking glasses, making it perfect for groups and families after a fun, unpretentious meal rather than a refined one. It gets busy and can be smoky, which is all part of the charm. There are now several branches, but the original on Jalan Raya Sanggingan set the template. For ribs, martinis and a great time, Naughty Nuri's is an Ubud rite of passage.",
   },
   {
-    name: "Merah Putih", slug: "merah-putih", image: RES("merah-putih.webp"),
+    name: "Merah Putih", slug: "merah-putih", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.5, reviewCount: 5000, price: "$$$", area: "Seminyak", type: "Modern Indonesian",
     tip: "Award-winning architecture and a refined take on regional Indonesian cuisine — go for the tasting menu.",
     filterKeys: ["fine-dining"],
@@ -395,7 +395,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "La Lucciola is one of Seminyak's original beachfront restaurants and remains a firm favourite for its unbeatable combination of good Italian food and one of the best sunset views in Bali. Perched right above Petitenget Beach beside a small temple, its breezy, open-sided upstairs dining room looks straight out over the sand and the Indian Ocean, making it a magical place to be as the sun goes down. The menu is Mediterranean-leaning Italian — fresh pasta, wood-grilled fish and seafood, salads and classic mains — reliably well executed and generous, if priced for the setting rather than the plate. It's a place people return to year after year for anniversaries, romantic dinners and long lazy lunches, so the sunset tables are highly sought after; book ahead and request an upstairs spot with a sea view for the full effect. Come for a relaxed breakfast or lunch on the beach, or time your visit for golden hour, order a bottle of wine and settle in as the sky ignites. For that quintessential Bali beachfront-dining experience with dependable food and a knockout view, La Lucciola is hard to beat.",
   },
   {
-    name: "Potato Head Beach Club", slug: "potato-head", image: RES("potato-head-beach-club.webp"),
+    name: "Potato Head Beach Club", slug: "potato-head", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.5, reviewCount: 42000, price: "$$$", area: "Seminyak", type: "Beach Club",
     tip: "An architectural wonder wrapped in 6,600 recycled window shutters, around a grassy lawn and infinity pool — go for sunset.",
     filterKeys: ["fine-dining", "romantic"],
@@ -404,7 +404,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Potato Head Beach Club is Seminyak's — and arguably Bali's — most iconic beach club, instantly recognisable for its dramatic circular façade built from 6,600 recycled antique window shutters salvaged from across Indonesia. Inside, the amphitheatre wraps around a grassy lawn and an infinity pool that appears to merge with the ocean beyond, creating one of the island's great sunset settings. It's far more than a bar: the sprawling complex houses several restaurants (from casual poolside bites to accomplished sit-down dining), multiple bars, a sustainability-focused 'Desa Potato Head' creative village and hotel, and a line-up of DJs and events that build through the afternoon into the night. The formula is simple and irresistible — claim a day bed or a patch of lawn, order cocktails and food, swim in the pool, and settle in for the main event as the sun drops into the sea. There's a minimum spend for the prime loungers, and it gets busy, so arrive by mid-afternoon for sunset. Stylish, design-led and endlessly photogenic, Potato Head is a Bali institution that everyone should experience at least once.",
   },
   {
-    name: "Warung Nia", slug: "warung-nia", image: RES("warung-nia.webp"),
+    name: "Warung Nia", slug: "warung-nia", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.4, reviewCount: 4000, price: "$", area: "Seminyak", type: "Babi Guling",
     tip: "A local favourite for babi guling at roughly half the price of the tourist spots — casual and family-friendly.",
     filterKeys: ["budget", "local", "family"],
@@ -413,7 +413,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Warung Nia is a much-loved, unpretentious eatery on Seminyak's 'Eat Street' (Jalan Kayu Aya) that has built a loyal following for its babi guling — Balinese roast suckling pig — served at roughly half the price of the flashier tourist restaurants nearby. Alongside the signature crispy-skinned pork, the menu runs through hearty, honest Balinese and Indonesian home cooking: nasi campur (rice with an array of small dishes), satay skewers, grilled fish, curries and classic warung staples, all generously portioned and easy on the wallet. The setting is simple and welcoming — a casual, open-fronted room with friendly service — making it comfortable for families and solo travellers alike, and a refreshing dose of local value in an area better known for its upmarket prices. It's the kind of place where you can eat well and authentically without spending much, which is exactly why locals and repeat visitors rate it so highly. For a satisfying, budget-friendly taste of real Indonesian cooking — and that all-important babi guling — in the heart of pricey Seminyak, Warung Nia is a reliable and cheerful choice.",
   },
   {
-    name: "Room4Dessert", slug: "room4dessert", image: RES("room4dessert.webp"),
+    name: "Room4Dessert", slug: "room4dessert", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.6, reviewCount: 3000, price: "$$", area: "Ubud", type: "Dessert Bar",
     tip: "Pastry legend Will Goldfarb's dessert tasting menu — a one-of-a-kind experience among Ubud's rice fields.",
     filterKeys: ["fine-dining", "romantic"],
@@ -422,7 +422,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Room4Dessert is one of the most original dining experiences in Bali — a dessert-focused restaurant from acclaimed American pastry chef Will Goldfarb, tucked into a lush garden setting on the edge of Ubud. Best known from Netflix's 'Chef's Table: Pastry', Goldfarb turns dessert into the main event, offering an avant-garde tasting menu of intricate, boundary-pushing sweet courses that draw heavily on Balinese and Indonesian ingredients — local fruits, spices, palm sugars and botanicals reimagined in playful, technically dazzling ways. The experience is intimate and theatrical, often served at a counter or in the garden with the chefs plating in front of you, and it can be paired with wines or creative cocktails. While the tasting menu is the signature draw, there's also an à la carte selection of savoury bites and drinks for a more relaxed visit. It's a destination for the curious and the sweet-toothed rather than a casual pudding stop, and reservations are recommended. For anyone who wants a genuinely unique, creative and memorable evening — and a whole new way of thinking about dessert — Room4Dessert is an unmissable Ubud experience.",
   },
   {
-    name: "Warung Enak", slug: "warung-enak", image: RES("warung-enak.webp"),
+    name: "Warung Enak", slug: "warung-enak", image: "/images/bali/restaurants/restaurant-bali.avif",
     rating: 4.4, reviewCount: 3500, price: "$$", area: "Ubud", type: "Balinese Classic",
     tip: "Order the rijsttafel — a lavish 'rice table' of 10 traditional Indonesian dishes served together.",
     filterKeys: ["local", "family"],
@@ -435,7 +435,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (10) ──────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "Four Seasons Sayan", slug: "four-seasons-sayan", image: HOT("four-seasons-sayan.webp"),
+    name: "Four Seasons Sayan", slug: "four-seasons-sayan", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.9, reviewCount: 3000, price: "$$$$", area: "Ubud", type: "Jungle Luxury",
     tip: "Cross the dramatic elevated bridge onto the lotus-pond rooftop — the arrival is unforgettable, and every villa overlooks the Ayung River.",
     filterKeys: ["luxury"],
@@ -444,7 +444,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Four Seasons Resort Bali at Sayan is one of the most celebrated luxury hotels in Asia, and its arrival alone is worth the stay: guests cross a dramatic elevated timber bridge into a circular rooftop crowned by a lotus pond, before descending into the resort as it tumbles down the lush valley of the Ayung River. Set in the jungle just west of Ubud, its suites and private villas are spacious, serene and beautifully finished in natural materials, most with plunge pools or river views and the sound of rushing water and birdsong for a soundtrack. Facilities are exceptional — a riverside spa renowned for its wellness and healing programmes, superb restaurants, a stunning main pool and immersive cultural and yoga experiences that tap into Ubud's spiritual reputation. It's a place for honeymoons, special occasions and serious relaxation, wrapping five-star comfort in an utterly immersive natural setting. Rates sit firmly at the top end, typically from around $800 a night. For travellers who want to experience Ubud's jungle magic at the very highest level of luxury and design, the Four Seasons Sayan is a bucket-list address.",
   },
   {
-    name: "The Mulia", slug: "the-mulia", image: HOT("the-mulia.webp"),
+    name: "The Mulia", slug: "the-mulia", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.8, reviewCount: 12000, price: "$$$$", area: "Nusa Dua", type: "Resort",
     tip: "526 rooms across three beaches and six pools — grand, family-friendly and right on calm Nusa Dua sand.",
     filterKeys: ["luxury", "family"],
@@ -453,7 +453,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Mulia, Mulia Resort & Villas is one of Bali's largest and most opulent beachfront resorts, sprawling along the calm, swimmable sands of Nusa Dua on the island's southeastern tip. With 526 rooms, suites and villas set among grand statuary, cascading water features and manicured grounds, it delivers five-star luxury on a genuinely impressive scale, backed by three stretches of beach and six swimming pools. The facilities are vast and family-friendly: multiple award-winning restaurants and bars (its lavish brunches and afternoon teas are famous), an enormous spa and wellness centre, kids' facilities and direct access to Nusa Dua's safe, gentle water — ideal for families with children who want to swim without the rip currents of the west coast. Rooms are large and richly appointed, many with ocean views and generous balconies or terraces. It strikes a balance between grand resort glamour and practical, comfortable family holidaymaking, all in one of Bali's most secure and self-contained resort enclaves. Rates typically start from around $350 a night, strong value for the scale and standard. For a polished, all-in-one beach-resort stay suiting couples and families alike, The Mulia is a superb choice.",
   },
   {
-    name: "COMO Shambhala Estate", slug: "como-shambhala", image: HOT("como-shambhala.webp"),
+    name: "COMO Shambhala Estate", slug: "como-shambhala", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.8, reviewCount: 1500, price: "$$$$", area: "Ubud", type: "Wellness Resort",
     tip: "A world-class wellness retreat — book a multi-night programme with personalised yoga, spa and detox therapies.",
     filterKeys: ["luxury", "boutique"],
@@ -471,7 +471,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Alila Villas Uluwatu is one of Bali's most architecturally striking luxury hotels, perched on the arid clifftops of the southern Bukit Peninsula with sweeping views over the Indian Ocean. Its bold, contemporary design — all clean lines, natural stone, timber and a celebrated cantilevered clifftop cabana bar — earned it international acclaim and multiple sustainability awards, sitting in harmony with the dramatic, wind-swept landscape. Accommodation is in spacious, private villas, each with its own pool and outdoor living pavilion, offering total seclusion and either ocean or garden views. Facilities include an infinity pool that seems to spill toward the horizon, an excellent spa, refined restaurants and that unforgettable sunset bar, while the famous Uluwatu clifftop temple and the Bukit's world-class surf beaches are only a short drive away (around 6 km). This is a place for couples, honeymooners and design lovers who want privacy, dramatic scenery and cutting-edge style rather than a big family resort. Rates typically start from around $550 a night. For jaw-dropping clifftop architecture, private-pool seclusion and some of the best ocean views on the island, Alila Villas Uluwatu is exceptional.",
   },
   {
-    name: "Bisma Eight", slug: "bisma-eight", image: HOT("bisma-eight.webp"),
+    name: "Bisma Eight", slug: "bisma-eight", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.6, reviewCount: 3000, price: "$$$", area: "Ubud", type: "Boutique",
     tip: "A stylish boutique base with a stunning rice-husk rooftop pool and jungle views from every room.",
     filterKeys: ["boutique"],
@@ -480,7 +480,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Bisma Eight is a stylish, design-led boutique hotel on Jalan Bisma, a short and pleasant walk from the centre of Ubud, offering contemporary comfort with a strong sense of place. Its rooms are spacious, modern and beautifully finished — think warm timber, walk-in showers, thoughtful minibars and a genuine boutique-hotel sensibility — and every one looks out over the surrounding jungle and rice fields, keeping you connected to Ubud's lush setting. The standout feature is the rooftop pool, cantilevered out over the greenery for a memorable swim with panoramic valley views, complemented by an excellent restaurant (Copper Kitchen & Bar) and a relaxed, personal level of service. Its position is ideal: close enough to walk into the heart of Ubud with its markets, temples and restaurants, yet set back on a quiet, leafy lane for peace and privacy. It hits a smart middle ground — more intimate and characterful than a big resort, more refined than a simple guesthouse — at rates that are reasonable for the quality, typically from around $150 a night. For design-conscious travellers who want a chic, well-located Ubud base with real style, Bisma Eight is an excellent choice.",
   },
   {
-    name: "Puri Garden Hotel & Hostel", slug: "puri-garden", image: HOT("puri-garden.webp"),
+    name: "Puri Garden Hotel & Hostel", slug: "puri-garden", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.5, reviewCount: 4000, price: "$", area: "Ubud", type: "Hostel",
     tip: "A social, design-led hostel popular with digital nomads — dorm beds from around $10, plus a pool and daily events.",
     filterKeys: ["budget"],
@@ -489,7 +489,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Puri Garden Hotel & Hostel is one of Ubud's most popular budget stays, a stylish, sociable spot that has become a hub for young travellers, backpackers and digital nomads. It blends hostel affordability with an unusually design-conscious feel: clean, comfortable dormitories (with beds from around $10 a night) plus private rooms, arranged around a lush garden and a swimming pool that becomes the heart of the social scene. What sets it apart is the community: there's a genuinely packed calendar of daily events — communal dinners, movie nights, yoga, games and outings — that make it easy for solo travellers to meet people and settle into Ubud life. There's also a café, co-working-friendly spaces and a laid-back, friendly atmosphere throughout. It's ideal for anyone travelling on a budget who still wants a bit of style, a pool to cool off in, and a ready-made social scene, right in the heart of Ubud within walking distance of the town's markets, temples and restaurants. For value, community and a great base to explore Ubud without spending much, Puri Garden is a top budget choice — sociable, well-run and genuinely fun.",
   },
   {
-    name: "The Legian Bali", slug: "the-legian-bali", image: HOT("the-legian-bali.webp"),
+    name: "The Legian Bali", slug: "the-legian-bali", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.7, reviewCount: 3500, price: "$$$$", area: "Seminyak", type: "Beach Luxury",
     tip: "An all-suite classic right on Seminyak beach — request an ocean-view suite and watch the sunset from your balcony.",
     filterKeys: ["luxury", "family"],
@@ -498,7 +498,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Legian Bali is one of Seminyak's most refined luxury hotels, an elegant, all-suite property set directly on the beachfront with the island's famous sunsets on its doorstep. Comprising 79 spacious suites (from generous one-bedroom layouts up to lavish multi-room options), it offers a more intimate, sophisticated alternative to Bali's sprawling mega-resorts, with tasteful contemporary-Balinese interiors, large balconies and many suites enjoying direct ocean views. The three-tier infinity pool descends toward the beach, there's an excellent spa and a highly regarded restaurant, and the service is polished and personal in the way that has kept guests returning for years. Its Seminyak location is a major draw: you're right on the sand for those legendary sunsets, yet within easy walking distance of the district's best boutiques, restaurants and beach clubs. Spacious enough for families yet romantic enough for couples, it manages to feel both grand and understated. Rates typically start from around $400 a night. For a refined, beachfront base in the heart of stylish Seminyak — all suites, sea views and sunsets — The Legian Bali is one of the area's most desirable addresses.",
   },
   {
-    name: "Tugu Hotel Bali", slug: "tugu-hotel", image: HOT("tugu-hotel.webp"),
+    name: "Tugu Hotel Bali", slug: "tugu-hotel", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.7, reviewCount: 2500, price: "$$$$", area: "Canggu", type: "Historic / Museum",
     tip: "Part hotel, part museum of antique Indonesian art and artefacts — each suite tells a story. Utterly unique.",
     filterKeys: ["luxury", "boutique"],
@@ -507,7 +507,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Tugu Hotel Bali is one of the island's most extraordinary and characterful places to stay — a boutique hotel on Canggu's Batu Bolong beach that doubles as a private museum of rare Indonesian art, antiques and cultural artefacts, lovingly assembled by its collector-founder. Every corner tells a story: ornate carved doors, centuries-old statues, antique furnishings, temple pieces and paintings fill the public spaces and the individually themed suites, each conceived around a slice of Indonesian history, art or legend, from a suite honouring a famous Javanese painter to one evoking a colonial-era mansion. Far from a sterile hotel, it feels romantic, atmospheric and deeply rooted in the archipelago's heritage. Facilities include a beachfront pool, a spa, and restaurants that stage lavish, theatrical Indonesian dining experiences and cultural performances. Its Canggu location puts you in Bali's coolest surf-and-café district, steps from the beach and its sunsets. Rates typically start from around $300 a night. For travellers who want somewhere with genuine soul, history and one-of-a-kind character rather than a generic resort, Tugu Hotel is a magical, unforgettable choice — a stay you'll be talking about long after you leave.",
   },
   {
-    name: "Hostel Seventyseven", slug: "hostel-seventyseven", image: HOT("hostel-seventyseven.webp"),
+    name: "Hostel Seventyseven", slug: "hostel-seventyseven", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.5, reviewCount: 3000, price: "$", area: "Canggu", type: "Design Hostel",
     tip: "A design-led Canggu hostel with a pool and surf lessons — dorm beds from around $15, perfect for the surf-and-nomad crowd.",
     filterKeys: ["budget"],
@@ -516,7 +516,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hostel Seventyseven is one of Canggu's coolest budget stays, a design-led hostel that captures the district's surf-and-nomad spirit at a wallet-friendly price. Far from the spartan bunkhouses of old, it's a stylish, contemporary space built around a swimming pool, with well-designed dormitories (beds from around $15 a night) and private rooms, plenty of chill-out and co-working-friendly areas, and a genuinely sociable, international atmosphere. It leans right into Canggu's lifestyle, offering surf lessons and board hire, a yoga and events programme, a café-bar and easy access to the area's beaches, warungs and buzzing nightlife. That makes it a natural home base for surfers, solo travellers and digital nomads who want to meet people, catch some waves and soak up the Canggu vibe without blowing their budget. The central location puts you within walking or short scooter distance of Batu Bolong and Echo beaches, trendy cafés and the district's famous sunset bars. For style, sociability and surf on a budget, in Bali's hippest coastal neighbourhood, Hostel Seventyseven is a standout — proof that you don't need a big spend to stay somewhere genuinely cool in Canggu.",
   },
   {
-    name: "Amandari", slug: "amandari", image: HOT("amandari.webp"),
+    name: "Amandari", slug: "amandari", image: "/images/bali/hotels/hotel-bali.avif",
     rating: 4.9, reviewCount: 1200, price: "$$$$", area: "Ubud", type: "Aman Resort",
     tip: "Just 30 village-style suites of understated Indonesian luxury — the emerald-green infinity pool mirrors the rice terraces below.",
     filterKeys: ["luxury", "boutique"],
@@ -529,7 +529,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Nightlife (8) ─────────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "La Favela", slug: "la-favela", image: NAT("la-favela.webp"),
+    name: "La Favela", slug: "la-favela", image: "/images/bali/nightlife/cocktail-bar-bali.webp",
     rating: 4.4, reviewCount: 14000, type: "Club", area: "Seminyak",
     tip: "Seminyak's most theatrically decorated club — a maze of themed rooms and gardens that fills up after midnight.",
     filterKeys: ["club"],
@@ -538,7 +538,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "La Favela is one of Seminyak's most famous and atmospheric nightspots, celebrated above all for its extraordinary, immersive décor. Spread through a rambling series of interconnected spaces — vintage-styled rooms crammed with antiques and curios, lush tropical gardens, hidden bars and courtyards — it feels more like wandering through a beautifully theatrical film set than a conventional club. Early in the evening it works as a stylish, moody bar and restaurant, but as the night wears on the back rooms transform into a heaving dancefloor, with DJs spinning house and party anthems to a mixed crowd of travellers and locals that packs in after midnight. That two-in-one character — enchanting bar early, full-on club late — is a big part of its enduring appeal, as is the fact that entry is usually free. It sits right on Seminyak's buzzing Jalan Kayu Aya ('Eat Street'), making it easy to combine with dinner and drinks nearby. Expect it to be busy and lively at weekends. For a night out with genuine atmosphere and one of the most Instagrammable interiors on the island, La Favela is a Seminyak essential.",
   },
   {
-    name: "Single Fin", slug: "single-fin", image: NAT("single-fin.webp"),
+    name: "Single Fin", slug: "single-fin", image: "/images/bali/nightlife/flamenco-bali.webp",
     rating: 4.6, reviewCount: 22000, type: "Clifftop Bar", area: "Uluwatu",
     tip: "A clifftop bar over Uluwatu's famous surf break — Sunday sessions are legendary. Go for sunset and the epic view.",
     filterKeys: ["rooftop"],
@@ -547,7 +547,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Single Fin is one of Bali's most spectacularly sited bars, clinging to the clifftop directly above the legendary Uluwatu surf break on the southern Bukit Peninsula. The view is the headline act: a wide terrace looking straight down onto the reef where world-class surfers carve the waves, out across the Indian Ocean to some of the most dramatic sunsets on the island. It's a laid-back surf bar by day — a place to nurse a cold beer, watch the swell and refuel on casual food — but it's most famous for its Sunday sessions, when live music and DJs turn it into one of the island's great weekly parties, drawing surfers, travellers and locals in a heaving, sunset-lit celebration. Any evening rewards a visit for the golden hour, but Sunday is the legendary one, so arrive early to grab a good clifftop spot as it gets seriously busy. Combine it with a visit to the nearby Uluwatu temple and Kecak dance for a perfect Bukit day-into-night. For unbeatable clifftop views, surf-watching and a genuinely iconic sunset party, Single Fin is an Uluwatu must-do.",
   },
   {
-    name: "Potato Head Beach Club", slug: "potato-head-nightlife", image: NAT("potato-head-beach-club.webp"),
+    name: "Potato Head Beach Club", slug: "potato-head-nightlife", image: "/images/bali/nightlife/live-music-bali.webp",
     rating: 4.5, reviewCount: 42000, type: "Beach Club", area: "Seminyak",
     tip: "The infinity pool, lawn and DJ sets make this the definitive Seminyak sunset — claim a day bed by mid-afternoon.",
     filterKeys: ["rooftop", "club"],
@@ -556,7 +556,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Potato Head Beach Club is the definitive Seminyak nightlife-by-the-sea experience, its dramatic amphitheatre of 6,600 recycled window shutters wrapping around a grassy lawn and an ocean-facing infinity pool. While it's a full day-to-night destination — with restaurants, bars and a design hotel — its magic really comes alive from mid-afternoon into the evening. As the sun sinks, the DJ sets build, the pool and lawn fill with a stylish international crowd, and the whole place shifts into a euphoric sunset party that runs into the night. You can claim a day bed by the pool (with a minimum spend), spread out on the lawn with a cocktail, or move between the bars as the music picks up, all with the Indian Ocean as your backdrop. It's polished, glamorous and endlessly photogenic, drawing everyone from honeymooners to party crowds. Arrive by mid-afternoon at weekends to secure a good spot for sunset, when it gets very busy. For that quintessential Bali beach-club night — cocktails, DJs, an infinity pool and a spectacular sunset — Potato Head is the one everyone remembers.",
   },
   {
-    name: "Mirror", slug: "mirror", image: NAT("mirror.webp"),
+    name: "Mirror", slug: "mirror", image: "/images/bali/nightlife/nightlife-bar-bali.webp",
     rating: 4.3, reviewCount: 9000, type: "Club", area: "Seminyak",
     tip: "A cathedral-themed megaclub with soaring Gothic arches and lasers — one of Seminyak's most spectacular late-night rooms.",
     filterKeys: ["club"],
@@ -565,7 +565,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Mirror is one of Seminyak's most visually spectacular nightclubs, instantly recognisable for its dramatic cathedral theme: a soaring interior of Gothic arches, stained-glass-style panels and vaulted ceilings, transformed by an elaborate light-and-laser show and thundering sound system into an epic, high-energy dance space. It's the closest Bali gets to a European-style megaclub, pulling in a dressed-up crowd for nights of big-room house, EDM and party sets from resident and visiting DJs. The theatrical setting and production values are the main draw — few clubs on the island match it for sheer spectacle — making it a bucket-list night for those who love a proper, glamorous clubbing experience rather than a laid-back beach bar. It typically opens on selected nights of the week and gets going late, in true Bali fashion, so check the schedule and dress smartly, as there's a door policy. Located on Jalan Petitenget in the thick of Seminyak's nightlife, it's easy to combine with dinner and pre-drinks nearby. For a high-glamour, high-production club night under those extraordinary cathedral arches, Mirror is one of Seminyak's most memorable venues.",
   },
   {
-    name: "Ku De Ta", slug: "ku-de-ta", image: NAT("ku-de-ta.webp"),
+    name: "Ku De Ta", slug: "ku-de-ta", image: "/images/bali/nightlife/rooftop-bar-night-bali.webp",
     rating: 4.5, reviewCount: 28000, type: "Beach Club", area: "Seminyak",
     tip: "The original Seminyak sunset icon since 2000 — grab a beachfront lounger and stay for the DJ sets after dark.",
     filterKeys: ["rooftop", "cocktail"],
@@ -574,7 +574,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Ku De Ta is the original Seminyak beach club, open since 2000 and the venue that effectively launched Bali's now-famous sunset-club scene. Set right on the sand of Seminyak beach, it remains a sophisticated all-day-into-night destination: come for breakfast or lunch, laze on a beachfront lounger through the afternoon, and settle in for its legendary sunset, cocktail in hand, as resident DJs provide the soundtrack. As night falls the music builds and the beautiful, well-heeled crowd fills in, the mood shifting from relaxed sundowners to a stylish party atmosphere, often with special events and international guest DJs. With multiple bars, an acclaimed restaurant and one of the best sunset outlooks on the strip, it has stayed at the top of Seminyak's scene for over two decades. It's polished and premium — drinks are pricey and prime loungers carry a minimum spend — but the setting and the sense of occasion justify it. Arrive in good time for sunset, especially at weekends. For the original, and still one of the very best, Seminyak beachfront sunset-and-cocktail experiences, Ku De Ta is a timeless classic.",
   },
   {
-    name: "Night Rooster", slug: "night-rooster", image: NAT("night-rooster.webp"),
+    name: "Night Rooster", slug: "night-rooster", image: "/images/bali/nightlife/cocktail-bar-bali.webp",
     rating: 4.6, reviewCount: 4000, type: "Cocktail Bar", area: "Ubud",
     tip: "Ubud's best craft-cocktail bar, above Locavore — try a signature drink infused with local Balinese botanicals.",
     filterKeys: ["cocktail"],
@@ -592,7 +592,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Finns Beach Club is the biggest and one of the most action-packed beach clubs in Bali, sprawling across the sand at Berawa in Canggu. Where some beach clubs are all about laid-back sophistication, Finns is built for high-energy fun on a grand scale: multiple swimming pools (including infinity pools looking out to sea), a clutch of bars and restaurants, water slides, day beds and cabanas, and a relentless calendar of DJ sets, live acts and themed parties that keep the atmosphere buzzing from day into night. It draws a big, lively, party-minded crowd and is especially popular with groups and younger travellers looking to combine sun, pools, cocktails and dancing in one place. The scale means there's always something going on, from foam parties to international DJ nights, and the beachfront setting delivers the requisite Canggu sunsets. Prime loungers and cabanas come with a minimum spend, and it can get very busy, so book ahead for the popular spots and events. For a full-on, all-day beach-club party in the heart of Bali's coolest surf district, Finns is the go-to — huge, energetic and unapologetically fun.",
   },
   {
-    name: "Old Man's", slug: "old-mans", image: NAT("old-mans.webp"),
+    name: "Old Man's", slug: "old-mans", image: "/images/bali/nightlife/flamenco-bali.webp",
     rating: 4.5, reviewCount: 16000, type: "Pub / Live Music", area: "Canggu",
     tip: "A relaxed beachfront bar that's a Canggu institution — the Wednesday and weekend parties are legendary. Casual, cheap and fun.",
     filterKeys: ["pub", "live"],
@@ -605,7 +605,7 @@ export const NIGHTLIFE: BcnPlace[] = [
 // ── Shopping (8) ─────────────────────────────────────────────────────────────
 export const SHOPPING: BcnPlace[] = [
   {
-    name: "Ubud Art Market", slug: "ubud-art-market", image: SHO("ubud-art-market.webp"),
+    name: "Ubud Art Market", slug: "ubud-art-market", image: "/images/bali/shopping/artisan-shop-bali.webp",
     rating: 4.3, reviewCount: 26000, type: "Market", area: "Ubud",
     tip: "Sarongs, wood carvings, baskets and souvenirs — haggle hard, starting at around a third of the asking price.",
     filterKeys: ["markets", "souvenirs"],
@@ -614,7 +614,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Pasar Seni Ubud, the Ubud Art Market, is the town's most famous shopping destination — a bustling, colourful warren of stalls opposite the royal palace, piled high with the crafts for which the region is renowned. Here you'll find hand-woven bags and baskets, silk and cotton sarongs, batik textiles, wood and stone carvings, silver jewellery, paintings, kites and countless souvenirs, much of it made in the surrounding artisan villages of Gianyar. It's an atmospheric, only-in-Bali experience, though very much geared to tourists, so the golden rule is to haggle: vendors open high, and starting your counter-offer at around a third of the asking price (then settling somewhere in the middle) is normal and expected, done with a smile. Come early in the morning for the best light, fewer crowds and, by tradition, luckier 'first sale' bargains, or later in the day when sellers may be keener to deal. For genuinely handmade pieces and less pressure, the artisan villages nearby are worth exploring too. For a fun, quintessential Bali shopping experience full of colour and craft — and a spot of good-natured bargaining — the Ubud Art Market is a must.",
   },
   {
-    name: "Seminyak Village", slug: "seminyak-village", image: SHO("seminyak-village.webp"),
+    name: "Seminyak Village", slug: "seminyak-village", image: "/images/bali/shopping/mall-bali.webp",
     rating: 4.2, reviewCount: 8000, type: "Mall", area: "Seminyak",
     tip: "An air-conditioned mall of local designers and boutiques — a comfortable escape from the midday heat.",
     filterKeys: ["malls"],
@@ -623,7 +623,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Seminyak Village is a smart, modern shopping mall in the heart of Seminyak, offering a comfortable, air-conditioned alternative to the district's open-air boutiques and markets — a welcome refuge from the tropical midday heat. Compact and stylish rather than a giant generic mall, it focuses on fashion, accessories, homeware and lifestyle, with a strong showing of Bali-based and Indonesian designers and boutiques alongside a selection of international brands. It's a great place to browse contemporary resort wear, swimwear, jewellery, cosmetics and gifts in a relaxed, hassle-free environment with fixed prices (no bargaining required), and there are cafés and a supermarket on hand for a break. For visitors who want to discover the growing scene of local Balinese fashion labels and designers in one convenient, comfortable spot — and perhaps escape the heat or an afternoon shower — Seminyak Village fits the bill nicely. It sits amid Seminyak's densest cluster of shopping streets, so it's easy to combine with the surrounding boutiques of Jalan Kayu Aya and Jalan Laksmana. For breezy, design-led shopping in cool comfort, it's a handy and pleasant Seminyak stop.",
   },
   {
-    name: "Jalan Laksmana (Eat Street)", slug: "jalan-laksmana", image: SHO("jalan-laksmana.webp"),
+    name: "Jalan Laksmana (Eat Street)", slug: "jalan-laksmana", image: "/images/bali/shopping/outdoor-market-bali.webp",
     rating: 4.4, reviewCount: 9000, type: "Boutique Street", area: "Seminyak",
     tip: "Seminyak's luxury boutique strip — home to designer labels like Magali Pascal and Bali's chicest resort wear.",
     filterKeys: ["luxury"],
@@ -632,7 +632,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Jalan Laksmana — often merged with the adjoining Jalan Kayu Aya and nicknamed 'Eat Street' — is Seminyak's most fashionable shopping and dining boulevard, and the epicentre of Bali's upmarket boutique scene. Lined with the villas-turned-boutiques of independent designers, it's where you'll find chic resort wear, flowing dresses, leather goods, homeware and jewellery from Bali-based and international labels, including well-known names like Magali Pascal. The vibe is stylish and unhurried, mixing high-end fashion boutiques with concept stores, galleries, cafés and some of Seminyak's best restaurants, so you can shop, browse and eat your way along the street at leisure. It's the place to pick up genuinely covetable, design-led pieces rather than mass-market souvenirs, and while prices are higher than the markets, the quality and originality of the fashion reflects it. Prices are fixed, so there's no haggling — just relaxed, boutique-style browsing. Given the concentration of great restaurants and bars, it's also a lovely area to spend an afternoon into evening. For designer fashion, stylish resort wear and Bali's chicest boutique shopping, Jalan Laksmana is the address.",
   },
   {
-    name: "Sukawati Art Market", slug: "sukawati-market", image: SHO("sukawati-market.webp"),
+    name: "Sukawati Art Market", slug: "sukawati-market", image: "/images/bali/shopping/shopping-street-bali.webp",
     rating: 4.1, reviewCount: 12000, type: "Market", area: "Gianyar",
     tip: "A traditional wholesale-style market where locals shop — batik, crafts and textiles at far lower prices than the tourist markets.",
     filterKeys: ["markets", "souvenirs"],
@@ -650,7 +650,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Beachwalk Shopping Center is Kuta's flagship modern mall, and one of the most pleasant places to shop in southern Bali thanks to its clever open-air, garden-style design right on the Kuta beachfront. Rather than a sealed, generic box, it's built around landscaped, breezy walkways and water features, with sea views and a relaxed, tropical feel, so you can browse in comfort while still enjoying the beach setting. Inside you'll find a broad mix of international high-street fashion brands, local boutiques, sportswear, cosmetics and accessories, along with a large food court and restaurants, cafés, a supermarket and a cinema — making it a genuine all-in-one destination and a great option when the heat or a wet-season downpour drives you off the beach. Its beachfront location, directly opposite Kuta beach, means you can easily combine shopping with a swim, a surf lesson or a sunset. Prices are fixed and mid-range, covering familiar global labels rather than bargain souvenirs. For comfortable, air-conditioned (and open-air) mall shopping, family-friendly dining and a movie right by the sand, Beachwalk is Kuta's most appealing shopping stop, especially as a rainy-day fallback.",
   },
   {
-    name: "Potato Head Boutique", slug: "potato-head-boutique", image: SHO("potato-head-beach-club.webp"),
+    name: "Potato Head Boutique", slug: "potato-head-boutique", image: "/images/bali/shopping/souvenir-shop-bali.webp",
     rating: 4.4, reviewCount: 6000, type: "Concept Store", area: "Seminyak",
     tip: "The design-led boutique inside the famous beach club — stylish, sustainable homeware, fashion and gifts.",
     filterKeys: ["souvenirs"],
@@ -659,7 +659,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The boutique at Desa Potato Head is a stylish extension of the famous Seminyak beach club's design-and-sustainability ethos, and a lovely spot to pick up something more special than a standard souvenir. In keeping with the wider Potato Head philosophy — the brand is known for its 'good times, do good' sustainability mission, from that shutter-clad architecture to zero-waste initiatives — the store curates a thoughtful selection of design-led products: contemporary fashion and resort wear, homeware and ceramics, books, accessories, wellness products and gifts, with a strong emphasis on local makers, natural materials and eco-conscious, ethically produced pieces. It's the kind of place to find a beautifully designed keepsake, a unique gift or a piece of covetable resort wear that reflects Bali's creative, sustainability-minded design scene rather than the mass-produced trinkets of the tourist markets. Browsing it also lets you take in the striking Desa Potato Head complex itself, with its architecture, art and beachfront setting. Prices sit at the upper end, matching the quality and ethos. For stylish, sustainable, design-conscious shopping and memorable gifts in Seminyak, the Potato Head boutique is a standout.",
   },
   {
-    name: "Canggu Market (Love Anchor)", slug: "canggu-market", image: SHO("canggu-market.webp"),
+    name: "Canggu Market (Love Anchor)", slug: "canggu-market", image: "/images/bali/shopping/vintage-market-bali.webp",
     rating: 4.3, reviewCount: 7000, type: "Market", area: "Canggu",
     tip: "Canggu's cool bohemian bazaar plus a Sunday morning organic farmers' market — perfect for the surf-and-nomad crowd.",
     filterKeys: ["markets"],
@@ -668,7 +668,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Canggu Market — centred on the popular Love Anchor bazaar on Batu Bolong — captures the hip, bohemian, surf-and-nomad spirit that has made Canggu Bali's coolest district. The permanent bazaar is a warren of little stalls and shops housed in an atmospheric wooden complex, selling boho and beach fashion, handmade jewellery, leather goods, homeware, crafts and gifts with a decidedly stylish, Instagram-friendly slant, threaded with cafés and juice bars. The real highlight for many, though, is the Sunday morning organic farmers' market, a beloved weekly gathering where local growers, artisans and food producers sell fresh produce, healthy snacks, coffee, baked goods and wellness products to Canggu's health-conscious international community — a lovely, sociable morning out. Together they reflect Canggu's laid-back, creative, wellness-oriented lifestyle far better than a conventional mall, and make for enjoyable browsing whether you're after a fashion find, a gift or just a great coffee and some people-watching. It's central to Canggu, so it's easy to combine with the beach, cafés and bars. For hip, boho shopping and a wonderful Sunday organic market in Bali's trendiest neighbourhood, Canggu Market is a highlight.",
   },
   {
-    name: "Jalan Raya Ubud", slug: "jalan-raya-ubud", image: SHO("jalan-raya-ubud.webp"),
+    name: "Jalan Raya Ubud", slug: "jalan-raya-ubud", image: "/images/bali/shopping/artisan-shop-bali.webp",
     rating: 4.3, reviewCount: 11000, type: "Shopping Street", area: "Ubud",
     tip: "Ubud's main street, lined with 200+ shops — art galleries, boutiques, craft stores and cafés. Browse on foot.",
     filterKeys: ["souvenirs"],
@@ -681,7 +681,7 @@ export const SHOPPING: BcnPlace[] = [
 // ── With Kids (8) ─────────────────────────────────────────────────────────────
 export const WITH_KIDS: BcnPlace[] = [
   {
-    name: "Waterbom Bali", slug: "waterbom-kids", image: KID("waterbom-bali.webp"),
+    name: "Waterbom Bali", slug: "waterbom-kids", image: "/images/bali/with-kids/aquarium-bali.webp",
     rating: 4.7, reviewCount: 34000, ageGroup: "All ages", price: "$39", area: "Kuta",
     tip: "Asia's top-rated water park, with rides and a dedicated toddler zone — an easy full-day win with kids of any age.",
     filterKeys: ["outdoor", "full-day", "0-5", "6-12", "teens"],
@@ -690,7 +690,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Waterbom Bali is a guaranteed family day-out winner and consistently rated Asia's best water park. Spread across 3.8 hectares of lush tropical garden in central Kuta, it packs in 22 rides to suit every age and nerve level — from adrenaline monsters like Climax, whose trapdoor drops away beneath your feet, and the racing Smashdown, to a gentle 250-metre lazy river and a superb dedicated kids' zone with shallow pools, mini-slides and water-play structures for ages 3–10. That range means it works for the whole family in one place: teenagers and thrill-seeking adults tackle the big slides while little ones splash safely nearby. Beyond the rides, cafés, restaurants, a poolside bar, cabanas, lockers and manicured gardens make it comfortable to spend the entire day, and the queues are well managed even in peak season. It's the perfect antidote to temple fatigue when the children need to let off steam. Buy tickets online for a discount and arrive at the 09:00 opening to ride everything before the afternoon crowds. For a fun, safe, all-ages splash day, Waterbom is the standout family attraction in southern Bali.",
   },
   {
-    name: "Bali Safari & Marine Park", slug: "bali-safari-kids", image: KID("bali-safari-park.webp"),
+    name: "Bali Safari & Marine Park", slug: "bali-safari-kids", image: "/images/bali/with-kids/family-park-bali.webp",
     rating: 4.4, reviewCount: 29000, ageGroup: "0–12 (all welcome)", price: "$37", area: "Gianyar",
     tip: "A glass-sided safari bus rolls through savannah enclosures of lions, elephants and Komodo dragons — a big hit with younger kids.",
     filterKeys: ["outdoor", "full-day", "0-5", "6-12"],
@@ -699,7 +699,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Bali Safari & Marine Park in Gianyar, about 40 minutes from Ubud, is the island's largest animal park and a reliable hit with families. Home to more than 60 species — including lions, elephants, Sumatran tigers, jaguars, water buffalo and the Indonesian Komodo dragon — it's explored aboard a glass-sided safari bus that trundles through savannah-style enclosures, bringing children thrillingly close to the animals in safety. Beyond the safari, there's plenty to fill a full day: the spectacular Bali Agung cultural show with over 150 performers, animal presentations, a Fun Zone with rides and a water park to cool off in, and various animal encounters, all designed with families firmly in mind. The tiered ticket packages (starting around $37 and rising with the extras included) can bundle in hotel transfers from the main resort areas, making logistics easy. It's a strong choice for children from toddlers up who need a break from temples and rice terraces, combining wildlife, entertainment and water play in one place. Allow five to six hours for the full experience. For an all-ages day of animals, shows and splashing about, Bali Safari is one of the island's top family attractions.",
   },
   {
-    name: "Sacred Monkey Forest, Ubud", slug: "monkey-forest-kids", image: KID("monkey-forest.webp"),
+    name: "Sacred Monkey Forest, Ubud", slug: "monkey-forest-kids", image: "/images/bali/with-kids/kids-museum-bali.webp",
     rating: 4.5, reviewCount: 61000, ageGroup: "6+ (all welcome)", price: "$6", area: "Ubud",
     tip: "Kids love watching the 1,200 free-roaming monkeys — but keep a firm hand on little ones and hide all food, glasses and loose items.",
     filterKeys: ["outdoor", "0-5", "6-12"],
@@ -717,7 +717,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Bali Bird Park in Batubulan, a short drive south of Ubud, is a beautifully landscaped two-hectare park that makes a gentle, easygoing family outing — a calmer, more relaxed alternative to the bigger safari and water parks. Home to around 250 species and 1,000 birds, from Bali's own critically endangered starling to flamingos, hornbills, pelicans, birds of paradise and huge cassowaries, it's arranged as a lush botanical garden with walk-through aviaries that let you get remarkably close to the free-flying birds. Younger children especially enjoy the up-close encounters, feeding sessions, bird-of-prey and free-flight shows, and the chance to have a colourful parrot perch on their arm for a photo. The shaded, well-tended paths and manageable size make it comfortable and unhurried, ideal for a half-day when you want something engaging but not exhausting, particularly with toddlers and younger kids. There's a café and picnic areas, and it pairs well with the adjacent Bali Reptile Park. Allow two to three hours. For a pretty, peaceful, up-close wildlife experience that suits the youngest family members, Bali Bird Park is a lovely, low-key choice near Ubud.",
   },
   {
-    name: "Finns Recreation Club", slug: "finns-recreation-club", image: KID("finns-recreation-club.webp"),
+    name: "Finns Recreation Club", slug: "finns-recreation-club", image: "/images/bali/with-kids/tibidabo-bali.webp",
     rating: 4.5, reviewCount: 12000, ageGroup: "All ages / teens", price: "$15", area: "Canggu",
     tip: "A huge family sports-and-leisure club in Canggu — pools, trampolines, bowling and a kids' club under one roof.",
     filterKeys: ["outdoor", "full-day", "6-12", "teens"],
@@ -726,7 +726,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Finns Recreation Club in Canggu is a huge, one-stop family entertainment and sports complex, ideal for burning off energy and keeping children of all ages happily occupied for a full day. Under one membership or day pass, it packs in an enormous range of activities: swimming pools and a waterslide park, a trampoline centre, bowling alley, tennis and squash courts, a gym, a splash zone for little ones and a supervised kids' club, plus cafés, restaurants and bars for the grown-ups. That breadth means it caters brilliantly to families with a wide age range — toddlers, energetic school-age kids and teenagers can each find something they love in the same place, while parents relax or work out. It's especially popular with expat and long-stay families in the Canggu area, and its facilities and reliability make it a dependable rainy-day or 'need to tire the kids out' option. Day passes give access to the facilities, with some activities charged separately, and it's easy to make a whole day of it thanks to the on-site food and drink. For active families based in or near Canggu who want pools, trampolines, bowling and more all in one spot, Finns Recreation Club is a superb, all-ages choice.",
   },
   {
-    name: "Bali Elephant Camp (Taro)", slug: "elephant-safari-park", image: KID("elephant-safari-park.webp"),
+    name: "Bali Elephant Camp (Taro)", slug: "elephant-safari-park", image: "/images/bali/with-kids/zoo-bali.webp",
     rating: 4.3, reviewCount: 6000, ageGroup: "6+ (all welcome)", price: "$95", area: "Taro (Ubud area)",
     tip: "An elephant sanctuary in the Taro jungle near Ubud — feeding and bathing encounters. Choose ethical, ride-free experiences.",
     filterKeys: ["outdoor", "6-12"],
@@ -735,7 +735,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Set in the lush jungle around Taro, north of Ubud, Bali's elephant camp offers families the chance to get up close to elephants in a leafy, natural setting — a memorable encounter for children who love animals. Programmes typically include feeding the elephants, learning about their care and behaviour from the keepers, and in some cases wading in to help bathe them, all in a green, forested environment far from the coastal resorts. It's an experience that leaves a lasting impression on kids and adults alike. A word for conscientious families, though: elephant tourism is an ethically sensitive area, and practices vary between operators. Where possible, choose sanctuary-style, observation-and-care experiences (feeding, bathing, walking alongside) rather than elephant-back riding or performances, and research the specific operator's welfare standards before booking, as attitudes and offerings have been shifting toward more responsible models. Approached thoughtfully, a visit can be both a wonderful family memory and a lesson in respecting these remarkable animals. It combines well with other Ubud-area attractions given its location in the northern jungle. For a close, jungle-set elephant encounter near Ubud — chosen with animal welfare in mind — this is a standout, if pricier, family experience.",
   },
   {
-    name: "Bali Treetop Adventure Park", slug: "bali-treetop", image: KID("bali-treetop.webp"),
+    name: "Bali Treetop Adventure Park", slug: "bali-treetop", image: "/images/bali/with-kids/aquarium-bali.webp",
     rating: 4.6, reviewCount: 7000, ageGroup: "6+ / teens", price: "$30", area: "Bedugul",
     tip: "Ziplines, rope bridges and Tarzan swings through the cool mountain forest at Bedugul — brilliant for active older kids.",
     filterKeys: ["outdoor", "6-12", "teens"],
@@ -744,7 +744,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Bali Treetop Adventure Park, set within the beautiful Bedugul Botanical Garden in the cool central highlands, is an exhilarating high-ropes course that's perfect for active older children, teenagers and adventurous adults. Suspended among the tall trees of the mountain forest, it offers a series of colour-coded circuits of varying difficulty, packed with ziplines, rope bridges, nets, swinging logs, Tarzan jumps and other aerial obstacles, all done while securely clipped into a safety harness. The range of circuits means younger or more cautious kids can tackle gentler routes while teens and grown-ups test themselves on the harder, higher and faster ones, making it a genuinely all-abilities adventure. The cool, fresh mountain climate — a refreshing change from the coastal heat — and the gorgeous forest-and-lake setting near Lake Bratan add to the appeal, and it combines well with the nearby Ulun Danu Beratan lake temple and botanical gardens for a full highland day out. Sturdy shoes and a sense of adventure are all you need. For families with energetic older children and teens who want an active, adrenaline-filled day amid stunning mountain scenery, Bali Treetop is a fantastic and memorable choice.",
   },
   {
-    name: "Upside Down World Bali", slug: "upside-down-world", image: KID("upside-down-world.webp"),
+    name: "Upside Down World Bali", slug: "upside-down-world", image: "/images/bali/with-kids/family-park-bali.webp",
     rating: 4.2, reviewCount: 5000, ageGroup: "All ages", price: "$10", area: "Kuta / Seminyak",
     tip: "A quick, giggly indoor photo attraction of upside-down rooms — perfect for a rainy hour or a fun family photoshoot.",
     filterKeys: ["indoor", "0-5", "6-12"],
@@ -757,7 +757,7 @@ export const WITH_KIDS: BcnPlace[] = [
 // ── Day Trips (8) ─────────────────────────────────────────────────────────────
 export const DAY_TRIPS: BcnPlace[] = [
   {
-    name: "Nusa Penida", slug: "nusa-penida-trip", image: DAY("nusa-penida.webp"),
+    name: "Nusa Penida", slug: "nusa-penida-trip", image: "/images/bali/day-trips/costa-brava-landscape-bali.webp",
     rating: 4.5, reviewCount: 39000, distance: "45-min fast boat", duration: "Full day", area: "Nusa Penida",
     tip: "A 45-minute fast boat from Sanur reaches the island of the T-Rex-shaped Kelingking cliff, Angel's Billabong and Broken Beach.",
     filterKeys: ["full-day", "nature"],
@@ -766,7 +766,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Nusa Penida is the most dramatic day trip from Bali — a rugged, dry limestone island 45 minutes by fast boat from Sanur, quite different in landscape and feel from Bali itself. Its star attraction is Kelingking Beach, the T-Rex-shaped clifftop viewpoint that has become one of the most photographed sights in all of Indonesia, plunging to a turquoise cove far below. Nearby lie Angel's Billabong, a natural infinity rock pool safe to swim only at low tide, and Broken Beach, a striking circular cliff formation with a natural sea arch. On the coast, Crystal Bay and Manta Bay offer superb snorkelling, including the chance to swim with giant manta rays. The island is large and its roads are rough, so a full day is hectic — you'll want a pre-booked driver or scooter to link the main sights — and many travellers prefer an overnight stay to do it justice and beat the day-tripper crowds. Take seasickness tablets before the boat if you're prone, wear sturdy shoes for the steep clifftop paths, and start early. For jaw-dropping scenery and world-class coves, Nusa Penida is an unforgettable escape.",
   },
   {
-    name: "Mount Batur Sunrise Trek", slug: "mount-batur-trip", image: DAY("mount-batur-soluppgang.webp"),
+    name: "Mount Batur Sunrise Trek", slug: "mount-batur-trip", image: "/images/bali/day-trips/girona-bali.webp",
     rating: 4.7, reviewCount: 36000, distance: "~1.5–2 h drive + hike", duration: "Half day (pre-dawn)", area: "Kintamani",
     tip: "A pre-dawn 2-hour climb of an active volcano to watch sunrise over the caldera and crater lake — a compulsory guide is arranged by all operators.",
     filterKeys: ["half-day", "nature"],
@@ -784,7 +784,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The Gili Islands — Gili Trawangan, Gili Meno and Gili Air — are three tiny, car-free tropical islands off the northwest coast of Lombok, and a dream of white sand, turquoise water and swaying palms. Blissfully free of motor traffic, they get around by bicycle and horse-drawn cart, giving them a laid-back, castaway feel: Trawangan is the liveliest with a fun social and party scene, Air strikes a balance of relaxed and sociable, and Meno is the quietest and most romantic. The big draw is the water — some of the best snorkelling and diving in the region, with excellent chances to swim with green sea turtles, plus underwater statues and vibrant reefs just off the beaches. Reached by fast boat (around 1.5 hours from eastern Bali), the Gilis can be visited on a long day trip, but they truly shine with an overnight stay or two, letting you enjoy a sunset, a beach barbecue and the slow island pace without the rush. Bring cash, reef-safe sunscreen and snorkel gear, and note the sea can be choppy. For a slice of car-free island paradise, the Gilis are a magical escape from Bali.",
   },
   {
-    name: "Ubud from the south", slug: "ubud-day-trip", image: DAY("ubud-fran-seminyak.webp"),
+    name: "Ubud from the south", slug: "ubud-day-trip", image: "/images/bali/day-trips/montserrat-bali.webp",
     rating: 4.6, reviewCount: 32000, distance: "~1.5 h drive", duration: "Full day", area: "Ubud",
     tip: "From Seminyak or Kuta it's about 1.5 hours to Bali's cultural heart — rice terraces, temples, the Monkey Forest and art markets.",
     filterKeys: ["full-day", "car", "culture"],
@@ -793,7 +793,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "If you're based on the southern beaches of Seminyak, Kuta or Canggu, a day trip to Ubud is essential for a taste of Bali's cultural and natural soul, around 1.5 hours inland by car. Ubud is the island's artistic and spiritual heart, set among emerald rice terraces and river valleys, and a day here can pack in a huge amount: the Sacred Monkey Forest with its temples and free-roaming macaques, the bustling Ubud Art Market and gallery-lined main street, the beautiful Tegallalang rice terraces just to the north, and the serene Campuhan Ridge Walk for a easy scenic stroll. Add a Balinese cooking class, a traditional dance performance, a spa treatment or a temple visit and you have a rich, varied day that contrasts wonderfully with the beach scene down south. The most efficient way to do it is to hire a private driver for the day (around $40–50), who can string the sights together, wait while you explore and tailor the route to your interests — far better than battling the traffic and parking yourself. Set off early to make the most of it. For culture, nature and crafts in one day, Ubud is the definitive Bali excursion.",
   },
   {
-    name: "Tegallalang Rice Terraces", slug: "tegallalang-trip", image: DAY("tegallalang-risterasser.webp"),
+    name: "Tegallalang Rice Terraces", slug: "tegallalang-trip", image: "/images/bali/day-trips/penedes-vineyard-bali.webp",
     rating: 4.5, reviewCount: 44000, distance: "15 min N of Ubud", duration: "Half day", area: "Tegallalang",
     tip: "Bali's most iconic green staircases — best in the early morning light before the tour buses arrive at 09:00.",
     filterKeys: ["half-day", "car", "nature"],
@@ -802,7 +802,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The Tegallalang Rice Terraces, 15 minutes north of Ubud, make a perfect half-day trip and are the most iconic image of agricultural Bali — a steep valley carved into dramatic concentric staircases of emerald paddies, fed by the thousand-year-old, UNESCO-listed subak irrigation system. Walking trails lead down into the valley, across little bambo bridges and past small shrines and coconut palms, letting you get right in among the terraces for the classic photographs, while cafés and swings perched on the valley rim offer views and refreshments (the Bali Swing and photo spots carry extra fees). It's genuinely beautiful, but it's also popular, so timing is everything: come at 06:30 to have the terraces almost to yourself in soft morning light before the tour buses arrive around 09:00, when it gets crowded and the midday sun turns harsh. Bring water, small notes for the local farmers who tend the terraces (some ask a small tip if you hike deeper in), and good shoes for the sometimes muddy, uneven paths. Easily combined with other Ubud-area sights on a driver-led day, Tegallalang is a must-see slice of Bali's living landscape.",
   },
   {
-    name: "Tanah Lot Temple", slug: "tanah-lot-trip", image: DAY("tanah-lot-templet.webp"),
+    name: "Tanah Lot Temple", slug: "tanah-lot-trip", image: "/images/bali/day-trips/sitges-bali.webp",
     rating: 4.6, reviewCount: 72000, distance: "~45 min–1 h drive", duration: "Half day", area: "Tabanan",
     tip: "Bali's iconic sea temple, magical at sunset — arrive by late afternoon and stay for the golden hour over the waves.",
     filterKeys: ["half-day", "car", "culture"],
@@ -811,7 +811,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Tanah Lot is Bali's most famous and photographed temple, and an easy, rewarding half-day trip from the southern resorts (around 45 minutes to an hour by car from Seminyak). Built on a rocky islet just offshore in the 16th century, the temple appears to float on the sea at high tide, when it's cut off from the mainland, its dark silhouette framed by crashing waves — an unforgettable image, especially at sunset, when the sky glows behind the temple and the crowds gather for the spectacle. While the temple itself is reserved for Hindu worshippers, visitors can explore the clifftop paths, the neighbouring Batu Bolong temple on its natural arch, and (at low tide) walk out toward the base of the rock to receive a blessing of holy water from the priests. The site has a large complex of shops, cafés and viewpoints, so it's touristy, but the setting more than justifies the visit. Aim to arrive by late afternoon to explore before securing a good sunset spot; a driver makes it easy and can combine it with other western Bali sights. For that classic Bali sea-temple sunset, Tanah Lot is a must.",
   },
   {
-    name: "Lovina Dolphin Tour", slug: "lovina-dolphins", image: DAY("lovina-delfin-tur.webp"),
+    name: "Lovina Dolphin Tour", slug: "lovina-dolphins", image: "/images/bali/day-trips/tarragona-bali.webp",
     rating: 4.2, reviewCount: 11000, distance: "~2.5–3 h drive", duration: "Full day", area: "North Bali",
     tip: "Head to Bali's quiet north coast for a dawn outrigger trip to spot wild dolphins — pair it with the Munduk waterfalls en route.",
     filterKeys: ["full-day", "nature"],
@@ -820,7 +820,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Lovina, on Bali's quiet, black-sand north coast, is famous for its early-morning dolphin tours — a chance to head out onto the calm Bali Sea in a traditional jukung outrigger boat at dawn to spot pods of wild dolphins leaping and playing in the golden early light. It's a magical, if hit-and-miss, experience (the dolphins are wild, so sightings aren't guaranteed), and the peaceful, slow-paced north coast makes a refreshing contrast to the busy south. Because Lovina is a long drive from the main resorts (around 2.5 to 3 hours), it's best approached either as a very long full-day trip or, ideally, as an overnight, allowing you to break the journey with the region's other highlights: the stunning Munduk and Sekumpul waterfalls, the twin crater lakes of Buyan and Tamblingan, the lakeside Ulun Danu Beratan temple and the cool highland scenery around Bedugul. A driver for the day or two makes stringing these together effortless. Combine the dawn dolphins with the waterfalls and lakes on the way, and northern Bali reveals a greener, calmer, less-touristed side of the island that many visitors miss entirely.",
   },
   {
-    name: "Sidemen Valley", slug: "sidemen-trip", image: DAY("sidemen-ricefields.webp"),
+    name: "Sidemen Valley", slug: "sidemen-trip", image: "/images/bali/day-trips/costa-brava-landscape-bali.webp",
     rating: 4.7, reviewCount: 9000, distance: "~1.5 h drive", duration: "Full day", area: "Sidemen",
     tip: "Unspoilt rice terraces and traditional weaving villages under Mount Agung — the Bali of 20 years ago, best with an overnight.",
     filterKeys: ["full-day", "car", "nature"],

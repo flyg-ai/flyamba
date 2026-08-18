@@ -58,7 +58,7 @@ export default function SantoriniRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Santorini"
-      heroImage="/images/santorini/restauranger/selene.webp"
+      heroImage="/images/santorini/restaurants/restaurant-santorini.avif"
       intro="Santorini's food is as distinctive as its landscape, built on ingredients the volcanic soil makes intense: split-pea fava, cherry tomatoes turned into tomatokeftedes fritters, white aubergine, capers and the freshest Aegean seafood. Eat well and you can escape the view-tax trap — the best tables mix caldera-edge fine dining with village tavernas locals swear by and cheap, brilliant souvlaki. These are the 10 restaurants to plan your dinners around."
       wide
     >

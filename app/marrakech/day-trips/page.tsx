@@ -54,7 +54,7 @@ export default function MarrakechDayTrips() {
       active="day-trips"
       crumb="Day Trips"
       h1="Best Day Trips from Marrakech"
-      heroImage="/images/marrakech/dagsutflykter/atlas-bergen.webp"
+      heroImage="/images/marrakech/day-trips/costa-brava-landscape-marrakech.webp"
       intro="One of Marrakech's greatest assets is what lies beyond its ramparts. Within an hour or two you can swap the city heat for the cool valleys and Berber villages of the High Atlas, chase waterfalls in the Ourika Valley, feel the Atlantic breeze at Essaouira or watch the sun set over the Agafay Desert; a little further lie the mud-brick kasbah of Aït Ben Haddou and Morocco's tallest waterfalls at Ouzoud. This guide covers the best excursions, with distances and driving times, typical tour prices in dirhams, and honest advice on which are easy half-days and which demand an early start or an overnight."
       wide
     >

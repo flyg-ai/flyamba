@@ -182,7 +182,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Sukiyabashi Jiro", slug: "sukiyabashi-jiro", image: RES("sukiyabashi-jiro.webp"),
+    name: "Sukiyabashi Jiro", slug: "sukiyabashi-jiro", image: "/images/tokyo/restaurants/restaurant-tokyo.avif",
     rating: 4.6, reviewCount: 4200, price: "¥¥¥¥", type: "Edomae Sushi", area: "Ginza",
     tip: "Reservations are famously near-impossible and made months ahead, usually through a hotel concierge — dress smart and arrive on time.",
     filterKeys: ["sushi", "fine-dining"],
@@ -191,7 +191,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Made globally famous by the documentary Jiro Dreams of Sushi, Sukiyabashi Jiro is the temple of Edomae sushi, a ten-seat counter in a Ginza office-building basement where the craft is pursued to an almost monastic degree. The omakase is a rapid, wordless procession of around twenty pieces of nigiri, each laid before you at the precise moment its rice and fish reach their intended temperature, meant to be eaten within seconds. There is no menu, no à la carte and no lingering — the whole experience lasts barely thirty minutes but is considered by many the purest expression of sushi on earth. Prices start around ¥40,000 per person and reservations are legendarily difficult, generally secured months in advance and often only through a luxury-hotel concierge, with the main Ginza branch now largely closed to walk-in tourists. For those who cannot get in, the Roppongi Hills branch run by Jiro's younger son offers a comparably brilliant, slightly more attainable experience. Come with reverence, cash and punctuality; this is fine dining stripped to its essence.",
   },
   {
-    name: "Sushi Saito", slug: "sushi-saito", image: RES("sushi-saito.webp"),
+    name: "Sushi Saito", slug: "sushi-saito", image: "/images/tokyo/restaurants/restaurant-tokyo.avif",
     rating: 4.7, reviewCount: 2800, price: "¥¥¥¥", type: "Edomae Sushi", area: "Akasaka / Roppongi",
     tip: "Widely rated Tokyo's best sushi — regulars and hotel concierges hold the few seats, so plan far ahead or try the lunch seating.",
     filterKeys: ["sushi", "fine-dining"],
@@ -200,7 +200,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "For many Tokyo insiders and visiting chefs, Sushi Saito — not Jiro — is the finest sushi restaurant in Japan, a seven-seat counter that has held three Michelin stars and a near-mythical reputation. What sets chef Takashi Saito apart is the rare combination of technical perfection with genuine warmth: the atmosphere is relaxed and even playful, a world away from the stern formality some sushi temples project, and the pieces themselves are considered flawless, from the vinegared rice to the aged, seasonally chosen fish. The omakase moves at a gentle, conversational pace, with Saito and his team reading each guest. All of which makes it one of the hardest tables in the city to book — the counter is small, regulars fill it, and access for first-time visitors usually runs through a top hotel concierge or a well-connected local. If you do secure a seat, expect a two-hour masterclass in balance, temperature and hospitality that justifies the effort and the roughly ¥30,000-plus price. It is a bucket-list meal for serious sushi lovers.",
   },
   {
-    name: "Ichiran Ramen", slug: "ichiran-ramen", image: RES("ichiran-ramen.webp"),
+    name: "Ichiran Ramen", slug: "ichiran-ramen", image: "/images/tokyo/restaurants/restaurant-tokyo.avif",
     rating: 4.4, reviewCount: 39000, price: "¥¥", type: "Tonkotsu Ramen", area: "Shibuya & citywide",
     tip: "Order and pay at the vending machine first, then customise your bowl on the paper form — richness, spice and noodle firmness.",
     filterKeys: ["ramen", "budget"],
@@ -209,7 +209,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Ichiran has turned ramen into a solo ritual, and it is one of the easiest, most fun introductions to the dish for first-time visitors. You buy a ticket from a vending machine at the entrance, then take a seat in an individual wooden 'flavour concentration booth' — a partitioned counter designed so you can focus entirely on your bowl without eye contact or conversation. A paper order sheet lets you customise everything: the richness of the pork-bone tonkotsu broth, the amount of garlic and spring onion, the firmness of the noodles, and the intensity of the signature red chilli sauce. When you are ready, a small bamboo blind lifts and hands appear with your steaming bowl, then the blind drops again. The broth is deeply savoury and the thin noodles perfectly springy, with the option to order a kaedama (extra noodle refill) when you run low. Branches are dotted across Tokyo, many open extremely late or around the clock, making it a reliable, comforting and affordable meal at any hour — and a great low-stress first ramen for anyone nervous about the language barrier.",
   },
   {
-    name: "Kagari Ramen", slug: "kagari-ramen", image: RES("kagari-ramen.webp"),
+    name: "Kagari Ramen", slug: "kagari-ramen", image: "/images/tokyo/restaurants/restaurant-tokyo.avif",
     rating: 4.5, reviewCount: 8600, price: "¥¥", type: "Chicken Ramen", area: "Ginza",
     tip: "Go for the tori paitan soba — the creamy chicken broth — and expect a queue; get there before it opens or mid-afternoon.",
     filterKeys: ["ramen", "budget"],
@@ -218,7 +218,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Tucked down a Ginza side alley, Kagari has built a devoted following for a style of ramen quite different from the heavy pork broths most visitors expect: its speciality is tori paitan, a chicken-based soup simmered until it turns opaque, creamy and almost velvety, closer in body to a rich bisque than a typical clear ramen. Ladled over thin, precise noodles and topped with slices of tender chicken chashu and seasonal vegetables, it is elegant, comforting and unforgettable, the kind of bowl that converts sceptics. The shop is tiny — a handful of counter seats — so a queue almost always forms, particularly at lunch; savvy diners arrive just before opening or in the mid-afternoon lull to cut the wait. A second speciality, the tsukemen (dipping noodles served with a concentrated broth on the side), is equally revered. Ordering is done via the usual vending-machine ticket system. For a ramen experience that feels refined rather than rowdy, in the heart of Tokyo's smartest district, Kagari is a standout and well worth the short wait.",
   },
   {
-    name: "Tsuta", slug: "tsuta-ramen", image: RES("tsuta-ramen.webp"),
+    name: "Tsuta", slug: "tsuta-ramen", image: "/images/tokyo/restaurants/restaurant-tokyo.avif",
     rating: 4.4, reviewCount: 6100, price: "¥¥", type: "Shoyu Ramen", area: "Yoyogi-Uehara",
     tip: "Once the world's first Michelin-starred ramen — buy a timed entry ticket in the morning, then return for your slot.",
     filterKeys: ["ramen", "fine-dining"],
@@ -245,7 +245,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Set in a charming former public bathhouse in the backstreets of Aoyama, Maisen is one of Tokyo's most famous purveyors of tonkatsu — the deep-fried breaded pork cutlet that is a pillar of Japanese comfort food. Since 1965 it has perfected the art: pork loin or fillet coated in feather-light panko, fried to a shatteringly crisp golden crust while the meat inside stays juicy and tender, served with a mound of finely shredded raw cabbage, rice, miso soup and a tangy Worcestershire-style katsu sauce you grind your own sesame seeds into. The premium move is the kurobuta set, made with prized Berkshire black pork that is noticeably richer and sweeter. The atmospheric dining room, with its high ceilings and bathhouse bones, is a pleasure, though queues build at peak times; if you are in a hurry, the takeaway window sells the legendary katsu sando, a crustless white-bread sandwich of pork cutlet and sauce that is one of the great Tokyo snacks. Affordable, deeply satisfying and quintessentially Japanese, Maisen is a perfect introduction to washoku beyond sushi and ramen.",
   },
   {
-    name: "Narisawa", slug: "narisawa", image: RES("narisawa.webp"),
+    name: "Narisawa", slug: "narisawa", image: "/images/tokyo/restaurants/restaurant-tokyo.avif",
     rating: 4.6, reviewCount: 3400, price: "¥¥¥¥", type: "Innovative / Satoyama", area: "Minami-Aoyama",
     tip: "Book weeks ahead online; the tasting menu tells a story of Japan's forests and seasons, so go with an open, curious palate.",
     filterKeys: ["fine-dining"],
@@ -285,7 +285,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The first urban outpost of the fabled Aman brand, Aman Tokyo occupies the top six floors of the Otemachi Tower and is a masterclass in serene, contemporary Japanese luxury. Its jaw-dropping centrepiece is a 30-metre-high lobby atrium wrapped in washi paper, dark stone and blond wood, evoking the calm of a traditional ryokan blown up to monumental scale — arriving here feels like stepping out of the megacity into a temple in the clouds. The vast rooms continue the theme, with deep engawa-style window seats, camphor-wood soaking tubs and uninterrupted views over the Imperial Palace gardens or the endless skyline toward Mount Fuji. The two-storey spa, complete with a stunning indoor pool ringed by floor-to-ceiling glass, is among the finest in any city hotel. Service is intuitive and discreet, dining spans refined Japanese and Italian, and the whole property radiates a hushed, meditative calm rare in central Tokyo. Rates are firmly in the splurge category, but for a landmark stay that captures modern Japanese aesthetics at their most refined, Aman Tokyo is peerless. Non-guests can sample it over afternoon tea in that unforgettable lobby lounge.",
   },
   {
-    name: "Park Hyatt Tokyo", slug: "park-hyatt-tokyo", image: HOT("park-hyatt-tokyo.webp"),
+    name: "Park Hyatt Tokyo", slug: "park-hyatt-tokyo", image: "/images/tokyo/hotels/hotel-tokyo.avif",
     rating: 4.7, reviewCount: 5400, price: "¥¥¥¥", type: "Luxury", area: "Shinjuku",
     tip: "The Lost in Translation hotel — come up to the 52nd-floor New York Bar for the view and jazz, even if you're not a guest.",
     filterKeys: ["luxury"],
@@ -294,7 +294,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Forever linked with Sofia Coppola's Lost in Translation, the Park Hyatt Tokyo occupies the top fourteen floors of a Kenzo Tange skyscraper in West Shinjuku and remains one of the city's most beloved luxury hotels. It trades flashiness for understated, timeless elegance: warm wood, contemporary art, an abundance of natural light and a discreet, deeply attentive service culture. The spacious rooms feel like calm private apartments in the sky, with vast windows framing the neon sprawl below and, on clear days, Mount Fuji on the horizon. The crowning glory is the 52nd-floor New York Bar and Grill, where live jazz plays nightly against one of the most famous views in Tokyo — a magnet for guests and non-guests alike (expect a cover charge in the evening). The top-floor Club on the Park spa and pool, wrapped in glass beneath a soaring greenhouse-like roof, is another highlight. Though newer, glossier towers have opened, the Park Hyatt endures thanks to its atmosphere, its literary-cinematic mystique and its sense of serene refuge high above the busiest station district on earth.",
   },
   {
-    name: "Mandarin Oriental Tokyo", slug: "mandarin-oriental-tokyo", image: HOT("mandarin-oriental-tokyo.webp"),
+    name: "Mandarin Oriental Tokyo", slug: "mandarin-oriental-tokyo", image: "/images/tokyo/hotels/hotel-tokyo.avif",
     rating: 4.7, reviewCount: 3600, price: "¥¥¥¥", type: "Luxury", area: "Nihonbashi",
     tip: "Rooms and restaurants sit high in the tower — request a corner room facing the Skytree and river for the best cityscape.",
     filterKeys: ["luxury"],
@@ -312,7 +312,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Hoshinoya Tokyo is one of the city's most distinctive luxury stays: a full-blown traditional ryokan stacked vertically inside a sleek seventeen-storey tower in the business district of Otemachi. You leave your shoes at the entrance and pad in socks across tatami and warm wooden floors for your entire stay. Rooms are serene, minimalist spaces with shoji screens, low futon beds, tea sets and deep tubs, while each floor has its own intimate lounge (ochanoma) serving complimentary snacks, sake and tea, fostering a house-party sense of calm. The crown jewel sits on the top floor: an open-air onsen bath fed by genuine hot-spring water pumped from 1,500 metres beneath Tokyo, where you soak under the open sky walled off from the surrounding skyscrapers — a remarkable, quietly surreal experience in the heart of the metropolis. Kaiseki-style Japanese-French dining, meditation and cultural programmes round out the experience. It offers something the international five-stars cannot: an authentically Japanese ryokan ritual — omotenashi hospitality, communal bathing, seasonal design — without leaving central Tokyo. For a cultural immersion wrapped in modern comfort, Hoshinoya is unforgettable.",
   },
   {
-    name: "The Prince Gallery Tokyo Kioicho", slug: "prince-gallery-kioicho", image: HOT("the-prince-gallery-tokyo-kioicho.webp"),
+    name: "The Prince Gallery Tokyo Kioicho", slug: "prince-gallery-kioicho", image: "/images/tokyo/hotels/hotel-tokyo.avif",
     rating: 4.5, reviewCount: 4800, price: "¥¥¥", type: "Upscale", area: "Kioicho / Akasaka",
     tip: "The 36th-floor Sky Gallery Lounge has some of the best-value skyline views in the city — ideal for sunset cocktails.",
     filterKeys: ["luxury", "boutique"],
@@ -321,7 +321,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Part of Marriott's Luxury Collection, The Prince Gallery Tokyo Kioicho occupies the upper floors of a gleaming tower on the border of Akasaka and Kioicho, offering high-design contemporary luxury at prices a notch below the very top-tier hotels. Guest rooms begin on the 30th floor and are chic, spacious and floor-to-ceiling glazed, delivering commanding views over the leafy Akasaka Palace gardens, the Imperial grounds, the Skytree or the skyscrapers of Shinjuku depending on your aspect. The interiors are sleek and modern, with a cool, cosmopolitan feel and thoughtful touches throughout. Its social hub is the glamorous 36th-floor Sky Gallery Lounge and Levita bar, wrapped in windows and serving afternoon tea and evening cocktails against a spectacular panorama — a genuine highlight and, for the quality, reasonably priced. There is also a small pool, gym and spa. The location is excellent for business and sightseeing: directly linked to Nagatacho subway station, walking distance to Akasaka's restaurants and a short ride to Ginza or Shibuya. For striking design, big views and central convenience at a relative value, it is one of Tokyo's smartest upscale picks.",
   },
   {
-    name: "Hotel Gracery Shinjuku", slug: "hotel-gracery-shinjuku", image: HOT("hotel-gracery-shinjuku.webp"),
+    name: "Hotel Gracery Shinjuku", slug: "hotel-gracery-shinjuku", image: "/images/tokyo/hotels/hotel-tokyo.avif",
     rating: 4.3, reviewCount: 9700, price: "¥¥", type: "Mid-Range", area: "Kabukicho, Shinjuku",
     tip: "Book a 'Godzilla View' room to wake up next to the giant head — and stay right above the neon heart of Kabukicho nightlife.",
     filterKeys: ["boutique"],
@@ -339,7 +339,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "Nine Hours is the capsule hotel reinvented for the design age, and staying in one is a quintessentially Japanese experience every curious traveller should try at least once. The concept is in the name: '1 hour to shower, 7 hours to sleep, 1 hour to dress' — a streamlined, efficient overnight stay stripped to the essentials. The aesthetic is crisp, white and almost sci-fi, like stepping onto a spaceship: you are assigned a smooth sleeping pod in a stacked, softly lit dormitory pod-bay, with a comfortable mattress, adjustable lighting and a pull-down screen for privacy, while your luggage and clothes go in a separate locker. Shared bathrooms and shower rooms are spotless and stocked with quality amenities, and men's and women's sleeping areas are strictly separated on different floors. It is not for those who need lots of space or privacy, and you spend little time in the pod beyond sleeping, but it is impeccably clean, genuinely comfortable for a night or two, and remarkably cheap for such a central Shinjuku location. For solo travellers and the budget-minded, it is a fun, futuristic and very Tokyo way to sleep.",
   },
   {
-    name: "Book and Bed Tokyo", slug: "book-and-bed-tokyo", image: HOT("book-and-bed-tokyo.webp"),
+    name: "Book and Bed Tokyo", slug: "book-and-bed-tokyo", image: "/images/tokyo/hotels/hotel-tokyo.avif",
     rating: 4.2, reviewCount: 3100, price: "¥", type: "Hostel", area: "Ikebukuro / Shinjuku",
     tip: "Pick a 'bookshelf' bunk tucked behind the stacks, borrow a novel and read yourself to sleep — it's a hostel, so pack light.",
     filterKeys: ["budget"],
@@ -361,7 +361,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Golden Gai is one of the last surviving pockets of post-war Tokyo, a tight cluster of six narrow alleys crammed with more than two hundred impossibly tiny bars, many seating just five or six drinkers at a counter. Once a black-market and red-light quarter, it became a bohemian haunt for writers, artists, musicians and filmmakers, and it retains that ramshackle, atmospheric charm — a maze of low wooden buildings, hand-painted signs and glowing lanterns that feels frozen in the Showa era. Each bar has its own fierce personality, themed around anything from punk rock or jazz to horror films, football or 1960s cinema, and hopping between a few over a night is the whole point. Some are locals-only or charge a seat cover, while a growing number display friendly 'tourists welcome' signs and English menus, so look for those if it is your first visit. Drinks are not cheap by the glass once cover charges are added, and space is minimal, but the experience — squeezing into a shoebox bar and chatting with a colourful master and their regulars — is pure, irreplaceable Tokyo. Go after 21:00 when the alleys come alive.",
   },
   {
-    name: "New York Bar", slug: "new-york-bar", image: NAT("new-york-bar-park-hyatt.webp"),
+    name: "New York Bar", slug: "new-york-bar", image: "/images/tokyo/nightlife/cocktail-bar-tokyo.webp",
     rating: 4.6, reviewCount: 9800, type: "Sky Bar / Jazz", area: "Shinjuku",
     tip: "Arrive before the music starts (around 20:00) to beat the cover charge and grab a window table at sunset.",
     filterKeys: ["bar", "live-music"],
@@ -397,7 +397,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Bar High Five is a place of pilgrimage for cocktail lovers, a small, intimate basement bar in Ginza presided over by Hidetsugu Ueno, one of the most respected bartenders in the world and an ambassador for the meticulous Japanese cocktail tradition. There is no printed menu; instead, you tell the immaculately dressed bartenders your preferred spirits and the kind of flavours or mood you are after, and they craft a drink precisely to your taste. The craftsmanship is mesmerising to watch — the hand-carved diamond ice, the exacting stirring and shaking techniques, the beautifully balanced results — all delivered with warm, courteous, unpretentious hospitality that puts newcomers at ease. Classics are executed to perfection and seasonal fresh-fruit cocktails are a speciality. It is a quiet, grown-up, conversational sort of bar, seating only a couple of dozen guests at the counter and a few tables, so it can fill up; there is a modest seat charge on top of the drinks. For anyone who wants to understand why Japan is considered the spiritual home of the modern cocktail, an evening at High Five, ideally perched at the counter watching Ueno-san work, is essential and unforgettable.",
   },
   {
-    name: "Gen Yamamoto", slug: "gen-yamamoto", image: NAT("gen-yamamoto.webp"),
+    name: "Gen Yamamoto", slug: "gen-yamamoto", image: "/images/tokyo/nightlife/flamenco-tokyo.webp",
     rating: 4.7, reviewCount: 1200, type: "Tasting Cocktail Bar", area: "Azabu-Juban",
     tip: "Book ahead for the four- or six-course seasonal cocktail flight — it's an omakase for drinks, not a place for a quick pint.",
     filterKeys: ["bar"],
@@ -424,7 +424,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "No trip to Tokyo is complete without a night of karaoke, and Karaoke Rainbow in Shibuya is a slick, welcoming place to experience this beloved Japanese pastime. Unlike Western karaoke, you do not perform in front of strangers in a bar; instead you rent a private room (a 'karaoke box') by the hour for your own group, so you can belt out anything from J-pop and rock anthems to Western chart hits without a shred of self-consciousness. The rooms are comfortable and well-equipped with sofas, tambourines, big screens and touchscreen consoles offering an enormous catalogue that includes thousands of English-language songs, making it easy for international visitors to join in. You order drinks and snacks by phone to the room, and many places offer nomihodai (all-you-can-drink) deals that make a long session great value, especially in the evenings. Rates are charged per person per hour and are very affordable earlier in the day. Bright, clean and fun, with a lively Shibuya location near the crossing, it is the ideal place to gather friends, unleash your inner pop star and understand why karaoke is such a cornerstone of Japanese social life.",
   },
   {
-    name: "The Albatross", slug: "the-albatross", image: NAT("the-albatross-zenyakyoku.webp"),
+    name: "The Albatross", slug: "the-albatross", image: "/images/tokyo/nightlife/live-music-tokyo.webp",
     rating: 4.4, reviewCount: 2400, type: "Golden Gai Bar", area: "Shinjuku",
     tip: "One of Golden Gai's most tourist-friendly bars, spread over three tiny floors — climb to the top for the chandelier and rooftop.",
     filterKeys: ["bar"],
@@ -433,7 +433,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Of the two-hundred-odd bars crammed into Shinjuku's Golden Gai, The Albatross is one of the most beloved by first-time visitors, precisely because it is welcoming, atmospheric and refreshingly easy to walk into. Where many Golden Gai bars are members-only or seat just a handful of regulars, the Albatross spreads over three impossibly narrow floors connected by steep staircases, giving it a little more room and a theatrical, gloriously over-the-top interior: red walls, gilt frames, dripping candles, a grand chandelier and every surface layered in kitsch and curiosities, like a bohemian salon shrunk to miniature. There is a small cover charge, after which drinks are reasonably priced by Golden Gai standards, and the staff are used to international guests and happy to chat. Climbing to the top floor rewards you with the most decadent room and access to a tiny terrace. It captures everything wonderful about the district — the cramped charm, the eccentric decor, the sense of stumbling into a hidden world — while removing the intimidation factor. Start a Golden Gai bar crawl here, soak up the surreal ambience, then venture into the smaller, quirkier bars nearby once you have found your feet.",
   },
   {
-    name: "Bar Zoetrope", slug: "bar-zoetrope", image: NAT("piano-bar-shot-bar-zoetrope.webp"),
+    name: "Bar Zoetrope", slug: "bar-zoetrope", image: "/images/tokyo/nightlife/nightlife-bar-tokyo.webp",
     rating: 4.6, reviewCount: 2100, type: "Whisky Bar", area: "Shinjuku",
     tip: "A whisky lover's paradise with 300+ Japanese bottles — tell the owner your taste and budget, and silent films play on the wall.",
     filterKeys: ["bar"],
@@ -491,7 +491,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Akihabara is the ultimate destination for electronics, gadgets, anime and gaming merchandise, a dazzling district of multi-storey stores whose neon signs and blaring shop jingles are a sensory assault in the best way. For electronics and cameras, the enormous Yodobashi Camera Multimedia Akiba spreads over many floors of everything from the latest laptops and drones to kitchen gadgets and beauty devices, much of it available duty-free to foreign visitors who bring their passport — look for the ubiquitous red tax-free signs to save the consumption tax. Beyond mainstream electronics, Akihabara is the beating heart of otaku retail: towering emporiums like Animate, Mandarake and Radio Kaikan sell anime and manga, collectible figures, trading cards, cosplay and doujinshi across floor after floor, while Super Potato is a legendary shrine to retro video games and consoles. Dozens of arcades, capsule-toy (gachapon) halls, maid cafés and duty-free discount stores fill the gaps. The key to shopping here is to explore vertically — the best specialist shops occupy the upper floors of unassuming buildings. Whether you are hunting a bargain camera, a rare figure or simply soaking up hyper-modern Tokyo, Akihabara is an unmissable, one-of-a-kind retail experience.",
   },
   {
-    name: "Omotesando", slug: "omotesando", image: SHOP("omotesando.webp"),
+    name: "Omotesando", slug: "omotesando", image: "/images/tokyo/shopping/artisan-shop-tokyo.webp",
     rating: 4.5, reviewCount: 22000, type: "Designer & Architecture", area: "Omotesando / Aoyama",
     tip: "Even if the flagships are out of budget, the architecture is free — the Tadao Ando-designed Omotesando Hills is a must-see.",
     filterKeys: ["fashion", "luxury"],
@@ -598,7 +598,7 @@ export const WITH_KIDS: BcnPlace[] = [
 // ── Day Trips (6) ────────────────────────────────────────────────────────────
 export const DAY_TRIPS: BcnPlace[] = [
   {
-    name: "Hakone & Mount Fuji", slug: "hakone-fuji", image: DAY("mt-fuji-hakone.webp"),
+    name: "Hakone & Mount Fuji", slug: "hakone-fuji", image: "/images/tokyo/day-trips/costa-brava-landscape-tokyo.webp",
     rating: 4.7, reviewCount: 62000, distance: "90 km SW", duration: "Full day", area: "Kanagawa",
     tip: "Buy the Hakone Free Pass for unlimited use of the scenic loop — train, cable car, ropeway, pirate ship and bus — in one ticket.",
     tiqetsUrl: tiqets("Hakone Mount Fuji day trip Tokyo"), filterKeys: ["nature", "onsen"],

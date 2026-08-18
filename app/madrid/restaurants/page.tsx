@@ -55,7 +55,7 @@ export default function MadridRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in Madrid"
-      heroImage="/images/madrid/restaurants/sobrino-de-botn.webp"
+      heroImage="/images/madrid/restaurants/restaurant-madrid.avif"
       intro="Madrid's food scene is as social as it is delicious, and one of the best-value in Europe. From Sobrino de Botín — the world's oldest restaurant, roasting suckling pig since 1725 — to Dabiz Muñoz's three-Michelin-star DiverXO, from the world-champion tortilla at Casa Dani to churros con chocolate at 130-year-old San Ginés, these are the tables worth planning around. Eat where the locals eat: skip menus in six languages, follow the tapas trail through La Latina, and remember that Madrileños dine late. Here are 10 standout restaurants with areas, prices and insider tips."
       wide
     >

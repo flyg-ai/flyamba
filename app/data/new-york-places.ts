@@ -263,7 +263,7 @@ export const ATTRACTIONS: BcnPlace[] = [
 // ── Restaurants (10) ─────────────────────────────────────────────────────────
 export const RESTAURANTS: BcnPlace[] = [
   {
-    name: "Le Bernardin", slug: "le-bernardin", image: R("le-bernardin.webp"),
+    name: "Le Bernardin", slug: "le-bernardin", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.8, reviewCount: 9000, price: "$$$$", area: "Midtown West", type: "French Seafood (3-Michelin)",
     tip: "Eric Ripert's temple to fish since 1986. The tasting menu runs $295; jackets required. Book about a month ahead.",
     filterKeys: ["fine-dining"],
@@ -272,7 +272,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Le Bernardin is Eric Ripert's three-Michelin-star temple to fish, open since 1986 and a fixture on the world's-50-best lists every year — New York's most acclaimed seafood restaurant by a wide margin. The kitchen serves refined modern French cooking built entirely around the sea: yellowfin tuna layered with foie gras, halibut in a sea-urchin emulsion, the signature Le Bernardin tartare. Three menu formats are offered — the standard prix fixe at $295, a longer tasting at around $345, and the Chef's Tasting at roughly $395 — with an optional wine pairing adding about $200. The dining room is hushed, formal and impeccably run, a place for a genuine occasion rather than a casual meal. There is a jacket requirement and no T-shirts; reservations open about 30 days out on the restaurant's booking platform and vanish quickly, especially for prime evenings. It is expensive, unhurried and precise to the last detail. For travellers wanting to experience the top of New York's fine-dining scene, and seafood cooked as well as anywhere on earth, Le Bernardin is the benchmark.",
   },
   {
-    name: "Eleven Madison Park", slug: "eleven-madison-park", image: R("eleven-madison-park.webp"),
+    name: "Eleven Madison Park", slug: "eleven-madison-park", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.6, reviewCount: 7000, price: "$$$$", area: "Madison Square Park", type: "Plant-Based Fine Dining (3-Michelin)",
     tip: "Daniel Humm's three-star room went fully plant-based in 2021. The tasting menu is around $365; book roughly a month ahead.",
     filterKeys: ["fine-dining", "modern"],
@@ -281,7 +281,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Eleven Madison Park is Daniel Humm's three-Michelin-star restaurant that became entirely plant-based in 2021 — a bold, divisive move that lost some devotees and won a new wave of them. The eight-course tasting menu is around $365 per person, with an optional wine pairing adding roughly $245. Signature courses have included a pickled-and-roasted golden beet pavé, smoked tofu with sea kelp, and a lavender-honey éclair. The vast dining room occupies a restored 1930s Art Deco building facing Madison Square Park, and the service is among the most polished in the city — for years it was ranked the best restaurant in the world. Jackets are recommended for men, and reservations open about 30 days ahead on the restaurant's booking system, disappearing fast for weekends. This is destination dining, cerebral and beautifully staged, best approached as an evening-long event rather than a meal. For visitors curious about the direction fine dining is taking — and about whether a vegetable can carry a menu of this ambition — it remains one of New York's most talked-about tables.",
   },
   {
-    name: "Peter Luger Steak House", slug: "peter-luger", image: R("peter-luger-steakhouse.webp"),
+    name: "Peter Luger Steak House", slug: "peter-luger", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.5, reviewCount: 24000, price: "$$$", area: "Williamsburg (Brooklyn)", type: "Classic Steakhouse",
     tip: "Open since 1887, cash only, no lunch reservations. The porterhouse for two is $130 — the whole experience is gruff old-school Brooklyn.",
     filterKeys: ["local", "fine-dining"],
@@ -290,7 +290,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Peter Luger is a Williamsburg steakhouse open since 1887 — often called the best steak in New York. It is famously cash only (no cards) and takes no reservations for lunch. The menu is short and the point is the meat: a porterhouse for two at $130, for three at $195, for four at $260, dry-aged in-house and served sizzling in butter, carved tableside. The classic sides are Luger's German fried potatoes, creamed spinach and the thick-cut bacon that regulars order by the strip. The lunch queue runs 30 to 60 minutes, more at weekends, and the waiters — many of whom have worked here for decades — are legendarily brusque, which is part of the charm. Nothing about the wood-panelled room has changed in generations, and that is exactly the appeal: this is a piece of living New York history rather than a designed dining experience. Bring cash, come hungry, order the porterhouse and a couple of sides to share, and settle in for a meal that feels like stepping back a century. A quintessential Brooklyn institution and a rite of passage for steak lovers.",
   },
   {
-    name: "Katz's Delicatessen", slug: "katzs-delicatessen", image: R("katzs-delicatessen.webp"),
+    name: "Katz's Delicatessen", slug: "katzs-delicatessen", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.6, reviewCount: 52000, price: "$$", area: "Lower East Side", type: "Jewish Deli",
     tip: "Open since 1888; the pastrami sandwich is $26 and the 'When Harry Met Sally' scene was filmed at Table 12 (there's a sign). Take a ticket at the door.",
     filterKeys: ["local", "budget"],
@@ -299,7 +299,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Katz's Delicatessen has been a Lower East Side institution since 1888 and is the most photographed food spot in New York. It is famous above all for its pastrami sandwich ($26), hand-carved to order, and for the 'When Harry Met Sally' scene filmed at Table 12 (a sign now marks the spot). The wider menu runs to classic Jewish-American deli fare: matzo ball soup, corned beef, potato latkes, hot dogs and knishes. The ordering system is part of the ritual — take a ticket at the door, order at the carving counter, and the server stamps your ticket as you go, tipping the carver a dollar or two for a taste. The room is cramped, loud and hung with decades of memorabilia, and that chaos is exactly why people love it. It is affordable by New York standards and open late, well past midnight on weekends. For anyone wanting the classic, unpolished New York deli experience — a mountain of pastrami on rye, a pickle and a cream soda in a room that has barely changed in a century — Katz's is the obvious, joyful choice.",
   },
   {
-    name: "Joe's Pizza", slug: "joes-pizza", image: R("joes-pizza.webp"),
+    name: "Joe's Pizza", slug: "joes-pizza", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.6, reviewCount: 30000, price: "$", area: "Greenwich Village", type: "New York Slice",
     tip: "Open since 1975 and family-run. A plain slice is $3.50 — far more authentic than the tourist slice joints. Standing room only.",
     filterKeys: ["budget", "local"],
@@ -308,7 +308,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Joe's Pizza is a Greenwich Village institution, open since 1975 and still run by the same family. The plain (cheese) slice is $3.50 and the pepperoni $4.50 — there is no seating, just standing room or take-out. This is the classic 20th-century New York slice: a thin, crisp underside that stays supple enough to fold down the middle in the proper local style. It is a legend for the late-night crowd, busiest from around 22:00 into the small hours, when groups pour in after the bars and clubs. There are other locations, including a busier one in Times Square and a branch in Williamsburg, but the Carmine Street original is the one to seek out. It is about as cheap as a memorable meal in New York gets, and it consistently tops lists of the city's best slices — proof that some of the finest food in an eye-wateringly expensive city costs almost nothing. Grab a slice, fold it, and eat it on the sidewalk like a local. Simple, iconic and exactly what a New York slice should be.",
   },
   {
-    name: "Carbone", slug: "carbone", image: R("carbone.webp"),
+    name: "Carbone", slug: "carbone", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.5, reviewCount: 12000, price: "$$$$", area: "Greenwich Village", type: "Italian-American",
     tip: "The spicy rigatoni vodka is the signature; the red-jacketed waiters set the 1950s theatre. Book 30 days out — it sells out every night.",
     filterKeys: ["fine-dining", "modern"],
@@ -317,7 +317,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Carbone is an Italian-American restaurant in Greenwich Village, open since 2013, and the flagship of Major Food Group (chef Mario Carbone) that has since become an international brand with outposts in Miami, Las Vegas and Hong Kong. The menu leans into elevated red-sauce classics: the signature spicy rigatoni vodka ($32), veal parmesan ($72) and a Caesar salad tossed tableside ($28). There is a dress code — jackets appreciated for men — and the room conjures a 1950s New York supper club, with waiters in red dinner jackets who greet each table with a bit of old-school swagger and theatre. It sells out every single night, and reservations open exactly 30 days ahead on the booking system, disappearing within minutes. This is dining as performance as much as food — expensive, buzzy and deliberately nostalgic. For anyone who wants a glamorous, high-energy night out and a taste of the restaurant that redefined how the world sees Italian-American cooking, Carbone is worth the effort of securing a table. Come dressed up, order the rigatoni, and lean into the show.",
   },
   {
-    name: "Balthazar", slug: "balthazar", image: R("balthazar.webp"),
+    name: "Balthazar", slug: "balthazar", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.5, reviewCount: 18000, price: "$$$", area: "SoHo", type: "French Brasserie",
     tip: "Keith McNally's SoHo brasserie since 1997. The weekend seafood tower (Plateau de Fruits de Mer) is $145. Book a month ahead for weekends.",
     filterKeys: ["local", "fine-dining"],
@@ -326,7 +326,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Balthazar is a French brasserie in SoHo, open since 1997 — Keith McNally's most successful concept (he is also behind Pastis and Minetta Tavern). It serves all day: breakfast from 07:30 (the Eggs Benedict is a fixture), lunch through the afternoon (the steak frites at $35 is the classic order) and dinner until midnight, with the weekend Plateau de Fruits de Mer, a towering seafood platter for two, at $145. The room is a lovingly built replica of a Parisian Belle Époque brasserie — tin ceilings, antiqued mirrors, stacked wine bottles behind the bar and red banquettes — and it hums from morning to night with a mix of locals, celebrities and visitors. It is polished but relaxed, and the adjoining bakery sells some of the best bread and pastries in the city. Reservations are essential for weekends, ideally a month ahead. For an atmospheric, all-day French meal in the heart of SoHo — whether a leisurely breakfast, a long lunch or a lively dinner — Balthazar remains one of New York's most enjoyable and dependable tables.",
   },
   {
-    name: "Xi'an Famous Foods", slug: "xian-famous-foods", image: R("xian-famous-foods.webp"),
+    name: "Xi'an Famous Foods", slug: "xian-famous-foods", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.5, reviewCount: 15000, price: "$", area: "Multiple locations", type: "Chinese (Xi'an)",
     tip: "Hand-pulled noodles are the thing; the spicy cumin lamb noodles are $14 and the lamb burger $7. Casual, walk-in, no reservations.",
     filterKeys: ["budget", "local"],
@@ -335,7 +335,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Xi'an Famous Foods is a cult chain of Xi'an-style Chinese restaurants, founded in 2005 — Jason Wang's concept, which began as a basement stall in Flushing, Queens. The draw is the hand-pulled noodles: the spicy cumin lamb hand-pulled noodles ($14), the spicy-and-tingly beef hand-ripped noodles ($14) and the lamb 'burger' ($7), all fierce with chilli and cumin and unlike most Chinese food in the West. It became famous partly as an Anthony Bourdain favourite, and there are now more than a dozen branches across the city. The style is deliberately casual — order at the counter, no reservations, expect a short queue at lunch — and prices are a fraction of what you would pay for a sit-down meal elsewhere in Manhattan. For budget travellers who want genuinely regional, boldly spiced Chinese food without tourist mark-ups, it is one of the best-value eats in the city. Try the noodles at their intended heat, watch the dough being pulled to order, and understand why a tiny Queens basement stall grew into a New York institution. Fast, fiery and thoroughly satisfying.",
   },
   {
-    name: "Russ & Daughters", slug: "russ-daughters", image: R("russ-daughters.webp"),
+    name: "Russ & Daughters", slug: "russ-daughters", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.7, reviewCount: 11000, price: "$$", area: "Lower East Side", type: "Appetizing Store",
     tip: "Open since 1914 and run by the same family for four generations. A bagel with lox is $24. The sit-down café is two blocks away on Orchard Street.",
     filterKeys: ["local", "budget"],
@@ -344,7 +344,7 @@ export const RESTAURANTS: BcnPlace[] = [
     fullDescription: "Russ & Daughters is an 'appetizing store' on the Lower East Side, open since 1914 and run by the same family across four generations — famously the first such shop to be named '...& Daughters' rather than '...& Sons'. It is celebrated for its bagel with lox ($24), its hand-sliced smoked salmon and its schmears of cream cheese, the cornerstones of a classic New York Jewish breakfast. Its heritage has been documented in film ('The Sturgeon Queens', 2014), and it stands as one of the last survivors of the old immigrant food culture of the neighbourhood. The original shop is take-out only, a jewel box of a counter piled with cured fish, caviar, bagels and babka; two blocks away on Orchard Street, the Russ & Daughters Café offers the same food to sit down and eat as a proper brunch. For anyone wanting to taste an authentic piece of Lower East Side history — beautifully cured lox on a fresh bagel, in a shop that has fed the neighbourhood for over a century — this is an essential, delicious stop. Come hungry and take your time choosing.",
   },
   {
-    name: "The Spotted Pig", slug: "the-spotted-pig", image: R("the-spotted-pig.webp"),
+    name: "The Spotted Pig", slug: "the-spotted-pig", image: "/images/new-york/restaurants/restaurant-new-york.avif",
     rating: 4.4, reviewCount: 8000, price: "$$$", area: "West Village", type: "Gastropub",
     tip: "April Bloomfield's genre-defining gastropub. The chargrilled burger with roquefort and shoestring fries is the order — small room, no lunch reservations.",
     filterKeys: ["modern"],
@@ -357,7 +357,7 @@ export const RESTAURANTS: BcnPlace[] = [
 // ── Hotels (8) ───────────────────────────────────────────────────────────────
 export const HOTELS: BcnPlace[] = [
   {
-    name: "The Plaza Hotel", slug: "the-plaza-hotel", image: H("the-plaza-hotel.webp"),
+    name: "The Plaza Hotel", slug: "the-plaza-hotel", image: "/images/new-york/hotels/hotel-new-york.avif",
     rating: 4.6, reviewCount: 12000, price: "$$$$", area: "Midtown (Fifth Ave & Central Park)", type: "Iconic Luxury",
     tip: "The iconic 1907 hotel on the corner of Central Park — the 'Eloise' and 'Home Alone 2' landmark. From about $950 a night.",
     filterKeys: ["luxury"],
@@ -366,7 +366,7 @@ export const HOTELS: BcnPlace[] = [
     fullDescription: "The Plaza is perhaps the world's most iconic hotel, built in 1907 on the corner of Fifth Avenue and Central Park South. It is the backdrop of 'Home Alone 2', 'The Great Gatsby' and the 'Eloise' children's books, and its 282 rooms wear full Belle Époque dress — crystal chandeliers, marble bathrooms and antique furnishings. The Palm Court is a New York ritual for afternoon tea (around $95 a head), and the hotel holds several restaurants including the Todd English Food Hall, a rare affordable lunch option inside a landmark of this stature. Rooms run from around $950 a night, with suites from $3,500 and up. It sits at the very heart of Midtown, steps from Central Park, the Fifth Avenue flagships and the Museum Mile. This is a hotel for a special occasion — a celebration, an anniversary, or simply the chance to sleep inside a piece of New York legend rather than a modern tower. For history, glamour and an unbeatable Central Park address, The Plaza remains the definitive grand New York hotel, and its public rooms are worth a look even if you are not staying.",
   },
   {
-    name: "Aman New York", slug: "aman-new-york", image: H("aman-new-york.webp"),
+    name: "Aman New York", slug: "aman-new-york", image: "/images/new-york/hotels/hotel-new-york.avif",
     rating: 4.8, reviewCount: 1500, price: "$$$$", area: "Midtown (Fifth Ave & 56th)", type: "Ultra-Luxury",
     tip: "The USA's most exclusive hotel, opened 2022 in the restored 1921 Crown Building. All 83 suites are 70 m²+. From about $3,000 a night.",
     filterKeys: ["luxury"],
@@ -433,7 +433,7 @@ export const HOTELS: BcnPlace[] = [
 // ── Nightlife (10) ───────────────────────────────────────────────────────────
 export const NIGHTLIFE: BcnPlace[] = [
   {
-    name: "Employees Only", slug: "employees-only", image: N("employees-only.webp"),
+    name: "Employees Only", slug: "employees-only", image: "/images/new-york/nightlife/cocktail-bar-new-york.webp",
     rating: 4.5, reviewCount: 9000, type: "Speakeasy", area: "West Village",
     tip: "Hidden behind a 'Psychic Reader' sign since 2004 — one of the world's most acclaimed cocktail bars. Drinks $16–22.",
     filterKeys: ["speakeasy", "cocktail"],
@@ -442,7 +442,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Employees Only is a West Village speakeasy, open since 2004 and, without exaggeration, one of the most acclaimed cocktail bars in the world, a fixture on the 'World's 50 Best Bars' list. It hides behind a 'Psychic Reader' sign — you enter through an unremarkable door past a fortune-teller's window — into a burlesque, Art Deco interior. The cocktails run $16–22, with house classics such as the EO Gimlet and the Provençal, and there is a proper kitchen too, with dishes like steak tartare. It is atmospheric, expertly run and busy, staying open until around 04:00 at weekends, and its bartenders are widely regarded as among the best in the city. For visitors wanting the quintessential New York speakeasy experience — a hidden door, a period room and cocktails made with real craft — it is a benchmark. Go a little early on weekdays to avoid the worst of the queue, and remember that in New York tipping the bartender ($1–2 a drink) is expected, not optional. A polished, characterful and genuinely world-class place to start or spend an evening.",
   },
   {
-    name: "The Dead Rabbit", slug: "dead-rabbit", image: N("dead-rabbit.webp"),
+    name: "The Dead Rabbit", slug: "dead-rabbit", image: "/images/new-york/nightlife/flamenco-new-york.webp",
     rating: 4.5, reviewCount: 11000, type: "Irish Cocktail Bar", area: "Financial District",
     tip: "Twice named 'World's Best Bar'. Three floors of Irish whiskey and cocktails; drinks $12–18.",
     filterKeys: ["cocktail"],
@@ -451,7 +451,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Dead Rabbit is an Irish pub and cocktail bar in the Financial District, open since 2013 and named 'World's Best Bar' in 2015 and 2016 — the creation of Belfast bartenders Sean Muldoon and Jack McGarry. It spreads across three floors: the ground-floor Bar Room in classic pub style, the Parlour upstairs for cocktails, and an Occasional Room for private events. The drinks lean into Irish cocktails and a deep whiskey list, more than 50 Irish whiskeys among them, with cocktails at $12–18 — good value by top-bar standards. It draws a broad, mixed crowd across the age range and stays open until around 04:00 at weekends. Set in Lower Manhattan near the harbour, it pairs well with a day around Wall Street, the Charging Bull and the Staten Island Ferry. For anyone who wants world-class cocktails in a warm, unpretentious pub setting rather than a hushed speakeasy, the Dead Rabbit is a joy — expertly made drinks, Irish hospitality and a genuinely convivial atmosphere. Tip the bartender, settle in, and work your way up the three floors as the night unfolds.",
   },
   {
-    name: "PDT (Please Don't Tell)", slug: "please-dont-tell", image: N("please-dont-tell-pdt.webp"),
+    name: "PDT (Please Don't Tell)", slug: "please-dont-tell", image: "/images/new-york/nightlife/live-music-new-york.webp",
     rating: 4.5, reviewCount: 8000, type: "Speakeasy", area: "East Village",
     tip: "Enter through a phone booth inside Crif Dogs hot-dog joint. Just 21 seats; book via the PDT app. Drinks $14–18.",
     filterKeys: ["speakeasy", "cocktail"],
@@ -496,7 +496,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "Bemelmans Bar is a piano bar in the Carlyle Hotel on the Upper East Side, open since 1947 and one of the most storied rooms in New York. Its walls are covered by murals painted by Ludwig Bemelmans, the creator of the Madeline children's books — the only Bemelmans artwork open to the public. A pianist plays nightly from around 17:30 to midnight, and the drinks are impeccable classic cocktails — Manhattans, Old Fashioneds, Negronis — at $22–28, with a music cover charge in the evenings. It draws a well-heeled, cross-generational crowd; JFK and Jacqueline Kennedy were once regulars. There is a smart-casual dress code, and the atmosphere is one of quiet, timeless glamour rather than a party. For visitors who want an elegant, grown-up New York evening — expertly made cocktails, live piano and a genuinely historic, romantic room — Bemelmans is unmatched. It is a place for a special occasion or a memorable nightcap, best enjoyed slowly with the music. One of the last great classic hotel bars in the city, and worth dressing up for. Arrive early in the evening for a table before the music charge and crowds build.",
   },
   {
-    name: "Blue Note Jazz Club", slug: "blue-note", image: N("blue-note.webp"),
+    name: "Blue Note Jazz Club", slug: "blue-note", image: "/images/new-york/nightlife/nightlife-bar-new-york.webp",
     rating: 4.5, reviewCount: 12000, type: "Jazz Club", area: "Greenwich Village",
     tip: "The famous Greenwich Village jazz club since 1981, with two sets nightly. Cover $35–55 plus a drink/food minimum; book about two weeks ahead.",
     filterKeys: ["live"],
@@ -514,7 +514,7 @@ export const NIGHTLIFE: BcnPlace[] = [
     fullDescription: "The Village Vanguard is a West Village jazz club, open since 1935 and the oldest continuously running jazz club in the world. It has just 123 seats and famously fine acoustics — landmark live albums were recorded here, including Bill Evans's 'Sunday at the Village Vanguard' and John Coltrane's 'Live at the Village Vanguard'. The cover charge is $35–45 plus a one-drink minimum, and the Vanguard Jazz Orchestra plays every Monday, with two sets a night at around 20:00 and 22:00. This is a room for serious listeners: talking during the sets is frowned upon, and the focus is entirely on the music. For visitors who want to experience jazz in its most reverent, historic New York setting — a small, atmospheric basement where the music's greatest names have played for nearly a century — the Vanguard is unmatched. It is more purist and less polished than the Blue Note, and that is precisely its appeal. Book ahead, arrive on time, keep quiet during the sets and simply let the music carry the night. A pilgrimage for any jazz lover, and one of the most authentic live-music experiences in the city.",
   },
   {
-    name: "House of Yes", slug: "house-of-yes", image: N("house-of-yes.webp"),
+    name: "House of Yes", slug: "house-of-yes", image: "/images/new-york/nightlife/rooftop-bar-night-new-york.webp",
     rating: 4.6, reviewCount: 10000, type: "Circus Club", area: "Bushwick (Brooklyn)",
     tip: "A circus-burlesque nightclub in Bushwick with a 'sexy creative' dress code — costumes encouraged. Entry $25–40.",
     filterKeys: ["clubs"],
@@ -527,7 +527,7 @@ export const NIGHTLIFE: BcnPlace[] = [
 // ── Shopping (8) ─────────────────────────────────────────────────────────────
 export const SHOPPING: BcnPlace[] = [
   {
-    name: "Fifth Avenue", slug: "fifth-avenue", image: S("fifth-avenue.webp"),
+    name: "Fifth Avenue", slug: "fifth-avenue", image: "/images/new-york/shopping/artisan-shop-new-york.webp",
     rating: 4.6, reviewCount: 68000, type: "Luxury District", area: "Midtown",
     tip: "The flagship strip — Apple's glass cube, Tiffany & Co., Bergdorf Goodman and Saks. Open Sundays; magical at Christmas.",
     filterKeys: ["luxury", "department"],
@@ -536,7 +536,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Fifth Avenue is New York's most famous shopping street, the Midtown stretch roughly between 49th and 60th Streets that gathers the city's grandest flagship stores. Here you'll find the glass-cube Apple Store (open 24 hours), the Tiffany & Co. flagship of 'Breakfast at Tiffany's' fame, the century-old luxury department store Bergdorf Goodman facing Central Park, Saks Fifth Avenue, and international houses from Louis Vuitton to Cartier. It is as much a sight as a shopping destination — the architecture, the window displays and the sheer scale are part of the spectacle, whether or not you buy a thing. The avenue is at its most magical around Christmas, when the store windows are dressed for the season and the lights go up, drawing crowds to the displays and the nearby Rockefeller Center tree. Most stores keep long hours and open on Sundays. Remember that New York City adds 8.875% sales tax at the register, though clothing and shoes under $110 are tax-free. For flagship-store browsing, luxury shopping and one of the great retail streetscapes in the world, Fifth Avenue is the obvious first stop.",
   },
   {
-    name: "SoHo", slug: "soho-shopping", image: S("soho.webp"),
+    name: "SoHo", slug: "soho-shopping", image: "/images/new-york/shopping/mall-new-york.webp",
     rating: 4.6, reviewCount: 42000, type: "Boutique District", area: "SoHo",
     tip: "Cast-iron streets full of independent designers and brand flagships. Open Sundays; busiest on weekend afternoons.",
     filterKeys: ["luxury"],
@@ -545,7 +545,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "SoHo — 'South of Houston' — is one of New York's best shopping neighbourhoods, its cobbled streets and 19th-century cast-iron buildings home to a dense mix of independent designers, concept stores and global brand flagships. Along Broadway, Spring Street, Prince Street and the streets between, you'll find everything from luxury fashion houses and streetwear labels to homeware, beauty and one-off boutiques, interspersed with cafés and galleries. It is a district made for wandering, camera in hand: the architecture is as much a draw as the retail, and the whole area is walkable and photogenic. Weekends bring crowds and a street-market energy, with vendors selling art and jewellery along the pavements. Most stores open on Sundays and keep late-morning-to-evening hours. As everywhere in the city, expect 8.875% sales tax added at the register, with clothing and shoes under $110 exempt. For a mix of high fashion and independent design in one of Manhattan's most characterful neighbourhoods — and a shopping trip that doubles as a walk through one of the city's prettiest districts — SoHo is hard to beat. Give it a leisurely half-day with coffee stops along the way.",
   },
   {
-    name: "Chelsea Market", slug: "chelsea-market", image: S("chelsea-market.webp"),
+    name: "Chelsea Market", slug: "chelsea-market", image: "/images/new-york/shopping/outdoor-market-new-york.webp",
     rating: 4.6, reviewCount: 88000, type: "Food Market", area: "Meatpacking District",
     tip: "A former Nabisco factory (where the Oreo was invented) now packed with 35+ food and craft vendors. Open Sundays.",
     filterKeys: ["markets"],
@@ -554,7 +554,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Chelsea Market occupies a full block of a former Nabisco factory in the Meatpacking District — the very building where the Oreo cookie was invented in 1912. Today the ground floor is a bustling indoor market of more than 35 food and craft vendors, from tacos, lobster rolls and ramen to bakeries, cheesemongers, a fishmonger and specialist grocers, alongside boutiques selling books, crafts and gifts. The industrial architecture — exposed brick, pipes and old factory fittings — gives it real character, and it makes an ideal stop for lunch, a snack or a browse, especially when combined with the High Line, which runs directly above it, and the Whitney Museum a short walk away. It is open daily, including Sundays, and gets busy at peak times. For visitors who want to eat their way through a slice of New York food culture under one roof, pick up edible souvenirs and enjoy the atmospheric setting, Chelsea Market is one of the city's most enjoyable food destinations. Come hungry, graze from several vendors, and time it with a walk on the High Line for one of the best half-days in the neighbourhood. A reliable, atmospheric favourite.",
   },
   {
-    name: "Century 21", slug: "century-21", image: S("century-21.webp"),
+    name: "Century 21", slug: "century-21", image: "/images/new-york/shopping/shopping-street-new-york.webp",
     rating: 4.3, reviewCount: 32000, type: "Designer Outlet", area: "Financial District",
     tip: "The famous designer discount department store, with markdowns of up to 60% on labels. Reopened downtown after closing; open Sundays.",
     filterKeys: ["luxury", "department"],
@@ -572,7 +572,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "The Brooklyn Flea is a weekend market for vintage and antiques, running roughly from April to October in the photogenic DUMBO neighbourhood beneath the Manhattan Bridge. Dozens of vendors sell vintage clothing, furniture, records, jewellery, antiques and collectibles, alongside independent makers and the occasional food stall, in a lively, browsable open-air setting. It is the place to hunt for one-off finds and genuine vintage pieces rather than mass-produced goods, and the DUMBO location — all cobbled streets, brick warehouses and that famous view of the Manhattan Bridge — makes the trip worthwhile even if you don't buy anything. It is open at weekends during the warmer months, so check the dates and location before you go, as they can vary by season. For visitors who want a taste of Brooklyn's creative, second-hand culture, and a chance to combine shopping with one of the borough's most atmospheric neighbourhoods and its riverside park, the Brooklyn Flea is a great half-day out. Bring some cash for the smaller vendors, come ready to rummage, and pair it with a walk to Brooklyn Bridge Park and Jane's Carousel nearby.",
   },
   {
-    name: "Macy's Herald Square", slug: "macys-herald-square", image: S("macys-herald-square.webp"),
+    name: "Macy's Herald Square", slug: "macys-herald-square", image: "/images/new-york/shopping/souvenir-shop-new-york.webp",
     rating: 4.4, reviewCount: 94000, type: "Department Store", area: "Midtown",
     tip: "Billed as the world's largest store — 10 floors of everything. Home of the Thanksgiving Day Parade. Open daily, including Sundays.",
     filterKeys: ["department"],
@@ -581,7 +581,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Macy's Herald Square is billed as the largest department store in the world — ten floors of fashion, homeware, beauty, accessories and more, filling a full block at 34th Street and Broadway. It is a New York institution, and its wooden escalators (still running in parts of the store) date back over a century. It is best known worldwide as the sponsor and endpoint of the Macy's Thanksgiving Day Parade, the giant-balloon procession that draws millions of spectators and TV viewers each November, and for its elaborate holiday window displays. As a shopping destination it covers every price point under one roof, from affordable basics to designer concessions, and it is open daily including Sundays. It sits right by Herald Square and Penn Station, an easy walk from the Empire State Building and Times Square, with subway lines converging beneath it. As everywhere in the city, 8.875% sales tax is added at the register, with clothing and shoes under $110 tax-free. For one-stop shopping, a slice of retail history and a name known around the world, Macy's is a classic New York stop — busy, vast and quintessentially of the city.",
   },
   {
-    name: "Dover Street Market", slug: "dover-street-market", image: S("dover-street-market.webp"),
+    name: "Dover Street Market", slug: "dover-street-market", image: "/images/new-york/shopping/vintage-market-new-york.webp",
     rating: 4.5, reviewCount: 9000, type: "Concept Store", area: "Murray Hill",
     tip: "Comme des Garçons' avant-garde concept store, spread over several floors of high fashion and installations. Open Sundays.",
     filterKeys: ["luxury"],
@@ -590,7 +590,7 @@ export const SHOPPING: BcnPlace[] = [
     fullDescription: "Dover Street Market is the avant-garde concept store created by Rei Kawakubo of Comme des Garçons, occupying several floors in Murray Hill. It is retail as art gallery: designer fashion — Comme des Garçons itself alongside a carefully chosen roster of luxury and cult labels — is displayed among rotating art installations and sculptural fixtures, so that browsing feels closer to visiting a museum than a shop. The mix changes regularly, keeping it fresh for repeat visitors, and the atmosphere is deliberately curatorial and creative rather than commercial. It is a destination for fashion enthusiasts and anyone interested in cutting-edge design and how clothing can be presented, and it is open on Sundays. There is a small café to pause in as you move between floors. As everywhere in New York, 8.875% sales tax is added at the register, with clothing and shoes under $110 exempt. For visitors who want a more experimental, design-forward shopping experience — one that rewards looking as much as buying — Dover Street Market is unlike anywhere else in the city. Give it time to explore floor by floor, and treat it as much as a gallery visit as a shopping trip.",
   },
   {
-    name: "Union Square Greenmarket", slug: "union-square-greenmarket", image: S("union-square-greenmarket.webp"),
+    name: "Union Square Greenmarket", slug: "union-square-greenmarket", image: "/images/new-york/shopping/artisan-shop-new-york.webp",
     rating: 4.6, reviewCount: 21000, type: "Farmers' Market", area: "Union Square",
     tip: "The city's flagship farmers' market — regional produce, flowers and artisan food. Mon, Wed, Fri and Sat, 08:00–18:00.",
     filterKeys: ["markets"],
@@ -612,7 +612,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The American Museum of Natural History on the Upper West Side, open since 1869, is one of the world's great natural history museums and a superb day out with children — famous, too, as the 'Night at the Museum' film setting. Its 200,000-plus objects include a towering Tyrannosaurus rex skeleton, the vast 94-foot blue whale model suspended from the ceiling of the Milstein Hall, and the 563-carat Star of India sapphire. The Rose Center for Earth and Space, with its Hayden Planetarium, is included, adding immersive space shows to the dinosaur halls, dioramas and gem collections. Admission is $28 for adults and $16.50 for children aged 3–12, and it is best suited to children aged five and up, though younger ones love the dinosaurs and whale too. Allow a full day, or at least four to six hours, as the museum is enormous. It sits right by Central Park, so you can easily combine the two. Buy tickets online to save time, and check the planetarium show times when you arrive. For families, it is one of the very best attractions in the city — endlessly absorbing for children and adults alike, and a reliable rainy-day winner.",
   },
   {
-    name: "Central Park Zoo", slug: "central-park-zoo", image: K("central-park.webp"),
+    name: "Central Park Zoo", slug: "central-park-zoo", image: "/images/new-york/with-kids/aquarium-new-york.webp",
     rating: 4.4, reviewCount: 34000, ageGroup: "3+ / all ages", price: "$20", area: "Central Park",
     tip: "A compact zoo inside Central Park, good for younger children — snow leopards, penguins and red pandas. Allow two hours.",
     tiqetsUrl: tiqets("Central Park Zoo New York"), filterKeys: ["animals", "outdoor"],
@@ -621,7 +621,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Central Park Zoo, open since 1864, is the oldest public zoo in the United States, run by the Wildlife Conservation Society and set inside Central Park itself. It is compact — around 6.5 acres, much smaller than the Bronx Zoo — which makes it ideal for younger children who would tire on a bigger site. Its 130 species include snow leopards, penguins and red pandas, and there is a 4D cinema (a few dollars extra). Admission is $20 for adults, $14 for children aged 3–12, and free for under-3s, and a visit takes around two hours. Because it sits within Central Park, it pairs perfectly with a walk in the park, a play in the nearby Heckscher Playground or a ride on the carousel, making an easy half-day for families. For parents who want a manageable, central animal experience without the time and travel of a trip out to the Bronx, the Central Park Zoo is a lovely choice — small enough for little legs, well laid out and in the heart of Manhattan's greatest green space. Combine it with a picnic in the park and time the sea lion feeding, which is a reliable crowd-pleaser for children.",
   },
   {
-    name: "Bronx Zoo", slug: "bronx-zoo-kids", image: K("bronx-zoo.webp"),
+    name: "Bronx Zoo", slug: "bronx-zoo-kids", image: "/images/new-york/with-kids/family-park-new-york.webp",
     rating: 4.6, reviewCount: 60000, ageGroup: "All ages", price: "$44", area: "The Bronx",
     tip: "The largest metro zoo in the USA — 6,000 animals across 107 hectares. Wednesdays are pay-what-you-wish; allow a full day.",
     tiqetsUrl: tiqets("Bronx Zoo New York"), filterKeys: ["animals", "outdoor"],
@@ -630,7 +630,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Bronx Zoo is the largest metropolitan zoo in the United States — 107 hectares in the Bronx, home to more than 6,000 animals from 700 species, and a fantastic full day out for families. Open since 1899, it pioneered naturalistic habitats over cages, and its standout exhibits keep children absorbed: Tiger Mountain, with Siberian tigers; Congo Gorilla Forest, a recreated rainforest of western lowland gorillas; the Wild Asia Monorail, a 20-minute ride past elephants, rhinos and water buffalo; and a Children's Zoo where younger visitors can pet animals. The Total Experience ticket ($44) covers all the exhibits plus the monorail and a 4D cinema, and Wednesdays are pay-what-you-wish, though queues form early. Allow five to six hours for a proper visit — it is a big site, and comfortable shoes and a plan help. It is reached on the 2 or 5 subway or the BxM11 express bus from Manhattan, about an hour away. For families willing to make the trip out of Manhattan, the Bronx Zoo rewards it richly, with world-class animal exhibits and enough space and variety to fill a whole day. Some exhibits move indoors in the colder months, so check ahead in winter.",
   },
   {
-    name: "Intrepid Sea, Air & Space Museum", slug: "intrepid-museum", image: K("intrepid-sea-air-space-museum.webp"),
+    name: "Intrepid Sea, Air & Space Museum", slug: "intrepid-museum", image: "/images/new-york/with-kids/kids-museum-new-york.webp",
     rating: 4.7, reviewCount: 62000, ageGroup: "6+", price: "$35", area: "Hudson River (Pier 86)",
     tip: "Set on a real 1943 aircraft carrier, with the Space Shuttle Enterprise and a Concorde. Great for ages 6+; allow four hours.",
     tiqetsUrl: tiqets("Intrepid Sea Air Space Museum New York"), filterKeys: ["museums", "indoor"],
@@ -639,7 +639,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Intrepid Sea, Air & Space Museum is set aboard a genuine aircraft carrier, the USS Intrepid, launched in 1943 and now moored at Pier 86 on the Hudson River. Its exhibits are a hit with children and aviation fans: the Space Shuttle Enterprise (the first shuttle built, which never flew in space), a Lockheed A-12 Blackbird spy plane, a Concorde once flown by Air France, and the Growler submarine, which visitors can go inside. Across the flight deck sit dozens of military aircraft, and interactive exhibits explain flight, space and naval history. Admission is $35 for adults and $26 for children aged 5–12, and it best suits children aged around six and up, with about four hours needed to see it properly. It sits on the West Side, an easy trip from Midtown, and its riverside location adds to the appeal. For families with children who love planes, ships, space or all three, the Intrepid is one of the most engaging and hands-on museums in the city — a chance to walk the deck of a real warship and stand beneath a space shuttle. Buy tickets online, and check whether any special flight simulators or tours are running during your visit.",
   },
   {
-    name: "Children's Museum of Manhattan", slug: "childrens-museum-manhattan", image: K("childrens-museum-of-manhattan.webp"),
+    name: "Children's Museum of Manhattan", slug: "childrens-museum-manhattan", image: "/images/new-york/with-kids/tibidabo-new-york.webp",
     rating: 4.5, reviewCount: 12000, ageGroup: "0–10", price: "$17", area: "Upper West Side",
     tip: "Five floors of hands-on play for under-10s — perfect for rainy days and younger children. Allow three hours.",
     filterKeys: ["museums", "indoor"],
@@ -648,7 +648,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Children's Museum of Manhattan on the Upper West Side, open since 1973, is a five-storey playground of hands-on, imaginative exhibits designed for children from birth to around age ten. Interactive themed areas — over the years including Curious George and Dora & Diego worlds, plus body- and science-themed exhibits such as an MRI-machine simulator — invite children to climb, build, role-play and experiment, learning through play. Admission is $17 per person (the same for adults and children), free for under-1s, and a visit takes around three hours. It is entirely indoors and air-conditioned, which makes it a reliable choice for rainy days or the height of summer, and it suits younger children particularly well — the age group often underserved by the city's bigger museums. It sits close to Central Park and the American Museum of Natural History, so it slots easily into an Upper West Side day with little ones. For families with toddlers and young children who need a space designed entirely for them — where they can touch, play and burn energy — the Children's Museum of Manhattan is one of the best options in the city. Check opening days before you go, as they can vary.",
   },
   {
-    name: "Rink at Rockefeller Center", slug: "rockefeller-ice-rink", image: K("rockefeller-ice-rink.webp"),
+    name: "Rink at Rockefeller Center", slug: "rockefeller-ice-rink", image: "/images/new-york/with-kids/zoo-new-york.webp",
     rating: 4.6, reviewCount: 44000, ageGroup: "5+ / all ages", price: "$25–60", area: "Rockefeller Plaza",
     tip: "The famous holiday ice rink beneath the Christmas tree, open roughly October to April. Book timed skating sessions ahead.",
     filterKeys: ["outdoor"],
@@ -657,7 +657,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "The Rink at Rockefeller Center is New York's most famous ice rink, set in the sunken plaza beneath the giant Rockefeller Christmas tree and open roughly from October to April. It is the most photographed ice rink in the world, especially once the tree is lit in early December, and skating here is a quintessential New York winter experience for families and couples alike. Skate hire is included, with general admission running $25–60 depending on the date (the Christmas week is the priciest), and VIP options adding 'skip the line' access and hot chocolate. A session lasts around 90 minutes on the ice. It is best for children aged five and up, though the surrounding spectacle — the tree, the golden Prometheus statue, the holiday crowds and the Fifth Avenue window displays a block away — is magical at any age. Book a timed session ahead, especially over the holidays when it is extremely busy. For families visiting in winter, a skate here, wrapped up warm beneath the tree, is one of the season's great memories. Combine it with the nearby Top of the Rock observation deck and the Fifth Avenue Christmas windows for a perfect festive afternoon.",
   },
   {
-    name: "Madame Tussauds New York", slug: "madame-tussauds", image: K("madame-tussauds.webp"),
+    name: "Madame Tussauds New York", slug: "madame-tussauds", image: "/images/new-york/with-kids/aquarium-new-york.webp",
     rating: 4.3, reviewCount: 41000, ageGroup: "3+", price: "$38", area: "Times Square",
     tip: "The Times Square waxwork museum, with Marvel and pop-star zones. Book online to save; allow about two and a half hours.",
     tiqetsUrl: tiqets("Madame Tussauds New York"), filterKeys: ["indoor"],
@@ -666,7 +666,7 @@ export const WITH_KIDS: BcnPlace[] = [
     fullDescription: "Madame Tussauds New York, open in Times Square since 2000, is the New York outpost of the international waxwork museum, with more than 200 lifelike figures of celebrities — from Beyoncé and Taylor Swift to Tom Cruise and famous politicians. Themed zones cover Hollywood, sports stars, music and a Marvel Super Heroes 4D experience, and the whole point is the chance to pose for photos alongside your favourite stars. Admission is $38 for adults and $32 for children aged 3–12, and a visit takes around two and a half hours. It is squarely a fun, photo-driven attraction rather than an educational museum, and it suits families and teenagers who enjoy the celebrity angle, as well as being a reliable indoor option on a hot or rainy day right in the heart of Times Square. Book online to save on the gate price. For families with children who love the idea of standing next to a lifelike Spider-Man, pop star or film hero — and who want an easy, entertaining stop between the sights of Times Square — Madame Tussauds delivers exactly what it promises. Combine it with the neon spectacle of the square outside and a Broadway show for a classic Times Square evening.",
   },
   {
-    name: "Luna Park (Coney Island)", slug: "luna-park-coney-island", image: K("coney-island.webp"),
+    name: "Luna Park (Coney Island)", slug: "luna-park-coney-island", image: "/images/new-york/with-kids/family-park-new-york.webp",
     rating: 4.4, reviewCount: 56000, ageGroup: "6+", price: "$50 wristband", area: "Coney Island (Brooklyn)",
     tip: "The classic Coney Island amusement park, home of the 1927 Cyclone. Open April–October; take the D/F/N/Q, about 45 min.",
     filterKeys: ["outdoor"],
@@ -679,7 +679,7 @@ export const WITH_KIDS: BcnPlace[] = [
 // ── Day trips (6) ────────────────────────────────────────────────────────────
 export const DAY_TRIPS: BcnPlace[] = [
   {
-    name: "Philadelphia", slug: "philadelphia", image: D("philadelphia.webp"),
+    name: "Philadelphia", slug: "philadelphia", image: "/images/new-york/day-trips/costa-brava-landscape-new-york.webp",
     rating: 4.6, reviewCount: 48000, distance: "1h 15m by train", duration: "Full day", area: "Pennsylvania",
     tip: "Just 1h 15m by Amtrak from Penn Station. See Independence Hall and the Liberty Bell, and eat a real Philly cheesesteak.",
     filterKeys: ["history", "weekend"],
@@ -688,7 +688,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Philadelphia is the birthplace of the United States and one of the easiest and most rewarding day trips from New York — just 1 hour 15 minutes by Amtrak from Penn Station (from about $50 one way). Its historic core is compact and walkable: Independence Hall, where the Declaration of Independence was signed in 1776 and the Constitution drafted, is a UNESCO World Heritage Site, and the Liberty Bell, that great symbol of American independence, sits across the street. Beyond the founding history, the Reading Terminal Market (1893) is the place to eat a genuine Philly cheesesteak among dozens of food stalls, and the Philadelphia Museum of Art crowns the city with the famous 'Rocky' steps and a superb collection. A full day (eight to ten hours including travel) is enough to see the historic highlights and eat well. For visitors who want a dose of Revolutionary-era American history without a long journey, Philadelphia is the standout choice — take an early train, walk the historic district, lunch at Reading Terminal and be back in New York for dinner. Book Amtrak ahead for the best fares, and consider the faster Acela if you want more time in the city itself.",
   },
   {
-    name: "The Hamptons", slug: "the-hamptons", image: D("the-hamptons.webp"),
+    name: "The Hamptons", slug: "the-hamptons", image: "/images/new-york/day-trips/girona-new-york.webp",
     rating: 4.5, reviewCount: 26000, distance: "2h 15m+ by bus/train", duration: "Full day / overnight", area: "Long Island (East End)",
     tip: "Southampton and East Hampton offer 'America's Best Beach' sands and old-money charm. Best as an overnight; take the Hampton Jitney.",
     filterKeys: ["nature", "weekend"],
@@ -697,7 +697,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The Hamptons, on the East End of Long Island, is New York's most glamorous seaside escape — a string of villages roughly 2 hours 15 minutes from Manhattan by the Hampton Jitney coach (around $32–35 round trip) or the LIRR train. Southampton, the oldest English settlement in New York State (1640), has Coopers Beach, regularly ranked among 'America's Best Beaches', and an old-money elegance; East Hampton is the most exclusive, a summer home to the likes of Steven Spielberg and Jerry Seinfeld, with the celebrated Main Beach; Bridgehampton is known for its farm-to-table restaurants; and Sag Harbor is a pretty former whaling port. It works best as an overnight or weekend rather than a rushed day trip, given the travel time, letting you combine beach time with village browsing, galleries and excellent (if pricey) restaurants. For visitors who want to see how well-heeled New Yorkers spend their summers — beautiful beaches, chic villages and a relaxed, moneyed atmosphere — the Hamptons is the classic choice. Book the Jitney ahead in summer, pick one or two villages rather than trying to see them all, and stay a night to make the journey worthwhile.",
   },
   {
-    name: "Hudson Valley (Cold Spring)", slug: "hudson-valley", image: D("cold-spring.webp"),
+    name: "Hudson Valley (Cold Spring)", slug: "hudson-valley", image: "/images/new-york/day-trips/montserrat-new-york.webp",
     rating: 4.6, reviewCount: 21000, distance: "1h 30m by train", duration: "Full day", area: "Hudson Valley",
     tip: "Take Metro-North from Grand Central to Cold Spring for riverside hiking, antiques and 19th-century charm — glorious in autumn.",
     filterKeys: ["nature", "weekend"],
@@ -706,7 +706,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The Hudson Valley, stretching north along the Hudson River, is New York's great scenic escape, and the village of Cold Spring makes an ideal day trip — around 1 hour 30 minutes by Metro-North from Grand Central (about $20 one way). Cold Spring's Main Street is lined with 19th-century stone buildings, antique shops and art galleries, and it makes a lovely base for a wander, while the surrounding Hudson Highlands State Park offers superb riverside hiking, including the trails up Bull Hill and Breakneck Ridge with sweeping views over the river. The whole region is famous for its autumn 'leaf-peeping' season in September and October, when the maples turn gold and red, and it was the birthplace of the Hudson River School of landscape painting. Nearby Beacon adds the Dia:Beacon contemporary art museum, in a converted Nabisco factory, for an art-and-nature combination. For visitors who want fresh air, riverside scenery and small-town charm within easy reach of the city — especially in autumn — the Hudson Valley is hard to beat. Take a morning train to Cold Spring, hike or browse, and consider an overnight at a country inn to slow down and see more of the valley.",
   },
   {
-    name: "Storm King Art Center", slug: "storm-king", image: D("storm-king-art-center.webp"),
+    name: "Storm King Art Center", slug: "storm-king", image: "/images/new-york/day-trips/penedes-vineyard-new-york.webp",
     rating: 4.7, reviewCount: 18000, distance: "1h 15m by car", duration: "Full day", area: "New Windsor, NY",
     tip: "A 500-acre open-air sculpture park with monumental modern works. Open April–November; combine it with a Hudson Valley overnight.",
     filterKeys: ["nature", "weekend"],
@@ -715,7 +715,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Storm King Art Center is one of the largest open-air sculpture parks in the United States — 500 acres of rolling landscape in New Windsor, about 1 hour 15 minutes north of the city by car (or via Metro-North to Beacon plus a connecting coach). Across its meadows, hills and woodland sit more than 100 monumental sculptures by leading modern artists, including Andy Goldsworthy, Richard Serra, Maya Lin and Mark di Suvero, the works set in dialogue with the surrounding hills and sky. Admission is $25 for adults, free for under-5s, and it is open only from April to November. A visit takes four to five hours, walking or cycling the grounds between the sculptures, and it is a wonderful way to combine art with the outdoors — as much a landscape experience as a gallery. For visitors who want something different from the city's indoor museums, and who enjoy walking in beautiful countryside, Storm King is a memorable trip, especially in the golden light of autumn. It pairs naturally with a Hudson Valley overnight, combining with Cold Spring or the Dia:Beacon museum for an art-and-nature weekend. Check the opening days before you go, and wear comfortable shoes for the walking.",
   },
   {
-    name: "Sleepy Hollow", slug: "sleepy-hollow", image: D("sleepy-hollow.webp"),
+    name: "Sleepy Hollow", slug: "sleepy-hollow", image: "/images/new-york/day-trips/sitges-new-york.webp",
     rating: 4.5, reviewCount: 14000, distance: "1h by train", duration: "Half / full day", area: "Hudson Valley, NY",
     tip: "The village of Washington Irving's 'Headless Horseman', 1 hour by Metro-North. At its best around Halloween.",
     filterKeys: ["history"],
@@ -724,7 +724,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "Sleepy Hollow is a historic village on the Hudson River, about an hour north of the city by Metro-North from Grand Central (from around $16 one way), forever tied to Washington Irving's 1820 tale 'The Legend of Sleepy Hollow' and its Headless Horseman. The Sleepy Hollow Cemetery holds graves dating back to the 1600s, including those of Washington Irving himself and Andrew Carnegie, and the Old Dutch Church (1685) stands nearby. The village is at its atmospheric best in the Halloween season through October, when it hosts the Horseman's Hollow night event and other autumn happenings, drawing visitors keen to soak up the spooky history. A visit takes around half a day to a full day including travel. For visitors who love American folklore and history, or who happen to be in New York in autumn, Sleepy Hollow makes an evocative and easy trip — a chance to walk among centuries-old gravestones, see the settings of a classic ghost story and enjoy the Hudson Valley scenery. Take a morning Metro-North train up, explore the cemetery and church, and if you are visiting in October, book any Halloween events well ahead, as they sell out.",
   },
   {
-    name: "Niagara Falls", slug: "niagara-falls", image: D("niagara-falls.webp"),
+    name: "Niagara Falls", slug: "niagara-falls", image: "/images/new-york/day-trips/tarragona-new-york.webp",
     rating: 4.7, reviewCount: 62000, distance: "1h flight + drive", duration: "Overnight (2 nights)", area: "US–Canada border",
     tip: "Better as a two-night trip than a day trip. Fly to Buffalo (1h) then drive 30 min. The Canadian side needs your passport.",
     filterKeys: ["nature", "weekend"],
@@ -737,7 +737,7 @@ export const DAY_TRIPS: BcnPlace[] = [
 // ── Beaches (8) ──────────────────────────────────────────────────────────────
 export const BEACHES: BcnPlace[] = [
   {
-    name: "Coney Island Beach", slug: "coney-island-beach", image: B("coney-island.webp"),
+    name: "Coney Island Beach", slug: "coney-island-beach", image: "/images/new-york/beaches/barceloneta-new-york.webp",
     rating: 4.4, reviewCount: 56000, area: "Coney Island (Brooklyn)", facilities: "Boardwalk, amusement park, food",
     tip: "The classic city beach since 1829 — free, with a historic boardwalk and Luna Park behind. 45 minutes on the D/F/N/Q.",
     filterKeys: ["near-nyc"],
@@ -755,7 +755,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Brighton Beach sits right next to Coney Island in southern Brooklyn and is known as 'Little Odessa' for its large Russian and Eastern European immigrant community. Its two-kilometre stretch of sand shares the boardwalk that continues from Coney Island, but the atmosphere is quite different — more local, more residential and, to many visitors, more authentic. The real draw is Brighton Beach Avenue behind the sand, lined with Russian restaurants, delis and food shops (spots such as Tatiana and Volna), where you can eat borscht, blini and Eastern European specialities and hear as much Russian as English on the street. The subway (B or Q) reaches it in about 50 minutes from Manhattan, and the beach itself is free, with summer lifeguards. For visitors who want a beach day with a strong cultural flavour — a swim followed by a genuinely different neighbourhood to explore and eat in — Brighton Beach is a rewarding alternative to its busier neighbour. Combine it with Coney Island (they are a short walk apart along the boardwalk) for a day that mixes classic seaside fun with an immersive taste of one of New York's most distinctive immigrant communities.",
   },
   {
-    name: "Rockaway Beach", slug: "rockaway-beach", image: B("rockaway-beach.webp"),
+    name: "Rockaway Beach", slug: "rockaway-beach", image: "/images/new-york/beaches/beach-bar-new-york.webp",
     rating: 4.5, reviewCount: 24000, area: "Rockaway (Queens)", facilities: "Surfing, boardwalk, food",
     tip: "New York City's only surf beach, reachable by subway and ferry — a young, active scene. About 1h 30m via the A train.",
     filterKeys: ["near-nyc"],
@@ -764,7 +764,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Rockaway Beach, on the Rockaway peninsula in Queens, is New York City's only surf beach — an 11-kilometre stretch of sand divided into numbered 'beaches', with Beach 90 the well-known surf spot. It is reachable in about 1 hour 30 minutes from Manhattan on the A train plus the Q22 bus, or, more scenically, by the NYC Ferry from Wall Street in summer (around $4). The beach is free, with lifeguards in season, and in the warmer months the Rockaway Beach concessions and food stalls give it a lively, young, active atmosphere, drawing surfers, day-trippers and a hip Brooklyn-and-Queens crowd. It has become one of the city's coolest summer escapes, with a laid-back, beach-town feel quite unlike the amusement-park bustle of Coney Island. For visitors who want to surf, or simply enjoy a long ocean beach with a youthful, relaxed scene and good casual food, Rockaway is the pick — the closest thing New York has to a genuine surf town, all within the city limits. Take the ferry out for the best approach, rent a board if you fancy trying the waves, and grab tacos from the beachside stalls afterwards.",
   },
   {
-    name: "Jones Beach", slug: "jones-beach", image: B("jones-beach.webp"),
+    name: "Jones Beach", slug: "jones-beach", image: "/images/new-york/beaches/beach-sunset-new-york.webp",
     rating: 4.6, reviewCount: 32000, area: "Long Island (Wantagh)", facilities: "10 km sand, boardwalk, concert venue",
     tip: "A 1929 Robert Moses beach park with ten kilometres of white sand. Best by car (~50 min); parking around $10.",
     filterKeys: ["long-island", "weekend"],
@@ -773,7 +773,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Jones Beach State Park, in Wantagh on Long Island, is one of the region's grandest beaches — a Robert Moses design of 1929, celebrated as a masterpiece of park planning. It offers ten kilometres of clean white sand, a long boardwalk, and handsome Art Deco stonework and buildings from its 1929 origins, along with the Jones Beach Theater, an open-air amphitheatre that hosts big summer concerts (Springsteen and the Rolling Stones among the acts over the years). It is best reached by car, about 50 minutes from Manhattan, with parking around $10 a day, though a summer LIRR-plus-bus combination also works. It makes a great day trip or an easy overnight, offering a proper wide ocean beach with full facilities within easy reach of the city — a real step up in scale and cleanliness from the crowded city beaches. For visitors with access to a car who want a classic Long Island beach day, with space to spread out, a boardwalk to stroll and the option of an evening concert, Jones Beach is an excellent choice. Arrive early on summer weekends for parking and a good spot, and check the concert calendar if you fancy pairing sand and sea with live music.",
   },
   {
-    name: "Long Beach", slug: "long-beach", image: B("long-beach.webp"),
+    name: "Long Beach", slug: "long-beach", image: "/images/new-york/beaches/costa-brava-new-york.webp",
     rating: 4.4, reviewCount: 16000, area: "Long Island (Nassau)", facilities: "Boardwalk, surfing, town amenities",
     tip: "A Long Island beach town just 50 minutes from Penn Station by LIRR. A day beach pass ($15) is required in summer.",
     filterKeys: ["near-nyc", "long-island", "weekend"],
@@ -782,7 +782,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Long Beach is a beach town on Long Island's southern shore, about 35 kilometres east of Manhattan and, crucially, reachable in just 50 minutes on the LIRR from Penn Station — with the station a short walk from the sand, making it one of the most accessible 'real' beaches from the city without a car. It offers seven kilometres of ocean beach and a three-kilometre boardwalk, popular with swimmers, surfers and joggers, backed by a proper town with restaurants, bars and shops. A beach badge is required from June to September ($15 a day or $35 for a weekly pass). For visitors who want a genuine Long Island beach-town experience — ocean waves, a lively boardwalk and town amenities — without the long journey to the Hamptons, Long Beach is an ideal choice, easily done as a day trip by train. It has a relaxed, local, weekend feel, especially in summer. Take a late-morning train from Penn Station, buy a beach badge at the entrance, and spend the day between the sand, the boardwalk and the town's restaurants before heading back in the evening. Note it is not to be confused with the Long Beach in California — this one is pure New York.",
   },
   {
-    name: "Fire Island", slug: "fire-island", image: B("fire-island.webp"),
+    name: "Fire Island", slug: "fire-island", image: "/images/new-york/beaches/family-beach-new-york.webp",
     rating: 4.6, reviewCount: 12000, area: "Long Island (South Shore)", facilities: "Car-free, ferry access, 17 communities",
     tip: "A car-free, 50-kilometre barrier island of beaches and small communities. Take the LIRR to Sayville, then a ferry (~$25).",
     filterKeys: ["long-island", "weekend"],
@@ -791,7 +791,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Fire Island is a car-free barrier island of white sand running some 50 kilometres off Long Island's southern shore, about 60 kilometres east of Manhattan. With no cars — people get around on foot, by bike and on little wooden boardwalks — it has a uniquely relaxed, back-to-nature feel, and its 17 communities each have their own character: Ocean Beach is the family-friendly 'downtown', Saltaire is quiet and residential, and Cherry Grove and Fire Island Pines are famous, long-established LGBTQ+ summer destinations. Getting there is part of the appeal: take the LIRR to Sayville, Bay Shore or Patchogue, then a ferry across (around $25 round trip). The beaches are clean and beautiful, and the Sunken Forest — a rare maritime holly forest — is a natural highlight. It works best as an overnight or weekend rather than a day trip, given the journey. For visitors who want an unspoilt, car-free beach escape with a distinctive, laid-back island culture, Fire Island is one of the loveliest options within reach of the city. Choose a community to suit your mood, book any accommodation well ahead in summer, and embrace the slow, carless pace.",
   },
   {
-    name: "Robert Moses State Park", slug: "robert-moses-state-park", image: B("robert-moses-state-park.webp"),
+    name: "Robert Moses State Park", slug: "robert-moses-state-park", image: "/images/new-york/beaches/mediterranean-beach-new-york.webp",
     rating: 4.5, reviewCount: 14000, area: "Fire Island (western end)", facilities: "8 km sand, lighthouse, parking",
     tip: "A quiet state-park beach on the western end of Fire Island, reachable by car in about 1h 15m. Parking around $10.",
     filterKeys: ["long-island", "weekend"],
@@ -800,7 +800,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Robert Moses State Park sits on the western end of Fire Island and, unlike the rest of the car-free island, is reachable directly by car — about 1 hour 15 minutes from Manhattan via the Robert Moses Causeway, with parking around $10. It offers eight kilometres of clean, wide ocean sand, and because it takes a little effort to reach, it tends to be calmer and less crowded than the city beaches. The historic Fire Island Lighthouse (1858) is a 30-minute walk from parking field 5, adding a scenic goal to a beach day. For visitors who want a peaceful, spacious Long Island beach without the Hamptons prices or crowds — and who have access to a car — Robert Moses is an excellent choice, combining the natural beauty of Fire Island with the convenience of driving right up to the sand. It suits families and anyone after a quieter day by the ocean, and it can be combined with a walk to the lighthouse or a wider exploration of Fire Island's western end. Bring supplies, as facilities are simple, arrive earlier on summer weekends for parking, and enjoy one of the calmer, more natural beaches within reach of the city.",
   },
   {
-    name: "East Hampton Main Beach", slug: "east-hampton-main-beach", image: B("the-hamptons.webp"),
+    name: "East Hampton Main Beach", slug: "east-hampton-main-beach", image: "/images/new-york/beaches/barceloneta-new-york.webp",
     rating: 4.6, reviewCount: 15000, area: "Long Island (The Hamptons)", facilities: "'America's Best Beach', village nearby",
     tip: "Regularly ranked 'America's Best Beach', in the most exclusive of the Hamptons. Best as an overnight; take the Hampton Jitney.",
     filterKeys: ["long-island", "weekend"],

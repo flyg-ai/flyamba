@@ -54,7 +54,7 @@ export default function PragueNightlife() {
       active="nightlife"
       crumb="Nightlife"
       h1="Prague Nightlife"
-      heroImage="/images/prague/nattliv/u-zlatho-tygra.webp"
+      heroImage="/images/prague/nightlife/cocktail-bar-prague.webp"
       intro="Prague drinks in style. This is the home of the world's best pilsner, poured fresh from the tank in gruff, timeless beer halls, but the after-dark scene runs far deeper: world-ranked cocktail bars, an extraordinary art-club built from recycled machinery, historic jazz cellars, sprawling underground wine caves, panoramic rooftop lounges and Central Europe's biggest mega-club. From a quiet perfect pint to dawn on the dance floor, here are 10 of the best places to spend a night out, with hours, prices and etiquette tips."
       wide
     >

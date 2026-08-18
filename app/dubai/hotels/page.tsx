@@ -56,7 +56,7 @@ export default function DubaiHotels() {
       active="hotels"
       crumb="Hotels"
       h1="Where to Stay in Dubai"
-      heroImage="/images/dubai/hotels/burj-al-arab.webp"
+      heroImage="/images/dubai/hotels/hotel-dubai.avif"
       intro="Dubai's hotels are attractions in their own right — the sail-shaped Burj Al Arab, the megaresort Atlantis on the Palm, Giorgio Armani's own hotel inside the Burj Khalifa. But the city also offers some genuinely smart-value stays, from the hip homegrown Rove chain to reliable Premier Inns by the Metro. Where you base yourself shapes your trip: Downtown for the sights, the Marina or Palm for the beach, Bur Dubai for the historic old city. Here are the best options for every budget."
       wide
     >

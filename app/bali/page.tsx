@@ -98,16 +98,16 @@ const NON_STOP = [
 
 const CATEGORY_IMAGES: Record<string, string> = {
   attractions: "/images/bali/attractions/tanah-lot.webp",
-  beaches: "/images/bali/beaches/padang-padang.webp",
-  restaurants: "/images/bali/restaurants/locavore.webp",
-  hotels: "/images/bali/hotels/four-seasons-sayan.webp",
+  beaches: "/images/bali/beaches/barceloneta-bali.webp",
+  restaurants: "/images/bali/restaurants/restaurant-bali.avif",
+  hotels: "/images/bali/hotels/hotel-bali.avif",
   transport: "/images/bali/attractions/kuta.webp",
   prices: "/images/bali/attractions/tegallalang.webp",
   weather: "/images/bali/attractions/campuhan-ridge-walk.webp",
-  shopping: "/images/bali/shopping/ubud-art-market.webp",
-  nightlife: "/images/bali/nightlife/potato-head-beach-club.webp",
-  "with-kids": "/images/bali/with-kids/waterbom-bali.webp",
-  "day-trips": "/images/bali/day-trips/nusa-penida.webp",
+  shopping: "/images/bali/shopping/artisan-shop-bali.webp",
+  nightlife: "/images/bali/nightlife/cocktail-bar-bali.webp",
+  "with-kids": "/images/bali/with-kids/aquarium-bali.webp",
+  "day-trips": "/images/bali/day-trips/costa-brava-landscape-bali.webp",
   events: "/images/bali/attractions/uluwatu.webp",
 };
 
@@ -117,14 +117,14 @@ const ATTRACTION_PREVIEW = [
   { name: "Mount Batur", blurb: "A pre-dawn hike up an active volcano for sunrise over the caldera.", image: "/images/bali/attractions/mount-batur.webp" },
 ];
 const EAT_PREVIEW = [
-  { name: "Locavore", blurb: "Ubud's acclaimed farm-to-table tasting-menu destination.", image: "/images/bali/restaurants/locavore.webp" },
-  { name: "Ibu Oka", blurb: "The island's most famous babi guling (roast suckling pig).", image: "/images/bali/restaurants/warung-babi-guling-ibu-oka.webp" },
-  { name: "Potato Head", blurb: "Iconic Seminyak beach club built from 6,600 recycled shutters.", image: "/images/bali/restaurants/potato-head-beach-club.webp" },
+  { name: "Locavore", blurb: "Ubud's acclaimed farm-to-table tasting-menu destination.", image: "/images/bali/restaurants/restaurant-bali.avif" },
+  { name: "Ibu Oka", blurb: "The island's most famous babi guling (roast suckling pig).", image: "/images/bali/restaurants/restaurant-bali.avif" },
+  { name: "Potato Head", blurb: "Iconic Seminyak beach club built from 6,600 recycled shutters.", image: "/images/bali/restaurants/restaurant-bali.avif" },
 ];
 const TRIP_PREVIEW = [
-  { name: "Nusa Penida", blurb: "The T-Rex-shaped Kelingking cliff, 45 minutes by boat.", image: "/images/bali/day-trips/nusa-penida.webp" },
+  { name: "Nusa Penida", blurb: "The T-Rex-shaped Kelingking cliff, 45 minutes by boat.", image: "/images/bali/day-trips/girona-bali.webp" },
   { name: "The Gili Islands", blurb: "Car-free islands of white sand and turtle snorkelling.", image: "/images/bali/day-trips/gili-oarna.webp" },
-  { name: "Sidemen Valley", blurb: "Unspoilt rice terraces beneath Mount Agung.", image: "/images/bali/day-trips/sidemen-ricefields.webp" },
+  { name: "Sidemen Valley", blurb: "Unspoilt rice terraces beneath Mount Agung.", image: "/images/bali/day-trips/montserrat-bali.webp" },
 ];
 
 const WHY = [

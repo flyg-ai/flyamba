@@ -53,7 +53,7 @@ export default function SingaporeWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Singapore With Kids"
-      heroImage="/images/singapore/med-barn/singapore-zoo.webp"
+      heroImage="/images/singapore/with-kids/aquarium-singapore.webp"
       intro="Safe, clean and endlessly geared to families, Singapore is one of the easiest cities in Asia to visit with children. Sentosa alone packs in Universal Studios, the giant S.E.A. Aquarium and the Adventure Cove waterpark, while the Mandai precinct is home to the world-beating Singapore Zoo, River Wonders and the after-dark Night Safari. Add the free water-play zones of Gardens by the Bay and the hands-on Science Centre, and rainy days are covered too. Here are 8 of the best family attractions, with age guidance, prices and tips."
       wide
     >

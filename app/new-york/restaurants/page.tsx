@@ -55,7 +55,7 @@ export default function NewYorkRestaurants() {
       active="restaurants"
       crumb="Restaurants"
       h1="Where to Eat in New York"
-      heroImage="/images/new-york/restaurants/katzs-delicatessen.webp"
+      heroImage="/images/new-york/restaurants/restaurant-new-york.avif"
       intro="New York is the world's most dynamic food city — some 24,000 restaurants, dozens of Michelin stars and the most international dining culture on earth. It runs from three-Michelin-star temples like Le Bernardin and Eleven Madison Park to century-old institutions such as Katz's, Peter Luger and Russ & Daughters, and from glamorous Carbone to a $3.50 slice at Joe's Pizza. Here are the best places to eat across every budget, with prices, neighbourhoods and booking tips — and a reminder that an 18–22% tip is expected on top of the bill."
       wide
     >

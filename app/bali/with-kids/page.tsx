@@ -55,7 +55,7 @@ export default function BaliWithKids() {
       active="with-kids"
       crumb="With Kids"
       h1="Bali with Kids"
-      heroImage="/images/bali/with-kids/waterbom-bali.webp"
+      heroImage="/images/bali/with-kids/aquarium-bali.webp"
       intro="Bali is a wonderfully welcoming island for families, and there's plenty to keep every age entertained between the temples and rice fields. Splash the day away at Asia's top-rated Waterbom water park, get close to lions and elephants at Bali Safari, meet the macaques in the Ubud Monkey Forest, wander the walk-through aviaries of Bali Bird Park, or send older kids flying down jungle ziplines at Bedugul. Here are the best family attractions, with age guidance, prices and tips."
       wide
     >
