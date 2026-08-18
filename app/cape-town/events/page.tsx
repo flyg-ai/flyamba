@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: { title: "Cape Town Events & Festivals | Flyamba", description: "Jazz, sunset concerts, carnival and marathons — Cape Town's event calendar.", type: "article" },
 };
 
-const IMG = "/images/destinations/flights-cape-town.avif";
+const IMG = "/images/destinations/flights-kapstaden.avif";
 
 const INFO: BcnPlace[] = [
   {

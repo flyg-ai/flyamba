@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
+import { getCachedDestinationChat, saveCachedDestinationChat } from "@/app/lib/ai-cache";
 
 // Anthropic SDK needs the Node.js runtime.
 export const runtime = "nodejs";
@@ -22,6 +23,16 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return NextResponse.json({ error: "Missing ANTHROPIC_API_KEY" }, { status: 500 });
 
+  // Cache key is (destination, question). `context` is deliberately NOT part of
+  // the key — it is page furniture that varies per render, and including it
+  // would make almost every lookup miss.
+  const cacheSlug = destination.toLowerCase();
+
+  const cachedAnswer = await getCachedDestinationChat(cacheSlug, question);
+  if (cachedAnswer) {
+    return NextResponse.json({ answer: cachedAnswer }, { headers: { "x-flyamba-cache": "hit" } });
+  }
+
   const system = `You are a helpful travel assistant specializing in ${destination}. Answer questions about flights, weather, attractions, costs, and travel tips for ${destination}. Be concise (2-3 paragraphs max), practical, and friendly. Always mention flight options when relevant. Reply in plain prose only — no Markdown, no headings, no bullet points, no bold/asterisks.${
     context ? `\n\nAdditional page context: ${context}` : ""
   }`;
@@ -40,5 +51,9 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     .join("\n")
     .trim();
 
-  return NextResponse.json({ answer });
+  if (answer) {
+    await saveCachedDestinationChat(cacheSlug, question, answer);
+  }
+
+  return NextResponse.json({ answer }, { headers: { "x-flyamba-cache": "miss" } });
 }

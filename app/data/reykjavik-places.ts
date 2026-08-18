@@ -699,7 +699,7 @@ export const DAY_TRIPS: BcnPlace[] = [
     fullDescription: "The Blue Lagoon is Iceland's most famous attraction, a vast geothermal spa 45 minutes' drive from Reykjavik, its milky, turquoise-white water rich in silica and minerals and set dramatically in a black volcanic lava field. Bathing in the warm 38–40°C water, applying the signature white silica mud mask and sipping a drink from the in-water bar is a bucket-list Icelandic experience, and the steam rising off the pool against the stark lava makes for unforgettable photos. Tickets start at around $75 for the Comfort package and $105 for Premium, which adds extra masks, a robe and a restaurant reservation, and you must book in advance — often a month ahead in high season — as entry is by timed slot and it sells out. It's touristy and busier and pricier than some alternatives, but the setting and the experience remain genuinely special. Its greatest practical advantage is location: just 20 minutes from Keflavík airport, it's perfect to visit on your arrival or departure day, breaking up the transfer with a relaxing soak while your body clock adjusts. Many travellers store their luggage there and go straight from the plane. Allow three to five hours. For a first visit to Iceland, the Blue Lagoon is an iconic and memorable half-day.",
   },
   {
-    name: "The South Coast", slug: "south-coast", image: DAG("sydkusten-vik.webp"),
+    name: "The South Coast", slug: "south-coast", image: DAG("sydkusten-vk.webp"),
     rating: 4.8, reviewCount: 41000, distance: "~190 km SE", duration: "Full day (10h)", area: "South Iceland",
     tip: "Waterfalls, black-sand beaches and the village of Vík — a long but spectacular day. Rental car or organised tour.",
     tiqetsUrl: tiqets("South Coast Iceland tour"), filterKeys: ["nature"],
@@ -766,7 +766,7 @@ export const BEACHES: BcnPlace[] = [
     fullDescription: "Grótta, on the Seltjarnarnes peninsula at Reykjavik's western tip about 6 km from the centre, is a wild, windswept shore centred on a picturesque lighthouse from 1897 that sits on a small island reachable only at low tide — so check the tide tables before you set out to cross. This is a place for walking, birdwatching and photography rather than bathing, with the sea a chilly 8°C or so year-round, but it's all the more atmospheric for its rugged emptiness. It's one of the best spots near the city for watching the sun set over the water, and because it lies away from the worst of the urban light pollution, it's also a favoured place for spotting the northern lights on clear winter nights without driving far out of town. The birdlife is excellent, with eiders, terns and other seabirds, and there's a small warm foot-bath (Kvika) where you can dip your feet in geothermal water while you take in the view. A coastal path leads out here from the city. For visitors who want a breath of wild North Atlantic coast, a lovely sunset, birdwatching or an accessible aurora-viewing spot close to Reykjavik, Grótta is a beautiful and free escape.",
   },
   {
-    name: "Reynisfjara Black Sand Beach", slug: "reynisfjara", image: DAG("sydkusten-vik.webp"),
+    name: "Reynisfjara Black Sand Beach", slug: "reynisfjara", image: DAG("sydkusten-vk.webp"),
     rating: 4.8, reviewCount: 38000, price: "Free", area: "Vík (2.5h)", facilities: "Basalt columns, café nearby",
     tip: "World-famous black sand and basalt columns — but the 'sneaker waves' are deadly, so keep well back from the water.",
     filterKeys: ["nature", "day-trip"],

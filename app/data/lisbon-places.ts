@@ -11,6 +11,8 @@ import type { CityCategory } from "@/app/components/CitySubNav";
 
 // ── Image path helpers (source folder: public/images/lisbon/<folder>) ────────
 const SV = (f: string) => `/images/lisbon/sevardheter/${f}`;
+// Fallback for attractions whose photo has not been sourced yet.
+const PLACEHOLDER = "/images/placeholders/placeholder-attractions.webp";
 const RE = (f: string) => `/images/lisbon/restauranger/${f}`;
 const HO = (f: string) => `/images/lisbon/hotell/${f}`;
 const NA = (f: string) => `/images/lisbon/nattliv/${f}`;
@@ -189,7 +191,8 @@ export const ATTRACTIONS: BcnPlace[] = [
     fullDescription: "No trip to Lisbon is complete without a warm pastel de nata, and the place to eat it is the source: Pastéis de Belém, baking since 1837 to a recipe said to have come from the monks of the neighbouring Jerónimos Monastery and known only to a handful of pastry chefs sworn to secrecy. The tarts — crisp, blistered puff pastry cradling a rich, caramelised custard — arrive hot from the oven, and the ritual is to dust them with cinnamon and icing sugar and eat them on the spot with a strong bica coffee. The long queue snaking out the door is for the takeaway counter; the secret is that the café stretches back through a warren of beautiful blue-tiled rooms seating hundreds, where you can usually find a table and be served in minutes. Purists argue about whether Manteigaria in the centre now makes a better tart, but Belém has history, atmosphere and the definitive version on its side. Pair it with the monastery and tower for the perfect Belém morning.",
   },
   {
-    name: "Padrão dos Descobrimentos", slug: "padrao-dos-descobrimentos", image: SV("padrao-dos-descobrimentos.webp"),
+    // TODO: no photo of the Padrão exists in either project yet — using the category placeholder.
+    name: "Padrão dos Descobrimentos", slug: "padrao-dos-descobrimentos", image: PLACEHOLDER,
     rating: 4.5, reviewCount: 46000, price: "€10", area: "Belém", category: "Monument",
     tip: "Take the lift to the top for a bird's-eye view of the giant compass-rose mosaic laid in the pavement below.",
     tiqetsUrl: tiqets("Padrao dos Descobrimentos Lisbon"), filterKeys: ["history"],
@@ -198,7 +201,8 @@ export const ATTRACTIONS: BcnPlace[] = [
     fullDescription: "The Padrão dos Descobrimentos — the Monument to the Discoveries — rears up from the Belém waterfront like the prow of a caravel setting out to sea, a 52-metre slab of pale stone crowded with the figures of the men and women who drove Portugal's 15th- and 16th-century voyages. At its head stands Henry the Navigator, followed by explorers, cartographers, missionaries and kings including Vasco da Gama, Ferdinand Magellan and the poet Camões, all leaning forward toward the ocean. Built in 1960 for the 500th anniversary of Henry's death (on the site of a 1940 exhibition original), it's a grand, if politically complicated, celebration of the Age of Discovery. A lift and short stair climb to a rooftop viewpoint with fine views over Belém, the river and the monastery, and from up there you look straight down onto the huge compass-rose mosaic set into the plaza, a gift from South Africa marking the routes and dates of the great voyages. It stands right on the Belém riverfront, an easy addition to the tower-and-monastery walk.",
   },
   {
-    name: "Sé Cathedral", slug: "se-cathedral", image: SV("se-cathedral.webp"),
+    // TODO: no photo of the Sé exists in either project yet — using the category placeholder.
+    name: "Sé Cathedral", slug: "se-cathedral", image: PLACEHOLDER,
     rating: 4.5, reviewCount: 36000, price: "€5", area: "Alfama", category: "Cathedral",
     tip: "Frame the classic shot of tram 28 rattling past the twin Romanesque towers from the street outside.",
     filterKeys: ["history", "free"],

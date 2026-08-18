@@ -3,6 +3,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { destinations } from "@/app/data/destinations";
 import type { AiSearchMatch, BookingIntent, AiSearchResult } from "@/app/lib/ai-search-types";
 import { usd } from "@/app/lib/format";
+import { getCachedResponse, saveCachedResponse, classifyIntent } from "@/app/lib/ai-cache";
 
 // Runs on the Node.js runtime (Anthropic SDK needs Node APIs, not Edge).
 export const runtime = "nodejs";
@@ -109,56 +110,17 @@ function toLines(text: string): string[] {
     .filter(Boolean);
 }
 
-export async function POST(req: NextRequest): Promise<NextResponse> {
-  let body: { query?: string; destinationContext?: string };
-  try {
-    body = await req.json();
-  } catch {
-    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
-  }
-
-  const query = (body?.query ?? "").trim();
-  if (!query) return NextResponse.json({ error: "Empty query" }, { status: 400 });
-  if (query.length > 500) return NextResponse.json({ error: "Query too long" }, { status: 400 });
-
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json({ error: "Missing ANTHROPIC_API_KEY" }, { status: 500 });
-  }
-
-  const month = detectMonth(query);
-
-  // Optional destination context — biases the answer toward one city when the
-  // widget is embedded on a destination page.
-  const destination = (body?.destinationContext ?? "").trim().slice(0, 60);
-  const system = destination
-    ? `${SYSTEM_PROMPT}\n\nThe user is viewing the ${destination} destination page. Prioritize ${destination} and lead with it in the matches when relevant.`
-    : SYSTEM_PROMPT;
-
-  const client = new Anthropic({ apiKey });
-
-  // Haiku 4.5: fast + cheap, ideal for this latency-sensitive matching over a
-  // small catalog. Mirrors the sibling flyg-ai project's model choice.
-  const response = await client.messages.create({
-    model: "claude-haiku-4-5",
-    max_tokens: 700,
-    system,
-    messages: [
-      {
-        role: "user",
-        content: `Catalog:\n${JSON.stringify(CATALOG)}\n\nTraveler's request: ${query}`,
-      },
-    ],
-  });
-
-  const text = response.content
-    .filter((b): b is Anthropic.TextBlock => b.type === "text")
-    .map((b) => b.text)
-    .join("\n");
-
+/**
+ * Parse the model's pipe-format output into an AiSearchResult.
+ *
+ * Kept as a standalone function so a cache hit replays the *raw model text*
+ * through the exact same parser as a fresh response — there is only one
+ * serialization format to keep in sync, and a parser fix applies retroactively
+ * to everything already cached.
+ */
+function parseModelOutput(text: string, month: string | null): AiSearchResult {
   const lines = toLines(text);
 
-  // ── Parse header lines: INTENT, HEADLINE, FOLLOW/CONV ────────────────
   let bookingIntent: BookingIntent | null = null;
   let headline: string | null = null;
   let followUp: string | null = null;
@@ -194,7 +156,6 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     }
   }
 
-  // ── Parse ranked match lines ─────────────────────────────────────────
   const seen = new Set<string>();
   const matches: AiSearchMatch[] = [];
   for (const line of matchLines) {
@@ -212,7 +173,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     });
   }
 
-  const result: AiSearchResult = {
+  return {
     matches,
     bookingIntent,
     headline: conversational ? null : headline,
@@ -220,5 +181,82 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     month,
     conversational: conversational && matches.length === 0,
   };
-  return NextResponse.json(result);
+}
+
+export async function POST(req: NextRequest): Promise<NextResponse> {
+  let body: { query?: string; destinationContext?: string };
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON body" }, { status: 400 });
+  }
+
+  const query = (body?.query ?? "").trim();
+  if (!query) return NextResponse.json({ error: "Empty query" }, { status: 400 });
+  if (query.length > 500) return NextResponse.json({ error: "Query too long" }, { status: 400 });
+
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    return NextResponse.json({ error: "Missing ANTHROPIC_API_KEY" }, { status: 500 });
+  }
+
+  const month = detectMonth(query);
+
+  // Optional destination context — biases the answer toward one city when the
+  // widget is embedded on a destination page. Also part of the cache key: the
+  // same query answered on /barcelona differs from the same query on home.
+  const destination = (body?.destinationContext ?? "").trim().slice(0, 60);
+  const categoryPage = destination.toLowerCase() || "home";
+
+  // ── Cache lookup (exact query hash + page). Never fatal: a miss, a network
+  //    error or unconfigured Supabase all fall through to a live call. ──────
+  const cached = await getCachedResponse(query, categoryPage);
+  if (cached?.ai_response_text) {
+    const result = parseModelOutput(cached.ai_response_text, month);
+    // Guard against a poisoned/empty cache row silently serving nothing.
+    if (result.matches.length > 0 || result.conversational) {
+      return NextResponse.json(result, { headers: { "x-flyamba-cache": "hit" } });
+    }
+  }
+
+  const system = destination
+    ? `${SYSTEM_PROMPT}\n\nThe user is viewing the ${destination} destination page. Prioritize ${destination} and lead with it in the matches when relevant.`
+    : SYSTEM_PROMPT;
+
+  const client = new Anthropic({ apiKey });
+
+  // Haiku 4.5: fast + cheap, ideal for this latency-sensitive matching over a
+  // small catalog. Mirrors the sibling flyg-ai project's model choice.
+  const response = await client.messages.create({
+    model: "claude-haiku-4-5",
+    max_tokens: 700,
+    system,
+    messages: [
+      {
+        role: "user",
+        content: `Catalog:\n${JSON.stringify(CATALOG)}\n\nTraveler's request: ${query}`,
+      },
+    ],
+  });
+
+  const text = response.content
+    .filter((b): b is Anthropic.TextBlock => b.type === "text")
+    .map((b) => b.text)
+    .join("\n");
+
+  const result = parseModelOutput(text, month);
+
+  // Only cache answers worth replaying. A parse that yielded nothing is a bad
+  // generation — caching it would serve that failure forever.
+  if (result.matches.length > 0 || result.conversational) {
+    await saveCachedResponse({
+      queryText: query,
+      intentBucket: classifyIntent(query),
+      destinationSlugs: result.matches.map((m) => m.slug),
+      aiResponseText: text,
+      categoryPage,
+    });
+  }
+
+  return NextResponse.json(result, { headers: { "x-flyamba-cache": "miss" } });
 }
