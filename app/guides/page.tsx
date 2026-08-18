@@ -95,7 +95,7 @@ export default function GuidesHub() {
           </p>
           <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-3 lg:grid-cols-4">
             {CALENDAR_DESTINATIONS.map((d) => (
-              <Link key={d.slug} href={`/${d.slug}`} className="text-muted-foreground transition hover:text-accent">
+              <Link key={d.slug} href={`/${d.slug}#explore`} className="text-muted-foreground transition hover:text-accent">
                 {d.city} guide →
               </Link>
             ))}

@@ -172,7 +172,7 @@ export default async function LowFareCalendarPage({ params }: { params: Promise<
             ))}
           </div>
           <Link
-            href={`/${d.slug}`}
+            href={`/${d.slug}#explore`}
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-glow transition hover:scale-105"
           >
             Full {d.city} travel guide <ArrowRight className="h-4 w-4" />
