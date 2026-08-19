@@ -31,7 +31,11 @@ export function HomeCard({
         src={d.image}
         alt={`${d.city}, ${d.country}`}
         fill
-        sizes="(max-width:640px) 90vw, (max-width:1024px) 45vw, 340px"
+        sizes={
+          featured
+            ? "(max-width:639px) calc(100vw - 32px), (max-width:1023px) calc(100vw - 48px), (max-width:1279px) calc(100vw - 64px), 1216px"
+            : "(max-width:639px) calc(100vw - 32px), (max-width:1023px) calc((100vw - 72px) / 2), 390px"
+        }
         className="object-cover transition-transform duration-700 group-hover:scale-110"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

@@ -106,7 +106,15 @@ export function DestinationDetail({
 
       {/* Hero */}
       <section className="relative isolate h-[85vh] min-h-[620px] w-full overflow-hidden">
-        <img src={d.image} alt={`Cheap flights to ${d.city}, ${d.country} — ${d.tagline}`} className="absolute inset-0 h-full w-full object-cover" />
+        {/* LCP element. Raw <img> rather than next/image, so the priority hint
+            has to be set by hand — Lighthouse flags the missing fetchpriority. */}
+        <img
+          src={d.image}
+          alt={`Cheap flights to ${d.city}, ${d.country} — ${d.tagline}`}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-16 pt-24 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/85">

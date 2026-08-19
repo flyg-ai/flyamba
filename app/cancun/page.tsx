@@ -194,7 +194,14 @@ export default function CancunHub() {
 
       {/* 1. Hero */}
       <section className="relative isolate h-[80vh] min-h-[560px] w-full overflow-hidden">
-        <SmartImage src={CITY.hero} alt="Cheap flights to Cancún, Mexico" fill priority sizes="100vw" className="object-cover" />
+        {/* LCP hero. fetchPriority rather than Next 16's `preload` prop:
+            `preload` only emits <link rel=preload> in <head>, which `priority`
+            already did — it does not set the fetchpriority attribute Lighthouse
+            reports as missing. The Image docs say to prefer fetchPriority="high"
+            over preload in most cases, and warn against combining them. loading="eager"
+            is required too: dropping `priority` makes next/image default to lazy, which
+            would otherwise leave the LCP image lazy-loaded. */}
+        <SmartImage src={CITY.hero} alt="Cheap flights to Cancún, Mexico" fill fetchPriority="high" loading="eager" sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/85">
