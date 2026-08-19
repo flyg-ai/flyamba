@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "@/app/components/Navbar";
+import { FlightCTA } from "@/app/components/FlightCTA";
 import { Footer } from "@/app/components/Footer";
 import { GuidesCarousel } from "@/app/components/GuidesCarousel";
 import { getGuidesByDestination } from "@/app/data/guides";
@@ -359,21 +360,7 @@ export default function PragueHub() {
 
       {/* 11. CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-border bg-gradient-to-br from-accent/10 via-card to-card p-8 text-center sm:p-10">
-          <div className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-accent text-accent-foreground shadow-glow">
-            <Plane className="h-6 w-6 -rotate-45" />
-          </div>
-          <h2 className="mt-5 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Ready to go?</h2>
-          <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">Compare live fares to Prague across airlines and book direct — from around {usdStr(Math.min(...MONTHLY_SEK))}.</p>
-          <a
-            href="https://www.skyscanner.com/flights/prague/"
-            target="_blank"
-            rel="nofollow noopener"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-glow transition hover:scale-105"
-          >
-            Find flights to Prague <ArrowRight className="h-4 w-4" />
-          </a>
-        </div>
+        <FlightCTA destination={{ slug: "prague", name: "Prague" }} priceFrom={usdStr(Math.min(...MONTHLY_SEK))} />
       </section>
 
       {/* 12. Nearby cities */}

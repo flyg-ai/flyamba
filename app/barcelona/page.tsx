@@ -340,7 +340,7 @@ export default function BarcelonaHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA />
+        <FlightCTA destination={{ slug: "barcelona", name: "Barcelona" }} priceFrom={lowestPriceStr(d)} />
       </section>
 
       {/* 11. Nearby European cities */}

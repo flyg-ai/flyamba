@@ -378,7 +378,7 @@ export default function RomeHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA />
+        <FlightCTA destination={{ slug: "rome", name: "Rome" }} priceFrom={usdStr(LOWEST_SEK)} />
       </section>
 
       {/* 11. Nearby cities */}

@@ -5,7 +5,6 @@ import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { MonthSelector } from "@/app/components/MonthSelector";
 import { WarmBrowser } from "@/app/components/WarmBrowser";
-import { FlightCTA } from "@/app/components/FlightCTA";
 import { buildDestinations } from "@/app/lib/climate";
 import { MONTHS, monthIndexOf, warmHref, WARM_BASE } from "../months";
 import { SITE } from "@/app/lib/destination-helpers";
@@ -85,9 +84,6 @@ export default async function WhereIsItWarmMonth({ params }: { params: Promise<{
           <WarmBrowser destinations={destinations} monthLabel={label} />
         </div>
 
-        <section className="mt-16">
-          <FlightCTA />
-        </section>
       </main>
 
       <Footer />

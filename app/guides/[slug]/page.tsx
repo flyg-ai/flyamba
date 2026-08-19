@@ -164,9 +164,14 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
           )}
         </article>
 
-        <section className="mx-auto mt-16 max-w-3xl px-4 sm:px-6">
-          <FlightCTA />
-        </section>
+        {/* Only for guides with no destination — one with a destination already
+            ends with its own "Planning a trip to X?" box linking to the same page,
+            and two identical calls to action in a row help nobody. */}
+        {!g.destination && (
+          <section className="mx-auto mt-16 max-w-3xl px-4 sm:px-6">
+            <FlightCTA />
+          </section>
+        )}
 
         {related.length > 0 && (
           <section className="mx-auto mt-16 max-w-5xl px-4 sm:px-6">

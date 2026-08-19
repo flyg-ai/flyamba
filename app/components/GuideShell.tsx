@@ -70,7 +70,7 @@ export function GuideShell({
           <AskAiWidget destination="Barcelona" heading="Have more questions? Ask our AI" />
         </div>
 
-        <FlightCTA />
+        <FlightCTA destination={{ slug: "barcelona", name: "Barcelona" }} />
 
         <h2 className="mt-14 font-serif text-2xl font-semibold text-foreground">More Barcelona guides</h2>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">

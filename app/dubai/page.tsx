@@ -358,7 +358,7 @@ export default function DubaiHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA />
+        <FlightCTA destination={{ slug: "dubai", name: "Dubai" }} priceFrom={usdStr(LOWEST_SEK)} />
       </section>
 
       {/* 11. Nearby cities */}

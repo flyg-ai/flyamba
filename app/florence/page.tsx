@@ -358,7 +358,7 @@ export default function FlorenceHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA />
+        <FlightCTA destination={{ slug: "florence", name: "Florence" }} priceFrom={usdStr(LOWEST_SEK)} />
       </section>
 
       {/* 11. Nearby cities */}

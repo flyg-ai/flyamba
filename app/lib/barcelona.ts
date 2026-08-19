@@ -5,10 +5,6 @@ export const BARCELONA_KIWI_CTA =
   "https://tp.media/r?marker=711264.flyamba&trs=508580&p=4478&u=" +
   encodeURIComponent("https://www.kiwi.com/en/search/results/anywhere/barcelona-el-prat-airport-barcelona-spain/anytime/no-return/");
 
-// Plain (non-affiliate) Skyscanner flight search to Barcelona. Linked with
-// rel="nofollow noopener" so we don't pass SEO equity to the aggregator.
-export const BARCELONA_SKYSCANNER_CTA = "https://www.skyscanner.com/flights/bcn/";
-
 export type SubPage = {
   slug: string; // path segment, e.g. "attractions" ("" for the hub/flights)
   label: string; // sub-nav label
