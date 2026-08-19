@@ -45,6 +45,7 @@ export function GuideShell({
         <div className="relative z-10 mx-auto flex h-full max-w-4xl flex-col justify-end px-4 pb-10 pt-24 sm:px-6 lg:px-8">
           <div className="text-white/90">
             <Breadcrumbs
+              onDark
               items={[
                 { name: "Flyamba", href: "/" },
                 { name: "Barcelona", href: "/barcelona" },
