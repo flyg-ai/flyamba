@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { FaqSection } from "@/app/components/FaqSection";
 import { MonthSelector } from "@/app/components/MonthSelector";
 import { WarmBrowser } from "@/app/components/WarmBrowser";
 import { buildDestinations } from "@/app/lib/climate";
 import { MONTHS, monthIndexOf, warmHref, WARM_BASE } from "../months";
+import { MONTH_COPY } from "../copy";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { Sun } from "lucide-react";
@@ -24,13 +27,9 @@ export async function generateMetadata({ params }: { params: Promise<{ month: st
   const { month } = await params;
   const i = monthIndexOf(month);
   if (i === null) return { title: "Not found — Flyamba", robots: { index: false } };
-  const label = MONTHS[i].label;
-
-  // PLACEHOLDER COPY — real per-month titles and descriptions come in a later pass.
-  const title = clampTitle(`Where Is It Warm in ${label}? — Warmest Destinations | Flyamba`);
-  const description = clampDescription(
-    `Find the warmest places to travel in ${label}. Filter by temperature, region and trip type to see where the sun is.`,
-  );
+  const copy = MONTH_COPY[MONTHS[i].slug];
+  const title = clampTitle(copy.title);
+  const description = clampDescription(copy.description);
   const canonical = `${SITE}${warmHref(month)}`;
   return {
     title,
@@ -49,9 +48,40 @@ export default async function WhereIsItWarmMonth({ params }: { params: Promise<{
   // Read at build time. destination-facts.ts and the Supabase client stay on the
   // server; WarmBrowser only ever receives the narrow WarmDestination shape.
   const destinations = await buildDestinations(monthIndex);
+  const copy = MONTH_COPY[MONTHS[monthIndex].slug];
+
+  // FAQPage schema is only legitimate because the questions render below. A
+  // schema-only FAQ is a structured-data violation, not a shortcut.
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
+        { "@type": "ListItem", position: 2, name: "Where Is It Warm", item: `${SITE}${WARM_BASE}` },
+        { "@type": "ListItem", position: 3, name: label, item: `${SITE}${warmHref(month)}` },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: copy.faq.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background">
+      {jsonLd.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\u003c") }}
+        />
+      ))}
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">
@@ -67,14 +97,10 @@ export default async function WhereIsItWarmMonth({ params }: { params: Promise<{
           <Sun className="h-3.5 w-3.5" /> Where is it warm
         </p>
 
-        {/* PLACEHOLDER COPY — real H1 and intro come in a later pass. */}
         <h1 className="mt-3 font-serif text-4xl font-semibold leading-tight text-foreground sm:text-5xl">
-          Where Is It Warm in {label}?
+          {copy.h1}
         </h1>
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-          Placeholder intro for {label}. Drag the temperature range to set how warm you want it, then narrow
-          by region or trip type. Every destination shows its average daily high for {label}.
-        </p>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">{copy.intro}</p>
 
         <div className="mt-8">
           <MonthSelector current={month} />
@@ -84,7 +110,55 @@ export default async function WhereIsItWarmMonth({ params }: { params: Promise<{
           <WarmBrowser destinations={destinations} monthLabel={label} />
         </div>
 
+        {/* Long-form copy sits below the grid on purpose: the grid is what the
+            visitor came for, and the prose is what the page gets found on. */}
+        {copy.sections.map((section) => (
+          <section key={section.h2} className="mt-16 max-w-3xl">
+            <h2 className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">{section.h2}</h2>
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
+              {section.body.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          </section>
+        ))}
+        <section className="mt-16 max-w-3xl">
+          <h2 className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">Next steps</h2>
+          <div className="mt-6 grid gap-3 sm:grid-cols-3">
+            <Link
+              href="/low-fare-calendar"
+              className="group rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-accent"
+            >
+              <p className="font-serif text-lg font-semibold text-foreground">Cheapest dates to fly</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Day-by-day fares for our busiest routes — {label} is often peak season.
+              </p>
+            </Link>
+            <Link
+              href="/guides"
+              className="group rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-accent"
+            >
+              <p className="font-serif text-lg font-semibold text-foreground">Destination guides</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Attractions, food, hotels and what a trip really costs, city by city.
+              </p>
+            </Link>
+            <Link
+              href={WARM_BASE}
+              className="group rounded-2xl border border-border bg-card p-5 transition-all hover:-translate-y-0.5 hover:border-accent"
+            >
+              <p className="font-serif text-lg font-semibold text-foreground">Another month</p>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Compare all twelve — where is warm, and what it costs to get there.
+              </p>
+            </Link>
+          </div>
+        </section>
       </main>
+
+      <FaqSection items={copy.faq} city={label} heading={`Where is it warm in ${label} — your questions answered`} />
+
+      <div className="pb-20" />
 
       <Footer />
     </div>

@@ -10,6 +10,7 @@ import { buildDestinations } from "@/app/lib/climate";
 import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 import { HUB_CITY_SET } from "@/app/lib/hubs";
 import { MONTHS, warmHref, WARM_BASE } from "./months";
+import { HUB_COPY } from "./copy";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { Sun, ArrowRight, CalendarRange } from "lucide-react";
@@ -19,10 +20,9 @@ import { Sun, ArrowRight, CalendarRange } from "lucide-react";
 // themselves stay fully static — only this one has a reason to age.
 export const revalidate = 86400;
 
-// PLACEHOLDER COPY throughout — real copy lands in a later pass.
-const TITLE = "Where Is It Warm Right Now? — Month by Month | Flyamba";
+const TITLE = "Where Is It Warm? Warm Destinations by Month | Flyamba";
 const DESCRIPTION =
-  "Find the warmest places to travel in any month. Browse all twelve months, filter by temperature, sea and rainfall, and see where the sun is.";
+  "Pick the month you can travel and see every destination that is warm then, with fares, guides and the cheapest dates to fly.";
 
 export const metadata: Metadata = {
   title: clampTitle(TITLE),
@@ -36,25 +36,7 @@ export const metadata: Metadata = {
   },
 };
 
-// PLACEHOLDER FAQ — the answers are deliberately generic until the copy pass.
-const FAQ: FaqItem[] = [
-  {
-    q: "Where is it warm right now?",
-    a: "Placeholder answer. The month page for the current month lists every destination above your chosen temperature, sorted warmest first, with the average daily high for that month.",
-  },
-  {
-    q: "Which month is warmest overall?",
-    a: "Placeholder answer. July and August are the peak across the northern hemisphere, while December through February is when the southern hemisphere and the tropics come into their own.",
-  },
-  {
-    q: "Where can I swim year round?",
-    a: "Placeholder answer. Use the Warm sea filter on any month page — it reads the measured sea surface temperature for that month rather than an editorial guess.",
-  },
-  {
-    q: "How are the temperatures worked out?",
-    a: "Placeholder answer. Each figure is the average daily high for that destination in that month. Filters for rainfall, sea temperature and overnight lows come from the same source.",
-  },
-];
+const FAQ: FaqItem[] = HUB_COPY.faq;
 
 /** The whole catalog, trimmed to what the search box needs. */
 function searchCatalog(): SearchDest[] {
@@ -147,10 +129,7 @@ export default async function WhereIsItWarmHub() {
           <h1 className="mt-3 max-w-4xl font-serif text-4xl font-semibold leading-tight text-white sm:text-6xl">
             Where Is It Warm Right Now?
           </h1>
-          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/85">
-            Placeholder intro. Pick a month and see every destination that is genuinely warm in it, with the average
-            daily high, the sea temperature and how much it rains.
-          </p>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-white/85">{HUB_COPY.intro}</p>
         </div>
       </section>
 
@@ -161,7 +140,7 @@ export default async function WhereIsItWarmHub() {
             Where&rsquo;s it warm right now
           </h2>
           <p className="mt-2 max-w-2xl text-muted-foreground">
-            It&rsquo;s {month.label}. These are three of the warmest places to fly this month — see{" "}
+            It&rsquo;s {month.label}. {HUB_COPY.spotlightLine} See{" "}
             <Link href={warmHref(month.slug)} className="text-accent underline-offset-4 hover:underline">
               all of them for {month.label}
             </Link>
@@ -217,10 +196,7 @@ export default async function WhereIsItWarmHub() {
           <h2 className="mt-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">
             Pick a month
           </h2>
-          <p className="mt-2 max-w-2xl text-muted-foreground">
-            Placeholder line. Each month has its own page with the full list, a temperature range you can drag, and
-            filters for sea, rain and overnight lows.
-          </p>
+          <p className="mt-2 max-w-2xl text-muted-foreground">{HUB_COPY.monthsLine}</p>
 
           {/* Month-card images need 1200px, not 1600. Measured, not guessed: the
               grid is three columns inside max-w-7xl, so each card is 389 CSS px
@@ -272,29 +248,72 @@ export default async function WhereIsItWarmHub() {
             Looking for somewhere specific?
           </h2>
           <p className="mt-2 max-w-2xl text-muted-foreground">
-            Search all {ALL_DESTINATIONS.length} destinations by city or country.
+            {HUB_COPY.searchLine} All {ALL_DESTINATIONS.length} destinations are searchable.
           </p>
           <div className="mt-6">
             <WarmSearch destinations={searchCatalog()} />
           </div>
         </section>
 
-        {/* PLACEHOLDER SEO TEXT */}
         <section className="mt-20 max-w-3xl">
           <h2 className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
-            How to use this guide
+            From a warm month to a booked flight
           </h2>
           <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
             <p>
-              Placeholder paragraph. This section will explain what the guide covers, how the temperatures are
-              measured and why a monthly average high is the right number to plan around.
+              Every destination on a month page is a live entry in our catalog, not a name on a list. The card
+              carries a round-trip fare, and clicking it opens that destination&rsquo;s own page — flight search,
+              a fare chart across the twelve months, and, for our busiest routes, a{" "}
+              <Link href="/low-fare-calendar" className="text-accent underline-offset-4 hover:underline">
+                low fare calendar
+              </Link>{" "}
+              showing the cheapest departure dates day by day. Warm months are usually peak months, so that
+              calendar is worth opening before you commit to dates.
             </p>
             <p>
-              Placeholder paragraph. A second block covering how to read the filters, what the sea temperature and
-              rainfall figures mean, and how to pair a month with a destination.
+              Twenty-eight of our destinations also have full city guides behind them — attractions, restaurants,
+              hotels, transport, weather and what a trip actually costs. If you would rather browse by idea than by
+              temperature, the{" "}
+              <Link href="/guides" className="text-accent underline-offset-4 hover:underline">
+                travel guides
+              </Link>{" "}
+              and{" "}
+              <Link href="/explore" className="text-accent underline-offset-4 hover:underline">
+                destination explorer
+              </Link>{" "}
+              cover the same catalog from the other direction, and{" "}
+              <Link href="/compare" className="text-accent underline-offset-4 hover:underline">
+                head-to-head comparisons
+              </Link>{" "}
+              help when you are torn between two.
+            </p>
+          </div>
+
+          <h2 className="mt-14 font-serif text-2xl font-semibold text-foreground sm:text-3xl">
+            What the numbers mean
+          </h2>
+          <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
+            <p>
+              Every temperature here is the average daily high for that destination in that month, from measured
+              climate records rather than editorial judgement. A monthly average describes a typical day, not a
+              promise — but it is the right number to plan around, and it is the same number for every destination,
+              which is what makes the ranking meaningful.
+            </p>
+            <p>
+              The filters read the same records. Warm sea uses measured sea surface temperature, which is what
+              separates a place that looks warm from one you would actually swim in — the Mediterranean in May is
+              the standing example, warm in the air and cold in the water. Dry uses monthly rainfall, which is how
+              you tell a tropical dry season from a monsoon at the same temperature. Cool nights uses the overnight
+              low, which is usually what people mean when they say somewhere was unbearable rather than merely hot.
+            </p>
+            <p>
+              Fares are round-trip and come from the same catalog the rest of the site uses. They move, and the
+              figures in our month-by-month writing are medians across all the warm destinations for that month —
+              useful for comparing one month against another, not a quote for your route.
             </p>
           </div>
         </section>
+
       </main>
 
       <FaqSection items={FAQ} city="warm destinations" heading="Where is it warm — your questions answered" />
