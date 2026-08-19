@@ -89,8 +89,18 @@ There are no airline root pages.
 
 **Dynamic:** `/[slug]` (`generateStaticParams`, `dynamicParams = false`) — every slug in
 `destinations` ∪ `ALL_DESTINATIONS` minus the 28 hub slugs; renders `DestinationDetail` for
-rich slugs, `DestinationLite` otherwise. `/[slug]/[category]` is a `noindex` "coming soon" stub.
-`/guides/[slug]` and `/low-fare-calendar/[slug]` are both static + `dynamicParams = false`.
+rich slugs, `DestinationLite` otherwise.
+
+> **`DestinationDetail` is in practice dead code — do not debug a hub page there.**
+> `/barcelona` and the other 27 hubs are rendered by `app/<city>/page.tsx`, literal route
+> segments that never touch `/[slug]`. `DestinationDetail` is only reachable from
+> `app/[slug]/page.tsx` for a *rich* slug, and all 8 rich slugs (barcelona, tokyo, lisbon,
+> new-york, bali, cape-town, reykjavik, marrakech) are in that file's `RESERVED` set — so
+> the branch never runs. In Aug 2026 a whole optimisation step was spent editing the hero in
+> `DestinationDetail` to fix `/barcelona`; the change was inert. Edit the 28 hub files.
+
+`/[slug]/[category]` is a `noindex` "coming soon" stub. `/guides/[slug]` and
+`/low-fare-calendar/[slug]` are both static + `dynamicParams = false`.
 
 **API** (`runtime = "nodejs"`):
 - `/api/ai-search` — Anthropic `claude-haiku-4-5`, pipe-format protocol
@@ -102,11 +112,27 @@ rich slugs, `DestinationLite` otherwise. `/[slug]/[category]` is a `noindex` "co
   unique in this catalog: 550 destinations share 429 codes (SPU serves 8, AGP and LIS 7
   each). An IATA-keyed lookup silently resolves Hvar to Split.
 
-  When the query names a region, `detectContinent()` filters the catalog **before** it is
-  sent, so an out-of-region answer is impossible rather than merely discouraged. The
-  parser then drops any slug outside the set that was actually shown. Both layers matter:
-  with only the 8 rich destinations to pick from, "best european beach destination" used
-  to return Marrakech and Reykjavik.
+  When the query names a region, `detectRegion()` filters the catalog **before** it is
+  sent, so an out-of-region answer is impossible rather than merely discouraged.
+  `detectActivity()` does the same for the kind of trip, using the ported tags and scores —
+  that is what keeps Madrid out of a beach search. The parser then drops any slug outside
+  the set that was actually shown.
+
+  **Results are re-ranked server-side** by the activity's score before being returned
+  (`rankMatches`), capped at 7 — one featured card plus three rows of two. This is what
+  flyg.ai does (it buffers beach cards and sorts by beach score before emitting) and it
+  matters more than any filter: left in model order, a beach search returned Benidorm,
+  Lloret de Mar and Sitges, because those carry tags while the classic destinations —
+  Fuerteventura (beaches 10), Rhodos, Kreta, Palma, Tenerife — carry none in flyg.ai's data
+  and are therefore less legible to the model. `QUALIFY_MIN` is a floor for catalog
+  membership, not a bar; ranking decides who actually appears.
+
+  **The route returns the full card payload in each match** (name, country, image, price,
+  scores, tags, costs), and `AiResultCard` renders straight from it. Previously `HomeHero`
+  resolved each slug against the 8 rich `destinations`, so when the catalog grew to 550
+  every result outside those 8 silently rendered as nothing — six matches, one card. Adding
+  a field the card needs means adding it to `AiSearchMatch` and to `toMatch()`, not
+  importing a catalog into the client.
 - `/api/destination-chat` — per-destination Q&A behind `AskAiWidget`. Cached, 7-day TTL.
 - `/api/tp-calendar` — Travelpayouts `v1/prices/calendar` proxy, `revalidate = 86400`.
   Origin from `x-vercel-ip-country` / `cf-ipcountry` → `ORIGIN_BY_COUNTRY`, fallback `LON`.
@@ -123,6 +149,26 @@ These drive `DestinationDetail`; `/api/ai-search` reasons over all 550 in
 (`slug, name, country, continent, iata, tpName, monthlyPrices[12], image, thumbnail, scores?,
 summerTemp?`). Auto-generated; the generator script is **not in the repo**. Only ~20 entries
 carry `scores` — which is why `/compare` can only offer ~21 cities.
+
+**`app/data/destination-facts.ts`** — editorial `scores` (all 550), `tags`, `foodPerDay`
+and `hotelPerNight`, ported from flyg.ai's 2.7 MB `data/destinations.ts` in Aug 2026. The
+original Flyamba port had dropped all of it, which is why AI search had nothing to match
+"beach" on and `/compare` could only offer 26 cities.
+
+- **Tags are a controlled 41-tag vocabulary**, not a translation. flyg.ai's 283 Swedish tags
+  had a long tail of place names ("Mallorca", "Zanzibar") duplicating the country field, plus
+  market-only tags (`Inrikes`, `Sverige`, `Direktflyg` — the last meaning direct *from
+  Stockholm*, which is false here). Those were dropped. Add new tags to `TAG_VOCABULARY`.
+- **`scores.activities` is flyg.ai's `culture`** — same axis, renamed on the way in.
+- **`foodPerDay` / `hotelPerNight` are USD**, converted from the Swedish SEK strings.
+- **Server-side only.** ~90 kB. `/api/ai-search` imports it. `/compare` cannot until it is
+  refactored to a server component — importing it from `CompareClient` ships it to the browser.
+- Swedish long-form prose (`seoContent`, `staticContent`, `faqItems`, `insiderTip`,
+  `airlinesGuide`) was deliberately **not** ported. Machine-translated Swedish SEO copy on 550
+  English pages is a content-quality and duplicate-content problem.
+- Still in flyg.ai's Supabase, not ported: `climate_data` (sea temperature, per-month climate)
+  and the Google Places table behind "top 3 activities". Both are table copies between the two
+  Supabase projects — no re-fetching needed.
 
 **`app/data/guides.ts`** — 8 articles, `content` is a raw HTML string.
 
@@ -157,6 +203,39 @@ Santorini keep theirs in `app/lib/<city>.ts` instead.
   `flights-<slug>-thumb.avif` (hero ~1600px, thumb 450×300). City place photos are `.webp`
   under `public/images/<city>/<category>/`. `SmartImage` falls back to
   `/images/destinations/placeholder.avif` on error.
+
+## Images & performance
+
+**Flyamba does NOT use flyg.ai's pre-generated image-variant system. Do not port it back.**
+
+flyg.ai generates `w640/w828/w1200/w1920` folders under `public/images/destinations/` and
+attaches a custom `loader` per image, because Vercel there returns AVIF sources untouched.
+That was tried here in Aug 2026 and removed the same day. Flyamba has **no `images.formats`
+config**, so the optimizer negotiates WebP and does transform correctly at the widths that
+matter for cards. Passthrough at 1200/1920 stops being a problem once the source itself is
+small.
+
+The real fault was encoding, not dimensions: the `/barcelona` hero was 588.6 KiB for
+1920×1279 — **0.245 bytes/px**, against 0.05–0.10 for well-encoded AVIF. Lighthouse
+attributed 421.9 KiB of its saving to compression alone. Fixed by re-encoding the originals
+(`scripts/reencode-heavy-images.mjs`, sorts on bytes/px, only writes when smaller, never
+resizes): 997 files, 153.1 MB → 63.4 MB, and that hero to 168 kB / 0.070 bytes/px.
+
+So: **the fix here is well-encoded originals, not pre-generated widths.** Re-run that script
+after adding images rather than reaching for the sibling project's loader.
+
+**LCP hero prop:** the 28 hubs use `fetchPriority="high"`, not `priority` or Next 16's
+`preload`. `priority` is deprecated in 16; its replacement `preload` only emits
+`<link rel=preload>` in `<head>` — which `priority` already did — and does **not** set the
+`fetchpriority` attribute Lighthouse reports as missing. The Image docs say to prefer
+`fetchPriority="high"` over `preload` in most cases and warn against combining them.
+
+**Third-party analytics we did not install:** the Travelpayouts search widget
+(`tpwdg.com`) embeds a `widgets.kiwi.com` iframe whose bundle contains Kiwi's GTM container
+`GTM-MG27K2V`, which loads Google Analytics. It is the single biggest TBT item on a hub page
+(~1,061 ms CPU, 382 KiB). `AviasalesWidget` therefore mounts it via IntersectionObserver at
+`rootMargin: 400px` with a reserved `minHeight` so CLS does not return. `/cookies` and
+`/privacy` document this — keep them in sync if the widget changes.
 
 ## Monetization
 

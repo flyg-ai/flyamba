@@ -16,7 +16,7 @@ export default function Cookies() {
     <LegalPage
       title="Cookie Policy"
       path="/cookies"
-      intro="Flyamba sets no analytics or advertising cookies of its own. The only cookies you'll pick up here come from affiliate partners and the embedded flight-search widgets."
+      intro="Flyamba adds no analytics or advertising of its own. The cookies you pick up here come from the embedded flight-search widget and our affiliate partners — including Google Analytics, which the widget loads without us asking it to."
     >
       <h2>What cookies are</h2>
       <p>
@@ -26,8 +26,10 @@ export default function Cookies() {
 
       <h2>Cookies we set ourselves</h2>
       <p>
-        <strong>None.</strong> Flyamba runs no analytics platform, no advertising network and no visitor-tracking
-        script. There is no account system, so there is no session or login cookie either.
+        <strong>None.</strong> Flyamba adds no analytics platform, no advertising network and no visitor-tracking
+        script to its own pages, and there is no account system, so there is no session or login cookie either. Note
+        that this is about what <em>we</em> add — the embedded search widget brings analytics of its own, described
+        under Analytics cookies below.
       </p>
       <p>
         The one thing we do store on your device is a <strong>local storage</strong> entry called{" "}
@@ -45,8 +47,28 @@ export default function Cookies() {
 
       <h2>Analytics cookies</h2>
       <p>
-        We do not currently use any analytics cookies. If we add analytics later, we will update this policy and
-        request consent before setting any non-essential cookie.
+        We have not installed Google Analytics, Google Tag Manager or any comparable tool on Flyamba. Even so,
+        <strong>analytics does run on pages that show the flight-search widget</strong>, and you should know about it.
+      </p>
+      <p>The chain is this. Our search widget is loaded from Travelpayouts (<strong>tpwdg.com</strong>). That script
+        embeds an iframe from <strong>widgets.kiwi.com</strong>, and the code inside that iframe contains a Google Tag
+        Manager container (<strong>GTM-MG27K2V</strong>), which in turn loads Google Analytics. Neither belongs to us:
+        the container is Kiwi.com&apos;s, and it appears on any site embedding the same widget.
+      </p>
+      <p>
+        Practically, that means <strong>Google Analytics and Google Tag Manager cookies may be set while you use the
+        search box</strong>. Because they run inside an iframe on Kiwi&apos;s domain, they are third-party cookies set
+        in Kiwi&apos;s context rather than first-party cookies on flyamba.com — we cannot read them, and they are
+        governed by Kiwi.com&apos;s and Google&apos;s privacy policies.
+      </p>
+      <p>
+        The widget is only loaded once you scroll near it, so on a page you never scroll down, it never loads and none
+        of these cookies are set. Blocking third-party cookies or scripts prevents them entirely; the rest of the page
+        continues to work, though the search box will not appear.
+      </p>
+      <p>
+        If we ever add analytics of our own, we will update this policy and ask for consent before setting any
+        non-essential cookie.
       </p>
 
       <h2>Affiliate tracking cookies</h2>

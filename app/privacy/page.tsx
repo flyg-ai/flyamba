@@ -28,8 +28,10 @@ export default function Privacy() {
 
       <h2>What we collect</h2>
       <p>
-        We do not run analytics software, advertising pixels or visitor-tracking scripts, and we do not ask you to
-        create an account. There is no login, no profile and no marketing list. In practice we handle three things:
+        We have not installed analytics software, advertising pixels or visitor-tracking scripts of our own, and we do
+        not ask you to create an account. There is no login, no profile and no marketing list. One caveat: the embedded
+        flight-search widget loads a third-party iframe that runs its own Google Analytics — see our{" "}
+        <Link href="/cookies">Cookie Policy</Link> for the detail. In practice we handle three things:
       </p>
 
       <h3>1. Your search queries</h3>
@@ -90,7 +92,9 @@ export default function Privacy() {
       </p>
 
       <p>
-        We do not sell your personal data, and we do not share it with advertisers or data brokers.
+        We do not sell your personal data, and we do not pass it to advertisers or data brokers. Loading the embedded
+        search widget does expose your IP address and browser details to Kiwi.com and Google, in the same way any
+        third-party embed does.
       </p>
 
       <h2>International transfers</h2>

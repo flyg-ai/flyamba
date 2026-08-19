@@ -55,3 +55,6 @@ next-env.d.ts
 
 .vercel
 .env*.local
+
+# Local scratch/backup dirs — never commit
+scratchpad/
