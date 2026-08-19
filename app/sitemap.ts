@@ -25,6 +25,7 @@ const STATIC_ROUTES = [
   { path: "/cookies", priority: 0.2 },
   { path: "/low-fare-calendar", priority: 0.7 },
   { path: "/guides", priority: 0.6 },
+  { path: "/where-is-it-warm", priority: 0.7 },
 ];
 
 // app/ directories that aren't routes at all, plus the airline folders — those
@@ -137,9 +138,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Where is it warm: one page per month. The /where-is-it-warm hub itself does
-  // not exist yet — when it lands it must go in STATIC_ROUTES, or readHubs() will
-  // read the folder as a city called "where-is-it-warm".
+  // Where is it warm: one page per month. The hub itself is in STATIC_ROUTES
+  // above, which is also what stops readHubs() reading the folder as a city.
   for (const m of WARM_MONTHS) {
     entries.push({
       url: `${SITE}${warmHref(m.slug)}`,

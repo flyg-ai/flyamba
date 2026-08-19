@@ -230,6 +230,23 @@ after adding images rather than reaching for the sibling project's loader.
 `fetchpriority` attribute Lighthouse reports as missing. The Image docs say to prefer
 `fetchPriority="high"` over `preload` in most cases and warn against combining them.
 
+**Known debt — no hero image covers a wide screen at DPR 2.** The homepage hero
+(`/images/content/photo-1507525428034-b723cf961d3e.avif`) is **1600x1064**, and
+`/where-is-it-warm` now borrows the same file. Both render full-bleed. A 1440 CSS
+viewport at DPR 2 asks for **2880px**; at 1920 it asks for 3840. So every wide,
+high-density screen is looking at an upscale.
+
+It is not visible enough to have been reported, for one reason: both heroes sit under
+a dark gradient with large type over them, which is where softness hides best. The
+bundled `/images/where-is-it-warm/hero.avif` was worse still — 1200x675, and an
+AI-rendered fantasy world map rather than a photograph — which is why the page borrows
+the homepage's instead.
+
+The real fix is a 2560px-wide source for each hero, not a `sizes` change: no
+declaration can conjure pixels the file does not have. Until then, do not "optimise"
+these two by shrinking them further, and do not assume a new full-bleed hero is fine
+because it looks acceptable on a 1x laptop.
+
 **Known debt — `sizes` on the category cards over-declares.** The hub category grids
 use `sizes="(max-width:1024px) 50vw, 33vw"`, but the box is **389 CSS px** at every
 viewport above 1280, because `max-w-7xl` caps the container at 1280 and the grid is three

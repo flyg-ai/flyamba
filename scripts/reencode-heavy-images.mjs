@@ -3,7 +3,7 @@
  * Re-encode images that are the right *dimensions* but the wrong *quality*.
  *
  * Adapted from flyg.ai's scripts/reencode-heavy-thumbs.mjs. Two differences:
- * it covers public/images/destinations AND public/images/content, and it looks
+ * it covers destinations, content AND where-is-it-warm, and it looks
  * at every image rather than just -thumb files, because here the heavy ones are
  * the full-size heroes.
  *
@@ -23,6 +23,12 @@
  *   node scripts/reencode-heavy-images.mjs --dry-run
  *   node scripts/reencode-heavy-images.mjs
  *   node scripts/reencode-heavy-images.mjs --quality 55 --threshold 0.12
+ *   node scripts/reencode-heavy-images.mjs --only where-is-it-warm
+ *
+ * USE --only WHEN ADDING A FOLDER. Without it the run covers every folder in
+ * DIRS, and the ones processed in an earlier pass get encoded a second time —
+ * lossy work for about 1% on files that are already fine. --only restricts the
+ * run to paths containing the given substring.
  */
 
 import fs from "node:fs";
@@ -31,7 +37,21 @@ import process from "node:process";
 import sharp from "sharp";
 
 const ROOT = process.cwd();
-const DIRS = ["public/images/destinations", "public/images/content"];
+const DIRS = ["public/images/destinations", "public/images/content", "public/images/where-is-it-warm"];
+
+/**
+ * KNOWN WASTE: files that settle just above THRESHOLD are re-encoded on every
+ * run. A file at 0.13 bytes/px yields 1–2% and stays at 0.13, so the next run
+ * picks it up again — paying a fresh generation of lossy AVIF each time for a
+ * saving that rounds to nothing. It is bounded (a handful of files, and the
+ * script only writes when the result is smaller) but it is real: repeat runs
+ * degrade those images for no gain.
+ *
+ * If this starts to matter, the fix is to record what has already been processed
+ * — a sidecar manifest keyed by path and size — rather than to raise THRESHOLD,
+ * which would let genuinely heavy files through. Until then, prefer --only when
+ * adding a folder so the rest are not swept along.
+ */
 
 /** Above this many bytes per pixel an image is an encoding outlier. Well-encoded
  *  AVIF sits at 0.05–0.10; 0.12 catches the tail without touching good files. */
@@ -51,6 +71,7 @@ const num = (flag, dflt) => {
 };
 const QUALITY = num("--quality", DEFAULT_QUALITY);
 const THRESHOLD = num("--threshold", DEFAULT_THRESHOLD);
+const ONLY = args.includes("--only") ? args[args.indexOf("--only") + 1] : null;
 
 const kb = (b) => `${(b / 1024).toFixed(0)} kB`;
 const mb = (b) => `${(b / 1024 / 1024).toFixed(1)} MB`;
@@ -79,7 +100,10 @@ async function main() {
     }
   }
 
-  const heavy = all.filter((x) => x.bpp > THRESHOLD).sort((a, b) => b.bpp - a.bpp);
+  const heavy = all
+    .filter((x) => x.bpp > THRESHOLD)
+    .filter((x) => !ONLY || x.p.includes(ONLY))
+    .sort((a, b) => b.bpp - a.bpp);
   const totalBytes = all.reduce((s, x) => s + x.size, 0);
 
   console.log(`${all.length} images across ${DIRS.length} folders, ${mb(totalBytes)} total`);
@@ -87,7 +111,7 @@ async function main() {
     + `p90 ${[...all.map((x) => x.bpp)].sort((a, b) => a - b)[Math.floor(all.length * 0.9)].toFixed(3)}   `
     + `max ${Math.max(...all.map((x) => x.bpp)).toFixed(3)}`);
   console.log(`${heavy.length} above ${THRESHOLD} bytes/px  (${mb(heavy.reduce((s, x) => s + x.size, 0))})`);
-  console.log(`quality: ${QUALITY}${DRY_RUN ? "   (dry run — nothing written)" : ""}\n`);
+  console.log(`quality: ${QUALITY}${ONLY ? `   --only ${ONLY}` : ""}${DRY_RUN ? "   (dry run — nothing written)" : ""}\n`);
   console.log("  file".padEnd(46) + "dim".padEnd(12) + "bytes/px".padEnd(10) + "before".padEnd(9) + "after".padEnd(9) + "saved");
 
   let before = 0, after = 0, rewritten = 0, kept = 0, shown = 0;
