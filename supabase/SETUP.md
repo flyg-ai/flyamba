@@ -84,9 +84,45 @@ embedding similarity, not bucket equality.
 | `daily_prices.origin` default | `ARN` | `LON` | International audience, not Stockholm |
 | `ADD CONSTRAINT` | fails on re-run | wrapped in a guard | Makes the schema re-runnable |
 
-## Not done yet
+## The nightly price job
 
-`daily_prices` exists as a table but nothing writes to it. That needs a cron route
-(`/api/cron/prices`) hitting Travelpayouts for the top destinations, plus
-`CRON_SECRET` and a `vercel.json` schedule — same shape as flyg.ai's. Say the word
-and it's maybe an hour of work.
+`/api/cron/prices` fills `daily_prices` from Travelpayouts. `vercel.json` runs it at
+03:00 UTC daily.
+
+**One more env var**, in `.env.local` and in Vercel (Production):
+
+```
+CRON_SECRET=<any long random string>
+```
+
+Generate one with `node -e "console.log(crypto.randomUUID())"`. Vercel Cron sends it as
+`Authorization: Bearer $CRON_SECRET`; without a match the route 401s, so the URL being
+public does not matter.
+
+Optional: `CRON_ORIGINS=LON,JFK` — which origin airports to pre-fetch. Defaults to those two.
+
+**Test it locally** (dev server running):
+
+```powershell
+curl.exe -H "Authorization: Bearer <your CRON_SECRET>" http://localhost:3000/api/cron/prices
+```
+
+Takes about a minute — 22 destinations × 2 origins, deliberately throttled. It returns a
+summary: `routes`, `rowsWritten`, `failed`. Some routes returning nothing is normal;
+Travelpayouts only has fares that real users searched in the last 48 hours, so thin routes
+are genuinely empty.
+
+Then check Supabase → Table Editor → `daily_prices`.
+
+**Nothing reads it yet.** `app/lib/daily-prices.ts` has `getCheapestFare()` and
+`getCheapestFares()` ready to use, but every "from $X" on the site still comes from
+`ALL_DESTINATIONS.monthlyPrices` — Stockholm-origin fares in SEK inherited from flyg.ai.
+Swapping those over is the next step and it is a visible one: the prices stop being wrong.
+
+## Still to copy from flyg.ai
+
+`climate_data` in flyg.ai's Supabase holds sea temperature and per-month climate — the
+"☀️ 24°C året runt" badge and the temperature bars on flyg.ai's comparison cards. It is a
+table copy between two Supabase projects, not a re-fetch: export CSV from flyg.ai's Table
+Editor, import into Flyamba's. Slugs need the same Swedish → English mapping as everything
+else (`rom` → `rome`, and 18 more).

@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import { useRef, useState } from "react";
-import { Loader2, Mic, Send, Sparkles, Plane, ArrowRight, MessageCircle } from "lucide-react";
-import type { AiSearchResult } from "@/app/lib/ai-search-types";
-import { destinations, type Destination } from "@/app/data/destinations";
+import { Loader2, Mic, Send, Sparkles, Plane, ArrowRight, MessageCircle, Plus, MapPin } from "lucide-react";
+import type { AiSearchResult, AiSearchMatch } from "@/app/lib/ai-search-types";
+import { SUPPORTED_ORIGINS, ORIGIN_COOKIE } from "@/app/lib/origins";
 import { AiResultCard } from "@/app/components/AiResultCard";
 import { AviasalesResultsWidget } from "@/app/components/AviasalesResultsWidget";
 
@@ -17,8 +17,6 @@ const suggestions = [
   "Book flights to Barcelona from Oslo",
   "10 days somewhere warm in November",
 ];
-
-const bySlug = new Map(destinations.map((d) => [d.slug, d]));
 
 // Words highlighted in the AI headline (mirrors flyg.ai's cyan-word treatment).
 const HEADLINE_ACCENT = new Set([
@@ -52,6 +50,12 @@ export function HomeHero() {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<AiSearchResult | null>(null);
   const [widgetDest, setWidgetDest] = useState<WidgetDest | null>(null);
+  // Extra pages appended by "Show more destinations". Kept separate from
+  // `result` so the headline and follow-up stay tied to the original answer.
+  const [more, setMore] = useState<AiSearchMatch[]>([]);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [exhausted, setExhausted] = useState(false);
+  const [lastQuery, setLastQuery] = useState("");
   const resultsRef = useRef<HTMLDivElement>(null);
   const widgetRef = useRef<HTMLDivElement>(null);
 
@@ -64,6 +68,9 @@ export function HomeHero() {
     setLoading(true);
     setError(null);
     setWidgetDest(null);
+    setMore([]);
+    setExhausted(false);
+    setLastQuery(trimmed);
     scrollTo(resultsRef);
     try {
       const res = await fetch("/api/ai-search", {
@@ -95,13 +102,48 @@ export function HomeHero() {
     }
   }
 
+  // Fetches the next page. The slugs already on screen are sent as `exclude`,
+  // so the server drops them from the catalog before the model sees it — the
+  // model can't repeat itself, and it still writes a real reason for each new
+  // destination rather than them arriving unexplained.
+  async function loadMore() {
+    if (loadingMore || exhausted || !lastQuery) return;
+    setLoadingMore(true);
+    try {
+      const res = await fetch("/api/ai-search", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: lastQuery, exclude: shown.map((m) => m.slug) }),
+      });
+      if (!res.ok) throw new Error("failed");
+      const data = (await res.json()) as AiSearchResult;
+      const fresh = (data.matches ?? []).filter(
+        (m) => !shown.some((x) => x.slug === m.slug),
+      );
+      if (fresh.length === 0) setExhausted(true);
+      else setMore((cur) => [...cur, ...fresh]);
+    } catch {
+      setExhausted(true);
+    } finally {
+      setLoadingMore(false);
+    }
+  }
+
+  // Persist the picked origin and re-run, so every price on screen is quoted
+  // from the same airport. A year-long cookie: the visitor's home airport does
+  // not change between sessions.
+  function changeOrigin(iata: string) {
+    document.cookie = `${ORIGIN_COOKIE}=${encodeURIComponent(iata)}; path=/; max-age=31536000; samesite=lax`;
+    if (lastQuery) void runSearch(lastQuery);
+  }
+
   // A card's "Search flights" button targets the embedded widget for that city.
-  function handleSearchFlights(d: Destination) {
-    setWidgetDest({ toName: d.tpName ?? (d.iata ?? "").toUpperCase(), iata: (d.iata ?? "").toUpperCase(), city: d.city });
+  function handleSearchFlights(m: AiSearchMatch) {
+    setWidgetDest({ toName: m.tpName, iata: m.iata, city: m.city });
     scrollTo(widgetRef);
   }
 
-  const matches = result?.matches ?? [];
+  const shown = [...(result?.matches ?? []), ...more];
   const hasOutput = loading || error || result;
 
   return (
@@ -256,34 +298,86 @@ export function HomeHero() {
                 )}
 
                 {/* Headline + follow-up + cards */}
-                {matches.length > 0 && (
+                {shown.length > 0 && (
                   <>
                     {result.headline && <Headline text={result.headline} />}
+                    {/*
+                      A fare means nothing without the airport it leaves from, so
+                      the origin is stated rather than assumed — and changeable,
+                      because guessing it from the visitor's country is coarse
+                      (everyone in the US gets New York).
+                    */}
+                    {result.origin && (
+                      <div className="mb-6 flex items-center justify-center gap-2 text-sm text-muted-foreground">
+                        <MapPin className="h-3.5 w-3.5 text-accent" />
+                        <span>Prices from</span>
+                        <select
+                          value={result.origin}
+                          onChange={(e) => changeOrigin(e.target.value)}
+                          aria-label="Departure airport"
+                          className="rounded-lg border border-border bg-card px-2 py-1 text-sm font-medium text-foreground"
+                        >
+                          {SUPPORTED_ORIGINS.map((o) => (
+                            <option key={o.iata} value={o.iata}>
+                              {o.label}
+                            </option>
+                          ))}
+                        </select>
+                        {!result.originChosen && <span className="text-xs">(detected)</span>}
+                      </div>
+                    )}
                     {result.followUp && !result.conversational && (
                       <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-muted-foreground">{result.followUp}</p>
                     )}
+                    {/* Every match renders. These used to be resolved against the
+                        8 rich destinations, so anything else silently vanished. */}
                     <div className="space-y-6">
-                      {(() => {
-                        const lead = bySlug.get(matches[0].slug);
-                        return lead ? (
-                          <AiResultCard d={lead} reason={matches[0].reason} month={result.month} onSearchFlights={handleSearchFlights} featured />
-                        ) : null;
-                      })()}
-                      {matches.length > 1 && (
+                      <AiResultCard
+                        m={shown[0]}
+                        month={result.month}
+                        originLabel={result.originLabel}
+                        onSearchFlights={handleSearchFlights}
+                        featured
+                      />
+                      {shown.length > 1 && (
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                          {matches.slice(1).map((m) => {
-                            const d = bySlug.get(m.slug);
-                            return d ? (
-                              <AiResultCard key={m.slug} d={d} reason={m.reason} month={result.month} onSearchFlights={handleSearchFlights} />
-                            ) : null;
-                          })}
+                          {shown.slice(1).map((m) => (
+                            <AiResultCard
+                              key={m.slug}
+                              m={m}
+                              month={result.month}
+                              originLabel={result.originLabel}
+                              onSearchFlights={handleSearchFlights}
+                            />
+                          ))}
                         </div>
                       )}
                     </div>
+
+                    {!exhausted && (
+                      <div className="mt-10 flex justify-center">
+                        <button
+                          type="button"
+                          onClick={() => void loadMore()}
+                          disabled={loadingMore}
+                          className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition hover:border-accent hover:text-accent disabled:opacity-50"
+                        >
+                          {loadingMore ? (
+                            <>
+                              <Loader2 className="h-4 w-4 animate-spin" /> Finding more…
+                            </>
+                          ) : (
+                            <>
+                              <Plus className="h-4 w-4" /> Show more destinations
+                            </>
+                          )}
+                        </button>
+                      </div>
+                    )}
                   </>
                 )}
 
-                {matches.length === 0 && !result.conversational && !widgetDest && (
+                {shown.length === 0 && !result.conversational && !widgetDest && (
                   <p className="text-center text-sm text-muted-foreground">
                     No matches yet — try describing your trip a little differently.
                   </p>

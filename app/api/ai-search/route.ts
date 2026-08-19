@@ -2,9 +2,13 @@ import { NextRequest, NextResponse } from "next/server";
 import Anthropic from "@anthropic-ai/sdk";
 import { destinations } from "@/app/data/destinations";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
+import { DESTINATION_FACTS, type DestinationFacts } from "@/app/data/destination-facts";
 import type { AiSearchMatch, BookingIntent, AiSearchResult } from "@/app/lib/ai-search-types";
 import { usd } from "@/app/lib/format";
+import { currentWeatherBadge } from "@/app/lib/destination-helpers";
 import { getCachedResponse, saveCachedResponse, classifyIntent } from "@/app/lib/ai-cache";
+import { getFaresByOrigin, type FareOptions } from "@/app/lib/fares";
+import { resolveOrigin, ORIGIN_COOKIE, ORIGIN_BY_IATA } from "@/app/lib/origins";
 
 // Runs on the Node.js runtime (Anthropic SDK needs Node APIs, not Edge).
 export const runtime = "nodejs";
@@ -27,7 +31,7 @@ type CatalogEntry = {
   country: string;
   continent: string;
   priceUsd: number;
-  tagline?: string;
+  tags: string[];
 };
 
 const richBySlug = new Map(destinations.map((d) => [d.slug, d]));
@@ -48,25 +52,157 @@ function monthUsd(d: AllDestination, monthIdx: number | null): number {
 
 const CATALOG_BY_SLUG = new Map(ALL_DESTINATIONS.map((d) => [d.slug, d]));
 
-function buildCatalog(monthIdx: number | null, region: Region | null): CatalogEntry[] {
-  return ALL_DESTINATIONS.filter((d) => !region || inRegion(d, region)).map((d) => ({
+function buildCatalog(
+  monthIdx: number | null,
+  region: Region | null,
+  activity: Activity | null,
+  fares?: Record<string, FareOptions>,
+): CatalogEntry[] {
+  return ALL_DESTINATIONS.filter(
+    (d) =>
+      (!region || inRegion(d, region)) &&
+      (!activity || matchesActivity(DESTINATION_FACTS[d.slug], activity)),
+  ).map((d) => ({
     slug: d.slug,
     name: d.name,
     country: d.country,
     continent: d.continent,
     priceUsd: monthUsd(d, monthIdx),
-    tagline: richBySlug.get(d.slug)?.tagline,
+    tags: DESTINATION_FACTS[d.slug]?.tags ?? [],
   }));
 }
 
 function serializeCatalog(entries: CatalogEntry[]): string {
   return entries
     .map((e) =>
-      [e.slug, e.name, e.country, e.continent, `$${e.priceUsd}`, e.tagline ?? ""]
+      [e.slug, e.name, e.country, e.continent, `$${e.priceUsd}`, e.tags.join(",")]
         .join("|")
         .replace(/\|+$/, ""),
     )
     .join("\n");
+}
+
+// ─── Activity detection ──────────────────────────────────────────────────
+// The second half of the Marrakech problem. Region filtering stops the wrong
+// continent; this stops the wrong KIND of place — an inland capital returned
+// for a beach request. It works because the ported flyg.ai data has editorial
+// tags and 1–10 scores for all 550 destinations (Madrid: beaches 1, city-break;
+// Ibiza: beaches 9, beach). Without that data the model could only guess from
+// the city name, which is exactly what it was doing.
+//
+// A destination qualifies on EITHER a tag or a score threshold, because tags
+// are only present on 312 of 550 while scores are on all of them.
+
+type Activity = {
+  name: string;
+  match: RegExp;
+  tags: string[];
+  /**
+   * Score axis this activity is judged on. Does double duty: a low floor for
+   * catalog membership, and the key the results are re-sorted by afterwards.
+   */
+  axis?: keyof DestinationFacts["scores"];
+};
+
+// Membership floor, not a bar. Set high (8) it excluded the mainstream beach
+// destinations, because the classic ones — Fuerteventura, Rhodos, Kreta, Palma,
+// Tenerife — carry no tags in flyg.ai's data and only ever qualified on score.
+// Set at 5 they are all in, while Madrid (1), Florence (1) and Prague (1) are
+// still out. Ranking, not membership, is what decides who actually shows up.
+const QUALIFY_MIN = 5;
+
+// Anything at or below this is dropped from the results even if the model
+// picked it. Mirrors flyg.ai's `beaches <= 2` reject on beach searches.
+const REJECT_MAX = 2;
+
+/** How many destinations to show: one featured card + three rows of two. */
+const MAX_RESULTS = 7;
+
+const ACTIVITIES: Activity[] = [
+  {
+    name: "beach",
+    match: /\b(beach|beaches|seaside|sunbathe|sunbathing|swim\w*|coastal|sand)\b/i,
+    tags: ["beach", "coast", "island"],
+    axis: "beaches",
+  },
+  {
+    name: "nightlife",
+    match: /\b(nightlife|party|partying|clubs?|clubbing|bars?)\b/i,
+    tags: ["nightlife"],
+    axis: "nightlife",
+  },
+  {
+    name: "food",
+    match: /\b(food|foodie|cuisine|culinary|restaurants?|gastronom\w*|wine)\b/i,
+    tags: ["food", "wine"],
+    axis: "food",
+  },
+  {
+    name: "family",
+    match: /\b(family|families|kids?|children|toddlers?)\b/i,
+    tags: ["family"],
+    axis: "family",
+  },
+  {
+    name: "culture",
+    match: /\b(culture|cultural|history|historic\w*|museums?|ancient|art|architecture)\b/i,
+    tags: ["culture", "history", "unesco", "architecture"],
+    axis: "activities",
+  },
+  {
+    name: "budget",
+    match: /\b(cheap|cheapest|budget|affordable|bargain|value)\b/i,
+    tags: ["budget"],
+    axis: "value",
+  },
+  {
+    name: "nature",
+    match: /\b(nature|hiking|hike|trekking|mountains?|national parks?|wildlife|scenery)\b/i,
+    tags: ["nature", "mountains", "hiking", "wildlife", "safari"],
+  },
+  { name: "skiing", match: /\b(ski|skiing|snowboard\w*|slopes)\b/i, tags: ["skiing", "mountains"] },
+  { name: "diving", match: /\b(diving|dive|snorkel\w*|reef)\b/i, tags: ["diving", "island"] },
+  { name: "surfing", match: /\b(surf\w*|waves)\b/i, tags: ["surf", "coast"] },
+  {
+    name: "northern lights",
+    match: /\b(northern lights|aurora|midnight sun)\b/i,
+    tags: ["northern-lights"],
+  },
+  { name: "winter sun", match: /\b(winter sun|escape the winter)\b/i, tags: ["winter-sun"] },
+  { name: "romance", match: /\b(romantic|romance|honeymoon|anniversary)\b/i, tags: ["romantic"] },
+  { name: "city break", match: /\b(city break|citybreak|weekend in a city)\b/i, tags: ["city-break"] },
+];
+
+function detectActivity(q: string): Activity | null {
+  for (const a of ACTIVITIES) if (a.match.test(q)) return a;
+  return null;
+}
+
+function matchesActivity(facts: DestinationFacts | undefined, activity: Activity): boolean {
+  if (!facts) return false;
+  if (facts.tags?.some((t) => activity.tags.includes(t))) return true;
+  if (activity.axis && facts.scores[activity.axis] >= QUALIFY_MIN) return true;
+  return false;
+}
+
+/**
+ * Re-rank the model's picks by the activity's score, best first.
+ *
+ * This is the single biggest difference between this route and flyg.ai's, which
+ * buffers its cards and sorts them by beach score before emitting. Left in model
+ * order, a beach search returned Benidorm, Lloret de Mar and Sitges — every one
+ * of them tagged, and therefore more legible to the model than the untagged
+ * Fuerteventura (beaches 10) or Rhodos (9). Sorting puts the actual beach
+ * destinations first and pushes the marginal ones (Tirana, beaches 7) off the
+ * end of the list without needing a threshold to exclude them.
+ */
+function rankMatches(matches: AiSearchMatch[], activity: Activity | null): AiSearchMatch[] {
+  if (!activity?.axis) return matches.slice(0, MAX_RESULTS);
+  const axis = activity.axis;
+  return matches
+    .filter((m) => (m.scores?.[axis] ?? 99) > REJECT_MAX)
+    .sort((a, b) => (b.scores?.[axis] ?? 0) - (a.scores?.[axis] ?? 0))
+    .slice(0, MAX_RESULTS);
 }
 
 // ─── Region detection ────────────────────────────────────────────────────
@@ -181,7 +317,7 @@ const SYSTEM_PROMPT = `You are Flyamba's flight search assistant — warm, curio
 SCOPE: You only help with travel, flights and destinations. If the traveler asks about anything else, reply with a single CONV line kindly steering them back to travel — never give destinations for off-topic questions.
 
 You are given a catalog of flight destinations, one per line, pipe-separated:
-slug|City|Country|Continent|$priceFrom|optional tagline
+slug|City|Country|Continent|$priceFrom|tags
 
 Only ever use slugs from this catalog — never invent one, never return a city that is not listed. The slug is the identifier: return it exactly as written, lowercase.
 
@@ -189,13 +325,15 @@ Always return destination suggestions immediately. NEVER ask follow-up questions
 
 RULES:
 - Specific destination the traveler named → return exactly 1 destination line for it.
-- Vague / open request → return up to 6 destinations, best fit first.
+- Vague / open request → return 7 destinations, best fit first. Fewer only if the catalog genuinely has fewer that fit.
 - VERY vague ("don't know", "anywhere", just "a trip") → return a single CONV line instead.
 - Consider budget, season/month, trip length and vibe (beach, city, romantic, long-haul, family, food, nightlife, adventure), flight time, and any stated origin.
 - Budget: "cheap/budget" ≈ under $250; "premium/luxury" ≈ over $500. Prioritize the lowest price when budget is mentioned.
+- The tags are editorial and reliable — trust them over your own impression of a city name. A destination tagged "city-break" but not "beach" is not a beach destination.
 - Match the ACTIVITY, not just the region. A beach request must return coastal and island destinations — never an inland capital or a cold-water city, however popular it is.
 - STAY IN REGION (strict): if the traveler names a country or continent, return ONLY catalog destinations from that exact country/continent.
-- Prefer variety: don't return six towns served by the same airport.
+- Prefer variety: don't return several towns served by the same airport.
+- Lead with the destinations travelers actually know for this kind of trip. Niche picks are worth including, but not at the expense of the obvious ones.
 
 RESPONSE FORMAT — one item per line, pipe-separated, NOTHING else (no prose, no markdown, no code fences, no blank lines). Use "|" only as the field separator.
 
@@ -207,7 +345,7 @@ INTENT|<slug or NONE>|<ORIGIN or NONE>
 Line 2 (present unless CONV):
 HEADLINE|<short catchy headline, max 8 words, like a friend would say it>
 
-Then 1 to 6 ranked destination lines, best fit first:
+Then 1 to 7 ranked destination lines, best fit first:
 <slug>|<City>|<one short, specific sentence on why it fits>
 
 Last line (present unless CONV):
@@ -269,6 +407,57 @@ function toLines(text: string): string[] {
 }
 
 /**
+ * Build the card payload for one match.
+ *
+ * Everything the card renders is sent from here. The client used to look each
+ * slug up in the 8 rich `destinations`, which silently dropped every result
+ * outside those 8 once the catalog grew to 550.
+ */
+function toMatch(dest: AllDestination, reason: string, fares?: FareOptions): AiSearchMatch {
+  const facts = DESTINATION_FACTS[dest.slug];
+  const rich = richBySlug.get(dest.slug);
+  const valid = dest.monthlyPrices.filter((p): p is number => p != null);
+
+  return {
+    slug: dest.slug,
+    city: dest.name,
+    country: dest.country,
+    iata: dest.iata.toUpperCase(),
+    image: dest.image,
+    priceSek: valid.length ? Math.min(...valid) : (rich?.price ?? 0),
+    // Real fares from the visitor's origin. Absent for routes Travelpayouts has
+    // not seen searched in 48h — the card renders no price rather than falling
+    // back to the catalog's Stockholm figure.
+    fares: fares?.length
+      ? fares.map((f) => ({
+          priceUsd: f.priceUsd,
+          departDate: f.departDate,
+          returnDate: f.returnDate,
+          airline: f.airline,
+          oneWay: f.oneWay,
+        }))
+      : undefined,
+    reason,
+    tpName: dest.tpName || dest.iata.toUpperCase(),
+
+    countryFlag: rich?.countryFlag,
+    tags: facts?.tags,
+    scores: facts?.scores,
+    summerTemp: dest.summerTemp ?? rich?.summerTemp,
+    flightTime: rich?.flightTime ?? (rich ? `${rich.avgFlightHours}h` : undefined),
+    // currentWeatherBadge needs 12 months of climate data, which only the rich
+    // destinations carry. Undefined elsewhere and the badge is simply hidden.
+    weatherBadge: rich ? (currentWeatherBadge(rich) ?? undefined) : undefined,
+    foodPerDay: facts?.foodPerDay ?? rich?.foodCostPerDay,
+    hotelPerNight: facts?.hotelPerNight ?? rich?.hotelCostPerNight,
+    insiderTip: facts?.insiderTip ?? rich?.insiderTip,
+    // Ported facts first — they cover 309 destinations against the rich 8.
+    localDishes: facts?.dishes?.join(", ") ?? rich?.localDishes?.slice(0, 3).join(", "),
+    topSights: facts?.sights?.join(", ") ?? rich?.thingsToDo?.slice(0, 3).map((t) => t.title).join(", "),
+  };
+}
+
+/**
  * Parse the pipe format into an AiSearchResult.
  *
  * `allowed` is the set of slugs the model was actually shown. Anything outside
@@ -279,6 +468,7 @@ function parseModelOutput(
   text: string,
   month: string | null,
   allowed: Set<string>,
+  faresBySlug: Record<string, FareOptions>,
 ): AiSearchResult {
   const lines = toLines(text);
 
@@ -327,12 +517,13 @@ function parseModelOutput(
     const dest = CATALOG_BY_SLUG.get(slug);
     if (!dest) continue;
     seen.add(slug);
-    matches.push({
-      slug,
-      city: dest.name,
-      iata: dest.iata.toUpperCase(),
-      reason: parts.slice(2).join("|") || richBySlug.get(slug)?.tagline || dest.country,
-    });
+    matches.push(
+      toMatch(
+        dest,
+        parts.slice(2).join("|") || richBySlug.get(slug)?.tagline || dest.country,
+        faresBySlug[slug],
+      ),
+    );
   }
 
   return {
@@ -346,7 +537,7 @@ function parseModelOutput(
 }
 
 export async function POST(req: NextRequest): Promise<NextResponse> {
-  let body: { query?: string; destinationContext?: string };
+  let body: { query?: string; destinationContext?: string; exclude?: string[] };
   try {
     body = await req.json();
   } catch {
@@ -362,11 +553,47 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: "Missing ANTHROPIC_API_KEY" }, { status: 500 });
   }
 
+  // "Show more" sends the slugs already on screen. They are removed from the
+  // catalog before it reaches the model, so the next page is genuinely new
+  // rather than the model being asked politely not to repeat itself.
+  const exclude = new Set(
+    (Array.isArray(body?.exclude) ? body.exclude : [])
+      .filter((s): s is string => typeof s === "string")
+      .map((s) => s.trim().toLowerCase())
+      .slice(0, 60),
+  );
+
+  // Which airport the prices are quoted from. The visitor's own choice wins;
+  // otherwise their country, from the edge; otherwise London.
+  const { origin, chosen: originChosen } = resolveOrigin(
+    req.headers.get("x-vercel-ip-country") ?? req.headers.get("cf-ipcountry"),
+    req.cookies.get(ORIGIN_COOKIE)?.value,
+  );
+  const originLabel = ORIGIN_BY_IATA.get(origin)?.label ?? origin;
+  const faresBySlug = await getFaresByOrigin(origin);
+
   const monthIdx = detectMonthIdx(query);
   const month = monthIdx != null ? monthName(monthIdx) : null;
   const region = detectRegion(query);
+  const activity = detectActivity(query);
 
-  const catalog = buildCatalog(monthIdx, region);
+  let catalog = buildCatalog(monthIdx, region, activity, faresBySlug).filter((c) => !exclude.has(c.slug));
+
+  // A narrow region combined with a narrow activity can leave too little to
+  // choose from ("northern lights in the Caribbean"). Rather than return three
+  // bad options, drop the activity filter and let the model judge — the tags are
+  // still on every catalog line, so it keeps the information either way.
+  if (catalog.length < 8 && activity) {
+    catalog = buildCatalog(monthIdx, region, null, faresBySlug).filter((c) => !exclude.has(c.slug));
+  }
+
+  // Nothing left to show — the traveler has paged through everything that fits.
+  if (catalog.length === 0) {
+    return NextResponse.json(
+      { matches: [], bookingIntent: null, month: null, conversational: false, origin, originLabel, originChosen },
+      { headers: { "x-flyamba-cache": "empty" } },
+    );
+  }
   const allowed = new Set(catalog.map((c) => c.slug));
 
   // Optional destination context — biases the answer toward one city when the
@@ -376,12 +603,23 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   // ── Cache lookup. Never fatal: a miss, an error or unconfigured Supabase
   //    all fall through to a live call. ──────────────────────────────────
-  const cached = await getCachedResponse(query, categoryPage);
+  // Each page is its own cache entry: the same query with a different exclude
+  // set is a different question.
+  // Origin is part of the key: the catalog the model saw carried that origin's
+  // fares, so a London answer must not be replayed for a New York visitor.
+  const cacheKey =
+    `${query} @${origin}` + (exclude.size ? ` :: after(${[...exclude].sort().join(",")})` : "");
+
+  const cached = await getCachedResponse(cacheKey, categoryPage);
   if (cached?.ai_response_text) {
-    const result = parseModelOutput(cached.ai_response_text, month, allowed);
+    const result = parseModelOutput(cached.ai_response_text, month, allowed, faresBySlug);
+    result.matches = rankMatches(result.matches, activity);
     // Guard against a poisoned or now-out-of-range cache row serving nothing.
     if (result.matches.length > 0 || result.conversational) {
-      return NextResponse.json(result, { headers: { "x-flyamba-cache": "hit" } });
+      return NextResponse.json(
+        { ...result, origin, originLabel, originChosen },
+        { headers: { "x-flyamba-cache": "hit" } },
+      );
     }
   }
 
@@ -389,6 +627,10 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   const regionNote = region
     ? `\n\nThe traveler named a region, so this catalog has already been narrowed to ${region.name}. Every line is eligible.`
     : "";
+  const activityNote =
+    activity && catalog.length >= 8
+      ? `\n\nIt has also been narrowed to destinations that genuinely suit ${activity.name} — rank within these rather than second-guessing the filter.`
+      : "";
   const monthNote =
     month != null
       ? `\n\nPrices shown are for ${month}, the month the traveler asked about.`
@@ -400,36 +642,66 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
   const client = new Anthropic({ apiKey });
 
-  // Haiku 4.5: fast + cheap, ideal for this latency-sensitive matching.
-  // The catalog goes in a cached system block — it is ~5k tokens and identical
-  // across every search with the same region/month, so prompt caching keeps the
-  // per-search cost close to what the 8-destination catalog used to be.
-  const response = await client.messages.create({
-    model: "claude-haiku-4-5",
-    max_tokens: 700,
-    system: [
-      { type: "text", text: system },
-      {
-        type: "text",
-        text: `Catalog:\n${catalogText}${regionNote}${monthNote}`,
-        cache_control: { type: "ephemeral" },
-      },
-    ],
-    messages: [{ role: "user", content: `Traveler's request: ${query}` }],
-  });
+  const catalogBlockText = `Catalog:\n${catalogText}${regionNote}${activityNote}${monthNote}`;
+
+  // Prompt caching has a minimum cacheable block size (2048 tokens on Haiku).
+  // A narrow region like "the Middle East" produces a catalog well under that,
+  // and marking a too-short block is not worth the risk of a 400 — so the
+  // cache_control is attached only when the block is comfortably over the
+  // threshold. ~4 chars per token, with headroom.
+  const cacheable = catalogBlockText.length > 10_000;
+
+  let response;
+  try {
+    // Haiku 4.5: fast + cheap, ideal for this latency-sensitive matching.
+    response = await client.messages.create({
+      model: "claude-haiku-4-5",
+      max_tokens: 700,
+      system: [
+        { type: "text", text: system },
+        cacheable
+          ? { type: "text", text: catalogBlockText, cache_control: { type: "ephemeral" } }
+          : { type: "text", text: catalogBlockText },
+      ],
+      messages: [{ role: "user", content: `Traveler's request: ${query}` }],
+    });
+  } catch (err) {
+    // Without this the route threw and the page showed nothing at all, with the
+    // reason visible only in the server log.
+    const message = err instanceof Error ? err.message : String(err);
+    console.error("[ai-search] Anthropic call failed:", message);
+    return NextResponse.json({ error: `Search failed: ${message}` }, { status: 502 });
+  }
 
   const text = response.content
     .filter((b): b is Anthropic.TextBlock => b.type === "text")
     .map((b) => b.text)
     .join("\n");
 
-  const result = parseModelOutput(text, month, allowed);
+  const result = parseModelOutput(text, month, allowed, faresBySlug);
+  result.matches = rankMatches(result.matches, activity);
+
+  // One line per search, always. "200 OK with nothing on the page" is otherwise
+  // indistinguishable from "200 OK with six results" in the server log.
+  console.log(
+    `[ai-search] ${JSON.stringify(query)} region=${region?.name ?? "none"} ` +
+      `activity=${activity?.name ?? "none"} ` +
+      `catalog=${catalog.length} matches=${result.matches.length} ` +
+      `conversational=${result.conversational}`,
+  );
+
+  // Nothing survived validation — usually slugs the model invented, or a CONV
+  // reply to a question that deserved destinations. Log the raw reply so the
+  // cause is visible instead of the traveler just seeing a blank page.
+  if (result.matches.length === 0) {
+    console.error(`[ai-search] no destinations returned. Raw reply:\n${text}`);
+  }
 
   // Only cache answers worth replaying. A parse that yielded nothing is a bad
   // generation — caching it would serve that failure forever.
   if (result.matches.length > 0 || result.conversational) {
     await saveCachedResponse({
-      queryText: query,
+      queryText: cacheKey,
       intentBucket: classifyIntent(query),
       destinationSlugs: result.matches.map((m) => m.slug),
       aiResponseText: text,
@@ -437,5 +709,8 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     });
   }
 
-  return NextResponse.json(result, { headers: { "x-flyamba-cache": "miss" } });
+  return NextResponse.json(
+    { ...result, origin, originLabel, originChosen },
+    { headers: { "x-flyamba-cache": "miss" } },
+  );
 }

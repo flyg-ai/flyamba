@@ -1,5 +1,12 @@
 import crypto from "crypto";
-import { supabase, isSupabaseConfigured } from "./supabase";
+import { supabaseServer, isSupabaseServerConfigured } from "./supabase-server";
+
+// Uses the SERVER client (service role), not the anon one. Every caller is an
+// API route — the cache is never touched from the browser. Reaching it with the
+// anon key would mean granting anon read+write on the cache tables, which makes
+// them writable by anyone holding the publishable key. It also just fails
+// without those grants: "permission denied for table ai_chat_cache" (42501),
+// because disabling RLS does not itself grant the anon role access.
 
 // ─────────────────────────────────────────────────────────────────────────
 // AI response cache — ported from flyg-ai/lib/ai-cache.ts
@@ -89,11 +96,11 @@ export async function getCachedResponse(
   queryText: string,
   categoryPage: string,
 ): Promise<CachedSearchRow | null> {
-  if (!isSupabaseConfigured || !supabase) return null;
+  if (!isSupabaseServerConfigured || !supabaseServer) return null;
 
   const hash = hashQuery(queryText);
 
-  const { data, error } = await supabase
+  const { data, error } = await supabaseServer
     .from("ai_chat_cache")
     .select("id, query_text, destination_slugs, ai_response_text, intent_bucket, hit_count, created_at")
     .eq("query_hash", hash)
@@ -110,7 +117,7 @@ export async function getCachedResponse(
   const row = data as CachedSearchRow;
 
   // Fire-and-forget hit counter — a failed increment must not fail the request.
-  void supabase
+  void supabaseServer
     .from("ai_chat_cache")
     .update({ hit_count: (row.hit_count ?? 0) + 1 })
     .eq("id", row.id)
@@ -135,9 +142,9 @@ export async function saveCachedResponse({
   aiResponseText: string;
   categoryPage: string;
 }): Promise<void> {
-  if (!isSupabaseConfigured || !supabase) return;
+  if (!isSupabaseServerConfigured || !supabaseServer) return;
 
-  const { error } = await supabase.from("ai_chat_cache").upsert(
+  const { error } = await supabaseServer.from("ai_chat_cache").upsert(
     {
       query_hash: hashQuery(queryText),
       intent_bucket: intentBucket,
@@ -169,9 +176,9 @@ export async function getCachedDestinationChat(
   slug: string,
   question: string,
 ): Promise<string | null> {
-  if (!isSupabaseConfigured || !supabase) return null;
+  if (!isSupabaseServerConfigured || !supabaseServer) return null;
 
-  const { data, error } = await supabase
+  const { data, error } = await supabaseServer
     .from("destination_chat_cache")
     .select("response, created_at")
     .eq("slug", slug)
@@ -197,9 +204,9 @@ export async function saveCachedDestinationChat(
   question: string,
   response: string,
 ): Promise<void> {
-  if (!isSupabaseConfigured || !supabase) return;
+  if (!isSupabaseServerConfigured || !supabaseServer) return;
 
-  const { error } = await supabase.from("destination_chat_cache").upsert(
+  const { error } = await supabaseServer.from("destination_chat_cache").upsert(
     {
       slug,
       query: normalizeQuestion(question),

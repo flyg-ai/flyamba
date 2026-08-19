@@ -1,0 +1,5210 @@
+{
+ "malaga": {
+  "insiderTip": "Fly early morning — the sun is up when you land and you can head straight to the beach. Avoid Friday evening departures which can cost 600–900 kr more.",
+  "dishes": [
+   "Tapas bars along Calle Larios",
+   "Ajoblanco",
+   "Fritura malagueña"
+  ],
+  "sights": [
+   "Picasso Museum",
+   "Alcazaba",
+   "Cathedral La Manquita"
+  ]
+ },
+ "barcelona": {
+  "insiderTip": "Book hotels in Gràcia or Eixample instead of Las Ramblas — 20–30% cheaper and equally close to all sights and beaches.",
+  "dishes": [
+   "Pan con tomate",
+   "Patatas bravas",
+   "Seafood paella in La Barceloneta by the sea"
+  ],
+  "sights": [
+   "Sagrada Família",
+   "Park Güell",
+   "Las Ramblas and Boqueria Market"
+  ]
+ },
+ "rome": {
+  "insiderTip": "Buy Colosseum tickets online at least 3 days ahead — box office queues can take 2–3 hours and eat up precious vacation time.",
+  "dishes": [
+   "Cacio e pepe",
+   "Supplì",
+   "Gelato from Il Gelato di San Crispino near Trevi"
+  ],
+  "sights": [
+   "Colosseum",
+   "Vatican Museums and Sistine Chapel",
+   "Fontana di Trevi"
+  ]
+ },
+ "lisbon": {
+  "insiderTip": "Take the metro from the airport to the city center — costs only €1.65 and takes 25 minutes. Avoid taxi queues which can take 45 minutes during peak hours.",
+  "dishes": [
+   "Pastéis de nata",
+   "Bacalhau à brás",
+   "Bifanas"
+  ],
+  "sights": [
+   "Torre de Belém",
+   "Jerónimos Monastery",
+   "Alfama"
+  ]
+ },
+ "palma": {
+  "insiderTip": "Rent a car outside the airport (10 min walk) instead of at the terminal — saves 300–500 kr per week and you avoid the long queue.",
+  "dishes": [
+   "Ensaimada",
+   "Sobrasada",
+   "Pa amb oli"
+  ],
+  "sights": [
+   "Cathedral of Mallorca (La Seu)",
+   "Bellver Castle",
+   "Old Town (Casc Antic)"
+  ]
+ },
+ "bangkok": {
+  "insiderTip": "Book hotels near BTS Skytrain or MRT stations — avoid Bangkok's traffic entirely and save several hours every day.",
+  "dishes": [
+   "Pad Thai",
+   "Tom Yum Goong",
+   "Mango sticky rice"
+  ],
+  "sights": [
+   "Wat Pho",
+   "Grand Palace and Wat Phra Kaew",
+   "Wat Arun"
+  ]
+ },
+ "new-york": {
+  "insiderTip": "Fly to Newark (EWR) instead of JFK — often 500–1,000 kr cheaper and NJ Transit Express to Penn Station in Midtown takes only 25 minutes.",
+  "dishes": [
+   "New York pizza",
+   "Bagel with cream cheese and salmon",
+   "Smash burger at Shake Shack or Corner Bistro"
+  ],
+  "sights": [
+   "Statue of Liberty",
+   "Central Park",
+   "Empire State Building"
+  ]
+ },
+ "tokyo": {
+  "insiderTip": "Buy a Suica card at Narita on arrival — it works on subways, buses, regional trains and at convenience stores. Saves hours compared to buying single tickets.",
+  "dishes": [
+   "Ramen",
+   "Sushi at Tsukiji Outer Market",
+   "Takoyaki"
+  ],
+  "sights": [
+   "Senso-ji Temple in Asakusa",
+   "Shibuya Crossing",
+   "teamLab Borderless digital art museum"
+  ]
+ },
+ "london": {
+  "insiderTip": "Buy an Oyster Card at Heathrow on arrival and load £20 — enough for 2–3 days in the city. Avoids ticket queues and you automatically get the daily cap price.",
+  "dishes": [
+   "Fish and chips at Maltby Street Market",
+   "Afternoon tea at Fortnum & Mason",
+   "Curries and mezze on Brick Lane"
+  ],
+  "sights": [
+   "British Museum",
+   "Tower of London and Tower Bridge",
+   "Tate Modern"
+  ]
+ },
+ "paris": {
+  "insiderTip": "Have a picnic at Champ de Mars with wine and cheese from the nearest fromagerie — free view of the Eiffel Tower and a classically Parisian evening for under 100 kr per person.",
+  "dishes": [
+   "Croissant and café au lait at a local bakery",
+   "Steak-frites at a traditional Parisian bistro in Le Marais",
+   "Macarons from Ladurée or Pierre Hermé"
+  ],
+  "sights": [
+   "Eiffel Tower",
+   "Louvre",
+   "Sacré-Cœur and Montmartre"
+  ]
+ },
+ "amsterdam": {
+  "insiderTip": "Cycle south along the Amstel river from the city center — beautiful nature, no tourists and you'll find local cafés by the water.",
+  "dishes": [
+   "Haring",
+   "Stamppot",
+   "Stroopwafels"
+  ],
+  "sights": [
+   "Rijksmuseum",
+   "Anne Frank House",
+   "Van Gogh Museum"
+  ]
+ },
+ "tenerife": {
+  "insiderTip": "Drive up to Teide at sunrise — watch the sun rise above the clouds below you and the temperature is pleasant. Avoid afternoons when fog typically rolls in around noon.",
+  "dishes": [
+   "Papas arrugadas",
+   "Ropa vieja",
+   "Gofio"
+  ],
+  "sights": [
+   "Teide National Park",
+   "Anaga Rural Park",
+   "Loro Parque in Puerto de la Cruz"
+  ]
+ },
+ "gran-canaria": {
+  "insiderTip": "Rent a car and drive to the village of Tejeda inland — coffee and Canarian almond cake at the village café with views of Roque Nublo is one of the island's best experiences and barely any tourists find it.",
+  "dishes": [
+   "Papas arrugadas con mojo",
+   "Caldo de papas",
+   "Queso de Gran Canaria"
+  ],
+  "sights": [
+   "Maspalomas sand dunes",
+   "Roque Nublo",
+   "Las Palmas Old Town (Vegueta)"
+  ]
+ },
+ "dubai": {
+  "insiderTip": "Take an abra boat (1 AED) across Dubai Creek between Deira and Bur Dubai — see old Dubai and pay 1/50 of a taxi fare for the same journey.",
+  "dishes": [
+   "Shawarma in Deira district",
+   "Brunch at Burj Al Arab or Atlantis",
+   "Al Farooj"
+  ],
+  "sights": [
+   "Burj Khalifa",
+   "Dubai Mall and Dubai Fountain",
+   "Palm Jumeirah and Atlantis hotel"
+  ]
+ },
+ "prague": {
+  "insiderTip": "Visit Charles Bridge at 6:00–7:00 a.m. — you have it entirely to yourself, the light is magical and you can take the best photos without crowds.",
+  "dishes": [
+   "Svíčková",
+   "Smažený sýr",
+   "Trdelník"
+  ],
+  "sights": [
+   "Prague Castle (Pražský hrad)",
+   "Charles Bridge",
+   "Old Town Square with Astronomical Clock (Orloj)"
+  ]
+ },
+ "budapest": {
+  "insiderTip": "Visit Széchenyi Thermal Bath in the evening — ticket prices are lower, the water is equally warm and the atmosphere is relaxed with locals instead of tourists.",
+  "dishes": [
+   "Gulyás",
+   "Lángos",
+   "Kürtőskalács"
+  ],
+  "sights": [
+   "Parliament Building",
+   "Széchenyi Thermal Bath",
+   "Fishermen's Bastion in Buda overlooking Pest and the Danube"
+  ]
+ },
+ "vienna": {
+  "insiderTip": "Buy a Stehplatz standing ticket to the State Opera for 3–4 € — queue 80 minutes, tie your scarf around the railing to reserve your spot, and enjoy the world's finest opera for the price of a beer.",
+  "dishes": [
+   "Wiener Schnitzel at Figlmüller",
+   "Sachertorte at Café Sacher",
+   "Tafelspitz"
+  ],
+  "sights": [
+   "Schönbrunn Palace",
+   "Kunsthistorisches Museum (KHM)",
+   "Stephansdom"
+  ]
+ },
+ "berlin": {
+  "insiderTip": "Rent a bike for a day (12–15 €) and cycle along the Spree river, past East Side Gallery, into Treptower Park and on to Köpenicker See — Berlin's most beautiful cycling route and no tourists.",
+  "dishes": [
+   "Döner Kebab",
+   "Currywurst with fries at Kurfürstendamm",
+   "Neukölln district"
+  ],
+  "sights": [
+   "Brandenburg Gate",
+   "East Side Gallery",
+   "Museum Island"
+  ]
+ },
+ "ibiza": {
+  "insiderTip": "Drive to Cala Conta at 6:00 p.m. for sunset with a glass of local wine — free beach entry, free parking, and better views than any beach club for hundreds of euros.",
+  "dishes": [
+   "Bullit de peix",
+   "Sofrit pagès",
+   "Tapas and vermouth in Ibiza Town"
+  ],
+  "sights": [
+   "Dalt Vila",
+   "Es Vedrà",
+   "Formentera"
+  ]
+ },
+ "lanzarote": {
+  "insiderTip": "Drive to Mirador del Río in the northeast at sunset — César Manrique's viewpoint offers spectacular views over La Graciosa island and the Atlantic's vastness. Free parking, 5 € entrance, incredible experience.",
+  "dishes": [
+   "Papa arrugada con mojo",
+   "Sancocho lanzaroteño",
+   "Queso asado"
+  ],
+  "sights": [
+   "Timanfaya National Park",
+   "Jameos del Agua",
+   "La Geria"
+  ]
+ },
+ "fuerteventura": {
+  "insiderTip": "Drive to Cofete Beach in the south (requires 4WD or brave driving on gravel road) — 10 km of wild beach without a soul in sight, dramatic cliffs and the endless Atlantic.",
+  "dishes": [
+   "Papa arrugadas with mojo rojo",
+   "Cabrito al salmorejo",
+   "Queso majorero"
+  ],
+  "sights": [
+   "Corralejo Natural Park",
+   "Betancuria",
+   "Cofete Beach"
+  ]
+ },
+ "kreta": {
+  "insiderTip": "Drive to Elafonisi on a weekday early morning (07:00–09:00) — the beach is empty and the water is like a turquoise mirror. Tourists arrive by bus at 10:00 and after that it's packed.",
+  "dishes": [
+   "Dakos",
+   "Lamb kleftiko",
+   "Loukoumades"
+  ],
+  "sights": [
+   "Knossos",
+   "Samaria Gorge hike",
+   "Heraklion Archaeological Museum"
+  ]
+ },
+ "rhodos": {
+  "insiderTip": "Visit Rhodes Old Town at 07:00 in the morning — Knight Street and the bastion square are deserted and you can take pictures without a soul in sight. Restaurants open at 08:00 for breakfast.",
+  "dishes": [
+   "Souvlaki and gyros in Rhodes Town",
+   "Pitaroudia",
+   "Melekouni"
+  ],
+  "sights": [
+   "Rhodes Old Town",
+   "Lindos",
+   "Filerimos Monastery and acropolis with mountain views"
+  ]
+ },
+ "korfu": {
+  "insiderTip": "Take a water taxi from Paleokastritsa to the northern caves (around $10 per person) — guided tour in sea caves with crystal-clear water and bioluminescence in the evening.",
+  "dishes": [
+   "Pastitsada",
+   "Sofrito",
+   "Mandolato"
+  ],
+  "sights": [
+   "Corfu Town (Kerkyra)",
+   "Achilleion Palace",
+   "Angelokastro"
+  ]
+ },
+ "santorini": {
+  "insiderTip": "Book a table at a restaurant with caldera views at sunset 6–8 weeks in advance — they sell out within minutes. Or stand at the fortress in Oia 30 minutes before sunset for the best free spot.",
+  "dishes": [
+   "Tomatokeftedes",
+   "Fava",
+   "Grilled octopus by the sea in Ammoudi Harbor"
+  ],
+  "sights": [
+   "Oia sunset",
+   "Akrotiri Archaeological Excavation",
+   "Caldera cruise to active volcano and hot springs"
+  ]
+ },
+ "mykonos": {
+  "insiderTip": "Visit Little Venice and the windmills just at sunrise (05:30–06:30) — not a soul in sight and photo opportunities that need no Instagram filter.",
+  "dishes": [
+   "Loukoumades with honey and sesame",
+   "Kopanisti",
+   "Grilled fish at a taverna in Little Venice"
+  ],
+  "sights": [
+   "Windmills at Little Venice",
+   "Mykonos Town (Chora)",
+   "Delos"
+  ]
+ },
+ "cypern": {
+  "insiderTip": "Visit Aphrodite Hills cliff (Petra tou Romiou) at sunrise — legend says Aphrodite rose from the sea at this spot. Empty, dramatic and free.",
+  "dishes": [
+   "Meze",
+   "Halloumi",
+   "Souvlaki with pita"
+  ],
+  "sights": [
+   "Paphos Archaeological Park",
+   "Kyrenia Castle in northern Cyprus",
+   "Aphrodite Hills"
+  ]
+ },
+ "malta": {
+  "insiderTip": "Take the first morning ferry at 07:30 to Blue Lagoon (Comino) — you have 2 hours with the crystal-clear water almost to yourself before the tourist flow begins.",
+  "dishes": [
+   "Pastizzi",
+   "Bragjoli",
+   "Ħobż biż-żejt"
+  ],
+  "sights": [
+   "Valletta",
+   "Mdina",
+   "Hal Saflieni Hypogeum"
+  ]
+ },
+ "faro": {
+  "insiderTip": "Take a kayak tour in Ria Formosa lagoon early in the morning — you paddle among flamingos and waders in the sunrise light without another soul in sight.",
+  "dishes": [
+   "Cataplana",
+   "Percebes",
+   "Amêijoas à Bulhão Pato"
+  ],
+  "sights": [
+   "Ponta da Piedade",
+   "Cabo de São Vicente",
+   "Silves Castle"
+  ]
+ },
+ "madrid": {
+  "insiderTip": "Go to the Prado at 18:00 — admission is free, lines shortest and Velázquez's Las Meninas glows in magical evening light. Combine with dinner in La Latina at 20:00.",
+  "dishes": [
+   "Cocido madrileño",
+   "Bocadillo de calamares",
+   "Patatas bravas"
+  ],
+  "sights": [
+   "Museo del Prado",
+   "Reina Sofía",
+   "Plaza Mayor"
+  ]
+ },
+ "dublin": {
+  "insiderTip": "Go to Kehoe's pub (South Anne Street) at 17:00 on weekdays — regulars sing traditional Irish songs impromptu, no cover charge, a Guinness in hand and authentic Dublin atmosphere.",
+  "dishes": [
+   "Irish stew",
+   "Full Irish breakfast",
+   "Fish & chips"
+  ],
+  "sights": [
+   "Guinness Storehouse",
+   "Trinity College & Book of Kells",
+   "Kilmainham Gaol"
+  ]
+ },
+ "nice": {
+  "insiderTip": "Take the regional train at 08:00 to Èze village and hike up to the cliff village (30 minutes) before tourists arrive at 10:00 — you have the medieval village with the Alps and Mediterranean to yourself.",
+  "dishes": [
+   "Salade Niçoise",
+   "Socca",
+   "Pan bagnat"
+  ],
+  "sights": [
+   "Promenade des Anglais",
+   "Vieux-Nice",
+   "Colline du Château"
+  ]
+ },
+ "dubrovnik": {
+  "insiderTip": "Book the city walls at 08:00 and walk the entire circuit (2 km, 1 hour) in sunrise light — you have all of Dubrovnik to yourself with mirror-smooth sea below and no other tourist in sight.",
+  "dishes": [
+   "Prstaci",
+   "Crni rižot",
+   "Peka"
+  ],
+  "sights": [
+   "City walls",
+   "Old Town Stari Grad",
+   "Fort Lovrijenac"
+  ]
+ },
+ "split": {
+  "insiderTip": "Set your alarm for 06:00 and walk through Diocletian's Palace in dawn light — no tourists, just locals heading to work, cats sleeping on ancient marble floors and the air smelling of salt from the Adriatic.",
+  "dishes": [
+   "Peka",
+   "Grilled fish",
+   "Prstaci"
+  ],
+  "sights": [
+   "Diocletian's Palace",
+   "Cathedral (Jupiter's Temple)",
+   "Meštrović Gallery"
+  ]
+ },
+ "venice": {
+  "insiderTip": "Set your alarm for 05:30 and go to St. Mark's Square at sunrise — the empty piazza with golden mosaics glimmers in rosy morning light, no tourists, just pigeons and gondoliers starting their day.",
+  "dishes": [
+   "Cicchetti",
+   "Sarde in saor",
+   "Risotto al nero di seppia"
+  ],
+  "sights": [
+   "Basilica di San Marco",
+   "Doge's Palace",
+   "Rialto Bridge"
+  ]
+ },
+ "florence": {
+  "insiderTip": "Climb the Duomo dome at 08:00 when it opens (book online) — you see all of Florence and Tuscany in morning mist with no more than 5 other visitors, then at 10:00 the dome is packed.",
+  "dishes": [
+   "Bistecca alla fiorentina",
+   "Lampredotto",
+   "Ribollita"
+  ],
+  "sights": [
+   "Uffizi Gallery",
+   "Accademia Gallery",
+   "Duomo"
+  ]
+ },
+ "milano": {
+  "insiderTip": "Go to a bar in Navigli at 18:00 and order a Campari Spritz ($8) — the bartender points to the buffet and you have access to 20+ high-quality dishes included. Switch bars three times and you've had Milan's best dinner for $25.",
+  "dishes": [
+   "Risotto alla milanese",
+   "Cotoletta alla milanese",
+   "Aperitivo buffet"
+  ],
+  "sights": [
+   "Duomo di Milano",
+   "Santa Maria delle Grazie",
+   "Galleria Vittorio Emanuele II"
+  ]
+ },
+ "naples": {
+  "insiderTip": "Queue 30 minutes outside L'Antica Pizzeria da Michele (Via Cesare Sersale 1) and order a Margherita for $5 — the original pizza made for Queen Margherita in 1889. No tables, no wine, no fuss — just the world's best pizza.",
+  "dishes": [
+   "Pizza napoletana",
+   "Sfogliatella",
+   "Ragù napoletano"
+  ],
+  "sights": [
+   "Pompeii",
+   "Museo Archeologico Nazionale",
+   "Castel dell'Ovo"
+  ]
+ },
+ "athens": {
+  "insiderTip": "Climb Filopappou Hill across from the Acropolis at 07:00 — you have the entire Acropolis view and Athens in morning light to yourself, free entry and no tourists, perfect for photos.",
+  "dishes": [
+   "Souvlaki",
+   "Moussaka",
+   "Spanakopita"
+  ],
+  "sights": [
+   "Acropolis",
+   "Acropolis Museum",
+   "Agora"
+  ]
+ },
+ "istanbul": {
+  "insiderTip": "Take the Bosphorus ferry from Eminönü to Kadıköy ($0.30) at 17:30 and have dinner on the Asian side — you watch the sun set behind European Istanbul's minarets from the ferry, the world's most beautiful $1 city experience.",
+  "dishes": [
+   "Simit",
+   "Balık ekmek",
+   "Meze"
+  ],
+  "sights": [
+   "Hagia Sofia",
+   "Blue Mosque (Sultanahmet)",
+   "Grand Bazaar"
+  ]
+ },
+ "hurghada": {
+  "insiderTip": "Book a sunrise dive at 05:30 with a local dive school — you dive on Giftun reef when animals are most active, no other tourists underwater, and watch the sun rise over the Red Sea from the surface.",
+  "dishes": [
+   "Koshary",
+   "Ful medames",
+   "Grilled fish"
+  ],
+  "sights": [
+   "Gifton Island",
+   "Mahmya Island National Park",
+   "El Gouna"
+  ]
+ },
+ "marrakech": {
+  "insiderTip": "Go to a rooftop café at Djemaa el-Fna at 19:30 with mint tea — watch the square transform as lights turn on, grill smoke rises, and 200 street artists take their places in the sunset glow.",
+  "dishes": [
+   "Tagine",
+   "Friday couscous",
+   "Bastilla"
+  ],
+  "sights": [
+   "Djemaa el-Fna",
+   "Bahia Palace",
+   "Jardin Majorelle"
+  ]
+ },
+ "bali": {
+  "insiderTip": "Stand at Tanah Lot temple 30 minutes before sunset and watch it gradually isolated by incoming tide — the temple appears to float on the sea in orange sunset light with Balinese monks praying at the cliffs.",
+  "dishes": [
+   "Nasi goreng",
+   "Babi guling",
+   "Satay"
+  ],
+  "sights": [
+   "Tegallalang rice terraces",
+   "Uluwatu temple",
+   "Tanah Lot"
+  ]
+ },
+ "singapore": {
+  "insiderTip": "Come to Maxwell Food Centre at 11:00 and queue at Tian Tian Hainanese Chicken Rice — after 20 minutes' wait you eat Singapore's legendary national dish, and understand why Gordon Ramsay called it the world's best meal.",
+  "dishes": [
+   "Hainanese chicken rice",
+   "Chilli crab",
+   "Laksa"
+  ],
+  "sights": [
+   "Gardens by the Bay",
+   "Marina Bay Sands",
+   "Chinatown, Little India, Kampong Glam"
+  ]
+ },
+ "miami": {
+  "insiderTip": "Go to Versailles Restaurant (Little Havana) at 07:30 for café cubano and a tostada — you sit next to elderly Cuban exiles discussing politics, and Miami's heart beats right around you.",
+  "dishes": [
+   "Cuban sandwich",
+   "Ceviche",
+   "Stone crab claws"
+  ],
+  "sights": [
+   "South Beach & Ocean Drive",
+   "Wynwood Walls",
+   "Vizcaya Museum"
+  ]
+ },
+ "los-angeles": {
+  "insiderTip": "Drive Pacific Coast Highway north from Santa Monica at 17:00 and park at El Matador Beach for sunset — orange-pink light hits dramatic rock formations in the sea and you understand why movie stars want to live in Malibu.",
+  "dishes": [
+   "In-N-Out Burger",
+   "Korean BBQ",
+   "Fish tacos"
+  ],
+  "sights": [
+   "Griffith Observatory",
+   "Getty Center",
+   "Hollywood Walk of Fame and TCL Chinese Theatre"
+  ]
+ },
+ "sydney": {
+  "insiderTip": "Take the Manly Ferry at 07:30 from Circular Quay ($8 AUD) and get off at Manly Beach — you've seen the Harbour Bridge and Opera House in morning light from the water, eaten breakfast in quiet Manly, and taken a morning swim in the Pacific, all for $8 AUD.",
+  "dishes": [
+   "Meat pie",
+   "Barramundi",
+   "Tim Tam"
+  ],
+  "sights": [
+   "Sydney Opera House",
+   "Harbour Bridge Climb",
+   "Bondi to Coogee Coastal Walk"
+  ]
+ },
+ "cancun": {
+  "insiderTip": "Take a colectivo bus south to Akumal at 07:00 and snorkel with sea turtles before tour buses arrive at 09:30 — you have the Caribbean and five green sea turtles to yourself in crystal-clear water.",
+  "dishes": [
+   "Tacos al pastor",
+   "Ceviche",
+   "Cochinita pibil"
+  ],
+  "sights": [
+   "Chichén Itzá",
+   "Tulum",
+   "Cenote Ik Kil and Dos Ojos"
+  ]
+ },
+ "toronto": {
+  "insiderTip": "Go to Algonquin Park in October for fall colours — hike the Lookout Trail at Frank McDougall Parkway at 07:00 and see hundreds of kilometres of red, orange and yellow foliage in sunrise mist, one of North America's most spectacular nature experiences.",
+  "dishes": [
+   "Poutine",
+   "Peameal bacon sandwich",
+   "Butter tarts"
+  ],
+  "sights": [
+   "CN Tower",
+   "Niagara Falls",
+   "Royal Ontario Museum"
+  ]
+ },
+ "brussels": {
+  "insiderTip": "Go to Delirium Café at 17:00 and ask for a Belgian beer tasting — the bartender selects 5 classics (Duvel, Chimay, Westmalle, Orval, Rochefort) and tells the story behind each brewery. Two hours later you understand why Belgian beer is the world's best.",
+  "dishes": [
+   "Moules-frites",
+   "Belgian waffle",
+   "Praline chocolate"
+  ],
+  "sights": [
+   "Grand Place",
+   "Atomium",
+   "Musées Royaux des Beaux-Arts"
+  ]
+ },
+ "copenhagen": {
+  "insiderTip": "Take the S-train to Humlebæk at 10:00 and spend a half-day at Louisiana Museum — see Giacometti sculptures in the garden with the Øresund beneath you, eat lunch in the café with sea views, and return to Nyhavn for evening beer with the locals.",
+  "dishes": [
+   "Smørrebrød",
+   "Flæskesteg",
+   "Danish pastry"
+  ],
+  "sights": [
+   "Tivoli Gardens",
+   "Nyhavn",
+   "Rosenborg Castle"
+  ]
+ },
+ "oslo": {
+  "insiderTip": "Walk through Vigeland Park at 06:30 on a summer morning — 200 naked granite sculptures in sunrise's pink shimmer, no other visitors, and one of the world's most extraordinary art experiences for free.",
+  "dishes": [
+   "Rakfisk",
+   "Brunost",
+   "Salmon"
+  ],
+  "sights": [
+   "Munch Museum",
+   "Vigeland Park",
+   "National Museum"
+  ]
+ },
+ "helsinki": {
+  "insiderTip": "Book Löyly sauna complex (Hernesaarenlaituri 10) at 18:00 — sit in a design sauna above Helsinki harbour, jump in the sea (summer) or sea pool (winter), drink a cold beer and watch the sun set over the archipelago's thousand islands.",
+  "dishes": [
+   "Rye crispbread",
+   "Salmon soup",
+   "Salmiak"
+  ],
+  "sights": [
+   "Suomenlinna",
+   "Cathedral (Suurkirkko)",
+   "Design District"
+  ]
+ },
+ "stockholm": {
+  "insiderTip": "Take the metro (T-bana) and explore the decorated stations — Stockholm's subway is called 'the world's longest art gallery'. T-Centralen, Kungsträdgården and Solna Centrum are highlights.",
+  "dishes": [
+   "Smörgåsbord with herring, shrimp and meatballs at Opera Cellars",
+   "Cinnamon bun and coffee at a South Island café",
+   "Traditional Swedish home cooking"
+  ],
+  "sights": [
+   "Old Town",
+   "Vasa Museum",
+   "Fotografiska"
+  ]
+ },
+ "phuket": {
+  "insiderTip": "Rent a scooter (or Grab) and drive to Promthep Cape at sunset — the view over the Andaman Sea is among the most beautiful in all of Southeast Asia. Arrive at 17:30 for the best spot.",
+  "dishes": [
+   "Pad Thai",
+   "Tom Yum Goong",
+   "Massaman curry"
+  ],
+  "sights": [
+   "Big Buddha",
+   "Phuket Town",
+   "Phi Phi Islands"
+  ]
+ },
+ "hanoi": {
+  "insiderTip": "Drink egg coffee (cà phê trứng) at Cafe Giang (39 Nguyen Huu Huan, Hoan Kiem) — a small café that invented the drink in 1946. Go up to the secret upstairs room for a view of the street life below.",
+  "dishes": [
+   "Bun Cha",
+   "Banh Cuon",
+   "Cha Ca La Vong"
+  ],
+  "sights": [
+   "Old Quarter (36 Streets)",
+   "Ho Chi Minh Mausoleum",
+   "Hoan Kiem Lake and Ngoc Son temple"
+  ]
+ },
+ "seoul": {
+  "insiderTip": "Visit Gyeongbokgung Palace at 09:00 for the changing of the guard ceremony (free, closed Mon and Tue). Rent a hanbok (traditional dress) at the gate for 10,000 won — gets you free entry and perfect photos against the palace backdrop.",
+  "dishes": [
+   "Korean BBQ",
+   "Bibimbap",
+   "Tteokbokki"
+  ],
+  "sights": [
+   "Gyeongbokgung Palace",
+   "Bukchon Hanok Village",
+   "Hongdae"
+  ]
+ },
+ "taipei": {
+  "insiderTip": "Visit Elephant Mountain (Xiangshan) trail at 17:00 — 20 minutes' climb to the iconic rocks with views of Taipei 101 and the entire skyline at sunset. Free, 10 minutes by MRT from Taipei 101 station.",
+  "dishes": [
+   "Scallion pancake (Cong You Bing)",
+   "Beef noodle soup",
+   "Stinky tofu (Chou Doufu)"
+  ],
+  "sights": [
+   "Taipei 101",
+   "National Palace Museum",
+   "Shilin Night Market"
+  ]
+ },
+ "mumbai": {
+  "insiderTip": "Book High Tea at Taj Mahal Palace Hotel (around 2,500 INR) and sit in the colonial rotunda with views to Gateway of India — one of the world's most iconic tea experiences at half the price of a European luxury hotel.",
+  "dishes": [
+   "Vada Pav",
+   "Pav Bhaji",
+   "Dabba lunch"
+  ],
+  "sights": [
+   "Gateway of India",
+   "Elephanta Caves",
+   "Dharavi"
+  ]
+ },
+ "delhi": {
+  "insiderTip": "Book the Sound and Light Show at Red Fort (Lal Qila) at 19:00 or 20:30 — the history of the Mughals told with dramatic light and sound directly against the red sandstone fortress. Tickets 80 INR (Indians) / 500 INR (foreigners). Buy online.",
+  "dishes": [
+   "Butter Chicken",
+   "Paranthe Wali Gali",
+   "Chaat"
+  ],
+  "sights": [
+   "Taj Mahal in Agra",
+   "Red Fort (Lal Qila)",
+   "Qutub Minar"
+  ]
+ },
+ "colombo": {
+  "insiderTip": "Book the Kandy–Ella train ticket (observation car) directly upon arrival — it's one of the world's most beautiful train journeys through tea plantations and waterfalls. Eat breakfast on the train (pre-ordered from your hotel) and watch Nuwara Eliya's mountain scenery pass by.",
+  "dishes": [
+   "Rice and Curry",
+   "Kottu Roti",
+   "Hoppers (Appa)"
+  ],
+  "sights": [
+   "Temple of the Tooth (Kandy)",
+   "Sigiriya Rock Fortress",
+   "Yala National Park"
+  ]
+ },
+ "maldiverna": {
+  "insiderTip": "Book a sandbank picnic through your resort — an empty white sandbank in the middle of the ocean where you and your partner spend 2–4 hours alone with snorkeling, champagne, and lunch. Costs around $200–500 but is one of life's most magical experiences.",
+  "dishes": [
+   "Garudhiya",
+   "Mas huni",
+   "Bis keemiya"
+  ],
+  "sights": [
+   "Snorkeling and diving",
+   "Overwater bungalows",
+   "Malé City fish market early morning"
+  ]
+ },
+ "mauritius": {
+  "insiderTip": "Visit Port Louis Central Market early morning (07:00) and try dholl puri breakfast — Mauritian fast food, thin chapati filled with yellow peas. Then go to the fruit section and buy fresh lychee or rambutan — fruits you rarely see elsewhere.",
+  "dishes": [
+   "Dholl puri",
+   "Rougaille",
+   "Biryani"
+  ],
+  "sights": [
+   "Chamarel",
+   "Black River Gorges National Park",
+   "Port Louis flea market and historic center"
+  ]
+ },
+ "zanzibar": {
+  "insiderTip": "Book dinner at The Rock Restaurant (a restaurant built on a rock in the ocean — reached on foot at low tide or by boat at high tide). Reserve 2–3 weeks in advance for a memorable dinner with views over the Indian Ocean and Zanzibar coast.",
+  "dishes": [
+   "Zanzibar pizza",
+   "Urojo (Zanzibar mix)",
+   "Grilled tuna with pilipili sauce"
+  ],
+  "sights": [
+   "Stone Town",
+   "Forodhani Gardens",
+   "Prison Island (Changuu)"
+  ]
+ },
+ "cape-town": {
+  "insiderTip": "Drive Chapman's Peak Drive (R65 toll road) at sunset — the winding 9 km coastal stretch between Hout Bay and Noordhoek offers the most dramatic ocean sunsets you'll see. Stop at all viewpoints and bring a picnic and South African wine.",
+  "dishes": [
+   "Braai (South African grill)",
+   "Bobotie",
+   "Bunny chow"
+  ],
+  "sights": [
+   "Table Mountain",
+   "Boulders Beach",
+   "Cape of Good Hope"
+  ]
+ },
+ "nairobi": {
+  "insiderTip": "Book a table at Carnivore Restaurant (Langata Road) for the ultimate nyama choma experience — rotating spits with all kinds of game meats and traditional cuts. A Nairobi classic since 1980. Reserve via carnivore.co.ke.",
+  "dishes": [
+   "Nyama Choma",
+   "Ugali",
+   "Sukuma Wiki"
+  ],
+  "sights": [
+   "Nairobi National Park",
+   "Giraffe Centre",
+   "David Sheldrick Wildlife Trust"
+  ]
+ },
+ "cairo": {
+  "insiderTip": "Book the 'Sound and Light Show' at the Sphinx and pyramids (20:00 and 21:00, around 200 EGP) — they light up and tell the story of the pharaohs against the illuminated pyramids. Bookable online or through your hotel. A unique evening.",
+  "dishes": [
+   "Koshari",
+   "Falafel (Ta'ameya)",
+   "Ful Medames"
+  ],
+  "sights": [
+   "Giza Pyramids",
+   "Egyptian Museum (Tahrir Square)",
+   "Khan el-Khalili"
+  ]
+ },
+ "casablanca": {
+  "insiderTip": "Visit Rick's Café (248 Blvd Sour Jdid) — a reconstruction of the iconic bar from the film 'Casablanca' (1942). Authentic 1940s atmosphere, live music, and good Moroccan food. Book in advance at rickscafe.ma — popular with tourists and locals.",
+  "dishes": [
+   "Tajine",
+   "Couscous",
+   "Harira"
+  ],
+  "sights": [
+   "Hassan II Mosque",
+   "Corniche Ain Diab",
+   "Old Medina"
+  ]
+ },
+ "tunis": {
+  "insiderTip": "Go to Café des Nattes in Sidi Bou Said (at the top of the village) at sunset — a traditional North African tea house with carpets, fountains, and views over the Mediterranean and Carthage peninsula. Order le café Nattes (mint tea with pine nuts) for 3–4 TND. One of North Africa's most beautiful views.",
+  "dishes": [
+   "Brik",
+   "Harissa",
+   "Lablabi"
+  ],
+  "sights": [
+   "Medina of Tunis",
+   "Bardo National Museum",
+   "Carthage"
+  ]
+ },
+ "amman": {
+  "insiderTip": "Book an overnight stay in Petra (Petra Moon Hotel or Cave Bar — a 2,000-year-old Nabataean tomb converted into a bar). Wake up in Petra early (06:00) and have the Siq and Treasury nearly to yourself for 1–2 hours before the tour buses arrive.",
+  "dishes": [
+   "Mansaf",
+   "Falafel",
+   "Knafeh"
+  ],
+  "sights": [
+   "Roman Theatre",
+   "Citadel (Jabal al-Qal'a)",
+   "Rainbow Street"
+  ]
+ },
+ "muscat": {
+  "insiderTip": "Visit Mutrah Corniche at sunset (17:30) — white coral houses reflect in the calm harbor water, fishing boats come in with the day's catch, and the Bait Al Luban café along the promenade serves Omani coffee with dates. One of the Middle East's most relaxed sunset experiences.",
+  "dishes": [
+   "Shuwa",
+   "Majboos",
+   "Harees"
+  ],
+  "sights": [
+   "Sultan Qaboos Grand Mosque",
+   "Mutrah Souq",
+   "Muttrah Fort and Corniche"
+  ]
+ },
+ "doha": {
+  "insiderTip": "Go to Souq Waqif at 20:00 on Friday evening — all Doha families are out strolling, Qatari falconry displays happen, craftspeople demonstrate their work, and the atmosphere is uniquely Arab. End the day with shisha and Qatari coffee at one of the souq's rooftop cafés.",
+  "dishes": [
+   "Machboos",
+   "Harees",
+   "Balaleet"
+  ],
+  "sights": [
+   "Museum of Islamic Art (MIA)",
+   "Souq Waqif",
+   "The Pearl-Qatar"
+  ]
+ },
+ "kuwait": {
+  "insiderTip": "Visit Marina Crescent (Al Salmiya) at 19:00 — a semicircular promenade along the Persian Gulf with all of Kuwait's best restaurants, shisha cafés, and family life. Order karak chai and watch the sunset behind Kuwait Towers.",
+  "dishes": [
+   "Machboos",
+   "Margoog",
+   "Murabyan"
+  ],
+  "sights": [
+   "Kuwait Towers",
+   "Grand Mosque",
+   "Kuwait National Museum"
+  ]
+ },
+ "tbilisi": {
+  "insiderTip": "Go to Fabrika (8 Merab Kostava Street) on Friday evening — a converted Soviet silk factory with hip bars, street food, and live music in an open courtyard. Best 19:00–23:00 before nightclubs open. Try Georgian beer (Natakhtari) and churchkhela from a street vendor.",
+  "dishes": [
+   "Khinkali",
+   "Khachapuri",
+   "Churchkhela"
+  ],
+  "sights": [
+   "Narikala Fortress",
+   "Abanotubani",
+   "Rustaveli Avenue and Freedom Square"
+  ]
+ },
+ "baku": {
+  "insiderTip": "Watch the Flame Towers light show at 21:00 from Little Venice (Venetsiya Gölü) or Bulvar (National Seaside Park) — the three towers are covered with animated flames, the Azerbaijani flag, and other patterns. Free and spectacular. Cafés along Bulvar provide the perfect viewpoint with a local beer.",
+  "dishes": [
+   "Plov",
+   "Dolma",
+   "Qutab"
+  ],
+  "sights": [
+   "Flame Towers",
+   "Ichari Sahar (Old Town)",
+   "Maiden Tower (Qiz Qalasi)"
+  ]
+ },
+ "reykjavik": {
+  "insiderTip": "Swim at Sundhöllin Reykjavíkur (Reykjavik's oldest outdoor geothermal pool, Barónsstígur 45A, 1,050 ISK) at 07:00 — same water as the Blue Lagoon but for 1/10 the price, with real Icelanders instead of tourists. Bring a towel and enjoy 44°C warmth in this historic bath from 1937.",
+  "dishes": [
+   "Plokkfiskur",
+   "Skyr",
+   "Hákarl"
+  ],
+  "sights": [
+   "Hallgrímskirkja",
+   "Harpa Concert Hall",
+   "National Museum"
+  ]
+ },
+ "bergen": {
+  "insiderTip": "Take the Fløyen funicular at 08:00 before tourists fill the car and hike down the Fløyen Trail 6 (3 km, 45 minutes) back to the center along a forest path with views. Free descent. Bring coffee in a thermos and enjoy the morning mist over Bergen and the fjords below.",
+  "dishes": [
+   "Fiskesuppe",
+   "Bergensk pinnekjøtt",
+   "Fiskeballer"
+  ],
+  "sights": [
+   "Bryggen (Hanseatic Wharf)",
+   "Fløyen",
+   "Bergen fish market"
+  ]
+ },
+ "tromso": {
+  "insiderTip": "Book a table at Bardus Bistro or Emma's Drømmekjøkken for dinner with reindeer and Arctic seafood — then stay out until midnight and look up. Tromsø center has little enough light pollution that faint northern lights are visible above the Arctic Cathedral when the KP index is 3+.",
+  "dishes": [
+   "Reindeer",
+   "Torsk (Skrei)",
+   "Brunost"
+  ],
+  "sights": [
+   "Arctic Cathedral (Ishavskatedralen)",
+   "Fjellheisen cable car",
+   "Polaria Museum"
+  ]
+ },
+ "edinburgh": {
+  "insiderTip": "Wake at 04:30 and hike Arthur's Seat for sunrise (05:00–06:00 in June–July) — you and perhaps 5 other people see the sun rise over the Firth of Forth with Edinburgh's silhouette and castle in a blue-red sky. Free, 45-minute hike, unforgettable.",
+  "dishes": [
+   "Haggis",
+   "Cullen Skink",
+   "Deep-fried Mars bar"
+  ],
+  "sights": [
+   "Edinburgh Castle",
+   "Royal Mile",
+   "Arthur's Seat"
+  ]
+ },
+ "manchester": {
+  "insiderTip": "Go to Bury Market (Saturday, 30 minutes north by metrolink) — England's best outdoor market with famous Bury Black Pudding, farmhouse cheese, and North England street food. Try black pudding and egg bap (5 GBP) for authentic Lancashire breakfast. Better than any tourist attraction downtown.",
+  "dishes": [
+   "Manchester Tart",
+   "Curry Mile (Rusholme)",
+   "Proper pie and mash"
+  ],
+  "sights": [
+   "Old Trafford",
+   "Etihad Stadium",
+   "Museum of Science and Industry"
+  ]
+ },
+ "liverpool": {
+  "insiderTip": "Visit Penny Lane (take bus 86 from the city center, 30 min) and walk along the street with the barbershop, shelter in the middle of a roundabout, and firehouse — all from the song. Free. Then combine it with a visit to Strawberry Fields (Beaconsfield Road, free parking area with Beatles art on the walls).",
+  "dishes": [
+   "Scouse",
+   "Liverpool Tart",
+   "Chicken tikka masala"
+  ],
+  "sights": [
+   "The Beatles Story Museum",
+   "Royal Albert Dock",
+   "Anfield Stadium"
+  ]
+ },
+ "porto": {
+  "insiderTip": "Go to Miradouro da Serra do Pilar (upper Gaia side, reached via the bridge) at 19:00 — a semicircular terrace with 360° panoramic views over Porto, Douro, and the bridge in sunset light. Portugal's most beautiful viewpoint. Free. Bring a bottle of local vinho verde ($2 from a shop) and enjoy.",
+  "dishes": [
+   "Francesinha",
+   "Bacalhau à Brás",
+   "Tripas à moda do Porto"
+  ],
+  "sights": [
+   "Livraria Lello",
+   "Dom Luís I Bridge",
+   "Ribeira Waterfront"
+  ]
+ },
+ "sevilla": {
+  "insiderTip": "Watch the sunset from Torre del Oro (18:30–19:30) along the Guadalquivir River — the golden tower reflects in the river and the Triana quarter across glows. Buy a glass of Sevillian tinto de verano (red wine + lemon soda, $2) from a kiosk and enjoy.",
+  "dishes": [
+   "Salmorejo",
+   "Espinacas con garbanzos",
+   "Carrillada"
+  ],
+  "sights": [
+   "Cathedral of Seville and Giralda Tower",
+   "Royal Alcázar",
+   "Barrio Santa Cruz"
+  ]
+ },
+ "valencia": {
+  "insiderTip": "Cycle along Río Turia Park (the old riverbed turned into a 9 km park) early in the morning (07:00) — Valencians jog, cycle, and walk dogs. Stop for coffee at Café de las Horas (Calle del Conde de Almodóvar 1) and admire the azulejo gardens. Free and authentic Valencia.",
+  "dishes": [
+   "Paella valenciana",
+   "Horchata de chufa",
+   "Fideuà"
+  ],
+  "sights": [
+   "Ciudad de las Artes y las Ciencias",
+   "La Lonja de la Seda",
+   "Mercado Central"
+  ]
+ },
+ "bilbao": {
+  "insiderTip": "Go pintxos bar-hopping in Casco Viejo at 19:00 on a Saturday and follow the rule: always go where there are most locals (and fewest tourists). Ask bartenders about their house specialty. End the evening at Bar Eguzkia (Plaza Santiago) with txakoli wine and views toward the cathedral.",
+  "dishes": [
+   "Pintxos",
+   "Marmitako",
+   "Txangurro"
+  ],
+  "sights": [
+   "Guggenheim Bilbao",
+   "Casco Viejo (Old Town)",
+   "Mercado de la Ribera"
+  ]
+ },
+ "lyon": {
+  "insiderTip": "Book dinner at a certified bouchon (Gnafrons-marked) at 19:30 — order salade lyonnaise, quenelle de brochet, and bean salad with Mourvèdre wine. The bill for 3 courses + carafe of Côtes du Rhône: around $35. An authentic Lyon experience no other city can offer.",
+  "dishes": [
+   "Quenelle",
+   "Andouillette",
+   "Salade lyonnaise"
+  ],
+  "sights": [
+   "Vieux Lyon (Old Lyon)",
+   "Fourvière Basilica",
+   "Traboules"
+  ]
+ },
+ "marseille": {
+  "insiderTip": "Wake at 06:00 and go to Vieux-Port for the fish market — local fishermen sell directly from boats with the day's catch. Buy a rascasse (scorpionfish) for $15–20, ask the fisherman for a recipe. Then breakfast of pain au chocolat and café au lait at a quay kiosk with views toward Fort Saint-Jean and the turquoise sea.",
+  "dishes": [
+   "Bouillabaisse",
+   "Panisse",
+   "Pieds et paquets"
+  ],
+  "sights": [
+   "Vieux-Port (Old Harbor)",
+   "Notre-Dame de la Garde",
+   "Mucem (Museum of Civilizations from Europe and the Mediterranean)"
+  ]
+ },
+ "bordeaux": {
+  "insiderTip": "Go to Miroir d'eau on Place de la Bourse at 20:30 at sunset — the water mirror reflects the pink-golden light against the neoclassical facades and children run through the shallow water film. Buy a bottle of Bordeaux Rouge ($7–10 from a wine shop) and enjoy on the quay. One of Europe's most beautiful free experiences.",
+  "dishes": [
+   "Entrecôte à la bordelaise",
+   "Lamproie à la bordelaise",
+   "Canelé"
+  ],
+  "sights": [
+   "La Cité du Vin",
+   "Place de la Bourse",
+   "Cathedral of Saint-André and Pey-Berland Tower"
+  ]
+ },
+ "toulouse": {
+  "insiderTip": "Stand on Place du Capitole early Saturday morning (08:00) when Toulouse's big market fills the entire square — the market stretches out with roses, violets, foie gras, and cassoulet ingredients. Then breakfast at a café around the square with croissant and café au lait. Free and authentic Toulouse.",
+  "dishes": [
+   "Cassoulet",
+   "Saucisse de Toulouse",
+   "Foie gras"
+  ],
+  "sights": [
+   "Cité de l'Espace",
+   "Basilique Saint-Sernin",
+   "Capitole Palace and Place du Capitole"
+  ]
+ },
+ "geneva": {
+  "insiderTip": "Take the free ferry (mouette) across Lake Geneva — one of Europe's cheapest and most beautiful boat rides with views toward the fountain and the Alps.",
+  "dishes": [
+   "Fondue moitié-moitié",
+   "Raclette",
+   "Filets de perche"
+  ],
+  "sights": [
+   "Jet d'Eau",
+   "CERN",
+   "Old Town"
+  ]
+ },
+ "zurich": {
+  "insiderTip": "Jump in the Limmat River (July–Aug) at Platzspitz and float free through Zurich's heart — a local tradition that gives a unique experience of the city.",
+  "dishes": [
+   "Zürcher Geschnetzeltes",
+   "Rösti",
+   "Luxemburgerli"
+  ],
+  "sights": [
+   "Grossmünster",
+   "Bahnhofstrasse",
+   "Kunsthaus Zürich"
+  ]
+ },
+ "basel": {
+  "insiderTip": "Visit Fondation Beyeler (30 min train, Riehen) — one of Europe's most beautiful private art museums with Monet, Picasso, and Bacon. More worthwhile than Art Basel fair itself and open year-round.",
+  "dishes": [
+   "Basler Läckerli",
+   "Basler Mehlsuppe",
+   "Käseschnitte"
+  ],
+  "sights": [
+   "Basler Münster",
+   "Fondation Beyeler",
+   "Altstadt"
+  ]
+ },
+ "salzburg": {
+  "insiderTip": "Climb Mönchsberg (free, 10 min walk from the city center) early in the morning for panoramic views over Salzburg with the Alps. Museum der Moderne Mönchsberg opens at 10:00 — the terrace café has the best views in town.",
+  "dishes": [
+   "Wiener Schnitzel",
+   "Salzburger Nockerl",
+   "Kasnocken"
+  ],
+  "sights": [
+   "Festung Hohensalzburg",
+   "Mozart's Birthplace",
+   "Mirabell Gardens"
+  ]
+ },
+ "innsbruck": {
+  "insiderTip": "Take the evening gondola up to Nordkette (last departure 18:30) and watch the sunset over the Inn Valley from 2,256 meters — then take the gondola down in darkness with the starry sky. One of Europe's most dramatic evening experiences.",
+  "dishes": [
+   "Tiroler Gröstl",
+   "Kaspressknödel",
+   "Kaiserschmarrn"
+  ],
+  "sights": [
+   "Goldenes Dachl",
+   "Nordkette",
+   "Hofburg"
+  ]
+ },
+ "ljubljana": {
+  "insiderTip": "Walk up to Ljubljana Castle at sunset (free, 20 min walk) and watch the Alps glow in orange light behind the city's red roofs — one of Europe's secret evening views that most tourists miss.",
+  "dishes": [
+   "Kranjska klobasa",
+   "Štruklji",
+   "Žlikrofi"
+  ],
+  "sights": [
+   "Ljubljana Castle",
+   "Tromostovje",
+   "Prešeren Square"
+  ]
+ },
+ "zagreb": {
+  "insiderTip": "Visit Dolac Market (Monday–Saturday 07:00–14:00) in Upper Town — Zagreb's central market with fruit, vegetables, and local delicacies. Try strukli (cheese pie) at one of the stalls for $2–3. Best on Tuesday morning with fewest tourists.",
+  "dishes": [
+   "Štrukli",
+   "Ćevapi",
+   "Peka"
+  ],
+  "sights": [
+   "Upper Town",
+   "Museum of Broken Relationships",
+   "Dolac Market"
+  ]
+ },
+ "sarajevo": {
+  "insiderTip": "Climb up to Žuta Tabija Fortress (Yellow Fortress) at sunset — free, 20 min walk from Baščaršija. The minaret call to prayer and the city's silhouette against the mountains is one of Europe's most unique evening experiences.",
+  "dishes": [
+   "Ćevapi",
+   "Burek",
+   "Begova čorba"
+  ],
+  "sights": [
+   "Baščaršija",
+   "Latin Bridge",
+   "Tunnel Museum"
+  ]
+ },
+ "tirana": {
+  "insiderTip": "Visit the Blloku district in the evening — Tirana's hip café and restaurant district that during communism was exclusively reserved for party leaders. Now Albania's answer to Södermalm with outdoor seating and street life.",
+  "dishes": [
+   "Tavë kosi",
+   "Byrek",
+   "Fergese"
+  ],
+  "sights": [
+   "Skanderbeg Square",
+   "Bunk'Art",
+   "Blloku Quarter"
+  ]
+ },
+ "skopje": {
+  "insiderTip": "Visit Old Bazaar's Daut Pasha Hamam (15th-century Turkish bath, now art gallery, $2) early in the morning — incredible Ottoman architecture with domed ceilings and natural light effects.",
+  "dishes": [
+   "Tavče gravče",
+   "Ajvar",
+   "Kebapi"
+  ],
+  "sights": [
+   "Old Bazaar",
+   "Skopje Fortress",
+   "Stone Bridge"
+  ]
+ },
+ "gothenburg": {
+  "insiderTip": "Take tram 11 out to Saltholmen and the ferry to Brännö or Styrsö — Gothenburg's archipelago with white cottages and bathing rocks. Free with Västtrafik card, 45 minutes from the city center. One of Sweden's best-kept day trip secrets.",
+  "dishes": [
+   "Räksmörgås",
+   "Fiskbullar",
+   "Oysters from Grebbestad"
+  ],
+  "sights": [
+   "Liseberg",
+   "Universeum",
+   "Haga"
+  ]
+ },
+ "chiang-mai": {
+  "insiderTip": "Rent a scooter and ride Ring Road around the Old City moat at sunrise (06:00) — almost no tourists, temples open and monks are out collecting alms (tak bat). Free and unforgettable.",
+  "dishes": [
+   "Khao Soi",
+   "Sai Ua",
+   "Pad Thai"
+  ],
+  "sights": [
+   "Doi Suthep",
+   "Old City",
+   "Sunday Walking Street"
+  ]
+ },
+ "ho-chi-minh": {
+  "insiderTip": "Rent a xe om (motorcycle taxi) via the Grab app and go to Nha Hang Ngon (Pasteur Street 160) for dinner — an old villa with all of Vietnam's classic dishes cooked by chefs from different regions. Best covered street food experience in Saigon.",
+  "dishes": [
+   "Phở",
+   "Bánh mì",
+   "Cơm tấm"
+  ],
+  "sights": [
+   "Cu Chi Tunnels",
+   "Reunification Palace",
+   "Ben Thanh Market"
+  ]
+ },
+ "kuala-lumpur": {
+  "insiderTip": "Eat breakfast at Jalan Masjid India market (06:30–09:00) among Kuala Lumpur's Muslim Indian community — Roti Canai with dal costs 2–3 MYR. Then take the Monorail to Batu Caves and arrive at 08:00 before the tour buses.",
+  "dishes": [
+   "Nasi Lemak",
+   "Char Kuey Teow",
+   "Roti Canai"
+  ],
+  "sights": [
+   "Petronas Twin Towers",
+   "Batu Caves",
+   "Jalan Alor"
+  ]
+ },
+ "tel-aviv": {
+  "insiderTip": "Visit Carmel Market on Friday morning (09:00–13:00) — everyone shops for Shabbat and the market is at its busiest with bundles of spices, fruits and fresh fish. Eat breakfast with bourekas and malabi for 20–30 ILS.",
+  "dishes": [
+   "Hummus",
+   "Shakshuka",
+   "Falafel"
+  ],
+  "sights": [
+   "Old Jaffa",
+   "Carmel Market",
+   "Bauhaus Center"
+  ]
+ },
+ "tallinn": {
+  "insiderTip": "Climb Toompea Hill via Pikk jalg street (medieval 'long foot') and stand at Patkuli viewpoint at 21:00 on midsummer evening — Tallinn glows in the evening sun with towers against the bright horizon. Then walk down to Katarina Passage with craftspeople and ceramicists — one of Old Town's most beautiful medieval alleyways.",
+  "dishes": [
+   "Verivorst",
+   "Kiluleib",
+   "Mulgikapsad"
+  ],
+  "sights": [
+   "Old Town",
+   "Alexander Nevsky Cathedral",
+   "Telliskivi Creative City"
+  ]
+ },
+ "chicago": {
+  "insiderTip": "Go to Kingston Mines in Lincoln Park for authentic Chicago blues — open until 04:00 with live music every night. Cheaper and more genuine than the tourist spots on Michigan Avenue.",
+  "dishes": [
+   "Deep dish pizza",
+   "Chicago-style hot dog",
+   "Italian beef sandwich"
+  ],
+  "sights": [
+   "Millennium Park",
+   "Art Institute of Chicago",
+   "Willis Tower Skydeck"
+  ]
+ },
+ "san-francisco": {
+  "insiderTip": "Take the ferry from Ferry Building to Sausalito and bike back over Golden Gate Bridge — one of the world's best cycling experiences and you avoid the strong headwind.",
+  "dishes": [
+   "Clam chowder in sourdough bread bowl",
+   "Mission burrito",
+   "Dim sum in Chinatown"
+  ],
+  "sights": [
+   "Golden Gate Bridge",
+   "Alcatraz Island",
+   "Fisherman's Wharf"
+  ]
+ },
+ "las-vegas": {
+  "insiderTip": "Book a table at Top of the World restaurant in The STRAT — 360-degree rotating views of The Strip. Lunch is half the dinner price and the views are just as good.",
+  "dishes": [
+   "Buffet at Bellagio, Wynn or Caesars",
+   "Steakhouses",
+   "Tacos and Mexican food along Fremont Street"
+  ],
+  "sights": [
+   "The Strip",
+   "Bellagio Fountains",
+   "Fremont Street Experience"
+  ]
+ },
+ "boston": {
+  "insiderTip": "Go to Union Oyster House (USA's oldest restaurant, since 1826) at 15–17 for happy hour oyster prices — half the evening price with no queue.",
+  "dishes": [
+   "Lobster roll",
+   "New England clam chowder",
+   "Boston baked beans"
+  ],
+  "sights": [
+   "Freedom Trail",
+   "Harvard University campus in Cambridge",
+   "Fenway Park"
+  ]
+ },
+ "vancouver": {
+  "insiderTip": "Take the SkyTrain to Richmond and visit Aberdeen Centre food court — authentic Chinese, Taiwanese and Japanese food at half the price compared to downtown Vancouver.",
+  "dishes": [
+   "Sushi and ramen",
+   "Dim sum in Richmond",
+   "Salmon bannock"
+  ],
+  "sights": [
+   "Stanley Park",
+   "Granville Island",
+   "Capilano Suspension Bridge"
+  ]
+ },
+ "montreal": {
+  "insiderTip": "Visit Jean-Talon Market in Little Italy on Saturday morning — Canada's largest outdoor market with local cheeses, maple syrup products and the season's best fruit at half restaurant prices.",
+  "dishes": [
+   "Poutine",
+   "Smoked meat sandwich",
+   "Bagels"
+  ],
+  "sights": [
+   "Vieux-Montréal",
+   "Basilique Notre-Dame",
+   "Mont Royal"
+  ]
+ },
+ "washington-dc": {
+  "insiderTip": "Visit Library of Congress (the world's largest library) at 08:30 when doors open — free, almost empty and more beautiful than most museums. Look up in the Main Reading Room — it beats everything.",
+  "dishes": [
+   "Half-smoke",
+   "Chesapeake Bay crab cakes",
+   "Ethiopian food in the U Street neighborhood"
+  ],
+  "sights": [
+   "National Mall",
+   "Smithsonian Museums",
+   "White House"
+  ]
+ },
+ "new-orleans": {
+  "insiderTip": "Go to Frenchmen Street (not Bourbon Street) Friday evening and start at Spotted Cat Music Club — free entry, authentic jazz and an atmosphere that is the real New Orleans.",
+  "dishes": [
+   "Gumbo",
+   "Po'boy",
+   "Beignets at Café du Monde"
+  ],
+  "sights": [
+   "French Quarter",
+   "Garden District",
+   "Frenchmen Street"
+  ]
+ },
+ "buenos-aires": {
+  "insiderTip": "Go to Café Tortoni (opened 1858) at 15 on a weekday for tango show in the basement — half the price of evening shows and just as authentic.",
+  "dishes": [
+   "Asado",
+   "Empanadas",
+   "Dulce de leche"
+  ],
+  "sights": [
+   "La Boca (Caminito)",
+   "Recoleta Cemetery",
+   "Teatro Colón"
+  ]
+ },
+ "rio-de-janeiro": {
+  "insiderTip": "Take Uber to Pedra do Telégrafo in Guaratiba — a stone on a mountain where you can take the perfect 'hanging over the edge' photo with the sea in the background. Best early morning, free.",
+  "dishes": [
+   "Feijoada",
+   "Açaí bowl",
+   "Churrascaria"
+  ],
+  "sights": [
+   "Cristo Redentor (Corcovado)",
+   "Sugarloaf Mountain (Pão de Açúcar)",
+   "Escadaria Selarón"
+  ]
+ },
+ "bogota": {
+  "insiderTip": "Visit Paloquemao market (not the touristy Mercado de la Concordia) early morning — Bogotá's largest fresh produce market with tropical fruits you've never seen. Try lulo, granadilla and guanábana.",
+  "dishes": [
+   "Ajiaco",
+   "Bandeja paisa",
+   "Empanadas"
+  ],
+  "sights": [
+   "La Candelaria",
+   "Museo del Oro",
+   "Monserrate"
+  ]
+ },
+ "lima": {
+  "insiderTip": "Eat ceviche for lunch (never dinner — it's a Peruvian rule) at Mercado de Surquillo in Miraflores — local fish stalls serve the day's catch as ceviche for under 40 kr.",
+  "dishes": [
+   "Ceviche",
+   "Lomo saltado",
+   "Causa limeña"
+  ],
+  "sights": [
+   "Centro Histórico",
+   "Museo Larco",
+   "Huaca Pucllana"
+  ]
+ },
+ "santiago": {
+  "insiderTip": "Visit Lastarria Drugstore — an art deco department store turned cultural hub with cafés, bookstores and a rooftop terrace with views of the Andes. Best at sunset with a pisco sour.",
+  "dishes": [
+   "Pastel de choclo",
+   "Empanadas de pino",
+   "Completo"
+  ],
+  "sights": [
+   "Cerro San Cristóbal",
+   "Barrio Lastarria",
+   "La Moneda"
+  ]
+ },
+ "medellin": {
+  "insiderTip": "Take the Metrocable to Parque Arví on a weekday morning — you fly over the mountains in the cable car and land in an eco-park where local farmers sell fruit and cheese. Coffee from the farm costs 5 kr.",
+  "dishes": [
+   "Bandeja paisa",
+   "Arepa",
+   "Mondongo"
+  ],
+  "sights": [
+   "Plaza Botero",
+   "Comuna 13",
+   "Parque Arví"
+  ]
+ },
+ "osaka": {
+  "insiderTip": "Go to Shinsekai at 11 and eat kushikatsu (fried skewers) at Daruma — a local favorite since 1929. Order the set menu for 800 ¥ and never dip the skewer twice in the sauce (strict etiquette!).",
+  "dishes": [
+   "Takoyaki",
+   "Okonomiyaki",
+   "Kushikatsu"
+  ],
+  "sights": [
+   "Dotonbori",
+   "Osaka Castle",
+   "Shinsekai"
+  ]
+ },
+ "manila": {
+  "insiderTip": "Take a Grab to Poblacion in Makati on Friday night — Manila's trendiest district with rooftop bars and craft beer. Z Hostel Roofdeck has the best views and cheap drinks.",
+  "dishes": [
+   "Adobo",
+   "Lechon",
+   "Sinigang"
+  ],
+  "sights": [
+   "Intramuros",
+   "Rizal Park",
+   "San Agustin Church"
+  ]
+ },
+ "kathmandu": {
+  "insiderTip": "Book an Everest scenic flight (Buddha Air or Yeti Airlines) from Kathmandu — fly for 1 hour along the Himalayas with Mount Everest right outside the window. Book the right side (row A) for the best view.",
+  "dishes": [
+   "Momo",
+   "Dal bhat",
+   "Newari cuisine"
+  ],
+  "sights": [
+   "Boudhanath Stupa",
+   "Pashupatinath Temple",
+   "Durbar Square"
+  ]
+ },
+ "bucharest": {
+  "insiderTip": "Visit Cărturești Carusel — a bookstore in a restored 19th-century palace in Lipscani with six floors of books, art, and a rooftop terrace bar. Go at sunset.",
+  "dishes": [
+   "Mici (mititei)",
+   "Sarmale",
+   "Ciorbă de burtă"
+  ],
+  "sights": [
+   "Parliament Palace",
+   "Old Town (Lipscani)",
+   "Atheneum"
+  ]
+ },
+ "sofia": {
+  "insiderTip": "Visit Sofia's mineral springs by the Banya Bashi Mosque — free hot spring water flows from taps in the center. Fill a bottle and do as locals do — it's Sofia in a nutshell.",
+  "dishes": [
+   "Shopska salata",
+   "Kebapche",
+   "Banitsa"
+  ],
+  "sights": [
+   "Alexander Nevski Cathedral",
+   "Serdica Ruins",
+   "Boyana Church"
+  ]
+ },
+ "vilnius": {
+  "insiderTip": "Visit Halės Turgus (Vilnius market hall) on Saturday morning — local cheeses, smoked sausages, and Lithuanian honey. Eat a cepelinai lunch in the hall for $5 — better and cheaper than restaurants.",
+  "dishes": [
+   "Cepelinai",
+   "Šaltibarščiai",
+   "Kibinai"
+  ],
+  "sights": [
+   "Vilnius Old Town",
+   "Gediminas Tower",
+   "Uzupis"
+  ]
+ },
+ "riga": {
+  "insiderTip": "Visit Riga Central Market early on Saturday — go to the fish hall and buy smoked eel and black bread. Eat standing at the counter with a Latvian beer for $2.",
+  "dishes": [
+   "Riga Black Balsam",
+   "Rupjmaizes kārtojums",
+   "Sklandrausis"
+  ],
+  "sights": [
+   "Old Town (Vecrīga)",
+   "Art Nouveau district",
+   "Riga Central Market"
+  ]
+ },
+ "funchal": {
+  "insiderTip": "Drive to Pico do Arieiro (1,818 m) at sunrise — you'll stand above the clouds with Madeira's mountain peaks sticking up like islands. Free parking and café at the top.",
+  "dishes": [
+   "Espetada",
+   "Bolo do caco",
+   "Espada com banana"
+  ],
+  "sights": [
+   "Levada walks",
+   "Monte Palace Tropical Garden",
+   "Cabo Girão"
+  ]
+ },
+ "palermo": {
+  "insiderTip": "Go to Ballarò Market at 10 am on a weekday and follow the smell of fried food — buy panelle (chickpea fritters) for $1 and arancini for $1.50. It's the world's best street food at pocket-change prices.",
+  "dishes": [
+   "Arancini",
+   "Panelle e crocchè",
+   "Pasta alla Norma"
+  ],
+  "sights": [
+   "Cappella Palatina",
+   "Ballarò and Vucciria",
+   "Teatro Massimo"
+  ]
+ },
+ "melbourne": {
+  "insiderTip": "Go to Degraves Street at 7 am on a Saturday and order a flat white at Degraves Espresso — Melbourne's oldest espresso bar. Then follow the laneway art to Hosier Lane before the tourists arrive.",
+  "dishes": [
+   "Flat white",
+   "Avocado toast",
+   "Meat pie"
+  ],
+  "sights": [
+   "Laneways",
+   "Federation Square",
+   "Queen Victoria Market"
+  ]
+ },
+ "auckland": {
+  "insiderTip": "Take the 6:30 am ferry to Rangitoto Island on a clear morning and hike to the summit (1 hour) — 360° view over Auckland, Hauraki Gulf, and 48 volcanoes. Back in the city for lunch.",
+  "dishes": [
+   "Fish and chips",
+   "Hangi",
+   "Lamb rack"
+  ],
+  "sights": [
+   "Sky Tower",
+   "Rangitoto Island",
+   "Auckland War Memorial Museum"
+  ]
+ },
+ "brisbane": {
+  "insiderTip": "Take the CityCat ferry upstream to New Farm Park at 5 pm — shop at Jan Powers Farmers Markets (Saturday) and watch the sunset over the skyline from the decks at Howard Smith Wharves (free).",
+  "dishes": [
+   "Moreton Bay bugs",
+   "Meat pie",
+   "Tim Tams"
+  ],
+  "sights": [
+   "South Bank Parklands",
+   "Lone Pine Koala Sanctuary",
+   "Story Bridge"
+  ]
+ },
+ "perth": {
+  "insiderTip": "Drive to Cottesloe Beach on a Sunday evening to watch the sunset with fish and chips from North Cottesloe Deli — all of Perth gathers here and the sky explodes in orange and pink.",
+  "dishes": [
+   "Marron",
+   "Fish and chips at Fremantle Harbour",
+   "Margaret River wine"
+  ],
+  "sights": [
+   "Rottnest Island",
+   "Kings Park",
+   "Fremantle"
+  ]
+ },
+ "fiji": {
+  "insiderTip": "Book a night on Barefoot Kuata Island in Yasawa — snorkel with manta rays off the island (free from the beach) and watch the sunset from the small mountain peak.",
+  "dishes": [
+   "Kokoda",
+   "Lovo",
+   "Rourou"
+  ],
+  "sights": [
+   "Yasawa Islands",
+   "Mamanuca Islands",
+   "Garden of the Sleeping Giant"
+  ]
+ },
+ "frankfurt": {
+  "insiderTip": "Visit Kleinmarkthalle for local delicacies — try Handkäse and apple wine at the standing counters. Walk across Eiserner Steg to Sachsenhausen.",
+  "dishes": [
+   "Grüne Soße",
+   "Handkäse mit Musik",
+   "Frankfurter Würstchen"
+  ],
+  "sights": [
+   "Römerberg",
+   "Museumsufer",
+   "Palmengarten"
+  ]
+ },
+ "hamburg": {
+  "insiderTip": "Take HVV ferry line 62 from Landungsbrücken — 30-minute free river cruise past Elbphilharmonie and the container port.",
+  "dishes": [
+   "Fischbrötchen",
+   "Labskaus",
+   "Franzbrötchen"
+  ],
+  "sights": [
+   "Speicherstadt",
+   "Elbphilharmonie",
+   "Miniatur Wunderland"
+  ]
+ },
+ "koln": {
+  "insiderTip": "Go to Brauhaus Päffgen on Friesenstraße — brewed Kölsch on-site. Order a 'Halver Hahn' — it's not chicken but cheese!",
+  "dishes": [
+   "Himmel un Ääd",
+   "Halver Hahn",
+   "Kölsch"
+  ],
+  "sights": [
+   "Cologne Cathedral",
+   "Museum Ludwig",
+   "Altstadt"
+  ]
+ },
+ "munich": {
+  "insiderTip": "Augustiner-Keller near Hauptbahnhof taps Augustiner from the barrel. Munich's best beer according to locals.",
+  "dishes": [
+   "Weißwurst",
+   "Schweinshaxe",
+   "Brezn"
+  ],
+  "sights": [
+   "Marienplatz",
+   "Englischer Garten",
+   "Nymphenburg"
+  ]
+ },
+ "dusseldorf": {
+  "insiderTip": "Uerige in Altstadt — stand at the bar counter, Köbes fills your Altbier automatically. Lay a coaster on your glass to stop.",
+  "dishes": [
+   "Altbier",
+   "Rheinischer Sauerbraten",
+   "Senfrostbraten"
+  ],
+  "sights": [
+   "Altstadt",
+   "Königsallee (Kö)",
+   "MedienHafen"
+  ]
+ },
+ "dresden": {
+  "insiderTip": "Evening walk across Augustusbrücke from Altstadt to Neustadt — see Frauenkirche reflected in the Elbe.",
+  "dishes": [
+   "Dresdner Eierschecke",
+   "Dresdner Christstollen",
+   "Sächsischer Sauerbraten"
+  ],
+  "sights": [
+   "Zwinger",
+   "Frauenkirche",
+   "Semperoper"
+  ]
+ },
+ "nurnberg": {
+  "insiderTip": "Hausbrauerei Altstadthof brews Rotbier and has underground medieval cellars with beer tastings.",
+  "dishes": [
+   "Nürnberger Rostbratwurst",
+   "Lebkuchen",
+   "Schäuferla"
+  ],
+  "sights": [
+   "Kaiserburg",
+   "Albrecht-Dürer-Haus",
+   "Dokumentationszentrum"
+  ]
+ },
+ "montpellier": {
+  "insiderTip": "Go up Promenade du Peyrou at sunset — see the city rooftops and the Pyrenees in the distance. Bring a bottle of local wine and a baguette.",
+  "dishes": [
+   "Tielle",
+   "Brandade de morue",
+   "Pain d'épices"
+  ],
+  "sights": [
+   "Place de la Comédie",
+   "Promenade du Peyrou",
+   "Musée Fabre"
+  ]
+ },
+ "nantes": {
+  "insiderTip": "Take the free Navibus ferry across the Loire to Trentemoult — a colorful old fishing village with bistros on the water.",
+  "dishes": [
+   "Beurre blanc",
+   "Gâteau nantais",
+   "Muscadet"
+  ],
+  "sights": [
+   "Les Machines de l'île",
+   "Château des ducs de Bretagne",
+   "Passage Pommeraye"
+  ]
+ },
+ "strasbourg": {
+  "insiderTip": "Take a boat tour on the Ill river (Batorama, $14) at sunset — see Petite France, the cathedral, and the EU parliament from the water.",
+  "dishes": [
+   "Choucroute garnie",
+   "Tarte flambée",
+   "Baeckeoffe"
+  ],
+  "sights": [
+   "Cathédrale Notre-Dame",
+   "Petite France",
+   "Parliament"
+  ]
+ },
+ "biarritz": {
+  "insiderTip": "Take the coastal road to San Sebastián — stop in Saint-Jean-de-Luz for lunch. Basque pintxos at Bar Nestor are exceptional.",
+  "dishes": [
+   "Pintxos",
+   "Piperade",
+   "Jambon de Bayonne"
+  ],
+  "sights": [
+   "Grande Plage",
+   "Rocher de la Vierge",
+   "Musée de la Mer"
+  ]
+ },
+ "lille": {
+  "insiderTip": "Eat Welsh at Estaminet chez la Vieille in Vieux-Lille — melted cheddar with beer on pain de campagne, one portion feeds two.",
+  "dishes": [
+   "Carbonade flamande",
+   "Moules-frites",
+   "Welsh"
+  ],
+  "sights": [
+   "Grand Place",
+   "Vieille Bourse",
+   "Palais des Beaux-Arts"
+  ]
+ },
+ "rennes": {
+  "insiderTip": "Friday market Marché des Lices (Europe's second-largest) starts at 07:30 — fresh oysters and galette-saucisse on-site are Rennes classics.",
+  "dishes": [
+   "Galette",
+   "Crêpe",
+   "Cidre"
+  ],
+  "sights": [
+   "Parlement de Bretagne",
+   "Place des Lices",
+   "Musée des Beaux-Arts"
+  ]
+ },
+ "alicante": {
+  "insiderTip": "Barrio Santa Cruz early evening — narrow streets with flowers and tapas bars. Try 'agua de Valencia' at a tavern.",
+  "dishes": [
+   "Arroz a banda",
+   "Turrón",
+   "Salazones"
+  ],
+  "sights": [
+   "Castillo de Santa Bárbara",
+   "Explanada de España",
+   "MARQ"
+  ]
+ },
+ "granada": {
+  "insiderTip": "Mirador San Nicolás at sunset — panoramic view of the Alhambra with Sierra Nevada's snow-capped peaks behind. Free street music.",
+  "dishes": [
+   "Free tapas with drinks",
+   "Piononos",
+   "Remojón"
+  ],
+  "sights": [
+   "Alhambra",
+   "Albaicín",
+   "Generalife"
+  ]
+ },
+ "cordoba": {
+  "insiderTip": "Eat salmorejo at Bodegas Mezquita early lunch (12:30) — avoid queues. Then visit Mezquita in afternoon sun (13:30).",
+  "dishes": [
+   "Salmorejo",
+   "Flamenquín",
+   "Rabo de toro"
+  ],
+  "sights": [
+   "Mezquita",
+   "Judería",
+   "Alcázar"
+  ]
+ },
+ "san-sebastian": {
+  "insiderTip": "Start pintxos crawl at Bar Nestor (Calle Pescadería) — only 12 seats, signature txuleta, arrive at 13:00 for same-day booking.",
+  "dishes": [
+   "Pintxos",
+   "Txuleta",
+   "Idiazábal"
+  ],
+  "sights": [
+   "La Concha",
+   "Parte Vieja",
+   "Monte Igueldo"
+  ]
+ },
+ "turin": {
+  "insiderTip": "Start your morning at Caffè Al Bicerin (since 1763) — drink the original Bicerin and see the scales used by Cavour and Nietzsche.",
+  "dishes": [
+   "Bicerin",
+   "Agnolotti",
+   "Gianduja"
+  ],
+  "sights": [
+   "Mole Antonelliana",
+   "Palazzo Reale",
+   "Egyptian Museum"
+  ]
+ },
+ "bari": {
+  "insiderTip": "Go to Bari Vecchia early morning 09:00 — see the orecchiette women rolling pasta in the street. Buy dried pasta directly from them as a souvenir.",
+  "dishes": [
+   "Orecchiette",
+   "Focaccia barese",
+   "Sgagliozze"
+  ],
+  "sights": [
+   "Basilica San Nicola",
+   "Bari Vecchia",
+   "Castello Svevo"
+  ]
+ },
+ "bologna": {
+  "insiderTip": "Osteria dell'Orsa on Via Mentana — student spot with authentic tagliatelle al ragù. Go before 12:30 to avoid queues.",
+  "dishes": [
+   "Tagliatelle al ragù",
+   "Mortadella",
+   "Tortellini in brodo"
+  ],
+  "sights": [
+   "Le Due Torri",
+   "Piazza Maggiore",
+   "Basilica San Petronio"
+  ]
+ },
+ "triest": {
+  "insiderTip": "Caffè San Marco was Joyce's workplace — order a 'capo in B' (espresso with foam in a glass) and write like a writer.",
+  "dishes": [
+   "Jota",
+   "Sardoni in savor",
+   "Caffè triestino"
+  ],
+  "sights": [
+   "Piazza Unità d'Italia",
+   "Castello di Miramare",
+   "Canal Grande"
+  ]
+ },
+ "graz": {
+  "insiderTip": "Climb Schlossberg on foot (260 steps) at sunset — the clock tower and all of Graz before you. Free.",
+  "dishes": [
+   "Backhendl",
+   "Kürbiskernöl",
+   "Steirischer Käferbohnensalat"
+  ],
+  "sights": [
+   "Schlossberg",
+   "Kunsthaus Graz",
+   "Landhaushof"
+  ]
+ },
+ "warsaw": {
+  "insiderTip": "Eat at Bar Prasowy (Marszałkowska) — communist-era milk bar with pierogi and authentic atmosphere.",
+  "dishes": [
+   "Pierogi",
+   "Żurek",
+   "Bigos"
+  ],
+  "sights": [
+   "Stare Miasto",
+   "Łazienki Park",
+   "Wilanów"
+  ]
+ },
+ "krakow": {
+  "insiderTip": "Eat zapiekanka (open baguette with mushroom and cheese) at Plac Nowy in Kazimierz, then a glass of mead at Wódka Café Bar.",
+  "dishes": [
+   "Obwarzanek",
+   "Zapiekanka",
+   "Placki ziemniaczane"
+  ],
+  "sights": [
+   "Rynek Główny",
+   "Wawel",
+   "Kazimierz"
+  ]
+ },
+ "gdansk": {
+  "insiderTip": "Take the SKM train to Sopot (20 min) for evening beer on Monte Cassino street, then walk Europe's longest wooden pier at sunset.",
+  "dishes": [
+   "Silesian kluski",
+   "Pierogi ruskie",
+   "Śledzie"
+  ],
+  "sights": [
+   "Długa Street",
+   "European Solidarity Centre",
+   "St. Mary's Basilica"
+  ]
+ },
+ "wroclaw": {
+  "insiderTip": "Visit Ostrów Tumski after sunset — the last man manually lighting the gas lamps walks around 18:00-21:00 depending on season. Authentic time travel.",
+  "dishes": [
+   "Pierogi z kapustą",
+   "Bigos",
+   "Śląskie kluski"
+  ],
+  "sights": [
+   "Rynek",
+   "Dwarfs (Krasnale)",
+   "Panorama Racławicka"
+  ]
+ },
+ "brno": {
+  "insiderTip": "Take a night cruise on Brno reservoir in summer or visit Moravská Galerie for the design museum — one of Europe's best and only $5.",
+  "dishes": [
+   "Svíčková",
+   "Vepřo knedlo zelo",
+   "Moravské víno"
+  ],
+  "sights": [
+   "Špilberk",
+   "Villa Tugendhat",
+   "Saints Peter and Paul Cathedral"
+  ]
+ },
+ "braga": {
+  "insiderTip": "Climb Bom Jesus via the iconic baroque staircase (577 steps) early morning before tour buses — then breakfast at the steps with a view.",
+  "dishes": [
+   "Bacalhau à Braga",
+   "Pastéis de Tentúgal",
+   "Arroz de pato"
+  ],
+  "sights": [
+   "Bom Jesus do Monte",
+   "Sé de Braga",
+   "Santa Bárbara Garden"
+  ]
+ },
+ "coimbra": {
+  "insiderTip": "Listen to Coimbra fado at Fado ao Centro — the program explains the unique male fado tradition. 15 EUR including port wine.",
+  "dishes": [
+   "Chanfana",
+   "Leitão assado",
+   "Pastel de Tentúgal"
+  ],
+  "sights": [
+   "Universidade de Coimbra",
+   "Biblioteca Joanina",
+   "Sé Velha"
+  ]
+ },
+ "rotterdam": {
+  "insiderTip": "Take the water taxi from Hotel New York (the old transatlantic building) across the river to the city center — a cheap, delightful cruise with Rotterdam skyline views.",
+  "dishes": [
+   "Bitterballen",
+   "Kapsalon",
+   "Stroopwafel"
+  ],
+  "sights": [
+   "Cube Houses",
+   "Markthal",
+   "Erasmusbrug"
+  ]
+ },
+ "eindhoven": {
+  "insiderTip": "Visit Strijp-S on a Sunday — a former Philips factory area now with street food, design shops, and live concerts. Area 51 skate park is iconic.",
+  "dishes": [
+   "Brabantse worstenbroodje",
+   "Vlaai",
+   "Bossche Bol"
+  ],
+  "sights": [
+   "Philips Museum",
+   "Van Abbemuseum",
+   "De Blob"
+  ]
+ },
+ "gent": {
+  "insiderTip": "Order Kwak beer at Dulle Griet — they take your shoes as collateral. Only 4 glasses per guest; you get your shoes back when you return the glass.",
+  "dishes": [
+   "Waterzooi",
+   "Cuberdons",
+   "Belgian fries"
+  ],
+  "sights": [
+   "Gravensteen",
+   "Sint-Baafskathedraal",
+   "Graslei"
+  ]
+ },
+ "bern": {
+  "insiderTip": "Take the train to Marzili and float down the Aare back to Altstadt — 30 minutes of free river drift with the Alps in the distance. Local summer evening favorite.",
+  "dishes": [
+   "Rösti",
+   "Zibelenchueche",
+   "Berner Platte"
+  ],
+  "sights": [
+   "Zytglogge",
+   "Bärenpark",
+   "Münster"
+  ]
+ },
+ "thessaloniki": {
+  "insiderTip": "Bougatsa Giannis at Kapani market — eat creamy bougatsa for breakfast, then shop at Modiano market (vintage food hall).",
+  "dishes": [
+   "Bougatsa",
+   "Souvlaki",
+   "Soutzoukakia"
+  ],
+  "sights": [
+   "White Tower",
+   "Rotunda",
+   "Ano Poli"
+  ]
+ },
+ "patras": {
+  "insiderTip": "Visit Patras during carnival in February — Europe's third-largest, 50,000 parade participants, free to join.",
+  "dishes": [
+   "Mavrodaphne",
+   "Bourdeto",
+   "Galaktoboureko"
+  ],
+  "sights": [
+   "Rio-Antirrio Bridge",
+   "Agios Andreas Cathedral",
+   "Patras Castle"
+  ]
+ },
+ "heraklion": {
+  "insiderTip": "Go to Peskesi (Kapetan Charalampi) — local sources serve authentic 'Cretan diet' with beer kitchen and local ingredients, main courses 150–200 kr.",
+  "dishes": [
+   "Dakos",
+   "Kalitsounia",
+   "Raki"
+  ],
+  "sights": [
+   "Knossos Palace",
+   "Archaeological Museum",
+   "Venetian Harbor and Koules Fortress"
+  ]
+ },
+ "malmo": {
+  "insiderTip": "Skip the flight — take the train instead. Express train from Stockholm to Malmö 4h 30m, often cheaper and more eco-friendly.",
+  "dishes": [
+   "Smørrebrød",
+   "Spettekaka",
+   "Kanelbullar"
+  ],
+  "sights": [
+   "Turning Torso",
+   "Malmöhus",
+   "Ribersborgsstranden"
+  ]
+ },
+ "umea": {
+  "insiderTip": "Visit Bildmuseet for free — world-class modern art on the Umeå River. Then fika at the café with river views.",
+  "dishes": [
+   "Västerbottensost",
+   "Surströmming",
+   "Mandelkubb"
+  ],
+  "sights": [
+   "Bildmuseet",
+   "Norrlandsoperan",
+   "Gammlia"
+  ]
+ },
+ "belgrad": {
+  "insiderTip": "Take Savamala for the evening — hip neighborhood with bars, clubs, and street art. Beton Hala has multiple restaurants with river views.",
+  "dishes": [
+   "Ćevapi",
+   "Pljeskavica",
+   "Karađorđeva šnicla"
+  ],
+  "sights": [
+   "Kalemegdan",
+   "Knez Mihailova",
+   "St. Sava Cathedral"
+  ]
+ },
+ "novi-sad": {
+  "insiderTip": "Visit during the EXIT festival in July for a unique experience — or on a summer evening at Štrand beach with Petrovaradin lit up across the river.",
+  "dishes": [
+   "Karađorđeva šnicla",
+   "Sarma",
+   "Proja"
+  ],
+  "sights": [
+   "Petrovaradin",
+   "Dunavska Street",
+   "Matica Srpska"
+  ]
+ },
+ "kotor": {
+  "insiderTip": "Climb San Giovanni before 08:00 (1,350 steps, 8 EUR) — alone at the top with Kotor Bay before you, before cruise tourists arrive.",
+  "dishes": [
+   "Njeguški pršut",
+   "Crni rižoto",
+   "Kajmak"
+  ],
+  "sights": [
+   "Stari Grad",
+   "San Giovanni Castle",
+   "Perast"
+  ]
+ },
+ "debrecen": {
+  "insiderTip": "Visit the Flower Carnival August 20 — parade floats made entirely of flowers, Hungary's most unique festival. Combine with Hortobágy for a complete experience.",
+  "dishes": [
+   "Debreceni kolbász",
+   "Pörkölt",
+   "Hortobágyi palacsinta"
+  ],
+  "sights": [
+   "Nagytemplom",
+   "Déri Museum",
+   "Nagyerdő Park"
+  ]
+ },
+ "sao-paulo": {
+  "insiderTip": "Mercado Municipal — try mortadella sandwich (Brazil's most famous sandwich). Then taste exotic fruits you've never tried.",
+  "dishes": [
+   "Feijoada",
+   "Pão de queijo",
+   "Picanha"
+  ],
+  "sights": [
+   "Avenida Paulista",
+   "MASP",
+   "Mercado Municipal"
+  ]
+ },
+ "fortaleza": {
+  "insiderTip": "Go to Pirata Bar on Monday evenings (only day open) — 'world's craziest Monday' with forró music until dawn. Legendary.",
+  "dishes": [
+   "Peixada",
+   "Carne de sol",
+   "Tapioca"
+  ],
+  "sights": [
+   "Praia do Futuro",
+   "Mercado Central",
+   "Catedral Metropolitana"
+  ]
+ },
+ "recife": {
+  "insiderTip": "Olinda (20 min from Recife) on a Sunday — colorful colonial houses, local art, live bossa nova, and views over Recife. UNESCO World Heritage site.",
+  "dishes": [
+   "Bolo de rolo",
+   "Buchada",
+   "Tapioca de camarão"
+  ],
+  "sights": [
+   "Recife Antigo",
+   "Marco Zero",
+   "Instituto Ricardo Brennand"
+  ]
+ },
+ "salvador": {
+  "insiderTip": "Tuesday evening in Pelourinho — 'Terça da Bênção' free live music on streets and squares. Olodum drums and samba create indescribable atmosphere.",
+  "dishes": [
+   "Acarajé",
+   "Moqueca",
+   "Vatapá"
+  ],
+  "sights": [
+   "Pelourinho",
+   "Igreja São Francisco",
+   "Mercado Modelo"
+  ]
+ },
+ "florianopolis": {
+  "insiderTip": "Visit Lagoa da Conceição on a Sunday — locals' favorite with kayaking, stand-up paddling, and forró dancing at sunset on Barra da Lagoa.",
+  "dishes": [
+   "Sequência de camarão",
+   "Fresh oysters",
+   "Pirão"
+  ],
+  "sights": [
+   "Ponte Hercílio Luz",
+   "Lagoa da Conceição",
+   "Projeto Tamar"
+  ]
+ },
+ "manaus": {
+  "insiderTip": "Book at least 3 nights in a jungle lodge (Anavilhanas or Uakari) — see pink river dolphins, tree snakes, sloths and listen to the rainforest at night. Invaluable.",
+  "dishes": [
+   "Tambaqui",
+   "Tacacá",
+   "Pirarucu"
+  ],
+  "sights": [
+   "Teatro Amazonas",
+   "Meeting of the Waters",
+   "Mercado Adolpho Lisboa"
+  ]
+ },
+ "cartagena": {
+  "insiderTip": "Drink cocktails at Café del Mar on the city walls at sunset — pink sky over the Caribbean. Then dinner in Getsemaní (Demente or La Cevichería).",
+  "dishes": [
+   "Ceviche",
+   "Arepa de huevo",
+   "Bandeja paisa"
+  ],
+  "sights": [
+   "Walled City",
+   "Castillo San Felipe",
+   "Getsemaní"
+  ]
+ },
+ "cali": {
+  "insiderTip": "Go to Tin Tin Deo or La Topa Tolondra on Thursday night — locals practice salsa, visitors welcome and lessons are free. Authentic Cali vibes.",
+  "dishes": [
+   "Sancocho",
+   "Empanadas",
+   "Chuleta valluna"
+  ],
+  "sights": [
+   "Cristo Rey",
+   "Zoológico de Cali",
+   "San Antonio"
+  ]
+ },
+ "quito": {
+  "insiderTip": "Take the Teleférico (cable car) up to 4,100m for views over Quito and snow-capped volcanoes. Then do the short walk to Cruz Loma for the best panorama.",
+  "dishes": [
+   "Locro de papas",
+   "Ceviche ecuatoriano",
+   "Hornado"
+  ],
+  "sights": [
+   "Historic Centre",
+   "La Compañía",
+   "Mitad del Mundo"
+  ]
+ },
+ "guayaquil": {
+  "insiderTip": "Climb 444 steps up Cerro Santa Ana early morning — colorful houses, church at the top, views over the entire city and Guayas River. Free.",
+  "dishes": [
+   "Encebollado",
+   "Arroz con menestra",
+   "Bolón de verde"
+  ],
+  "sights": [
+   "Malecón 2000",
+   "Las Peñas",
+   "Parque Histórico"
+  ]
+ },
+ "montevideo": {
+  "insiderTip": "Lunch at Mercado del Puerto — choose a parrilla (Estancia del Puerto), order chorizo as an appetizer and ribeye (bife ancho) as main. Tannat wine from the region.",
+  "dishes": [
+   "Chivito",
+   "Asado",
+   "Dulce de leche"
+  ],
+  "sights": [
+   "Old Town",
+   "Mercado del Puerto",
+   "Palacio Salvo"
+  ]
+ },
+ "cusco": {
+  "insiderTip": "Stay 2 nights in Sacred Valley (Urubamba, 2,800m) to acclimatize before Machu Picchu — Cusco (3,400m) is actually higher. Plan your trip backwards.",
+  "dishes": [
+   "Cuy",
+   "Ají de gallina",
+   "Quinoa soup"
+  ],
+  "sights": [
+   "Plaza de Armas",
+   "Sacsayhuamán",
+   "Qorikancha"
+  ]
+ },
+ "la-paz": {
+  "insiderTip": "Buy a day ticket ($23) for Mi Teleférico and ride all 10 cable car lines — world's best 'public transport as sightseeing'. Red, yellow, green across the entire city.",
+  "dishes": [
+   "Salteñas",
+   "Pique macho",
+   "Anticucho"
+  ],
+  "sights": [
+   "Mi Teleférico",
+   "Mercado de las Brujas",
+   "Valle de la Luna"
+  ]
+ },
+ "paramaribo": {
+  "insiderTip": "Visit a Javanese warung in the Blauwgrond neighbourhood for lunch — bami, saoto and peanut sauce for $50. Authentic taste of Javanese-Surinamese unique in the world.",
+  "dishes": [
+   "Roti",
+   "Pom",
+   "Bami"
+  ],
+  "sights": [
+   "Historic Centre",
+   "Fort Zeelandia",
+   "Central Market"
+  ]
+ },
+ "asuncion": {
+  "insiderTip": "Drink tereré at Plaza Uruguaya on a Saturday afternoon — Paraguayans sit in circles, share mate and play harp. Join in and try Spanish/Guaraní.",
+  "dishes": [
+   "Sopa paraguaya",
+   "Chipá",
+   "Asado"
+  ],
+  "sights": [
+   "Palacio de los López",
+   "Panteón Nacional",
+   "Mercado 4"
+  ]
+ },
+ "accra": {
+  "insiderTip": "Labadi Beach on Sunday — locals come out, live music, grilled tilapia and jollof from beach stalls. Authentic Accra atmosphere.",
+  "dishes": [
+   "Jollof rice",
+   "Fufu",
+   "Kelewele"
+  ],
+  "sights": [
+   "Kwame Nkrumah Mausoleum",
+   "Jamestown",
+   "Cape Coast Castle"
+  ]
+ },
+ "mombasa": {
+  "insiderTip": "Take the ferry from Likoni to Diani at sunset — watch the sun sink over Africa's east coast, then dinner at Ali Barbour's Cave Restaurant (cave).",
+  "dishes": [
+   "Biryani",
+   "Samaki wa kupaka",
+   "Chapati"
+  ],
+  "sights": [
+   "Fort Jesus",
+   "Old Town",
+   "Nyali"
+  ]
+ },
+ "kigali": {
+  "insiderTip": "Go to Inema Arts Centre on a Friday night — contemporary African artists, live music and mingle with expats and locals. Free entry.",
+  "dishes": [
+   "Brochettes",
+   "Isombe",
+   "Ugali"
+  ],
+  "sights": [
+   "Kigali Genocide Memorial",
+   "Kimironko Market",
+   "Inema Arts Centre"
+  ]
+ },
+ "dakar": {
+  "insiderTip": "Go to Just 4 U or Thiossane (Youssou N'Dour's club) on a Saturday night — live West African music, mbalax dancing and 100% authentic Senegalese nightlife.",
+  "dishes": [
+   "Thieboudienne",
+   "Yassa poulet",
+   "Mafé"
+  ],
+  "sights": [
+   "Île de Gorée",
+   "African Renaissance Monument",
+   "Marché Sandaga"
+  ]
+ },
+ "lagos": {
+  "insiderTip": "Lekki Market Saturday morning for African art, textiles and vintage vinyl from 70s afrobeat. Bargain hard — 50% of the asking price is normal.",
+  "dishes": [
+   "Jollof rice",
+   "Egusi soup",
+   "Suya"
+  ],
+  "sights": [
+   "Lekki Conservation Centre",
+   "Nike Art Gallery",
+   "Eko Atlantic"
+  ]
+ },
+ "lusaka": {
+  "insiderTip": "Book 2–3 nights at Flatdogs Camp or Mfuwe Lodge in South Luangwa — dawn walking safari is unique in the world, leopard sightings guaranteed.",
+  "dishes": [
+   "Nshima",
+   "Chikanda",
+   "Ifisashi"
+  ],
+  "sights": [
+   "National Museum",
+   "Kabwata Cultural Village",
+   "Munda Wanga Environmental Park"
+  ]
+ },
+ "windhoek": {
+  "insiderTip": "Joe's Beerhouse in Windhoek — try 'Bush BBQ' with oryx, kudu, crocodile and zebra. German beer and safari atmosphere. Classic since 1991.",
+  "dishes": [
+   "Biltong",
+   "Kapana",
+   "Oryx steak"
+  ],
+  "sights": [
+   "Christuskirche",
+   "Independence Memorial Museum",
+   "Heroes' Acre"
+  ]
+ },
+ "gaborone": {
+  "insiderTip": "Mokolodi Nature Reserve (30 min from Gaborone) — track rhino on foot with a ranger, chance to see them up close. Only $300.",
+  "dishes": [
+   "Seswaa",
+   "Morogo",
+   "Bogobe"
+  ],
+  "sights": [
+   "Three Dikgosi Monument",
+   "National Museum and Art Gallery",
+   "Gaborone Dam"
+  ]
+ },
+ "seychellerna": {
+  "insiderTip": "Take early morning ferry from Praslin to La Digue — rent a bike, ride to Anse Source d'Argent before 09:00 for the iconic beach without crowds. Picnic at the rocks.",
+  "dishes": [
+   "Fish curry",
+   "Grilled barracuda",
+   "Palm heart salad"
+  ],
+  "sights": [
+   "Anse Source d'Argent",
+   "Vallée de Mai",
+   "Victoria"
+  ]
+ },
+ "kapverde": {
+  "insiderTip": "Visit Pedra de Lume salt mines inside a volcanic crater — float in the salt water (saltier than the Dead Sea) then dinner on the Santa Maria pier.",
+  "dishes": [
+   "Cachupa",
+   "Lagosta grelhada",
+   "Buzio guisado"
+  ],
+  "sights": [
+   "Santa Maria",
+   "Espargos",
+   "Pedra de Lume"
+  ]
+ },
+ "reunion": {
+  "insiderTip": "Hike Piton de la Fournaise at dawn when the volcano is most active — lava fields, blue lagoon caves, and moments of eruption. A guided tour is recommended.",
+  "dishes": [
+   "Rougail saucisse",
+   "Cari poulet",
+   "Bonbon piment"
+  ],
+  "sights": [
+   "Piton de la Fournaise",
+   "Cirque de Mafate",
+   "Cirque de Salazie"
+  ]
+ },
+ "antananarivo": {
+  "insiderTip": "Book a 3-day tour to Andasibe National Park — morning hike with rangers to hear the indri lemur's call (audible 2 km away). Lodge stays in the rainforest.",
+  "dishes": [
+   "Romazava",
+   "Ravitoto",
+   "Mofo gasy"
+  ],
+  "sights": [
+   "Rova of Antananarivo",
+   "Analakely Market",
+   "Lac Anosy"
+  ]
+ },
+ "maputo": {
+  "insiderTip": "Eat camarão (tiger prawns) at Restaurant Costa do Sol — outdoors on the beachside promenade with sea breeze. Order Portuguese vinho verde.",
+  "dishes": [
+   "Piri-piri chicken",
+   "Camarão",
+   "Matapa"
+  ],
+  "sights": [
+   "Railway Station",
+   "Fortaleza de Maputo",
+   "Feira de Artesanato"
+  ]
+ },
+ "kampala": {
+  "insiderTip": "Get a 'Rolex' from the street (rolled chapati with omelette) — Uganda's most beloved street food. Best at the Ndeeba Road stalls.",
+  "dishes": [
+   "Matoke",
+   "Rolex",
+   "Luwombo"
+  ],
+  "sights": [
+   "Kasubi Tombs",
+   "Uganda Museum",
+   "Namirembe Cathedral"
+  ]
+ },
+ "douala": {
+  "insiderTip": "Drive to Limbe (1h 30m) for a beach with black volcanic sand and views of Mount Cameroon. Enjoy fresh grilled fish at a beachside restaurant.",
+  "dishes": [
+   "Ndolé",
+   "Eru",
+   "Braised fish"
+  ],
+  "sights": [
+   "Centrale Market",
+   "Bonanjo",
+   "La Pagode"
+  ]
+ },
+ "abidjan": {
+  "insiderTip": "Go to a maquis (outdoor restaurant) in Zone 4 or Cocody in the evening — grilled poisson braisé, attieké and local beer. Coupé-décalé music sets the vibe.",
+  "dishes": [
+   "Attieké",
+   "Poisson braisé",
+   "Garba"
+  ],
+  "sights": [
+   "St Paul's Cathedral",
+   "Plateau",
+   "Grand Marché Treichville"
+  ]
+ },
+ "luxor": {
+  "insiderTip": "Hot air balloon at 05:30 over Valley of the Kings — sunrise makes pyramids and tombs turn red-orange. Book the evening before.",
+  "dishes": [
+   "Koshari",
+   "Molokhia",
+   "Hamam mahshi"
+  ],
+  "sights": [
+   "Karnak Temple",
+   "Valley of the Kings",
+   "Luxor Temple"
+  ]
+ },
+ "harare": {
+  "insiderTip": "Combine Harare with Victoria Falls (1h flight) — Mosi-oa-Tunya with a swim in 'Devil's Pool' on Livingstone Island from December to January is a once-in-a-lifetime experience.",
+  "dishes": [
+   "Sadza",
+   "Nyama",
+   "Mopane worms"
+  ],
+  "sights": [
+   "National Gallery of Zimbabwe",
+   "Mbare Musika Market",
+   "Kopje"
+  ]
+ },
+ "djibouti": {
+  "insiderTip": "Go to Lac Assal at dawn — the salt lake is one of Earth's most extreme places, reflecting the sky like a mirror sea. Bring plenty of water.",
+  "dishes": [
+   "Skudahkharis",
+   "Lahoh",
+   "Fah-fah"
+  ],
+  "sights": [
+   "Lac Assal",
+   "Lac Abbé",
+   "Grand Bara"
+  ]
+ },
+ "shanghai": {
+  "insiderTip": "Take the Maglev from Pudong to the city center — 7 minutes at 430 km/h, the world's fastest commercial train.",
+  "dishes": [
+   "Xiaolongbao",
+   "Hairy crab",
+   "Shengjian bao"
+  ],
+  "sights": [
+   "The Bund",
+   "Pudong",
+   "Yu Garden"
+  ]
+ },
+ "beijing": {
+  "insiderTip": "Hike a less touristy section of the Wall — Jiankou or Gubeikou — for dramatic untouched ruins. Requires good fitness and a guide.",
+  "dishes": [
+   "Peking duck",
+   "Jianbing",
+   "Hot pot"
+  ],
+  "sights": [
+   "Forbidden City",
+   "Great Wall",
+   "Temple of Heaven"
+  ]
+ },
+ "chengdu": {
+  "insiderTip": "Chengdu locals drink tea at Renmin Park — go here, drink tuk-tuk tea (jasmine), get an ear cleaning from a professional 'ear expert' — an old Chengdu tradition.",
+  "dishes": [
+   "Mapo tofu",
+   "Dan dan noodles",
+   "Sichuan hot pot"
+  ],
+  "sights": [
+   "Giant Panda Breeding Research Base",
+   "Wenshu Monastery",
+   "Jinli Ancient Street"
+  ]
+ },
+ "guangzhou": {
+  "insiderTip": "Go to Liwan District early morning for 'yum cha' (tea and dim sum) at a traditional teahouse — 100+ dim sum choices, pick from carts rolled past your table.",
+  "dishes": [
+   "Dim sum",
+   "Roast goose",
+   "Wonton noodles"
+  ],
+  "sights": [
+   "Canton Tower",
+   "Shamian Island",
+   "Chen Clan Academy"
+  ]
+ },
+ "da-nang": {
+  "insiderTip": "Rent a motorcycle for a day and ride over Hai Van Pass to Hue — stunningly scenic coastal roads, stop for fresh coffee and photos at the mountain pass.",
+  "dishes": [
+   "Mì Quảng",
+   "Bánh xèo",
+   "Bún chả cá"
+  ],
+  "sights": [
+   "Golden Bridge",
+   "Marble Mountains",
+   "My Son"
+  ]
+ },
+ "yangon": {
+  "insiderTip": "Visit Shwedagon Pagoda at sunset (17:30) — the golden stupa glows pink then orange in the evening light, monks walk around the marble pagoda.",
+  "dishes": [
+   "Mohinga",
+   "Tea leaf salad",
+   "Shan noodles"
+  ],
+  "sights": [
+   "Shwedagon Pagoda",
+   "Sule Pagoda",
+   "Colonial Centre"
+  ]
+ },
+ "phnom-penh": {
+  "insiderTip": "Take a boat cruise on the Mekong at sunset (2h) — see local life on the riverbanks, the sun sinks in bubble-pink over Tonlé Sap.",
+  "dishes": [
+   "Amok",
+   "Lap khmer",
+   "Num banh chok"
+  ],
+  "sights": [
+   "Royal Palace and Silver Pagoda",
+   "Tuol Sleng Genocide Museum",
+   "Killing Fields"
+  ]
+ },
+ "vientiane": {
+  "insiderTip": "Visit the Mekong riverfront at sunset (17:30) — local aerobics classes, street food stalls, cold Beerlao and the sun sets over Thailand.",
+  "dishes": [
+   "Laap",
+   "Tam mak hoong",
+   "Khao niao"
+  ],
+  "sights": [
+   "Pha That Luang",
+   "Patuxai",
+   "Wat Si Saket"
+  ]
+ },
+ "ulaanbaatar": {
+  "insiderTip": "Book a 3-day jeep tour to Terelj National Park plus ger-camp — Przewalski's horses, shamanism, starry skies without light pollution.",
+  "dishes": [
+   "Buuz",
+   "Khorkhog",
+   "Airag"
+  ],
+  "sights": [
+   "Sükhbaatar Square",
+   "Gandan Monastery",
+   "Genghis Khan Statue"
+  ]
+ },
+ "almaty": {
+  "insiderTip": "Take the cable car from Medeu (1,691m) to Shymbulak (3,163m) — 25 minutes round trip with spectacular views of the Tian Shan mountains. Also open in summer for hiking.",
+  "dishes": [
+   "Beshbarmak",
+   "Plov",
+   "Lagman"
+  ],
+  "sights": [
+   "Zenkov Cathedral",
+   "Medeu",
+   "Panfilov Park"
+  ]
+ },
+ "dhaka": {
+  "insiderTip": "Take a cycle-rickshaw through Old Dhaka early morning (06:00) — watch the city's colorful chaos wake up, stop at Sadarghat port to see flotilla transport on the Buriganga.",
+  "dishes": [
+   "Biryani",
+   "Hilsa fish",
+   "Panta bhat"
+  ],
+  "sights": [
+   "Lalbagh Fort",
+   "Ahsan Manzil",
+   "National Parliament"
+  ]
+ },
+ "cairns": {
+  "insiderTip": "Take the Kuranda Scenic Railway up (historic steam train) and Skyrail rainforest cableway down — 6h loop through the rainforest, UNESCO landscape from different perspectives.",
+  "dishes": [
+   "Barramundi",
+   "Meat pie",
+   "Lamington"
+  ],
+  "sights": [
+   "Great Barrier Reef",
+   "Daintree Rainforest",
+   "Kuranda"
+  ]
+ },
+ "gold-coast": {
+  "insiderTip": "Drive to Byron Bay (1h south) early morning to see sunrise at Cape Byron lighthouse — easternmost point in Australia, then breakfast at The Top Shop.",
+  "dishes": [
+   "Fish and chips",
+   "Smashed avo",
+   "Kangaroo steak"
+  ],
+  "sights": [
+   "Surfers Paradise Beach",
+   "Dreamworld, Movie World, Sea World",
+   "Currumbin Wildlife Sanctuary"
+  ]
+ },
+ "seattle": {
+  "insiderTip": "Take the ferry to Bainbridge Island at sunset — 35 min across Elliott Bay with the entire Seattle skyline in front of you, then dinner at Restaurant Marché on the island.",
+  "dishes": [
+   "Salmon",
+   "Oysters",
+   "Dungeness crab"
+  ],
+  "sights": [
+   "Pike Place Market",
+   "Space Needle",
+   "Chihuly Garden"
+  ]
+ },
+ "denver": {
+  "insiderTip": "Go to Red Rocks Amphitheatre in the morning for free sports and concerts — 'Film on the Rocks' summer movies or early yoga with a view of the red rocks.",
+  "dishes": [
+   "Rocky Mountain Oysters",
+   "Green chile",
+   "Bison burger"
+  ],
+  "sights": [
+   "Red Rocks Amphitheatre",
+   "Denver Art Museum",
+   "Union Station"
+  ]
+ },
+ "atlanta": {
+  "insiderTip": "Go to Ponce City Market in Old Fourth Ward — food hall, rooftop lounge with mini-golf and views over Atlanta, Martin Luther King Historic District 5 min away.",
+  "dishes": [
+   "Fried chicken",
+   "Grits",
+   "Peach cobbler"
+  ],
+  "sights": [
+   "World of Coca-Cola",
+   "Georgia Aquarium",
+   "Martin Luther King Jr. National Historic Site"
+  ]
+ },
+ "nashville": {
+  "insiderTip": "Go to Robert's Western World on Lower Broadway on a Thursday night — honky-tonk since the 1930s, free entry, live country 11 PM–3 AM, order the fried bologna sandwich.",
+  "dishes": [
+   "Hot chicken",
+   "Biscuits and gravy",
+   "Pulled pork BBQ"
+  ],
+  "sights": [
+   "Grand Ole Opry",
+   "Country Music Hall of Fame",
+   "Ryman Auditorium"
+  ]
+ },
+ "phoenix": {
+  "insiderTip": "Take Apache Trail (40 min east) — 40 miles scenic drive through the Sonoran Desert with saguaro cacti, stop at Canyon Lake for a boat cruise.",
+  "dishes": [
+   "Sonoran hot dog",
+   "Chimichanga",
+   "Fry bread"
+  ],
+  "sights": [
+   "Desert Botanical Garden",
+   "Heard Museum",
+   "Camelback Mountain"
+  ]
+ },
+ "orlando": {
+  "insiderTip": "Flamingo Crossings (10 min from Disney) gives 'Disney magic' at half price, the host hotels look exactly like official Disney hotels but are just outside.",
+  "dishes": [
+   "Key lime pie",
+   "Cuban sandwich",
+   "Stone crab"
+  ],
+  "sights": [
+   "Walt Disney World",
+   "Universal Studios",
+   "Kennedy Space Center"
+  ]
+ },
+ "calgary": {
+  "insiderTip": "Drive Icefields Parkway (Calgary to Jasper) — 230 km of the world's most beautiful glaciers, turquoise lakes and mountain scenery, stay at least 2 days.",
+  "dishes": [
+   "Alberta beef",
+   "Bison",
+   "Poutine"
+  ],
+  "sights": [
+   "Calgary Stampede (July)",
+   "Heritage Park",
+   "Calgary Tower"
+  ]
+ },
+ "ottawa": {
+  "insiderTip": "Book winter (February) to skate on the Rideau Canal — 7.8 km world's longest skating rink, stop at kiosks for beaver tails and hot chocolate, magical.",
+  "dishes": [
+   "Beaver tails",
+   "Poutine",
+   "Maple syrup"
+  ],
+  "sights": [
+   "Parliament Hill",
+   "Canadian Museum of History (free)",
+   "National Gallery of Canada"
+  ]
+ },
+ "mexico-city": {
+  "insiderTip": "Book a seat on a Xochimilco trajinera (colorful float, 500 MXN/2h) — mariachis, tacos, cerveza, best on Sunday morning with locals.",
+  "dishes": [
+   "Tacos al pastor",
+   "Mole poblano",
+   "Tamales"
+  ],
+  "sights": [
+   "Zócalo",
+   "Frida Kahlo Museum (Casa Azul)",
+   "Palacio de Bellas Artes"
+  ]
+ },
+ "guadalajara": {
+  "insiderTip": "Take the Tequila Express train from Guadalajara — charter Friday/Saturday, mariachi music, tequila on board, distillery visit and lunch, ultimate Mexican experience.",
+  "dishes": [
+   "Torta ahogada",
+   "Birria",
+   "Jericalla"
+  ],
+  "sights": [
+   "Catedral de Guadalajara",
+   "Plaza Tapatía",
+   "Hospicio Cabañas"
+  ]
+ },
+ "stuttgart": {
+  "insiderTip": "Stuttgarter Weindorf in August — wine festival among the city's 400 wine estates.",
+  "dishes": [
+   "Maultaschen",
+   "Spätzle with lentils and sausage",
+   "Gaisburger Marsch"
+  ],
+  "sights": [
+   "Mercedes-Benz Museum",
+   "Porsche Museum",
+   "Schlossplatz with Neues Schloss"
+  ]
+ },
+ "brygge": {
+  "insiderTip": "Take a bike ride out to Damme — 5 km canal path through Dutch landscape with windmills and cows.",
+  "dishes": [
+   "Belgian fries with mayo from a friteria",
+   "Moules marinière",
+   "Waffles from a truck on Market square"
+  ],
+  "sights": [
+   "Markt",
+   "Basilica of the Holy Blood",
+   "Begijnhof"
+  ]
+ },
+ "antwerpen": {
+  "insiderTip": "Cinéma Cartoons shows independent film in a 1910s atelier — go after dinner.",
+  "dishes": [
+   "Antwerp hands",
+   "Moules-frites in the MAS area",
+   "Kriek"
+  ],
+  "sights": [
+   "Grote Markt with Renaissance facades",
+   "Rubenshuis",
+   "MAS Museum with rooftop views"
+  ]
+ },
+ "antalya": {
+  "insiderTip": "Antalya map is free — but many ruins require a rental car, plan 3 days to see everything.",
+  "dishes": [
+   "Testi kebab",
+   "Piyaz",
+   "Turkish coffee with lokum"
+  ],
+  "sights": [
+   "Kaleiçi",
+   "Aspendos Theatre",
+   "Düden Waterfall flowing into the sea"
+  ]
+ },
+ "bodrum": {
+  "insiderTip": "Book lunch at Gümüşlük — wade 50 m into the sea to the sunken island that only appears at low tide.",
+  "dishes": [
+   "Gözleme",
+   "Mezze platters with rakı",
+   "Fresh fish from Bodrum harbor"
+  ],
+  "sights": [
+   "Bodrum Castle with underwater archaeology museum",
+   "Mausoleum at Halicarnassus ruins",
+   "Gümüşlük"
+  ]
+ },
+ "izmir": {
+  "insiderTip": "Boyoz for breakfast — İzmir's unique pastry bread, go to Altinkapi bakery in Konak.",
+  "dishes": [
+   "Kumru",
+   "Boyoz",
+   "Söğüş"
+  ],
+  "sights": [
+   "Konak square with Clock Tower",
+   "Kemeraltı Bazaar since the 1600s",
+   "Kadifekale"
+  ]
+ },
+ "zakynthos": {
+  "insiderTip": "Laganas Beach from October 21 — sea turtles lay eggs, night walks with biologists are magical.",
+  "dishes": [
+   "Sartsa",
+   "Pastitsada with rooster and pasta",
+   "Zakynthian gittiotas pastry"
+  ],
+  "sights": [
+   "Navagio Beach",
+   "Blue Caves at Cape Skinari",
+   "Byzantine Museum in Zakynthos Town"
+  ]
+ },
+ "hvar": {
+  "insiderTip": "Hula Hula and Carpe Diem beach clubs at sunset — Hvar's legendary party atmosphere.",
+  "dishes": [
+   "Gregada",
+   "Peka",
+   "Pag cheese from the neighboring island"
+  ],
+  "sights": [
+   "Tvrđava Fortica",
+   "Pakleni Islands",
+   "Stari Grad Plain"
+  ]
+ },
+ "zadar": {
+  "insiderTip": "Visit Sea Organ at sunset — free concert by nature, different every evening.",
+  "dishes": [
+   "Paški sir",
+   "Sarma",
+   "Maraschino liqueur from local cherries"
+  ],
+  "sights": [
+   "Sea Organ",
+   "Salutation to the Sun",
+   "Forum Romanum with St Donat Church"
+  ]
+ },
+ "rovinj": {
+  "insiderTip": "Go to Porer Lighthouse for sunset — the real insiders take a day boat from the harbor to the Rovinj Islands.",
+  "dishes": [
+   "Fuži",
+   "Brujet",
+   "Biska"
+  ],
+  "sights": [
+   "Sainte-Euphemia Church at the top",
+   "Old Town narrow streets",
+   "Grisia Street"
+  ]
+ },
+ "pula": {
+  "insiderTip": "Summer film and opera festivals in the Amphitheater — tickets from €15, combined with historic atmosphere.",
+  "dishes": [
+   "Fritaja con šparoge",
+   "Manestra",
+   "Gnocchi with goulash sauce"
+  ],
+  "sights": [
+   "Roman Amphitheater (200m from center)",
+   "Forum Square with Temple of Augustus",
+   "Arch of Sergius"
+  ]
+ },
+ "aarhus": {
+  "insiderTip": "Aarhus is Denmark's food capital — book Gastromé or Frederikshøj weeks in advance; they're often cheaper than Copenhagen for the same quality.",
+  "dishes": [
+   "Smørrebrød",
+   "Rye bread with liver pâté",
+   "Carlsberg and Tuborg straight from the breweries"
+  ],
+  "sights": [
+   "ARoS with Rainbow Panorama on the roof",
+   "Den Gamle By",
+   "Moesgaard Museum with Grauballe Man"
+  ]
+ },
+ "billund": {
+  "insiderTip": "Book Legoland 2-day ticket — 50% cheaper than two single days, and children have time to experience everything without stress.",
+  "dishes": [
+   "Baked potato",
+   "Roast pork with red cabbage",
+   "Risengrød"
+  ],
+  "sights": [
+   "Legoland Billund Resort",
+   "Lego House",
+   "Lalandia"
+  ]
+ },
+ "alesund": {
+  "insiderTip": "Climb Aksla stairs at sunset in June–July — the midnight sun illuminates the city's copper roofs.",
+  "dishes": [
+   "Saithe with potatoes and lingonberries",
+   "Pickled herring various ways",
+   "Dried fish from the Atlantic coast"
+  ],
+  "sights": [
+   "Aksla viewpoint (418 steps)",
+   "Art Nouveau Centre",
+   "Runde Island"
+  ]
+ },
+ "stavanger": {
+  "insiderTip": "Hike Preikestolen early morning at 7:00 — you'll have the cliff to yourself before cruise groups arrive at 11.",
+  "dishes": [
+   "Fish soup",
+   "Lutefisk in winter",
+   "Skillingsboller"
+  ],
+  "sights": [
+   "Preikestolen",
+   "Old Stavanger",
+   "Oil Museum"
+  ]
+ },
+ "trondheim": {
+  "insiderTip": "Try the Trampe bike lift in Bakklandet — the world's only one — and eat at Kafé Løft for the city's best brunch.",
+  "dishes": [
+   "Brown cheese",
+   "Bidos",
+   "Local beer from Dahls and E.C. Dahls"
+  ],
+  "sights": [
+   "Nidaros Cathedral",
+   "Bakklandet",
+   "Trøndelag Folk Museum Sverresborg"
+  ]
+ },
+ "lofoten": {
+  "insiderTip": "Northern lights season September–March — choose a cabin (rorbu) with open panoramic windows, wake up at night for free live show.",
+  "dishes": [
+   "Dried fish",
+   "Bacalao with paprika",
+   "Local beer from Lofoten Brewery"
+  ],
+  "sights": [
+   "Reinefjord and Reine village",
+   "Henningsvær",
+   "Å in Lofoten"
+  ]
+ },
+ "rovaniemi": {
+  "insiderTip": "Visit Santa's Post Office — send postcards with official Arctic Circle stamp home, arrives before Christmas (write address clearly).",
+  "dishes": [
+   "Reindeer stew",
+   "Salmon soup",
+   "Bread cheese"
+  ],
+  "sights": [
+   "Santa Claus Village",
+   "Arktikum",
+   "Ranua Zoo"
+  ]
+ },
+ "turku": {
+  "insiderTip": "Pikisaari Island and bell ringing at the cathedral square at 12:00 every day — Turku 'opens Christmas' for the whole country.",
+  "dishes": [
+   "Muikut",
+   "Karelian pasty",
+   "Fish pie"
+  ],
+  "sights": [
+   "Turku Castle from 1280",
+   "Turku Cathedral",
+   "Aboa Vetus & Ars Nova museum"
+  ]
+ },
+ "cork": {
+  "insiderTip": "Kiss Blarney Stone in the morning — after 11 the queues pile up; it's 30 minutes wait for 10 seconds on your back.",
+  "dishes": [
+   "Beef and Guinness stew",
+   "Drisheen",
+   "Crubeens"
+  ],
+  "sights": [
+   "Blarney Castle",
+   "English Market",
+   "Fitzgerald's Park"
+  ]
+ },
+ "galway": {
+  "insiderTip": "Tig's Bar or The Crane Bar every evening — spontaneous Irish folk session, free and better than all tourist pubs.",
+  "dishes": [
+   "Galway Bay oysters",
+   "Seafood chowder",
+   "Guinness from pub taps"
+  ],
+  "sights": [
+   "Eyre Square and Shop Street",
+   "Spanish Arch and Latin Quarter",
+   "Galway Cathedral"
+  ]
+ },
+ "killarney": {
+  "insiderTip": "Drive Ring of Kerry in the opposite direction to tour buses — saves 2 hours and gives car-free views.",
+  "dishes": [
+   "Kerry lamb from mountain pastures",
+   "Seafood from Dingle",
+   "Irish stew in a country pub"
+  ],
+  "sights": [
+   "Ross Castle",
+   "Gap of Dunloe",
+   "Muckross House"
+  ]
+ },
+ "haag": {
+  "insiderTip": "Visit Panorama Mesdag — the world's largest panoramic painting (120m long) from 1881.",
+  "dishes": [
+   "Herring sandwich",
+   "Stamppot",
+   "Dutch genever"
+  ],
+  "sights": [
+   "Mauritshuis with Vermeer collection",
+   "Binnenhof",
+   "Escher in Het Paleis"
+  ]
+ },
+ "utrecht": {
+  "insiderTip": "Lunch at Wad — wharf café 4m below street level by the canal, unique in the world.",
+  "dishes": [
+   "Cheese from Utrechtse Kaaswinkel",
+   "Haagse bluf",
+   "Dutch apple pie"
+  ],
+  "sights": [
+   "Dom Tower",
+   "Oudegracht with wharf cafés",
+   "Rietveld Schröder House (UNESCO)"
+  ]
+ },
+ "luzern": {
+  "insiderTip": "Take the boat to Bürgenstock resort (1h from center) — the royal viewpoint is free with Swiss Travel Pass.",
+  "dishes": [
+   "Fondue with Gruyère and Emmental",
+   "Lucerne pastry pie",
+   "Rösti"
+  ],
+  "sights": [
+   "Kapellbrücke with Wassersturm",
+   "Pilatus mountain cogwheel (world's steepest)",
+   "Lion Monument (Mark Twain: 'the most touching')"
+  ]
+ },
+ "interlaken": {
+  "insiderTip": "Buy Berner Oberland Travel Pass (€275) — pays for itself in 3 days if you do Jungfraujoch plus 2 other peaks.",
+  "dishes": [
+   "Käseschnitte",
+   "Cholera pie",
+   "Plum schnapps"
+  ],
+  "sights": [
+   "Jungfraujoch",
+   "Lauterbrunnen Valley",
+   "Mürren and Schilthorn (James Bond viewpoint)"
+  ]
+ },
+ "lugano": {
+  "insiderTip": "Reach Gandria by boat from Lugano — restaurants there have prices 30% below Lugano, same lake view.",
+  "dishes": [
+   "Polenta with local cheeses",
+   "Gnocchi with pesto",
+   "Merlot from Ticino vineyards"
+  ],
+  "sights": [
+   "Monte San Salvatore",
+   "Parco Ciani",
+   "San Lorenzo Cathedral"
+  ]
+ },
+ "verona": {
+  "insiderTip": "Arena opera tickets from €25 if you sit on stone steps — bring a pillow and candles; candles allowed facing forward.",
+  "dishes": [
+   "Risotto all'Amarone",
+   "Bollito misto",
+   "Pandoro"
+  ],
+  "sights": [
+   "Arena di Verona",
+   "Casa di Giulietta with the balcony",
+   "Ponte Pietra Roman bridge"
+  ]
+ },
+ "cagliari": {
+  "insiderTip": "Sardinian dinners are long — 21:00 starts are normal, and restaurants around Castello fill up at 22:00.",
+  "dishes": [
+   "Culurgiones",
+   "Porceddu",
+   "Pane carasau"
+  ],
+  "sights": [
+   "Castello",
+   "Bastione di San Remy",
+   "Poetto"
+  ]
+ },
+ "taormina": {
+  "insiderTip": "Book opera or concerts at Teatro Antico in July–August — the world's most beautiful stage with Etna smoking in the background.",
+  "dishes": [
+   "Arancini",
+   "Pasta alla Norma",
+   "Cannoli"
+  ],
+  "sights": [
+   "Teatro Antico",
+   "Corso Umberto",
+   "Isola Bella"
+  ]
+ },
+ "menorca": {
+  "insiderTip": "Rent a boat in Fornells for a day ($100/4 people) — the best way to reach inaccessible coves.",
+  "dishes": [
+   "Caldereta de langosta",
+   "Queso de Mahón",
+   "Gin Xoriguer"
+  ],
+  "sights": [
+   "Mahón Harbour",
+   "Ciutadella",
+   "Naveta d'Es Tudons"
+  ]
+ },
+ "santiago-de-compostela": {
+  "insiderTip": "Fridays at 19:30 — Botafumeiro swing in the cathedral. Free but arrive early for a spot.",
+  "dishes": [
+   "Polpo á feira",
+   "Empanada gallega",
+   "Tetilla and Arzúa cheese"
+  ],
+  "sights": [
+   "Cathedral of Santiago",
+   "Praza do Obradoiro",
+   "Museo do Pobo Galego"
+  ]
+ },
+ "glasgow": {
+  "insiderTip": "Barrowland Ballroom — Glasgow's legendary music hall, check what's on, tickets often £20–40.",
+  "dishes": [
+   "Haggis, neeps and tatties",
+   "Scotch pie",
+   "Cullen skink"
+  ],
+  "sights": [
+   "Kelvingrove Art Gallery & Museum",
+   "Glasgow Cathedral",
+   "Riverside Museum"
+  ]
+ },
+ "belfast": {
+  "insiderTip": "Book a Black Cab Tour to understand Northern Ireland's history — 3 hours that change your perspective on the conflict.",
+  "dishes": [
+   "Ulster fry",
+   "Irish stew",
+   "Champ"
+  ],
+  "sights": [
+   "Titanic Belfast",
+   "Game of Thrones studio tour",
+   "Crumlin Road Gaol"
+  ]
+ },
+ "bath": {
+  "insiderTip": "Thermae Bath Spa — the top floor is an open-air pool, bathe while the sun sets over the city skyline.",
+  "dishes": [
+   "Bath bun",
+   "Sally Lunn Bun",
+   "West Country cheddar"
+  ],
+  "sights": [
+   "Roman Baths",
+   "Royal Crescent",
+   "Bath Abbey"
+  ]
+ },
+ "york": {
+  "insiderTip": "Climb York Minster tower (£10) — 275 steps for 150m views, not possible anywhere else in the UK.",
+  "dishes": [
+   "Yorkshire Pudding",
+   "Parkin",
+   "Betty's Tea Rooms"
+  ],
+  "sights": [
+   "York Minster",
+   "The Shambles",
+   "Jorvik Viking Centre"
+  ]
+ },
+ "korsika": {
+  "insiderTip": "Take the overnight ferry from Marseille or Nice — arrive in the morning, save one hotel night and enjoy a scenic journey.",
+  "dishes": [
+   "Corsican charcuterie",
+   "Brocciu",
+   "Fiadone"
+  ],
+  "sights": [
+   "Ajaccio",
+   "Bonifacio",
+   "Scandola Nature Reserve"
+  ]
+ },
+ "budva": {
+  "insiderTip": "Budva's nightlife starts at 01:00 and comes alive at Top Hill club — 800 m up, dance with panoramic views until dawn.",
+  "dishes": [
+   "Riblja čorba",
+   "Pljeskavica",
+   "Cevapi"
+  ],
+  "sights": [
+   "Budva Old Town",
+   "Sveti Stefan",
+   "Mogren Beach"
+  ]
+ },
+ "visby": {
+  "insiderTip": "Medieval Week in August — the entire town dresses in medieval clothes. Book hotels 6 months ahead, or camp outside town.",
+  "dishes": [
+   "Saffron pancake",
+   "Gotland lamb dishes",
+   "Surströmming"
+  ],
+  "sights": [
+   "Ringmuren",
+   "Sankt Karin ruins",
+   "Botanical Garden"
+  ]
+ },
+ "are": {
+  "insiderTip": "Buy the Jämtland Pass if you're skiing several days — includes lifts, ski school and some restaurants. Pays for itself in 3 days.",
+  "dishes": [
+   "Reindeer at Wärdshuset Gammelgården",
+   "Jämtland home-baked bread",
+   "Local char"
+  ],
+  "sights": [
+   "Åreskutan",
+   "Åre Bike Park",
+   "Ristafallet"
+  ]
+ },
+ "azorerna": {
+  "insiderTip": "Cozido das Furnas — book 24 hours ahead, retrieved from the earth at 12:30 on Tuesdays, Fridays, Sundays. A unique dining experience.",
+  "dishes": [
+   "Cozido das Furnas",
+   "Lapas",
+   "Queijo São Jorge"
+  ],
+  "sights": [
+   "Sete Cidades",
+   "Lagoa do Fogo",
+   "Furnas"
+  ]
+ },
+ "evora": {
+  "insiderTip": "Alentejo wine route as a day trip — Herdade do Esporão and Adega Mayor offer lunch with wine tastings ($35–50).",
+  "dishes": [
+   "Açorda alentejana",
+   "Porco preto",
+   "Queijo de Serpa"
+  ],
+  "sights": [
+   "Roman Temple of Diana",
+   "Capela dos Ossos",
+   "Évora Cathedral"
+  ]
+ },
+ "akureyri": {
+  "insiderTip": "Whale safari from Húsavík (45 min from Akureyri) — 99% success rate for humpback whales June–August.",
+  "dishes": [
+   "Plokkfiskur",
+   "Kjötsúpa",
+   "Hákarl"
+  ],
+  "sights": [
+   "Goðafoss",
+   "Mývatn",
+   "Dettifoss"
+  ]
+ },
+ "lulea": {
+  "insiderTip": "Take the archipelago boat to Hindersön — pristine nature and local fish in summer.",
+  "dishes": [
+   "Palt",
+   "Northern fish",
+   "Renskav"
+  ],
+  "sights": [
+   "Gammelstad church village",
+   "Teknikens Hus",
+   "Luleå archipelago"
+  ]
+ },
+ "ostersund": {
+  "insiderTip": "Cycle across Frösöbron to Frösön — the runes, views and Moose Garden in one day.",
+  "dishes": [
+   "Jämtland thin bread roll",
+   "Moose stew",
+   "Jämtland butter"
+  ],
+  "sights": [
+   "Jamtli",
+   "Frösön",
+   "Storsjön"
+  ]
+ },
+ "kiruna": {
+  "insiderTip": "Take the train to Abisko (1h 30m) and stay at Aurora Sky Station — best northern lights views in the world.",
+  "dishes": [
+   "Renskav",
+   "Suovas",
+   "Cloudberry"
+  ],
+  "sights": [
+   "Icehotel",
+   "LKAB mine",
+   "Kiruna Church"
+  ]
+ },
+ "side": {
+  "insiderTip": "Visit Side ancient theatre at sunset — the ruins sit right by the sea with free beach access next door.",
+  "dishes": [],
+  "sights": []
+ },
+ "alanya": {
+  "insiderTip": "Take the cable car to Alanya Castle at sunset — panoramic views over the bay and Cleopatra Beach.",
+  "dishes": [],
+  "sights": []
+ },
+ "marmaris": {
+  "insiderTip": "Book a day trip by sailboat to the 12 islands — lunch and swimming included for around 400 kr per person.",
+  "dishes": [],
+  "sights": []
+ },
+ "kusadasi": {
+  "insiderTip": "Go to Ephesus early — arrive at the gate before 08:00 to avoid the cruise ship tourists arriving from Kuşadası port around 10:00.",
+  "dishes": [],
+  "sights": []
+ },
+ "dalaman": {
+  "insiderTip": "Take a boat tour on the Dalyan River past the Lycian rock-cut royal tombs — finish at the turtle beach for swimming.",
+  "dishes": [],
+  "sights": []
+ },
+ "kos": {
+  "insiderTip": "Cycle south from Kos town to Tigaki Beach — 12 km flat route, rewarded with 10 km of light white sand.",
+  "dishes": [],
+  "sights": []
+ },
+ "skiathos": {
+  "insiderTip": "Take the day ferry to Skopelos (1h) for Agios Ioannis church from Mamma Mia — 105 steps up but the view is iconic.",
+  "dishes": [],
+  "sights": []
+ },
+ "kefalonia": {
+  "insiderTip": "Go to the Myrtos viewpoint from the road above — best photos at midday when the sun hits the beach straight from above.",
+  "dishes": [],
+  "sights": []
+ },
+ "lefkas": {
+  "insiderTip": "Go to Porto Katsiki early in the morning — the staircase down to the beach is steep and the sun becomes relentless after 12:00.",
+  "dishes": [],
+  "sights": []
+ },
+ "kavala": {
+  "insiderTip": "Walk up through the old Panagia quarter to the fortress at sunset — views over the aqueduct and harbor.",
+  "dishes": [],
+  "sights": []
+ },
+ "torrevieja": {
+  "insiderTip": "Walk the entire 7 km long Dique de Levante breakwater at sunrise — fishermen, sea views and cool mornings even in July.",
+  "dishes": [],
+  "sights": []
+ },
+ "benidorm": {
+  "insiderTip": "Take the bus to Guadalest 30 min inland — mountain village with spectacular views and no tourist crowds after 16:00.",
+  "dishes": [],
+  "sights": []
+ },
+ "girona": {
+  "insiderTip": "Walk Passeig de la Muralla — the entire medieval wall around the old town is open and free. Best view at sunset.",
+  "dishes": [],
+  "sights": []
+ },
+ "sharm-el-sheikh": {
+  "insiderTip": "Snorkel at Ras Um Sid on your own — coral reef directly from the beach, no boat costs. Go out at 07:00 for empty waters.",
+  "dishes": [],
+  "sights": []
+ },
+ "pattaya": {
+  "insiderTip": "Take the early morning ferry to Koh Larn — the island empties of tourists after 16:00, stay overnight for a quiet evening without Pattaya's neon.",
+  "dishes": [],
+  "sights": []
+ },
+ "caen": {
+  "insiderTip": "Rent a car in Caen for the D-Day beaches — one day covering Omaha, the American cemetery and Pointe du Hoc is enough but leaves an impression.",
+  "dishes": [],
+  "sights": []
+ },
+ "grenoble": {
+  "insiderTip": "Take 'Les Bulles' (egg-shaped cabins) up to Bastille fortress — 5 min ride, panoramic view over the entire Alps.",
+  "dishes": [],
+  "sights": []
+ },
+ "perpignan": {
+  "insiderTip": "Visit Collioure 30 min south — colorful fishing houses by the sea, local anchor restaurant and Picasso connection. Day trip max.",
+  "dishes": [],
+  "sights": []
+ },
+ "reims": {
+  "insiderTip": "Book the Taittinger cellar tour online in advance — 90 min guided tour through 13th-century tunnels with tasting for around 400 kr.",
+  "dishes": [],
+  "sights": []
+ },
+ "bremen": {
+  "insiderTip": "Go to Bremen's Town Musicians statue and rub the donkey's front leg — tradition for luck, but wait until tourists disappear after 18:00.",
+  "dishes": [],
+  "sights": []
+ },
+ "hannover": {
+  "insiderTip": "Follow the 'Red Thread' — a 4 km street marking that leads through the city's 36 most important sights. Free map at the tourist office.",
+  "dishes": [],
+  "sights": []
+ },
+ "leipzig": {
+  "insiderTip": "Book a Thomanerchor concert Friday or Saturday — the boys' choir that Bach conducted still sings in Thomaskirche, tickets around 150 kr.",
+  "dishes": [],
+  "sights": []
+ },
+ "freiburg": {
+  "insiderTip": "Climb Schlossberg at sunset — a 30-minute walk from the center with panoramic views of Freiburg, the Black Forest, and the Vosges in the distance.",
+  "dishes": [],
+  "sights": []
+ },
+ "augsburg": {
+  "insiderTip": "Visit Fuggerei early when it opens at 08:00 — fewer visitors and a better chance to talk with residents who still live there.",
+  "dishes": [],
+  "sights": []
+ },
+ "genova": {
+  "insiderTip": "Take the old elevator in the Castelletto district — a Liberty-era lift from 1909 that takes you up to panoramic views for free, with no tourist crowds.",
+  "dishes": [],
+  "sights": []
+ },
+ "pisa": {
+  "insiderTip": "Stay overnight in Pisa — hotels are 30% cheaper than Florence, with daily trains available. The Leaning Tower has fewer crowds only before 09:00 and after 18:00.",
+  "dishes": [],
+  "sights": []
+ },
+ "catania": {
+  "insiderTip": "Go to La Pescheria (fish market) in the morning — surreal chaos with swordfish and octopus. After 13:00 the day is over.",
+  "dishes": [],
+  "sights": []
+ },
+ "ancona": {
+  "insiderTip": "Drink Verdicchio — the signature wine of the Marches from the Castelli di Jesi area, a 40-minute drive from Ancona. Vineyard visits start from $20.",
+  "dishes": [],
+  "sights": []
+ },
+ "perugia": {
+  "insiderTip": "Go down into Rocca Paolina — an entire 16th-century fortress beneath Perugia's current center, now with escalators connecting city districts. Free and surreal.",
+  "dishes": [],
+  "sights": []
+ },
+ "poznan": {
+  "insiderTip": "Eat pyry z gzikiem — mashed potatoes with fresh curd cheese (a local specialty). Bar Mleczny Apetyt is a classic milk bar with the dish for $5.",
+  "dishes": [],
+  "sights": []
+ },
+ "katowice": {
+  "insiderTip": "Take the bus to Kraków (1 hour, $8) for a day trip — flying into Katowice and staying in Kraków is often the cheapest combination.",
+  "dishes": [],
+  "sights": []
+ },
+ "lodz": {
+  "insiderTip": "Walk the entire Piotrkowska — find classic Polish shoe shops, vodka bars, and Wall of Fame stars in the pavement for Polish celebrities.",
+  "dishes": [],
+  "sights": []
+ },
+ "nicosia": {
+  "insiderTip": "Dine at Büyük Han (the old caravanserai) on the Turkish Cypriot side — a 17th-century courtyard now with cafés, cheaper than the south side.",
+  "dishes": [],
+  "sights": []
+ },
+ "ohrid": {
+  "insiderTip": "Eat jureski pilaw (vinegared lake mackerel) at Restaurant Antiko in the Old Town — a local signature dish.",
+  "dishes": [],
+  "sights": []
+ },
+ "tivat": {
+  "insiderTip": "Drive the narrow mountain road up Kotor Mountain — hairpin turns to 1,700 meters above Kotor Bay, one of Europe's most spectacular views. A 1-hour drive.",
+  "dishes": [],
+  "sights": []
+ },
+ "podgorica": {
+  "insiderTip": "Go to Lake Skadar for a boat tour — 2 hours on the lake with lunch and wine tasting from a local vineyard, around $65. Pelicans nest here in spring and summer.",
+  "dishes": [],
+  "sights": []
+ },
+ "pristina": {
+  "insiderTip": "Go to the Macedonian café 'Dit Ne Dit' by the Newborn monument — Kosovar coffee culture and a perfect photo spot for the colorful monument.",
+  "dishes": [],
+  "sights": []
+ },
+ "valletta": {
+  "insiderTip": "Take the Upper Barrakka Gardens elevator down to the Three Cities side (2 minutes, $4) instead of the long walk — panoramic views over Grand Harbour.",
+  "dishes": [],
+  "sights": []
+ },
+ "punta-cana": {
+  "insiderTip": "Rent a quad bike for a day and drive to Macao Beach — a local surf beach with almost no tourists, 20 km north of the hotel zone.",
+  "dishes": [],
+  "sights": []
+ },
+ "jamaica": {
+  "insiderTip": "Take the local bus up to Strawberry Hill in the Blue Mountains — the hotel's viewpoint brunch for $50 is Jamaica's most beautiful Sunday.",
+  "dishes": [],
+  "sights": []
+ },
+ "barbados": {
+  "insiderTip": "Drive to Bathsheba on the east coast — powerful Atlantic waves, large cliffs, and a local fish lunch for half the price of the west coast.",
+  "dishes": [],
+  "sights": []
+ },
+ "trinidad": {
+  "insiderTip": "Visit Maracas Beach on a Saturday and eat a local bake-and-shark — Richard's stand has been the institution since the 1980s.",
+  "dishes": [],
+  "sights": []
+ },
+ "costa-rica": {
+  "insiderTip": "Skip San José and drive straight out — rent a car from the airport and 3 hours to Arenal Volcano makes day one feel like a real vacation.",
+  "dishes": [],
+  "sights": []
+ },
+ "panama-city": {
+  "insiderTip": "Eat dinner at rooftop bars in Casco Viejo — Tántalo has 360° skyline views, half Miami's prices, and the best ceviche.",
+  "dishes": [],
+  "sights": []
+ },
+ "belize": {
+  "insiderTip": "Take the ferry from BZE straight to Caye Caulker — skip Belize City entirely, the city lacks charm but the islands are world-class.",
+  "dishes": [],
+  "sights": []
+ },
+ "san-diego": {
+  "insiderTip": "Drive to Coronado Island across the S-shaped bridge — Hotel del Coronado Beach is USA's most beautiful and completely free.",
+  "dishes": [],
+  "sights": []
+ },
+ "minneapolis": {
+  "insiderTip": "Visit Mill City Museum at the Mississippi — a mill building symbolizing America's flour boom, then stroll Stone Arch Bridge at sunset.",
+  "dishes": [],
+  "sights": []
+ },
+ "detroit": {
+  "insiderTip": "Eat Detroit pizza at Buddy's in the north — square, thick crust, caramelized cheese edges. The pizza style was born here in 1946.",
+  "dishes": [],
+  "sights": []
+ },
+ "quebec-city": {
+  "insiderTip": "Take the ferry to Lévis one evening — from the other side of the St. Lawrence River, Château Frontenac lights up and you skip all the tourists.",
+  "dishes": [],
+  "sights": []
+ },
+ "cochabamba": {
+  "insiderTip": "Go to Toro Toro National Park for a weekend — dinosaur footprints, caves and canyons few Swedes ever see, 4 hours drive from Cochabamba.",
+  "dishes": [],
+  "sights": []
+ },
+ "barranquilla": {
+  "insiderTip": "If you miss Carnival — take a day trip to Bocas de Ceniza where the Río Magdalena meets the Caribbean. Train out to sea, few tourists.",
+  "dishes": [],
+  "sights": []
+ },
+ "cordoba-argentina": {
+  "insiderTip": "Drive up into Sierras de Córdoba and stay in La Cumbrecita — a Bavarian mountain village without cars where hiking trails meet Alpine pastry shops.",
+  "dishes": [],
+  "sights": []
+ },
+ "beirut": {
+  "insiderTip": "Eat a morning manoushe at Barbar in Hamra — thin Lebanese flatbread with zaatar that costs next to nothing and beats any hipster breakfast.",
+  "dishes": [],
+  "sights": []
+ },
+ "riyadh": {
+  "insiderTip": "Walk the Sky Bridge at Kingdom Centre at sunset — 302 m glass bridge over the city, ticket around 120 kr and the best view in the Middle East.",
+  "dishes": [],
+  "sights": []
+ },
+ "jeddah": {
+  "insiderTip": "Stroll Jeddah Corniche at sunset — 30 km waterfront with King Fahd Fountain (world's highest at 312 m) as the centerpiece.",
+  "dishes": [],
+  "sights": []
+ },
+ "dar-es-salaam": {
+  "insiderTip": "Take the earliest Azam Marine ferry to Zanzibar — fewer people and dawn light over the Swahili coast is unforgettable.",
+  "dishes": [],
+  "sights": []
+ },
+ "libreville": {
+  "insiderTip": "Eat at Le Phare du Large by the coast — French-Gabonese fusion, half the price of hotel restaurants, outdoor tables by the sea.",
+  "dishes": [],
+  "sights": []
+ },
+ "abuja": {
+  "insiderTip": "Drive to Zuma Rock at dawn — 725 m monolith 40 km from town, Nigeria's 'Uluru', and nearly empty before 09:00.",
+  "dishes": [],
+  "sights": []
+ },
+ "alexandria": {
+  "insiderTip": "Walk the Corniche from Qaitbay to Stanley Bridge at sunset — 12 km or take a microbus halfway, locals eat fish at Fish Market for half the tourist area prices.",
+  "dishes": [],
+  "sights": []
+ },
+ "agadir": {
+  "insiderTip": "Take a grand taxi to Souss-Massa National Park one morning — flamingos, dromedaries in dunes and local Berber villages just 40 minutes south.",
+  "dishes": [],
+  "sights": []
+ },
+ "cebu": {
+  "insiderTip": "Book Kawasan Falls canyoneering early morning — 3 hours of jumping and swimming through turquoise pools before the buses arrive at 10:00.",
+  "dishes": [],
+  "sights": []
+ },
+ "medan": {
+  "insiderTip": "Take the night boat from Parapat to Samosir Island in Lake Toba — stay in a replica Batak house on the beach and swim in warm water above a supervolcano.",
+  "dishes": [],
+  "sights": []
+ },
+ "surabaya": {
+  "insiderTip": "Travel directly from Bromo to Ijen on the same trip — two volcanoes in three days, less travel and more spectacle than doing them separately."
+ },
+ "karachi": {
+  "insiderTip": "Eat dinner on Burns Road — cheaper and more authentic than any Karachi restaurant, go to the Waheed Kebab place at the corner."
+ },
+ "lahore": {
+  "insiderTip": "Go to Food Street on Fort Road at sunset — street lamps, the Badshahi Mosque lit up and 20 restaurants to choose from. Haveli Restaurant has the best view."
+ },
+ "tashkent": {
+  "insiderTip": "Eat at Plov Center downtown for a Saturday lunch — the national dish plov is cooked in enormous pots, ready to eat at 1:00 PM and sold out by 2:00 PM."
+ },
+ "yerevan": {
+  "insiderTip": "Watch the Singing Fountains on Republic Square every summer evening at 9:00 PM — free 30 minutes of classical music with dancing water, perfect prelude to late Armenian dinners."
+ },
+ "bursa": {
+  "insiderTip": "Take the cable car up to Uludağ in the afternoon — even without skiing the view over the greenery and the Sea of Marmara is spectacular, and it's cheaper than half a coffee in Istanbul."
+ },
+ "marbella": {
+  "insiderTip": "Get off the bus from AGP at Fuengirola instead and take the Cercanías local train the rest of the way — cheaper than a taxi and you avoid traffic on the A-7 in July."
+ },
+ "costa-del-sol": {
+  "insiderTip": "Take the Cercanías train from the AGP station directly under the terminal to Fuengirola — don't go to the taxi stand, the train station is literally in the airport building."
+ },
+ "torremolinos": {
+  "insiderTip": "Don't take a taxi — the Cercanías station is inside the airport terminal and the train takes you to Torremolinos center in 12 minutes instead of a 250 kr taxi ride."
+ },
+ "nerja": {
+  "insiderTip": "Car rental from AGP is essentially cheaper overall than bus plus taxi in Nerja — the villages of Frigiliana and Maro are hard to reach without your own car, and parking in Nerja is free outside the center."
+ },
+ "sitges": {
+  "insiderTip": "Take the Rodalies R2 Sud directly from Barcelona Airport station (under terminal 2) instead of going into Barcelona — 30 minutes instead of 90 minutes with a transfer."
+ },
+ "lloret-de-mar": {
+  "insiderTip": "The Sagalés bus from GRO goes directly to Lloret terminal — not via Girona center. It's next to the taxi stand at arrivals and costs a fifth of the taxi fare."
+ },
+ "salou": {
+  "insiderTip": "REU is Spain's closest airport to a beach resort — skip the bus and split a taxi four ways; 50 kr per person to the hotel in 15 minutes."
+ },
+ "amalfi": {
+  "insiderTip": "Take the fast ferry from Naples port (Molo Beverello) to Amalfi instead of the bus — 1 hour 45 minutes, avoid motion sickness and see the coast from the sea. Summer only."
+ },
+ "positano": {
+  "insiderTip": "Book a private transfer from NAP through your hotel — the SITA bus has no space for large suitcases and Positano's stairs make every extra minute in the sun with luggage torture."
+ },
+ "toscana": {
+  "insiderTip": "Fly to FLR instead of PSA if you have multiple suitcases — FLR is 20 minutes by tram from Florence center, while PSA requires train plus transfers which are a nightmare with luggage."
+ },
+ "cinque-terre": {
+  "insiderTip": "Actually fly to Pisa (PSA) with Ryanair and take the train north to La Spezia — often half the price via Genoa and only 1 hour longer, plus direct transfer to the Cinque Terre train."
+ },
+ "lake-como": {
+  "insiderTip": "Rent a car at MXP — getting to the lake's west side by public transport takes 2.5 hours and three transfers, by car it's 50 minutes direct and you can stop in Varenna for lunch on the way."
+ },
+ "capri": {
+  "insiderTip": "Take the Alibus bus directly from NAP to the port instead of a taxi — it stops 300 meters from the Molo Beverello terminal and is both cheaper and more reliable in Naples' traffic chaos."
+ },
+ "cote-dazur": {
+  "insiderTip": "Buy a Zou! day ticket for 30 kr — unlimited travel on TER trains along the coast between Cannes and Menton. The Riviera is one single line and the train takes you where the car never reaches in summer traffic."
+ },
+ "provence": {
+  "insiderTip": "Fly to Marseille and rent a car directly at MRS instead of coming via Nice — NCE is twice as far from Luberon and toll roads add at least 200 kr extra to every day trip.",
+  "dishes": [],
+  "sights": []
+ },
+ "saint-tropez": {
+  "insiderTip": "Take the Trans Côte d'Azur fast ferry from Nice harbor — 2h 30m for 900 kr round-trip and you'll skip the A8 queue that backs up for 3 hours every August afternoon.",
+  "dishes": [],
+  "sights": []
+ },
+ "monaco": {
+  "insiderTip": "Take the SNCF train from Nice-Ville (5€ one-way) instead of a taxi — platforms lead straight to Monaco Monte Carlo and the route follows the coast for maybe the world's most beautiful 25 minutes.",
+  "dishes": [],
+  "sights": []
+ },
+ "algarve": {
+  "insiderTip": "Rent a car directly at FAO — public transport along the coast works, but it's cheaper to have a car when staying on hillsides (common in Algarve) and you can reach beach coves without bus service.",
+  "dishes": [],
+  "sights": []
+ },
+ "sintra": {
+  "insiderTip": "From LIS: take the red metro line to Oriente and catch the train to Sintra direct — 1h 15m total for 40 kr versus 450 kr for a taxi, and you'll skip Lisbon's morning traffic.",
+  "dishes": [],
+  "sights": []
+ },
+ "nazare": {
+  "insiderTip": "Rent a car at LIS — you want the chance to visit the medieval town of Óbidos on the way (20 min detour), and Nazaré after 7 p.m. has no buses back if you want to photograph sunset at Farol.",
+  "dishes": [],
+  "sights": []
+ },
+ "kappadokien": {
+  "insiderTip": "Check if Pegasus flies to NAV instead of ASR — saves 45 minutes transfer and balloon season has early morning transfer at 4:30 a.m. making every minute valuable.",
+  "dishes": [],
+  "sights": []
+ },
+ "makarska": {
+  "insiderTip": "The Arriva bus from SPU stops 200 meters from Makarska bus station — sit on the right side for spectacular sea views the whole way, much more beautiful than the north side.",
+  "dishes": [],
+  "sights": []
+ },
+ "brac": {
+  "insiderTip": "Take the Jadrolinija catamaran 9604 from Split directly to Bol (1h) instead of a car ferry to Supetar plus bus — saves 90 minutes and drops you 500 meters from Zlatni Rat.",
+  "dishes": [],
+  "sights": []
+ },
+ "korcula": {
+  "insiderTip": "Take the Krilo catamaran from Dubrovnik Gruž harbor early morning — it stops at Mljet (can hop off for the day) and you'll miss the afternoon swell that makes the crossing unpleasant.",
+  "dishes": [],
+  "sights": []
+ },
+ "porec": {
+  "insiderTip": "Outside May–October: fly to Trieste (TRS) instead with Ryanair — 1h 30m drive to Poreč via Italy, and often 800 kr cheaper than the Zagreb detour.",
+  "dishes": [],
+  "sights": []
+ },
+ "sibenik": {
+  "insiderTip": "Rent a car at SPU — Šibenik is a base for Krka Falls and Kornati Islands, both without public transport from town, and the E65 route is one of Croatia's easiest coastal drives.",
+  "dishes": [],
+  "sights": []
+ },
+ "saranda": {
+  "insiderTip": "Fly to Corfu instead of Tirana — 4 hours drive from TIA becomes 30 minutes ferry from CFU, and it's often cheaper via Aegean than Wizz Air to Albania.",
+  "dishes": [],
+  "sights": []
+ },
+ "vlora": {
+  "insiderTip": "Book a rental car at TIA and drive south immediately — public transport in southern Albania is still unreliable, and minibuses along SH8 only depart when full.",
+  "dishes": [],
+  "sights": []
+ },
+ "berat": {
+  "insiderTip": "There is no shuttle from TIA to Berat — rent a car directly at the airport or pre-book a private transfer. The bus requires two changes via Tirana and takes 3.5 hours total.",
+  "dishes": [],
+  "sights": []
+ },
+ "shkoder": {
+  "insiderTip": "Furgon minibuses from TIA to Shkodër depart when full (typically every 45 minutes) — sit up front to avoid motion sickness on SH1's curves, and have cash ready as they don't take cards.",
+  "dishes": [],
+  "sights": []
+ },
+ "herceg-novi": {
+  "insiderTip": "Drive via the small car ferry Kamenari–Lepetane (5 min, ~50 kr) instead of around Kotor Bay — saves 45 minutes drive between TIV and Herceg Novi, and the views are spectacular.",
+  "dishes": [],
+  "sights": []
+ },
+ "vis": {
+  "insiderTip": "Book accommodation for 2+ nights — Vis reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "omis": {
+  "insiderTip": "Book accommodation for 2+ nights — Omiš reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "trogir": {
+  "insiderTip": "Book accommodation for 2+ nights — Trogir reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "cavtat": {
+  "insiderTip": "Book accommodation for 2+ nights — Cavtat reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "mljet": {
+  "insiderTip": "Book accommodation for 2+ nights — Mljet reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "portofino": {
+  "insiderTip": "Book accommodation for 2+ nights — Portofino reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "matera": {
+  "insiderTip": "Book accommodation for 2+ nights — Matera reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "alberobello": {
+  "insiderTip": "Book accommodation for 2+ nights — Alberobello reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "ostuni": {
+  "insiderTip": "Book accommodation for 2+ nights — Ostuni reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "civita-di-bagnoregio": {
+  "insiderTip": "Book accommodation for 2+ nights — Civita di Bagnoregio reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "hydra": {
+  "insiderTip": "Book accommodation for 2+ nights — Hydra reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "spetses": {
+  "insiderTip": "Book accommodation for 2+ nights — Spetses reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "nafplio": {
+  "insiderTip": "Book accommodation for 2+ nights — Nafplio reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "meteora": {
+  "insiderTip": "Book accommodation for 2+ nights — Meteora reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "delphi": {
+  "insiderTip": "Book accommodation for 2+ nights — Delphi reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "olympia": {
+  "insiderTip": "Book accommodation for 2+ nights — Olympia reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "ronda": {
+  "insiderTip": "Book accommodation for 2+ nights — Ronda reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "frigiliana": {
+  "insiderTip": "Book accommodation for 2+ nights — Frigiliana reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "vejer-de-la-frontera": {
+  "insiderTip": "Book accommodation for 2+ nights — Vejer de la Frontera reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "cadiz": {
+  "insiderTip": "Book accommodation for 2+ nights — Cádiz reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "obidos": {
+  "insiderTip": "Book accommodation for 2+ nights — Óbidos reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "comporta": {
+  "insiderTip": "Book accommodation for 2+ nights — Comporta reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "sagres": {
+  "insiderTip": "Book accommodation for 2+ nights — Sagres reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "tavira": {
+  "insiderTip": "Book accommodation for 2+ nights — Tavira reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "silves": {
+  "insiderTip": "Book accommodation for 2+ nights — Silves reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "les-baux-de-provence": {
+  "insiderTip": "Book accommodation for 2+ nights — Les Baux-de-Provence reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "gordes": {
+  "insiderTip": "Book accommodation for 2+ nights — Gordes reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "annecy": {
+  "insiderTip": "Book accommodation for 2+ nights — Annecy reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "eze": {
+  "insiderTip": "Book accommodation for 2+ nights — Èze reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "moustiers-sainte-marie": {
+  "insiderTip": "Book accommodation for 2+ nights — Moustiers-Sainte-Marie reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "olympos": {
+  "insiderTip": "Book accommodation for 2+ nights — Olympos reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "kas": {
+  "insiderTip": "Book accommodation for 2+ nights — Kaş reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "alacati": {
+  "insiderTip": "Book accommodation for 2+ nights — Alaçatı reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "chefchaouen": {
+  "insiderTip": "Book accommodation for 2+ nights — Chefchaouen reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "essaouira": {
+  "insiderTip": "Book accommodation for 2+ nights — Essaouira reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "dades-gorge": {
+  "insiderTip": "Book accommodation for 2+ nights — Dades Gorge reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "gjirokastra": {
+  "insiderTip": "Book accommodation for 2+ nights — Gjirokastra reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "abisko": {
+  "insiderTip": "Book accommodation for 2+ nights — Abisko reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "la-palma": {
+  "insiderTip": "Book accommodation for 2+ nights — La Palma reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "la-gomera": {
+  "insiderTip": "Book accommodation for 2+ nights — La Gomera reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "hoi-an": {
+  "insiderTip": "Book accommodation for 2+ nights — Hoi An reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "luang-prabang": {
+  "insiderTip": "Book accommodation for 2+ nights — Luang Prabang reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "siem-reap": {
+  "insiderTip": "Book accommodation for 2+ nights — Siem Reap reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "koh-lanta": {
+  "insiderTip": "Book accommodation for 2+ nights — Koh Lanta reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "langkawi": {
+  "insiderTip": "Book accommodation for 2+ nights — Langkawi reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "lombok": {
+  "insiderTip": "Book accommodation for 2+ nights — Lombok reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "komodo": {
+  "insiderTip": "Book accommodation for 2+ nights — Komodo reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "palawan": {
+  "insiderTip": "Book accommodation for 2+ nights — Palawan reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "petra": {
+  "insiderTip": "Book accommodation for 2+ nights — Petra reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "wadi-rum": {
+  "insiderTip": "Book accommodation for 2+ nights — Wadi Rum reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "marsa-alam": {
+  "insiderTip": "Book accommodation for 2+ nights — Marsa Alam reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "dakhla": {
+  "insiderTip": "Book accommodation for 2+ nights — Dakhla reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "chisinau": {
+  "insiderTip": "Book accommodation for 2+ nights — Chișinău reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "minsk": {
+  "insiderTip": "Book accommodation for 2+ nights — Minsk reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "faroe-islands": {
+  "insiderTip": "Book accommodation for 2+ nights — Faroe Islands reveal their best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "reykjanes": {
+  "insiderTip": "Book accommodation for 2+ nights — Reykjanes reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "bagan": {
+  "insiderTip": "Book accommodation for 2+ nights — Bagan reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "inle-lake": {
+  "insiderTip": "Book accommodation for 2+ nights — Inle Lake reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "halong-bay": {
+  "insiderTip": "Book accommodation for 2+ nights — Ha Long Bay reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "mui-ne": {
+  "insiderTip": "Book accommodation for 2+ nights — Mui Ne reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "nha-trang": {
+  "insiderTip": "Book accommodation for 2+ nights — Nha Trang reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "dalat": {
+  "insiderTip": "Book accommodation for 2+ nights — Dalat reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "phong-nha": {
+  "insiderTip": "Book accommodation for 2+ nights — Phong Nha reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "penang": {
+  "insiderTip": "Book accommodation for 2+ nights — Penang reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "cameron-highlands": {
+  "insiderTip": "Book accommodation for 2+ nights — Cameron Highlands reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "kota-kinabalu": {
+  "insiderTip": "Book accommodation for 2+ nights — Kota Kinabalu reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "raja-ampat": {
+  "insiderTip": "Book accommodation for 2+ nights — Raja Ampat reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "flores": {
+  "insiderTip": "Book accommodation for 2+ nights — Flores reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "yogyakarta": {
+  "insiderTip": "Book accommodation for 2+ nights — Yogyakarta reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "toraja": {
+  "insiderTip": "Book accommodation for 2+ nights — Toraja reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "mandalay": {
+  "insiderTip": "Book accommodation for 2+ nights — Mandalay reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "samarkand": {
+  "insiderTip": "Book accommodation for 2+ nights — Samarkand reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "bukhara": {
+  "insiderTip": "Book accommodation for 2+ nights — Bukhara reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "kutaisi": {
+  "insiderTip": "Book accommodation for 2+ nights — Kutaisi reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "stone-town": {
+  "insiderTip": "Book accommodation for 2+ nights — Stone Town reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "lamu": {
+  "insiderTip": "Book accommodation for 2+ nights — Lamu reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "fes": {
+  "insiderTip": "Book accommodation for 2+ nights — Fes reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "toubkal": {
+  "insiderTip": "Book accommodation for 2+ nights — Toubkal reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "diani-beach": {
+  "insiderTip": "Book accommodation for 2+ nights — Diani Beach reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "victoria-falls": {
+  "insiderTip": "Book accommodation for 2+ nights — Victoria Falls reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "cape-verde": {
+  "insiderTip": "Book accommodation for 2+ nights — Cape Verde reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "havana": {
+  "insiderTip": "Book accommodation for 2+ nights — Havana reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "trinidad-cuba": {
+  "insiderTip": "Book accommodation for 2+ nights — Trinidad reveals its best side beyond day tourism.",
+  "dishes": [],
+  "sights": []
+ },
+ "san-cristobal": {
+  "insiderTip": "Book accommodation for 2+ nights — San Cristóbal reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "oaxaca": {
+  "insiderTip": "Book accommodation for 2+ nights — Oaxaca reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "merida": {
+  "insiderTip": "Book accommodation for 2+ nights — Mérida reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "guanajuato": {
+  "insiderTip": "Book accommodation for 2+ nights — Guanajuato reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "antigua": {
+  "insiderTip": "Book accommodation for 2+ nights — Antigua Guatemala reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "lake-atitlan": {
+  "insiderTip": "Book accommodation for 2+ nights — Lake Atitlán reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "lake-titicaca": {
+  "insiderTip": "Book accommodation for 2+ nights — Lake Titicaca reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "sucre": {
+  "insiderTip": "Book accommodation for 2+ nights — Sucre reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "san-pedro-atacama": {
+  "insiderTip": "Book accommodation for 2+ nights — San Pedro de Atacama reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "torres-del-paine": {
+  "insiderTip": "Book accommodation for 2+ nights — Torres del Paine reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "bariloche": {
+  "insiderTip": "Book accommodation for 2+ nights — Bariloche reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "mdina": {
+  "insiderTip": "Book accommodation for 2+ nights — Mdina reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "valldemossa": {
+  "insiderTip": "Book accommodation for 2+ nights — Valldemossa reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "monsanto": {
+  "insiderTip": "Book accommodation for 2+ nights — Monsanto reveals its best side beyond day-trippers.",
+  "dishes": [],
+  "sights": []
+ },
+ "sicilien": {
+  "insiderTip": "Fly to Catania, rent a car and drive 45 minutes south to Noto — the capital of baroque where every facade is a work of art. Sleep one night at an agriturismo among citrus groves, it's more Sicily than Taormina's tourist hotels ever are.",
+  "dishes": [],
+  "sights": []
+ },
+ "portland-oregon": {
+  "insiderTip": "Book Portland 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "charleston": {
+  "insiderTip": "Book Charleston 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "savannah": {
+  "insiderTip": "Book Savannah 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "santa-fe": {
+  "insiderTip": "Book Santa Fe 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "key-west": {
+  "insiderTip": "Book Key West 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "honolulu": {
+  "insiderTip": "Book Honolulu 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "st-lucia": {
+  "insiderTip": "Book Saint Lucia 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "aruba": {
+  "insiderTip": "Book Aruba 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "curacao": {
+  "insiderTip": "Book Curaçao 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "turks-caicos": {
+  "insiderTip": "Book Turks & Caicos 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "st-maarten": {
+  "insiderTip": "Book Sint Maarten 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "grenada": {
+  "insiderTip": "Book Grenada 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "addis-ababa": {
+  "insiderTip": "Book Addis Ababa 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "kyiv": {
+  "insiderTip": "Book Kyiv 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "cardiff": {
+  "insiderTip": "Book Cardiff 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "ghent": {
+  "insiderTip": "Book Ghent 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "luxembourg": {
+  "insiderTip": "Book Luxembourg 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "bratislava": {
+  "insiderTip": "Book Bratislava 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "andorra-la-vella": {
+  "insiderTip": "Book Andorra la Vella 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "san-marino": {
+  "insiderTip": "Book San Marino 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "wellington": {
+  "insiderTip": "Book Wellington 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "bishkek": {
+  "insiderTip": "Book Bishkek 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "noumea": {
+  "insiderTip": "Book Nouméa 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "suva": {
+  "insiderTip": "Book Suva 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "longyearbyen": {
+  "insiderTip": "Book Longyearbyen 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "bodo": {
+  "insiderTip": "Book Bodø 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "lerwick": {
+  "insiderTip": "Book Lerwick 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "kirkwall": {
+  "insiderTip": "Book Kirkwall 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "inverness": {
+  "insiderTip": "Book Inverness 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "aberdeen": {
+  "insiderTip": "Book Aberdeen 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "bristol": {
+  "insiderTip": "Book Bristol 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "birmingham": {
+  "insiderTip": "Book Birmingham 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "newcastle": {
+  "insiderTip": "Book Newcastle 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "plovdiv": {
+  "insiderTip": "Book Plovdiv 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "varna": {
+  "insiderTip": "Book Varna 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "cluj-napoca": {
+  "insiderTip": "Book Cluj-Napoca 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "timisoara": {
+  "insiderTip": "Book Timișoara 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "kaunas": {
+  "insiderTip": "Book Kaunas 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "tartu": {
+  "insiderTip": "Book Tartu 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "ulcinj": {
+  "insiderTip": "Book Ulcinj 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "sigulda": {
+  "insiderTip": "Book Sigulda 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "curitiba": {
+  "insiderTip": "Book Curitiba 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "galapagos": {
+  "insiderTip": "Book Galápagos 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "arequipa": {
+  "insiderTip": "Book Arequipa 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days.",
+  "dishes": [],
+  "sights": []
+ },
+ "gotland": {
+  "insiderTip": "Rent a bicycle in Visby and cycle south along the coast—Klintehamn and Tofta are worth a full day.",
+  "dishes": [
+   "Saffron pancake with lingonberry jam",
+   "Gotland lamb",
+   "Fresh shrimp and smoked fish at the harbor"
+  ],
+  "sights": [
+   "Visby City Wall",
+   "Stora Karlsö",
+   "Lummelunda Cave"
+  ]
+ },
+ "sundsvall": {
+  "insiderTip": "Take a train or rental car to High Coast — Skuleberget and Ulvön are day trips you won't forget.",
+  "dishes": [
+   "Surströmming",
+   "Tunnbröd with reindeer or vendace roe",
+   "Fresh mountain fish"
+  ],
+  "sights": [
+   "Stone Town",
+   "Norra Berget",
+   "Sundsvall Museum"
+  ]
+ },
+ "linkoping": {
+  "insiderTip": "Take the train instead of flying — 2 hours from Stockholm, often cheaper and the station is more central than the airport.",
+  "dishes": [
+   "Östgöta wadmal",
+   "Vadstenakaka",
+   "Milk pancake from Östergötland"
+  ],
+  "sights": [
+   "Linköping Cathedral",
+   "Old Linköping",
+   "Air Force Museum"
+  ]
+ },
+ "kalmar": {
+  "insiderTip": "Book 2 nights in Kalmar and drive across the bridge to Öland — Solliden, Stora Alvaret and Sandvik in one day.",
+  "dishes": [
+   "Kroppkakor",
+   "Fresh herring from Kalmarsund",
+   "Glasrike cuisine"
+  ],
+  "sights": [
+   "Kalmar Castle",
+   "Kalmar Cathedral",
+   "Öland Bridge to Öland"
+  ]
+ },
+ "karlstad": {
+  "insiderTip": "Book a boat on Lake Vänern on a summer day — sunset over Sweden's largest lake is worth the trip alone.",
+  "dishes": [
+   "Värmland klabbe",
+   "Vörtbröd",
+   "Vänern whitefish"
+  ],
+  "sights": [
+   "Karlstad Cathedral",
+   "Mariebergsskogen",
+   "Värmland Museum"
+  ]
+ },
+ "angelholm": {
+  "insiderTip": "Rent a bike and cycle between Råbocka and Vejbystrand — miles of sandy beach without crowds.",
+  "dishes": [
+   "Skåne egg cake",
+   "Spettekaka",
+   "Fresh fish from Skälderviken"
+  ],
+  "sights": [
+   "Heritage Park with animals",
+   "Ängelholm UFO monument",
+   "Råbocka Beach"
+  ]
+ },
+ "ronneby": {
+  "insiderTip": "Rent a car and drive around the Blekinge archipelago — Tjurkö and Aspö are hidden gems.",
+  "dishes": [
+   "Blekinge seafood",
+   "Local herring from the archipelago",
+   "Classic spa bakery pastries"
+  ],
+  "sights": [
+   "Brunnsparken",
+   "Holy Cross Church",
+   "Karlskrona 25 min"
+  ]
+ },
+ "dallas": {
+  "insiderTip": "Book flights via Frankfurt with Lufthansa — often cheapest and most convenient to DFW.",
+  "dishes": [
+   "Texas BBQ",
+   "Tex-Mex",
+   "Chicken-fried steak"
+  ],
+  "sights": [
+   "Sixth Floor Museum",
+   "Reunion Tower",
+   "Dallas Arts District"
+  ]
+ },
+ "leeds": {
+  "insiderTip": "Take the train to York for a day — medieval city walls, York Minster and Shambles are 25 minutes away.",
+  "dishes": [
+   "Yorkshire pudding with roast beef",
+   "Fish and chips",
+   "Curry from Bradford 20 min away"
+  ],
+  "sights": [
+   "Royal Armouries Museum",
+   "Leeds Kirkgate Market",
+   "Leeds City Museum"
+  ]
+ },
+ "goa": {
+  "insiderTip": "Stay in Palolem (south) if you want peace — Calangute and Baga have been overcrowded tourist zones since the 2010s; Anjuna is best on Wednesdays for the flea market but sleep south for quiet.",
+  "dishes": [
+   "Fish curry rice",
+   "Vindaloo",
+   "Xacuti"
+  ],
+  "sights": [
+   "Basilica of Bom Jesus in Old Goa",
+   "Anjuna Flea Market Wednesdays",
+   "Dudhsagar Waterfall"
+  ]
+ },
+ "kyoto": {
+  "insiderTip": "Stay in Gion or Higashiyama (not central Kyoto Station) — you can walk to the temples and the evening atmosphere is magical with illuminated lanterns.",
+  "dishes": [
+   "Kaiseki",
+   "Yudofu",
+   "Matcha"
+  ],
+  "sights": [
+   "Kinkaku-ji (Golden Pavilion)",
+   "Fushimi Inari",
+   "Kiyomizu-dera"
+  ]
+ },
+ "ayia-napa": {
+  "insiderTip": "Stay in Pernera or Protaras (10 min away) instead of central Ayia Napa — same beaches, half the price, no club noise at night.",
+  "dishes": [
+   "Meze",
+   "Souvlaki and gyros",
+   "Fresh grilled fish at the fishing harbour"
+  ],
+  "sights": [
+   "Cape Greco National Park",
+   "Sea Caves at Cape Greco",
+   "Ayia Napa Monastery"
+  ]
+ },
+ "krabi": {
+  "insiderTip": "Take a longtail boat at sunset to Phra Nang Cave Beach — the monsoon rains paint the sky pink and gold; boatmen at Ao Nang Beach offer 'sunset trips' for 400 baht per person, usually two hours.",
+  "dishes": [
+   "Massaman curry",
+   "Tom Yum Goong",
+   "Roti"
+  ],
+  "sights": [
+   "Railay Beach",
+   "Phra Nang Cave Beach",
+   "Tiger Cave Temple"
+  ]
+ },
+ "tulum": {
+  "insiderTip": "Rent a bike in Tulum Town (150 MXN/day) and cycle 7 km along the coast at sunset — you pass all the famous beach clubs (Be Tulum, Casa Malca, Azulik) without paying entry; stop at Matcha Mama for an organic smoothie (180 MXN).",
+  "dishes": [
+   "Tacos al pastor",
+   "Cochinita pibil",
+   "Ceviche de pescado"
+  ],
+  "sights": [
+   "Tulum Ruins",
+   "Gran Cenote",
+   "Cenote Dos Ojos"
+  ]
+ },
+ "queenstown": {
+  "insiderTip": "Take the gondola to Bob's Peak (NZ$ 60 return, or hike the Tiki Trail free 1 hour up) — the summit offers the world's most beautiful views of Lake Wakatipu and The Remarkables; stay for dinner at Stratosfare restaurant (NZ$ 99 buffet) or jump Ledge Bungy (NZ$ 235).",
+  "dishes": [
+   "Lamb",
+   "Fergburger",
+   "Greenstone Pinot Noir"
+  ],
+  "sights": [
+   "AJ Hackett Bungy",
+   "Shotover Jet",
+   "Milford Sound day trip"
+  ]
+ },
+ "koh-samui": {
+  "insiderTip": "Rent a scooter in Lamai and ride around the island — the full loop takes 2.5 hours without stops; include Hin Ta & Hin Yai rocks, Na Muang Waterfall and Lad Koh viewpoint for a perfect half-day beyond Chaweng.",
+  "dishes": [
+   "Tom Kha Gai",
+   "Pad Thai",
+   "Khanom Jin Nam Ya"
+  ],
+  "sights": [
+   "Big Buddha (Wat Phra Yai)",
+   "Wat Plai Laem",
+   "Na Muang Waterfall"
+  ]
+ },
+ "jaipur": {
+  "insiderTip": "Climb to Nahargarh Fort at sunset — taxi 300 INR from Pink City; the view over all of Jaipur in evening light is spectacular; Padao restaurant above has thali for 600 INR and cooling evening breeze after the day's heat.",
+  "dishes": [
+   "Dal Baati Churma",
+   "Laal Maas",
+   "Gatte ki Sabzi"
+  ],
+  "sights": [
+   "Amer Fort",
+   "City Palace",
+   "Hawa Mahal"
+  ]
+ },
+ "playa-del-carmen": {
+  "insiderTip": "Rent a bike in Playa Centro (150 MXN/day) and cycle north to Playa Punta Esmeralda — 20 minutes along the coast road takes you to a locally loved beach without tourist crowds; stop at Don Sirloin on Calle 28 for tacos al pastor (35 MXN each) on the way back.",
+  "dishes": [
+   "Tacos al pastor",
+   "Cochinita pibil",
+   "Marquesitas"
+  ],
+  "sights": [
+   "Quinta Avenida",
+   "Mamita's Beach Club",
+   "Cenote Azul & Cenote Jardín del Edén"
+  ]
+ },
+ "montego-bay": {
+  "insiderTip": "Skip crowded Dunn's River Falls and go instead to Mayfield Falls (1 hour west of Montego Bay) — less-visited waterfall with 7 natural pools you walk through; entry 25 USD includes local guide; more authentic experience with fewer tourists.",
+  "dishes": [
+   "Jerk chicken",
+   "Ackee and saltfish",
+   "Curry goat"
+  ],
+  "sights": [
+   "Doctor's Cave Beach",
+   "Rose Hall Great House",
+   "Dunn's River Falls"
+  ]
+ },
+ "varadero": {
+  "insiderTip": "Rent a shared taxi collective (vintage American car) for a day and go to Matanzas — the province's capital and Cuba's 'poetic capital' — where you experience authentic Cuban life instead of the resort bubble; 60–80 EUR split between 4 people.",
+  "dishes": [
+   "Ropa vieja",
+   "Lechón asado",
+   "Moros y cristianos"
+  ],
+  "sights": [
+   "Playa Varadero",
+   "Cueva de Saturno",
+   "Cayo Blanco"
+  ]
+ },
+ "protaras": {
+  "insiderTip": "Wake at 05:30 and drive to Sunrise Beach Protaras for Cyprus's most beautiful Mediterranean sunrise — golden light and 10 minutes of peace before the first swimmer arrives; the beach is 5 min from Protaras centre, free parking right there.",
+  "dishes": [
+   "Meze",
+   "Halloumi",
+   "Souvlaki & sheftalia"
+  ],
+  "sights": [
+   "Fig Tree Bay (Konnos)",
+   "Cape Greco National Park",
+   "Sea Caves"
+  ]
+ },
+ "limassol": {
+  "insiderTip": "Rent a car for 1 day and drive Limassol → Kourion → Aphrodite's Rock → Omodos village → Troodos Mountains waterfalls (Caledonia Falls). It's one of the Mediterranean's best day-drive routes — ancient theater, mythological site, wine culture and mountain hiking in 8 hours. $50 car rental + lunch in Omodos.",
+  "dishes": [
+   "Meze",
+   "Kleftiko",
+   "Cypriot fish meze"
+  ],
+  "sights": [
+   "Limassol Old Town & Limassol Castle",
+   "Limassol Marina",
+   "Kourion Ancient Theater"
+  ]
+ },
+ "fethiye": {
+  "insiderTip": "Rent a scooter in Ölüdeniz and ride the Lycian coast south to Kabak Bay (35 min). Calm hippie cove without resorts, $5 bed in bamboo huts and Turkey's most secluded beach. Book V-GO skydiving over the bay for an alternative to paragliding.",
+  "dishes": [
+   "Köfte",
+   "Iskender kebab",
+   "Manti"
+  ],
+  "sights": [
+   "Ölüdeniz Blue Lagoon",
+   "Lycian rock tombs",
+   "Babadağ paragliding"
+  ]
+ },
+ "koh-tao": {
+  "insiderTip": "Take a dawn dive at Chumphon Pinnacle — Koh Tao's best dive site with chances of whale sharks between March and May. Book the day before and be on the boat at 06:30 before day-trippers arrive.",
+  "dishes": [
+   "Massaman curry",
+   "Fresh grilled barracuda and squid at Sairee Beach 200–350 baht",
+   "Pad See Ew"
+  ],
+  "sights": [
+   "Sairee Beach",
+   "John Suwan Viewpoint",
+   "Shark Bay"
+  ]
+ },
+ "koh-phangan": {
+  "insiderTip": "Want the party without the chaos — book lodging in Haad Yuan or Why Nam just north of Haad Rin and take a longtail boat to the party. You skip the crowds but are 10 minutes from the dance floor.",
+  "dishes": [
+   "Som Tam",
+   "Fresh grilled fish and seafood at beachfront restaurants 200–400 baht",
+   "Massaman and green curry at local restaurants 80–150 baht"
+  ],
+  "sights": [
+   "Haad Rin",
+   "Than Sadet waterfall",
+   "Bottle Beach (Haad Khuat)"
+  ]
+ },
+ "ao-nang": {
+  "insiderTip": "Take a longtail boat at sunset to Phra Nang Cave Beach — boatmen at Ao Nang Beach offer sunset trips for about 400 baht per person and you'll have the cliffs almost to yourself when day-trippers leave.",
+  "dishes": [
+   "Fresh sea bass grilled on skewers at Ao Nang Beach 200–350 baht",
+   "Gaeng som",
+   "Pad Thai and green curry at beachfront restaurants 80–160 baht"
+  ],
+  "sights": [
+   "Railay Beach",
+   "Phra Nang Cave Beach",
+   "Four Islands tour"
+  ]
+ },
+ "ubud": {
+  "insiderTip": "Rise early and walk Campuhan Ridge Walk before the heat and crowds — a free walk along a green ridge minutes from town, most beautiful in morning mist before 07:00.",
+  "dishes": [
+   "Babi guling",
+   "Nasi campur",
+   "Bebek betutu"
+  ],
+  "sights": [
+   "Tegallalang Rice Terraces",
+   "Sacred Monkey Forest",
+   "Tirta Empul"
+  ]
+ },
+ "seminyak": {
+  "insiderTip": "Book sunset dinner at La Plancha or bring a cold Bintang to Double Six Beach around 17:30 — Seminyak's sunsets over the Indian Ocean are best enjoyed with your feet in the sand, not from an expensive club sofa.",
+  "dishes": [
+   "Fresh seafood and fusion cuisine at beach clubs",
+   "Nasi goreng and mie goreng",
+   "Sate lilit"
+  ],
+  "sights": [
+   "Potato Head Beach Club",
+   "Peti Tenget Temple",
+   "Seminyak Square and Jl. Kayu Aya"
+  ]
+ },
+ "hiroshima": {
+  "insiderTip": "Take the first ferry to Miyajima at dawn — the torii gate and temple are nearly empty before 09:00, and at low tide you can walk out on the sand all the way to the gate before day-trippers arrive.",
+  "dishes": [
+   "Hiroshima okonomiyaki",
+   "Fresh oysters from Hiroshima Bay, grilled or fried",
+   "Tsukemen"
+  ],
+  "sights": [
+   "Peace Memorial Park and A-Bomb Dome, UNESCO World Heritage site",
+   "Peace Memorial Museum",
+   "Miyajima"
+  ]
+ },
+ "udaipur": {
+  "insiderTip": "Take an evening boat from Rameshwar Ghat just before sunset and disembark at Jagmandir Island for a drink as the palaces light up — the golden hour over Lake Pichola is Udaipur's most magical moment.",
+  "dishes": [
+   "Dal baati churma",
+   "Laal maas",
+   "Gatte ki sabzi"
+  ],
+  "sights": [
+   "City Palace",
+   "Lake Pichola and Jagmandir Island",
+   "Jagdish Temple"
+  ]
+ },
+ "varanasi": {
+  "insiderTip": "Book a rowing boat (not motorboat) at dawn from Assi Ghat — you glide silently past waking ghats as morning light hits the river and pilgrims bathe, long before the day's crowds begin.",
+  "dishes": [
+   "Kachori sabzi",
+   "Banarasi paan",
+   "Lassi in clay cups from old lassi shops"
+  ],
+  "sights": [
+   "Dashashwamedh Ghat",
+   "Dawn boat ride along ghats as pilgrims bathe",
+   "Kashi Vishwanath Temple"
+  ]
+ },
+ "naxos": {
+  "insiderTip": "Drive to the mountain village Apeiranthos in the afternoon — the marble-built village high in the hills has cool lanes, small museums and tavernas with views. Stay until sunset and dine before driving back to the coast.",
+  "dishes": [
+   "Naxos Graviera",
+   "Fresh fish and squid at harbor tavernas",
+   "Kitron"
+  ],
+  "sights": [
+   "Portara",
+   "Naxos Chora",
+   "Mountain village Apeiranthos in marble high in the hills"
+  ]
+ },
+ "machu-picchu": {
+  "insiderTip": "Book the first entry time (06:00) and stay overnight in Aguas Calientes the night before — you'll be at the ruins in dawn mist before the day train from Cusco arrives, and have the terraces almost to yourself as clouds lift.",
+  "dishes": [
+   "Ceviche",
+   "Lomo saltado",
+   "Cuy"
+  ],
+  "sights": [
+   "Machu Picchu Citadel",
+   "Huayna Picchu",
+   "Sun Gate (Inti Punku)"
+  ]
+ }
+}
