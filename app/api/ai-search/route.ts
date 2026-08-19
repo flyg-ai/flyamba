@@ -105,7 +105,7 @@ type Activity = {
 };
 
 // Membership floor, not a bar. Set high (8) it excluded the mainstream beach
-// destinations, because the classic ones — Fuerteventura, Rhodos, Kreta, Palma,
+// destinations, because the classic ones — Fuerteventura, Rhodes, Crete, Palma,
 // Tenerife — carry no tags in flyg.ai's data and only ever qualified on score.
 // Set at 5 they are all in, while Madrid (1), Florence (1) and Prague (1) are
 // still out. Ranking, not membership, is what decides who actually shows up.
@@ -192,7 +192,7 @@ function matchesActivity(facts: DestinationFacts | undefined, activity: Activity
  * buffers its cards and sorts them by beach score before emitting. Left in model
  * order, a beach search returned Benidorm, Lloret de Mar and Sitges — every one
  * of them tagged, and therefore more legible to the model than the untagged
- * Fuerteventura (beaches 10) or Rhodos (9). Sorting puts the actual beach
+ * Fuerteventura (beaches 10) or Rhodes (9). Sorting puts the actual beach
  * destinations first and pushes the marginal ones (Tirana, beaches 7) off the
  * end of the list without needing a threshold to exclude them.
  */
