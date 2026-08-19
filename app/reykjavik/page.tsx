@@ -23,8 +23,8 @@ const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
-  const title = clampTitle(`Cheap Flights to Reykjavik ${year} — Guide, Prices & Attractions | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Reykjavik, Iceland from $${MIN_USD}, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips. Northern lights, geysers, volcanoes and geothermal lagoons.`);
+  const title = clampTitle(`Cheap Flights to Reykjavík ${year} — Guide, Prices & Attractions | Flyamba`);
+  const description = clampDescription(`Find cheap flights to Reykjavík, Iceland from $${MIN_USD}, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips. Northern lights, geysers, volcanoes and geothermal lagoons.`);
   const canonical = `${SITE}/reykjavik`;
   return {
     title,
@@ -38,19 +38,19 @@ export function generateMetadata(): Metadata {
 // ── JSON-LD (Breadcrumb + TouristDestination + FAQPage) ──────────────────────
 const FAQS: FaqItem[] = [
   {
-    q: "How much are flights to Reykjavik?",
-    a: `Round-trip fares to Reykjavik Keflavík (KEF) start from around $${MIN_USD} and average roughly $${MAX_USD} in peak summer. February and November are the cheapest months to fly, while July and August are the most expensive.`,
+    q: "How much are flights to Reykjavík?",
+    a: `Round-trip fares to Reykjavík Keflavík (KEF) start from around $${MIN_USD} and average roughly $${MAX_USD} in peak summer. February and November are the cheapest months to fly, while July and August are the most expensive.`,
   },
   {
-    q: "When is the cheapest time to fly to Reykjavik?",
+    q: "When is the cheapest time to fly to Reykjavík?",
     a: `February is the cheapest month, with fares from about $${MIN_USD} round trip — winter, with northern lights and lower tourist numbers. Booking 4–6 weeks ahead and flying midweek usually gets the best price.`,
   },
   {
-    q: "Are there non-stop flights to Reykjavik?",
-    a: "Yes. Keflavík is Icelandair's home hub, with non-stop flights from many US and European cities including New York, Boston, London, Copenhagen, Oslo and Paris. Iceland's stopover programme lets you break a transatlantic trip in Reykjavik at no extra airfare.",
+    q: "Are there non-stop flights to Reykjavík?",
+    a: "Yes. Keflavík is Icelandair's home hub, with non-stop flights from many US and European cities including New York, Boston, London, Copenhagen, Oslo and Paris. Iceland's stopover programme lets you break a transatlantic trip in Reykjavík at no extra airfare.",
   },
   {
-    q: "What is the best time to visit Reykjavik?",
+    q: "What is the best time to visit Reykjavík?",
     a: "June to August brings the midnight sun, milder weather (10–14°C) and the best conditions for hiking and nature. September to March is northern-lights season with dark evenings. May and October are quieter shoulder months with lower prices.",
   },
 ];
@@ -63,13 +63,13 @@ function jsonLd() {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
       { "@type": "ListItem", position: 2, name: "Iceland" },
-      { "@type": "ListItem", position: 3, name: "Reykjavik", item: url },
+      { "@type": "ListItem", position: 3, name: "Reykjavík", item: url },
     ],
   };
   const touristDestination = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
-    name: "Reykjavik",
+    name: "Reykjavík",
     description: REYKJAVIK.tagline,
     touristType: ["City Break", "Nature", "Nightlife"],
     url,
@@ -171,7 +171,7 @@ export default function ReykjavikHub() {
             over preload in most cases, and warn against combining them. loading="eager"
             is required too: dropping `priority` makes next/image default to lazy, which
             would otherwise leave the LCP image lazy-loaded. */}
-        <SmartImage src={HERO} alt="Cheap flights to Reykjavik, Iceland" fill fetchPriority="high" loading="eager" sizes="100vw" className="object-cover" />
+        <SmartImage src={HERO} alt="Cheap flights to Reykjavík, Iceland" fill fetchPriority="high" loading="eager" sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/85">
@@ -182,7 +182,7 @@ export default function ReykjavikHub() {
             <span className="opacity-40">·</span>
             <span className="rounded-full border border-white/25 bg-white/10 px-2.5 py-0.5 backdrop-blur">{REYKJAVIK.summerTemp}°C summer</span>
           </div>
-          <h1 className="mt-4 max-w-4xl font-serif text-5xl font-semibold text-white sm:text-7xl">Cheap Flights to Reykjavik</h1>
+          <h1 className="mt-4 max-w-4xl font-serif text-5xl font-semibold text-white sm:text-7xl">Cheap Flights to Reykjavík</h1>
           <p className="mt-4 max-w-xl text-lg text-white/85">{REYKJAVIK.tagline}</p>
         </div>
       </section>
@@ -216,7 +216,7 @@ export default function ReykjavikHub() {
       {/* 4. Booking insights */}
       <section className="mx-auto mt-12 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Booking insights</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Smart tips for booking Reykjavik</h2>
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Smart tips for booking Reykjavík</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "4–6 weeks ahead" },
@@ -236,7 +236,7 @@ export default function ReykjavikHub() {
       {/* 5. Category cards */}
       <section id="explore" className="mx-auto mt-14 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Complete guide</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Explore Reykjavik</h2>
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Explore Reykjavík</h2>
         <div className="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-3">
           {categories.map((c) => (
             <Link
@@ -244,7 +244,7 @@ export default function ReykjavikHub() {
               href={`/reykjavik/${c.slug}`}
               className="group relative h-[180px] overflow-hidden rounded-3xl border border-border"
             >
-              <SmartImage src={CATEGORY_IMAGES[c.slug] ?? HERO} alt={`Reykjavik ${c.label}`} fill sizes="(max-width:1024px) 50vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
+              <SmartImage src={CATEGORY_IMAGES[c.slug] ?? HERO} alt={`Reykjavík ${c.label}`} fill sizes="(max-width:1024px) 50vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-110" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between p-4 text-white">
                 <span className="flex items-center gap-2 font-serif text-xl font-semibold"><span aria-hidden>{c.emoji}</span> {c.label}</span>
@@ -258,7 +258,7 @@ export default function ReykjavikHub() {
       {/* 6. Price by month (USD) */}
       <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Reykjavik?</h2>
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Reykjavík?</h2>
         <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
         <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
           <div className="flex h-56 items-end gap-2">
@@ -282,7 +282,7 @@ export default function ReykjavikHub() {
       {/* 7. Non-stop cities (USD) */}
       <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Reykjavik from major cities</h2>
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Reykjavík from major cities</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {NON_STOP.map((r) => (
             <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
@@ -296,9 +296,9 @@ export default function ReykjavikHub() {
         </div>
       </section>
 
-      {/* 8. Why Reykjavik */}
+      {/* 8. Why Reykjavík */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Reykjavik?</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Reykjavík?</p>
         <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Why Fly to Reykjavík with Flyamba?</h2>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {WHY.map((w) => (
@@ -312,7 +312,7 @@ export default function ReykjavikHub() {
 
       {/* 9. AI chat */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <AskAiWidget destination="Reykjavik" />
+        <AskAiWidget destination="Reykjavík" />
       </section>
 
       {/* 10. Preview sections */}
@@ -343,7 +343,7 @@ export default function ReykjavikHub() {
       {/* 11. Nearby cities */}
       <section id="nearby" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Nearby</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Fly onward from Reykjavik</h2>
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Fly onward from Reykjavík</h2>
         <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {REYKJAVIK.nearby.map((n) => (
             <Link key={n.city} href={n.href} className="group flex items-center justify-between rounded-2xl border border-border bg-card px-5 py-4 transition hover:-translate-y-0.5 hover:border-accent">
@@ -372,11 +372,11 @@ export default function ReykjavikHub() {
 
       {/* 12. SEO footer links */}
       <section className="mx-auto mt-16 max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Reykjavik guides</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Reykjavík guides</p>
         <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-3 lg:grid-cols-4">
           {categories.map((c) => (
             <Link key={c.slug} href={`/reykjavik/${c.slug}`} className="text-muted-foreground transition hover:text-accent">
-              Reykjavik {c.label.toLowerCase()} →
+              Reykjavík {c.label.toLowerCase()} →
             </Link>
           ))}
           {REYKJAVIK.nearby.map((n) => (
