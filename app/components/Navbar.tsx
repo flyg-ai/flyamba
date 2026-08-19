@@ -7,9 +7,10 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
   { href: "/", label: "Search" },
-  { href: "/#explore", label: "Explore" },
+  { href: "/where-is-it-warm", label: "Where's it warm" },
+  { href: "/low-fare-calendar", label: "Cheap dates" },
+  { href: "/guides", label: "Guides" },
   { href: "/compare", label: "Compare" },
-  { href: "/#deals", label: "Deals" },
 ];
 
 // Hash anchors scroll within the homepage (plain <a>); real routes get a

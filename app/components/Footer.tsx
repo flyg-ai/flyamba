@@ -5,18 +5,25 @@ import { Plane } from "lucide-react";
 // column of placeholder "#" hrefs, several to pages that were never built.
 const columns: { title: string; links: { label: string; href: string }[] }[] = [
   {
+    title: "Plan a trip",
+    links: [
+      { label: "Where's it warm", href: "/where-is-it-warm" },
+      { label: "Cheapest dates to fly", href: "/low-fare-calendar" },
+      { label: "Travel guides", href: "/guides" },
+      { label: "Compare destinations", href: "/compare" },
+    ],
+  },
+  {
     title: "Product",
     links: [
-      { label: "Search", href: "/" },
-      { label: "Explore", href: "/explore" },
-      { label: "Compare", href: "/compare" },
+      { label: "Flight search", href: "/" },
+      { label: "Explore destinations", href: "/explore" },
     ],
   },
   {
     title: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Guides", href: "/guides" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -52,7 +59,7 @@ export function Footer() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
             {columns.map((c) => (
               <div key={c.title}>
                 <h4 className="text-sm font-semibold text-foreground">{c.title}</h4>
