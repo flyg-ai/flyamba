@@ -331,6 +331,52 @@ meant Barcelona won every price row it appeared in. `destinations.price` is stil
 number on a destination's own page; it is just not comparable across cities. See
 `comparablePriceSek()` in `comparable.ts`.
 
+## Climate data
+
+`climate_data` in Supabase holds monthly `temp_max`, `temp_min`, `precipitation`,
+`sunshine_hours` and `sea_temp` per destination slug. 6,888 rows, 574 destinations,
+all twelve months each; all 550 catalog slugs resolve. Read it through
+`app/lib/climate.ts` — never directly, and never from a client component.
+
+**Known debt — 197 of the 550 catalog destinations (36%) are not measured.** The
+`data_source` column has two values. `open_meteo` is a weather service. `gpt_seed`
+is an LLM that was asked to fill in destinations the service did not cover, and it
+answered for every column whether or not the column applied. No destination mixes
+the two: it is 353 measured and 197 invented.
+
+The damage is uneven, and inverted between columns:
+
+| column | destinations with a value | of which measured |
+| --- | --- | --- |
+| `temp_max` / `temp_min` | 550 / 550 | 64% |
+| `sunshine_hours` | 529 / 550 | 63% |
+| `sea_temp` | 380 / 550 | **50%** |
+| `precipitation` | 370 / 550 | **100%** |
+
+`precipitation` is the one column the seeder almost entirely skipped (9% of its rows
+carry a value), which makes it the lowest-coverage column and the only trustworthy
+one. `sea_temp` is the worst: half its values are invented, and the invention is
+visible — Munich, Kathmandu, La Paz, Bratislava, Brno, Augsburg and Almaty are all
+landlocked and all carry `sea_temp: 0.0`. `climate.ts` normalises that 0 to null;
+do not undo it.
+
+Practical consequences:
+
+- A filter built on `sea_temp` or `sunshine_hours` is half editorial fiction. Say so
+  in the UI, or pick a column with better provenance.
+- `temp_max` drives the sort on every `/where-is-it-warm` page, so roughly a third of
+  the ordering rests on invented numbers. They are plausible, not measured.
+- Filtering `data_source = 'open_meteo'` would cut the catalog to 353 destinations.
+  That was judged too expensive for the month pages; a future pass could re-seed the
+  197 from a real source instead.
+
+**Also:** `app/data/destination-facts.ts` `scores` are worse and should not be used
+for filtering at all. Kuwait scores 9 for nightlife in a country where alcohol is
+banned; `nightlife >= 9` returns Akureyri and Billund; `activities >= 10` returns
+Augsburg and Detroit but not Rome, Paris or Athens. The file's own header says the
+scores are editorial judgements authored for a Swedish audience and that some are
+plainly wrong. `/where-is-it-warm` filtered on them briefly and no longer does.
+
 ## Next up
 
 1. **`daily_prices` has no writer.** Needs a `/api/cron/prices` route hitting Travelpayouts
@@ -343,3 +389,17 @@ number on a destination's own page; it is just not comparable across cities. See
    the built-out hubs. More pairs means authoring more `scores` in `all-destinations.ts`
    (madrid and mykonos are the two quickest wins — they already have hubs).
 5. `README.md` is still create-next-app boilerplate.
+6. **Categories should be real pages, not query parameters.** Today the homepage links its
+   category pills at `/explore?type=Beach+%26+Sun` (`app/page.tsx:149`) — one templated page
+   filtered client-side, which gives every category the same title, the same H1 and no
+   indexable URL of its own. Each category should be its own static route with its own
+   metadata, H1 and body copy, the way flyg.ai does it with `/weekend`, `/sol-och-bad`,
+   `/familj` and friends (each a single `page.tsx`; `/all-inclusive` also shows the
+   sub-page shape). Same pattern, Flyamba's branding and voice.
+
+   **The categories must not be translated across from flyg.ai.** flyg.ai's set is built for
+   how Swedes search — `charter` and `all-inclusive` are package-holiday concepts with no
+   equivalent search demand in English, and `city-weekend` is a Swedish coinage. Picking
+   Flyamba's set is a keyword-research task in its own right, against **US search volume as
+   the primary market**: find what Americans actually type, then build to that. Treating it
+   as a port would inherit a Swedish taxonomy and its search volume, which is zero here.

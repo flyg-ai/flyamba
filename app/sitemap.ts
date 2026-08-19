@@ -7,6 +7,7 @@ import { guides, guideHref } from "@/app/data/guides";
 import { CALENDAR_DESTINATIONS, CALENDAR_AIRLINES, lowFareHref } from "@/app/lib/low-fare";
 import { SITE } from "@/app/lib/destination-helpers";
 import { TOP_PAIRS, pairHref } from "@/app/compare/pairs";
+import { MONTHS as WARM_MONTHS, warmHref } from "@/app/where-is-it-warm/months";
 
 // Replaces the hand-maintained public/sitemap.xml. Generated at build time from
 // the same data the pages render from, so a new destination in the catalog shows
@@ -132,6 +133,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE}/${a.slug}/low-fare-calendar`,
       lastModified,
       changeFrequency: "daily",
+      priority: 0.7,
+    });
+  }
+
+  // Where is it warm: one page per month. The /where-is-it-warm hub itself does
+  // not exist yet — when it lands it must go in STATIC_ROUTES, or readHubs() will
+  // read the folder as a city called "where-is-it-warm".
+  for (const m of WARM_MONTHS) {
+    entries.push({
+      url: `${SITE}${warmHref(m.slug)}`,
+      lastModified,
+      changeFrequency: "monthly",
       priority: 0.7,
     });
   }
