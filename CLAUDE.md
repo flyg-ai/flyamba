@@ -230,6 +230,20 @@ after adding images rather than reaching for the sibling project's loader.
 `fetchpriority` attribute Lighthouse reports as missing. The Image docs say to prefer
 `fetchPriority="high"` over `preload` in most cases and warn against combining them.
 
+**Known debt — `sizes` on the category cards over-declares.** The hub category grids
+use `sizes="(max-width:1024px) 50vw, 33vw"`, but the box is **389 CSS px** at every
+viewport above 1280, because `max-w-7xl` caps the container at 1280 and the grid is three
+columns inside it. `33vw` claims 845 px on a 2560 screen. The correct string is
+`(max-width:639px) calc(100vw - 32px), (max-width:1023px) calc((100vw - 72px) / 2), 390px`
+— the same maths already applied to `HomeCard` and `AiResultCard`.
+
+It is currently **harmless, and it is worth knowing why**: nothing in
+`public/images/content/` is wider than 800 px any more (one exception, the full-bleed
+HomeHero image at 1600), so the browser cannot fetch anything larger than the box needs no
+matter what `sizes` claims. The over-declaration only starts costing bytes again if someone
+adds a content image wider than ~800 px, or reintroduces generated variants. Fixing it
+properly means touching 28 hub files, which was judged not worth it in Aug 2026.
+
 **Third-party analytics we did not install:** the Travelpayouts search widget
 (`tpwdg.com`) embeds a `widgets.kiwi.com` iframe whose bundle contains Kiwi's GTM container
 `GTM-MG27K2V`, which loads Google Analytics. It is the single biggest TBT item on a hub page
