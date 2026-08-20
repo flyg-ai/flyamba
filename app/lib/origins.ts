@@ -25,6 +25,22 @@ export const SUPPORTED_ORIGINS: Origin[] = [
   { iata: "LAX", label: "Los Angeles", country: "US" },
   { iata: "CHI", label: "Chicago", country: "US" },
   { iata: "MIA", label: "Miami", country: "US" },
+  // Added Aug 2026 for the /cheap-flights-from-* pages. Every one was verified
+  // against v1/prices/cheap before being added — Travelpayouts answers for all of
+  // them, so the previous short list was a gap rather than a limit. Each costs one
+  // upstream call a night.
+  { iata: "ATL", label: "Atlanta", country: "US" },
+  { iata: "DFW", label: "Dallas", country: "US" },
+  { iata: "HOU", label: "Houston", country: "US" },
+  { iata: "MSP", label: "Minneapolis", country: "US" },
+  { iata: "DEN", label: "Denver", country: "US" },
+  { iata: "DTT", label: "Detroit", country: "US" },
+  { iata: "PHX", label: "Phoenix", country: "US" },
+  { iata: "TPA", label: "Tampa", country: "US" },
+  { iata: "SEA", label: "Seattle", country: "US" },
+  { iata: "SLC", label: "Salt Lake City", country: "US" },
+  { iata: "AUS", label: "Austin", country: "US" },
+  { iata: "SAN", label: "San Diego", country: "US" },
   { iata: "YTO", label: "Toronto", country: "CA" },
   { iata: "DUB", label: "Dublin", country: "IE" },
   { iata: "AMS", label: "Amsterdam", country: "NL" },

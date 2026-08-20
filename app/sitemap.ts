@@ -8,6 +8,7 @@ import { CALENDAR_DESTINATIONS, CALENDAR_AIRLINES, lowFareHref } from "@/app/lib
 import { SITE } from "@/app/lib/destination-helpers";
 import { TOP_PAIRS, pairHref } from "@/app/compare/pairs";
 import { MONTHS as WARM_MONTHS, warmHref } from "@/app/where-is-it-warm/months";
+import { DEPARTURES, departureHref } from "@/app/lib/departures";
 
 // Replaces the hand-maintained public/sitemap.xml. Generated at build time from
 // the same data the pages render from, so a new destination in the catalog shows
@@ -36,6 +37,12 @@ const NON_ROUTE_DIRS = new Set([
   "data",
   "lib",
   ...CALENDAR_AIRLINES.map((a) => a.slug),
+  // Each departure page is its own folder — app/cheap-flights-from-atlanta —
+  // because Next only treats a bracketed segment as dynamic when it is the whole
+  // folder name. That makes fourteen top-level folders with a page.tsx, which
+  // readHubs() would otherwise emit as fourteen cities called
+  // "cheap-flights-from-atlanta". They are added to the sitemap below instead.
+  ...DEPARTURES.map((d) => `cheap-flights-from-${d.slug}`),
 ]);
 
 // Anything already covered above must not also be emitted as a destination hub.
@@ -132,6 +139,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const a of CALENDAR_AIRLINES) {
     entries.push({
       url: `${SITE}/${a.slug}/low-fare-calendar`,
+      lastModified,
+      changeFrequency: "daily",
+      priority: 0.7,
+    });
+  }
+
+  // Departure pages: one per city, each a real folder — see NON_ROUTE_DIRS above
+  // for why they must be excluded from the hub scan.
+  for (const d of DEPARTURES) {
+    entries.push({
+      url: `${SITE}${departureHref(d.slug)}`,
       lastModified,
       changeFrequency: "daily",
       priority: 0.7,
