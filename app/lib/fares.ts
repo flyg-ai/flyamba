@@ -18,6 +18,8 @@ export type Fare = {
   airline: string | null;
   /** False means round trip. Never label a round-trip fare "one way". */
   oneWay: boolean;
+  /** When we saw this price. The label shows it — see US_ORIGIN_CHAIN below. */
+  fetchedAt: string | null;
 };
 
 /** Cheapest fare plus one alternative date pair, cheapest first. */
@@ -31,6 +33,7 @@ type Row = {
   return_date: string | null;
   airline: string | null;
   one_way: boolean;
+  fetched_at: string | null;
 };
 
 function toFare(r: Row): Fare {
@@ -40,6 +43,7 @@ function toFare(r: Row): Fare {
     returnDate: r.return_date,
     airline: r.airline,
     oneWay: r.one_way,
+    fetchedAt: r.fetched_at,
   };
 }
 
@@ -59,7 +63,7 @@ export async function getFaresByOrigin(
 
   const { data, error } = await supabaseServer
     .from("origin_fares")
-    .select("slug, rank, price_usd, depart_date, return_date, airline, one_way")
+    .select("slug, rank, price_usd, depart_date, return_date, airline, one_way, fetched_at")
     .eq("origin", origin.toUpperCase())
     .eq("one_way", oneWay)
     .order("rank", { ascending: true });
@@ -88,7 +92,7 @@ export async function getFares(
 
   const { data, error } = await supabaseServer
     .from("origin_fares")
-    .select("slug, rank, price_usd, depart_date, return_date, airline, one_way")
+    .select("slug, rank, price_usd, depart_date, return_date, airline, one_way, fetched_at")
     .eq("origin", origin.toUpperCase())
     .eq("one_way", oneWay)
     .in("slug", slugs)
@@ -139,4 +143,101 @@ export function formatFareDates(fare: Fare): string | null {
   const to = fmt(fare.returnDate, true);
   if (!from || !to) return null;
   return `${from}–${to}`;
+}
+
+// ---------------------------------------------------------------------------
+// US fare table
+//
+// New York is the default because it has the best coverage of the four US
+// origins we pull — 301 destinations against Miami's 169, Chicago's 175 and Los
+// Angeles's 210 — and because the label always names the airport, so a New York
+// price can never read as a price from somewhere else.
+//
+// DISPLAY AND SORT DELIBERATELY DIFFER, AND MUST KEEP DIFFERING.
+//
+// For display we fall back through the chain: no New York fare, show Miami, then
+// Chicago, then Los Angeles, labelled with whichever one it came from. That is
+// still true, and it cuts the number of cards with no price at all.
+//
+// For sorting we use New York ONLY, including when the card is showing a Miami
+// price. Price is the tiebreak in the warm-destination sort, and a column mixing
+// four origins is not a column — a $200 Miami fare and a $200 New York fare are
+// not comparable quantities, so ranking on the mixture would order the grid by
+// which city we happened to have data for. A destination with no New York fare
+// sorts last within its tie group even when it shows a Miami price.
+export const US_ORIGIN_CHAIN = ["NYC", "MIA", "CHI", "LAX"] as const;
+
+/** The default origin, and the only one the sort ever reads. */
+export const SORT_ORIGIN = "NYC";
+
+export type UsFare = {
+  fare: Fare;
+  /** The airport this price is actually from — always shown next to it. */
+  origin: (typeof US_ORIGIN_CHAIN)[number];
+};
+
+export type UsFareTable = {
+  /** Cheapest fare per slug after falling through the chain. For display. */
+  display: Record<string, UsFare>;
+  /** New York price per slug. For sorting only. */
+  sortPrice: Record<string, number>;
+};
+
+let tableCache: Promise<UsFareTable> | null = null;
+
+async function loadUsFareTable(): Promise<UsFareTable> {
+  const display: Record<string, UsFare> = {};
+  const sortPrice: Record<string, number> = {};
+
+  // Walked in chain order, and an earlier origin is never overwritten by a later
+  // one — first hit wins, which is what makes the fallback a preference order.
+  for (const origin of US_ORIGIN_CHAIN) {
+    const byOrigin = await getFaresByOrigin(origin);
+    for (const [slug, options] of Object.entries(byOrigin)) {
+      const cheapest = options[0];
+      if (!cheapest) continue;
+      if (origin === SORT_ORIGIN) sortPrice[slug] = cheapest.priceUsd;
+      if (!display[slug]) display[slug] = { fare: cheapest, origin };
+    }
+  }
+  console.log(
+    `[fares] US table: ${Object.keys(display).length} destinations with a price, ` +
+      `${Object.keys(sortPrice).length} of them from ${SORT_ORIGIN}`,
+  );
+  return { display, sortPrice };
+}
+
+/** Memoized: a twelve-page build reads the four origins once, not forty-eight times. */
+export function getUsFareTable(): Promise<UsFareTable> {
+  return (tableCache ??= loadUsFareTable());
+}
+
+/**
+ * The compact card label: "$153 rt · NYC · seen Aug 19".
+ *
+ * Never "from $153". These are fares we observed, not fares we are offering, and
+ * US DOT's full-fare advertising rule (14 CFR 399.84) is about advertised prices
+ * being available to buy. Past tense and an origin keep this an observation.
+ */
+export function formatFareLabelShort(f: UsFare): string {
+  const seen = f.fare.fetchedAt
+    ? new Date(f.fare.fetchedAt).toLocaleString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })
+    : null;
+  const trip = f.fare.oneWay ? "one way" : "rt";
+  return [`$${f.fare.priceUsd.toLocaleString()} ${trip}`, f.origin, seen ? `seen ${seen}` : null]
+    .filter(Boolean)
+    .join(" · ");
+}
+
+/** The long form for destination pages: two lines, the second one the detail. */
+export function formatFareLabelLong(f: UsFare, originLabel: string): { headline: string; detail: string | null } {
+  const seen = f.fare.fetchedAt
+    ? new Date(f.fare.fetchedAt).toLocaleString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })
+    : null;
+  const trip = f.fare.oneWay ? "one way" : "round trip";
+  const dates = formatFareDates(f.fare);
+  return {
+    headline: `$${f.fare.priceUsd.toLocaleString()} ${trip} from ${originLabel}`,
+    detail: [seen ? `seen ${seen}` : null, dates].filter(Boolean).join(" · ") || null,
+  };
 }

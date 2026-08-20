@@ -1,9 +1,8 @@
 import { createClient } from "@supabase/supabase-js";
-// The catalog stores SEK (seeded from flyg.ai); app/lib/format.ts owns the rate.
-import { usd } from "./format";
 import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 import { DESTINATION_FACTS } from "@/app/data/destination-facts";
 import { HUB_CITY_SET } from "./hubs";
+import { getUsFareTable, formatFareLabelShort, type UsFare } from "./fares";
 
 // Monthly average high temperatures (°C) per destination, read from the Supabase
 // `climate_data` table at build time. Same job as flyg.ai's lib/landingData.ts,
@@ -161,8 +160,23 @@ export type WarmDestination = {
   precipitationMm: number | null;
   /** Sea temperature, °C. Null for inland destinations and where unmeasured. */
   seaTempC: number | null;
-  /** Cheapest month's fare, USD. 0 when the catalog has no price. */
-  priceUsd: number;
+  /**
+   * Real observed fare for display, from origin_fares. Null when we hold no US
+   * fare for this destination — render nothing rather than falling back to the
+   * catalog estimate, which is what made the old figure wrong. See fares.ts.
+   */
+  fare: UsFare | null;
+  /**
+   * The card label, formatted here rather than in the component: WarmBrowser is a
+   * client component and fares.ts carries the service-role Supabase client, so the
+   * formatter cannot cross that boundary. A plain string can.
+   */
+  fareLabel: string | null;
+  /**
+   * New York price, for sorting only. Null when we have none, which sorts the
+   * destination last within its tie group even if `fare` shows a Miami price.
+   */
+  sortPriceUsd: number | null;
 };
 
 // ---------------------------------------------------------------------------
@@ -250,14 +264,13 @@ function sortScore(d: WarmDestination, tier: 1 | 2 | 3 | 4): number {
  */
 export async function buildDestinations(monthIndex: number): Promise<WarmDestination[]> {
   const map = await temps();
+  const fares = await getUsFareTable();
   const out: WarmDestination[] = [];
   const byCatalog = new Map(ALL_DESTINATIONS.map((d) => [d.slug, d]));
 
   for (const d of ALL_DESTINATIONS) {
     const climate = map[d.slug]?.[monthIndex];
     if (!climate) continue;
-
-    const positives = (d.monthlyPrices ?? []).filter((p): p is number => typeof p === "number" && p > 0);
 
     out.push({
       slug: d.slug,
@@ -269,7 +282,9 @@ export async function buildDestinations(monthIndex: number): Promise<WarmDestina
       tempMinC: climate.tempMinC,
       precipitationMm: climate.precipitationMm,
       seaTempC: climate.seaTempC,
-      priceUsd: positives.length ? usd(Math.min(...positives)) : 0,
+      fare: fares.display[d.slug] ?? null,
+      fareLabel: fares.display[d.slug] ? formatFareLabelShort(fares.display[d.slug]) : null,
+      sortPriceUsd: fares.sortPrice[d.slug] ?? null,
     });
   }
 
@@ -289,7 +304,7 @@ export async function buildDestinations(monthIndex: number): Promise<WarmDestina
       sortScore(b, tiers.get(b.slug)!) - sortScore(a, tiers.get(a.slug)!) ||
       b.tempC - a.tempC ||
       rank(a) - rank(b) ||
-      (a.priceUsd || Infinity) - (b.priceUsd || Infinity) ||
+      (a.sortPriceUsd ?? Infinity) - (b.sortPriceUsd ?? Infinity) ||
       a.slug.localeCompare(b.slug),
   );
 }

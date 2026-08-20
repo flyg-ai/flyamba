@@ -22,6 +22,16 @@ export const dynamicParams = false;
 // served from a stale .next/cache. That would otherwise mark this route dynamic;
 // force-static keeps all twelve pages prerendered at build time.
 export const dynamic = "force-static";
+// Daily, for the same reason the hub has it: the cards now carry a real fare and
+// a "seen Aug 19" stamp, and a force-static page with no revalidate would still
+// be claiming Aug 19 in November. Twelve regenerations a day is nothing.
+//
+// force-static and revalidate are not in conflict — the first decides that the
+// page is prerendered rather than request-time, the second how often that
+// prerender is refreshed. force-static is here because climate.ts reads Supabase
+// with cache: "no-store", which would otherwise mark the route dynamic; do not
+// remove either one without reading the note in app/lib/climate.ts.
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: { params: Promise<{ month: string }> }): Promise<Metadata> {
   const { month } = await params;

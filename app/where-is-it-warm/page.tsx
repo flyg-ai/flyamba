@@ -176,10 +176,8 @@ export default async function WhereIsItWarmHub() {
                       </span>
                     </span>
                     <span className="block truncate text-xs text-muted-foreground">{d.country}</span>
-                    {d.priceUsd > 0 && (
-                      <span className="mt-0.5 block text-xs text-muted-foreground">
-                        from <span className="font-semibold text-foreground">${d.priceUsd.toLocaleString()}</span>
-                      </span>
+                    {d.fareLabel && (
+                      <span className="mt-0.5 block truncate text-xs font-medium text-accent">{d.fareLabel}</span>
                     )}
                   </span>
                 </Link>

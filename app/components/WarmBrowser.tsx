@@ -428,10 +428,10 @@ export function WarmBrowser({
                 <div className="p-3">
                   <h3 className="truncate font-serif text-lg font-semibold text-foreground">{d.name}</h3>
                   <p className="truncate text-xs text-muted-foreground">{d.country}</p>
-                  {d.priceUsd > 0 && (
-                    <p className="mt-1.5 text-xs font-medium text-muted-foreground">
-                      from <span className="text-accent">${d.priceUsd.toLocaleString()}</span>
-                    </p>
+                  {/* No fare, no line. Never the catalog estimate as a stand-in —
+                      it is a Stockholm number and wrong by a median 2.35x here. */}
+                  {d.fareLabel && (
+                    <p className="mt-1.5 truncate text-xs font-medium text-accent">{d.fareLabel}</p>
                   )}
                 </div>
               </Link>
