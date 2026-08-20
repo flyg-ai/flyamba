@@ -17,7 +17,14 @@ import type { MonthSlug } from "./months";
  * next to it can prove wrong.
  */
 export type MonthCopy = {
-  /** Kept under 60 characters so clampTitle does not drop the brand. */
+  /**
+   * The phrase people actually type, which is NOT the phrase on the page.
+   * "warm places to visit in december" is searched 5,500 times a month in the US
+   * against a fraction of that for "where is it warm in december", so the title
+   * carries the first and the H1 carries the second. The page answers both.
+   *
+   * Kept under 60 characters so clampTitle does not drop the brand.
+   */
   title: string;
   description: string;
   h1: string;
@@ -81,7 +88,7 @@ export const HUB_COPY = {
 
 export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   january: {
-    title: "Where Is It Warm in January? | Flyamba",
+    title: "Warm Places to Visit in January | Flyamba",
     description:
       "Nowhere in Europe clears 75°F in January. The warmth is in Southeast Asia, the Caribbean and the southern hemisphere. See every destination.",
     h1: "Where Is It Warm in January?",
@@ -136,7 +143,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   february: {
-    title: "Where Is It Warm in February? | Flyamba",
+    title: "Warm Places to Visit in February | Flyamba",
     description:
       "February mirrors January: Southeast Asia, the Caribbean and the southern hemisphere. See every destination above your temperature, warmest first.",
     h1: "Where Is It Warm in February?",
@@ -191,7 +198,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   march: {
-    title: "Where Is It Warm in March? | Flyamba",
+    title: "Warm Places to Visit in March | Flyamba",
     description:
       "Southeast Asia peaks in March and the Caribbean holds, while the Med is still weeks away. See every warm destination, sorted warmest first.",
     h1: "Where Is It Warm in March?",
@@ -246,7 +253,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   april: {
-    title: "Where Is It Warm in April? | Flyamba",
+    title: "Warm Places to Visit in April | Flyamba",
     description:
       "April is the year's narrowest month for warmth — the north has not arrived, the south has cooled. See which destinations still clear your temperature.",
     h1: "Where Is It Warm in April?",
@@ -301,7 +308,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   may: {
-    title: "Where Is It Warm in May? | Flyamba",
+    title: "Warm Places to Visit in May | Flyamba",
     description:
       "May is when Europe switches on: around 75 Mediterranean destinations cross 75°F at once. See all of them plus the tropics, warmest first.",
     h1: "Where Is It Warm in May?",
@@ -356,7 +363,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   june: {
-    title: "Where Is It Warm in June? | Flyamba",
+    title: "Warm Places to Visit in June | Flyamba",
     description:
       "June brings around 180 European destinations above 75°F, with the sea finally catching up. See every warm destination, sorted warmest first.",
     h1: "Where Is It Warm in June?",
@@ -411,7 +418,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   july: {
-    title: "Where Is It Warm in July? | Flyamba",
+    title: "Warm Places to Visit in July | Flyamba",
     description:
       "July is peak northern summer — over 300 destinations above 75°F. The question becomes where is too hot. See the full list, warmest first.",
     h1: "Where Is It Warm in July?",
@@ -466,7 +473,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   august: {
-    title: "Where Is It Warm in August? | Flyamba",
+    title: "Warm Places to Visit in August | Flyamba",
     description:
       "August is the warmest month by count: over 310 destinations above 75°F, with the sea at its annual peak. See the full list, warmest first.",
     h1: "Where Is It Warm in August?",
@@ -521,7 +528,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   september: {
-    title: "Where Is It Warm in September? | Flyamba",
+    title: "Warm Places to Visit in September | Flyamba",
     description:
       "September keeps August's sea and loses August's crowds — around 150 European destinations still clear 75°F. See every warm destination.",
     h1: "Where Is It Warm in September?",
@@ -576,7 +583,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   october: {
-    title: "Where Is It Warm in October? | Flyamba",
+    title: "Warm Places to Visit in October | Flyamba",
     description:
       "October halves Europe's warm list. Madeira, the Azores and the Canaries hold on while the tropics take over. See the full list, warmest first.",
     h1: "Where Is It Warm in October?",
@@ -631,7 +638,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   november: {
-    title: "Where Is It Warm in November? | Flyamba",
+    title: "Warm Places to Visit in November | Flyamba",
     description:
       "By November Europe is down to Madeira, the Azores and Tenerife, and the tropics are back in dry season. See every destination above 75°F.",
     h1: "Where Is It Warm in November?",
@@ -686,7 +693,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   },
 
   december: {
-    title: "Where Is It Warm in December? | Flyamba",
+    title: "Warm Places to Visit in December | Flyamba",
     description:
       "December warmth means long haul: Southeast Asia in dry season, the Caribbean and the southern hemisphere. See every destination above 75°F.",
     h1: "Where Is It Warm in December?",
