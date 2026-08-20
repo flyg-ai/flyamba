@@ -2,6 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 // The catalog stores SEK (seeded from flyg.ai); app/lib/format.ts owns the rate.
 import { usd } from "./format";
 import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
+import { DESTINATION_FACTS } from "@/app/data/destination-facts";
+import { HUB_CITY_SET } from "./hubs";
 
 // Monthly average high temperatures (°C) per destination, read from the Supabase
 // `climate_data` table at build time. Same job as flyg.ai's lib/landingData.ts,
@@ -11,10 +13,12 @@ import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 // never be imported from a "use client" file. `buildDestinations` returns a narrow,
 // plain-object shape that is safe to hand to a client component as props.
 //
-// It deliberately does NOT read destination-facts.ts. The editorial `scores` there
-// are partly machine-generated and demonstrably wrong in places — Kuwait scores 9 for
-// nightlife in a country where alcohol is banned — so the page filters on measured
-// climate instead. See the data-quality note in CLAUDE.md.
+// It reads destination-facts.ts for ONE thing: deciding whether a destination reads
+// as a holiday place, which the sort below needs. Nothing from that file is filtered
+// on or passed to the client. The editorial `scores` are partly machine-generated and
+// demonstrably wrong in places — Kuwait rates 9 for nightlife in a country where
+// alcohol is banned — so they are unfit to filter on, but a coarse "does this have a
+// beach" read is within what they can carry. See the data-quality note in CLAUDE.md.
 
 /** The four measures a card or a chip needs, for one destination in one month. */
 type MonthClimate = {
@@ -161,6 +165,84 @@ export type WarmDestination = {
   priceUsd: number;
 };
 
+// ---------------------------------------------------------------------------
+// Market weighting
+//
+// Sorting on temperature alone answers the question literally and serves the
+// audience badly. The site's primary market is the United States, and a January
+// list led by Bangkok and Ho Chi Minh City puts Cancún at position 113.
+//
+// THIS IS DELIBERATELY STATIC, NOT GEO-DETECTED. Every /where-is-it-warm page is
+// generateStaticParams + dynamicParams=false + force-static. Reading a visitor's
+// country would make them dynamic: a TTFB penalty on every request, a CDN cache
+// fragmented by geography, and no ISR. Googlebot crawls from the US regardless,
+// so the personalised version would not even be the version that gets indexed.
+// If you are here to "improve" this with middleware or a geo header, that is the
+// trade you would be making.
+//
+// The catalog has no "Caribbean" or "Central America" continent — everything from
+// Cuba to Canada is filed under "North America" — so the tiers key on country.
+const CARIBBEAN = [
+  "Aruba", "Barbados", "Cuba", "Curaçao", "Dominican Republic", "Grenada", "Jamaica",
+  "Saint Lucia", "Sint Maarten", "Trinidad and Tobago", "Turks & Caicos",
+];
+const CENTRAL_AMERICA = ["Belize", "Costa Rica", "Guatemala", "Panama"];
+const NORTH_AFRICA = ["Morocco", "Egypt", "Tunisia", "Algeria", "Libya"];
+
+/** Sub-Saharan Africa sits in tier 4 with Asia and Oceania. Real destinations, but
+ *  long-haul with low US demand — this ranks relative priority, not merit. */
+function marketTier(d: { country: string; continent: string }): 1 | 2 | 3 | 4 {
+  if (
+    d.country === "United States" ||
+    d.country === "Mexico" ||
+    CARIBBEAN.includes(d.country) ||
+    CENTRAL_AMERICA.includes(d.country)
+  ) return 1;
+  if (d.continent === "South America" || d.country === "Canada") return 2;
+  if (d.continent === "Europe" || d.continent === "Eurasia" || NORTH_AFRICA.includes(d.country)) return 3;
+  return 4;
+}
+
+/** Bonus in °F. Capped at 4 on purpose — see the note below. */
+const TIER_BONUS: Record<number, number> = { 1: 4, 2: 2, 3: 1, 4: 0 };
+
+/**
+ * Only holiday destinations earn the bonus.
+ *
+ * Without this the July list opens with Washington D.C., Denver, Atlanta and
+ * Detroit — American cities that are genuinely 86–88 °F in July and that nobody
+ * has ever called a warm-weather escape. Proximity is only worth something if the
+ * place is somewhere you would go.
+ */
+function isLeisureDestination(slug: string): boolean {
+  const f = DESTINATION_FACTS[slug];
+  const tags = f?.tags ?? [];
+  return (
+    tags.includes("beach") || tags.includes("coast") || tags.includes("island") ||
+    tags.includes("tropical") || (f?.scores?.beaches ?? 0) >= 6
+  );
+}
+
+/**
+ * Temperature plus a market nudge, in °F so the number means what the card shows.
+ *
+ * THE 4 °F CAP IS THE WHOLE DESIGN. It moves a destination within roughly four
+ * degrees and never further, so warmth still decides: a 60 °F American beach
+ * scores 64 and loses to an 85 °F Asian one, exactly as it should.
+ *
+ * JANUARY IS NOT BROKEN — DO NOT "FIX" IT WITH A BIGGER BONUS. In January the top
+ * is Rio, Lima, Medellín and Cartagena, and Cancún sits far down. That is the
+ * correct answer: Cancún averages 77 °F in January against Rio's 88 °F, and on a
+ * page called "where is it warm" eleven degrees has to win. A bonus large enough
+ * to lift Cancún would also lift places that are not warm at all, which is the
+ * failure this cap exists to prevent. The real fix for January is adding the
+ * Caribbean destinations the catalog is missing, not reweighting the ones it has.
+ */
+function sortScore(d: WarmDestination, tier: 1 | 2 | 3 | 4): number {
+  const tempF = d.tempC * 1.8 + 32;
+  return tempF + (isLeisureDestination(d.slug) ? TIER_BONUS[tier] : 0);
+}
+
 /**
  * Join ALL_DESTINATIONS with the month's temperatures and with scores/tags from
  * destination-facts. Destinations with no temperature for this month are dropped —
@@ -169,6 +251,7 @@ export type WarmDestination = {
 export async function buildDestinations(monthIndex: number): Promise<WarmDestination[]> {
   const map = await temps();
   const out: WarmDestination[] = [];
+  const byCatalog = new Map(ALL_DESTINATIONS.map((d) => [d.slug, d]));
 
   for (const d of ALL_DESTINATIONS) {
     const climate = map[d.slug]?.[monthIndex];
@@ -190,5 +273,23 @@ export async function buildDestinations(monthIndex: number): Promise<WarmDestina
     });
   }
 
-  return out.sort((a, b) => b.tempC - a.tempC);
+  // Scores collide constantly — the window is 14 whole degrees wide and hundreds of
+  // destinations sit inside it — so the tiebreak is doing visible work, not cleaning
+  // up an edge case. Alphabetical was the first attempt and it showed: July opened
+  // with Alaçatı, Algarve, Alicante, Amalfi, Ancona, which reads as a database dump.
+  //
+  // Built-out destinations come first instead, because a tie is exactly when it is
+  // worth sending someone to the page that has a guide behind it rather than to a
+  // lite template. Then the cheaper fare, then the slug so the order is total and a
+  // rebuild never reshuffles the grid.
+  const tiers = new Map(out.map((d) => [d.slug, marketTier(byCatalog.get(d.slug)!)]));
+  const rank = (d: WarmDestination) => (HUB_CITY_SET.has(d.slug) ? 0 : 1);
+  return out.sort(
+    (a, b) =>
+      sortScore(b, tiers.get(b.slug)!) - sortScore(a, tiers.get(a.slug)!) ||
+      b.tempC - a.tempC ||
+      rank(a) - rank(b) ||
+      (a.priceUsd || Infinity) - (b.priceUsd || Infinity) ||
+      a.slug.localeCompare(b.slug),
+  );
 }
