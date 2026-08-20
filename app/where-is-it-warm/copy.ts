@@ -30,7 +30,7 @@ export type MonthCopy = {
   h1: string;
   intro: string;
   /**
-   * Body strings may contain `Austin`, rendered as
+   * Body strings may contain `[Austin](/cheap-flights-from-austin)`, rendered as
    * a link by CopyText. Internal paths only.
    *
    * An earlier version kept the links in a parallel `links` array instead, which
@@ -107,6 +107,36 @@ export const HUB_COPY = {
   ],
 };
 
+/**
+ * Link syntax belongs in section bodies and nowhere else.
+ *
+ * This threw the first time it was written: two FAQ answers picked up
+ * `[Austin](/cheap-flights-from-austin)` during an edit, which would have shown a
+ * reader literal brackets and shipped the same brackets inside the FAQPage
+ * JSON-LD. Nothing caught it — the build passed and the schema was simply wrong.
+ *
+ * Failing at import turns that into a build error instead.
+ */
+function assertLinksOnlyInSections(copy: Record<string, MonthCopy>): void {
+  const syntax = /\]\(\//;
+  for (const [slug, c] of Object.entries(copy)) {
+    const offenders: string[] = [];
+    if (syntax.test(c.intro)) offenders.push("intro");
+    if (syntax.test(c.description)) offenders.push("description");
+    if (syntax.test(c.title)) offenders.push("title");
+    if (syntax.test(c.h1)) offenders.push("h1");
+    c.faq.forEach((f, i) => {
+      if (syntax.test(f.q) || syntax.test(f.a)) offenders.push(`faq[${i}]`);
+    });
+    if (offenders.length) {
+      throw new Error(
+        `${slug}: link syntax outside sections.body (${offenders.join(", ")}). ` +
+          "FAQ answers go into JSON-LD verbatim and the other fields render as plain text.",
+      );
+    }
+  }
+}
+
 export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
   january: {
     title: "Warm Places to Visit in January | Flyamba",
@@ -142,7 +172,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         h2: "The cheapest weeks of the winter, and where they reach",
         body: [
           "January splits cleanly. The first week carries New Year pricing on almost every route; from roughly the second week to the end of the month it is the quietest long-haul stretch of the year. Nothing else in the calendar moves a fare that much for that little effort — the same destination, a week later, is a different price.",
-          "Where that reaches depends on where you start. Puerto Rico is 82 °F with an 81 °F sea and 53 mm of rain, and stays the cheapest warm option from most of the country: $146 from New York, $147 from Austin, $157 from Tampa and $180 from Minneapolis. It is passport-free, which matters more in January than in any other month, because it removes the one variable a last-minute booking cannot fix. Cancún and Tulum are 82 °F at $156 from Denver and $170 from Chicago. Costa Rica is 82 °F with a 79 °F sea at $206. Jamaica is 82 °F at $252, Barbados 82 °F at $341, Punta Cana 82 °F at $372. Honolulu is 77 °F and cheapest from the west — $253 from Phoenix, $270 from Dallas and San Diego, $288 from Los Angeles.",
+          "Where that reaches depends on where you start. Puerto Rico is 82 °F with an 81 °F sea and 53 mm of rain, and stays the cheapest warm option from most of the country: $146 from New York, $147 from [Austin](/cheap-flights-from-austin), $157 from [Tampa](/cheap-flights-from-tampa) and $180 from [Minneapolis](/cheap-flights-from-minneapolis). It is passport-free, which matters more in January than in any other month, because it removes the one variable a last-minute booking cannot fix. Cancún and Tulum are 82 °F at $156 from [Denver](/cheap-flights-from-denver) and $170 from [Chicago](/cheap-flights-from-chicago). Costa Rica is 82 °F with a 79 °F sea at $206. Jamaica is 82 °F at $252, Barbados 82 °F at $341, Punta Cana 82 °F at $372. Honolulu is 77 °F and cheapest from the west — $253 from [Phoenix](/cheap-flights-from-phoenix), $270 from [Dallas](/cheap-flights-from-dallas) and [San Diego](/cheap-flights-from-san-diego), $288 from [Los Angeles](/cheap-flights-from-los-angeles).",
           "Further out, January is Southeast Asia's best month and the numbers show it: Phuket averages 84 °F on 52 mm of rain with 320 hours of sunshine, and Bangkok and Singapore sit in the mid-eighties in their driest stretch. The flights are long and the fares are high, but the weather is the most reliable on this page.",
         ],
       },
@@ -216,9 +246,9 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
       {
         h2: "Warm places you can reach without a passport",
         body: [
-          "February is the month the domestic answer is strongest, because the whole country is cold and three genuinely warm places take no passport at all. Puerto Rico averages 82 °F with an 81 °F sea. The US Virgin Islands are 79 °F with an 81 °F sea and only 47 mm of rain. Honolulu is 75 °F with the water to match. Miami crosses into the range at 75 °F with a 77 °F sea and 42 mm — the cheapest warm destination in the country from most of the east: $73 from Atlanta, $94 from Houston, $138 from Chicago, $146 from Dallas.",
+          "February is the month the domestic answer is strongest, because the whole country is cold and three genuinely warm places take no passport at all. Puerto Rico averages 82 °F with an 81 °F sea. The US Virgin Islands are 79 °F with an 81 °F sea and only 47 mm of rain. Honolulu is 75 °F with the water to match. Miami crosses into the range at 75 °F with a 77 °F sea and 42 mm — the cheapest warm destination in the country from most of the east: $73 from [Atlanta](/cheap-flights-from-atlanta), $94 from [Houston](/cheap-flights-from-houston), $138 from [Chicago](/cheap-flights-from-chicago), $146 from [Dallas](/cheap-flights-from-dallas).",
           "That matters beyond convenience. A domestic trip has no passport to renew, no customs on the way back, no currency, and — for the islands — no roaming charges. It is the shortest distance between a February week off and being warm, and it is why the search volume for all-inclusive resorts inside the US is as high as it is.",
-          "If you do go abroad, February is marginally cheaper than January and the Caribbean holds its form: Costa Rica and Jamaica at 84 °F, Playa del Carmen and Tulum at 84 °F, Punta Cana at 84 °F. Mérida is the outlier at 88 °F on 19 mm of rain, inland and dry, at $353 from Miami — reachable from Houston and Dallas too. Egypt and the Red Sea are the cheapest genuinely warm option anywhere on the page — Hurghada and Marsa Alam record almost no rain at all in February.",
+          "If you do go abroad, February is marginally cheaper than January and the Caribbean holds its form: Costa Rica and Jamaica at 84 °F, Playa del Carmen and Tulum at 84 °F, Punta Cana at 84 °F. Mérida is the outlier at 88 °F on 19 mm of rain, inland and dry, at $353 from Miami — reachable from [Houston](/cheap-flights-from-houston) and [Dallas](/cheap-flights-from-dallas) too. Egypt and the Red Sea are the cheapest genuinely warm option anywhere on the page — Hurghada and Marsa Alam record almost no rain at all in February.",
         ],
       },
     ],
@@ -786,8 +816,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
       {
         h2: "Winter sun without a passport, and what the rest costs",
         body: [
-          "The strongest question Americans ask in December has a domestic answer. Puerto Rico averages 82 °F with the sea at 81 °F and needs no passport, no customs queue and no currency — and it is the cheapest warm destination on this page from most of the country: $146 round trip from New York, $126 from Miami, $147 from Austin, $157 from Tampa, $180 from Minneapolis. The US Virgin Islands are 79 °F with an 81 °F sea. Honolulu is 77 °F and cheapest from the west: $253 from Phoenix, $270 from Dallas and San Diego, $288 from Los Angeles. The Florida Keys sit at the bottom of the range but stay swimmable.",
-          "Beyond that the honest answer is that December is expensive, and no amount of searching changes it. Turks & Caicos is $399 from New York, the Cayman Islands $385, Punta Cana $372, Aruba $349 — and Belize is $1,137. These are not badly-timed bookings; they are what the Caribbean costs in the fortnight everyone wants it. The one real outlier is the Yucatán: Cancún and Tulum run $156 from Denver, $170 from Chicago and $171 from Los Angeles, because the route is flown by low-cost carriers at volume from cities the Caribbean is not.",
+          "The strongest question Americans ask in December has a domestic answer. Puerto Rico averages 82 °F with the sea at 81 °F and needs no passport, no customs queue and no currency — and it is the cheapest warm destination on this page from most of the country: $146 round trip from New York, $126 from Miami, $147 from [Austin](/cheap-flights-from-austin), $157 from [Tampa](/cheap-flights-from-tampa), $180 from [Minneapolis](/cheap-flights-from-minneapolis). The US Virgin Islands are 79 °F with an 81 °F sea. Honolulu is 77 °F and cheapest from the west: $253 from [Phoenix](/cheap-flights-from-phoenix), $270 from [Dallas](/cheap-flights-from-dallas) and [San Diego](/cheap-flights-from-san-diego), $288 from [Los Angeles](/cheap-flights-from-los-angeles). The Florida Keys sit at the bottom of the range but stay swimmable.",
+          "Beyond that the honest answer is that December is expensive, and no amount of searching changes it. Turks & Caicos is $399 from New York, the Cayman Islands $385, Punta Cana $372, Aruba $349 — and Belize is $1,137. These are not badly-timed bookings; they are what the Caribbean costs in the fortnight everyone wants it. The one real outlier is the Yucatán: Cancún and Tulum run $156 from [Denver](/cheap-flights-from-denver), $170 from [Chicago](/cheap-flights-from-chicago) and $171 from Los Angeles, because the route is flown by low-cost carriers at volume from cities the Caribbean is not.",
           "So the choice in December is usually between paying peak for the island you pictured, flying to Mexico instead, or staying inside the US and getting 82 °F for the price of a domestic hop. A page that tells you there are cheap Caribbean flights in late December is telling you something the fares do not support.",
         ],
       },
@@ -828,3 +858,5 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
     ],
   },
 };
+
+assertLinksOnlyInSections(MONTH_COPY);

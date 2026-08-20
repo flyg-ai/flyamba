@@ -5,6 +5,7 @@ import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { FaqSection } from "@/app/components/FaqSection";
+import { CopyText } from "@/app/components/CopyText";
 import { MonthSelector } from "@/app/components/MonthSelector";
 import { WarmBrowser } from "@/app/components/WarmBrowser";
 import { buildDestinations } from "@/app/lib/climate";
@@ -127,7 +128,9 @@ export default async function WhereIsItWarmMonth({ params }: { params: Promise<{
             <h2 className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">{section.h2}</h2>
             <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
               {section.body.map((para, i) => (
-                <p key={i}>{para}</p>
+                <p key={i}>
+                  <CopyText text={para} />
+                </p>
               ))}
             </div>
           </section>
