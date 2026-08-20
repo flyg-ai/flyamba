@@ -96,10 +96,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "Two kinds of warm, and only one of them swims",
+        body: [
+          "January is where the difference between air and water matters most, because the two answers look identical on a list. Montego Bay averages 81 °F with the sea at 82 °F. Fuerteventura, the warmest of the Canaries this month, is 65 °F with the sea at 68 °F. Both get called warm; only one is a swimming holiday.",
+          "Rainfall splits the tropics just as hard. Phuket runs 84 °F on 52 mm of rain with 320 hours of sunshine, while Flores at a similar temperature takes 421 mm. And the Red Sea is the outlier at both ends — Marsa Alam records essentially no rain at all in January.",
+        ],
+      },
+      {
         h2: "Flying there in January",
         body: [
-          "January is one of the two most expensive months to chase warmth, and the reason is geography rather than greed: everywhere warm is far away. Round-trip fares across the warm list run a median of around $800, and destinations sit roughly a fifth above their own annual low. The exceptions are worth knowing — the Gulf and the Red Sea are among the cheapest genuinely warm options all winter.",
-          "The one lever that reliably works is the first fortnight. Fares spike hard over New Year and fall away from about the second week of January, which is the cheapest stretch of the whole northern winter for long-haul. Book six to eight weeks out for the Caribbean and ten to fourteen for Southeast Asia, and check the price calendar on the destination page before fixing dates — a two-day shift is often worth more than a different airline.",
+          "January splits in two. The first week carries New Year pricing on almost every route, and then it falls away into the quietest stretch of the year for long-haul — the second through fourth weeks are as calm as travel gets. Warmth in January means distance, so lead time matters more than usual: book further out for Southeast Asia than for the Caribbean, and expect the Caribbean itself to be firm rather than soft, because January is its high season.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -122,8 +129,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "Use the Warm sea filter. It reads the measured sea surface temperature for January, not the air temperature, which is what separates a place that looks warm from one you would actually get into. Around fifty destinations clear 82 °F this month, almost all of them tropical.",
       },
       {
-        q: "Is January expensive to fly in?",
-        a: "It is one of the two priciest months on this list, at a median of around $800 round trip, because everywhere warm in January is a long flight. The first week is the worst of it — fares fall away sharply from about the second week and stay down until spring.",
+        q: "When should I book for January?",
+        a: "Six to eight weeks ahead for the Caribbean and Mexico, and longer for Southeast Asia — ten to fourteen weeks is a fair guide for long-haul in peak season. Avoid the first week if you can move: New Year pricing sits on most routes through it. The low fare calendar shows the cheapest departure dates day by day on our busiest routes.",
       },
     ],
   },
@@ -144,10 +151,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "The measurements behind February",
+        body: [
+          "February's most useful number is rainfall, because it separates two places that read the same on temperature. Aruba averages 80 °F with 14 mm of rain and 327 hours of sun. Komodo, at 81 °F, takes 390 mm — nearly thirty times as much water for one degree less heat.",
+          "The Atlantic islands stay a step behind: Fuerteventura is 67 °F with a 66 °F sea, dry at 5 mm but not swimmable in the way Turks & Caicos is at 78 °F air and 78 °F water.",
+        ],
+      },
+      {
         h2: "Flying there in February",
         body: [
-          "February is marginally cheaper than January — a median of around $762 round trip across the warm list — and it is the last month before the shoulder-season pattern starts to shift. Fares sit about 14% above each destination's annual low, the smallest winter premium of the year.",
-          "Half-term and Presidents' Day weeks are the ones to avoid or book far ahead of. Outside them, February is a quiet month to fly long-haul: Southeast Asia is in dry season with fares below the December peak, and Egypt and the Gulf are among the cheapest warm destinations anywhere on the list.",
+          "February's shape is set by two long weekends. Presidents' Day pulls demand forward in the middle of the month, and school half-terms do the same at different times depending on the district. Either side of them February is one of the easier months to fly long-haul — the holidays are behind and spring break has not started.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -170,8 +184,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "Yes, if warmth is the point. Nowhere in Europe averages above 75 °F in February. Southern Spain, Sicily and Greece are perfectly pleasant for sightseeing at 60–68 °F, and much cheaper and emptier than in summer, but they are not warm in the sense this page measures.",
       },
       {
-        q: "How much does it cost to fly somewhere warm in February?",
-        a: "A median of around $762 round trip across the warm list, with the smallest premium over each destination's annual low of any winter month. Egypt, the Gulf and the Red Sea are the cheapest genuinely warm options, some well under $300.",
+        q: "When should I book for February?",
+        a: "Six to eight weeks for most routes. The two things to plan around are Presidents' Day and school half-terms, which pull demand into specific weeks rather than lifting the whole month. Outside them February is one of the easier months to fly long-haul.",
       },
     ],
   },
@@ -192,10 +206,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "The measurements behind March",
+        body: [
+          "March is the best-lit month in the Caribbean by a clear margin. Turks & Caicos records 357 hours of sunshine on 22 mm of rain, and Aruba 361 hours on 17 mm — the sort of numbers that only line up in a dry season.",
+          "Southeast Asia is hotter and wetter at the same time. Phuket peaks at 87 °F but takes 94 mm, four times Aruba's rainfall. The Canaries are dry too — Fuerteventura at 6 mm — but the sea is 66 °F, which is the number that decides whether the beach gets used.",
+        ],
+      },
+      {
         h2: "Flying there in March",
         body: [
-          "March holds January's fare level — a median around $762 — while offering better weather in most of the places that qualify. That combination makes it one of the better-value long-haul months, particularly for Thailand at its annual peak and Dubai in its last comfortable weeks.",
-          "The variable is spring break. North American fares to Mexico, the Caribbean and Florida climb sharply through the middle of March and fall away at the end of it, so the same route can differ by half depending on the week. If your dates can move, the last week of March is usually materially cheaper than the second.",
+          "March is spring break, and it is less a month than three different pricing regimes. Demand to Mexico, the Caribbean and Florida climbs steeply through the middle weeks and drops away at the end, so the same route can differ enormously depending on which week you pick. If your dates can move at all, the last week of March is usually the cheapest of the four.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -218,8 +239,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "Turn on the Warm sea filter. Around forty destinations have sea temperatures above 82 °F in March, concentrated in Southeast Asia, West Africa and the Indian Ocean. The Caribbean sits a little below that but is comfortably swimmable.",
       },
       {
-        q: "When should I book for March?",
-        a: "Six to eight weeks out for most routes, and earlier if you are flying to Mexico, the Caribbean or Florida during spring break, when fares climb steeply through the middle of the month. The last week of March is usually much cheaper than the second.",
+        q: "How do I avoid spring break pricing in March?",
+        a: "Move the week rather than the destination. Demand to Mexico, the Caribbean and Florida climbs through the middle of March and falls away at the end, so the last week is usually the cheapest of the four. If your dates are fixed to a school break, book early — that is the one case where waiting does not help.",
       },
     ],
   },
@@ -240,10 +261,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "The measurements behind April",
+        body: [
+          "April is the month the Mediterranean's numbers become properly misleading. Santorini reaches 63 °F in the air and 63 °F in the water: pleasant to walk, cold to swim. Cancún at the same time is 83 °F air and 81 °F sea on 34 mm of rain.",
+          "It is also when Southeast Asia's rain starts arriving ahead of its reputation. Phuket is still 86 °F with an 86 °F sea, the warmest water on this page, but rainfall has climbed to 161 mm — a fivefold jump from March.",
+        ],
+      },
+      {
         h2: "Flying there in April",
         body: [
-          "April is where the fare curve starts to bite: around $752 median, and roughly 20% above each destination's annual low. Easter is the reason. It is the year's narrowest month for warmth and one of its pricier ones, which is an unhappy combination if your dates are fixed to a school calendar.",
-          "The practical move is to widen the temperature range rather than the budget. Dropping to 70 °F brings in Cyprus, southern Spain and the Canaries at a fraction of the long-haul fare, and they are what most of Europe actually flies to at Easter. If you want genuine heat, Egypt and Jordan are the cheapest way to get it this month.",
+          "April moves with Easter, which is the complication. The week either side of it behaves like peak season wherever Europeans travel, and the rest of the month is quiet. If you are tied to the school break, book early rather than hoping — April is the year's narrowest month for warm options, so the competition for the good ones is unusually concentrated.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -266,8 +294,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "Egypt and Jordan. The Red Sea resorts and Wadi Rum record close to zero rainfall in April while staying inside the temperature range. Use the Dry filter to rank them by measured monthly rainfall.",
       },
       {
-        q: "Why is April expensive as well as cool?",
-        a: "Easter. April has the fewest warm destinations of any month and one of the higher fare premiums, at around 20% over each destination's annual low. If your dates are fixed to the school holidays, widening the temperature range costs less than chasing heat.",
+        q: "Why is April harder to book than other months?",
+        a: "Two things at once. It has the fewest genuinely warm destinations of any month, and Easter concentrates demand into one or two weeks. The result is a lot of competition for a short list. Booking early matters more here than in months with more choice.",
       },
     ],
   },
@@ -288,10 +316,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "Warm air, cold water",
+        body: [
+          "May is the clearest case on the whole site of a month that measures warm and does not feel it. Santorini averages 69 °F with the sea at 66 °F. Palma is 72 °F with 68 °F water. The Mediterranean warms weeks behind its own air, so May delivers the temperature of a beach holiday without the beach.",
+          "Where the water has caught up, it has caught up completely. Montego Bay is 85 °F air and 85 °F sea, and Hurghada is 88 °F with a 76 °F sea on zero recorded rainfall. The gap between those and Santorini is not temperature — it is what the sea has been doing since February.",
+        ],
+      },
+      {
         h2: "Flying there in May",
         body: [
-          "May is where fares fall off a cliff, and it is the single biggest value shift in the calendar: the median round trip across the warm list drops from around $752 in April to about $524. The cause is simple — Europe joins the list, and Europe is close.",
-          "Valencia, Seville and the Spanish coast come in under $200 round trip in May, against $700-plus for anywhere warm in the winter months. Fares still sit around 27% above each destination's annual low, but that low is usually January, when the same place is cold. For value per degree, May is hard to beat, and it is the first month a warm holiday stops meaning a long flight.",
+          "May is the month the calendar works in your favour. Memorial Day weekend is the one spike, and either side of it the Mediterranean is open without the school-holiday demand that arrives in late June. If your dates can move, the first three weeks of May buy the same weather as July on a quieter airport and a quieter beach.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -314,8 +349,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "Southeast Asia and the Indian Ocean. Koh Phangan, Langkawi and the Andaman coast are around 88–90 °F, among the warmest water anywhere in the year. The Caribbean is in the low eighties. The Mediterranean is not close.",
       },
       {
-        q: "Is May cheaper than summer?",
-        a: "Substantially. The median round-trip fare across the warm list drops from around $752 in April to about $524 in May, because Europe joins the list and Europe is close. Valencia and Seville come in under $200 while clearing 75 °F.",
+        q: "Is May a good month to book?",
+        a: "One of the best. Memorial Day weekend is the only real spike, and either side of it the Mediterranean is open before the school holidays arrive in late June. Six to eight weeks ahead is comfortable, and midweek departures are noticeably quieter than weekends.",
       },
     ],
   },
@@ -336,10 +371,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "Same temperature, thirteen times the rain",
+        body: [
+          "June contains the sharpest contrast in the year's data. Phuket and Aruba both average 83 °F. Phuket takes 313 mm of rain that month; Aruba takes 23 mm. Identical on a temperature list, thirteen times apart on water falling out of the sky.",
+          "The Mediterranean has arrived by June and the numbers show it: Palma at 80 °F air and 75 °F sea, Santorini 75 °F on 2 mm of rain. Fuerteventura records 1 mm. This is the month the European sea stops being the caveat.",
+        ],
+      },
+      {
         h2: "Flying there in June",
         body: [
-          "June has the second-lowest median fare of the year at around $400, with roughly 300 warm destinations to choose between — the best ratio of options to price in the calendar. Central and eastern Europe are startlingly cheap: Gdańsk, Warsaw and Kraków all sit near $130 round trip while comfortably clearing 75 °F.",
-          "The catch is the premium curve. June fares average 48% above each destination's own annual low, and that figure climbs to 63% by July. Booking six to eight weeks ahead matters more in June than in any winter month, because the price is rising underneath you rather than drifting.",
+          "June is the handover month. The first half still prices like spring; the second half, once school years end across the US and Europe, prices like summer. That transition is sharp rather than gradual, so a week earlier is worth more in June than in almost any other month.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -362,8 +404,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "Use the Cool nights filter, which reads the measured overnight low rather than the daytime high. It rules out much of the southern Mediterranean and the Gulf in June, and tends to leave coastal and higher-altitude destinations where the temperature actually drops after dark.",
       },
       {
-        q: "How far ahead should I book for June?",
-        a: "Six to eight weeks, and it matters more than in winter: June fares average 48% above each destination's annual low and are still climbing toward the July peak. Eastern Europe is the value outlier, with Gdańsk, Warsaw and Kraków near $130 round trip.",
+        q: "Why does timing matter so much in June?",
+        a: "Because June is a handover month. The first half prices like spring and the second half — once school years end across the US and Europe — prices like summer, and the transition is sharp rather than gradual. A week earlier is worth more in June than in almost any other month.",
       },
     ],
   },
@@ -384,10 +426,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "The measurements behind July",
+        body: [
+          "July is when the sea stops being a compromise anywhere in the northern hemisphere. Miami reaches 90 °F in the water and Key West 89 °F — bathwater by any definition. Palma is 82 °F, Santorini 76 °F, and both are dry: 12 mm and effectively zero.",
+          "The desert numbers are worth reading as a warning rather than an invitation. Dubai averages 108 °F air with a 94 °F sea, and Hurghada 95 °F on zero rain. Water that warm stops cooling you down, which is the part a temperature ranking cannot tell you.",
+        ],
+      },
+      {
         h2: "Flying there in July",
         body: [
-          "July carries the steepest peak premium of the year: fares average 63% above each destination's own annual low. The median is still only around $452, because the warm list is dominated by short-haul Europe, but you are paying the maximum for whatever you pick.",
-          "There are two honest ways around it. Fly to somewhere that is not in peak — eastern Europe stays near $150 round trip while Poland and the Balkans sit in the eighties Fahrenheit — or move your dates. The first week of July and the last week of August are both meaningfully cheaper than the fortnight either side of the first of August, and the price calendar on each destination page shows exactly where the cliff edges are.",
+          "July is peak almost everywhere in the northern hemisphere, and the Fourth of July week is its own spike on top of that. There is no clever week to find — the useful flexibility in July is in the destination rather than the date. Somewhere that is not in peak season will beat any date trick on a route that is.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -411,7 +460,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
       },
       {
         q: "How do I avoid peak prices in July?",
-        a: "Either change where or change when. Eastern Europe and the Balkans stay near $150 round trip while clearing 75 °F, against a 63% peak premium in the Mediterranean. Failing that, the first week of July is meaningfully cheaper than the fortnight around the first of August.",
+        a: "Change the destination rather than the date. July is peak almost everywhere in the northern hemisphere and the Fourth of July week is a spike on top of that, so there is no clever week to find. Somewhere that is not in its own peak season will beat any date trick on a route that is.",
       },
     ],
   },
@@ -432,10 +481,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "The measurements behind August",
+        body: [
+          "August is the driest the Mediterranean gets and among the wettest the Caribbean gets, at almost the same temperature. Santorini averages 79 °F air, 79 °F sea and 1 mm of rain. Montego Bay is 87 °F with an 87 °F sea and 184 mm.",
+          "Both are genuinely warm. One is a settled fortnight and the other is a hurricane-season month with afternoon rain built into the average, and only the rainfall column says so.",
+        ],
+      },
+      {
         h2: "Flying there in August",
         body: [
-          "August is the warmest month and the second most expensive to fly in, at a 59% average premium over each destination's annual low. The median fare of roughly $457 hides a wide spread: the Mediterranean is at maximum, while Gdańsk, Warsaw and Kraków are still near $140.",
-          "If your dates are fixed to the school holidays, the destination choice is doing all the work — the same money buys a week in Poland or two days in Ibiza. If your dates are not fixed, waiting until the last week of August moves you into September's pricing on much of southern Europe while the sea is still at its annual peak.",
+          "August rewards waiting. The last week behaves like September on much of southern Europe, with school holidays over across most of the US, while the sea is still at its annual peak. If you can push a trip back a fortnight, late August is one of the better trades in the calendar.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -458,8 +514,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "Much of the southern Mediterranean, the Gulf and the tropics stay above 72 °F overnight in August. The Cool nights filter reads the measured overnight low and hides them, which usually leaves coastal, Atlantic-facing and higher-altitude destinations.",
       },
       {
-        q: "Is August worth the price?",
-        a: "It is the warmest month and the second most expensive, at a 59% average premium over each destination's annual low. If your dates are fixed, the destination is doing all the work — the same money buys a week in Poland or a long weekend in Ibiza.",
+        q: "Is it better to travel early or late in August?",
+        a: "Late. The last week behaves like September on much of southern Europe, with US school holidays over, while the sea is still at its annual peak. Pushing a trip back a fortnight is one of the better trades in the calendar.",
       },
     ],
   },
@@ -480,10 +536,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "The measurements behind September",
+        body: [
+          "September is the month the Mediterranean's numbers are at their best and least known. Santorini holds 76 °F air with a 77 °F sea on 8 mm of rain and 353 hours of sun — warmer water than June, drier than May, and after the crowds have gone.",
+          "The Caribbean is warmer and much wetter. Montego Bay is 87 °F with an 88 °F sea, but 171 mm of rain, and Cancún 182 mm. Water temperature and storm season are driven by the same heat, which is why September gives you the best swimming and the highest risk in the same figure.",
+        ],
+      },
+      {
         h2: "Flying there in September",
         body: [
-          "September is the cheapest month of the year to fly somewhere warm. The median round trip across the warm list is around $390 — below June — while nearly 300 destinations still clear 75 °F and the Mediterranean sea is at its warmest. On our own catalog figures, no other month combines those three things.",
-          "The premium over each destination's annual low drops to 30%, half of July's. Skopje, Novi Sad and Bologna come in near $160. If you have any flexibility at all in when you travel, and warmth is the point, the first three weeks of September are the strongest value in the calendar — which is the single most useful thing this guide can tell you.",
+          "September's dividing line is Labor Day, and it is a hard one. Before it, summer pricing; after it, the quietest and best-value stretch of the northern year. If you are choosing between late August and mid-September, the second is cheaper, emptier and warmer in the water.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -506,8 +569,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "Around 300 destinations average above 75 °F, roughly half of them European. Bangkok is around 88 °F, Cancún 84 °F, and Tenerife, Ibiza and Athens all sit in the low eighties.",
       },
       {
-        q: "Is September the best value month?",
-        a: "On our own figures, yes. The median round trip across the warm list is around $390, the lowest of the year, while nearly 300 destinations still clear 75 °F and the Mediterranean sea is at its warmest. No other month combines all three.",
+        q: "When does September get cheaper?",
+        a: "After Labor Day, and the line is a hard one. Before it you are paying summer prices; after it comes the quietest and best-value stretch of the northern year, with warmer sea than June. If you are choosing between late August and mid-September, the second is emptier and warmer in the water.",
       },
     ],
   },
@@ -528,10 +591,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "The measurements behind October",
+        body: [
+          "October has the warmest sea of any month on this page, and the rainfall to go with it. Aruba records an 87 °F sea, Turks & Caicos 87 °F, Montego Bay 88 °F — all warmer than in July. Aruba also takes 102 mm of rain, four times its March figure.",
+          "The Atlantic islands are the opposite trade: Fuerteventura is 77 °F air, 75 °F sea and 7 mm of rain across the whole month, with 327 hours of sunshine. Cooler water, almost no weather.",
+        ],
+      },
+      {
         h2: "Flying there in October",
         body: [
-          "October is the transition month in fares as well as weather: a median around $590, up from September but well below the winter. The premium over each destination's annual low is only 16%, one of the lowest of the year, because October is nobody's peak.",
-          "Southern Spain is remarkable value — Seville, Torrevieja and Benidorm all near $150 round trip while still clearing 75 °F. Half-term is the exception to watch, and the Canaries and Madeira price accordingly, since they are the last reliably warm places in Europe and everyone knows it.",
+          "October is a quiet month with two exceptions: Columbus Day weekend, and the school half-terms that land in the middle of it in much of Europe. Around those it is genuinely soft — one of the few months where booking closer in does not usually cost you.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -554,8 +624,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "It depends heavily on which coast. The monsoon retreats at different times across the region, so two destinations at the same temperature can have very different rainfall. Use the Dry filter — it reads measured monthly rainfall and separates them.",
       },
       {
-        q: "Is October cheap to fly in?",
-        a: "Reasonably. The median is around $590 with only a 16% premium over each destination's annual low, because October is nobody's peak. Southern Spain is the standout — Seville and the Costa del Sol near $150 while still above 75 °F. Half-term is the exception.",
+        q: "Do I need to book October far ahead?",
+        a: "Less than most months. October is genuinely soft apart from Columbus Day weekend and the European school half-terms in the middle of it. It is one of the few months where booking closer in does not usually cost you.",
       },
     ],
   },
@@ -576,10 +646,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "84 °F and 188 mm, or 72 °F and 9 mm",
+        body: [
+          "November is the month where two reasonable answers point in opposite directions. Phuket averages 84 °F — comfortably the warmer option — on 188 mm of rain and only 249 hours of sunshine. Fuerteventura is 72 °F with 9 mm and 295 hours. Twelve degrees against twenty times the rain.",
+          "Bali makes the point harder still: 73 °F in the air, an 85 °F sea, and 354 mm of rain. The water is the warmest on this page and the month is a washout. A single temperature figure cannot carry that, which is what the rain and sea filters are for.",
+        ],
+      },
+      {
         h2: "Flying there in November",
         body: [
-          "November is where the fare curve turns back up — a median around $743 — for the same reason January is expensive: warmth means distance again. The premium over each destination's annual low is a modest 15%, so you are paying for the flight length rather than for the season.",
-          "It is a good month for the long trip you have been putting off. Thailand's dry season begins, the Gulf becomes pleasant, and neither is yet in Christmas pricing. Book before the end of the month if you are travelling anywhere near the holidays — December fares to the same destinations are typically a third higher.",
+          "November is two different months on either side of Thanksgiving. The week itself is the single most expensive stretch of the American travel year and the least flexible — book it months out or not at all. Around it, November is a good time to fly long-haul: Southeast Asia's dry season is starting and Christmas pricing has not begun.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -602,8 +679,8 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         a: "November has one of the highest counts of destinations with sea temperatures above 82 °F in the year — around 75 of them. Singapore, Malaysian Borneo, the Andaman coast and the Caribbean all qualify. Use the Warm sea filter to rank by measured sea temperature.",
       },
       {
-        q: "Should I book November or wait for December?",
-        a: "Book November. Fares to the same warm destinations are typically a third higher in December, and November already has the dry season starting across Southeast Asia and the Gulf. The median is around $743 against $857 a month later.",
+        q: "What should I know about booking in November?",
+        a: "Thanksgiving week is the single most expensive and least flexible stretch of the American travel year — book it months out or not at all. Around it, November is a good time for long-haul: Southeast Asia's dry season is starting and Christmas pricing has not begun.",
       },
     ],
   },
@@ -624,10 +701,17 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
         ],
       },
       {
+        h2: "The measurements behind December",
+        body: [
+          "December's numbers reward reading past the headline. Bali shows an 86 °F sea, among the warmest anywhere, with 466 mm of rain — the wettest figure in the year's data. Turks & Caicos is cooler in the water at 81 °F but takes 44 mm and logs 315 hours of sun.",
+          "Zanzibar sits between them at 86 °F air, 86 °F sea and 107 mm. The Canaries are the European floor: Fuerteventura at 66 °F air and a 71 °F sea, dry at 13 mm, mild rather than warm.",
+        ],
+      },
+      {
         h2: "Flying there in December",
         body: [
-          "December is the most expensive month on this list, with a median round trip near $857 and a 30% premium over each destination's annual low. Warmth in December means Southeast Asia, the Caribbean or the southern hemisphere, and everyone wants to be there at the same time.",
-          "The dates matter more than the destination. Fares before roughly the 18th are a different market from fares after it, often by half, and the first week of December is among the cheaper weeks of the whole winter. If the holidays themselves are fixed, book three to five months out rather than the usual six to eight weeks — this is the one month where waiting reliably costs money.",
+          "December has a cliff edge, and it falls around the 18th. Before it, fares behave like a normal low-season month and the first week is among the cheapest of the winter. After it, they behave like nothing else in the year. If the holidays themselves are fixed, book three to five months ahead — December is the one month where waiting reliably costs money.",
+          "Three things move a fare more than the destination does. Book six to eight weeks ahead for short-haul and two to three months for long-haul or peak season — later than that and you are usually paying for someone else's cancellation. Fly midweek: leisure demand clusters on Friday evenings and Sunday returns, and a Tuesday departure is routinely cheaper for the same trip. And shift your dates before you shop for airlines — a day or two either side of a holiday weekend saves more than any loyalty programme. The low fare calendar shows which days are actually cheapest on our busiest routes.",
           HOW_IT_WORKS,
         ],
       },
@@ -651,7 +735,7 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
       },
       {
         q: "When should I book for December?",
-        a: "Three to five months out rather than the usual six to eight weeks — December is the one month where waiting reliably costs money. Fares before roughly the 18th are often half those after it, and the first week is among the cheapest of the winter.",
+        a: "Three to five months ahead if you are travelling over the holidays — December is the one month where waiting reliably costs money. The dividing line falls around the 18th: before it fares behave like a normal low-season month, and the first week is among the cheapest of the winter.",
       },
     ],
   },
