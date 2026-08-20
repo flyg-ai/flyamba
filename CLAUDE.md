@@ -394,6 +394,67 @@ Augsburg and Detroit but not Rome, Paris or Athens. The file's own header says t
 scores are editorial judgements authored for a Swedish audience and that some are
 plainly wrong. `/where-is-it-warm` filtered on them briefly and no longer does.
 
+## Prices
+
+**Two price sources exist and they disagree by a factor of two.** `origin_fares` in
+Supabase holds real observed fares, filled nightly by `/api/cron/fares` from
+Travelpayouts across twelve origins including NYC, MIA, CHI and LAX. `monthlyPrices`
+in `all-destinations.ts` holds Stockholm-origin estimates seeded from flyg.ai — **81%
+of its 6,570 values are round hundreds**, which is what an estimate looks like.
+
+Measured against real US fares for the 339 destinations where both exist, the estimate
+is off by a **median factor of 2.35x**, and it inverts rather than scales:
+
+| destination | real, from NYC | catalog estimate |
+| --- | --- | --- |
+| San Francisco | $43 | $524 |
+| Las Vegas | $49 | $505 |
+| Gdańsk | $1,198 | $52 |
+
+Cheap-from-Stockholm European cities look cheap and cheap-from-US American ones look
+expensive, on a site aimed at Americans.
+
+**`/where-is-it-warm` is converted. Nothing else is.** Its cards read
+`getUsFareTable()` from `app/lib/fares.ts`, show no price at all where we hold no US
+fare, and label every figure with its origin and the date we saw it — never "from $X",
+which is a claim about what can be bought now and what 14 CFR 399.84 regulates.
+
+**Known debt — 580 of 958 built pages still render the Stockholm estimate**, through
+five components (`DestinationCard`, `DestinationDetail`, `DestinationLite`,
+`FlightCTA`, `HomeCard`), 45 pages with their own price rendering, and six lib/api
+files. Converting a surface means: read `getUsFareTable()` in a server component, pass
+the narrow result down, render nothing when the fare is missing, and delete the
+`usdStr(...)` call. The pattern is in `app/lib/climate.ts` — note that it formats the
+label server-side, because `fares.ts` carries the service-role client and cannot be
+imported by a client component.
+
+**`app/lib/fares.ts` sat finished and documented with `/api/ai-search` as its only
+consumer.** Its header already explained why the catalog number must not be
+substituted. A finished module that explains why it is needed and that nothing calls is
+the kind of thing a later session mistakes for dead code — it is not.
+
+### The per-month fare narrative was removed, on purpose
+
+`app/where-is-it-warm/copy.ts` used to carry 39 numeric price claims — "September is
+the cheapest month at a $390 median", "July carries a 63% peak premium" — all computed
+from `monthlyPrices`. They were removed in Aug 2026 along with the reasoning built on
+them.
+
+The prose was worse than the numbers. "May is where the fare curve falls off a cliff,
+because Europe joins the list and Europe is close" is true from Stockholm and false
+from New York, and it is more damaging than a wrong figure because it reads as insight.
+
+**Do not write it back from `monthlyPrices`.** It can be rebuilt honestly once
+`daily_prices` has collected a few months from US origins — that table has a per-day
+price series, which is what a monthly comparison actually needs. `origin_fares` cannot
+do it: it holds the cheapest finds from the last 48 hours, not a time series.
+
+What replaced it is measured climate contrast, which is origin-independent and is the
+thing no generic "best places in March" page has: sea temperature, rainfall and
+sunshine hours per destination per month. **Only quote `data_source = 'open_meteo'`
+rows.** The 197 `gpt_seed` destinations include four Caribbean entries carrying
+identical constants — 28.0 °C air, 26 °C sea — so quoting one would be quoting an LLM.
+
 ## Next up
 
 1. **Build hubs for the destinations Americans actually search for.** The 28 existing
