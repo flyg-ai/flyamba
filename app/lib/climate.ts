@@ -197,8 +197,9 @@ export type WarmDestination = {
 // The catalog has no "Caribbean" or "Central America" continent — everything from
 // Cuba to Canada is filed under "North America" — so the tiers key on country.
 const CARIBBEAN = [
-  "Aruba", "Barbados", "Cuba", "Curaçao", "Dominican Republic", "Grenada", "Jamaica",
-  "Saint Lucia", "Sint Maarten", "Trinidad and Tobago", "Turks & Caicos",
+  "Aruba", "Bahamas", "Barbados", "Cayman Islands", "Cuba", "Curaçao",
+  "Dominican Republic", "Grenada", "Jamaica", "Puerto Rico", "Saint Lucia",
+  "Sint Maarten", "Trinidad and Tobago", "Turks & Caicos", "U.S. Virgin Islands",
 ];
 const CENTRAL_AMERICA = ["Belize", "Costa Rica", "Guatemala", "Panama"];
 const NORTH_AFRICA = ["Morocco", "Egypt", "Tunisia", "Algeria", "Libya"];
