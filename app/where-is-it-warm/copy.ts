@@ -29,10 +29,31 @@ export type MonthCopy = {
   description: string;
   h1: string;
   intro: string;
+  /**
+   * Body strings may contain `Austin`, rendered as
+   * a link by CopyText. Internal paths only.
+   *
+   * An earlier version kept the links in a parallel `links` array instead, which
+   * produced a row of pills under the prose rather than links inside it — and
+   * drifted from the text within a single pass. Keeping them in the sentence
+   * means there is one place to edit.
+   *
+   * NOT AVAILABLE IN `faq`: those answers go into the FAQPage JSON-LD verbatim,
+   * so link syntax there would ship as literal brackets inside structured data.
+   */
   sections: { h2: string; body: string[] }[];
   faq: FaqItem[];
 };
 
+/**
+ * DECEMBER, JANUARY AND FEBRUARY CARRY 95% OF THIS THEME'S US SEARCH VOLUME —
+ * 18,840, 8,070 and 4,800 a month against zero for March and May through
+ * September. They get a fourth section, eight questions instead of five, and the
+ * departure-page links. The other nine are deliberately left at three sections and
+ * five: they serve the UK, where the season runs differently, and they cost
+ * nothing to keep. See the seasonality note in CLAUDE.md before adding depth to a
+ * summer month.
+ */
 const HOW_IT_WORKS =
   "Every temperature on this page is the average daily high for that destination in that month, measured rather than estimated. The sea and rainfall filters come from the same source. Drag either end of the range to change what counts as warm — the list re-sorts instantly, warmest first.";
 
@@ -117,6 +138,14 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
           HOW_IT_WORKS,
         ],
       },
+      {
+        h2: "The cheapest weeks of the winter, and where they reach",
+        body: [
+          "January splits cleanly. The first week carries New Year pricing on almost every route; from roughly the second week to the end of the month it is the quietest long-haul stretch of the year. Nothing else in the calendar moves a fare that much for that little effort — the same destination, a week later, is a different price.",
+          "Where that reaches depends on where you start. Puerto Rico is 82 °F with an 81 °F sea and 53 mm of rain, and stays the cheapest warm option from most of the country: $146 from New York, $147 from Austin, $157 from Tampa and $180 from Minneapolis. It is passport-free, which matters more in January than in any other month, because it removes the one variable a last-minute booking cannot fix. Cancún and Tulum are 82 °F at $156 from Denver and $170 from Chicago. Costa Rica is 82 °F with a 79 °F sea at $206. Jamaica is 82 °F at $252, Barbados 82 °F at $341, Punta Cana 82 °F at $372. Honolulu is 77 °F and cheapest from the west — $253 from Phoenix, $270 from Dallas and San Diego, $288 from Los Angeles.",
+          "Further out, January is Southeast Asia's best month and the numbers show it: Phuket averages 84 °F on 52 mm of rain with 320 hours of sunshine, and Bangkok and Singapore sit in the mid-eighties in their driest stretch. The flights are long and the fares are high, but the weather is the most reliable on this page.",
+        ],
+      },
     ],
     faq: [
       {
@@ -138,6 +167,18 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
       {
         q: "When should I book for January?",
         a: "Six to eight weeks ahead for the Caribbean and Mexico, and longer for Southeast Asia — ten to fourteen weeks is a fair guide for long-haul in peak season. Avoid the first week if you can move: New Year pricing sits on most routes through it. The low fare calendar shows the cheapest departure dates day by day on our busiest routes.",
+      },
+      {
+        q: "Where can I go in January without a passport?",
+        a: "Puerto Rico at 82 °F with an 81 °F sea is the best of them, and the cheapest — $146 from New York, $147 from Austin, $180 from Minneapolis. The US Virgin Islands are 79 °F, and Honolulu is 77 °F, reachable from the west coast for $253 from Phoenix or $288 from Los Angeles. No passport means one less thing to fix if you book late, which in January you often are.",
+      },
+      {
+        q: "When in January is cheapest to fly?",
+        a: "From roughly the second week onwards. The first week still carries New Year pricing on almost every route, and once it clears, the rest of January is the quietest long-haul stretch of the year. If your dates can move at all, moving them past the first weekend is worth more than any other single decision.",
+      },
+      {
+        q: "What is the warmest place to fly to in January?",
+        a: "Southeast Asia, and it is also the driest it gets there. Phuket averages 84 °F on 52 mm of rain with 320 hours of sunshine, and Bangkok and Singapore sit in the mid-eighties in dry season. Closer to home, Costa Rica and Jamaica are 82 °F, and the Yucatán is 82 °F at a fraction of the airfare.",
       },
     ],
   },
@@ -172,6 +213,14 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
           HOW_IT_WORKS,
         ],
       },
+      {
+        h2: "Warm places you can reach without a passport",
+        body: [
+          "February is the month the domestic answer is strongest, because the whole country is cold and three genuinely warm places take no passport at all. Puerto Rico averages 82 °F with an 81 °F sea. The US Virgin Islands are 79 °F with an 81 °F sea and only 47 mm of rain. Honolulu is 75 °F with the water to match. Miami crosses into the range at 75 °F with a 77 °F sea and 42 mm — the cheapest warm destination in the country from most of the east: $73 from Atlanta, $94 from Houston, $138 from Chicago, $146 from Dallas.",
+          "That matters beyond convenience. A domestic trip has no passport to renew, no customs on the way back, no currency, and — for the islands — no roaming charges. It is the shortest distance between a February week off and being warm, and it is why the search volume for all-inclusive resorts inside the US is as high as it is.",
+          "If you do go abroad, February is marginally cheaper than January and the Caribbean holds its form: Costa Rica and Jamaica at 84 °F, Playa del Carmen and Tulum at 84 °F, Punta Cana at 84 °F. Mérida is the outlier at 88 °F on 19 mm of rain, inland and dry, at $353 from Miami — reachable from Houston and Dallas too. Egypt and the Red Sea are the cheapest genuinely warm option anywhere on the page — Hurghada and Marsa Alam record almost no rain at all in February.",
+        ],
+      },
     ],
     faq: [
       {
@@ -193,6 +242,18 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
       {
         q: "When should I book for February?",
         a: "Six to eight weeks for most routes. The two things to plan around are Presidents' Day and school half-terms, which pull demand into specific weeks rather than lifting the whole month. Outside them February is one of the easier months to fly long-haul.",
+      },
+      {
+        q: "Where is it warm in February in the USA?",
+        a: "Puerto Rico at 82 °F and the US Virgin Islands at 79 °F, both with the sea around 81 °F and neither needing a passport. Honolulu is 75 °F, and Miami crosses into the range at 75 °F with a 77 °F sea — reachable for $73 from Atlanta, $94 from Houston and $138 from Chicago, which makes it the cheapest warm destination in the country from most of the east.",
+      },
+      {
+        q: "Is February a good time for the Caribbean?",
+        a: "Yes, and it is marginally cheaper than January. Costa Rica, Jamaica, Playa del Carmen, Tulum and Punta Cana all average 84 °F, and the region is in its dry season. Fares sit at the smallest premium over each destination's annual low of any winter month.",
+      },
+      {
+        q: "Where is warm and dry in February?",
+        a: "The Red Sea and West Africa. Hurghada and Marsa Alam record almost no rain across the whole month while staying comfortably in the range, and they are the cheapest genuinely warm option anywhere on this page. Mérida in the Yucatán is 88 °F on 19 mm, inland and dry. Use the Dry filter to rank by measured monthly rainfall.",
       },
     ],
   },
@@ -722,6 +783,14 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
           HOW_IT_WORKS,
         ],
       },
+      {
+        h2: "Winter sun without a passport, and what the rest costs",
+        body: [
+          "The strongest question Americans ask in December has a domestic answer. Puerto Rico averages 82 °F with the sea at 81 °F and needs no passport, no customs queue and no currency — and it is the cheapest warm destination on this page from most of the country: $146 round trip from New York, $126 from Miami, $147 from Austin, $157 from Tampa, $180 from Minneapolis. The US Virgin Islands are 79 °F with an 81 °F sea. Honolulu is 77 °F and cheapest from the west: $253 from Phoenix, $270 from Dallas and San Diego, $288 from Los Angeles. The Florida Keys sit at the bottom of the range but stay swimmable.",
+          "Beyond that the honest answer is that December is expensive, and no amount of searching changes it. Turks & Caicos is $399 from New York, the Cayman Islands $385, Punta Cana $372, Aruba $349 — and Belize is $1,137. These are not badly-timed bookings; they are what the Caribbean costs in the fortnight everyone wants it. The one real outlier is the Yucatán: Cancún and Tulum run $156 from Denver, $170 from Chicago and $171 from Los Angeles, because the route is flown by low-cost carriers at volume from cities the Caribbean is not.",
+          "So the choice in December is usually between paying peak for the island you pictured, flying to Mexico instead, or staying inside the US and getting 82 °F for the price of a domestic hop. A page that tells you there are cheap Caribbean flights in late December is telling you something the fares do not support.",
+        ],
+      },
     ],
     faq: [
       {
@@ -743,6 +812,18 @@ export const MONTH_COPY: Record<MonthSlug, MonthCopy> = {
       {
         q: "When should I book for December?",
         a: "Three to five months ahead if you are travelling over the holidays — December is the one month where waiting reliably costs money. The dividing line falls around the 18th: before it fares behave like a normal low-season month, and the first week is among the cheapest of the winter.",
+      },
+      {
+        q: "Where is it warm in December without a passport?",
+        a: "Puerto Rico is the strongest answer: 82 °F with the sea at 81 °F, no passport, no customs and no currency, at $146 round trip from New York and $126 from Miami. The US Virgin Islands are 79 °F, Honolulu 77 °F and cheapest from the west coast, and the Florida Keys stay swimmable. All four are domestic, which is why US all-inclusive searches spike in winter.",
+      },
+      {
+        q: "Why are Caribbean flights so expensive in December?",
+        a: "Because December is the Caribbean's peak and the supply does not move. Turks & Caicos is $399 round trip from New York, the Cayman Islands $385, Punta Cana $372, Aruba $349, and Belize $1,137. Searching harder does not find a cheap version of a route that is full. The Yucatán is the exception — Cancún and Tulum run $156 from Denver and $170 from Chicago, because low-cost carriers fly it at volume.",
+      },
+      {
+        q: "Where is it warm in Europe in December?",
+        a: "Almost nowhere. Madeira and the Azores are the only European destinations that average above 75 °F, and only just. The Canary Islands sit at 70–72 °F, which is mild and sunny rather than warm — pleasant for walking, cold for swimming. Drag the lower end of the temperature range down to 65 °F to see the whole of southern Europe.",
       },
     ],
   },

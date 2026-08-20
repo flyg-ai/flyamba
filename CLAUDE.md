@@ -431,6 +431,28 @@ prerendered — see `/where-is-it-warm/[month]`. And the responses still get
 written to `.next/cache`; they are simply never read, so a file listing looks
 like caching is happening when it is not.
 
+## Where-is-it-warm is a winter topic
+
+US search volume for this theme is almost entirely a three-month affair, and the
+twelve pages should not get equal effort:
+
+| month | US searches/mo | | month | US searches/mo |
+| --- | --- | --- | --- | --- |
+| **December** | **18,840** | | November | 900 |
+| **January** | **8,070** | | October | 400 |
+| **February** | **4,800** | | April | 200 |
+| | | | March, May–September | **0** |
+
+December, January and February are **95% of the theme**. The summer months are not
+under-served, they are unasked: it is warm everywhere in the US from May to
+September, so nobody searches for where else it might be.
+
+All twelve pages stay. The UK is an English-speaking market on a different seasonal
+curve, the pages cost nothing to keep, and a guide missing half the year reads as
+broken. But **do not spend December's effort on July.** As of Aug 2026 every month
+carried roughly the same 630–790 words, three sections and five questions, which is
+uniform effort against a 95/5 split.
+
 ## Prices
 
 **Two price sources exist and they disagree by a factor of two.** `origin_fares` in
@@ -494,7 +516,26 @@ identical constants — 28.0 °C air, 26 °C sea — so quoting one would be quo
 
 ## Next up
 
-1. **Build hubs for the destinations Americans actually search for.** The 28 existing
+1. **The departure city is lost the moment someone clicks.** Going from
+   `/cheap-flights-from-atlanta` to a destination page pre-fills the search widget
+   from the IP guess rather than from Atlanta. The visitor has just told us where
+   they are and has to say it again — the widget was seen offering Sundsvall on a
+   page reached from Atlanta.
+
+   The obvious fix is to link with `?from=ATL` and have the destination page
+   pre-fill from it. **Check that the widget can be pre-filled at all before
+   building anything on that assumption.** flyg.ai tried three approaches against
+   the same Travelpayouts widget — data attributes on the mount node, parameters in
+   the script URL, and a window-scoped config object — and it is not recorded
+   whether any of them worked. The widget is third-party and its options are not
+   documented.
+
+   Same page, related: the widget also renders Kiwi's own "Trending destinations"
+   — Copenhagen, Las Palmas, Stockholm, Algiers. That is Kiwi's content promoting
+   Kiwi's routes on our page, and none of it links back into Flyamba. Worth finding
+   out whether it can be switched off.
+
+2. **Build hubs for the destinations Americans actually search for.** The 28 existing
    hubs (`app/lib/hubs.ts`) were inherited from flyg.ai and are European city breaks —
    Amsterdam, Prague, Vienna, Florence. Right content, wrong market. Not one of the ten
    most-searched destinations in the US has a hub.
@@ -519,7 +560,7 @@ identical constants — 28.0 °C air, 26 °C sea — so quoting one would be quo
    first makes things worse, not better — that list is what keeps the hub spotlight and
    the sort tiebreak from pointing at thin pages.
 
-2. **Real fares exist and almost nothing reads them.** Both cron jobs run and both
+3. **Real fares exist and almost nothing reads them.** Both cron jobs run and both
    tables are filling: `origin_fares` holds ~3,300 rows across 12 origins including
    NYC, LAX, CHI and MIA, and `daily_prices` is writing too. `app/lib/fares.ts` is a
    finished reader for it — and `/api/ai-search` is its only consumer.
@@ -536,15 +577,15 @@ identical constants — 28.0 °C air, 26 °C sea — so quoting one would be quo
    211 must render **no price row at all** — `fares.ts` says this in its own header, and
    `priceUsd: 0` already hides the row. Substituting the Stockholm number is what made
    the figure wrong in the first place.
-3. **9 destinations still on placeholder images** — see `scripts/missing-images.txt`.
+4. **9 destinations still on placeholder images** — see `scripts/missing-images.txt`.
    No source photo exists in either project.
-4. **2 Lisbon attractions on placeholders** — Padrão dos Descobrimentos and Sé Cathedral,
+5. **2 Lisbon attractions on placeholders** — Padrão dos Descobrimentos and Sé Cathedral,
    marked with TODOs in `lisbon-places.ts`. No photo in either project.
-5. **Only 26 of 550 catalog cities are comparable**, because `scores` were only authored for
+6. **Only 26 of 550 catalog cities are comparable**, because `scores` were only authored for
    the built-out hubs. More pairs means authoring more `scores` in `all-destinations.ts`
    (madrid and mykonos are the two quickest wins — they already have hubs).
-6. `README.md` is still create-next-app boilerplate.
-7. **Categories should be real pages, not query parameters.** Today the homepage links its
+7. `README.md` is still create-next-app boilerplate.
+8. **Categories should be real pages, not query parameters.** Today the homepage links its
    category pills at `/explore?type=Beach+%26+Sun` (`app/page.tsx:149`) — one templated page
    filtered client-side, which gives every category the same title, the same H1 and no
    indexable URL of its own. Each category should be its own static route with its own
