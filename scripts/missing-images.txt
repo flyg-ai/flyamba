@@ -18,15 +18,7 @@ torres-del-paine
 st-maarten
 jaipur
 playa-del-carmen
-montego-bay
-varadero
 protaras
 limassol
 fethiye
 
-# Added Aug 2026 — four Caribbean destinations with real US search volume but no
-# usable photo in either project. Placeholder until sourced.
-puerto-rico
-bahamas
-cayman-islands
-us-virgin-islands
