@@ -41,17 +41,24 @@ yarn-error.log*
 next-env.d.ts
 
 # --- Destination image library (flyg.ai import) ---
-# Hero images (flights-*.avif) ARE tracked so every destination page renders.
-# The slim thumbnails (flights-*-thumb.avif) are unused in code and stay ignored
-# (the 8 rich thumbnails committed earlier remain tracked).
-/public/images/destinations/flights-*-thumb.avif
-!/public/images/destinations/flights-bali-thumb.avif
-!/public/images/destinations/flights-barcelona-thumb.avif
-!/public/images/destinations/flights-lisbon-thumb.avif
-!/public/images/destinations/flights-marrakech-thumb.avif
-!/public/images/destinations/flights-new-york-thumb.avif
-!/public/images/destinations/flights-reykjavik-thumb.avif
-!/public/images/destinations/flights-tokyo-thumb.avif
+# Everything under public/images/destinations is tracked, heroes AND thumbnails.
+#
+# DO NOT IGNORE THE THUMBNAILS AGAIN. They used to be ignored on the grounds that
+# they were "unused in code". That stopped being true when the warm guide was
+# built, and the rule outlived the fact: app/lib/climate.ts, WarmSearch.tsx and
+# where-is-it-warm/page.tsx all render `d.thumbnail`, which is 541 distinct
+# thumbnails across the built site.
+#
+# The failure mode is why this comment is long. Ignoring them breaks 535 image
+# paths in production and NOTHING CATCHES IT: the files sit on the developer's
+# disk, so every local build succeeds, next build reports no error, and the
+# broken images only appear once Vercel builds from a clean checkout. It looked
+# correct in dev the whole way through.
+#
+# The cost of tracking them is about 8 MB against the 68 MB the folder already
+# holds. The alternative — pointing the cards at the full-size `image` instead —
+# would make every card roughly ten times heavier on pages that render 130 of
+# them, which undoes the image-weight work in PERFORMANCE.md.
 
 .vercel
 .env*.local

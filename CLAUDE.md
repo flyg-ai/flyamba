@@ -230,6 +230,16 @@ after adding images rather than reaching for the sibling project's loader.
 `fetchpriority` attribute Lighthouse reports as missing. The Image docs say to prefer
 `fetchPriority="high"` over `preload` in most cases and warn against combining them.
 
+**Run `node scripts/verify-images.mjs` before committing images.** It checks that
+every image path in the build is both on disk and reaching git, and exits 1 if not.
+
+That second half is the point. `.gitignore` once ignored `flights-*-thumb.avif`
+because the thumbnails were unused; the warm guide later started rendering them, and
+535 referenced files were left out of the repository. Nothing caught it — the files
+were on the developer's disk, so every local build passed and `next build` reported
+nothing. The images broke only when Vercel built from a clean checkout. Checking the
+filesystem is not enough; a file can exist and still never ship.
+
 **Known debt — no hero image covers a wide screen at DPR 2.** The homepage hero
 (`/images/content/photo-1507525428034-b723cf961d3e.avif`) is **1600x1064**, and
 `/where-is-it-warm` now borrows the same file. Both render full-bleed. A 1440 CSS
