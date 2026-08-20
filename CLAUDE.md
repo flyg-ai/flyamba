@@ -396,17 +396,57 @@ plainly wrong. `/where-is-it-warm` filtered on them briefly and no longer does.
 
 ## Next up
 
-1. **`daily_prices` has no writer.** Needs a `/api/cron/prices` route hitting Travelpayouts
-   plus `CRON_SECRET` and a `vercel.json` schedule — same shape as flyg.ai's.
-2. **9 destinations still on placeholder images** — see `scripts/missing-images.txt`.
+1. **Build hubs for the destinations Americans actually search for.** The 28 existing
+   hubs (`app/lib/hubs.ts`) were inherited from flyg.ai and are European city breaks —
+   Amsterdam, Prague, Vienna, Florence. Right content, wrong market. Not one of the ten
+   most-searched destinations in the US has a hub.
+
+   Priority order, by measured US monthly search volume (Ahrefs, Aug 2026):
+
+   | # | destination | US searches/mo |
+   | --- | --- | --- |
+   | 1 | Aruba | 16,920 |
+   | 2 | Jamaica | 14,500 |
+   | 3 | Chicago | 12,770 |
+   | 4 | Atlanta | 11,730 |
+   | 5 | Miami | 11,030 |
+   | 6 | Las Vegas | 10,520 |
+   | 7 | Orlando | 10,330 |
+   | 8 | New York | 9,170 |
+   | 9 | Costa Rica | 6,830 |
+   | 10 | Punta Cana | 6,570 |
+
+   All ten exist in the catalog as lite pages already, so this is content work rather
+   than data work. Adding a slug to `HUB_CITY_SLUGS` without building its subpages
+   first makes things worse, not better — that list is what keeps the hub spotlight and
+   the sort tiebreak from pointing at thin pages.
+
+2. **Real fares exist and almost nothing reads them.** Both cron jobs run and both
+   tables are filling: `origin_fares` holds ~3,300 rows across 12 origins including
+   NYC, LAX, CHI and MIA, and `daily_prices` is writing too. `app/lib/fares.ts` is a
+   finished reader for it — and `/api/ai-search` is its only consumer.
+
+   Everything else still shows `monthlyPrices` from `all-destinations.ts`, which are
+   Stockholm-origin estimates seeded from flyg.ai: **81% of the 6,570 values are round
+   hundreds**. Measured against real US-origin fares for the 339 destinations where both
+   exist, the guess is off by a **median factor of 2.35x**, and the error inverts the
+   ranking rather than just scaling it — San Francisco is $43 real against $524 guessed,
+   Gdańsk $1,198 real against $52 guessed. Cheap-from-Stockholm European cities look
+   cheap and cheap-from-US American ones look expensive, on a site aimed at Americans.
+
+   Wiring the cards to `getFares()` covers 339 of 550 from a US origin. The remaining
+   211 must render **no price row at all** — `fares.ts` says this in its own header, and
+   `priceUsd: 0` already hides the row. Substituting the Stockholm number is what made
+   the figure wrong in the first place.
+3. **9 destinations still on placeholder images** — see `scripts/missing-images.txt`.
    No source photo exists in either project.
-3. **2 Lisbon attractions on placeholders** — Padrão dos Descobrimentos and Sé Cathedral,
+4. **2 Lisbon attractions on placeholders** — Padrão dos Descobrimentos and Sé Cathedral,
    marked with TODOs in `lisbon-places.ts`. No photo in either project.
-4. **Only 26 of 550 catalog cities are comparable**, because `scores` were only authored for
+5. **Only 26 of 550 catalog cities are comparable**, because `scores` were only authored for
    the built-out hubs. More pairs means authoring more `scores` in `all-destinations.ts`
    (madrid and mykonos are the two quickest wins — they already have hubs).
-5. `README.md` is still create-next-app boilerplate.
-6. **Categories should be real pages, not query parameters.** Today the homepage links its
+6. `README.md` is still create-next-app boilerplate.
+7. **Categories should be real pages, not query parameters.** Today the homepage links its
    category pills at `/explore?type=Beach+%26+Sun` (`app/page.tsx:149`) — one templated page
    filtered client-side, which gives every category the same title, the same H1 and no
    indexable URL of its own. Each category should be its own static route with its own
