@@ -1,4 +1,25 @@
-import { supabaseServer, isSupabaseServerConfigured } from "./supabase-server";
+import { createClient } from "@supabase/supabase-js";
+
+// A client of our own rather than the shared `supabaseServer`, for the same
+// reason app/lib/climate.ts has one: this read must never come from the build
+// cache.
+//
+// Next stores build-time fetch responses in .next/cache and Vercel restores that
+// between deploys, so a deploy made after the nightly fare job replays the
+// previous night's prices. It was caught here the hard way — after the metro-code
+// fix took coverage from 339 destinations to 377, the build kept logging 339
+// until the cache was cleared by hand, and nothing said so. Fares change every
+// night; a cached fare is a wrong fare.
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+
+const faresClient =
+  supabaseUrl && supabaseServiceKey
+    ? createClient(supabaseUrl, supabaseServiceKey, {
+        auth: { persistSession: false, autoRefreshToken: false },
+        global: { fetch: (input, init) => fetch(input, { ...init, cache: "no-store" }) },
+      })
+    : null;
 
 // Reader for origin_fares — the "from $X" shown on cards and destination pages.
 //
@@ -59,9 +80,9 @@ export async function getFaresByOrigin(
   origin: string,
   { oneWay = false }: { oneWay?: boolean } = {},
 ): Promise<Record<string, FareOptions>> {
-  if (!isSupabaseServerConfigured || !supabaseServer) return {};
+  if (!faresClient) return {};
 
-  const { data, error } = await supabaseServer
+  const { data, error } = await faresClient
     .from("origin_fares")
     .select("slug, rank, price_usd, depart_date, return_date, airline, one_way, fetched_at")
     .eq("origin", origin.toUpperCase())
@@ -88,9 +109,9 @@ export async function getFares(
   origin: string,
   { oneWay = false }: { oneWay?: boolean } = {},
 ): Promise<Record<string, FareOptions>> {
-  if (!isSupabaseServerConfigured || !supabaseServer || slugs.length === 0) return {};
+  if (!faresClient || slugs.length === 0) return {};
 
-  const { data, error } = await supabaseServer
+  const { data, error } = await faresClient
     .from("origin_fares")
     .select("slug, rank, price_usd, depart_date, return_date, airline, one_way, fetched_at")
     .eq("origin", origin.toUpperCase())

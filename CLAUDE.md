@@ -404,6 +404,33 @@ Augsburg and Detroit but not Rome, Paris or Athens. The file's own header says t
 scores are editorial judgements authored for a Swedish audience and that some are
 plainly wrong. `/where-is-it-warm` filtered on them briefly and no longer does.
 
+## Every new Supabase reader needs `cache: "no-store"`
+
+Next stores build-time fetch responses in `.next/cache`, and Vercel restores that
+directory between deploys. A module-scope Supabase read therefore serves the
+PREVIOUS deploy's data, and **the failure is silent every time**: the build
+succeeds, the log line prints, the number is just old.
+
+It has now bitten twice, in two different files, weeks apart:
+
+- `app/lib/climate.ts` — after the Swedish slugs were renamed in the table, the
+  build kept using the old destination count and silently cut July from 550
+  destinations to 534.
+- `app/lib/fares.ts` — after the metro-code fix took fare coverage from 339
+  destinations to 377, the build kept logging 339 until `.next/cache` was deleted
+  by hand.
+
+Both now build their own client with
+`global: { fetch: (input, init) => fetch(input, { ...init, cache: "no-store" }) }`
+rather than importing the shared `supabaseServer`, which keeps its default
+caching for route handlers where that is correct.
+
+Two consequences worth knowing. A no-store fetch marks the route dynamic, so any
+page reading one needs `export const dynamic = "force-static"` to stay
+prerendered — see `/where-is-it-warm/[month]`. And the responses still get
+written to `.next/cache`; they are simply never read, so a file listing looks
+like caching is happening when it is not.
+
 ## Prices
 
 **Two price sources exist and they disagree by a factor of two.** `origin_fares` in
