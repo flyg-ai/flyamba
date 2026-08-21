@@ -6,6 +6,7 @@ import { Footer } from "@/app/components/Footer";
 import { SITE } from "@/app/lib/destination-helpers";
 import { CONTACT_EMAIL } from "@/app/components/LegalPage";
 import { MessageSquare, Sparkles, Plane, ArrowRight, Compass, Shield, Heart } from "lucide-react";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "About Flyamba — Smarter flight search",
@@ -18,14 +19,6 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-    { "@type": "ListItem", position: 2, name: "About", item: `${SITE}/about` },
-  ],
-};
 
 const STEPS = [
   {
@@ -55,15 +48,14 @@ const VALUES = [
 export default function About() {
   return (
     <div className="min-h-screen bg-background">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
-      />
       <Navbar />
 
       {/* Hero */}
       <section className="relative isolate overflow-hidden pt-32">
         <div className="mx-auto max-w-4xl px-4 pb-16 pt-16 text-center sm:px-6">
+          <div className="mb-6 flex justify-center">
+            <Breadcrumbs items={[{ name: "Flyamba", href: "/" }, { name: "About" }]} />
+          </div>
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">About Flyamba</p>
           <h1 className="mt-4 font-serif text-5xl font-semibold leading-[1.1] text-foreground sm:text-6xl">
             Smarter flight search for <span className="italic text-gradient-accent">curious travelers</span>

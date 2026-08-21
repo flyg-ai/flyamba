@@ -7,6 +7,7 @@ import { AirlineCalendarPicker } from "@/app/components/AirlineCalendarPicker";
 import { CALENDAR_BY_SLUG, lowFareHref, type CalendarAirline } from "@/app/lib/low-fare";
 import { SITE } from "@/app/lib/destination-helpers";
 import { ArrowRight, CalendarRange } from "lucide-react";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 
 export function airlineFaq(a: CalendarAirline, cities: string): FaqItem[] {
   return [
@@ -47,15 +48,6 @@ export function AirlineCalendarView({ airline }: { airline: CalendarAirline }) {
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-        { "@type": "ListItem", position: 2, name: "Low Fare Calendar", item: `${SITE}/low-fare-calendar` },
-        { "@type": "ListItem", position: 3, name: airline.name, item: url },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: faq.map((f) => ({
         "@type": "Question",
@@ -77,6 +69,7 @@ export function AirlineCalendarView({ airline }: { airline: CalendarAirline }) {
       <Navbar />
 
       <main className="mx-auto max-w-4xl px-4 pb-20 pt-32 sm:px-6">
+        <Breadcrumbs items={[{ name: "Flyamba", href: "/" }, { name: "Low Fare Calendar", href: "/low-fare-calendar" }, { name: airline.name }]} />
         <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
           <CalendarRange className="h-3.5 w-3.5" /> Low fare calendar
         </p>

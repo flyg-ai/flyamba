@@ -152,7 +152,9 @@ export default async function ComparisonPage({
 
         <Breadcrumbs
           items={[
-            { name: "Home", href: "/" },
+            // "Flyamba", not "Home" — every other trail on the site starts there,
+            // and these twenty pages were the last holdout of a third convention.
+            { name: "Flyamba", href: "/" },
             { name: "Compare", href: "/compare" },
             { name: `${first.name} vs ${second.name}` },
           ]}

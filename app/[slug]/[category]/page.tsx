@@ -5,6 +5,7 @@ import { getDestination } from "@/app/data/destinations";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { subpageCrumbsForSlug } from "@/app/lib/destination-crumbs";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { ArrowRight } from "lucide-react";
 
@@ -58,13 +59,7 @@ export default async function CategoryComingSoon({
     <div className="min-h-screen bg-background">
       <Navbar />
       <main className="mx-auto max-w-3xl px-4 pb-24 pt-28 sm:px-6 lg:px-8">
-        <Breadcrumbs
-          items={[
-            { name: "Flyamba", href: "/" },
-            { name: d.city, href: `/${d.slug}` },
-            { name: label },
-          ]}
-        />
+        <Breadcrumbs items={subpageCrumbsForSlug(d.slug, label, d.city)} />
 
         <div className="mt-10 rounded-3xl border border-dashed border-border bg-card/40 p-10 text-center">
           <p className="text-4xl">{d.countryFlag ?? "✈️"}</p>

@@ -3,6 +3,8 @@ import type { ReactNode } from "react";
 import type { Destination } from "@/app/data/destinations";
 import { getDestination, destinations } from "@/app/data/destinations";
 import { Navbar } from "@/app/components/Navbar";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { Footer } from "@/app/components/Footer";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { FaqItem } from "@/app/components/FaqItem";
@@ -30,15 +32,6 @@ function buildJsonLd(d: Destination) {
   const cheapest = d.cheapestMonth?.name;
   const priciest = d.priciestMonth?.name;
 
-  const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: d.country },
-      { "@type": "ListItem", position: 3, name: d.city, item: url },
-    ],
-  };
   const touristDestination = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
@@ -67,7 +60,7 @@ function buildJsonLd(d: Destination) {
     url,
     description: `Find cheap flights to ${d.city}, ${d.country}. Compare prices, view the price calendar and book direct with Flyamba.`,
   };
-  return [breadcrumb, touristDestination, faqPage, webPage];
+  return [touristDestination, faqPage, webPage];
 }
 
 const iconFor = (i: string) => (i === "sun" ? Sun : i === "rain" ? CloudRain : i === "snow" ? Snowflake : Cloud);
@@ -117,6 +110,12 @@ export function DestinationDetail({
         />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-16 pt-24 sm:px-6 lg:px-8">
+          {/* Trail added with the schema. The rich Destination type carries no
+              continent, so the region comes from the catalog by slug — the same
+              lookup the lite pages use, which keeps the two in agreement. */}
+          <div className="mb-4">
+            <Breadcrumbs onDark items={crumbsForSlug(d.slug)} />
+          </div>
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/85">
             {d.countryFlag && <span className="text-base">{d.countryFlag}</span>}
             <span>{d.country}</span>

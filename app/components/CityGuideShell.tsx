@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { subpageCrumbsForSlug } from "@/app/lib/destination-crumbs";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { SmartImage } from "@/app/components/SmartImage";
 import { CitySubNav, type CityCategory } from "@/app/components/CitySubNav";
@@ -49,14 +50,7 @@ export function CityGuideShell({
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-4xl flex-col justify-end px-4 pb-10 pt-24 sm:px-6 lg:px-8">
           <div className="text-white/90">
-            <Breadcrumbs
-              onDark
-              items={[
-                { name: "Flyamba", href: "/" },
-                { name: cityName, href: `/${citySlug}` },
-                { name: crumb },
-              ]}
-            />
+            <Breadcrumbs onDark items={subpageCrumbsForSlug(citySlug, crumb, cityName)} />
           </div>
           <h1 className="mt-4 font-serif text-4xl font-semibold text-white sm:text-5xl">{h1}</h1>
         </div>

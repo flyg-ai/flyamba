@@ -3,6 +3,8 @@ import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { SmartImage } from "@/app/components/SmartImage";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { destinationCrumbs } from "@/app/lib/destination-crumbs";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
 import { usd5, usdStr } from "@/app/lib/format";
 import { SITE } from "@/app/lib/destination-helpers";
@@ -23,16 +25,10 @@ function buildJsonLd(d: AllDestination, lowestSek: number | null) {
     ? `Cheap flights to ${place} from ${usdStr(lowestSek)}, with a month-by-month price calendar.`
     : `Cheap flights to ${place}, with a month-by-month price calendar.`;
 
+  // No BreadcrumbList here — <Breadcrumbs> owns it and emits it from the trail it
+  // actually renders. The copy that lived here also sent a URL-less middle entry
+  // for the country, which the spec does not allow.
   return [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-        { "@type": "ListItem", position: 2, name: d.country },
-        { "@type": "ListItem", position: 3, name: d.name, item: url },
-      ],
-    },
     {
       "@context": "https://schema.org",
       "@type": "TouristDestination",
@@ -86,6 +82,13 @@ export function DestinationLite({ d }: { d: AllDestination }) {
         <SmartImage src={d.image} alt={`Cheap flights to ${d.name}, ${d.country}`} fill priority sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 lg:px-8">
+          {/* The trail is new here. These pages carried a BreadcrumbList in their
+              structured data with no breadcrumb on the page at all — schema
+              describing a UI that did not exist, the same violation the FAQ rule
+              in CLAUDE.md covers. <Breadcrumbs> now emits it from what renders. */}
+          <div className="mb-4">
+            <Breadcrumbs onDark items={destinationCrumbs(d)} />
+          </div>
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/85">
             <span>{d.country}</span>
             {d.iata && (

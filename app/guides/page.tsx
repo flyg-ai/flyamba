@@ -8,6 +8,7 @@ import { latestGuides, guideHref } from "@/app/data/guides";
 import { CALENDAR_DESTINATIONS } from "@/app/lib/low-fare";
 import { SITE } from "@/app/lib/destination-helpers";
 import { ArrowRight, BookOpen } from "lucide-react";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Travel Guides & Inspiration | Flyamba",
@@ -25,14 +26,6 @@ export const metadata: Metadata = {
 const CITY_LABEL = new Map(CALENDAR_DESTINATIONS.map((d) => [d.slug, d.city]));
 
 const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE}/guides` },
-    ],
-  },
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -71,6 +64,7 @@ export default function GuidesHub() {
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+        <Breadcrumbs items={[{ name: "Flyamba", href: "/" }, { name: "Guides" }]} />
         <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
           <BookOpen className="h-3.5 w-3.5" /> Guides
         </p>

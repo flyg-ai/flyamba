@@ -5,6 +5,7 @@ import { Footer } from "@/app/components/Footer";
 import { SITE } from "@/app/lib/destination-helpers";
 import { CONTACT_EMAIL } from "@/app/components/LegalPage";
 import { Mail, Clock, Handshake, MessageSquare } from "lucide-react";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Contact Flyamba",
@@ -18,14 +19,6 @@ export const metadata: Metadata = {
 };
 
 const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Contact", item: `${SITE}/contact` },
-    ],
-  },
   {
     "@context": "https://schema.org",
     "@type": "ContactPage",
@@ -53,6 +46,7 @@ export default function Contact() {
       <Navbar />
 
       <main className="mx-auto max-w-3xl px-4 pb-24 pt-32 sm:px-6">
+        <Breadcrumbs items={[{ name: "Flyamba", href: "/" }, { name: "Contact" }]} />
         <div className="text-center">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Get in touch</p>
           <h1 className="mt-3 font-serif text-5xl font-semibold text-foreground sm:text-6xl">Contact Flyamba</h1>

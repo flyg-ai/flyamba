@@ -10,6 +10,7 @@ import { CALENDAR_DESTINATIONS } from "@/app/lib/low-fare";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { Clock, ArrowRight, CalendarDays } from "lucide-react";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 
 const CITY_LABEL = new Map(CALENDAR_DESTINATIONS.map((d) => [d.slug, d.city]));
 
@@ -71,15 +72,6 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-        { "@type": "ListItem", position: 2, name: "Guides", item: `${SITE}/guides` },
-        { "@type": "ListItem", position: 3, name: g.title, item: url },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "Article",
       headline: g.title,
       description: g.excerpt,
@@ -110,6 +102,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
       <main className="pb-20 pt-28">
         <article className="mx-auto max-w-3xl px-4 sm:px-6">
+          <Breadcrumbs items={[{ name: "Flyamba", href: "/" }, { name: "Guides", href: "/guides" }, { name: g.title }]} />
           <nav className="text-sm text-muted-foreground">
             <Link href="/guides" className="transition hover:text-accent">
               Guides

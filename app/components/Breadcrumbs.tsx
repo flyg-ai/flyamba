@@ -34,10 +34,29 @@ export function Breadcrumbs({ items, onDark = false }: { items: Crumb[]; onDark?
   const currentClass = onDark ? "text-white" : "text-muted-foreground";
   const sepClass = onDark ? "text-white/60" : "text-muted-foreground/50";
 
+  // THE SCHEMA IS A SUBSET OF THE VISIBLE TRAIL, AND THAT IS DELIBERATE.
+  //
+  // Google's BreadcrumbList spec allows only the LAST item to omit `item`. A
+  // middle entry without a URL is outside spec and can be flagged in Search
+  // Console. Two of our levels have no page to point at: the region always, and
+  // the country for the 65 countries with destinations but no country page.
+  //
+  // So the emitted list keeps every crumb that has an href, plus the final one,
+  // and renumbers positions to stay contiguous:
+  //
+  //   visible  Flyamba › Europe › Spain  › Barcelona
+  //   schema   Flyamba ›          Spain  › Barcelona
+  //   visible  Flyamba › Europe › Turkey › Alaçatı
+  //   schema   Flyamba ›                    Alaçatı
+  //
+  // That is not a mismatch in the sense Google penalises. The schema describes a
+  // true subset of the path the reader sees; sending a URL-less middle item would
+  // describe something the spec does not permit.
+  const schemaItems = items.filter((c, i) => c.href || i === items.length - 1);
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((c, i) => ({
+    itemListElement: schemaItems.map((c, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
