@@ -453,6 +453,112 @@ broken. But **do not spend December's effort on July.** As of Aug 2026 every mon
 carried roughly the same 630–790 words, three sections and five questions, which is
 uniform effort against a 95/5 split.
 
+## The search widget, and what it accepts
+
+`AviasalesWidget` loads `tpwdg.com/content`, which parses its OWN `script.src` in a
+`getParams()` helper and maps named parameters onto data attributes on the inner
+element. Eleven are read:
+
+```
+from_name  to_name  locale  currency  departure  return
+stops  limit  primary_color  results_background_color  form_background_color
+```
+
+`from_name` and `to_name` are symmetric — the script does
+`if (url_params["from_name"]) js.setAttribute("data-from", …)` and the same for
+`to_name`.
+
+**`departure` and `return` take dates**, which is not used yet and is the obvious
+hook if the low fare calendar ever wants to hand a chosen date pair straight to the
+widget.
+
+### Where the values actually go, and why ours were wrong
+
+The chain does not stop at the data attributes. Kiwi's loader
+(`widgets.kiwi.com/scripts/widget-search-iframe.js`) reads `data-from` and
+`data-to` and turns them into `source=` and `destination=` on an iframe pointed at
+`widgets.kiwi.com/basic`, which resolves them against **`api.skypicker.com`**. So
+the format that matters is Kiwi's, not Travelpayouts'.
+
+**Kiwi place ids carry a subdivision segment for the US and Canada.**
+
+| ours (Travelpayouts) | Kiwi |
+| --- | --- |
+| `chicago_us` | `chicago_il_us` |
+| `atlanta_us` | `atlanta_ga_us` |
+| `new-york_us` | `new-york-city_ny_us` |
+| `toronto_ca` | `toronto_on_ca` |
+| `sydney_au` | `sydney_ns_au` |
+
+European names have no such segment, so `barcelona_es`, `rome_it` and `london_gb`
+match Kiwi's format **by coincidence**. That coincidence is the whole reason this
+went unnoticed: the pages anyone happened to check were European ones, where
+pre-filling worked, while every US destination and every US origin resolved to
+nothing. 186 of 556 catalog values were dead, including Swedish leftovers from
+flyg.ai — `kreta_gr`, `milano_it`, `maldiverna_mv`, `kapstaden_za`.
+
+**AN UNKNOWN ID PRODUCES AN EMPTY FIELD, NOT AN ERROR.** Nothing logs, nothing
+throws, no network call fails. The widget renders a search box whose From and To are
+blank — indistinguishable from a box nobody has typed into. This is why it could sit
+broken indefinitely, and why the fix is a gate rather than a correction:
+
+```
+node scripts/verify-tpnames.mjs
+```
+
+**Run it whenever a `tpName` or an `ORIGIN_TP_NAME` entry changes.** It checks every
+value under `app/` against the same API the widget queries and exits 1 on an unknown
+one, so it can gate a commit. It fails rather than passes when the API is
+unreachable. All 498 values pass; `PENDING_REVIEW` is empty and meant to stay that
+way.
+
+**The same script sweeps for implausible airports**, which is how the Trinidad entry
+under "Next up" was found:
+
+```
+node scripts/verify-tpnames.mjs --sweep --out airport-sweep.md
+```
+
+It flags a destination only when its airport is more than 150 km away AND the
+destination has fewer than five rows in `origin_fares` AND a Kiwi station sits at
+least 30% closer. Distance alone is useless in both directions: it condemns Petra →
+Amman, which is correct, and clears an empty airstrip 8 km away, which is the worse
+error. The sweep **reports and never fails the build** — `exit 1` stays reserved for
+what is provably wrong. It does not measure a candidate airport's fare coverage, so
+every candidate is a lead to probe against Travelpayouts, never a recommendation.
+
+**39 values are shared by several destinations on purpose.** Kiwi has no place for a
+region or a village, so six Albanian entries point at `tirana_al`, Tuscany at
+`florence_it`, Petra and Wadi Rum at `amman_jo`. The field answers "which airport do
+you fly into", and it is the same airport the row's IATA code already uses to fetch
+the fare on the page — so the search box and the price agree instead of contradicting
+each other. Not a de-duplication bug.
+
+**Resolve a new value by its IATA code, not by its name.** An IATA code IS a Kiwi
+station id, and the station's city is the answer — `ids: ["HER"]` yields
+`heraklion_gr` for Crete. Searching by name gave a Cree nation in Manitoba for
+`kreta_gr` and Petrolina in Brazil for `petra_jo`.
+
+**Do not repeat flyg.ai's three experiments.** The sibling project tried data
+attributes on the mount node, parameters in the script URL, and a window-scoped
+config object, and it is not recorded whether any worked. Those were aimed at a
+DIFFERENT PRODUCT — the white-label widget at `tpwdg.com/wl_web/main.js` — and say
+nothing about this one, which documents its own interface in the script it serves.
+
+### What cannot be turned off
+
+The widget also renders Kiwi's own "Trending destinations" block — Copenhagen, Las
+Palmas, Stockholm, Algiers — which promotes Kiwi's routes on our page and links
+nowhere back into Flyamba. The word "trending" appears **zero times** in the loader
+script; the block is built inside the iframe by Kiwi's code, and none of the eleven
+parameters touches it. `powered_by=false`, which we already send, is the only
+branding control on offer.
+
+If that ever becomes worth solving, the replacement already exists in miniature:
+`PrisKalender` deep-links to `kiwi.com/deep?from=<origin>&to=<iata>` with a working
+origin picker, so a hand-built search box with correct affiliate links is a known
+quantity rather than a design problem.
+
 ## Prices
 
 **Two price sources exist and they disagree by a factor of two.** `origin_fares` in
@@ -516,24 +622,21 @@ identical constants — 28.0 °C air, 26 °C sea — so quoting one would be quo
 
 ## Next up
 
-1. **The departure city is lost the moment someone clicks.** Going from
-   `/cheap-flights-from-atlanta` to a destination page pre-fills the search widget
-   from the IP guess rather than from Atlanta. The visitor has just told us where
-   they are and has to say it again — the widget was seen offering Sundsvall on a
-   page reached from Atlanta.
+1. **`trinidad-cuba` has the wrong IATA code, and it is the fare that suffers.** The
+   catalog gives it `SCU` — Santiago de Cuba, **475 km away**. Trinidad's own airport
+   is `TND` (Alberto Delgado), 2 km out, and Kiwi has a `trinidad_cu` city for it. The
+   `tpName` was set from TND and is right; the `iata` field was left alone because it
+   drives `origin_fares`, so changing it moves a price rather than a label.
 
-   The obvious fix is to link with `?from=ATL` and have the destination page
-   pre-fill from it. **Check that the widget can be pre-filled at all before
-   building anything on that assumption.** flyg.ai tried three approaches against
-   the same Travelpayouts widget — data attributes on the mount node, parameters in
-   the script URL, and a window-scoped config object — and it is not recorded
-   whether any of them worked. The widget is third-party and its options are not
-   documented.
+   Two things to settle: whether TND has any international fares worth quoting, and
+   whether the page should say Cienfuegos (59 km) instead. Until then the page shows a
+   Santiago de Cuba fare under a Trinidad heading.
 
-   Same page, related: the widget also renders Kiwi's own "Trending destinations"
-   — Copenhagen, Las Palmas, Stockholm, Algiers. That is Kiwi's content promoting
-   Kiwi's routes on our page, and none of it links back into Flyamba. Worth finding
-   out whether it can be switched off.
+   **Worth a sweep, not just this row.** This was found only because the search widget
+   made the IATA visible; nothing checks that a destination's airport is actually near
+   it. `verify-tpnames.mjs` already resolves every IATA to a Kiwi station with
+   coordinates, so the same pass could flag any row whose airport sits implausibly far
+   from the place it claims to serve.
 
 2. **Build hubs for the destinations Americans actually search for.** The 28 existing
    hubs (`app/lib/hubs.ts`) were inherited from flyg.ai and are European city breaks —

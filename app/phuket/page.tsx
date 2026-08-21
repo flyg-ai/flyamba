@@ -20,7 +20,7 @@ const CITY = {
   country: "Thailand",
   countryFlag: "🇹🇭",
   iata: "HKT",
-  tpName: "phuket_th",
+  tpName: "phuket-city_th",
   summerTemp: 30,
   tagline: "Thailand's beach island of turquoise bays and buzzing nightlife",
   flightTime: "Via Bangkok, Singapore & Dubai",

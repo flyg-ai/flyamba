@@ -16,7 +16,7 @@ export const NEW_YORK = {
   countryFlag: "🇺🇸",
   continent: "North America",
   iata: "JFK",
-  tpName: "new-york_us",
+  tpName: "new-york-city_ny_us",
   summerTemp: 22,
   tagline: "The city that never sleeps — icons, world-class food and endless energy",
   // Average round-trip fare per month, stored in SEK (seeded scale) and

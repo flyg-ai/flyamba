@@ -20,7 +20,7 @@ const CITY = {
   country: "Morocco",
   countryFlag: "🇲🇦",
   iata: "RAK",
-  tpName: "marrakech_ma",
+  tpName: "marrakesh_ma",
   summerTemp: 35,
   tagline: "Souks, palaces and rose-gold ramparts at the edge of the Sahara",
   flightTime: "Nonstop across Europe · 1-stop from the US",

@@ -17,7 +17,7 @@ export const CAPE_TOWN = {
   countryFlag: "🇿🇦",
   continent: "Africa",
   iata: "CPT",
-  tpName: "kapstaden_za",
+  tpName: "cape-town_za",
   summerTemp: 26,
   tagline: "Table Mountain, winelands and Africa's most beautiful city",
   // Average round-trip fare per month, stored in SEK (seeded scale) and
