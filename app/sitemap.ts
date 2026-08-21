@@ -27,6 +27,12 @@ const STATIC_ROUTES = [
   { path: "/low-fare-calendar", priority: 0.7 },
   { path: "/guides", priority: 0.6 },
   { path: "/where-is-it-warm", priority: 0.7 },
+  // The departure hub. Listed here for the reason at the top of this block:
+  // app/cheap-flights/ is a folder with a page.tsx, so readHubs() would otherwise
+  // emit it as a destination called "cheap-flights" and scan it for city subpages.
+  // 0.7 matches /where-is-it-warm and /low-fare-calendar, which sit at the same
+  // level — a hub one click from the homepage that fans out to its own set.
+  { path: "/cheap-flights", priority: 0.7 },
 ];
 
 // app/ directories that aren't routes at all, plus the airline folders — those

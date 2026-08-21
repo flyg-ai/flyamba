@@ -7,7 +7,7 @@ import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { RememberOrigin } from "@/app/components/RememberOrigin";
 import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
-import { DEPARTURES, DEPARTURE_BY_SLUG, departureHref, headingName, titleName } from "@/app/lib/departures";
+import { DEPARTURES, DEPARTURE_BY_SLUG, departureHref, headingName } from "@/app/lib/departures";
 import { getDepartureData, type DepartureRoute } from "@/app/lib/departure-data";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
@@ -40,7 +40,11 @@ export function departureMetadata(city: string): Metadata {
   const d = DEPARTURE_BY_SLUG.get(city);
   if (!d) return { title: "Not found — Flyamba", robots: { index: false } };
 
-  const title = clampTitle(`Cheap Flights from ${titleName(d)} — Fares We Found | Flyamba`);
+  // headingName, the same function the H1 uses. The title is what Google renders
+  // in the SERP, so the airport code has to be here for "cheap flights from msp"
+  // to match on the strongest signal — and one function means the two can never
+  // say different things about the same city.
+  const title = clampTitle(`Cheap Flights from ${headingName(d)} — Fares We Found | Flyamba`);
   const description = clampDescription(
     `Real round-trip fares we found leaving ${d.city}, cheapest first, with the temperature at each destination this month.`,
   );
@@ -117,15 +121,11 @@ export async function DeparturePage({ city }: { city: string }) {
     },
   ];
 
+  // No BreadcrumbList here. <Breadcrumbs> emits its own from the same items it
+  // renders, and a hand-built copy alongside it meant two BreadcrumbLists on every
+  // departure page — which drift apart the moment one is edited, as they would
+  // have the moment /cheap-flights was added as the middle level.
   const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-        { "@type": "ListItem", position: 2, name: `Cheap flights from ${d.city}`, item: `${SITE}${departureHref(d.slug)}` },
-      ],
-    },
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -148,7 +148,18 @@ export async function DeparturePage({ city }: { city: string }) {
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">
-        <Breadcrumbs items={[{ name: "Flyamba", href: "/" }, { name: `Cheap flights from ${d.city}` }]} />
+        {/* Three levels, with /cheap-flights as the middle one. The hub links down
+            to all fourteen; without this it links nowhere back, and the
+            BreadcrumbList is what tells Google the hierarchy exists at all. The
+            root keeps the site-wide "Flyamba" label rather than "Home", so the
+            fourteen do not become the only pages with a second convention. */}
+        <Breadcrumbs
+          items={[
+            { name: "Flyamba", href: "/" },
+            { name: "Cheap flights", href: "/cheap-flights" },
+            { name: d.city },
+          ]}
+        />
 
         <p className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-accent">
           <Plane className="h-3.5 w-3.5 -rotate-45" /> Departing {d.city}
@@ -158,15 +169,19 @@ export async function DeparturePage({ city }: { city: string }) {
         </h1>
 
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+          {/* headingName rather than d.city, so the three cities whose airport code
+              is searched separately — MSP, SLC, LAX — carry it in the opening line
+              as well as the H1. No separate /cheap-flights-from-msp page: that
+              would be the same content at a second URL competing with this one. */}
           {lead.length >= 3 ? (
             <>
-              The cheapest fares we found leaving {d.city} right now are {lead[0].name} at ${lead[0].priceUsd},{" "}
-              {lead[1].name} at ${lead[1].priceUsd} and {lead[2].name} at ${lead[2].priceUsd} round trip. Below are{" "}
-              {total} destinations we hold current fares for, cheapest first, with the average high at each one this
-              month.
+              The cheapest fares we found leaving {headingName(d)} right now are {lead[0].name} at $
+              {lead[0].priceUsd}, {lead[1].name} at ${lead[1].priceUsd} and {lead[2].name} at ${lead[2].priceUsd}{" "}
+              round trip. Below are {total} destinations we hold current fares for, cheapest first, with the average
+              high at each one this month.
             </>
           ) : (
-            <>We hold current fares for {total} destinations from {d.city}, cheapest first.</>
+            <>We hold current fares for {total} destinations from {headingName(d)}, cheapest first.</>
           )}
         </p>
 

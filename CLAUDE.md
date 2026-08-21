@@ -20,6 +20,26 @@ npm run lint
 
 No test script and **no typecheck script**. `npx tsc --noEmit` is the only type check.
 
+### One dev server per working tree
+
+Two `next dev` processes on the same folder share `.next`, and they will truncate
+each other's generated types. The symptom is a build failing on a file nobody
+edited:
+
+```
+.next/dev/types/routes.d.ts:241:23
+Type error: ';' expected.
+```
+
+Open the file and it is cut mid-write — a `ParamMap` block sitting after the
+module's closing brace. **This is not your code.** `npx tsc --noEmit` passes while
+`npm run build` fails, which is the tell: the build pulls in the generated route
+types and the standalone typecheck does not.
+
+The fix is `rm -rf .next` (or just `.next/dev/types`) and a rebuild. The cause is
+running a second dev server — a second terminal, or another agent session in the
+same tree. Stop one of them.
+
 ## Read this before touching anything
 
 **`AGENTS.md` is not decoration.** This is Next.js 16 — APIs and conventions differ from

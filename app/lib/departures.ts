@@ -55,7 +55,6 @@ export function headingName(d: Departure): string {
   return d.codeIsSearched ? `${d.city} (${d.iata})` : d.city;
 }
 
-/** "Minneapolis MSP" — the code without brackets, for the title tag. */
-export function titleName(d: Departure): string {
-  return d.codeIsSearched ? `${d.city} ${d.iata}` : d.city;
-}
+// titleName lived here, giving the <title> a bracket-free "Minneapolis MSP" while
+// the H1 said "Minneapolis (MSP)". Two spellings of one name is two rules to keep
+// in step for no gain, so the title now uses headingName as well and this is gone.
