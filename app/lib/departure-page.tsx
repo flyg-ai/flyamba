@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { RememberOrigin } from "@/app/components/RememberOrigin";
 import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { DEPARTURES, DEPARTURE_BY_SLUG, departureHref, headingName, titleName } from "@/app/lib/departures";
 import { getDepartureData, type DepartureRoute } from "@/app/lib/departure-data";
@@ -141,6 +142,9 @@ export async function DeparturePage({ city }: { city: string }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, "\\u003c") }}
         />
       ))}
+      {/* Remembers this city so the destination pages pre-fill their search with
+          it instead of guessing from the visitor's IP. */}
+      <RememberOrigin iata={d.iata} />
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-4 pb-20 pt-32 sm:px-6 lg:px-8">

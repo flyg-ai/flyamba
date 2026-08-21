@@ -55,6 +55,80 @@ export const DEFAULT_ORIGIN = "LON";
 export const ORIGIN_BY_IATA = new Map(SUPPORTED_ORIGINS.map((o) => [o.iata, o]));
 
 /**
+ * IATA metro code → the place id the search widget expects as `from_name`.
+ *
+ * THESE ARE KIWI IDS, NOT TRAVELPAYOUTS NAMES, AND THE DIFFERENCE MATTERS.
+ * The widget script maps `from_name` onto `data-from`, which Kiwi's iframe loader
+ * turns into `source=` against api.skypicker.com. So the value has to be a place
+ * id Kiwi recognises — and for the United States and Canada that carries a
+ * subdivision segment our own slugs never had: `atlanta_ga_us`, not `atlanta_us`.
+ *
+ * An earlier version of this table copied the catalog's `tpName` values, on the
+ * reasoning that strings already shipping as `to_name` must be correct. They were
+ * not. Eighteen of the twenty-four resolved to nothing, including every US city —
+ * the whole target market. European names such as `london_gb` and `paris_fr`
+ * happen to match Kiwi's format, which is why the bug stayed invisible.
+ *
+ * AN UNKNOWN ID PRODUCES AN EMPTY FIELD, NOT AN ERROR. Nothing logs, nothing
+ * throws, the box just renders blank — which is how this shipped broken. Every
+ * value below was resolved from Kiwi's places API and then read back by id.
+ * Run `node scripts/verify-tpnames.mjs` after touching this table.
+ */
+export const ORIGIN_TP_NAME: Record<string, string> = {
+  LON: "london_gb",
+  NYC: "new-york-city_ny_us",
+  LAX: "los-angeles_ca_us",
+  CHI: "chicago_il_us",
+  MIA: "miami_fl_us",
+  ATL: "atlanta_ga_us",
+  DFW: "dallas_tx_us",
+  HOU: "houston_tx_us",
+  MSP: "minneapolis_mn_us",
+  DEN: "denver_co_us",
+  DTT: "detroit_mi_us",
+  PHX: "phoenix_az_us",
+  TPA: "tampa_fl_us",
+  SEA: "seattle_wa_us",
+  SLC: "salt-lake-city_ut_us",
+  AUS: "austin_tx_us",
+  SAN: "san-diego_ca_us",
+  YTO: "toronto_on_ca",
+  DUB: "dublin_ie",
+  AMS: "amsterdam_nl",
+  FRA: "frankfurt_de",
+  PAR: "paris_fr",
+  STO: "stockholm_se",
+  SYD: "sydney_ns_au",
+};
+/**
+ * The visitor's chosen origin as the widget's `from_name`, read in the browser.
+ *
+ * CLIENT-SIDE ON PURPOSE. Reading the cookie in a server component would make the
+ * page dynamic, which costs TTFB and fragments the CDN cache on every destination
+ * page. The widget already mounts on the client behind an IntersectionObserver,
+ * so it can read the cookie itself and the page stays static — see the note in
+ * AviasalesWidget.
+ *
+ * Returns null when there is no cookie or the value is not one we support, and
+ * the caller then omits `from_name` rather than sending something invalid.
+ */
+export function originTpNameFromCookie(): string | null {
+  if (typeof document === "undefined") return null;
+  const match = document.cookie.match(new RegExp(`(?:^|; )${ORIGIN_COOKIE}=([^;]*)`));
+  if (!match) return null;
+  const iata = normalizeOrigin(decodeURIComponent(match[1]));
+  return iata ? (ORIGIN_TP_NAME[iata] ?? null) : null;
+}
+
+/** Write the visitor's origin so later pages can pre-fill from it. */
+export function writeOriginCookie(iata: string): void {
+  if (typeof document === "undefined") return;
+  const valid = normalizeOrigin(iata);
+  if (!valid) return;
+  document.cookie = `${ORIGIN_COOKIE}=${encodeURIComponent(valid)}; path=/; max-age=31536000; samesite=lax`;
+}
+
+/**
  * First supported origin in the visitor's country.
  *
  * Deliberately coarse: the US has four entries and a visitor from Denver gets
