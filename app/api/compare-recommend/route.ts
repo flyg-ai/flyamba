@@ -59,7 +59,9 @@ function context(d: Comparable) {
     slug: d.slug,
     name: d.name,
     country: d.country,
-    priceFromUsd: d.priceSek ? usd(d.priceSek) : null,
+    // Observed New York fare, already USD. Null when we hold none — the model
+    // is told nothing rather than a Stockholm estimate.
+    priceFromUsd: d.priceUsd ?? null,
     flightTime: d.flightTime ?? null,
     bestMonths: d.bestMonths ?? null,
     summerTemp: d.summerTemp ?? null,

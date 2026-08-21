@@ -25,8 +25,8 @@ export type Comparable = {
   country: string;
   flag?: string;
   image: string;
-  /** Cheapest fare in SEK — the unit the catalog stores. Format with usdStr(). */
-  priceSek: number;
+  /** Observed New York fare in USD, filled on the server. Absent = not comparable on price. */
+  priceUsd?: number;
   flightTime?: string;
   bestMonths?: string;
   summerTemp?: number;
@@ -44,24 +44,18 @@ export type Comparable = {
 const slimScoredBySlug = new Map(ALL_DESTINATIONS.filter((d) => d.scores).map((d) => [d.slug, d]));
 const richSlugs = new Set(destinations.map((d) => d.slug));
 
-// ── One price source for everyone ───────────────────────────────────────────
-// The two catalogs price destinations differently: `destinations.price` is a
-// hand-authored "from" fare, `ALL_DESTINATIONS.monthlyPrices` are 12-month
-// average round-trip fares. They disagree by 0.8x–2.1x on the same city
-// (Barcelona: 1290 vs 2700 SEK).
+// ── Price comes from origin_fares, not from the catalog ────────────────────
+// This used to price all 25 comparable cities from ALL_DESTINATIONS.monthlyPrices,
+// on the reasoning that a comparison only has to be internally consistent. That is
+// right in principle and wrong here: monthlyPrices are Stockholm-origin SEK
+// estimates, so the table ranked Barcelona against Lisbon consistently — and gave a
+// US reader the wrong answer, which is the entire purpose of the comparison.
 //
-// A comparison table only has to be internally consistent, so every comparable
-// city is priced from `monthlyPrices` — the source all 26 of them share. Mixing
-// the two, as this page used to, meant the 8 rich cities were compared on a
-// different basis than the other 18 and Barcelona won every price row it
-// appeared in. `destinations.price` remains the right number on the
-// destination's own page; it is just not comparable across cities.
+// 23 of the 25 have a New York fare in origin_fares. The price is filled by the
+// server (see withComparableFares) and left undefined for the other two, which drop
+// out of the comparison rather than being ranked on a number we do not have. They
+// remain destinations; they are just not comparable on price.
 const slimBySlug = new Map(ALL_DESTINATIONS.map((d) => [d.slug, d]));
-
-function comparablePriceSek(slug: string, fallback = 0): number {
-  const monthly = slimBySlug.get(slug)?.monthlyPrices.filter((p): p is number => p != null);
-  return monthly?.length ? Math.min(...monthly) : fallback;
-}
 
 const RICH: Comparable[] = destinations.map((d) => ({
   slug: d.slug,
@@ -69,7 +63,6 @@ const RICH: Comparable[] = destinations.map((d) => ({
   country: d.country,
   flag: d.countryFlag,
   image: d.image,
-  priceSek: comparablePriceSek(d.slug, d.price),
   flightTime: d.flightTime ?? `${d.avgFlightHours}h`,
   bestMonths: d.bestMonths,
   summerTemp: d.summerTemp ?? slimScoredBySlug.get(d.slug)?.summerTemp,
@@ -86,7 +79,6 @@ const SLIM: Comparable[] = ALL_DESTINATIONS.filter((d) => d.scores && !richSlugs
     name: d.name,
     country: d.country,
     image: d.image,
-    priceSek: comparablePriceSek(d.slug),
     summerTemp: d.summerTemp,
     scores: d.scores,
   }),
@@ -116,13 +108,12 @@ export type Row = {
 export const ROWS: Row[] = [
   {
     key: "price",
-    label: "Flights from",
-    // priceSek is SEK; usdStr does the conversion. (The old CompareClient stored
-    // an already-converted USD value and multiplied it back by 10.5 so usdStr
-    // could divide it out again — that broke silently if the rate ever changed.)
-    value: (d) => (d.priceSek ? usdStr(d.priceSek) : "—"),
+    label: "Round trip from New York",
+    // Already USD and already observed — no conversion, no estimate. A city with
+    // no New York fare shows an em dash and cannot win the row.
+    value: (d) => (d.priceUsd ? `$${d.priceUsd.toLocaleString()}` : "—"),
     best: "min",
-    raw: (d) => d.priceSek || Infinity,
+    raw: (d) => d.priceUsd || Infinity,
   },
   { key: "flight", label: "Flight time", value: (d) => d.flightTime ?? "—" },
   { key: "best", label: "Best months", value: (d) => d.bestMonths ?? "—" },

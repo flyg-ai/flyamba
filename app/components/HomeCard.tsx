@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Destination } from "@/app/data/destinations";
-import { usdStr } from "@/app/lib/format";
 import { currentWeatherBadge } from "@/app/lib/destination-helpers";
 import { Plane } from "lucide-react";
 
@@ -12,10 +11,20 @@ import { Plane } from "lucide-react";
  */
 export function HomeCard({
   d,
+  fareLabel,
   className = "",
   featured = false,
 }: {
   d: Destination;
+  /**
+   * Observed fare, formatted on the server — "$153 rt · NYC · seen Aug 19".
+   *
+   * A plain string because fares.ts is server-only: the page reads it and passes
+   * the result down. Omitted means we hold no fare and the pill does not render.
+   * It used to show `usdStr(d.price)`, a hand-authored Stockholm figure in SEK —
+   * wrong currency and wrong departure city on a US site.
+   */
+  fareLabel?: string;
   className?: string;
   featured?: boolean;
 }) {
@@ -40,10 +49,12 @@ export function HomeCard({
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
 
-      {/* Price pill */}
-      <div className="absolute right-3 top-3 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-neutral-900 shadow-sm backdrop-blur">
-        from <span className="text-accent">{usdStr(d.price)}</span>
-      </div>
+      {/* Absent when we hold no fare, rather than estimated. */}
+      {fareLabel && (
+        <div className="absolute right-3 top-3 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-neutral-900 shadow-sm backdrop-blur">
+          <span className="text-accent">{fareLabel}</span>
+        </div>
+      )}
 
       {/* Weather badge */}
       {weather && (

@@ -11,7 +11,7 @@ import { latestGuides } from "@/app/data/guides";
 import { Footer } from "@/app/components/Footer";
 import { destinations } from "@/app/data/destinations";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
-import { usdStr } from "@/app/lib/format";
+import { faresFor, sortPrices } from "@/app/lib/fare-display";
 import { ArrowRight, Scale, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -75,11 +75,33 @@ const FLIGHT_LINKS = [
 
 const GUIDE_CARDS = BARCELONA_SUBPAGES.filter((p) => ["attractions", "restaurants", "hotels", "beaches"].includes(p.slug));
 
-export default function Home() {
+// fare-display reads Supabase with cache: "no-store", which would otherwise mark
+// the homepage dynamic. force-static keeps it prerendered; revalidate keeps the
+// "seen Aug 19" stamps from freezing at build time.
+export const dynamic = "force-static";
+export const revalidate = 86400;
+
+export default async function Home() {
   const featured = destinations.slice(0, 6);
   const [lead, ...rest] = featured;
   const [smallA, smallB, ...more] = rest;
-  const cheapest = [...destinations].sort((a, b) => a.price - b.price).slice(0, 6);
+  // RANKED ON THE NEW YORK PRICE FROM origin_fares, not on `destinations.price`.
+  //
+  // That field is a hand-authored Stockholm "from" figure in SEK. Sorting on it
+  // made a row that claims to show the cheapest fares rank them on a scale that
+  // inverts against real US prices — a false statement to the reader, not a
+  // cosmetic issue. Only destinations WITH a New York price take part: without a
+  // sort key there is no ranking to be in.
+  //
+  // Display still falls through NYC → MIA → CHI → LAX, so a card can show a Miami
+  // price while its position was decided by New York. That is deliberate and the
+  // label says which city the ranking is from.
+  const nycPrices = await sortPrices();
+  const fares = await faresFor(destinations.map((d) => d.slug));
+  const cheapest = destinations
+    .filter((d) => nycPrices[d.slug] != null)
+    .sort((a, b) => nycPrices[a.slug] - nycPrices[b.slug])
+    .slice(0, 6);
 
   return (
     <div className="min-h-screen bg-background">
@@ -110,15 +132,15 @@ export default function Home() {
           </Link>
         </div>
         <div className="mt-10 space-y-6">
-          <HomeCard d={lead} featured />
+          <HomeCard d={lead} fareLabel={fares.get(lead.slug)?.short} featured />
           <div className="grid gap-6 sm:grid-cols-2">
-            {smallA && <HomeCard d={smallA} />}
-            {smallB && <HomeCard d={smallB} />}
+            {smallA && <HomeCard d={smallA} fareLabel={fares.get(smallA.slug)?.short} />}
+            {smallB && <HomeCard d={smallB} fareLabel={fares.get(smallB.slug)?.short} />}
           </div>
           {more.length > 0 && (
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {more.map((d) => (
-                <HomeCard key={d.slug} d={d} />
+                <HomeCard key={d.slug} d={d} fareLabel={fares.get(d.slug)?.short} />
               ))}
             </div>
           )}
@@ -132,7 +154,7 @@ export default function Home() {
         <div className="-mx-4 mt-8 flex snap-x snap-mandatory gap-6 overflow-x-auto px-4 pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:mx-0 sm:px-0">
           {destinations.map((d) => (
             <div key={d.slug} className="w-[300px] shrink-0 snap-start sm:w-[340px]">
-              <HomeCard d={d} />
+              <HomeCard d={d} fareLabel={fares.get(d.slug)?.short} />
             </div>
           ))}
         </div>
@@ -159,14 +181,21 @@ export default function Home() {
       {/* C) Cheapest flights right now */}
       <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Deals</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Cheapest flights right now</h2>
-        <p className="mt-2 text-muted-foreground">Our lowest fares this week, sorted by price.</p>
+        {/* The heading names the departure city because the ranking is New
+            York only. "Cheapest flights right now" over a NYC-ranked list is a
+            claim about every reader's airport that we cannot make. */}
+        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
+          Cheapest round trip from New York
+        </h2>
+        <p className="mt-2 text-muted-foreground">
+          Ranked on the New York fare we found. Prices move daily and are not an offer.
+        </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {cheapest.map((d) => (
             <div key={d.slug} className="space-y-2">
-              <HomeCard d={d} />
+              <HomeCard d={d} fareLabel={fares.get(d.slug)?.short} />
               <p className="px-1 text-sm font-semibold text-foreground">
-                From <span className="text-accent">{usdStr(d.price)}</span>{" "}
+                {fares.get(d.slug)?.long.headline}{" "}
                 <span className="font-normal text-muted-foreground">· {d.city}</span>
               </p>
             </div>

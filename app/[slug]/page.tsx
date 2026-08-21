@@ -7,6 +7,7 @@ import { DestinationLite } from "@/app/components/DestinationLite";
 import { SITE, airlineNames, lowestPriceStr } from "@/app/lib/destination-helpers";
 import { usdStr } from "@/app/lib/format";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
+import { fareFor } from "@/app/lib/fare-display";
 
 // Static routes that must NOT be produced by this catch-all (they have their own
 // pages). Barcelona has the full static /barcelona guide with a sub-nav.
@@ -33,6 +34,12 @@ export function generateStaticParams() {
   return [...slugs].map((slug) => ({ slug }));
 }
 export const dynamicParams = false;
+// fare-display reads Supabase with cache: "no-store". Without force-static that
+// read is a dynamic-server-usage error, fares.ts swallows it, and every one of
+// these 556 pages renders with NO price while the build reports success — the
+// silent failure CLAUDE.md warns about, hit for the third time.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
@@ -58,14 +65,16 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const d = getAllDestination(slug);
   if (!d) return { title: "Destination not found — Flyamba", robots: { index: false } };
-  const validPrices = d.monthlyPrices.filter((p): p is number => p != null);
-  const from = validPrices.length ? ` from ${usdStr(Math.min(...validPrices))}` : "";
+  // Observed fare or no price at all. This used to read the catalog estimate,
+  // which put a Stockholm SEK figure in the meta description of 556 pages.
+  const fare = await fareFor(d.slug);
+  const from = fare ? ` from ${fare.amount} round trip` : "";
   const title = clampTitle(`Cheap Flights to ${d.name} ${year} — Compare & Book | Flyamba`);
   // Country-level entries (Cape Verde, Barbados, Monaco…) would otherwise read
   // "Cape Verde, Cape Verde".
   const place = d.name === d.country ? d.name : `${d.name}, ${d.country}`;
   const description = clampDescription(
-    `Find cheap flights to ${place}${from}. Compare live fares, see the monthly price calendar and book direct with Flyamba.`,
+    `Find cheap flights to ${place}${from}. Compare live fares, see the fares we found by month and book direct with Flyamba.`,
   );
   const canonical = `${SITE}/${d.slug}`;
   return {

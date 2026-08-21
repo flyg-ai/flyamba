@@ -6,7 +6,7 @@ import { SmartImage } from "@/app/components/SmartImage";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { destinationCrumbs } from "@/app/lib/destination-crumbs";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
-import { usd5, usdStr } from "@/app/lib/format";
+import { fareFor, fareMonthsFor } from "@/app/lib/fare-display";
 import { SITE } from "@/app/lib/destination-helpers";
 import { LowFareCta } from "@/app/components/LowFareCta";
 import { CALENDAR_BY_SLUG } from "@/app/lib/low-fare";
@@ -17,13 +17,15 @@ const FULL_MONTHS = ["January", "February", "March", "April", "May", "June", "Ju
 
 // Structured data for the lite pages. Deliberately smaller than the rich
 // DestinationDetail graph — only the facts the slim catalog actually holds.
-// `lowestSek` is a raw catalog price — usdStr does the SEK→USD conversion.
-function buildJsonLd(d: AllDestination, lowestSek: number | null) {
+// `fareAmount` is already a formatted USD string, or null when we hold no fare.
+function buildJsonLd(d: AllDestination, fareAmount: string | null) {
   const url = `${SITE}/${d.slug}`;
   const place = d.name === d.country ? d.name : `${d.name}, ${d.country}`;
-  const description = lowestSek
-    ? `Cheap flights to ${place} from ${usdStr(lowestSek)}, with a month-by-month price calendar.`
-    : `Cheap flights to ${place}, with a month-by-month price calendar.`;
+  // The price in the description is the observed fare or nothing. It used to be
+  // the catalog estimate converted from SEK.
+  const description = fareAmount
+    ? `Cheap flights to ${place} from ${fareAmount} round trip, with the fares we found by month.`
+    : `Cheap flights to ${place}, with the fares we found by month.`;
 
   // No BreadcrumbList here — <Breadcrumbs> owns it and emits it from the trail it
   // actually renders. The copy that lived here also sent a URL-less middle entry
@@ -47,28 +49,29 @@ function buildJsonLd(d: AllDestination, lowestSek: number | null) {
  * widget, basic facts, a monthly price calendar, and a "full guide coming soon"
  * note — enough to be useful and indexable while the rich guide is written.
  */
-export function DestinationLite({ d }: { d: AllDestination }) {
-  const prices = d.monthlyPrices ?? [];
-  const usdMonths = prices.map((p, i) => ({ month: MONTHS[i], price: p == null ? null : usd5(p) }));
+export async function DestinationLite({ d }: { d: AllDestination }) {
+  // OBSERVED FARES, NOT `d.monthlyPrices`. That field holds Stockholm-origin SEK
+  // estimates whose median error against real US fares is 2.35x, and it inverts
+  // the ranking rather than merely scaling it. 173 destinations have no observed
+  // fare and show nothing at all — a blank is honest, an estimate is not, and
+  // 14 CFR 399.84 requires an advertised price to be purchasable.
+  const fare = await fareFor(d.slug);
+  const fareMonths = await fareMonthsFor(d.slug);
+  const usdMonths = (fareMonths ?? Array.from({ length: 12 }, () => null)).map((p, i) => ({
+    month: MONTHS[i],
+    price: p,
+  }));
   const valid = usdMonths.filter((m): m is { month: string; price: number } => m.price != null);
   const min = valid.length ? Math.min(...valid.map((m) => m.price)) : 0;
   const max = valid.length ? Math.max(...valid.map((m) => m.price)) : 0;
-  let cheapestIdx = 0;
-  let cheapestVal = Infinity;
-  prices.forEach((p, i) => {
-    if (p != null && p < cheapestVal) {
-      cheapestVal = p;
-      cheapestIdx = i;
-    }
-  });
-  const cheapestPrice = prices[cheapestIdx] ?? 0;
-  const cheapestMonth = FULL_MONTHS[cheapestIdx];
+  const cheapestIdx = valid.length ? usdMonths.findIndex((m) => m.price === min) : -1;
+  const cheapestMonth = cheapestIdx >= 0 ? FULL_MONTHS[cheapestIdx] : null;
 
   const related = ALL_DESTINATIONS.filter((x) => x.continent === d.continent && x.slug !== d.slug).slice(0, 8);
 
   return (
     <div className="min-h-screen bg-background">
-      {buildJsonLd(d, cheapestVal === Infinity ? null : cheapestVal).map((schema, i) => (
+      {buildJsonLd(d, fare?.amount ?? null).map((schema, i) => (
         <script
           key={i}
           type="application/ld+json"
@@ -101,9 +104,10 @@ export function DestinationLite({ d }: { d: AllDestination }) {
             <span>{d.continent}</span>
           </div>
           <h1 className="mt-4 max-w-4xl font-serif text-5xl font-semibold text-white sm:text-7xl">Cheap Flights to {d.name}</h1>
-          {min > 0 && (
+          {fare && (
             <p className="mt-4 text-lg text-white/85">
-              From <span className="font-serif text-2xl text-accent">{usdStr(cheapestPrice)}</span> round trip · cheapest in {cheapestMonth}
+              <span className="font-serif text-2xl text-accent">{fare.long.headline}</span>
+              {fare.long.detail ? <span className="ml-2 text-sm text-white/70">{fare.long.detail}</span> : null}
             </p>
           )}
         </div>
@@ -130,7 +134,7 @@ export function DestinationLite({ d }: { d: AllDestination }) {
             { icon: MapPin, label: "Country", value: d.country },
             { icon: Globe, label: "Region", value: d.continent },
             { icon: Plane, label: "Airport", value: d.iata || "—" },
-            { icon: TrendingDown, label: "Cheapest month", value: min > 0 ? `${cheapestMonth} (${usdStr(cheapestPrice)})` : "—" },
+            { icon: TrendingDown, label: "Cheapest month we saw", value: cheapestMonth ? `${cheapestMonth} ($${min})` : "—" },
           ].map((s) => (
             <div key={s.label} className="rounded-3xl border border-border bg-card p-6">
               <div className="grid h-11 w-11 place-items-center rounded-2xl bg-accent/15 text-accent"><s.icon className="h-5 w-5" /></div>
@@ -146,7 +150,10 @@ export function DestinationLite({ d }: { d: AllDestination }) {
         <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
           <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to {d.name}?</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Cheapest round trip we actually observed{fare ? ` from ${fare.originLabel}` : ""}, USD. Months with no
+            bar are months we hold no fare for — not months with no flights.
+          </p>
           <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
             <div className="flex h-56 items-end gap-2">
               {usdMonths.map((m) => {

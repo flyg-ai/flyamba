@@ -5,6 +5,7 @@ import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { HomeCard } from "@/app/components/HomeCard";
 import { destinations } from "@/app/data/destinations";
+import { faresFor } from "@/app/lib/fare-display";
 import { Compass } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -19,11 +20,13 @@ const TYPE_TO_CATEGORY: Record<string, (c: string) => boolean> = {
   "Long Haul": (c) => c === "Long Haul",
 };
 
-function ExploreInner({ type }: { type?: string }) {
+async function ExploreInner({ type }: { type?: string }) {
   const list = type
     ? destinations.filter((d) => (TYPE_TO_CATEGORY[type] ? TYPE_TO_CATEGORY[type](d.category) : true))
     : destinations;
   const shown = list.length ? list : destinations;
+  // Read here and passed down: fare-display is server-only.
+  const fares = await faresFor(shown.map((d) => d.slug));
 
   return (
     <main className="mx-auto max-w-7xl px-4 pb-24 pt-28 sm:px-6 lg:px-8">
@@ -41,7 +44,7 @@ function ExploreInner({ type }: { type?: string }) {
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {shown.map((d) => (
-          <HomeCard key={d.slug} d={d} />
+          <HomeCard key={d.slug} d={d} fareLabel={fares.get(d.slug)?.short} />
         ))}
       </div>
 

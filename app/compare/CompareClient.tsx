@@ -11,7 +11,13 @@ import { AiRecommendation } from "./AiRecommendation";
 import { COMPARABLE, COMPARABLE_BY_SLUG, MAX_COMPARE, type Comparable } from "./comparable";
 import { TOP_PAIRS, parsePair, pairHref } from "./pairs";
 
-export function CompareClient() {
+export function CompareClient({ fares = {} }: { fares?: Record<string, number> }) {
+  // Observed New York fares, read on the server and handed down as a plain
+  // object. comparable.ts stays free of any Supabase reader precisely so this
+  // component can import it without dragging the server bundle across the
+  // client boundary.
+  const withFare = (c: Comparable): Comparable =>
+    fares[c.slug] != null ? { ...c, priceUsd: fares[c.slug] } : c;
   const router = useRouter();
   const searchParams = useSearchParams();
   const d = searchParams.get("d") ?? undefined;
@@ -20,7 +26,7 @@ export function CompareClient() {
     .map((s) => s.trim())
     .filter((s) => COMPARABLE_BY_SLUG.has(s))
     .slice(0, MAX_COMPARE);
-  const selected = selectedSlugs.map((s) => COMPARABLE_BY_SLUG.get(s)!) as Comparable[];
+  const selected = selectedSlugs.map((s) => withFare(COMPARABLE_BY_SLUG.get(s)!)) as Comparable[];
   const selectedSet = new Set(selectedSlugs);
 
   // Set by the AI recommendation so the table can badge the winning column.

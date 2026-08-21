@@ -7,8 +7,8 @@ import { Footer } from "@/app/components/Footer";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampTitle, clampDescription } from "@/app/lib/seo";
-import { usdStr } from "@/app/lib/format";
 import { getComparable, type Comparable } from "@/app/compare/comparable";
+import { comparableWithFares } from "@/app/compare/comparable-fares";
 import { TOP_PAIRS, parsePair, pairSlug, pairHref } from "@/app/compare/pairs";
 import { PairView } from "@/app/compare/PairView";
 
@@ -19,6 +19,10 @@ import { PairView } from "@/app/compare/PairView";
 // naming an unknown slug 404s; a pair in non-alphabetical order permanently
 // redirects to the canonical one, so there is exactly one URL per comparison.
 export const dynamicParams = true;
+// comparable-fares reads Supabase with cache: "no-store"; without force-static
+// that read is a dynamic-server-usage error and the price row silently empties.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateStaticParams() {
   return TOP_PAIRS.map((comparison) => ({ comparison }));
@@ -86,15 +90,19 @@ export default async function ComparisonPage({
 
   // Order the columns the way the URL reads.
   const parsed = parsePair(comparison)!;
-  const pair = parsed.map((s) => getComparable(s)!) as Comparable[];
+  // Prices come from origin_fares here, on the server, rather than from the
+  // catalog estimate the module used to carry.
+  const priced = await comparableWithFares();
+  const bySlug = new Map(priced.map((c) => [c.slug, c]));
+  const pair = parsed.map((s) => bySlug.get(s)!) as Comparable[];
   const [first, second] = pair;
   const year = new Date().getFullYear();
 
   // Deterministic summary — no AI. The page has to stand on its own for a
   // crawler and for anyone who never clicks the recommendation button.
   const cheaper =
-    first.priceSek && second.priceSek && first.priceSek !== second.priceSek
-      ? first.priceSek < second.priceSek
+    first.priceUsd && second.priceUsd && first.priceUsd !== second.priceUsd
+      ? first.priceUsd < second.priceUsd
         ? first
         : second
       : null;
@@ -109,7 +117,7 @@ export default async function ComparisonPage({
     {
       q: `Is ${first.name} or ${second.name} cheaper to fly to?`,
       a: cheaper
-        ? `${cheaper.name} is currently the cheaper of the two, with fares from ${usdStr(cheaper.priceSek)} against ${usdStr((cheaper.slug === first.slug ? second : first).priceSek)}. Fares move constantly, so check the low fare calendar for your dates.`
+        ? `${cheaper.name} is currently the cheaper of the two, with a New York round trip we found at $${cheaper.priceUsd!.toLocaleString()} against $${(cheaper.slug === first.slug ? second : first).priceUsd!.toLocaleString()}. Fares move constantly, so check the low fare calendar for your dates.`
         : `Fares to ${first.name} and ${second.name} are close enough that the cheaper one depends entirely on your dates. Check the low fare calendar for both.`,
     },
     {
