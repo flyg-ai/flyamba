@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import type { WarmDestination } from "@/app/lib/climate";
+import { REGION_ORDER, regionOfContinent } from "@/app/lib/regions";
 
 // Internal unit is always Celsius — that is what climate_data stores and what
 // WarmDestination.tempC carries. Fahrenheit exists only at the display layer,
@@ -39,13 +40,10 @@ const toDisplay = (c: number, unit: Unit) => (unit === "F" ? c * 1.8 + 32 : c);
 const fromDisplay = (v: number, unit: Unit) => (unit === "F" ? (v - 32) / 1.8 : v);
 const clamp = (v: number, lo: number, hi: number) => Math.max(lo, Math.min(hi, v));
 
-/** Region filters come straight from `continent`, which is origin-independent —
- *  unlike flyg.ai's flight-hour and nonstop filters, which are relative to Stockholm. */
-const REGION_ORDER = ["Europe", "North America", "South America", "Asia", "Africa", "Oceania"];
-
-/** Continents with too few rows to deserve a chip of their own fold into a neighbour. */
-const REGION_MERGE: Record<string, string> = { "Middle East": "Asia", Eurasia: "Europe" };
-const regionOf = (d: WarmDestination) => REGION_MERGE[d.continent] ?? d.continent;
+// REGION_ORDER and the merge live in app/lib/regions.ts, because the breadcrumbs
+// need the same answer. Two copies would let the region filter and the trail
+// disagree about which continent a destination is in.
+const regionOf = (d: WarmDestination) => regionOfContinent(d.continent);
 
 // Chips filter on measured climate, not on editorial `scores`. The scores in
 // destination-facts.ts are partly machine-generated and wrong often enough to be
