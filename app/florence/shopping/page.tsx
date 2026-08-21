@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Food", keys: ["food"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Florence", item: `${SITE}/florence` },
-      { "@type": "ListItem", position: 3, name: "Shopping", item: `${SITE}/florence/shopping` },
-    ],
-  };
-}
 
 export default function FlorenceShopping() {
   return (
@@ -47,7 +36,6 @@ export default function FlorenceShopping() {
       intro="Florence has been a city of craft and commerce since the Middle Ages, and it remains one of the best places in Italy to shop — above all for leather, gold and Italian fashion. This is the city where Gucci and Ferragamo were founded, whose flagships line Via de' Tornabuoni; where haggling over a leather jacket at the San Lorenzo market is a rite of passage; and where artisans in the Oltrarno still make jewellery, marbled paper and bespoke goods by hand. Here is where to shop, from luxury and leather to artisan workshops, an eight-century-old perfumery and the local food markets."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={SHOPPING} filters={FILTERS} />
       </div>

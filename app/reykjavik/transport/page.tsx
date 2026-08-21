@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Reykjavík", item: `${SITE}/reykjavik` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/reykjavik/transport` },
-    ],
-  };
-}
 
 export default function ReykjavikTransport() {
   return (
@@ -91,7 +80,6 @@ export default function ReykjavikTransport() {
       intro="Reykjavík is one of the easiest cities to navigate: a compact, walkable centre where almost everything is within a 25-minute stroll, backed by the Flybus from Keflavík airport, the Strætó city buses and — for exploring Iceland's nature beyond the city — rental cars and organised tours. This guide covers every option, from the 45-minute airport transfer and how the bus tickets work to car hire for day trips, cycling and when a taxi is worth it, with USD prices and money-saving tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Reykjavík — in detail" items={INFO} />
     </CityGuideShell>
   );

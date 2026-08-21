@@ -33,21 +33,12 @@ const FAQ = [
 ];
 
 function jsonLd() {
-  const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Prague", item: `${SITE}/prague` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/prague/events` },
-    ],
-  };
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   };
-  return [breadcrumb, faq];
+  return [faq];
 }
 
 const PLACEHOLDER = "/images/destinations/placeholder.avif";

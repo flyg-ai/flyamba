@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Central", keys: ["central"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Hotels", item: `${SITE}/london/hotels` },
-    ],
-  };
-}
 
 export default function LondonHotels() {
   return (
@@ -47,7 +36,6 @@ export default function LondonHotels() {
       intro="Choosing where to stay shapes any London trip, from legendary grande-dame hotels to design-led boutiques and dependable budget bases. This guide covers 8 of the best places to stay across neighbourhoods and price points — the iconic luxury names, the coolest boutiques and the smartest-value picks — with nightly rates and location tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={HOTELS} filters={FILTERS} />
       </div>

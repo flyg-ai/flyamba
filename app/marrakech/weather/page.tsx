@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Marrakech Weather & Best Time to Visit | Flyamba", description: "When to visit Marrakech: a season-by-season climate guide.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Marrakech", item: `${SITE}/marrakech` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/marrakech/weather` },
-    ],
-  };
-}
 
 export default function MarrakechWeather() {
   return (
@@ -37,7 +26,6 @@ export default function MarrakechWeather() {
       intro="Marrakech has a hot semi-arid climate and enjoys sunshine for most of the year, but the experience changes dramatically with the seasons — and choosing when to visit means balancing temperature comfort against crowds and prices. Spring and autumn deliver near-perfect warm days; summer bakes past 40°C and calls for a pool and coastal escapes; winter offers mild, sunny sightseeing weather with surprisingly cold nights and dramatic snow-capped Atlas views. This guide walks through the climate season by season, with typical temperatures, what to expect and what to pack, so you can time your trip and plan your days around the sun."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Marrakech weather by season" items={WEATHER} />
     </CityGuideShell>
   );

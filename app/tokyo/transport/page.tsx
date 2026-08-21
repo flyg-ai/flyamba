@@ -61,17 +61,6 @@ const TRANSPORT: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tokyo", item: `${SITE}/tokyo` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/tokyo/transport` },
-    ],
-  };
-}
 
 export default function TokyoTransport() {
   return (
@@ -86,7 +75,6 @@ export default function TokyoTransport() {
       intro="Tokyo has arguably the best public transport on the planet — a vast, spotless, punctual web of subways and trains that makes a city of 37 million astonishingly easy to navigate, even without a word of Japanese. The golden rule for visitors is simple: get a Suica or Pasmo IC card the moment you land, then tap your way effortlessly onto every train, subway and bus. This guide covers airport transfers, the IC cards, the metro and JR Yamanote loop, taxis and onward rail for day trips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Tokyo transport explained" items={TRANSPORT} />
     </CityGuideShell>
   );

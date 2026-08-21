@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Dubai Events & Festivals | Flyamba", description: "Dubai's annual festival calendar, from the Shopping Festival to New Year's Eve, with dates and tips.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Dubai", item: `${SITE}/dubai` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/dubai/events` },
-    ],
-  };
-}
 
 export default function DubaiEvents() {
   return (
@@ -37,7 +26,6 @@ export default function DubaiEvents() {
       intro="Dubai's calendar mixes world-class spectacle with deep-rooted tradition. The city throws the weeks-long Dubai Shopping Festival across the winter, stages one of the planet's most dramatic New Year's Eve firework shows on the Burj Khalifa, marks the holy month of Ramadan and the joyful Eid festivals, runs the world's richest horse race, celebrates its founding on National Day and feasts through the Dubai Food Festival. Here are the events worth timing a trip around, with dates, locations and tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Dubai's annual events in detail" items={EVENTS} />
     </CityGuideShell>
   );

@@ -72,17 +72,6 @@ const TRANSPORT: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Dubrovnik", item: `${SITE}/dubrovnik` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/dubrovnik/transport` },
-    ],
-  };
-}
 
 export default function DubrovnikTransport() {
   return (
@@ -97,7 +86,6 @@ export default function DubrovnikTransport() {
       intro="Dubrovnik is a compact, walker's city — its walled Old Town is entirely car-free, and much of what you'll want to see is within a few minutes' stroll. But you'll still need to know your options: how to get in from the airport, how the orange Libertas buses connect the outer districts and beaches, how the ferries and small boats work from Gruž and the Old Town harbour, when the cable car and Lokrum boats run, and whether a taxi, Uber or hire car makes sense. This guide covers it all, with real routes and euro fares."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Dubrovnik transport explained" items={TRANSPORT} />
     </CityGuideShell>
   );

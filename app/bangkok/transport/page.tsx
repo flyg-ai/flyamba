@@ -53,17 +53,6 @@ const TRANSPORT: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/bangkok/transport` },
-    ],
-  };
-}
 
 export default function BangkokTransport() {
   return (
@@ -78,7 +67,6 @@ export default function BangkokTransport() {
       intro="Bangkok's traffic is famous for all the wrong reasons, but the city is far easier to navigate than it looks once you know the system. The elevated BTS Skytrain and MRT subway whisk you across the modern city, river boats glide past the temples of the old town, and the Grab app takes the stress out of everything in between. Here's how each mode works, what it costs, and when to use it."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Bangkok transport, mode by mode" items={TRANSPORT} />
     </CityGuideShell>
   );

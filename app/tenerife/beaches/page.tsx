@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Snorkel", keys: ["snorkel"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tenerife", item: `${SITE}/tenerife` },
-      { "@type": "ListItem", position: 3, name: "Beaches", item: `${SITE}/tenerife/beaches` },
-    ],
-  };
-}
 
 export default function TenerifeBeaches() {
   return (
@@ -47,7 +36,6 @@ export default function TenerifeBeaches() {
       intro="Tenerife's volcanic origins give it beaches unlike anywhere else — from imported golden sands at the smart southern resorts to dramatic jet-black volcanic coves in the wild north. Some are calm and family-perfect, others are for surfers and sunset photographers only. Here are the eight best beaches, with facilities, safety notes and how to reach each."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={BEACHES} filters={FILTERS} />
       </div>

@@ -64,17 +64,6 @@ const WEATHER: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Lisbon", item: `${SITE}/lisbon` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/lisbon/weather` },
-    ],
-  };
-}
 
 export default function LisbonWeather() {
   return (
@@ -89,7 +78,6 @@ export default function LisbonWeather() {
       intro="Lisbon is the sunniest capital in Europe, with a mild Atlantic-Mediterranean climate that makes it a genuine year-round destination — but the experience changes a lot with the seasons. This guide breaks down the weather month by month, from hot, festival-filled summers to mild, bargain winters, with temperatures, rainfall, sea conditions, crowds and flight prices, so you can pick the perfect time to go and know exactly what to pack."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Lisbon weather season by season" items={WEATHER} />
     </CityGuideShell>
   );

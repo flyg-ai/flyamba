@@ -53,17 +53,6 @@ const EVENTS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/bangkok/events` },
-    ],
-  };
-}
 
 export default function BangkokEvents() {
   return (
@@ -78,7 +67,6 @@ export default function BangkokEvents() {
       intro="Time your trip around a festival and Bangkok goes up another gear. The Thai calendar delivers some of Asia's most spectacular celebrations — the drenching city-wide water fights of Songkran, the candlelit floats of Loy Krathong, red-and-gold Chinese New Year in Chinatown, a nine-day vegan feast and a fireworks-filled New Year countdown. Here's what's on through the year and how to join in."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Bangkok's festivals through the year" items={EVENTS} />
     </CityGuideShell>
   );

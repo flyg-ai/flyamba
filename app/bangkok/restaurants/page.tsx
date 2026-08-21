@@ -23,17 +23,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Local", keys: ["local"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "Restaurants", item: `${SITE}/bangkok/restaurants` },
-    ],
-  };
-}
 
 export default function BangkokRestaurants() {
   return (
@@ -48,7 +37,6 @@ export default function BangkokRestaurants() {
       intro="Few cities on earth eat as well as Bangkok. This is a place where a roadside stall can hold a Michelin star and a tasting menu can top the list of Asia's finest — where charcoal-fired woks, fiery southern curries and the world's most famous pad thai sit alongside progressive fine dining. These 10 restaurants span the full spectrum, from Jay Fai's legendary crab omelette to three-Michelin-star Sorn, each with the practical details to help you plan and book."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={RESTAURANTS} filters={FILTERS} />
       </div>

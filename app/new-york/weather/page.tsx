@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "New York", item: `${SITE}/new-york` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/new-york/weather` },
-    ],
-  };
-}
 
 export default function NewYorkWeather() {
   return (
@@ -91,7 +80,6 @@ export default function NewYorkWeather() {
       intro="New York's humid continental climate means four sharply distinct seasons: hot, humid summers, cold and snowy winters, and mild, beautiful springs and autumns in between. This guide walks through the weather month by month and season by season — temperatures, what to pack and what to expect — and pinpoints the best time to visit depending on whether you're chasing spring blossom, autumn colour, holiday sparkle or the lowest prices."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="New York weather season by season — in detail" items={INFO} />
     </CityGuideShell>
   );

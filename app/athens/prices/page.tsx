@@ -74,17 +74,6 @@ const ITEMS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Athens", item: `${SITE}/athens` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/athens/prices` },
-    ],
-  };
-}
 
 export default function AthensPrices() {
   return (
@@ -98,7 +87,6 @@ export default function AthensPrices() {
       heroImage="/images/athens/sevardheter/monastiraki.webp"
       intro="Athens is one of the best-value capital cities in Western Europe — cheaper than Rome, Paris or London for food, transport and culture, with street food from a few euros and a €1.20 ticket that covers the whole transport network. Here's a realistic breakdown of what a day costs at every level, plus typical prices in euros for food and drink, getting around, attraction entry and hotels, so you can plan your budget with confidence."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Athens travel costs, broken down" items={ITEMS} />
     </CityGuideShell>
   );

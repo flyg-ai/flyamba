@@ -23,17 +23,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Live music", keys: ["live-music"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Nightlife", item: `${SITE}/london/nightlife` },
-    ],
-  };
-}
 
 export default function LondonNightlife() {
   return (
@@ -48,7 +37,6 @@ export default function LondonNightlife() {
       intro="After dark, London offers everything from centuries-old pubs and world-ranked cocktail bars to legendary clubs, live jazz and dizzying rooftop views. Whether you want a quiet pint in a historic tavern, a theatrical cocktail in Shoreditch or a dance until dawn at Fabric, here are 10 of the city's best nights out, with areas, prices and tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={NIGHTLIFE} filters={FILTERS} />
       </div>

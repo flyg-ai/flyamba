@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Budget", keys: ["budget"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tenerife", item: `${SITE}/tenerife` },
-      { "@type": "ListItem", position: 3, name: "Hotels", item: `${SITE}/tenerife/hotels` },
-    ],
-  };
-}
 
 export default function TenerifeHotels() {
   return (
@@ -47,7 +36,6 @@ export default function TenerifeHotels() {
       intro="Where you stay shapes your Tenerife holiday. The sunny south — Costa Adeje, Playa de las Américas and Los Cristianos — has the beaches, resorts and best weather; the greener north around Puerto de la Cruz offers cheaper, more characterful stays; and there's even a lodge inside Teide National Park. Here are the best hotels by area and budget, with prices and tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={HOTELS} filters={FILTERS} />
       </div>

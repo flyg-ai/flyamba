@@ -72,17 +72,6 @@ const EVENTS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Dubrovnik", item: `${SITE}/dubrovnik` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/dubrovnik/events` },
-    ],
-  };
-}
 
 export default function DubrovnikEvents() {
   return (
@@ -97,7 +86,6 @@ export default function DubrovnikEvents() {
       intro="Dubrovnik's calendar turns on its extraordinary setting — festivals here use the city's own walls, forts and palaces as their stage. The crown jewel is the summer-long festival of open-air theatre, opera and music, but the year also brings the ancient, UNESCO-listed feast of the city's patron saint, a colourful carnival, an autumn food festival, English-language Shakespeare on the ramparts and a glowing winter festive season. Here are the key events worth planning a trip around, with dates and tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Dubrovnik's festivals and events" items={EVENTS} />
     </CityGuideShell>
   );

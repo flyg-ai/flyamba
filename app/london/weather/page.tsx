@@ -14,17 +14,6 @@ export const metadata: Metadata = {
   openGraph: { title: "London Weather & Best Time to Visit | Flyamba", description: "Season-by-season London climate and the best time to go.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/london/weather` },
-    ],
-  };
-}
 
 const IMG = "/images/content/photo-1504386106331-3e4e71712b38.avif";
 
@@ -84,7 +73,6 @@ export default function LondonWeather() {
       intro="London's temperate, changeable climate rarely reaches extremes, but it keeps you on your toes year-round. This guide walks through the weather season by season — temperatures, rainfall, daylight and atmosphere — and pinpoints the best time to visit for your priorities, whether that's warm weather, low prices, festive sparkle or thinner crowds, with packing advice throughout."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="London weather, season by season" items={ITEMS} />
     </CityGuideShell>
   );

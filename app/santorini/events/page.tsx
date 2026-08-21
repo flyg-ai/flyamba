@@ -66,17 +66,6 @@ const ITEMS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Santorini", item: `${SITE}/santorini` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/santorini/events` },
-    ],
-  };
-}
 
 export default function SantoriniEvents() {
   return (
@@ -90,7 +79,6 @@ export default function SantoriniEvents() {
       heroImage={IMG}
       intro="Santorini's calendar runs from the deeply felt to the purely spectacular. Time your visit right and you could witness the candlelit processions of Greek Orthodox Easter, the fireworks 'eruption' of the Ifestia Festival over the caldera, open-air jazz by Kamari beach, classical concerts in a historic Fira mansion, the late-summer wine harvest, or a village saint's-day feast with food, wine and dancing. Here are the events worth building a trip around, month by month."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Santorini events and festivals in detail" items={ITEMS} />
     </CityGuideShell>
   );

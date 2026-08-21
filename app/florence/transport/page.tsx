@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around Florence | Flyamba", description: "Florence transport explained: airports, trams, trains, taxis and the ZTL, with prices.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Florence", item: `${SITE}/florence` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/florence/transport` },
-    ],
-  };
-}
 
 export default function FlorenceTransport() {
   return (
@@ -37,7 +26,6 @@ export default function FlorenceTransport() {
       intro="The single most important thing to know about getting around Florence is that you barely need to: the compact historic centre is best explored entirely on foot, with almost every sight within a 15-minute walk and no metro to bother with. Where you will need to plan is arriving — from Florence's own airport on the T2 tram, or from Pisa airport by shuttle and train — and heading out on day trips by train from Santa Maria Novella station. This guide covers everything with real routes, ticket prices and practical advice, including the crucial warning never to drive into the ZTL."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Florence transport explained" items={TRANSPORT} />
     </CityGuideShell>
   );

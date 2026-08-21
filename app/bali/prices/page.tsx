@@ -63,17 +63,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bali", item: `${SITE}/bali` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/bali/prices` },
-    ],
-  };
-}
 
 export default function BaliPrices() {
   return (
@@ -88,7 +77,6 @@ export default function BaliPrices() {
       intro={`How much does a trip to Bali cost? The short answer is: far less than you might think. Flights start from around $${MIN_USD} round trip, and once you're on the island your money stretches remarkably far. This guide breaks down the real costs — flights, daily budgets, accommodation, food and drink, transport and attractions — plus how to handle currency, cash and ATMs, and when to tip, all with rupiah and US-dollar figures and money-saving tips.`}
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of visiting Bali — in detail" items={INFO} />
     </CityGuideShell>
   );

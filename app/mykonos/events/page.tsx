@@ -50,17 +50,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Mykonos", item: `${SITE}/mykonos` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/mykonos/events` },
-    ],
-  };
-}
 
 export default function MykonosEvents() {
   return (
@@ -75,7 +64,6 @@ export default function MykonosEvents() {
       intro="Mykonos's calendar is really one long headline event — the summer season, from May's opening parties to October's closing ones — punctuated by the huge XLSIOR festival in August. But there's another side too: Greek Orthodox Easter in spring and the traditional village panigiria (saint's-day feasts) reveal the authentic island beneath the international party reputation. Here's what's on and when, so you can pick your Mykonos — glamorous, traditional, or both."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Mykonos events — in detail" items={INFO} />
     </CityGuideShell>
   );

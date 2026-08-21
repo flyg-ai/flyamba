@@ -58,17 +58,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Paris", item: `${SITE}/paris` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/paris/weather` },
-    ],
-  };
-}
 
 export default function ParisWeather() {
   return (
@@ -83,7 +72,6 @@ export default function ParisWeather() {
       intro="Paris is a year-round city, but each season has a distinct character. Summers are warm and long, peaking around 22–26°C; spring and autumn bring mild days, beautiful light and gardens at their prettiest; and winters are cold, grey and quiet but atmospheric and cheap. This guide walks through the weather season by season — average temperatures, rainfall and daylight — then gives a clear verdict on the best time to visit and exactly what to pack, whenever you decide to go."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Paris weather in detail" items={INFO} />
     </CityGuideShell>
   );

@@ -74,14 +74,6 @@ export default async function WhereIsItWarmHub() {
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-        { "@type": "ListItem", position: 2, name: "Where Is It Warm", item: `${SITE}${WARM_BASE}` },
-      ],
-    },
-    {
-      "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: FAQ.map((f) => ({
         "@type": "Question",

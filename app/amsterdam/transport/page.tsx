@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Amsterdam", item: `${SITE}/amsterdam` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/amsterdam/transport` },
-    ],
-  };
-}
 
 export default function AmsterdamTransport() {
   return (
@@ -91,7 +80,6 @@ export default function AmsterdamTransport() {
       intro="Amsterdam is one of the easiest cities in Europe to get around: a compact, flat historic centre made for walking and cycling, backed by an excellent GVB network of trams, metro lines, buses and free ferries, plus fast trains to and from Schiphol Airport. This guide covers every option — from the 15-minute airport train to how the OV-chipkaart and contactless OVpay tickets work, cycling like a local, and when a taxi is worth it — with euro prices and money-saving tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Amsterdam — in detail" items={INFO} />
     </CityGuideShell>
   );

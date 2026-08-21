@@ -66,17 +66,6 @@ const ITEMS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Athens", item: `${SITE}/athens` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/athens/weather` },
-    ],
-  };
-}
 
 export default function AthensWeather() {
   return (
@@ -90,7 +79,6 @@ export default function AthensWeather() {
       heroImage="/images/athens/sevardheter/likavitos-kullen.webp"
       intro="Athens enjoys a classic Mediterranean climate: hot, dry, brilliantly sunny summers and mild, changeable winters, with glorious spring and autumn shoulder seasons in between. It's a year-round city, but the right time depends on whether you're chasing beaches, comfortable sightseeing or low-season value. Here's what to expect season by season — temperatures, what to pack, sea conditions and when to plan your trip."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Athens weather, season by season" items={ITEMS} />
     </CityGuideShell>
   );

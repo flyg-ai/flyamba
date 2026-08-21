@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Amsterdam", item: `${SITE}/amsterdam` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/amsterdam/events` },
-    ],
-  };
-}
 
 export default function AmsterdamEvents() {
   return (
@@ -91,7 +80,6 @@ export default function AmsterdamEvents() {
       intro="Amsterdam packs a remarkable amount into its calendar, and timing your trip to a festival can make a great visit unforgettable. From the citywide orange chaos of King's Day and the flower-filled tulip season to the boat-borne spectacle of Pride's Canal Parade, the world-beating Amsterdam Dance Event and the winter magic of the Light Festival, here's what's on month by month — with dates, tips and how to make the most of each."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Amsterdam's events calendar — in detail" items={INFO} />
     </CityGuideShell>
   );

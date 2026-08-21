@@ -23,17 +23,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Budget", keys: ["budget"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Restaurants", item: `${SITE}/london/restaurants` },
-    ],
-  };
-}
 
 export default function LondonRestaurants() {
   return (
@@ -48,7 +37,6 @@ export default function LondonRestaurants() {
       intro="London is one of the world's great eating cities, home to every cuisine imaginable and more Michelin stars than anywhere else in the UK. From cult Bombay cafés and bargain pasta counters to nose-to-tail British institutions and destination fine dining, here are 10 restaurants worth planning a meal around, with prices, areas and booking advice."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={RESTAURANTS} filters={FILTERS} />
       </div>

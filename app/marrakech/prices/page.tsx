@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Marrakech Prices & Costs | Flyamba", description: "Flight prices, daily budgets, food and attraction costs, and haggling in Marrakech.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Marrakech", item: `${SITE}/marrakech` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/marrakech/prices` },
-    ],
-  };
-}
 
 export default function MarrakechPrices() {
   return (
@@ -37,7 +26,6 @@ export default function MarrakechPrices() {
       intro="Marrakech is one of the best-value city breaks within easy reach of Europe — but costs swing enormously depending on how you travel, from a few-dollar street lunch to a thousand-dollar palace suite. This guide breaks down what a trip really costs: when flights are cheapest, realistic daily budgets for backpacker, mid-range and luxury styles, what the sights, activities and meals cost, and how money and the all-important art of haggling work. Flight prices are shown in USD; on the ground, everything runs on the Moroccan dirham (MAD), a closed currency you can only get once you arrive."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Marrakech costs explained" items={PRICES} />
     </CityGuideShell>
   );

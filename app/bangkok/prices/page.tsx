@@ -53,17 +53,6 @@ const PRICES: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/bangkok/prices` },
-    ],
-  };
-}
 
 export default function BangkokPrices() {
   return (
@@ -78,7 +67,6 @@ export default function BangkokPrices() {
       intro="Bangkok is a joy for the wallet: some of the world's best food costs a couple of dollars, transport is cheap, and even luxury undercuts the West. Whether you're backpacking or booking a five-star riverside suite, here's a realistic breakdown of what things cost in Thai baht — daily budgets, food and drink, getting around, attractions and where you'll sleep — so you can plan with confidence."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Bangkok costs, broken down" items={PRICES} />
     </CityGuideShell>
   );

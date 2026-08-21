@@ -13,17 +13,6 @@ export const metadata: Metadata = {
   openGraph: { title: "How Much Does Prague Cost? | Flyamba", description: "Daily budgets and real prices for Prague in koruna.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Prague", item: `${SITE}/prague` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/prague/prices` },
-    ],
-  };
-}
 
 const PLACEHOLDER = "/images/destinations/placeholder.avif";
 const item = (o: Partial<BcnPlace> & { name: string; slug: string; fullDescription: string; tip: string; practicalInfo: BcnPlace["practicalInfo"] }): BcnPlace => ({
@@ -75,7 +64,6 @@ export default function PraguePrices() {
       heroImage="/images/prague/nightlife/cocktail-bar-prague.webp"
       intro="Prague is one of Europe's great-value city breaks — a beautiful capital where beer is cheaper than water, a hearty meal costs a few hundred koruna and much of the sightseeing is free. Here's a realistic breakdown of what a day costs at every level, plus typical prices in Czech koruna (Kč) for beer, food, transport, attractions and hotels, so you can plan your budget with confidence."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Prague costs, category by category" items={ITEMS} />
     </CityGuideShell>
   );

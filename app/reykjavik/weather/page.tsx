@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Reykjavík", item: `${SITE}/reykjavik` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/reykjavik/weather` },
-    ],
-  };
-}
 
 export default function ReykjavikWeather() {
   return (
@@ -91,7 +80,6 @@ export default function ReykjavikWeather() {
       intro="Reykjavík's cool, wet and famously changeable maritime climate is milder than its near-Arctic latitude suggests, but it's defined by wind, rain and, above all, light — the near-endless days of the summer midnight sun and the long dark nights that bring the northern lights from autumn to spring. This guide walks through the weather and daylight season by season, explains when to come for nature, aurora or the lowest prices, and covers exactly what to pack for a country where four seasons can pass in an afternoon."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Reykjavík weather season by season — in detail" items={INFO} />
     </CityGuideShell>
   );

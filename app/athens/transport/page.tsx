@@ -74,17 +74,6 @@ const ITEMS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Athens", item: `${SITE}/athens` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/athens/transport` },
-    ],
-  };
-}
 
 export default function AthensTransport() {
   return (
@@ -98,7 +87,6 @@ export default function AthensTransport() {
       heroImage="/images/athens/sevardheter/syntagmatorget.webp"
       intro="Athens is compact and walkable at its historic heart, and backed by a cheap, modern public-transport network — a clean three-line metro, a coastal tram to the beaches, extensive buses, and one integrated €1.20 ticket that covers them all. This guide explains how to get in from the airport, how to use the metro, tram and buses, when to take a taxi, which ticket saves you the most, and how to reach the islands from Piraeus."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Athens, step by step" items={ITEMS} />
     </CityGuideShell>
   );

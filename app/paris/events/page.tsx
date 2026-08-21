@@ -74,17 +74,6 @@ const EVENTS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Paris", item: `${SITE}/paris` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/paris/events` },
-    ],
-  };
-}
 
 export default function ParisEvents() {
   return (
@@ -99,7 +88,6 @@ export default function ParisEvents() {
       intro="There is always something on in Paris, and timing your visit to an event can make a trip unforgettable. The calendar runs from the clay-court drama of Roland-Garros in late spring through a summer of music and fireworks — the Fête de la Musique, Bastille Day and the riverside Paris Plages — into the all-night art of Nuit Blanche, the glamour of Fashion Week and the sparkling magic of the Christmas season. Here are the events worth planning around, month by month, with dates, locations and tips on how to enjoy them."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Paris events in detail" items={EVENTS} />
     </CityGuideShell>
   );

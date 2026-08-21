@@ -74,17 +74,6 @@ const ITEMS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Athens", item: `${SITE}/athens` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/athens/events` },
-    ],
-  };
-}
 
 export default function AthensEvents() {
   return (
@@ -98,7 +87,6 @@ export default function AthensEvents() {
       heroImage="/images/athens/sevardheter/panathenaic-stadium.webp"
       intro="Athens has a festival for every season, blending ancient heritage, deep Orthodox faith and modern culture. From the candlelit drama of Greek Easter and open-air theatre beneath the Acropolis at the Athens Epidaurus Festival to the world's original marathon, the kite-flying of Carnival's Clean Monday and free moonlit access to the ruins in August, here are the events worth planning a trip around — with dates, tips and when to fly."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Athens' biggest events, explained" items={ITEMS} />
     </CityGuideShell>
   );

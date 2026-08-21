@@ -59,17 +59,6 @@ const EVENTS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Ibiza", item: `${SITE}/ibiza` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/ibiza/events` },
-    ],
-  };
-}
 
 export default function IbizaEvents() {
   return (
@@ -84,7 +73,6 @@ export default function IbizaEvents() {
       intro="Ibiza's calendar is bookended by the two biggest dates in global clubbing — the club opening parties in late May and June, and the legendary closing parties of late September and October — but there is far more to the island's year than DJs. Pacha's beloved Flower Power night keeps the sixties spirit alive, the Medieval Festival transforms Dalt Vila each May, and traditional village fiestas offer a glimpse of the real, local Ibiza. Here are the events worth planning a trip around."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Ibiza's events calendar — in detail" items={EVENTS} />
     </CityGuideShell>
   );

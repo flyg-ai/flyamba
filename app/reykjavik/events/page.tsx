@@ -58,17 +58,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Reykjavík", item: `${SITE}/reykjavik` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/reykjavik/events` },
-    ],
-  };
-}
 
 export default function ReykjavikEvents() {
   return (
@@ -83,7 +72,6 @@ export default function ReykjavikEvents() {
       intro="Reykjavík's event calendar leans into its extremes of light and dark. Summer brings National Day parades, midnight-sun festivals and the huge free Culture Night; winter answers with Iceland Airwaves, the Winter Lights Festival, the aurora season and one of the world's wildest New Year's Eves. Here's what's on and when — including the natural 'events', the midnight sun and the Northern Lights, that make timing an Iceland trip so rewarding."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Reykjavík's events — in detail" items={INFO} />
     </CityGuideShell>
   );

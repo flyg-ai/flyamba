@@ -21,15 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Adventure", keys: ["adventure"] },
 ];
 
-const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-    { "@type": "ListItem", position: 2, name: "Barcelona", item: `${SITE}/barcelona` },
-    { "@type": "ListItem", position: 3, name: "Day trips", item: `${SITE}/barcelona/day-trips` },
-  ],
-};
 
 export default function BarcelonaDayTrips() {
   return (
@@ -41,7 +32,6 @@ export default function BarcelonaDayTrips() {
       intro="Barcelona is a superb base for exploring Catalonia. Within an hour or two by train you can reach a sawtooth mountain monastery, whitewashed beach towns, Roman ruins, a Game-of-Thrones film set and the vineyards that make Spain's best sparkling wine. Here are the six best day trips, with what to see, how to get there and how much time to set aside."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={DAY_TRIPS} filters={FILTERS} />
       </div>

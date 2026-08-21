@@ -21,15 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Educational", keys: ["educational"] },
 ];
 
-const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-    { "@type": "ListItem", position: 2, name: "Barcelona", item: `${SITE}/barcelona` },
-    { "@type": "ListItem", position: 3, name: "With kids", item: `${SITE}/barcelona/with-kids` },
-  ],
-};
 
 export default function BarcelonaWithKids() {
   return (
@@ -41,7 +32,6 @@ export default function BarcelonaWithKids() {
       intro="Barcelona is a dream family destination: a compact, walkable city with warm weather, sandy beaches, big green parks and a surprising number of attractions built for children. Add welcoming, child-friendly restaurants and excellent public transport, and it's easy to keep everyone happy. Here are the best things to do with kids, with ages, prices and the practical tips that make travelling with children stress-free."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={WITH_KIDS} filters={FILTERS} />
       </div>

@@ -63,17 +63,6 @@ const WEATHER: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Dubrovnik", item: `${SITE}/dubrovnik` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/dubrovnik/weather` },
-    ],
-  };
-}
 
 export default function DubrovnikWeather() {
   return (
@@ -88,7 +77,6 @@ export default function DubrovnikWeather() {
       intro="Dubrovnik enjoys a classic Mediterranean climate — hot, dry summers and mild, wetter winters — and choosing when to go shapes your whole trip. Do you want a warm, swimmable sea and buzzing festival nights, or crowd-free walls and low prices? This season-by-season guide covers the weather, sea temperatures, crowds and costs across the year, and pinpoints the sweet-spot months when Dubrovnik is at its balanced best."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Dubrovnik weather by season" items={WEATHER} />
     </CityGuideShell>
   );

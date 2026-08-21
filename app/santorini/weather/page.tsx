@@ -66,17 +66,6 @@ const ITEMS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Santorini", item: `${SITE}/santorini` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/santorini/weather` },
-    ],
-  };
-}
 
 export default function SantoriniWeather() {
   return (
@@ -90,7 +79,6 @@ export default function SantoriniWeather() {
       heroImage={IMG}
       intro="Santorini enjoys a classic Mediterranean climate — hot, bone-dry summers and mild, breezy winters — but the tourist experience swings dramatically with the seasons. This guide walks through the weather month by month, from green, quiet springs to the sweltering, crowded peak of July and August, the warm-sea autumn harvest and a near-shuttered winter, plus the meltemi wind and the sweet-spot months that offer the best balance of sun, sea and space."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Santorini weather by season in detail" items={ITEMS} />
     </CityGuideShell>
   );

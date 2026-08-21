@@ -21,17 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Souvenirs", keys: ["souvenirs"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tenerife", item: `${SITE}/tenerife` },
-      { "@type": "ListItem", position: 3, name: "Shopping", item: `${SITE}/tenerife/shopping` },
-    ],
-  };
-}
 
 export default function TenerifeShopping() {
   return (
@@ -46,7 +35,6 @@ export default function TenerifeShopping() {
       intro="Because the Canary Islands sit outside the EU's VAT area and apply a much lower local sales tax, Tenerife is a genuine bargain for perfume, cosmetics, electronics, spirits and tobacco. Beyond the duty-friendly deals you'll find big modern malls in the south, luxury boutiques in Costa Adeje, and the capital's atmospheric markets and craft stalls. Here's where to shop."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={SHOPPING} filters={FILTERS} />
       </div>

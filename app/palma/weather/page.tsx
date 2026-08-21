@@ -11,17 +11,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Palma Weather & Best Time to Visit | Flyamba", description: "Month-by-month Palma climate, sea temperatures and the best time to visit.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Palma", item: `${SITE}/palma` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/palma/weather` },
-    ],
-  };
-}
 
 // month, avg high °C, avg low °C, sea °C, rainy days, verdict
 const CLIMATE: [string, string, string, string, string, string][] = [
@@ -89,7 +78,6 @@ export default function PalmaWeather() {
       heroImage="/images/content/photo-1504386106331-3e4e71712b38.avif"
       intro="With around 300 days of sunshine a year, Palma de Mallorca is a genuine year-round destination. Summers are hot and reliably dry, the sea stays swimmable from June deep into October, and even winter days are mild and often bright. Here's a full month-by-month breakdown of temperatures, sea conditions and rainfall, plus advice on the best time to visit and what to pack."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
 
       <div className="mt-10 overflow-x-auto rounded-2xl border border-border">
         <table className="w-full min-w-[560px] border-collapse text-sm">

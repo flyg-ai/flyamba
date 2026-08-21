@@ -23,17 +23,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Views", keys: ["views"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Attractions", item: `${SITE}/london/attractions` },
-    ],
-  };
-}
 
 export default function LondonAttractions() {
   return (
@@ -48,7 +37,6 @@ export default function LondonAttractions() {
       intro="London packs more world-class sights into a single city than almost anywhere on earth — from the Tower of London and Buckingham Palace to free national museums, Gothic abbeys and sweeping skyline viewpoints. Here are the 20 attractions worth building your trip around, with prices, opening hours and tips to skip the queues."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={ATTRACTIONS} filters={FILTERS} />
       </div>

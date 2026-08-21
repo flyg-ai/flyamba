@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around Vienna | Flyamba", description: "Vienna transport explained: airport trains, metro, trams, tickets and taxis, with prices.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Vienna", item: `${SITE}/vienna` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/vienna/transport` },
-    ],
-  };
-}
 
 export default function ViennaTransport() {
   return (
@@ -37,7 +26,6 @@ export default function ViennaTransport() {
       intro="Vienna has one of the best public-transport systems in the world, and the compact old town is a joy to walk — so getting around is easy and cheap. This guide covers everything: how to get in from the airport on the S7 and CAT trains, how the five-line U-Bahn metro and the extensive trams and buses work (and why the Ring trams double as a sightseeing tour), which ticket or pass is best value, and when a taxi or ride-hailing app makes sense, all with real routes, prices and practical advice."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Vienna transport explained" items={TRANSPORT} />
     </CityGuideShell>
   );

@@ -21,17 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Stargazing", keys: ["stargazing"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tenerife", item: `${SITE}/tenerife` },
-      { "@type": "ListItem", position: 3, name: "Day trips", item: `${SITE}/tenerife/day-trips` },
-    ],
-  };
-}
 
 export default function TenerifeDayTrips() {
   return (
@@ -46,7 +35,6 @@ export default function TenerifeDayTrips() {
       intro="Tenerife rewards those who venture beyond the beach. In a single day you can stand atop Spain's highest volcano, hike a spectacular gorge to a hidden beach, ferry to the unspoilt island of La Gomera, lose yourself in ancient laurel forests, or stargaze under some of the clearest skies on Earth. Here are the six best day trips, with distances, logistics and tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={DAY_TRIPS} filters={FILTERS} />
       </div>

@@ -67,17 +67,6 @@ const TRANSPORT: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Ibiza", item: `${SITE}/ibiza` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/ibiza/transport` },
-    ],
-  };
-}
 
 export default function IbizaTransport() {
   return (
@@ -92,7 +81,6 @@ export default function IbizaTransport() {
       intro="Ibiza is small — nowhere is more than about a 45-minute drive away — but getting around still takes a little planning. The bus network and the all-night Discobus cover the main towns and clubs cheaply, taxis and transfers handle the airport, and boats link the beaches and Formentera. To reach the island's scattered coves, viewpoints and northern villages freely, though, most visitors hire a car or scooter. Here is how each option works, with fares and practical tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Ibiza — options in detail" items={TRANSPORT} />
     </CityGuideShell>
   );

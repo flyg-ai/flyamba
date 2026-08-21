@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Cape Town", item: `${SITE}/cape-town` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/cape-town/transport` },
-    ],
-  };
-}
 
 export default function CapeTownTransport() {
   return (
@@ -91,7 +80,6 @@ export default function CapeTownTransport() {
       intro="Cape Town is a spread-out city, so getting around takes a little more planning than a compact European capital. This guide covers every option — the airport transfer, the go-to Uber and Bolt ride-hailing apps, the modern MyCiti bus network, hiring a car for the Cape Peninsula and winelands, and the hop-on-hop-off sightseeing bus — plus the safety tips that make travelling around the city easy and stress-free, with prices in USD."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Cape Town — in detail" items={INFO} />
     </CityGuideShell>
   );

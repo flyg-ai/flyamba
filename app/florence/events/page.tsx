@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Florence Festivals & Events | Flyamba", description: "The best annual events in Florence, from Calcio Storico to Christmas.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Florence", item: `${SITE}/florence` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/florence/events` },
-    ],
-  };
-}
 
 export default function FlorenceEvents() {
   return (
@@ -37,7 +26,6 @@ export default function FlorenceEvents() {
       intro="Florence marks the year with some of the most distinctive and historic events in Italy, many of them rooted in the traditions of the Renaissance republic. From the exploding Easter cart in front of the Duomo and the brutal costumed football of the Calcio Storico to one of Europe's oldest opera festivals, a summer-long programme of open-air culture and a magical Christmas season, timing your trip to coincide with a festival adds an unforgettable dimension. Here are the key annual events, with dates, what to expect and tips on where to watch."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Florence events through the year" items={EVENTS} />
     </CityGuideShell>
   );

@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Cancún Prices & Budget Guide | Flyamba", description: "What a Cancún trip costs: flights, daily budgets, all-inclusive vs à la carte, tours, food and transport.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Cancún", item: `${SITE}/cancun` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/cancun/prices` },
-    ],
-  };
-}
 
 export default function CancunPrices() {
   return (
@@ -37,7 +26,6 @@ export default function CancunPrices() {
       intro="Cancún can be a budget beach break or a luxury blowout, with a wider gap between the two than almost any destination thanks to the very different worlds of the tourist Hotel Zone and the local downtown. This guide breaks down the real costs: when flights are cheapest, sensible daily budgets from backpacker to luxury, the big all-inclusive-versus-room-only decision, what attractions, tours and the famous eco-parks charge, how much meals cost on the strip versus downtown, and getting-around fares — all with practical tips to make your money go further and to avoid the timeshare traps that prey on tourists."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of visiting Cancún" items={PRICES} />
     </CityGuideShell>
   );

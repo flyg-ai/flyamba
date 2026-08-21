@@ -64,17 +64,6 @@ const EVENTS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Lisbon", item: `${SITE}/lisbon` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/lisbon/events` },
-    ],
-  };
-}
 
 export default function LisbonEvents() {
   return (
@@ -89,7 +78,6 @@ export default function LisbonEvents() {
       intro="Lisbon's calendar is full of reasons to time a trip — from the month-long Santo António street parties that fill Alfama with grilled sardines every June, to world-class music festivals like NOS Alive and Rock in Rio, the giant Web Summit tech conference, spring food festivals and a spectacular riverside New Year's Eve. Here are the events and festivals worth planning around, with dates, locations and what to expect at each."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Lisbon events & festivals in detail" items={EVENTS} />
     </CityGuideShell>
   );

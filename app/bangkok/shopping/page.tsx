@@ -23,17 +23,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Riverside", keys: ["riverside"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "Shopping", item: `${SITE}/bangkok/shopping` },
-    ],
-  };
-}
 
 export default function BangkokShopping() {
   return (
@@ -48,7 +37,6 @@ export default function BangkokShopping() {
       intro="Bangkok is one of Asia's great shopping cities, swinging effortlessly between air-conditioned luxury malls and sweaty, bargain-packed markets. Browse global flagships and riverside spectacle at ICONSIAM and Siam Paragon, haggle over gadgets at MBK, buy clothes by the armful in wholesale Pratunam, or lose a whole weekend in the 15,000 stalls of Chatuchak. These 8 destinations cover every style and budget, with tips on getting there and getting a deal."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={SHOPPING} filters={FILTERS} />
       </div>

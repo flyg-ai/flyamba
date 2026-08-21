@@ -70,17 +70,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Reykjavík", item: `${SITE}/reykjavik` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/reykjavik/prices` },
-    ],
-  };
-}
 
 export default function ReykjavikPrices() {
   return (
@@ -95,7 +84,6 @@ export default function ReykjavikPrices() {
       intro="How much does a trip to Reykjavík actually cost? Iceland is famously one of the most expensive countries in the world, but with the right planning it's very manageable — and much of its greatest asset, the staggering natural scenery, is completely free. This guide breaks down flight fares (in USD) and the real on-the-ground costs — from daily budgets and hotel rates to what you'll pay for meals, geothermal spas, tours and transport — plus the tricks that save the most money."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of a trip to Reykjavík — in detail" items={INFO} />
     </CityGuideShell>
   );

@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Vienna Prices & Budget Guide | Flyamba", description: "What a Vienna trip costs: flights, daily budgets, tickets, food and transport, with saving tips.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Vienna", item: `${SITE}/vienna` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/vienna/prices` },
-    ],
-  };
-}
 
 export default function ViennaPrices() {
   return (
@@ -37,7 +26,6 @@ export default function ViennaPrices() {
       intro="Vienna can be a surprisingly affordable city break — so much of it, from the churches and palace gardens to the parks, the Ring and standing-room opera tickets, is free or cheap — or a grand splurge, depending on how you travel. This guide breaks down the real costs: when flights are cheapest, sensible daily budgets from backpacker to luxury, what attractions and museums charge, how much meals and coffee-house treats cost, and getting-around fares, all with practical tips to make your euros go further."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of visiting Vienna" items={PRICES} />
     </CityGuideShell>
   );

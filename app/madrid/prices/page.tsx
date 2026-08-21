@@ -71,17 +71,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Madrid", item: `${SITE}/madrid` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/madrid/prices` },
-    ],
-  };
-}
 
 export default function MadridPrices() {
   return (
@@ -96,7 +85,6 @@ export default function MadridPrices() {
       intro={`Madrid is one of Europe's best-value capitals, cheaper than Barcelona in like-for-like categories and far cheaper than Paris or London. This guide breaks down what a trip actually costs — flight prices by month (from about $${MIN_USD}), a realistic daily budget, and typical prices for tapas, beer, coffee, hotels, the metro and the museums — plus the many ways to see the city for less.`}
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Madrid costs and budgets — in detail" items={INFO} />
     </CityGuideShell>
   );

@@ -54,17 +54,6 @@ const EVENTS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tokyo", item: `${SITE}/tokyo` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/tokyo/events` },
-    ],
-  };
-}
 
 export default function TokyoEvents() {
   return (
@@ -79,7 +68,6 @@ export default function TokyoEvents() {
       intro="Tokyo's calendar turns with the seasons, and timing your trip to a great event adds a whole extra dimension to a visit. Spring brings the euphoric cherry-blossom hanami; summer explodes with fireworks and neighbourhood matsuri; autumn glows with foliage and dazzling illuminations; and winter centres on the deeply traditional New Year shrine visits. Add three annual grand sumo tournaments and you have a year-round reason to go. Here are the key events and festivals, with dates, costs and tips for experiencing them."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Tokyo events through the year" items={EVENTS} />
     </CityGuideShell>
   );

@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Paris", item: `${SITE}/paris` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/paris/transport` },
-    ],
-  };
-}
 
 export default function ParisTransport() {
   return (
@@ -91,7 +80,6 @@ export default function ParisTransport() {
       intro="Paris is one of the easiest big cities to navigate: a dense Métro puts a station within a few minutes' walk almost anywhere, fast RER trains reach the airports and day-trip sights, and the compact, beautiful centre is made for walking. This guide covers arriving from Charles de Gaulle, Orly and Beauvais, using the Métro and RER, choosing between single tickets and Navigo passes, and getting around by bus, tram, shared bike or on foot — with prices, travel times and the practical tips that make it all simple."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Paris transport in detail" items={INFO} />
     </CityGuideShell>
   );

@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Mykonos", item: `${SITE}/mykonos` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/mykonos/weather` },
-    ],
-  };
-}
 
 export default function MykonosWeather() {
   return (
@@ -91,7 +80,6 @@ export default function MykonosWeather() {
       intro="Mykonos has a hot, dry, sun-soaked Mediterranean climate — but the island's defining weather feature is the Meltemi, the strong summer north wind that cools the heat, powers the windsurfers and shapes where the best beaches lie. This guide walks through the weather season by season — temperatures, the wind, the sea and what to pack — and pinpoints the best time to visit, whether you're chasing warm swimming, the full beach-club buzz, lower prices or peace and quiet."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Mykonos weather season by season — in detail" items={INFO} />
     </CityGuideShell>
   );

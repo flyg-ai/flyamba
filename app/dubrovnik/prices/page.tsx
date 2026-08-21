@@ -63,17 +63,6 @@ const PRICES: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Dubrovnik", item: `${SITE}/dubrovnik` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/dubrovnik/prices` },
-    ],
-  };
-}
 
 export default function DubrovnikPrices() {
   return (
@@ -88,7 +77,6 @@ export default function DubrovnikPrices() {
       intro="Dubrovnik is the most expensive city in Croatia — a glamorous, in-demand destination where Old Town seafood dinners, the €35 city-walls ticket and peak-summer hotels can add up fast. But it rewards a little strategy: this guide breaks down the real costs, from when flights are cheapest and sensible daily budgets to what attractions, meals and getting around actually cost, and how the Dubrovnik Pass, bakeries, apartments and shoulder-season timing can make your euros go a lot further."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of visiting Dubrovnik" items={PRICES} />
     </CityGuideShell>
   );

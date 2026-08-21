@@ -11,17 +11,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Palma Prices & Daily Budget | Flyamba", description: "Daily budgets and sample costs for food, transport and attractions in Palma.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Palma", item: `${SITE}/palma` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/palma/prices` },
-    ],
-  };
-}
 
 // tier, accommodation, food & drink, transport & sights, daily total
 const BUDGETS: [string, string, string, string, string][] = [
@@ -91,7 +80,6 @@ export default function PalmaPrices() {
       heroImage="/images/content/photo-1579621970563-ebec7560ff3e.avif"
       intro="Palma is a mid-priced Mediterranean destination where the flight is often the cheapest part of the trip and smart choices on the ground keep costs down. Below is a clear breakdown of what things actually cost — daily budgets for every style of traveller, sample prices for food, drinks, transport and attractions, and practical tips for saving money and paying on your Mallorca break."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
 
       <h2 className="mt-10 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Daily budget by travel style</h2>
       <div className="mt-5 overflow-x-auto rounded-2xl border border-border">

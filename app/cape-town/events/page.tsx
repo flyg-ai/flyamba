@@ -58,17 +58,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Cape Town", item: `${SITE}/cape-town` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/cape-town/events` },
-    ],
-  };
-}
 
 export default function CapeTownEvents() {
   return (
@@ -83,7 +72,6 @@ export default function CapeTownEvents() {
       intro="Cape Town's events lean into its outdoor, creative spirit — jazz weekends, sunset concerts on botanical-garden lawns, a glittering street carnival, one of the world's most scenic marathons and a monthly downtown art crawl. Most of the biggest happen in the warm summer months (roughly November to April), when the city is at its liveliest. Here's what's on and when, so you can time your trip to catch Cape Town in full swing."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Cape Town's events — in detail" items={INFO} />
     </CityGuideShell>
   );

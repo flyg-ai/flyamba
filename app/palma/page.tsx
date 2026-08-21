@@ -17,6 +17,8 @@ import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { PALMA_CATEGORIES, ATTRACTIONS, RESTAURANTS, BEACHES } from "@/app/data/palma-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 
 // ── City facts (self-contained; not from the shared destinations catalog) ────
 const CITY = {
@@ -57,15 +59,6 @@ export function generateMetadata(): Metadata {
 
 function jsonLd() {
   const url = `${SITE}/palma`;
-  const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Spain" },
-      { "@type": "ListItem", position: 3, name: "Palma de Mallorca", item: url },
-    ],
-  };
   const touristDestination = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
@@ -84,7 +77,7 @@ function jsonLd() {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
-  return [breadcrumb, touristDestination, faqPage];
+  return [touristDestination, faqPage];
 }
 
 // ── Non-stop routes (USD, research-based low round-trip fares) ───────────────
@@ -201,6 +194,11 @@ export default function PalmaHub() {
         <Image src={CITY.hero} alt="Cheap flights to Palma de Mallorca, Spain" fill fetchPriority="high" loading="eager" sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 lg:px-8">
+          {/* Trail added with the schema: this page emitted a BreadcrumbList
+              while showing no breadcrumb at all. */}
+          <div className="mb-4">
+            <Breadcrumbs onDark items={crumbsForSlug("palma")} />
+          </div>
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/85">
             <span className="text-base">{CITY.countryFlag}</span>
             <span>{CITY.country}</span>

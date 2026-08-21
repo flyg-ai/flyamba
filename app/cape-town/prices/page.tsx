@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Cape Town", item: `${SITE}/cape-town` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/cape-town/prices` },
-    ],
-  };
-}
 
 export default function CapeTownPrices() {
   return (
@@ -91,7 +80,6 @@ export default function CapeTownPrices() {
       intro="How much does a trip to Cape Town actually cost? The flights are the main expense, but once you're there the city offers some of the best value of any world-class destination. This guide breaks down flight fares and real on-the-ground costs — from daily budgets and hotel rates to what you'll pay for meals, wine, attractions and transport — all in US dollars, plus the tricks that save the most money."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of a trip to Cape Town — in detail" items={INFO} />
     </CityGuideShell>
   );

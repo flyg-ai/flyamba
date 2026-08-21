@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around Rome | Flyamba", description: "Rome transport explained: airports, metro, buses, the Roma Pass and taxis, with prices.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Rome", item: `${SITE}/rome` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/rome/transport` },
-    ],
-  };
-}
 
 export default function RomeTransport() {
   return (
@@ -37,7 +26,6 @@ export default function RomeTransport() {
       intro="Rome is a walker's city — its dense historic centre is best explored on foot, and many of the great sights sit within a short stroll of one another. But you will still need to know your options: how to get in from Fiumicino and Ciampino airports, how the compact three-line metro and the extensive bus and tram network work, whether the Roma Pass is worth it, and how taxis are priced. This guide covers everything with real routes, ticket prices and practical advice."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Rome transport explained" items={TRANSPORT} />
     </CityGuideShell>
   );

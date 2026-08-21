@@ -25,14 +25,6 @@ function jsonLd() {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-          { "@type": "ListItem", position: 2, name: "Singapore", item: `${SITE}/singapore` },
-          { "@type": "ListItem", position: 3, name: "Beaches", item: `${SITE}/singapore/beaches` },
-        ],
-      },
       ...BEACHES.map((b) => ({
         "@type": "Beach",
         name: b.name,

@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Phuket Prices & Budget Guide | Flyamba", description: "What a Phuket trip costs: flights, daily budgets, tours, food and transport, with saving tips.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Phuket", item: `${SITE}/phuket` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/phuket/prices` },
-    ],
-  };
-}
 
 export default function PhuketPrices() {
   return (
@@ -37,7 +26,6 @@ export default function PhuketPrices() {
       intro="Phuket is one of the best-value beach destinations in the world, but costs swing enormously depending on how you travel — from a few dollars a day eating at markets and riding songthaews, to five-star villa resorts and premium tours. This guide breaks down the real costs: when flights are cheapest, sensible daily budgets from backpacker to luxury, what island tours and activities charge, how much meals and drinks cost, and getting-around fares, all with practical tips to make your baht go further. Flight prices are shown in US dollars; on-the-ground costs are in Thai baht (฿)."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of visiting Phuket" items={PRICES} />
     </CityGuideShell>
   );

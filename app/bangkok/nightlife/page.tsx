@@ -23,17 +23,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Sukhumvit", keys: ["sukhumvit"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "Nightlife", item: `${SITE}/bangkok/nightlife` },
-    ],
-  };
-}
 
 export default function BangkokNightlife() {
   return (
@@ -48,7 +37,6 @@ export default function BangkokNightlife() {
       intro="Bangkok owns the night. This is the city that made rooftop drinking famous, where you can sip a cocktail 60 floors above the river, dial a secret code into a phone booth to reach a hidden Cuban bar, catch live jazz in a colonial lounge, or dance until 4am in Thong Lo. These 10 venues cover the full range — glamorous sky bars, theatrical speakeasies, live-music institutions and serious clubs — with the dress codes, prices and neighborhoods you need to plan a great night."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={NIGHTLIFE} filters={FILTERS} />
       </div>

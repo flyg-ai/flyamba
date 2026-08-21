@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Madrid", item: `${SITE}/madrid` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/madrid/weather` },
-    ],
-  };
-}
 
 export default function MadridWeather() {
   return (
@@ -91,7 +80,6 @@ export default function MadridWeather() {
       intro="Madrid's continental climate, high on the Castilian plateau, means hot, dry summers, cool, clear winters and around 300 days of sunshine a year — with big swings between day and night. This guide walks through the weather month by month and season by season, with temperatures and what to pack, and pinpoints the best time to visit depending on whether you're chasing warm terraces, blue skies or the lowest prices."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Madrid weather season by season — in detail" items={INFO} />
     </CityGuideShell>
   );

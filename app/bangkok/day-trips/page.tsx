@@ -23,17 +23,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Half-day", keys: ["half-day"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "Day trips", item: `${SITE}/bangkok/day-trips` },
-    ],
-  };
-}
 
 export default function BangkokDayTrips() {
   return (
@@ -48,7 +37,6 @@ export default function BangkokDayTrips() {
       intro="Some of central Thailand's most memorable sights sit within a couple of hours of Bangkok, making the city an ideal base. Wander the crumbling temple ruins of the former royal capital Ayutthaya, drift through the canals of the Damnoen Saduak floating market, watch a train squeeze through the astonishing Maeklong railway market, trace the wartime Death Railway at Kanchanaburi, or spot wild elephants in Khao Yai National Park. These 6 trips, by train, minivan or tour, come with travel times and practical tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={DAY_TRIPS} filters={FILTERS} />
       </div>

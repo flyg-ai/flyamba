@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "High street", keys: ["high-street"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Shopping", item: `${SITE}/london/shopping` },
-    ],
-  };
-}
 
 export default function LondonShopping() {
   return (
@@ -47,7 +36,6 @@ export default function LondonShopping() {
       intro="London shopping ranges from the world's most famous department stores to sprawling street markets full of antiques, vintage and street food. Whether you want luxury flagships on Bond Street, the spectacle of Harrods and Liberty, or a Saturday hunt down Portobello Road, here are 8 of the best places to shop, with opening hours and tips to shop smart."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={SHOPPING} filters={FILTERS} />
       </div>

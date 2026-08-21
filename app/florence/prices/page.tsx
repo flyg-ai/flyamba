@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "How Much Does Florence Cost? | Flyamba", description: "Flights, daily budgets, museum tickets, food and transport costs for Florence.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Florence", item: `${SITE}/florence` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/florence/prices` },
-    ],
-  };
-}
 
 export default function FlorencePrices() {
   return (
@@ -37,7 +26,6 @@ export default function FlorencePrices() {
       intro="Florence is a compact, high-demand city where the big costs are accommodation and the major museums, but where so much of the beauty — the churches, the piazzas, the open-air sculpture and the great viewpoints — is free or nearly so. This guide breaks down what a trip really costs: when it is cheapest to fly, realistic daily budgets for backpackers, mid-range travellers and luxury visitors, the price of tickets to the Uffizi, Accademia and Duomo, what meals and the famous bistecca cost, and how little you will spend getting around a city best walked."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Florence costs explained" items={PRICES} />
     </CityGuideShell>
   );

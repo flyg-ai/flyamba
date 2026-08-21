@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "New York", item: `${SITE}/new-york` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/new-york/transport` },
-    ],
-  };
-}
 
 export default function NewYorkTransport() {
   return (
@@ -91,7 +80,6 @@ export default function NewYorkTransport() {
       intro="New York runs on the largest public-transport network in North America: a 24-hour subway, a dense bus network, share bikes and yellow cabs that tie the whole city together. This guide covers every option — from reaching the city from JFK, LaGuardia and Newark, to how the subway works, how OMNY contactless fares and the weekly cap save you money, cycling and walking the grid, and when a taxi is worth it — with US-dollar prices and money-saving tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around New York — in detail" items={INFO} />
     </CityGuideShell>
   );

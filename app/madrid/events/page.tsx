@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Madrid", item: `${SITE}/madrid` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/madrid/events` },
-    ],
-  };
-}
 
 export default function MadridEvents() {
   return (
@@ -91,7 +80,6 @@ export default function MadridEvents() {
       intro="Madrid's calendar runs from the glittering Christmas lights of Gran Vía and the country-defining New Year's Eve grapes at Puerta del Sol to the spectacular Three Kings parade, the solemn processions of Semana Santa, summer culture festivals, La Liga football and the weekly ritual of the El Rastro market. Here's what's on through the year, season by season, so you can time your trip around the city's biggest moments."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Madrid events through the year — in detail" items={INFO} />
     </CityGuideShell>
   );

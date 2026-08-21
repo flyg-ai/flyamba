@@ -21,17 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Wine & nature", keys: ["wine", "nature"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Florence", item: `${SITE}/florence` },
-      { "@type": "ListItem", position: 3, name: "Day Trips", item: `${SITE}/florence/day-trips` },
-    ],
-  };
-}
 
 export default function FlorenceDayTrips() {
   return (
@@ -46,7 +35,6 @@ export default function FlorenceDayTrips() {
       intro="Florence sits at the heart of Tuscany and on Italy's high-speed rail network, which makes it one of the best bases in the country for day trips. Within an hour or two you can reach the Leaning Tower of Pisa, the magnificent medieval city of Siena, the towered skyline of San Gimignano, the vineyards of Chianti, the walled charm of Lucca and even the cliff-clinging villages of the Cinque Terre. Here are the best excursions, with travel times, transport advice and tips on doing each one well."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={DAY_TRIPS} filters={FILTERS} />
       </div>

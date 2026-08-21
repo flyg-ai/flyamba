@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around Dubai | Flyamba", description: "Dubai transport explained: airport, Metro, taxis, the Nol card and abras, with prices.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Dubai", item: `${SITE}/dubai` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/dubai/transport` },
-    ],
-  };
-}
 
 export default function DubaiTransport() {
   return (
@@ -37,7 +26,6 @@ export default function DubaiTransport() {
       intro="Dubai is large, spread out and built for the car, but getting around is easier and cheaper than first-time visitors expect. A driverless, spotless Metro links the airport, Downtown, the malls and the Marina; the Tram fills in the Marina and Palm; metered taxis and the Careem and Uber apps are affordable and everywhere; and the traditional 1-dirham abra still ferries passengers across the historic Creek. This guide covers every option with real routes, fares in dirhams and dollars, and practical advice — including the all-important Nol card."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Dubai transport explained" items={TRANSPORT} />
     </CityGuideShell>
   );

@@ -58,17 +58,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Paris", item: `${SITE}/paris` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/paris/prices` },
-    ],
-  };
-}
 
 export default function ParisPrices() {
   return (
@@ -83,7 +72,6 @@ export default function ParisPrices() {
       intro="Paris has a reputation for being expensive, but it can flex to almost any budget once you know where the money goes. Flights start from around $286 round-trip, and on the ground your two big costs are accommodation and dining — both of which offer real savings if you choose wisely. This guide breaks down flight fares, hotel prices by category, the cost of food and drink, museum tickets and the money-saving Paris Museum Pass, and pulls it together into realistic daily budgets for every kind of traveller."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Paris costs in detail" items={INFO} />
     </CityGuideShell>
   );

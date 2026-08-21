@@ -21,15 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Beachfront", keys: ["beachfront"] },
 ];
 
-const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-    { "@type": "ListItem", position: 2, name: "Barcelona", item: `${SITE}/barcelona` },
-    { "@type": "ListItem", position: 3, name: "Hotels", item: `${SITE}/barcelona/hotels` },
-  ],
-};
 
 export default function BarcelonaHotels() {
   return (
@@ -41,7 +32,6 @@ export default function BarcelonaHotels() {
       intro="Barcelona is compact and superbly connected, so almost any central neighborhood puts you within a short metro ride of the sights. The bigger question is what kind of trip you want: grand modernista boulevards, medieval lanes, beach life or a local village feel. Here are the best hotels across every budget, with the area and vibe of each."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={HOTELS} filters={FILTERS} />
       </div>

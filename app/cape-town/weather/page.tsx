@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Cape Town", item: `${SITE}/cape-town` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/cape-town/weather` },
-    ],
-  };
-}
 
 export default function CapeTownWeather() {
   return (
@@ -91,7 +80,6 @@ export default function CapeTownWeather() {
       intro="Cape Town has a Mediterranean climate with reversed Southern Hemisphere seasons — warm, dry summers from November to March and mild, wet winters from June to September. This guide walks through the weather season by season, explains the two coasts' very different sea temperatures, and pinpoints the best time to visit depending on whether you're chasing beaches, hiking, whales, wildflowers or the lowest prices."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Cape Town weather season by season — in detail" items={INFO} />
     </CityGuideShell>
   );

@@ -14,17 +14,6 @@ export const metadata: Metadata = {
   openGraph: { title: "London Cost & Budget Guide | Flyamba", description: "Daily budgets, food, hotels, attractions and transport costs.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/london/prices` },
-    ],
-  };
-}
 
 const IMG = "/images/content/photo-1579621970563-ebec7560ff3e.avif";
 
@@ -84,7 +73,6 @@ export default function LondonPrices() {
       intro="London has a reputation as an expensive city, but with a little planning it can suit almost any budget. This guide breaks down real-world costs — daily budgets by travel style, food and drink, accommodation, attraction entry fees and transport — and shares the best ways to save, from the city's many free museums to capped travel fares and cheaper lunch menus."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of visiting London, broken down" items={ITEMS} />
     </CityGuideShell>
   );

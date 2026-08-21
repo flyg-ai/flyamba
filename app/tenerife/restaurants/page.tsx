@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Budget", keys: ["budget"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tenerife", item: `${SITE}/tenerife` },
-      { "@type": "ListItem", position: 3, name: "Restaurants", item: `${SITE}/tenerife/restaurants` },
-    ],
-  };
-}
 
 export default function TenerifeRestaurants() {
   return (
@@ -47,7 +36,6 @@ export default function TenerifeRestaurants() {
       intro="Tenerife's food ranges from some of Spain's finest Michelin-starred kitchens to rustic guachinches where farmers serve homemade country cooking with their own wine. Wrinkly papas arrugadas with red and green mojo, fresh Atlantic fish and hearty stews are the local staples. Here are the restaurants worth seeking out, with prices, areas and tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={RESTAURANTS} filters={FILTERS} />
       </div>

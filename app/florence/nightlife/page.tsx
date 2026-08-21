@@ -21,17 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Rooftops", keys: ["rooftop"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Florence", item: `${SITE}/florence` },
-      { "@type": "ListItem", position: 3, name: "Nightlife", item: `${SITE}/florence/nightlife` },
-    ],
-  };
-}
 
 export default function FlorenceNightlife() {
   return (
@@ -46,7 +35,6 @@ export default function FlorenceNightlife() {
       intro="Florence is not a wild, clubbing city — its evenings are about aperitivo, wine and atmosphere rather than dancing until dawn. This is a place to sip a Tuscan red in a historic wine bar, watch the sun set over the Ponte Vecchio from a rooftop, hunt down a hidden speakeasy, or join the young, bohemian crowd on the church steps of Piazza Santo Spirito in the Oltrarno. Here are the best places for a drink after dark, from truffle-panini institutions to creative cocktail bars, with areas, prices and tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={NIGHTLIFE} filters={FILTERS} />
       </div>

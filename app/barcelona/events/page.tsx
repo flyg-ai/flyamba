@@ -114,15 +114,6 @@ const FAQ = [
 ];
 
 function jsonLd() {
-  const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Barcelona", item: `${SITE}/barcelona` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/barcelona/events` },
-    ],
-  };
   const faq = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -132,7 +123,7 @@ function jsonLd() {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
-  return [breadcrumb, faq];
+  return [faq];
 }
 
 export default function BarcelonaEvents() {

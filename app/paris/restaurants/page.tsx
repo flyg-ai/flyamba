@@ -27,14 +27,6 @@ function jsonLd() {
   return {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-          { "@type": "ListItem", position: 2, name: "Paris", item: `${SITE}/paris` },
-          { "@type": "ListItem", position: 3, name: "Restaurants", item: `${SITE}/paris/restaurants` },
-        ],
-      },
       ...RESTAURANTS.map((r) => ({
         "@type": "Restaurant",
         name: r.name,

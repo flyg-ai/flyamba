@@ -61,17 +61,6 @@ const PRICES: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tokyo", item: `${SITE}/tokyo` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/tokyo/prices` },
-    ],
-  };
-}
 
 export default function TokyoPrices() {
   return (
@@ -86,7 +75,6 @@ export default function TokyoPrices() {
       intro="How much does a trip to Tokyo cost? Less than most people fear. While the long-haul flight and your hotel are the big-ticket items, Tokyo's food, transport and sightseeing are genuinely good value — often cheaper than Paris, London or New York — thanks to affordable ramen and konbini meals, cheap efficient trains and an abundance of free temples, parks and neighbourhoods. This guide breaks down realistic daily budgets, typical prices and the money tips that keep costs down."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Tokyo prices broken down" items={PRICES} />
     </CityGuideShell>
   );

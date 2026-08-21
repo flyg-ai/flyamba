@@ -21,15 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Budget", keys: ["budget"] },
 ];
 
-const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-    { "@type": "ListItem", position: 2, name: "Barcelona", item: `${SITE}/barcelona` },
-    { "@type": "ListItem", position: 3, name: "Restaurants", item: `${SITE}/barcelona/restaurants` },
-  ],
-};
 
 export default function BarcelonaRestaurants() {
   return (
@@ -41,7 +32,6 @@ export default function BarcelonaRestaurants() {
       intro="Barcelona is one of Europe's great eating cities — a place where a €2 montadito at a tiled bar and a multi-course tasting menu can both be the meal of the trip. This guide covers the full range: classic tapas bars, harbour-side seafood, buzzing food markets, wallet-friendly bites and the fine dining that put the city on the world map."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={RESTAURANTS} filters={FILTERS} />
       </div>

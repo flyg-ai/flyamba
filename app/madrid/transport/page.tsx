@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Madrid", item: `${SITE}/madrid` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/madrid/transport` },
-    ],
-  };
-}
 
 export default function MadridTransport() {
   return (
@@ -91,7 +80,6 @@ export default function MadridTransport() {
       intro="Madrid has one of Europe's most extensive and affordable public transport systems — a dense metro, Cercanías commuter trains, EMT's blue buses and the night 'búhos' all knit the city together. This guide covers every way from Barajas airport (MAD) to the centre, how the metro and buses work, which tickets are worth buying, and when to walk, take a taxi or use a rideshare app — so you can get around quickly and cheaply."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Madrid — in detail" items={INFO} />
     </CityGuideShell>
   );

@@ -14,17 +14,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around London | Flyamba", description: "The Tube, buses, Oyster, taxis and airport transfers explained.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/london/transport` },
-    ],
-  };
-}
 
 const IMG = "/images/content/photo-1544620347-c4fd4a3d5957.avif";
 
@@ -92,7 +81,6 @@ export default function LondonTransport() {
       intro="London has one of the world's great public-transport networks, and getting around is easy once you know a few basics. This guide covers the Tube, buses and the new Elizabeth line, how Oyster and contactless fares and daily caps work, black cabs and ride-hailing, airport transfers, and getting about on foot or by hire bike — all with real fares and practical tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around London — everything you need to know" items={ITEMS} />
     </CityGuideShell>
   );

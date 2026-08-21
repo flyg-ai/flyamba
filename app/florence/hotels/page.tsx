@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Budget", keys: ["budget"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Florence", item: `${SITE}/florence` },
-      { "@type": "ListItem", position: 3, name: "Hotels", item: `${SITE}/florence/hotels` },
-    ],
-  };
-}
 
 export default function FlorenceHotels() {
   return (
@@ -47,7 +36,6 @@ export default function FlorenceHotels() {
       intro="Florence is compact enough to walk almost anywhere, so where you stay is about atmosphere as much as location. The Centro Storico puts every major sight on your doorstep; the artisan Oltrarno across the Arno is quieter, more local and often better value; and the streets around Santa Croce and San Lorenzo buzz with restaurants and markets. From Renaissance-palace grand hotels and Ferragamo-owned boutiques to reliable central four-stars and friendly budget guesthouses, here are the best places to stay, with areas, prices and honest advice."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={HOTELS} filters={FILTERS} />
       </div>

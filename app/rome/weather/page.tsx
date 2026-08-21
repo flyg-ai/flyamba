@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Rome Weather & Best Time to Visit | Flyamba", description: "Rome's climate month by month, with temperatures and the ideal time to go.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Rome", item: `${SITE}/rome` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/rome/weather` },
-    ],
-  };
-}
 
 export default function RomeWeather() {
   return (
@@ -37,7 +26,6 @@ export default function RomeWeather() {
       intro="Rome enjoys a classic Mediterranean climate: hot, dry summers, mild and often sunny winters, and glorious shoulder seasons in between. When you go shapes your whole trip — the comfort of sightseeing, the size of the crowds and the price of flights and hotels. This guide runs through the weather season by season, with typical temperatures and what to pack, and pinpoints the best time to visit depending on whether you prioritise weather, quiet or budget."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Rome weather season by season" items={WEATHER} />
     </CityGuideShell>
   );

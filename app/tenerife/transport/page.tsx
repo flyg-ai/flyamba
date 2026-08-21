@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around Tenerife | Flyamba", description: "Airports, TITSA buses, hire cars, trams, taxis and ferries.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tenerife", item: `${SITE}/tenerife` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/tenerife/transport` },
-    ],
-  };
-}
 
 export default function TenerifeTransport() {
   return (
@@ -36,7 +25,6 @@ export default function TenerifeTransport() {
       heroImage="/images/tenerife/sevardheter/auditorio-de-tenerife.webp"
       intro="Tenerife has two airports, a cheap and surprisingly far-reaching bus network, a modern tram in the north and ferries to the neighbouring islands — but no metro or train. How you get around depends on whether you're staying put at a beach resort or exploring Teide, Masca and the wild north. This guide covers every option, with prices in euros and money-saving tips."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Tenerife in detail" items={TRANSPORT} />
     </CityGuideShell>
   );

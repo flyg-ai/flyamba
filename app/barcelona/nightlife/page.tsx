@@ -21,15 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Live music", keys: ["live-music"] },
 ];
 
-const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-    { "@type": "ListItem", position: 2, name: "Barcelona", item: `${SITE}/barcelona` },
-    { "@type": "ListItem", position: 3, name: "Nightlife", item: `${SITE}/barcelona/nightlife` },
-  ],
-};
 
 export default function BarcelonaNightlife() {
   return (
@@ -41,7 +32,6 @@ export default function BarcelonaNightlife() {
       intro="Barcelona goes out late and hard. The night starts with vermouth or cocktails around 20:00, dinner stretches past 22:00, bars fill after midnight and clubs don't get going until 02:00 — often running to 06:00. From cosy El Born cocktail dens to vast beachfront superclubs, here's where to go and how to time your night like a local."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={NIGHTLIFE} filters={FILTERS} />
       </div>

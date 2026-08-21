@@ -54,17 +54,6 @@ const WEATHER: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tokyo", item: `${SITE}/tokyo` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/tokyo/weather` },
-    ],
-  };
-}
 
 export default function TokyoWeather() {
   return (
@@ -79,7 +68,6 @@ export default function TokyoWeather() {
       intro="Tokyo has four distinct and dramatic seasons, and when you visit shapes your whole trip. Spring brings the world-famous cherry blossom and mild weather; summer is hot, humid and full of fireworks; autumn delivers crisp skies and fiery foliage; and winter is cold but dry and sunny, with the clearest Mount Fuji views and the lowest prices. Spring and autumn are the standout times to visit for weather and beauty, though they are also the busiest. Here is the season-by-season breakdown, with temperatures and what to pack."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Tokyo weather season by season" items={WEATHER} />
     </CityGuideShell>
   );

@@ -14,17 +14,6 @@ export const metadata: Metadata = {
   openGraph: { title: "London Events & Festivals | Flyamba", description: "The city's biggest annual events, month by month.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/london/events` },
-    ],
-  };
-}
 
 const IMG = "/images/content/photo-1533174072545-7a4b6ad7a6c3.avif";
 
@@ -116,7 +105,6 @@ export default function LondonEvents() {
       intro="London's calendar overflows with world-famous events, from royal pageantry and Grand Slam tennis to the biggest street party in Europe. This month-by-month guide runs through the city's major annual happenings — New Year fireworks, the Marathon, Chelsea Flower Show, Trooping the Colour, Wimbledon, Pride, Notting Hill Carnival and Christmas — with dates, costs and tips on how to enjoy them."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="London's biggest annual events, month by month" items={ITEMS} />
     </CityGuideShell>
   );

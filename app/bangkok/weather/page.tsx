@@ -46,17 +46,6 @@ const WEATHER: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/bangkok/weather` },
-    ],
-  };
-}
 
 export default function BangkokWeather() {
   return (
@@ -71,7 +60,6 @@ export default function BangkokWeather() {
       intro="Bangkok is hot all year — it's the humidity and rain that change with the seasons. The city runs on three of them: a cool, dry stretch that's peak visiting season, a fierce hot spell around April, and a green monsoon season of short, dramatic downpours and low prices. Here's how each feels, when to visit, and what to pack for the tropics whatever month you choose."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Bangkok's seasons, month by month" items={WEATHER} />
     </CityGuideShell>
   );

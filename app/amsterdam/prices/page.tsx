@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Amsterdam", item: `${SITE}/amsterdam` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/amsterdam/prices` },
-    ],
-  };
-}
 
 export default function AmsterdamPrices() {
   return (
@@ -91,7 +80,6 @@ export default function AmsterdamPrices() {
       intro="How much does a trip to Amsterdam actually cost? It's one of Europe's pricier cities, but with the right planning it's very manageable. This guide breaks down flight fares (in USD) and the real on-the-ground costs (in euros) — from daily budgets and hotel rates to what you'll pay for meals, museums, canal cruises and transport — plus the passes and tricks that save the most money."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="The cost of a trip to Amsterdam — in detail" items={INFO} />
     </CityGuideShell>
   );

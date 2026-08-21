@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Phuket Weather & Best Time to Visit | Flyamba", description: "Phuket's tropical climate season by season, with sea safety and the ideal time to go.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Phuket", item: `${SITE}/phuket` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/phuket/weather` },
-    ],
-  };
-}
 
 export default function PhuketWeather() {
   return (
@@ -37,7 +26,6 @@ export default function PhuketWeather() {
       intro="Phuket has a tropical climate with warm temperatures around 30°C year-round, but it divides into two very different seasons that shape your whole trip: the sunny, dry, calm-sea high season from November to April, and the wetter, rougher-sea green (monsoon) season from May to October. When you go affects the weather, the state of the sea for swimming and island trips, the size of the crowds and the price of flights and hotels. This guide runs through the climate season by season, with temperatures and what to expect, gives essential advice on sea safety and the crucial red-flag system, and pinpoints the best time to visit depending on your priorities."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Phuket weather season by season" items={WEATHER} />
     </CityGuideShell>
   );

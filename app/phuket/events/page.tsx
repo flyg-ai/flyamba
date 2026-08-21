@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Phuket Events & Festivals | Flyamba", description: "Phuket's annual festival calendar, from the Vegetarian Festival to Songkran, with dates and tips.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Phuket", item: `${SITE}/phuket` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/phuket/events` },
-    ],
-  };
-}
 
 export default function PhuketEvents() {
   return (
@@ -37,7 +26,6 @@ export default function PhuketEvents() {
       intro="Phuket's calendar reflects its rich Thai and Chinese heritage, mixing spiritual devotion, exuberant celebration and international sport. The island stages one of Thailand's most extraordinary and intense events in the Vegetarian Festival, erupts into a giant water fight for Songkran, floats candlelit krathongs under the November full moon, dresses its Old Town in lanterns for Chinese New Year, welcomes Asia's premier sailing regatta each December, and honours its ancestors at the Hungry Ghost Festival. Here are the events worth timing a trip around, with dates, locations and tips — note that several follow the lunar calendar, so check the exact dates for your year."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Phuket's annual events in detail" items={EVENTS} />
     </CityGuideShell>
   );

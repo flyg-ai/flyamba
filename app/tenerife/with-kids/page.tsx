@@ -21,17 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Toddlers", keys: ["toddlers"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tenerife", item: `${SITE}/tenerife` },
-      { "@type": "ListItem", position: 3, name: "With kids", item: `${SITE}/tenerife/with-kids` },
-    ],
-  };
-}
 
 export default function TenerifeWithKids() {
   return (
@@ -46,7 +35,6 @@ export default function TenerifeWithKids() {
       intro="Tenerife is one of Europe's best family destinations, home to two of the world's top-rated parks — Siam Park and Loro Parque — plus a string of water parks, animal encounters, treetop adventures and even a real tourist submarine. Warm year-round weather and safe, sheltered beaches seal the deal. Here are the best family days out, with suitable ages, prices and tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={WITH_KIDS} filters={FILTERS} />
       </div>

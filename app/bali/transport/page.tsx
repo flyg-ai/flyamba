@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bali", item: `${SITE}/bali` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/bali/transport` },
-    ],
-  };
-}
 
 export default function BaliTransport() {
   return (
@@ -91,7 +80,6 @@ export default function BaliTransport() {
       intro="Bali has no visitor-friendly public transport network, so getting around means choosing between a rented scooter, a private driver, ride-hailing apps and taxis — each suited to different travellers and areas. This guide covers every option, from the short transfer out of Ngurah Rai airport and the pros and cons of scooter rental to hiring a driver for the day, moving between the main hubs and catching fast boats to the islands, with rupiah prices and money-saving tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Bali — in detail" items={INFO} />
     </CityGuideShell>
   );

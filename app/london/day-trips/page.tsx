@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Coast", keys: ["coast"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "Day trips", item: `${SITE}/london/day-trips` },
-    ],
-  };
-}
 
 export default function LondonDayTrips() {
   return (
@@ -47,7 +36,6 @@ export default function LondonDayTrips() {
       intro="London's fast, frequent trains put some of England's finest destinations within easy reach for a day. From royal Windsor Castle and the dreaming spires of Oxford and Cambridge to Georgian Bath, prehistoric Stonehenge and seaside Brighton, here are 6 of the best day trips, with how to get there, what to see and timing tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={DAY_TRIPS} filters={FILTERS} />
       </div>

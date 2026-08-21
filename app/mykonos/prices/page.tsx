@@ -58,17 +58,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Mykonos", item: `${SITE}/mykonos` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/mykonos/prices` },
-    ],
-  };
-}
 
 export default function MykonosPrices() {
   return (
@@ -83,7 +72,6 @@ export default function MykonosPrices() {
       intro="Mykonos is one of Greece's most expensive islands — but also one of its most flexible. The same island can be a careful €150-a-day trip or an essentially unlimited one, and the biggest factor by far is when you go. This guide breaks down real costs — daily budgets, the notorious beach clubs, eating and drinking, hotels and transport — with honest tips for enjoying the glamour without the bill spiralling."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="What Mykonos costs — in detail" items={INFO} />
     </CityGuideShell>
   );

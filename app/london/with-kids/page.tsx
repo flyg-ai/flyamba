@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Educational", keys: ["educational"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "London", item: `${SITE}/london` },
-      { "@type": "ListItem", position: 3, name: "With kids", item: `${SITE}/london/with-kids` },
-    ],
-  };
-}
 
 export default function LondonWithKids() {
   return (
@@ -47,7 +36,6 @@ export default function LondonWithKids() {
       intro="London is a brilliant city for families, with many of its best attractions free and genuinely fun for all ages. From dinosaur-filled museums and a historic zoo to the magical Harry Potter Studio Tour and imaginative playgrounds, here are 8 of the best things to do with children, with age guidance, prices and practical tips to keep everyone happy."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={WITH_KIDS} filters={FILTERS} />
       </div>

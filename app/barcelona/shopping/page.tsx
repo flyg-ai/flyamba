@@ -21,15 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Souvenirs", keys: ["souvenirs"] },
 ];
 
-const breadcrumb = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-    { "@type": "ListItem", position: 2, name: "Barcelona", item: `${SITE}/barcelona` },
-    { "@type": "ListItem", position: 3, name: "Shopping", item: `${SITE}/barcelona/shopping` },
-  ],
-};
 
 export default function BarcelonaShopping() {
   return (
@@ -41,7 +32,6 @@ export default function BarcelonaShopping() {
       intro="Barcelona is one of Europe's great shopping cities — a place where flagship luxury boutiques on a modernista boulevard sit minutes from medieval lanes full of independent designers, and where century-old food markets outshine any mall. Whether you're after Spanish fashion, local craft, vintage finds or edible souvenirs, here's where to go, area by area."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={SHOPPING} filters={FILTERS} />
       </div>

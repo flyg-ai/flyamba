@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Amsterdam", item: `${SITE}/amsterdam` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/amsterdam/weather` },
-    ],
-  };
-}
 
 export default function AmsterdamWeather() {
   return (
@@ -91,7 +80,6 @@ export default function AmsterdamWeather() {
       intro="Amsterdam's mild, changeable maritime climate means comfortable summers, cold-but-rarely-bitter winters and the chance of a shower in any season. This guide walks through the weather month by month and season by season — temperatures, rainfall and what to pack — and pinpoints the best time to visit depending on whether you're chasing tulips, sunshine, festivals or the lowest prices."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Amsterdam weather season by season — in detail" items={INFO} />
     </CityGuideShell>
   );

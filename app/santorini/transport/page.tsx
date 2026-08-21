@@ -66,17 +66,6 @@ const ITEMS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Santorini", item: `${SITE}/santorini` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/santorini/transport` },
-    ],
-  };
-}
 
 export default function SantoriniTransport() {
   return (
@@ -90,7 +79,6 @@ export default function SantoriniTransport() {
       heroImage={IMG}
       intro="Santorini is small but surprisingly awkward to get around: the bus network funnels everything through Fira, taxis are famously scarce, and the caldera villages are pedestrianised. This guide breaks down every option — KTEL buses, ATVs and scooters, hire cars and parking, the Fira cable car, ferries from Athinios, and the island's tiny taxi fleet — with euro prices and the practical tips that save time and stress."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Santorini in detail" items={ITEMS} />
     </CityGuideShell>
   );

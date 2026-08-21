@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bali", item: `${SITE}/bali` },
-      { "@type": "ListItem", position: 3, name: "Events", item: `${SITE}/bali/events` },
-    ],
-  };
-}
 
 export default function BaliEvents() {
   return (
@@ -91,7 +80,6 @@ export default function BaliEvents() {
       intro="Bali runs on ceremony. Alongside a handful of big cultural festivals — the island-stopping silence of Nyepi, the month-long Bali Arts Festival, Ubud's yoga and literary gatherings — the Hindu calendar fills every village with temple anniversaries, processions and offerings almost daily. This guide covers the events worth planning a trip around, plus the everyday ceremonies you'll likely encounter, with timing tips so you catch Bali at its most colourful (and know when the whole island shuts down)."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Bali's festivals & ceremonies — in detail" items={INFO} />
     </CityGuideShell>
   );

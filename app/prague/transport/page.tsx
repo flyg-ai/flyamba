@@ -13,17 +13,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Getting Around Prague | Flyamba", description: "Airport transfers, metro, trams, funicular, taxis and tickets in Prague.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Prague", item: `${SITE}/prague` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/prague/transport` },
-    ],
-  };
-}
 
 const PLACEHOLDER = "/images/destinations/placeholder.avif";
 const item = (o: Partial<BcnPlace> & { name: string; slug: string; fullDescription: string; tip: string; practicalInfo: BcnPlace["practicalInfo"] }): BcnPlace => ({
@@ -81,7 +70,6 @@ export default function PragueTransport() {
       heroImage="/images/prague/sevardheter/wenceslas-square.webp"
       intro="Prague is a compact, walkable city, but its excellent public transport makes the rest effortless. Three colour-coded metro lines, one of Europe's best tram networks, a historic hillside funicular and cheap ride-hailing all run on a single, integrated ticket. This guide covers getting in from the airport, using the metro and trams, riding the Petřín funicular, taking taxis safely and — crucially — the Lítačka ticket system and what everything costs in koruna."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Prague transport, mode by mode" items={ITEMS} />
     </CityGuideShell>
   );

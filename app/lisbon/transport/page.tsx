@@ -80,17 +80,6 @@ const TRANSPORT: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Lisbon", item: `${SITE}/lisbon` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/lisbon/transport` },
-    ],
-  };
-}
 
 export default function LisbonTransport() {
   return (
@@ -105,7 +94,6 @@ export default function LisbonTransport() {
       intro="Lisbon is a wonderfully walkable city, but its seven hills, cobbled lanes and scattered sights mean you'll want the transport network too — and it's cheap, characterful and easy. From the Metro and the historic yellow trams to funiculars, buses, ride-hailing apps and the coastal trains out to Cascais and Sintra, here's everything you need to get around, including fares in euros and the reusable card that ties it all together."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Lisbon in detail" items={TRANSPORT} />
     </CityGuideShell>
   );

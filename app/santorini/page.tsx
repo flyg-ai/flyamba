@@ -15,6 +15,8 @@ import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { SANTORINI, MONTHS, SANTORINI_CATEGORIES } from "@/app/lib/santorini";
 import { ATTRACTIONS, RESTAURANTS, BEACHES } from "@/app/data/santorini-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 
 const d = SANTORINI;
 const URL = `${SITE}/santorini`;
@@ -47,15 +49,6 @@ const FAQ: FaqItem[] = [
 ];
 
 function jsonLd() {
-  const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Greece" },
-      { "@type": "ListItem", position: 3, name: "Santorini", item: URL },
-    ],
-  };
   const touristDestination = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
@@ -74,7 +67,7 @@ function jsonLd() {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
-  return [breadcrumb, touristDestination, faq];
+  return [touristDestination, faq];
 }
 
 const NON_STOP = [
@@ -162,6 +155,11 @@ export default function SantoriniHub() {
         <Image src={d.image} alt="Cheap flights to Santorini, Greece" fill fetchPriority="high" loading="eager" sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 lg:px-8">
+          {/* Trail added with the schema: this page emitted a BreadcrumbList
+              while showing no breadcrumb at all. */}
+          <div className="mb-4">
+            <Breadcrumbs onDark items={crumbsForSlug("santorini")} />
+          </div>
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/85">
             <span className="text-base">{d.countryFlag}</span>
             <span>{d.country}</span>

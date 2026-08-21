@@ -51,17 +51,6 @@ const WEATHER: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Ibiza", item: `${SITE}/ibiza` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/ibiza/weather` },
-    ],
-  };
-}
 
 export default function IbizaWeather() {
   return (
@@ -76,7 +65,6 @@ export default function IbizaWeather() {
       intro="Ibiza has a classic Mediterranean climate — hot, dry summers around 28°C, a sea that stays warm well into autumn, and mild but very quiet winters when much of the island, including most clubs and many flight routes, shuts down. When you should visit depends entirely on what you want: peak sun and full-throttle nightlife in July and August, warm-and-affordable calm in the spring and autumn shoulder seasons, or tranquil, green solitude in winter. Here is the island's weather, season by season."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Ibiza weather by season — in detail" items={WEATHER} />
     </CityGuideShell>
   );

@@ -22,17 +22,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Fine dining", keys: ["fine"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Florence", item: `${SITE}/florence` },
-      { "@type": "ListItem", position: 3, name: "Restaurants", item: `${SITE}/florence/restaurants` },
-    ],
-  };
-}
 
 export default function FlorenceRestaurants() {
   return (
@@ -47,7 +36,6 @@ export default function FlorenceRestaurants() {
       intro="Florence is the heartland of Tuscan cooking — a cuisine built on superb ingredients kept gloriously simple. This is the home of the bistecca alla fiorentina, the enormous charcoal-grilled T-bone of Chianina beef, of ribollita and pappa al pomodoro, of wild-boar pastas and the city's legendary stuffed schiacciata panini. From boisterous lunch-only trattorias to a three-Michelin-star temple, here are the best places to eat, with areas, price levels and booking advice."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={RESTAURANTS} filters={FILTERS} />
       </div>

@@ -56,17 +56,6 @@ const PRICES: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Lisbon", item: `${SITE}/lisbon` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/lisbon/prices` },
-    ],
-  };
-}
 
 export default function LisbonPrices() {
   return (
@@ -81,7 +70,6 @@ export default function LisbonPrices() {
       intro="Lisbon is one of the best-value capitals in Western Europe — cheaper than Paris, London or Amsterdam, with affordable food, dirt-cheap transport and plenty of free sights. Prices have risen with the city's popularity, but a trip here still stretches your money further than most. Here's a realistic breakdown of what a day costs at every level, plus real euro prices for food, transport, attractions and hotels so you can plan your budget with confidence."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Lisbon travel costs in detail" items={PRICES} />
     </CityGuideShell>
   );

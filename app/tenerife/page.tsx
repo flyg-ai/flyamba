@@ -16,6 +16,8 @@ import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
 import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
+import { Breadcrumbs } from "@/app/components/Breadcrumbs";
+import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 
 // ── Self-contained Tenerife facts (USD audience) ─────────────────────────────
 const HERO = "/images/destinations/flights-teneriffa.avif";
@@ -106,15 +108,6 @@ export function generateMetadata(): Metadata {
 
 function jsonLd() {
   const url = `${SITE}/tenerife`;
-  const breadcrumb = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Spain" },
-      { "@type": "ListItem", position: 3, name: "Tenerife", item: url },
-    ],
-  };
   const touristDestination = {
     "@context": "https://schema.org",
     "@type": "TouristDestination",
@@ -133,7 +126,7 @@ function jsonLd() {
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
-  return [breadcrumb, touristDestination, faqPage];
+  return [touristDestination, faqPage];
 }
 
 function PreviewGrid({ items }: { items: { name: string; blurb: string; image: string; href: string }[] }) {
@@ -178,6 +171,11 @@ export default function TenerifeHub() {
         <SmartImage src={HERO} alt="Cheap flights to Tenerife, Spain" fill fetchPriority="high" loading="eager" sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-hero-overlay" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-14 pt-24 sm:px-6 lg:px-8">
+          {/* Trail added with the schema: this page emitted a BreadcrumbList
+              while showing no breadcrumb at all. */}
+          <div className="mb-4">
+            <Breadcrumbs onDark items={crumbsForSlug("tenerife")} />
+          </div>
           <div className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/85">
             <span className="text-base">🇪🇸</span>
             <span>Spain</span>

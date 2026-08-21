@@ -23,17 +23,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Free", keys: ["free"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bangkok", item: `${SITE}/bangkok` },
-      { "@type": "ListItem", position: 3, name: "With kids", item: `${SITE}/bangkok/with-kids` },
-    ],
-  };
-}
 
 export default function BangkokWithKids() {
   return (
@@ -48,7 +37,6 @@ export default function BangkokWithKids() {
       intro="Bangkok is a genuinely fun city for families, with plenty to keep children happy between the temples — and, crucially, lots of it air-conditioned for when the heat or a downpour hits. Meet free-roaming animals at Safari World, walk the shark tunnel at SEA LIFE, let kids try grown-up jobs at KidZania, or ride coasters and play in real snow at Dream World. These 8 attractions, from theme parks to a free butterfly garden, come with recommended ages, prices and travel tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={WITH_KIDS} filters={FILTERS} />
       </div>

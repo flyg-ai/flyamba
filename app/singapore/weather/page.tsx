@@ -12,17 +12,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Singapore Weather & Best Time to Visit | Flyamba", description: "Singapore's tropical climate, monsoons, month-by-month and what to pack.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Singapore", item: `${SITE}/singapore` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/singapore/weather` },
-    ],
-  };
-}
 
 export default function SingaporeWeather() {
   return (
@@ -37,7 +26,6 @@ export default function SingaporeWeather() {
       intro="Sitting just north of the Equator, Singapore is hot, humid and tropical all year, with daytime highs of around 31–33°C whatever the month, so unlike temperate cities there is no real off-season. What changes is the rainfall and the calendar of events. This guide explains Singapore's steady climate, pinpoints the best time to visit, breaks down the two monsoon seasons and a month-by-month outlook, and tells you exactly what to pack for the heat, the sudden downpours and the fierce indoor air-conditioning. Whenever you come, expect warm, summery weather — and keep an umbrella close."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Singapore weather explained" items={WEATHER} />
     </CityGuideShell>
   );

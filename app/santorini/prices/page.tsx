@@ -66,17 +66,6 @@ const ITEMS: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Santorini", item: `${SITE}/santorini` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/santorini/prices` },
-    ],
-  };
-}
 
 export default function SantoriniPrices() {
   return (
@@ -90,7 +79,6 @@ export default function SantoriniPrices() {
       heroImage={IMG}
       intro="Santorini has a reputation as a pricey honeymoon island, but what you actually spend depends hugely on when you come and, above all, where you stay. This guide lays out realistic daily budgets for backpackers, couples and luxury travellers, with real euro prices for cave hotels, tavernas, boat trips, wine tours and getting around — plus the simple choices that make the island far more affordable than its image suggests."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Santorini costs in detail" items={ITEMS} />
     </CityGuideShell>
   );

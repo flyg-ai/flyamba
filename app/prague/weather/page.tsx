@@ -13,17 +13,6 @@ export const metadata: Metadata = {
   openGraph: { title: "Prague Weather & Best Time to Visit | Flyamba", description: "Season-by-season climate and the best time to visit Prague.", type: "article" },
 };
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Prague", item: `${SITE}/prague` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/prague/weather` },
-    ],
-  };
-}
 
 type M = { month: string; high: number; low: number; note: string };
 const MONTHS: M[] = [
@@ -91,7 +80,6 @@ export default function PragueWeather() {
       heroImage="/images/prague/sevardheter/karlsbron.webp"
       intro="Prague has a temperate continental climate with four distinct seasons — warm summers, crisp golden autumns, cold and often snowy winters, and blossoming springs. It's a year-round city break, but the shoulder seasons of May and September offer the best balance of pleasant weather and thinner crowds. Here's what to expect each season, when to visit, and what to pack."
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
 
       <div className="mt-8 overflow-x-auto rounded-3xl border border-border bg-card">
         <table className="w-full min-w-[560px] border-collapse text-sm">

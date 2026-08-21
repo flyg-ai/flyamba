@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Mykonos", item: `${SITE}/mykonos` },
-      { "@type": "ListItem", position: 3, name: "Transport", item: `${SITE}/mykonos/transport` },
-    ],
-  };
-}
 
 export default function MykonosTransport() {
   return (
@@ -91,7 +80,6 @@ export default function MykonosTransport() {
       intro="Getting around Mykonos takes a little planning: it's a compact island, but its famously scarce taxis and narrow roads mean the smart traveller mixes the cheap KTEL buses, scenic water taxis between the south-coast beaches, and — for the wild north — a carefully driven rental car or ATV. This guide covers every option, from the airport transfer and the two Chora bus stations to water taxis, car and quad hire, and the ferries that connect Mykonos to Athens and the rest of the Cyclades, with euro prices and money-saving tips."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Getting around Mykonos — in detail" items={INFO} />
     </CityGuideShell>
   );

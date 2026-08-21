@@ -59,17 +59,6 @@ const PRICES: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Ibiza", item: `${SITE}/ibiza` },
-      { "@type": "ListItem", position: 3, name: "Prices", item: `${SITE}/ibiza/prices` },
-    ],
-  };
-}
 
 export default function IbizaPrices() {
   return (
@@ -84,7 +73,6 @@ export default function IbizaPrices() {
       intro="Ibiza has a reputation for being expensive, and in the July–August peak it can be — but it is also far more flexible than the headlines suggest. From backpacker to billionaire, what you actually spend depends overwhelmingly on where you sleep, eat, drink and party. This guide breaks down realistic daily budgets and the real costs of accommodation, food and drink, nightlife, beach clubs and transport, plus how to enjoy the White Isle for a lot less."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="What things cost in Ibiza — in detail" items={PRICES} />
     </CityGuideShell>
   );

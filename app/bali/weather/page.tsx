@@ -66,17 +66,6 @@ const INFO: BcnPlace[] = [
   },
 ];
 
-function jsonLd() {
-  return {
-    "@type": "BreadcrumbList",
-    "@context": "https://schema.org",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Bali", item: `${SITE}/bali` },
-      { "@type": "ListItem", position: 3, name: "Weather", item: `${SITE}/bali/weather` },
-    ],
-  };
-}
 
 export default function BaliWeather() {
   return (
@@ -91,7 +80,6 @@ export default function BaliWeather() {
       intro="Bali is warm and tropical all year, so the real question isn't temperature but season: the dry months of April to October bring the sunshine and the crowds, while the wet season of November to March offers lush greenery, fewer people and lower prices. This guide walks through the weather season by season — including the peak of July and August and the unique Nyepi Day of Silence — and pinpoints the best time to visit and exactly what to pack."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <CategorySeoSections heading="Bali weather season by season — in detail" items={INFO} />
     </CityGuideShell>
   );

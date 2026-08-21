@@ -21,17 +21,6 @@ const FILTERS: CategoryFilter[] = [
   { label: "Live music", keys: ["live-music"] },
 ];
 
-function jsonLd() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Flyamba", item: SITE },
-      { "@type": "ListItem", position: 2, name: "Tenerife", item: `${SITE}/tenerife` },
-      { "@type": "ListItem", position: 3, name: "Nightlife", item: `${SITE}/tenerife/nightlife` },
-    ],
-  };
-}
 
 export default function TenerifeNightlife() {
   return (
@@ -46,7 +35,6 @@ export default function TenerifeNightlife() {
       intro="Tenerife's nightlife centres on the southern resorts, where glamorous oceanfront beach clubs sit a short walk from the famously raucous Veronicas strip in Playa de las Américas. Beyond the party scene there are live-music bars, a casino, gentler pubs in Los Cristianos, and the authentically Canarian clubs of the capital. Here's where to go out, whatever your style."
       wide
     >
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd()).replace(/</g, "\\u003c") }} />
       <div className="mt-8">
         <CategoryExplorer items={NIGHTLIFE} filters={FILTERS} />
       </div>
