@@ -12,6 +12,8 @@ import { Footer } from "@/app/components/Footer";
 import { destinations } from "@/app/data/destinations";
 import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
 import { faresFor, sortPrices } from "@/app/lib/fare-display";
+import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
+import { DealCard, type Deal } from "@/app/components/DealCard";
 import { ArrowRight, Scale, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -98,10 +100,33 @@ export default async function Home() {
   // label says which city the ranking is from.
   const nycPrices = await sortPrices();
   const fares = await faresFor(destinations.map((d) => d.slug));
-  const cheapest = destinations
+  const catalogFares = await faresFor(ALL_DESTINATIONS.map((d) => d.slug));
+
+  // THE POOL IS THE WHOLE CATALOG, not the eight hand-written cities.
+  //
+  // Ranking eight pre-chosen destinations under the heading "cheapest round trip
+  // from New York" was an edited list with a ranking's headline. Puerto Rico at
+  // $146 and Montego Bay at $214 were in the catalog with New York prices the
+  // whole time and could not win, because they were never candidates.
+  //
+  // ALL_DESTINATIONS stays on the server: only the six narrow Deal objects below
+  // cross into the rendered card.
+  const cheapest: Deal[] = ALL_DESTINATIONS
     .filter((d) => nycPrices[d.slug] != null)
     .sort((a, b) => nycPrices[a.slug] - nycPrices[b.slug])
-    .slice(0, 6);
+    .slice(0, 6)
+    .map((d) => {
+      const f = catalogFares.get(d.slug)!;
+      return {
+        slug: d.slug,
+        name: d.name,
+        country: d.country,
+        image: d.image,
+        fareLabel: f.short,
+        headline: f.long.headline,
+        detail: f.long.detail,
+      };
+    });
 
   return (
     <div className="min-h-screen bg-background">
@@ -191,14 +216,8 @@ export default async function Home() {
           Ranked on the New York fare we found. Prices move daily and are not an offer.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {cheapest.map((d) => (
-            <div key={d.slug} className="space-y-2">
-              <HomeCard d={d} fareLabel={fares.get(d.slug)?.short} />
-              <p className="px-1 text-sm font-semibold text-foreground">
-                {fares.get(d.slug)?.long.headline}{" "}
-                <span className="font-normal text-muted-foreground">· {d.city}</span>
-              </p>
-            </div>
+          {cheapest.map((deal) => (
+            <DealCard key={deal.slug} deal={deal} />
           ))}
         </div>
       </section>
