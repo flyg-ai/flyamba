@@ -240,12 +240,15 @@ export function getUsFareTable(): Promise<UsFareTable> {
  * US DOT's full-fare advertising rule (14 CFR 399.84) is about advertised prices
  * being available to buy. Past tense and an origin keep this an observation.
  */
-export function formatFareLabelShort(f: UsFare): string {
+export function formatFareLabelShort(f: UsFare, { showOrigin = true } = {}): string {
   const seen = f.fare.fetchedAt
     ? new Date(f.fare.fetchedAt).toLocaleString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })
     : null;
   const trip = f.fare.oneWay ? "one way" : "rt";
-  return [`$${f.fare.priceUsd.toLocaleString()} ${trip}`, f.origin, seen ? `seen ${seen}` : null]
+  // `showOrigin: false` is for lists where every row is already labelled with its
+  // departure city — /cheap-flights, where the row IS the city. Repeating the code
+  // there adds a token the reader has to skip, not information.
+  return [`$${f.fare.priceUsd.toLocaleString()} ${trip}`, showOrigin ? f.origin : null, seen ? `seen ${seen}` : null]
     .filter(Boolean)
     .join(" · ");
 }

@@ -8,7 +8,7 @@ const columns: { title: string; links: { label: string; href: string }[] }[] = [
     title: "Plan a trip",
     links: [
       { label: "Where's it warm", href: "/where-is-it-warm" },
-      { label: "Cheapest dates to fly", href: "/low-fare-calendar" },
+      { label: "Low fare calendar", href: "/low-fare-calendar" },
       { label: "Travel guides", href: "/guides" },
       { label: "Compare destinations", href: "/compare" },
     ],
