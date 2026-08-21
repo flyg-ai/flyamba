@@ -1,7 +1,10 @@
 import { ImageResponse } from "next/og";
 import { ACCENT, ACCENT_FOREGROUND, PLANE_PATH } from "@/app/lib/brand";
 
-export const size = { width: 32, height: 32 };
+// 48 rather than 32: Google will not use a favicon smaller than 48x48 in search
+// results, and a 32px icon is simply dropped there. Browsers downscale to the 16
+// or 32 they want for the tab strip.
+export const size = { width: 48, height: 48 };
 export const contentType = "image/png";
 
 // The Navbar's brand mark: a white plane rotated -45° on an accent-orange circle.
@@ -22,8 +25,8 @@ export default function Icon() {
         }}
       >
         <svg
-          width={20}
-          height={20}
+          width={30}
+          height={30}
           viewBox="0 0 24 24"
           fill={ACCENT_FOREGROUND}
           stroke={ACCENT_FOREGROUND}
