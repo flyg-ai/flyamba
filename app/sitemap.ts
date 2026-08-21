@@ -9,6 +9,7 @@ import { SITE } from "@/app/lib/destination-helpers";
 import { TOP_PAIRS, pairHref } from "@/app/compare/pairs";
 import { MONTHS as WARM_MONTHS, warmHref } from "@/app/where-is-it-warm/months";
 import { DEPARTURES, departureHref } from "@/app/lib/departures";
+import { COUNTRY_PAGES } from "@/app/lib/regions";
 
 // Replaces the hand-maintained public/sitemap.xml. Generated at build time from
 // the same data the pages render from, so a new destination in the catalog shows
@@ -27,6 +28,14 @@ const STATIC_ROUTES = [
   { path: "/low-fare-calendar", priority: 0.7 },
   { path: "/guides", priority: 0.6 },
   { path: "/where-is-it-warm", priority: 0.7 },
+  // The six country pages. Listed here for the reason at the top of this block —
+  // app/spain/ is a folder with a page.tsx, so readHubs() would otherwise emit it
+  // as a destination called "spain" and scan it for city subpages. 0.7 matches the
+  // other hubs one click from the homepage.
+  //
+  // Costa Rica and the Dominican Republic are deliberately not here; see the note
+  // on COUNTRY_PAGES in app/lib/regions.ts.
+  ...Object.values(COUNTRY_PAGES).map((slug) => ({ path: `/${slug}`, priority: 0.7 })),
   // The departure hub. Listed here for the reason at the top of this block:
   // app/cheap-flights/ is a folder with a page.tsx, so readHubs() would otherwise
   // emit it as a destination called "cheap-flights" and scan it for city subpages.
