@@ -40,7 +40,7 @@ export const revalidate = 86400;
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Santorini ${year} — Guide, Prices & Sunsets | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Santorini, Greece from $${minPrice} round-trip. Compare seasonal fares to Thira (JTR), plus complete English guides to Oia, the caldera, restaurants, cave hotels, beaches, nightlife, wineries and island day trips.`);
+  const description = clampDescription("Flights to Santorini, Greece — seasonal service to Thira (JTR), reached from the US via a European hub. Compare live fares, plus English guides to Oia, the caldera, cave hotels, beaches and wineries.");
   return {
     title,
     description,
@@ -51,7 +51,7 @@ export function generateMetadata(): Metadata {
 }
 
 const FAQ: FaqItem[] = [
-  { q: "When is it cheapest to fly to Santorini?", a: `April is the cheapest month to fly to Santorini, with round-trip fares averaging around $${cheapest.price}. Prices climb through the summer, peaking in July and August, before easing again in autumn. Few flights operate in the winter low season.` },
+  { q: "When is it cheapest to fly to Santorini?", a: "Spring and autumn — April, May, late September and October — sit well below the July and August peak, and few flights operate at all in winter. We are not going to name a cheapest month with a figure attached: Santorini has no non-stop from the United States and we hold fewer than three months of observed fares from US airports, so any single number would be a guess dressed as a fact." },
   { q: "Are there direct flights to Santorini?", a: "Santorini (JTR) has many seasonal direct flights from European cities such as London, Paris, Milan, Amsterdam and Rome between roughly April and October, plus year-round domestic connections via Athens. Most long-haul travellers connect through Athens." },
   { q: "How many days do you need in Santorini?", a: "Three to four days is ideal for Santorini — enough to see the Oia sunset, walk the Fira-to-Oia caldera trail, take a volcano or catamaran cruise, visit Akrotiri and the wineries, and enjoy a couple of beaches." },
 ];
@@ -202,7 +202,7 @@ export default function SantoriniHub() {
       {/* 3. Flight search widget */}
       <section id="flights" className="mx-auto mt-10 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Santorini</h2>
-        <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Santorini is easier than ever, with direct routes from New York, London and other major hubs — making Santorini one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Santorini, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Santorini — just describe your trip and Flyamba does the rest.</p>
+        <p className="mb-6 max-w-3xl text-muted-foreground">Santorini has no non-stop service from the United States; the route runs through Athens or another European hub, and the island's schedule is seasonal — most direct European flights run roughly April to October. Compare live fares and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Santorini — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={d.tpName} />
 
         {/* Observed fares by month. Renders nothing below three months —
@@ -218,7 +218,8 @@ export default function SantoriniHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "2–3 months ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${cheapest.month} ($${cheapest.price} avg)` },
+            // No "cheapest month": one observed month is a sample, not a season.
+            { icon: TrendingDown, label: "Season", value: "April–October; winter service is minimal" },
             { icon: CalendarDays, label: "Best value season", value: "May & October (shoulder)" },
             { icon: Route, label: "Direct flights", value: "Seasonal from London, Paris, Milan" },
           ].map((s) => (
@@ -249,49 +250,10 @@ export default function SantoriniHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (non-null only) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Santorini?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD. Winter months are omitted — very few flights operate to Santorini between November and March.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {priced.map((m) => {
-              const ratio = (m.price - minPrice) / (maxPrice - minPrice || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === minPrice;
-              const isMax = m.price === maxPrice;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-          <p className="mt-4 text-xs text-muted-foreground">Cheapest: <span className="font-semibold text-emerald-600 dark:text-emerald-400">{cheapest.month} (${cheapest.price})</span> · Peak: <span className="font-semibold text-orange-500">July (${maxPrice})</span></p>
-        </div>
-      </section>
-
-      {/* 7. Non-stop cities */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Santorini from {NON_STOP.length} cities</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Most European nonstops are seasonal (roughly April–October). Long-haul travellers connect via Athens, which flies to Santorini year-round.</p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → JTR · {r.note}</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates as
+          a curve. It is not rebuilt: this destination returns under three months of
+          observed fares from all four US origins, and FareCalendarSection (mounted
+          above) correctly renders nothing below that. */}
       {/* 8. Why Santorini */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Santorini?</p>

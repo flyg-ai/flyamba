@@ -40,17 +40,10 @@ const IBIZA = {
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-// Non-null USD monthly prices for the chart + insights.
-const USD_MONTHS = IBIZA.monthlyPricesSEK.map((sek, i) => ({
-  month: MONTHS[i],
-  price: sek == null ? null : usd5(sek),
-}));
-const NON_NULL = USD_MONTHS.filter((m): m is { month: string; price: number } => m.price != null);
-const MIN = Math.min(...NON_NULL.map((m) => m.price));
-const MAX = Math.max(...NON_NULL.map((m) => m.price));
-const CHEAPEST = NON_NULL.reduce((a, b) => (b.price < a.price ? b : a));
-const CHEAPEST_MONTH_FULL: Record<string, string> = { Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June", Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December" };
-const LOWEST_SEK = Math.min(...IBIZA.monthlyPricesSEK.filter((p): p is number => p != null));
+// The SEK constants that fed the chart, the hero pill and two FAQ answers are
+// gone. They were Stockholm-origin estimates presented as dollars to an American
+// reader, and the chart they drew claimed twelve months from a table that has
+// twelve guesses.
 
 // fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
 // that read is a dynamic-server-usage error, the reader swallows it, and the page
@@ -62,7 +55,7 @@ export const revalidate = 86400;
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Ibiza ${year} — Guide, Beaches, Clubs & Prices | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Ibiza, Spain from ${usdStr(LOWEST_SEK)}. Compare live fares, see the month-by-month price calendar, and read complete English guides to Ibiza's beaches, nightlife, restaurants, hotels, attractions, family days out and Formentera day trips.`);
+  const description = clampDescription("Flights to Ibiza, Spain — a seasonal island with no year-round US non-stop. Compare live fares, plus complete English guides to Ibiza's beaches, nightlife, restaurants, hotels and Formentera day trips.");
   const canonical = `${SITE}/ibiza`;
   return {
     title,
@@ -109,12 +102,10 @@ const NON_STOP = [
   { city: "Brussels", price: 115, iata: "BRU" },
 ];
 
-// Ibiza's winter months are null in the catalog — the island's flight schedule
-// collapses out of season — so the FAQ quotes the April–October figures only.
 const FAQ: FaqItem[] = [
   {
     q: "How much does a flight to Ibiza cost?",
-    a: `Round-trip fares to Ibiza start around $${MIN} in ${CHEAPEST_MONTH_FULL[CHEAPEST.month]} and climb to about $${MAX} at the July–August peak. Fares rise steeply once the club season opens, so booking well ahead for summer matters more here than for most destinations.`,
+    a: "It depends almost entirely on when you go, and there is no honest single figure. Ibiza has no year-round non-stop from the United States, so a US trip means connecting through Madrid, Barcelona or a European hub, and the fare depends on which. Prices rise steeply once the club season opens in May and fall away again in October. Search live fares above for your own dates rather than trusting an average.",
   },
   {
     q: "Which airlines fly to Ibiza?",
@@ -122,7 +113,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "When is the cheapest time to fly to Ibiza?",
-    a: `${CHEAPEST_MONTH_FULL[CHEAPEST.month]} is the cheapest month with fares near $${MIN}, and late September into October is the other good-value window — still warm, with the summer crowds gone. July and August are the most expensive by a wide margin.`,
+    a: "Late September and October, once the season winds down but the sea is still warm. July and August are the most expensive by a wide margin. Between November and March most routes pause altogether, so the question changes from what it costs to whether anything is flying — we hold fares for only two months of the year from US airports, which is why this page shows no month-by-month chart.",
   },
   {
     q: "How long is the flight to Ibiza?",
@@ -213,8 +204,6 @@ export default function IbizaHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">{usdStr(LOWEST_SEK)}</span></span>
-          <span className="text-muted-foreground/40">•</span>
           <span>2h 05m from Barcelona</span>
           <span className="text-muted-foreground/40">•</span>
           <span>Seasonal nonstop flights across Europe</span>
@@ -247,7 +236,9 @@ export default function IbizaHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "8–12 weeks ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${CHEAPEST_MONTH_FULL[CHEAPEST.month]} ($${CHEAPEST.price} avg)` },
+            // No "cheapest month" card: we hold two months of observed fares, and
+            // the minimum of two says which months were sampled, not which is cheap.
+            { icon: CalendarDays, label: "Season", value: "May–October; most routes pause in winter" },
             { icon: CalendarDays, label: "Cheapest days to fly", value: "Tuesday & Wednesday" },
             { icon: Route, label: "Direct flights", value: "Yes — from London, Barcelona, Madrid, Amsterdam" },
           ].map((s) => (
@@ -287,44 +278,10 @@ export default function IbizaHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD, null-safe) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Ibiza?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD. Winter months (—) have very limited flights to the island.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {USD_MONTHS.map((m) => {
-              if (m.price == null) {
-                return (
-                  <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                    <span className="text-[11px] font-semibold text-muted-foreground/50">—</span>
-                    <div className="w-full rounded-t-xl border border-dashed border-border bg-muted/30" style={{ height: 16 }} />
-                    <span className="text-[11px] font-semibold text-muted-foreground/60">{m.month}</span>
-                  </div>
-                );
-              }
-              const ratio = (m.price - MIN) / (MAX - MIN || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === MIN;
-              const isMax = m.price === MAX;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-          <p className="mt-4 text-sm text-muted-foreground">
-            The cheapest flights land in <span className="font-semibold text-foreground">{CHEAPEST_MONTH_FULL[CHEAPEST.month]}</span> (around
-            ${CHEAPEST.price}), at the start of the season, while <span className="font-semibold text-foreground">July</span> peaks at about ${MAX}
-            {" "}as the clubs open and demand surges. Between November and March, scheduled flights are scarce — many routes simply pause for winter.
-          </p>
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates
+          as a curve. It is not rebuilt from observed data: Ibiza returns two
+          months of fares from all four US origins, and FareCalendarSection
+          (mounted above) correctly renders nothing below three. */}
       {/* 7. Non-stop cities (USD) */}
       <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
@@ -389,7 +346,9 @@ export default function IbizaHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA destination={{ slug: "ibiza", name: "Ibiza" }} priceFrom={usdStr(LOWEST_SEK)} />
+        {/* No priceFrom: we hold no US fare for Ibiza, and the CTA renders
+            without a price rather than quoting a Stockholm estimate. */}
+        <FlightCTA destination={{ slug: "ibiza", name: "Ibiza" }} />
       </section>
 
       {/* 11. Nearby */}

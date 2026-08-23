@@ -54,7 +54,7 @@ export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Palma de Mallorca ${year} — Guide, Prices & Beaches | Flyamba`);
   const description =
-    clampDescription("Find cheap flights to Palma de Mallorca, Spain from $265. Compare fares from London, Berlin, Paris and more, plus complete English guides to Palma's attractions, beaches, restaurants, hotels, transport, nightlife, family travel and island day trips.");
+    clampDescription("Flights to Palma de Mallorca, Spain — dense low-cost service from across Europe, no US non-stop. Compare live fares, plus complete English guides to Palma's beaches, restaurants, hotels, nightlife and island day trips.");
   const canonical = `${SITE}/palma`;
   return {
     title,
@@ -104,7 +104,7 @@ const NON_STOP = [
 const FAQ: FaqItem[] = [
   {
     q: "How much does a flight to Palma cost?",
-    a: `Round-trip fares to Palma bottom out near $${LOW} in February and peak around $${HIGH} in July. Mallorca is served by a dense low-cost network, so booking six to eight weeks ahead usually beats last-minute fares comfortably.`,
+    a: "From within Europe, very little — Mallorca is served by one of the densest low-cost networks on the continent and booking six to eight weeks ahead usually beats last-minute fares comfortably. From the United States there is no non-stop, so the fare is really the price of a connection through Madrid, Barcelona or a northern European hub. Search live fares above rather than working from an average.",
   },
   {
     q: "Which airlines fly to Palma?",
@@ -112,7 +112,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "When is the cheapest time to fly to Palma?",
-    a: `February is the cheapest month at roughly $${LOW} round-trip, with November through March all below average. Prices climb from May and peak in July and August; May and October give you warm weather without the peak-season fares.`,
+    a: "Winter, from November to March, when the island is quiet and the low-cost network is still running. Prices climb from May and peak in July and August; May and October give you warm weather without the peak-season fare. We hold fewer than three months of observed fares from US airports, so this page names a season rather than a month with a price on it.",
   },
   {
     q: "How long is the flight to Palma?",
@@ -241,7 +241,7 @@ export default function PalmaHub() {
       {/* 3. Flight search widget */}
       <section id="flights" className="mx-auto mt-10 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Palma</h2>
-        <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Palma is easier than ever, with direct routes from New York, London and other major hubs — making Palma one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Palma, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Palma — just describe your trip and Flyamba does the rest.</p>
+        <p className="mb-6 max-w-3xl text-muted-foreground">Palma has no non-stop service from the United States; from the US the route connects through Madrid, Barcelona or a northern European hub. From within Europe it is one of the best-served leisure airports on the continent, busiest from June to September. Compare live fares and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Palma — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
 
         {/* Observed fares by month. Renders nothing below three months —
@@ -257,7 +257,8 @@ export default function PalmaHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "6–8 weeks ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${cheapest.month} ($${cheapest.price} avg)` },
+            // No "cheapest month": two observed months is a sample, not a season.
+            { icon: TrendingDown, label: "Season", value: "Year-round from Europe; peak June–September" },
             { icon: CalendarDays, label: "Cheapest days to fly", value: "Tuesday & Wednesday" },
             { icon: Route, label: "Direct flights", value: "Yes — from London, Berlin, Barcelona" },
           ].map((s) => (
@@ -294,47 +295,10 @@ export default function PalmaHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Palma?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - min) / (max - min || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === min;
-              const isMax = m.price === max;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Non-stop cities */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Palma from {NON_STOP.length} cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → PMI · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates as
+          a curve. It is not rebuilt: this destination returns under three months of
+          observed fares from all four US origins, and FareCalendarSection (mounted
+          above) correctly renders nothing below that. */}
       {/* 8. Why Palma */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Palma?</p>
@@ -381,7 +345,8 @@ export default function PalmaHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA destination={{ slug: "palma", name: "Palma" }} priceFrom={`${LOW}`} />
+        {/* No priceFrom: we hold no US fare for Palma. */}
+        <FlightCTA destination={{ slug: "palma", name: "Palma" }} />
       </section>
 
       {/* 11. Nearby */}

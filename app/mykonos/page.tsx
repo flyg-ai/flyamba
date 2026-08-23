@@ -34,7 +34,7 @@ export const revalidate = 86400;
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Mykonos ${year} — Guide, Prices & Attractions | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Mykonos, Greece from $${MIN_USD}, plus complete English guides to attractions, beaches, restaurants, hotels, nightlife, transport, weather, shopping, family travel and day trips. Whitewashed lanes, iconic windmills and legendary Aegean nightlife.`);
+  const description = clampDescription("Flights to Mykonos, Greece — a seasonal island reached from the US via a European hub. Compare live fares, plus complete English guides to its beaches, restaurants, hotels, nightlife and day trips.");
   const canonical = `${SITE}/mykonos`;
   return {
     title,
@@ -49,11 +49,11 @@ export function generateMetadata(): Metadata {
 const FAQS: FaqItem[] = [
   {
     q: "How much are flights to Mykonos?",
-    a: `Round-trip fares to Mykonos (JMK) start from around $${MIN_USD} in the cheapest months and average roughly $${MAX_USD} at the height of summer. April is the cheapest month to fly, while July and August are the most expensive — Mykonos has some of the Aegean's most extreme seasonal price swings.`,
+    a: "There is no honest single figure, because Mykonos has no non-stop from the United States and the fare depends on which European hub you connect through — Athens, Rome and Milan are the usual ones. The island also has some of the Aegean's most extreme seasonal swings: the same trip in August and in April are not comparable purchases. Search live fares above for your own dates.",
   },
   {
     q: "When is the cheapest time to fly to Mykonos?",
-    a: `April is the cheapest month, with round-trip fares from about $${MIN_USD}. Booking 12–16 weeks ahead and flying midweek — Monday, Tuesday or Wednesday — early in the morning usually gets the best price. April and September offer almost the same experience as peak summer for half the cost.`,
+    a: "April and September, which give you most of the summer experience without the peak-season fare. July and August are the most expensive by a wide margin, and the winter schedule thins out to almost nothing. We hold fares for fewer than three months of the year from US airports, which is why this page carries no month-by-month chart — the months we have not seen are not months without flights, they are months we have no observation for.",
   },
   {
     q: "Are there non-stop flights to Mykonos?",
@@ -196,8 +196,6 @@ export default function MykonosHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">${MIN_USD}</span></span>
-          <span className="text-muted-foreground/40">•</span>
           <span>Seasonal nonstop · year-round via Athens</span>
           <span className="text-muted-foreground/40">•</span>
           <span>~1h from Athens · ~4h direct from Northern Europe</span>
@@ -214,7 +212,7 @@ export default function MykonosHub() {
       {/* 3. Flight search widget */}
       <section id="flights" className="mx-auto mt-10 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Mykonos</h2>
-        <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Mykonos is easier than ever, with direct routes from New York, London and other major hubs — making Mykonos one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Mykonos, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Mykonos — just describe your trip and Flyamba does the rest.</p>
+        <p className="mb-6 max-w-3xl text-muted-foreground">Mykonos has no non-stop service from the United States; from the US the route runs through Athens or another European hub, and in winter much of the schedule pauses. From the UK and Europe, seasonal direct flights run roughly May to October. Compare live fares and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Mykonos — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={MYKONOS.tpName} />
 
         {/* Observed fares by month. Renders nothing below three months —
@@ -230,7 +228,9 @@ export default function MykonosHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "12–16 weeks ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `April ($${MIN_USD} avg)` },
+            // No "cheapest month": with two observed months the minimum reports
+            // which months were sampled, not which is cheap.
+            { icon: TrendingDown, label: "Season", value: "May–October; winter service is minimal" },
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Monday & Tuesday" },
             { icon: Route, label: "Direct flights", value: "Seasonal — or year-round via Athens" },
           ].map((s) => (
@@ -265,47 +265,10 @@ export default function MykonosHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Mykonos?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - MIN_USD) / (MAX_USD - MIN_USD || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === MIN_USD;
-              const isMax = m.price === MAX_USD;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Seasonal non-stop to Mykonos from major cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → JMK · seasonal nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates as
+          a curve. It is not rebuilt: this destination returns under three months of
+          observed fares from all four US origins, and FareCalendarSection (mounted
+          above) correctly renders nothing below that. */}
       {/* 8. Why Mykonos */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Mykonos?</p>

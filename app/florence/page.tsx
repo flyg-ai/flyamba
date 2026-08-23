@@ -90,7 +90,7 @@ const NEARBY = [
 const FAQ: FaqItem[] = [
   {
     q: "How much are flights to Florence?",
-    a: `Round-trip fares to Florence start from around ${usdStr(LOWEST_SEK)} in the low season (February and November), rising to roughly $465 during the June–August summer peak. Booking six to eight weeks ahead and flying midweek gets the best prices, and it is often cheaper to fly into Rome, Milan or Pisa and take a fast train.`,
+    a: "It depends heavily on which airport you use. Florence's own Amerigo Vespucci (FLR) is small and served mainly from European hubs, and there is no non-stop from the United States — flying into Rome, Milan or Pisa and taking a fast train is often both cheaper and quicker. Booking six to eight weeks ahead and flying midweek helps on any of them. Search live fares above for your dates.",
   },
   {
     q: "When is the best time to visit Florence?",
@@ -120,7 +120,7 @@ export const revalidate = 86400;
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Florence ${year} — Guide, Prices & Attractions | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Florence, Italy from ${usdStr(LOWEST_SEK)}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and Tuscan day trips.`);
+  const description = clampDescription("Flights to Florence, Italy — a small airport best reached via Rome, Milan or Pisa from the US. Compare live fares, plus complete English guides to attractions, restaurants, hotels, transport and Tuscan day trips.");
   const canonical = `${SITE}/florence`;
   return {
     title,
@@ -220,7 +220,6 @@ export default function FlorenceHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">{usdStr(LOWEST_SEK)}</span></span>
           <span className="text-muted-foreground/40">•</span>
           <span>{CITY.flightTime}</span>
           <span className="text-muted-foreground/40">•</span>
@@ -253,7 +252,8 @@ export default function FlorenceHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "6–8 weeks ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${cheapestLabel} (${usdStr(cheapest.sek)} avg)` },
+            // No "cheapest month": two observed months is a sample, not a season.
+            { icon: TrendingDown, label: "Quietest months", value: "February and November" },
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
             { icon: Route, label: "Direct flights", value: "From London, Paris & Frankfurt" },
           ].map((s) => (
@@ -288,48 +288,10 @@ export default function FlorenceHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Florence?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - min) / (max - min || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === min;
-              const isMax = m.price === max;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Florence from {NON_STOP.length} cities</h2>
-        <p className="mt-2 max-w-3xl text-sm text-muted-foreground">Florence airport (FLR) focuses on European routes. Long-haul travellers, including most from the US, typically connect via Rome, Milan or Pisa and finish the journey by a short flight or a fast train.</p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → FLR · {r.city === "New York" ? "1 stop" : "nonstop"}</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates as
+          a curve. It is not rebuilt: this destination returns under three months of
+          observed fares from all four US origins, and FareCalendarSection (mounted
+          above) correctly renders nothing below that. */}
       {/* 8. Why Florence */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Florence?</p>
@@ -368,7 +330,8 @@ export default function FlorenceHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA destination={{ slug: "florence", name: "Florence" }} priceFrom={usdStr(LOWEST_SEK)} />
+        {/* No priceFrom: we hold no US fare for Florence. */}
+        <FlightCTA destination={{ slug: "florence", name: "Florence" }} />
       </section>
 
       {/* 11. Nearby cities */}
