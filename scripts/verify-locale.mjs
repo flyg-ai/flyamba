@@ -38,6 +38,27 @@ const CHECKS = [
     re: /\$\d{1,3}[  ]\d{3}\b/,
   },
   {
+    name: "svenskt datum med mars/juli",
+    // "mars" and "juli" collide with English words and with proper nouns, so the
+    // bare word is not evidence and was left out of the check above. In a date
+    // they never stand alone — "1 mars 2026", "1 mars." — and that shape is
+    // unambiguous. Pattern rather than word gets the coverage without the noise.
+    re: /\b\d{1,2}\s(mars|juli)(\s\d{4}|\.)/,
+  },
+  {
+    name: "svensk valuta",
+    // A number can happen to look reasonable in the wrong currency; a currency
+    // name cannot. "1 290 kr" is wrong on a US site whatever the figure is.
+    //
+    // ONLY kr AND SEK, and that is measured rather than assumed. 148 built pages
+    // carry a euro price and 9 a pound, and the ones checked were local costs — a
+    // museum ticket in Amsterdam, a pub meal in London — which are correct in
+    // their own currency. Flagging them would put 157 false positives in front of
+    // whoever runs this, and a check that cries wolf gets switched off. Krona has
+    // no such defence: nothing on a US flight site is honestly priced in it.
+    re: /\d[  ]?kr\b|\d[  ]?SEK\b|\bSEK\s?\d/,
+  },
+  {
     name: "decimalkomma i pris",
     // "$1.277,50" — the European ordering, which would mean the whole number
     // was formatted under the wrong locale rather than just the separator.
