@@ -122,6 +122,8 @@ type CheapOption = {
   departure_at?: string;
   return_at?: string;
   expires_at?: string;
+  /** Stops on the itinerary. 0 is a non-stop; the upstream has always sent it. */
+  number_of_changes?: number;
 };
 
 type FareRow = {
@@ -135,6 +137,13 @@ type FareRow = {
   flight_number: string | null;
   one_way: boolean;
   found_at: string | null;
+  /**
+   * 0 = non-stop. Null when the upstream omitted it — never defaulted to 0,
+   * because a default would assert a non-stop we never observed. This is the only
+   * evidence the site accepts for a "direct flights from X" claim; a price is not
+   * evidence, since a cheap fare can have two stops.
+   */
+  number_of_changes: number | null;
 };
 
 /** "2026-09-14T07:20:00Z" → "2026-09-14". Null for anything unparseable. */
@@ -209,6 +218,7 @@ async function fetchOrigin(origin: string, token: string, oneWay: boolean): Prom
         flight_number: o.flight_number != null ? String(o.flight_number) : null,
         one_way: oneWay,
         found_at: null,
+        number_of_changes: typeof o.number_of_changes === "number" ? o.number_of_changes : null,
       });
     });
   }

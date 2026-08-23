@@ -263,7 +263,9 @@ export default function PhuketHub() {
             { icon: CalendarClock, label: "Best time to book", value: "6–10 weeks ahead" },
             { icon: TrendingDown, label: "Cheapest month", value: `${cheapestLabel} (${usdStr(cheapest.sek)} avg)` },
             { icon: CalendarDays, label: "Cheapest season", value: "Green season (Jun–Aug)" },
-            { icon: Route, label: "Direct flights", value: "Bangkok, Singapore, Dubai + more" },
+            // Removed: this card asserted non-stop service we cannot evidence.
+            // origin_fares stores price and dates, not stops. It comes back per
+            // city once number_of_changes is filled — see supabase/origin-fares-changes.sql.
           ].map((s) => (
             <div key={s.label} className="rounded-3xl border border-border bg-card p-6">
               <div className="grid h-11 w-11 place-items-center rounded-2xl bg-accent/15 text-accent"><s.icon className="h-5 w-5" /></div>

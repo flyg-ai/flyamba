@@ -250,7 +250,7 @@ export default function RomeHub() {
       {/* 3. Flight search widget */}
       <section id="flights" className="mx-auto mt-10 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Rome</h2>
-        <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Rome is easier than ever, with direct routes from New York, London and other major hubs — making Rome one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Rome, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Rome — just describe your trip and Flyamba does the rest.</p>
+        <p className="mb-6 max-w-3xl text-muted-foreground">Rome is reachable from the US, the UK and across Europe, though whether a given route is non-stop depends on your airport and the season. Find cheap flights to Rome, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Rome — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
 
         {/* Observed fares by month. Renders nothing below three months —
@@ -268,7 +268,9 @@ export default function RomeHub() {
             { icon: CalendarClock, label: "Best time to book", value: "6–8 weeks ahead" },
             { icon: TrendingDown, label: "Cheapest month", value: `${cheapestLabel} (${usdStr(cheapest.sek)} avg)` },
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
-            { icon: Route, label: "Direct flights", value: "Yes — from New York, London, Paris" },
+            // Removed: this card asserted non-stop service we cannot evidence.
+            // origin_fares stores price and dates, not stops. It comes back per
+            // city once number_of_changes is filled — see supabase/origin-fares-changes.sql.
           ].map((s) => (
             <div key={s.label} className="rounded-3xl border border-border bg-card p-6">
               <div className="grid h-11 w-11 place-items-center rounded-2xl bg-accent/15 text-accent"><s.icon className="h-5 w-5" /></div>

@@ -230,7 +230,9 @@ export default function MykonosHub() {
             // which months were sampled, not which is cheap.
             { icon: TrendingDown, label: "Season", value: "May–October; winter service is minimal" },
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Monday & Tuesday" },
-            { icon: Route, label: "Direct flights", value: "Seasonal — or year-round via Athens" },
+            // Removed: this card asserted non-stop service we cannot evidence.
+            // origin_fares stores price and dates, not stops. It comes back per
+            // city once number_of_changes is filled — see supabase/origin-fares-changes.sql.
           ].map((s) => (
             <div key={s.label} className="rounded-3xl border border-border bg-card p-6">
               <div className="grid h-11 w-11 place-items-center rounded-2xl bg-accent/15 text-accent"><s.icon className="h-5 w-5" /></div>
