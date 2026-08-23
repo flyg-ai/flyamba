@@ -16,6 +16,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -31,13 +32,9 @@ const CITY = {
 };
 
 // Monthly average round-trip fares seeded in SEK; displayed in USD via usd5().
-const MONTHLY_SEK: { month: string; sek: number }[] = [
-  { month: "Jan", sek: 2800 }, { month: "Feb", sek: 2600 }, { month: "Mar", sek: 2900 },
-  { month: "Apr", sek: 3200 }, { month: "May", sek: 3600 }, { month: "Jun", sek: 3900 },
-  { month: "Jul", sek: 4200 }, { month: "Aug", sek: 4000 }, { month: "Sep", sek: 3500 },
-  { month: "Oct", sek: 3100 }, { month: "Nov", sek: 2700 }, { month: "Dec", sek: 2900 },
-];
-const LOWEST_SEK = Math.min(...MONTHLY_SEK.map((m) => m.sek));
+// The twelve Stockholm SEK estimates are gone with the chart, the hero pill and
+// the FAQ answer that quoted them. Prices now come from observed fares — see
+// app/lib/fare-copy.ts.
 
 const NON_STOP = [
   { city: "London", price: 75, iata: "LHR" },
@@ -86,10 +83,14 @@ const NEARBY = [
   { city: "Bratislava", href: "/bratislava" },
 ];
 
-const FAQ: FaqItem[] = [
+// A function of the observed fare rather than a constant: this answer goes
+// verbatim into FAQPage schema, so a figure baked in at authoring time would
+// be a stale claim to Google the moment the cron runs again.
+function buildFaq(priceLine: string): FaqItem[] {
+  return [
   {
     q: "How much are flights to Vienna?",
-    a: `Round-trip fares to Vienna start from around ${usdStr(LOWEST_SEK)} in the low season (February and November), rising to roughly $400 during the June–August summer peak. Booking five to seven weeks ahead and flying midweek gets the best prices.`,
+    a: priceLine,
   },
   {
     q: "When is the best time to visit Vienna?",
@@ -107,7 +108,8 @@ const FAQ: FaqItem[] = [
     q: "Do I need to book Vienna's attractions in advance?",
     a: "Book Schönbrunn and the Belvedere online for timed entry, especially in summer and December. Many sights are free, including the churches, the Belvedere and palace gardens, the parks, the Prater and the Central Cemetery, and the State Opera sells €13 standing-room tickets 80 minutes before curtain.",
   },
-];
+  ];
+}
 
 // fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
 // that read is a dynamic-server-usage error, the reader swallows it, and the page
@@ -116,10 +118,11 @@ const FAQ: FaqItem[] = [
 export const dynamic = "force-static";
 export const revalidate = 86400;
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("vienna");
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Vienna ${year} — Guide, Prices & Attractions | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Vienna, Austria from ${usdStr(LOWEST_SEK)}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel, day trips and events.`);
+  const description = clampDescription(`Find cheap flights to Vienna, Austria${fareCopy.amount ? ` from ${fareCopy.amount} round trip from ${fareCopy.originLabel}` : ""}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel, day trips and events.`);
   const canonical = `${SITE}/vienna`;
   return {
     title,
@@ -130,7 +133,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
-function jsonLd() {
+function jsonLd(FAQ: FaqItem[]) {
   const url = `${SITE}/vienna`;
   const touristDestination = {
     "@context": "https://schema.org",
@@ -171,17 +174,15 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
   );
 }
 
-export default function ViennaHub() {
+export default async function ViennaHub() {
+  // Read here, on the server, and threaded through the copy below.
+  const fareCopy = await fareCopyFor("vienna");
+  const FAQ = buildFaq(priceAnswer("Vienna", fareCopy));
   const guideCategories = CATEGORIES.filter((c) => c.slug);
-  const usdMonths = MONTHLY_SEK.map((m) => ({ month: m.month, price: usd5(m.sek) }));
-  const min = Math.min(...usdMonths.map((m) => m.price));
-  const max = Math.max(...usdMonths.map((m) => m.price));
-  const cheapest = MONTHLY_SEK.reduce((a, b) => (b.sek < a.sek ? b : a));
-  const cheapestLabel = { Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June", Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December" }[cheapest.month];
 
   return (
     <div className="min-h-screen bg-background">
-      {jsonLd().map((s, i) => (
+      {jsonLd(FAQ).map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s).replace(/</g, "\\u003c") }} />
       ))}
       <Navbar transparent />
@@ -219,7 +220,9 @@ export default function ViennaHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">{usdStr(LOWEST_SEK)}</span></span>
+          {fareCopy.amount && (
+            <span>from <span className="font-serif text-lg text-accent">{fareCopy.amount}</span> round trip from {fareCopy.originLabel}</span>
+          )}
           <span className="text-muted-foreground/40">•</span>
           <span>{CITY.flightTime}</span>
           <span className="text-muted-foreground/40">•</span>
@@ -252,7 +255,11 @@ export default function ViennaHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "5–7 weeks ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${cheapestLabel} (${usdStr(cheapest.sek)} avg)` },
+            // Only claimed at six observed months or more — fare-copy.ts holds the
+            // same threshold the chart uses.
+            ...(fareCopy.cheapestMonthClause
+              ? [{ icon: TrendingDown, label: "Cheapest month we have seen", value: fareCopy.cheapestMonthClause.split(",")[0] }]
+              : []),
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
             // Removed: this card asserted non-stop service we cannot evidence.
             // origin_fares stores price and dates, not stops. It comes back per
@@ -289,30 +296,10 @@ export default function ViennaHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Vienna?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - min) / (max - min || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === min;
-              const isMax = m.price === max;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates.
+          FareCalendarSection, mounted after the search widget above, draws the same
+          months from observed fares instead — and shows nothing where we hold too
+          few. */}
       {/* 7. Non-stop cities (USD) */}
       <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
@@ -368,7 +355,7 @@ export default function ViennaHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA destination={{ slug: "vienna", name: "Vienna" }} priceFrom={usdStr(LOWEST_SEK)} />
+        <FlightCTA destination={{ slug: "vienna", name: "Vienna" }} priceFrom={fareCopy.amount ?? undefined} />
       </section>
 
       {/* 11. Nearby cities */}

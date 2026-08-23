@@ -76,18 +76,13 @@ const PENDING = new Set([
   "app/london/page.tsx",
   "app/madrid/page.tsx",
   "app/madrid/prices/page.tsx",
-  "app/marrakech/page.tsx",
   "app/new-york/page.tsx",
   "app/paris/page.tsx",
-  "app/phuket/page.tsx",
   "app/prague/page.tsx",
   "app/reykjavik/page.tsx",
   "app/reykjavik/prices/page.tsx",
-  "app/rome/page.tsx",
-  "app/singapore/page.tsx",
   "app/tenerife/page.tsx",
   "app/tokyo/page.tsx",
-  "app/vienna/page.tsx",
 ]);
 
 const PATTERNS = [
