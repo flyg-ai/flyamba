@@ -33,9 +33,6 @@ const IBIZA = {
   tagline: "The White Isle of superclubs and turquoise coves",
   summerTemp: 28,
   coordinates: { lat: 38.9067, lng: 1.4206 },
-  // 12-month average round-trip fares in SEK (Jan–Dec). Nulls = winter, when
-  // Ibiza has very limited flights. Converted to USD for display.
-  monthlyPricesSEK: [null, null, null, 3500, 4200, 5000, 6200, 6000, 5100, 4000, null, null] as (number | null)[],
 };
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];

@@ -26,9 +26,8 @@ const URL = `${SITE}/santorini`;
 const priced = d.monthlyUsd
   .map((price, i) => ({ month: MONTHS[i], price }))
   .filter((m): m is { month: string; price: number } => m.price != null);
-const cheapest = priced.reduce((a, b) => (b.price < a.price ? b : a), priced[0]);
-const minPrice = Math.min(...priced.map((m) => m.price));
-const maxPrice = Math.max(...priced.map((m) => m.price));
+// The SEK-derived min/max/cheapest that fed the chart, the hero pill and two FAQ
+// answers are gone with them.
 
 // fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
 // that read is a dynamic-server-usage error, the reader swallows it, and the page
@@ -184,8 +183,6 @@ export default function SantoriniHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">${minPrice}</span> round-trip</span>
-          <span className="text-muted-foreground/40">•</span>
           <span>4h 15m from London</span>
           <span className="text-muted-foreground/40">•</span>
           <span>Seasonal nonstops Apr–Oct</span>

@@ -20,9 +20,7 @@ import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 const HERO = "/images/destinations/flights-mykonos.avif";
-const usdMonths = MYKONOS.monthlyPrices.map((m) => ({ month: m.month, price: usd5(m.price) }));
-const MIN_USD = Math.min(...usdMonths.map((m) => m.price));
-const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
+// The SEK-derived monthly figures are gone with the chart they drew.
 
 // fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
 // that read is a dynamic-server-usage error, the reader swallows it, and the page

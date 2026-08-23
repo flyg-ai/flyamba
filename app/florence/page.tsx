@@ -31,13 +31,8 @@ const CITY = {
 };
 
 // Monthly average round-trip fares seeded in SEK; displayed in USD via usd5().
-const MONTHLY_SEK: { month: string; sek: number }[] = [
-  { month: "Jan", sek: 2900 }, { month: "Feb", sek: 2700 }, { month: "Mar", sek: 3000 },
-  { month: "Apr", sek: 3400 }, { month: "May", sek: 3800 }, { month: "Jun", sek: 4300 },
-  { month: "Jul", sek: 4900 }, { month: "Aug", sek: 4700 }, { month: "Sep", sek: 4100 },
-  { month: "Oct", sek: 3500 }, { month: "Nov", sek: 2900 }, { month: "Dec", sek: 3100 },
-];
-const LOWEST_SEK = Math.min(...MONTHLY_SEK.map((m) => m.sek));
+// The twelve Stockholm SEK estimates that fed this page are gone with the chart,
+// the hero pill and the FAQ answers that quoted them.
 
 const NON_STOP = [
   { city: "London", price: 88, iata: "LGW" },
@@ -174,12 +169,6 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
 
 export default function FlorenceHub() {
   const guideCategories = CATEGORIES.filter((c) => c.slug);
-  const usdMonths = MONTHLY_SEK.map((m) => ({ month: m.month, price: usd5(m.sek) }));
-  const min = Math.min(...usdMonths.map((m) => m.price));
-  const max = Math.max(...usdMonths.map((m) => m.price));
-  const cheapest = MONTHLY_SEK.reduce((a, b) => (b.sek < a.sek ? b : a));
-  const cheapestLabel = { Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June", Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December" }[cheapest.month];
-
   return (
     <div className="min-h-screen bg-background">
       {jsonLd().map((s, i) => (

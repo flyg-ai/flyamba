@@ -39,9 +39,7 @@ const CITY = {
 };
 const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 // Hoisted so the FAQ can quote the same figures the price chart renders.
-const USD_MONTHS = CITY.monthlySek.map((sek, i) => ({ month: MONTH_LABELS[i], price: usd5(sek) }));
-const LOW = Math.min(...USD_MONTHS.map((m) => m.price));
-const HIGH = Math.max(...USD_MONTHS.map((m) => m.price));
+// The SEK-derived monthly figures are gone with the chart they drew.
 
 // fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
 // that read is a dynamic-server-usage error, the reader swallows it, and the page
@@ -174,11 +172,6 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
 
 export default function PalmaHub() {
   const categories = PALMA_CATEGORIES.filter((c) => c.slug);
-  const usdMonths = CITY.monthlySek.map((sek, i) => ({ month: MONTH_LABELS[i], price: usd5(sek) }));
-  const min = Math.min(...usdMonths.map((m) => m.price));
-  const max = Math.max(...usdMonths.map((m) => m.price));
-  const cheapest = usdMonths.find((m) => m.price === min)!;
-
   const attractionPreview = ATTRACTIONS.slice(0, 3).map((a) => ({ name: a.name, blurb: a.description, image: a.image, href: `/palma/attractions#${a.slug}` }));
   const eatPreview = RESTAURANTS.slice(0, 3).map((r) => ({ name: r.name, blurb: r.description, image: r.image, href: `/palma/restaurants#${r.slug}` }));
   const beachPreview = BEACHES.slice(0, 3).map((b) => ({ name: b.name, blurb: b.description, image: b.image, href: `/palma/beaches#${b.slug}` }));
@@ -223,8 +216,6 @@ export default function PalmaHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">${min}</span></span>
-          <span className="text-muted-foreground/40">•</span>
           <span>{CITY.flightTime}</span>
           <span className="text-muted-foreground/40">•</span>
           <span>Nonstop across Europe</span>
@@ -270,10 +261,10 @@ export default function PalmaHub() {
           ))}
         </div>
         <p className="mt-6 max-w-3xl text-sm leading-relaxed text-muted-foreground">
-          Palma is one of Europe&apos;s busiest seasonal leisure airports, so fares swing hard with the calendar: winter and shoulder-season
-          flights can dip below ${min}, while July and August peak around ${max} round-trip. Budget carriers like Ryanair, easyJet, Vueling and
-          Eurowings dominate the short-haul routes from the UK, Germany and the Spanish mainland, and booking mid-week departures a couple of
-          months out is the reliable way to keep costs down.
+          Palma is one of Europe&apos;s busiest seasonal leisure airports, so fares swing hard with the calendar — winter and shoulder season
+          sit well below the July and August peak. Budget carriers like Ryanair, easyJet, Vueling and Eurowings dominate the short-haul routes
+          from the UK, Germany and the Spanish mainland, and booking mid-week departures a couple of months out is the reliable way to keep
+          costs down. We hold too few observed fares from US airports to put figures on that swing.
         </p>
       </section>
 
