@@ -14,6 +14,7 @@ import { BARCELONA_SUBPAGES, barcelonaHref } from "@/app/lib/barcelona";
 import { faresFor, sortPrices } from "@/app/lib/fare-display";
 import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 import { DealCard, type Deal } from "@/app/components/DealCard";
+import { DEPARTURES } from "@/app/lib/departures";
 import { ArrowRight, Scale, BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -111,7 +112,15 @@ export default async function Home() {
   //
   // ALL_DESTINATIONS stays on the server: only the six narrow Deal objects below
   // cross into the rendered card.
+  // THE FOURTEEN DEPARTURE CITIES ARE NOT CANDIDATES. A city cannot be both an
+  // origin and a destination in the same model: offering Dallas as somewhere to
+  // go while /cheap-flights-from-dallas offers it as somewhere to leave from
+  // contradicts the site's own shape. Read from DEPARTURES rather than listed
+  // again here, so adding a departure page removes it from this row for free.
+  const departureSlugs = new Set(DEPARTURES.map((d) => d.slug));
+
   const cheapest: Deal[] = ALL_DESTINATIONS
+    .filter((d) => !departureSlugs.has(d.slug))
     .filter((d) => nycPrices[d.slug] != null)
     .sort((a, b) => nycPrices[a.slug] - nycPrices[b.slug])
     .slice(0, 6)

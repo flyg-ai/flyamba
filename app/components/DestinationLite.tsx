@@ -185,6 +185,9 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
                       style={{ height: h }}
                     />
                     <span className="text-[11px] font-semibold text-muted-foreground">{MONTHS[o.monthIndex]}</span>
+                    {/* Each bar carries its own seen date: an advertised fare has
+                        to be one someone can still buy. */}
+                    <span className="text-[10px] text-muted-foreground/70">{o.seenLabel ?? "—"}</span>
                   </div>
                 );
               })}
@@ -211,9 +214,7 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
                 <span className="text-sm text-muted-foreground">
                   <span className="font-semibold text-accent">${o.priceUsd}</span> round trip from {o.origin}
                   {o.departDate ? ` · departing ${o.departDate}` : ""}
-                  {o.seenAt
-                    ? ` · seen ${new Date(o.seenAt).toLocaleString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })}`
-                    : ""}
+                  {o.seenLabel ? ` · seen ${o.seenLabel}` : ""}
                 </span>
               </li>
             ))}
