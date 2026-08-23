@@ -17,6 +17,7 @@ import { usd, usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── Self-contained Paris facts (no rich Destination import) ──────────────────
 const CITY = {
@@ -99,6 +100,13 @@ const TRIP_PREVIEW = [
   { name: "Giverny", blurb: "Monet's water-lily garden and Japanese bridge in Normandy.", image: "/images/paris/dagsutflykter/giverny-monets-hus.webp" },
   { name: "Reims & Champagne", blurb: "A coronation cathedral and cellar tastings, 45 min by TGV.", image: "/images/paris/dagsutflykter/reims.webp" },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -229,6 +237,10 @@ export default function ParisHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Paris</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Paris is easier than ever, with direct routes from New York, London and other major hubs — making Paris one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Paris, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Paris — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="paris" name="Paris" />
         <LowFareCta slug="paris" city="Paris" />
       </section>
 

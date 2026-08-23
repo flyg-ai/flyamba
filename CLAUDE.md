@@ -642,7 +642,35 @@ identical constants — 28.0 °C air, 26 °C sea — so quoting one would be quo
 
 ## Next up
 
-1. **`trinidad-cuba` has the wrong IATA code, and it is the fare that suffers.** The
+1. **Five hub pages promise a price calendar they can never fill.** Tenerife,
+   Mykonos, Santorini, Ibiza, Palma and Florence hold under three observed months
+   from every US origin, so `FareCalendarSection` renders nothing on them — but
+   their copy still says things like:
+
+   | page | the sentence |
+   | --- | --- |
+   | Ibiza | "see the month-by-month price calendar" (meta description) |
+   | Mykonos | "April is the cheapest month to fly, while July and August are the most expensive" |
+   | Santorini | "April is the cheapest month to fly to Santorini, with round-trip fares averaging…" |
+   | Palma | "February is the cheapest month at roughly $X round-trip" |
+   | Florence | a "Cheapest month" fact card |
+
+   Every figure in them comes from the SEK constants, so they are wrong twice: the
+   number is a Stockholm estimate and the section it points at is not on the page.
+   Tenerife is clean. **Fix these in the copy pass, not mechanically** — each is a
+   sentence with a season and a claim in it, not a token to replace.
+
+2. **Six of the 28 hubs are places Americans can barely fly to non-stop.** Tenerife,
+   Mykonos, Santorini, Ibiza, Palma and Florence are inherited from flyg.ai, where
+   they are obvious choices from Arlanda. Measured against Travelpayouts from all
+   four US origins they return zero to two months of fares each — the thinnest
+   routes on the site are six of its flagships.
+
+   Meanwhile **Aruba (16,920/mo), Jamaica (14,500) and Punta Cana (6,570) have no
+   hub at all.** That is a hub-selection question against the Ahrefs data, not a
+   bug: nothing is broken, the effort is just pointed at the wrong cities.
+
+3. **`trinidad-cuba` has the wrong IATA code, and it is the fare that suffers.** The
    catalog gives it `SCU` — Santiago de Cuba, **475 km away**. Trinidad's own airport
    is `TND` (Alberto Delgado), 2 km out, and Kiwi has a `trinidad_cu` city for it. The
    `tpName` was set from TND and is right; the `iata` field was left alone because it

@@ -15,6 +15,7 @@ import { CATEGORIES } from "@/app/data/phuket-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -116,6 +117,13 @@ const FAQ: FaqItem[] = [
     a: "Phuket is large and spread out, so plan your transport. The Grab app gives the fairest, fixed fares; local taxis and tuk-tuks are convenient but pricey and unmetered, so always agree the fare first. Cheap songthaew buses link the beaches to Phuket Town by day, and hiring a car or private driver suits families. Scooters are cheapest but only for experienced riders — the accident rate is high, so wear a helmet and check your insurance.",
   },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -240,6 +248,10 @@ export default function PhuketHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Phuket</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Phuket is one of Asia's most connected beach destinations, with direct flights from Bangkok, Singapore, Kuala Lumpur, Hong Kong, Dubai, Doha and Sydney, plus easy one-stop routes from the US, UK, Europe and Australia through those hubs. Find cheap flights to Phuket, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Phuket — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="phuket" name="Phuket" />
       </section>
 
       {/* 4. Booking insights */}

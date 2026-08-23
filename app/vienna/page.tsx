@@ -15,6 +15,7 @@ import { CATEGORIES } from "@/app/data/vienna-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -107,6 +108,13 @@ const FAQ: FaqItem[] = [
     a: "Book Schönbrunn and the Belvedere online for timed entry, especially in summer and December. Many sights are free, including the churches, the Belvedere and palace gardens, the parks, the Prater and the Central Cemetery, and the State Opera sells €13 standing-room tickets 80 minutes before curtain.",
   },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -231,6 +239,10 @@ export default function ViennaHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Vienna</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Vienna is easy from almost anywhere, with direct routes from New York, London, Frankfurt and other major hubs — making Vienna one of the most rewarding city-break destinations from the US, UK and Europe. Find cheap flights to Vienna, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Vienna — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="vienna" name="Vienna" />
       </section>
 
       {/* 4. Booking insights */}

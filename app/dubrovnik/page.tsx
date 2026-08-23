@@ -18,6 +18,7 @@ import { CATEGORIES } from "@/app/data/dubrovnik-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -117,6 +118,13 @@ const FAQ: FaqItem[] = [
     a: "For summer, booking the city walls and the Srđ cable car online is wise to skip queues and secure a slot around the cruise-ship rush (roughly 11:00–15:00). Game of Thrones tours, kayaking and Montenegro or Mostar day trips also sell out in peak season, so reserve ahead.",
   },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -241,6 +249,10 @@ export default function DubrovnikHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Dubrovnik</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Dubrovnik Airport (DBV) is well connected across Europe, with direct routes from London, Frankfurt, Paris, Rome and Istanbul, plus a growing list of seasonal summer flights — making the pearl of the Adriatic one of the most popular beach-and-culture escapes from the UK, Europe and, via connections, the US. Find cheap flights to Dubrovnik, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Dubrovnik — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="dubrovnik" name="Dubrovnik" />
         <LowFareCta slug="dubrovnik" city="Dubrovnik" />
       </section>
 

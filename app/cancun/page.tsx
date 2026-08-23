@@ -15,6 +15,7 @@ import { CATEGORIES } from "@/app/data/cancun-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -114,6 +115,13 @@ const FAQ: FaqItem[] = [
     a: "Exceptionally. Chichén Itzá, Tulum and Cobá bring the Maya world within reach, cenotes and the great eco-parks (Xcaret, Xel-Há, Xplor) line the Riviera Maya, and short ferries reach the islands of Isla Mujeres and Cozumel. The cheap ADO buses make independent trips easy.",
   },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -238,6 +246,10 @@ export default function CancunHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Cancún</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Cancún is one of the easiest long-haul beach escapes to reach, with a huge volume of nonstop flights from across the US and Canada as well as connections from Europe and Latin America — making it one of the most popular winter-sun destinations anywhere. Find cheap flights to Cancún, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Cancún — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="cancun" name="Cancún" />
       </section>
 
       {/* 4. Booking insights */}

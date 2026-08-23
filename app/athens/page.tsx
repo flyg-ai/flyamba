@@ -18,6 +18,7 @@ import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 const CITY = {
   name: "Athens",
@@ -75,6 +76,13 @@ const WHY = [
   { icon: "🏖️", text: "A full Mediterranean coastline on the doorstep — the Athenian Riviera's turquoise beaches are a 40-minute tram or bus ride away." },
   { icon: "⛴️", text: "The perfect gateway: nonstop flights worldwide, plus fast ferries from Piraeus to Santorini, Mykonos and the Saronic isles." },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -219,6 +227,10 @@ export default function AthensHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Athens</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Athens is easier than ever, with direct routes from New York, London and other major hubs — making Athens one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Athens, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Athens — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName="athens_gr" />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="athens" name="Athens" />
         <LowFareCta slug="athens" city="Athens" />
       </section>
 

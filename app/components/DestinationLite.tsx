@@ -7,6 +7,9 @@ import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { destinationCrumbs } from "@/app/lib/destination-crumbs";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
 import { fareFor } from "@/app/lib/fare-display";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+// Still read directly for the "cheapest month" fact card, which is a single value
+// rather than a section. The tier rule itself lives in FareCalendarSection.
 import { fareCalendarFor } from "@/app/lib/fare-calendar";
 import { SITE } from "@/app/lib/destination-helpers";
 import { LowFareCta } from "@/app/components/LowFareCta";
@@ -147,80 +150,8 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
         </div>
       </section>
 
-      {/* Observed fares by month — see app/lib/fare-calendar.ts for why coverage
-          decides the form. Below three observations this section does not exist. */}
-      {calendar.tier === "chart" && (
-        <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Fares by month</p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
-            When is it cheapest to fly to {d.name}?
-          </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Cheapest round trip we observed from {fare?.originLabel ?? calendar.origin}, in USD, across the{" "}
-            <strong className="font-semibold text-foreground">{calendar.monthCount} months we hold fares for</strong>.
-            Months we have not seen a fare for are not shown — they are not months without flights.
-          </p>
-          <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-            {/* Only observed months get a column. No placeholder bars: an empty
-                slot in a twelve-month row reads as "expensive", not "unknown". */}
-            <div className="flex h-56 items-end gap-2">
-              {calendar.observations.map((o) => {
-                const ratio = (o.priceUsd - min) / (max - min || 1);
-                const h = Math.round(16 + ratio * 152);
-                const isMin = o.priceUsd === min;
-                const isMax = o.priceUsd === max;
-                return (
-                  <div key={o.monthIndex} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                    <span
-                      className={`text-[11px] font-semibold ${
-                        isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"
-                      }`}
-                    >
-                      ${o.priceUsd}
-                    </span>
-                    <div
-                      className={`w-full rounded-t-xl ${
-                        isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"
-                      }`}
-                      style={{ height: h }}
-                    />
-                    <span className="text-[11px] font-semibold text-muted-foreground">{MONTHS[o.monthIndex]}</span>
-                    {/* Each bar carries its own seen date: an advertised fare has
-                        to be one someone can still buy. */}
-                    <span className="text-[10px] text-muted-foreground/70">{o.seenLabel ?? "—"}</span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Three to five observations: a list, not a graph. A chart drawn through
-          four points implies a curve between them that we never measured. */}
-      {calendar.tier === "list" && (
-        <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Fares we found</p>
-          <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
-            What we have seen flights to {d.name} cost
-          </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            {calendar.monthCount} observations — too few to say which month is cheapest, so here they are as they came.
-          </p>
-          <ul className="mt-6 divide-y divide-border overflow-hidden rounded-3xl border border-border bg-card">
-            {calendar.observations.map((o) => (
-              <li key={o.monthIndex} className="flex flex-wrap items-baseline justify-between gap-2 px-6 py-4">
-                <span className="font-serif text-lg font-semibold text-foreground">{FULL_MONTHS[o.monthIndex]}</span>
-                <span className="text-sm text-muted-foreground">
-                  <span className="font-semibold text-accent">${o.priceUsd}</span> round trip from {o.origin}
-                  {o.departDate ? ` · departing ${o.departDate}` : ""}
-                  {o.seenLabel ? ` · seen ${o.seenLabel}` : ""}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+      {/* Same component the 28 hub pages mount, so the tier rule exists once. */}
+      <FareCalendarSection slug={d.slug} name={d.name} />
 
       {/* Full guide coming soon */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">

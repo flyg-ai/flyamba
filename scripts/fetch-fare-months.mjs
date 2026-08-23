@@ -25,7 +25,7 @@
  * table — see supabase/fare-months.sql.
  */
 
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync, appendFileSync } from "node:fs";
 import { createClient } from "@supabase/supabase-js";
 
 for (const line of readFileSync(".env.local", "utf8").split(/\r?\n/)) {
@@ -100,12 +100,42 @@ const targets = catalog
 
 console.log(`omfattning: ${SCOPE} — ${targets.length} destinationer x ${ORIGINS.length} origins = ${targets.length * ORIGINS.length} anrop`);
 
+/**
+ * Resume state.
+ *
+ * The full catalog is 2,216 calls at the rate the API allows — around 37 minutes,
+ * which does not fit in a Vercel function and should not have to survive a dropped
+ * connection either. Completed pairs are appended to a progress file and skipped
+ * on the next run, so the job can be stopped and restarted at any point.
+ *
+ * Rows are flushed to the table as they accumulate rather than held to the end:
+ * an interrupted run should leave real data behind, not nothing.
+ */
+const PROGRESS = "scripts/.fare-months-progress";
+const doneAlready = new Set(
+  existsSync(PROGRESS) ? readFileSync(PROGRESS, "utf8").split("\n").filter(Boolean) : [],
+);
+if (doneAlready.size) console.log(`återupptar: ${doneAlready.size} par redan klara`);
+
+const db = DRY ? null : createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY, {
+  auth: { persistSession: false },
+  global: { fetch: (u, o) => fetch(u, { ...o, cache: "no-store" }) },
+});
+const originFaresBefore = db ? (await db.from("origin_fares").select("*", { count: "exact", head: true })).count : null;
+
+async function flush(batch) {
+  if (!db || !batch.length) return;
+  const { error } = await db.from("fare_months").upsert(batch, { onConflict: "origin,slug,month,one_way" });
+  if (error) { console.error("upsert misslyckades:", error.message); process.exit(1); }
+}
+
 const rows = [];
 const perPair = [];
-let calls = 0, failures = 0;
+let calls = 0, failures = 0, skipped = 0;
 
 for (const d of targets) {
   for (const origin of ORIGINS) {
+    if (doneAlready.has(`${origin}|${d.slug}`)) { skipped++; continue; }
     let data;
     try {
       data = await call(origin, d.iata);
@@ -133,9 +163,14 @@ for (const d of targets) {
         one_way: false,
       });
     }
+    if (!DRY) appendFileSync(PROGRESS, `${origin}|${d.slug}
+`);
+    if (rows.length >= 300) { await flush(rows.splice(0, rows.length)); }
+    if ((calls + failures) % 100 === 0) console.log(`  ...${calls + failures} anrop, ${rate.remaining}/${rate.limit} kvar i fönstret`);
     await pace();
   }
 }
+await flush(rows.splice(0, rows.length));
 
 console.log(`\nanrop: ${calls} lyckade, ${failures} misslyckade`);
 console.log(`rader att skriva: ${rows.length}`);
@@ -150,18 +185,9 @@ if (DRY) {
   process.exit(0);
 }
 
-const db = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SERVICE_ROLE_KEY, {
-  auth: { persistSession: false },
-  global: { fetch: (u, o) => fetch(u, { ...o, cache: "no-store" }) },
-});
-
-const before = await db.from("origin_fares").select("*", { count: "exact", head: true });
-for (let i = 0; i < rows.length; i += 500) {
-  const { error } = await db.from("fare_months").upsert(rows.slice(i, i + 500), { onConflict: "origin,slug,month,one_way" });
-  if (error) { console.error("upsert misslyckades:", error.message); process.exit(1); }
-}
-const after = await db.from("origin_fares").select("*", { count: "exact", head: true });
 const { count: written } = await db.from("fare_months").select("*", { count: "exact", head: true });
-
-console.log(`\nfare_months: ${written} rader`);
-console.log(`origin_fares: ${before.count} före, ${after.count} efter — ${before.count === after.count ? "orörd" : "ÄNDRAD"}`);
+const after = await db.from("origin_fares").select("*", { count: "exact", head: true });
+console.log(`
+fare_months: ${written} rader`);
+console.log(`origin_fares: ${originFaresBefore} före, ${after.count} efter — ${originFaresBefore === after.count ? "orörd" : "ÄNDRAD"}`);
+console.log(`hoppade (redan klara): ${skipped}`);

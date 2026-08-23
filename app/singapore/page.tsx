@@ -15,6 +15,7 @@ import { CATEGORIES } from "@/app/data/singapore-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -114,6 +115,13 @@ const FAQ: FaqItem[] = [
     a: "The MRT metro is world-class — clean, cheap and reaching almost every attraction — and combines with an extensive bus network using a single contactless tap or EZ-Link card. Honest metered taxis and the Grab app cover the rest, and the compact central districts are very walkable.",
   },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -238,6 +246,10 @@ export default function SingaporeHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Singapore</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Singapore Changi is one of the world's great aviation hubs, with nonstop flights from New York, London, San Francisco, Sydney, Tokyo, Dubai and far beyond — making Singapore one of the best-connected destinations in Asia. Find cheap flights to Singapore, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Singapore — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="singapore" name="Singapore" />
       </section>
 
       {/* 4. Booking insights */}

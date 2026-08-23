@@ -15,6 +15,7 @@ import { CATEGORIES } from "@/app/data/florence-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -108,6 +109,13 @@ const FAQ: FaqItem[] = [
     a: "Florence has no metro, and it barely needs one: the compact historic centre is best explored entirely on foot, with almost every sight within a 15-minute walk. The tram is mainly useful for the airport, and trains from Santa Maria Novella station open up day trips across Tuscany.",
   },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -232,6 +240,10 @@ export default function FlorenceHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Florence</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Florence's own Amerigo Vespucci airport (FLR) is served by direct flights from London, Paris, Frankfurt and other European hubs, making it easy to reach from across the UK and Europe. Travellers from the US and further afield will often find the cheapest, most frequent options by flying into Rome, Milan or Pisa and connecting onward — Rome to Florence is just 90 minutes by high-speed train. Our AI flight search compares hundreds of routes to find you the cheapest flights to Florence — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="florence" name="Florence" />
       </section>
 
       {/* 4. Booking insights */}

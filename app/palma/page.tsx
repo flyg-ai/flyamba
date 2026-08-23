@@ -19,6 +19,7 @@ import { PALMA_CATEGORIES, ATTRACTIONS, RESTAURANTS, BEACHES } from "@/app/data/
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained; not from the shared destinations catalog) ────
 const CITY = {
@@ -41,6 +42,13 @@ const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "S
 const USD_MONTHS = CITY.monthlySek.map((sek, i) => ({ month: MONTH_LABELS[i], price: usd5(sek) }));
 const LOW = Math.min(...USD_MONTHS.map((m) => m.price));
 const HIGH = Math.max(...USD_MONTHS.map((m) => m.price));
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -235,6 +243,10 @@ export default function PalmaHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Palma</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Palma is easier than ever, with direct routes from New York, London and other major hubs — making Palma one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Palma, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Palma — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="palma" name="Palma" />
         <LowFareCta slug="palma" city="Palma" />
       </section>
 

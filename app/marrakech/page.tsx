@@ -15,6 +15,7 @@ import { CATEGORIES } from "@/app/data/marrakech-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -116,6 +117,13 @@ const FAQ: FaqItem[] = [
     a: "The car-free medina is best explored on foot — expect to get lost, which is half the fun. Beige petit taxis are cheap for hops to the new town (insist on the meter, ~20–40 MAD), calèches offer scenic rides round the ramparts, and grands taxis or tours reach the Atlas, valleys and coast.",
   },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -240,6 +248,10 @@ export default function MarrakechHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Marrakech</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Marrakech has never been easier, with cheap nonstop routes from London, Paris, Madrid, Brussels and dozens of other European cities on carriers like Ryanair, easyJet, Wizz Air and Transavia, plus one-stop connections from New York and the wider US via Casablanca or a European hub. Find cheap flights to Marrakech, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest fares to Marrakech (RAK) — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="marrakech" name="Marrakech" />
       </section>
 
       {/* 4. Booking insights */}

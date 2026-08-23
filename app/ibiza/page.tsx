@@ -19,6 +19,7 @@ import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── Self-contained city facts (Ibiza is not in the rich destinations catalog) ─
 const IBIZA = {
@@ -50,6 +51,13 @@ const MAX = Math.max(...NON_NULL.map((m) => m.price));
 const CHEAPEST = NON_NULL.reduce((a, b) => (b.price < a.price ? b : a));
 const CHEAPEST_MONTH_FULL: Record<string, string> = { Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June", Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December" };
 const LOWEST_SEK = Math.min(...IBIZA.monthlyPricesSEK.filter((p): p is number => p != null));
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -225,6 +233,10 @@ export default function IbizaHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Ibiza</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Ibiza is easier than ever, with direct routes from New York, London and other major hubs — making Ibiza one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Ibiza, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Ibiza — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={IBIZA.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="ibiza" name="Ibiza" />
         <LowFareCta slug="ibiza" city="Ibiza" />
       </section>
 

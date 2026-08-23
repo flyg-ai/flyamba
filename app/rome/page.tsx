@@ -19,6 +19,7 @@ import { CATEGORIES } from "@/app/data/rome-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -120,6 +121,13 @@ const FAQ: FaqItem[] = [
     a: "The historic centre is best explored on foot, as the three-line metro skirts much of it. Buses and trams fill the gaps; a single ticket is €1.50 for 100 minutes, and 24–72 hour passes offer good value.",
   },
 ];
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -244,6 +252,10 @@ export default function RomeHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Rome</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Rome is easier than ever, with direct routes from New York, London and other major hubs — making Rome one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Rome, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Rome — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="rome" name="Rome" />
         <LowFareCta slug="rome" city="Rome" />
       </section>
 

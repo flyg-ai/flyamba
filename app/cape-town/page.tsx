@@ -17,11 +17,19 @@ import { usd5 } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 const HERO = "/images/destinations/flights-kapstaden.avif";
 const usdMonths = CAPE_TOWN.monthlyPrices.map((m) => ({ month: m.month, price: usd5(m.price) }));
 const MIN_USD = Math.min(...usdMonths.map((m) => m.price));
 const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -208,6 +216,10 @@ export default function CapeTownHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Cape Town</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Cape Town is easier than ever, with direct routes from New York, London and other major hubs — making Cape Town one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Cape Town, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Cape Town — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CAPE_TOWN.tpName} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="cape-town" name="Cape Town" />
         <LowFareCta slug="cape-town" city="Cape Town" />
       </section>
 

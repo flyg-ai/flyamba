@@ -15,6 +15,7 @@ import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
+import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 
 // ── Self-contained Tokyo hub data ────────────────────────────────────────────
 const SITE = "https://flyamba.com";
@@ -117,6 +118,13 @@ function jsonLd() {
   };
   return [touristDestination, faqPage];
 }
+
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the page
+// renders with no calendar while the build reports success. Fourth time this trap
+// has been hit — see CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
 export function generateMetadata(): Metadata {
   const year = new Date().getFullYear();
@@ -221,6 +229,10 @@ export default function TokyoHub() {
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Tokyo</h2>
         <p className="mb-6 max-w-3xl text-muted-foreground">Flying to Tokyo is easier than ever, with direct routes from New York, London and other major hubs — making Tokyo one of the most popular flight destinations from the US, UK and Europe. Find cheap flights to Tokyo, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Tokyo — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={TP_NAME} />
+
+        {/* Observed fares by month. Renders nothing below three months —
+            see app/components/FareCalendarSection.tsx. */}
+        <FareCalendarSection slug="tokyo" name="Tokyo" />
         <LowFareCta slug="tokyo" city="Tokyo" />
       </section>
 
