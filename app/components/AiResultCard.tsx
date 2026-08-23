@@ -202,7 +202,7 @@ export function AiResultCard({
         {fare ? (
           <div>
             <p className="font-serif text-2xl font-bold text-accent">
-              from ${fare.priceUsd.toLocaleString()}
+              from ${fare.priceUsd.toLocaleString("en-US")}
               <span className="ml-1.5 align-middle text-xs font-normal text-muted-foreground">
                 {fare.oneWay ? "one way" : "round trip"}
                 {originLabel ? ` from ${originLabel}` : ""}
@@ -212,7 +212,7 @@ export function AiResultCard({
               <p className="mt-0.5 text-xs text-muted-foreground">
                 {dates}
                 {dates && alt ? " · " : ""}
-                {alt ? `or $${alt.priceUsd.toLocaleString()} ${altDates ?? ""}`.trim() : ""}
+                {alt ? `or $${alt.priceUsd.toLocaleString("en-US")} ${altDates ?? ""}`.trim() : ""}
               </p>
             )}
           </div>

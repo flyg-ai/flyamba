@@ -10,7 +10,7 @@ export function airlineNames(d: Destination): string[] {
 
 // A display price string, e.g. "$128" when authored, else the kr price.
 export function lowestPriceStr(d: Destination): string {
-  return d.lowestPrice ?? `${d.price.toLocaleString()} kr`;
+  return d.lowestPrice ?? `${d.price.toLocaleString("en-US")} kr`;
 }
 
 // Best time to visit, derived from monthly weather: months at a pleasant

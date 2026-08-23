@@ -117,7 +117,7 @@ export default async function ComparisonPage({
     {
       q: `Is ${first.name} or ${second.name} cheaper to fly to?`,
       a: cheaper
-        ? `${cheaper.name} is currently the cheaper of the two, with a New York round trip we found at $${cheaper.priceUsd!.toLocaleString()} against $${(cheaper.slug === first.slug ? second : first).priceUsd!.toLocaleString()}. Fares move constantly, so check the low fare calendar for your dates.`
+        ? `${cheaper.name} is currently the cheaper of the two, with a New York round trip we found at $${cheaper.priceUsd!.toLocaleString("en-US")} against $${(cheaper.slug === first.slug ? second : first).priceUsd!.toLocaleString("en-US")}. Fares move constantly, so check the low fare calendar for your dates.`
         : `Fares to ${first.name} and ${second.name} are close enough that the cheaper one depends entirely on your dates. Check the low fare calendar for both.`,
     },
     {

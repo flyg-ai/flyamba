@@ -248,7 +248,7 @@ export function formatFareLabelShort(f: UsFare, { showOrigin = true } = {}): str
   // `showOrigin: false` is for lists where every row is already labelled with its
   // departure city — /cheap-flights, where the row IS the city. Repeating the code
   // there adds a token the reader has to skip, not information.
-  return [`$${f.fare.priceUsd.toLocaleString()} ${trip}`, showOrigin ? f.origin : null, seen ? `seen ${seen}` : null]
+  return [`$${f.fare.priceUsd.toLocaleString("en-US")} ${trip}`, showOrigin ? f.origin : null, seen ? `seen ${seen}` : null]
     .filter(Boolean)
     .join(" · ");
 }
@@ -261,7 +261,7 @@ export function formatFareLabelLong(f: UsFare, originLabel: string): { headline:
   const trip = f.fare.oneWay ? "one way" : "round trip";
   const dates = formatFareDates(f.fare);
   return {
-    headline: `$${f.fare.priceUsd.toLocaleString()} ${trip} from ${originLabel}`,
+    headline: `$${f.fare.priceUsd.toLocaleString("en-US")} ${trip} from ${originLabel}`,
     detail: [seen ? `seen ${seen}` : null, dates].filter(Boolean).join(" · ") || null,
   };
 }

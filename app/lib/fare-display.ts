@@ -35,7 +35,7 @@ export type FarePresentation = {
 function present(f: UsFare): FarePresentation {
   const originLabel = ORIGIN_LABEL[f.origin] ?? f.origin;
   return {
-    amount: `$${f.fare.priceUsd.toLocaleString()}`,
+    amount: `$${f.fare.priceUsd.toLocaleString("en-US")}`,
     short: formatFareLabelShort(f),
     long: formatFareLabelLong(f, originLabel),
     priceUsd: f.fare.priceUsd,

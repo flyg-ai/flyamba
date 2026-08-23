@@ -111,7 +111,7 @@ export const ROWS: Row[] = [
     label: "Round trip from New York",
     // Already USD and already observed — no conversion, no estimate. A city with
     // no New York fare shows an em dash and cannot win the row.
-    value: (d) => (d.priceUsd ? `$${d.priceUsd.toLocaleString()}` : "—"),
+    value: (d) => (d.priceUsd ? `$${d.priceUsd.toLocaleString("en-US")}` : "—"),
     best: "min",
     raw: (d) => d.priceUsd || Infinity,
   },

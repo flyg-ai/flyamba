@@ -147,7 +147,7 @@ export function DestinationDetail({
               <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Flights</p>
               <h2 className="mt-2 font-serif text-4xl font-semibold text-foreground sm:text-5xl">Book Your Trip to {d.city}</h2>
               <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-2 text-muted-foreground">
-                <span className="font-serif text-lg text-foreground">From {d.price.toLocaleString()} kr</span>
+                <span className="font-serif text-lg text-foreground">From {d.price.toLocaleString("en-US")} kr</span>
                 <span className="hidden h-1 w-1 rounded-full bg-muted-foreground sm:inline" />
                 <span>{d.flightTime ?? `${d.avgFlightHours}h`}</span>
                 <span className="hidden h-1 w-1 rounded-full bg-muted-foreground sm:inline" />
@@ -233,7 +233,7 @@ export function DestinationDetail({
                 </div>
                 <div className="mt-5 flex items-end justify-between">
                   <span className="text-xs uppercase tracking-widest text-muted-foreground">From</span>
-                  <span className="font-serif text-2xl text-accent">{a.fromPrice.toLocaleString()} kr</span>
+                  <span className="font-serif text-2xl text-accent">{a.fromPrice.toLocaleString("en-US")} kr</span>
                 </div>
               </div>
             ))}
@@ -291,7 +291,7 @@ export function DestinationDetail({
                   <span className="mx-2 opacity-40">·</span>
                   {r.when}
                   <span className="mx-2 opacity-40">·</span>
-                  <span className="font-serif text-accent">{r.price.toLocaleString()} kr</span>
+                  <span className="font-serif text-accent">{r.price.toLocaleString("en-US")} kr</span>
                   <span className="mx-2 opacity-40">·</span>
                   {r.ago}
                 </span>
@@ -330,8 +330,8 @@ export function DestinationDetail({
       {(d.cheapestMonth || d.priciestMonth || d.popularMonth) && (
         <section id="prices" className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
           <div className="grid gap-4 md:grid-cols-3">
-            {d.cheapestMonth && <SignalCard tone="good" icon={TrendingDown} title="Cheapest month" headline={d.cheapestMonth.name} badge={`${d.cheapestMonth.savingsPct}% cheaper`} price={`${d.cheapestMonth.price.toLocaleString()} kr`} note={d.cheapestMonth.note} />}
-            {d.priciestMonth && <SignalCard tone="warn" icon={TrendingUp} title="Priciest month" headline={d.priciestMonth.name} badge={`+${d.priciestMonth.premiumPct}% pricier`} price={`${d.priciestMonth.price.toLocaleString()} kr`} note={d.priciestMonth.note} />}
+            {d.cheapestMonth && <SignalCard tone="good" icon={TrendingDown} title="Cheapest month" headline={d.cheapestMonth.name} badge={`${d.cheapestMonth.savingsPct}% cheaper`} price={`${d.cheapestMonth.price.toLocaleString("en-US")} kr`} note={d.cheapestMonth.note} />}
+            {d.priciestMonth && <SignalCard tone="warn" icon={TrendingUp} title="Priciest month" headline={d.priciestMonth.name} badge={`+${d.priciestMonth.premiumPct}% pricier`} price={`${d.priciestMonth.price.toLocaleString("en-US")} kr`} note={d.priciestMonth.note} />}
             {d.popularMonth && <SignalCard tone="neutral" icon={Users} title="Most popular" headline={d.popularMonth.name} badge="Most travelers" price="Peak demand" note={d.popularMonth.note} />}
           </div>
         </section>
@@ -371,7 +371,7 @@ export function DestinationDetail({
                       <div className="h-2.5 flex-1 overflow-hidden rounded-full bg-muted">
                         <div className={`h-full rounded-full ${isMin ? "bg-emerald-500 shadow-glow" : "bg-accent/50"}`} style={{ width: `${pct}%` }} />
                       </div>
-                      <span className={`w-20 text-right font-serif text-sm ${isMin ? "text-emerald-600 dark:text-emerald-400" : "text-foreground"}`}>{dp.price.toLocaleString()} kr</span>
+                      <span className={`w-20 text-right font-serif text-sm ${isMin ? "text-emerald-600 dark:text-emerald-400" : "text-foreground"}`}>{dp.price.toLocaleString("en-US")} kr</span>
                     </div>
                   );
                 })}
@@ -419,7 +419,7 @@ export function DestinationDetail({
                 <div className="col-span-2 text-sm text-foreground">{r.duration}</div>
                 <div className="col-span-3 text-xs text-muted-foreground">{r.airlines.join(" · ")}</div>
                 <div className="col-span-1 text-right text-sm text-foreground">{r.perWeek}</div>
-                <div className="col-span-2 text-right font-serif text-lg text-accent">{r.price.toLocaleString()} kr</div>
+                <div className="col-span-2 text-right font-serif text-lg text-accent">{r.price.toLocaleString("en-US")} kr</div>
               </div>
             ))}
           </div>
@@ -469,7 +469,7 @@ export function DestinationDetail({
               <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is the best time to book?</h2>
               <p className="mt-4 text-muted-foreground">
                 Book <strong className="text-foreground">4–6 weeks before departure</strong> for the sharpest prices. Save up to{" "}
-                <span className="text-accent font-semibold">{(d.bookingWindow.lastMinute - d.bookingWindow.best).toLocaleString()} kr</span> vs. last minute.
+                <span className="text-accent font-semibold">{(d.bookingWindow.lastMinute - d.bookingWindow.best).toLocaleString("en-US")} kr</span> vs. last minute.
               </p>
               <div className="mt-8 space-y-4">
                 <PriceBar label="Best price (4–6 weeks ahead)" price={d.bookingWindow.best} max={d.bookingWindow.lastMinute} highlight />
@@ -758,7 +758,7 @@ export function DestinationDetail({
                   </div>
                   <div className="text-right">
                     <p className="text-xs uppercase tracking-widest text-muted-foreground">From</p>
-                    <p className="font-serif text-lg text-accent">{n.price.toLocaleString()} kr</p>
+                    <p className="font-serif text-lg text-accent">{n.price.toLocaleString("en-US")} kr</p>
                     {hasPage && <ArrowRight className="mt-2 ml-auto h-4 w-4 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" />}
                   </div>
                 </>
@@ -799,7 +799,7 @@ export function DestinationDetail({
           <div className="relative flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             <div>
               <h2 className="font-serif text-3xl sm:text-4xl">Ready to fly to {d.city}?</h2>
-              <p className="mt-2 opacity-80">Let Flyamba&apos;s AI find the smartest route — from {d.price.toLocaleString()} kr.</p>
+              <p className="mt-2 opacity-80">Let Flyamba&apos;s AI find the smartest route — from {d.price.toLocaleString("en-US")} kr.</p>
             </div>
             <Link href="/" className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-accent-foreground shadow-glow transition hover:scale-105">
               <Plane className="h-4 w-4 -rotate-45" /> Search with AI <ArrowRight className="h-4 w-4" />
@@ -872,7 +872,7 @@ function PriceChart({ data }: { data: { month: string; price: number }[] }) {
           const isMax = d.price === max;
           return (
             <div key={d.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-              <span className={`text-[11px] font-semibold transition ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>{d.price.toLocaleString()}</span>
+              <span className={`text-[11px] font-semibold transition ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>{d.price.toLocaleString("en-US")}</span>
               <div className={`w-full rounded-t-xl transition ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: barHeight }} />
               <span className="text-[11px] font-semibold text-muted-foreground">{d.month}</span>
             </div>
@@ -897,7 +897,7 @@ function LowPriceCalendar({ data, city }: { data: { month: string; price: number
       {data.map((m) => (
         <button key={m.month} aria-label={`Cheapest fare to ${city} in ${m.month}`} className={`flex flex-col items-start rounded-2xl border p-3 text-left transition hover:-translate-y-0.5 hover:shadow-elegant ${tone(m.price)}`}>
           <span className="text-[10px] font-semibold uppercase tracking-widest opacity-80">{m.month}</span>
-          <span className="mt-1 font-serif text-lg">{m.price.toLocaleString()}</span>
+          <span className="mt-1 font-serif text-lg">{m.price.toLocaleString("en-US")}</span>
           <span className="text-[10px] opacity-70">kr from</span>
         </button>
       ))}
@@ -911,7 +911,7 @@ function PriceBar({ label, price, max, highlight }: { label: string; price: numb
     <div>
       <div className="flex items-center justify-between text-sm">
         <span className={highlight ? "font-semibold text-foreground" : "text-muted-foreground"}>{label}</span>
-        <span className={highlight ? "font-serif text-lg text-accent" : "font-serif text-base text-foreground"}>{price.toLocaleString()} kr</span>
+        <span className={highlight ? "font-serif text-lg text-accent" : "font-serif text-base text-foreground"}>{price.toLocaleString("en-US")} kr</span>
       </div>
       <div className="mt-2 h-2 overflow-hidden rounded-full bg-muted">
         <div className={`h-full rounded-full ${highlight ? "bg-accent shadow-glow" : "bg-foreground/25"}`} style={{ width: `${pct}%` }} />

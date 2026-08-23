@@ -10,7 +10,7 @@ export function usd(sek: number): number {
 
 /** SEK integer → "$123" display string. */
 export function usdStr(sek: number): string {
-  return `$${usd(sek).toLocaleString()}`;
+  return `$${usd(sek).toLocaleString("en-US")}`;
 }
 
 /** SEK → USD rounded to the nearest $5 (for price charts). */
