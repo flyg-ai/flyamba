@@ -10,9 +10,13 @@
 --
 -- We could not tell them apart. origin_fares records price, dates and airline but
 -- not stops, so a New York fare to Bali proves a route exists at some price — not
--- that anyone flies it non-stop. Travelpayouts already returns
--- `number_of_changes` on every option in v1/prices/cheap; the cron read the field
--- and threw it away.
+-- that anyone flies it non-stop.
+--
+-- CORRECTION, measured after this file was written: v1/prices/cheap does NOT
+-- return number_of_changes — not with destination="-" and not per pair. The field
+-- exists on v2/prices/latest only. The cron therefore cannot fill this column
+-- from its current endpoint no matter how many nights it runs; filling it needs a
+-- v2/prices/latest pass, which is a design decision, not a bug fix.
 --
 -- NULLABLE, AND NULL MEANS "WE DO NOT KNOW". The 5,370 rows already in the table
 -- were collected without it and must not be backfilled with a guess — a default

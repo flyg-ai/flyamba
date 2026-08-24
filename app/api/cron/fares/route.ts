@@ -122,7 +122,13 @@ type CheapOption = {
   departure_at?: string;
   return_at?: string;
   expires_at?: string;
-  /** Stops on the itinerary. 0 is a non-stop; the upstream has always sent it. */
+  /**
+   * Stops on the itinerary. WRITTEN BUT NEVER RECEIVED: v1/prices/cheap does not
+   * return this field — measured against both call shapes — so it is always
+   * undefined here and the column stays NULL. It lives on v2/prices/latest. Kept
+   * in the type so a future v2 pass slots in without a schema change; do not
+   * read the column as evidence until something actually fills it.
+   */
   number_of_changes?: number;
 };
 
