@@ -115,7 +115,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How long is the flight to Athens?",
-    a: `Athens is about 3h 45m nonstop from London, 2h from Rome, 3h 20m from Paris and 1h 25m from Istanbul. From New York the nonstop is roughly 9h 45m. Flyamba currently tracks nonstop routes from ${NON_STOP.length} cities.`,
+    a: "Within Europe, Athens is about 3h 45m from London, 2h from Rome, 3h 20m from Paris and 1h 25m from Istanbul. From the US, total journey time depends on whether your itinerary is non-stop or connects through a European hub — search live fares above to see real routings for your dates.",
   },
   {
     q: "Which airport does Athens use?",

@@ -280,10 +280,83 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     }
   }
 
+  // ── Non-stop evidence pass ─────────────────────────────────────────────────
+  //
+  // v1/prices/cheap never returns number_of_changes (measured against both call
+  // shapes), so the main loop above cannot fill the column. v2/prices/latest
+  // does carry it. One call per origin; the cheapest OBSERVED NON-STOP per
+  // (origin, slug) is stored as a rank-3 row — a real, purchasable fare whose
+  // number_of_changes truthfully describes ITS OWN itinerary. Ranks 0–1 remain
+  // "cheapest overall"; rank 3 means "cheapest non-stop we saw".
+  //
+  // THE EVIDENCE IS ONE-DIRECTIONAL, and that is the whole point:
+  //
+  //   number_of_changes = 0  →  a non-stop exists. May be claimed on a page.
+  //   number_of_changes > 0  →  says NOTHING about non-stops. We saw a cheaper
+  //                             connection, not the absence of a non-stop —
+  //                             v2/prices/latest reports cheapest fares, and the
+  //                             cheapest transatlantic is almost always a
+  //                             connection. This feed showed no non-stop for
+  //                             JFK–AMS while KLM flies it daily.
+  //   NULL                   →  nothing measured.
+  //
+  // Absence of a rank-3 row must never be read as "no non-stop exists".
+  let evidenceRows = 0;
+  for (const origin of SUPPORTED_ORIGINS) {
+    try {
+      const url =
+        `https://api.travelpayouts.com/v2/prices/latest` +
+        `?origin=${origin.iata}&currency=usd&period_type=year&one_way=false` +
+        `&show_to_affiliates=true&limit=1000&token=${token}`;
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`upstream ${res.status}`);
+      const records = ((await res.json())?.data ?? []) as Array<{
+        destination?: string; value?: number; depart_date?: string; return_date?: string;
+        number_of_changes?: number;
+      }>;
+
+      const cheapestNonstop = new Map<string, (typeof records)[number]>();
+      for (const r of records) {
+        if (r.number_of_changes !== 0 || typeof r.value !== "number" || !r.destination) continue;
+        for (const slug of SLUGS_BY_IATA.get(r.destination.toUpperCase()) ?? []) {
+          const seen = cheapestNonstop.get(slug);
+          if (!seen || (seen.value as number) > r.value) cheapestNonstop.set(slug, r);
+        }
+      }
+
+      const rows: FareRow[] = [...cheapestNonstop.entries()].map(([slug, r]) => ({
+        origin: origin.iata,
+        slug,
+        rank: 3,
+        price_usd: Math.round(r.value as number),
+        depart_date: dateOnly(r.depart_date),
+        return_date: dateOnly(r.return_date),
+        airline: null,
+        flight_number: null,
+        one_way: false,
+        found_at: null,
+        number_of_changes: 0,
+      }));
+      if (rows.length) {
+        const { error } = await supabaseServer
+          .from("origin_fares")
+          .upsert(rows, { onConflict: "origin,slug,one_way,rank" });
+        if (error) throw new Error(`supabase: ${error.message}`);
+        evidenceRows += rows.length;
+      }
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      failures.push(`${origin.iata} evidence: ${message}`);
+      console.error(`[cron/fares] ${origin.iata} evidence pass failed:`, message);
+    }
+    await sleep(DELAY_MS);
+  }
+
   const summary = {
     ok: failures.length === 0,
     origins: SUPPORTED_ORIGINS.length,
     rowsWritten: written,
+    nonstopEvidenceRows: evidenceRows,
     destinationsPerOrigin: coverage,
     failed: failures.length,
     failures: failures.slice(0, 10),

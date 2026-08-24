@@ -57,7 +57,7 @@ const FAQS: FaqItem[] = [
   },
   {
     q: "Are there non-stop flights to Amsterdam?",
-    a: "Yes. Schiphol is a major KLM hub with non-stop flights from many US cities including New York, Atlanta, Boston and Los Angeles, plus direct links from London, Paris, Dubai and hundreds of other cities worldwide.",
+    a: "Schiphol is KLM's home hub and one of the best-connected airports in Europe, with service from cities across the US and worldwide. Whether your own route is non-stop depends on your departure city and the season — search live fares above to see actual itineraries for your dates.",
   },
   {
     q: "What is the best time to visit Amsterdam?",

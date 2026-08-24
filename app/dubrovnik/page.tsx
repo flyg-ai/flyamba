@@ -19,6 +19,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -29,7 +30,7 @@ const CITY = {
   tpName: "dubrovnik_hr",
   summerTemp: 28,
   tagline: "The pearl of the Adriatic — medieval walls above a turquoise sea",
-  flightTime: "Seasonal nonstops from across Europe",
+  flightTime: "Seasonal service from across Europe",
   hero: "/images/destinations/flights-dubrovnik.avif",
 };
 
@@ -42,14 +43,7 @@ const MONTHLY_SEK: { month: string; sek: number }[] = [
 ];
 const LOWEST_SEK = Math.min(...MONTHLY_SEK.map((m) => m.sek));
 
-const NON_STOP = [
-  { city: "London", price: 89, iata: "LGW" },
-  { city: "Rome", price: 92, iata: "FCO" },
-  { city: "Frankfurt", price: 112, iata: "FRA" },
-  { city: "Paris", price: 124, iata: "CDG" },
-  { city: "Istanbul", price: 138, iata: "IST" },
-  { city: "New York", price: 525, iata: "JFK" },
-];
+// The hand-written non-stop list is gone; NonstopRoutes renders observed fares.
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/dubrovnik/attractions/gamla-stadens-murar.webp",
@@ -324,23 +318,11 @@ export default function DubrovnikHub() {
         </div>
       </section>
 
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Dubrovnik from {NON_STOP.length} cities</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Most European routes to DBV run seasonally (spring–autumn); US cities connect via a European hub.</p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → DBV{r.city === "New York" ? " · 1 stop" : " · nonstop"}</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Evidence-driven: rows are observed non-stop fares from the cron's
+          v2/prices/latest pass. The hand-written table that stood here listed
+          six cities with invented prices; this renders nothing when we hold no
+          evidence, which is "not observed", never "no non-stop exists". */}
+      <NonstopRoutes slug="dubrovnik" name="Dubrovnik" iata="DBV" />
 
       {/* 8. Why Dubrovnik */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">

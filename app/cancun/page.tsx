@@ -16,6 +16,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -26,7 +27,7 @@ const CITY = {
   tpName: "cancun_mx",
   summerTemp: 30,
   tagline: "Caribbean beaches, Mayan ruins and turquoise cenotes",
-  flightTime: "Huge nonstop US & Canada service",
+  flightTime: "One of the busiest leisure gateways in the Americas",
   hero: "/images/destinations/flights-cancun.avif",
 };
 
@@ -39,14 +40,7 @@ const MONTHLY_SEK: { month: string; sek: number }[] = [
 ];
 const LOWEST_SEK = Math.min(...MONTHLY_SEK.map((m) => m.sek));
 
-const NON_STOP = [
-  { city: "Miami", price: 180, iata: "MIA" },
-  { city: "Dallas", price: 240, iata: "DFW" },
-  { city: "New York", price: 265, iata: "JFK" },
-  { city: "Chicago", price: 290, iata: "ORD" },
-  { city: "Toronto", price: 315, iata: "YYZ" },
-  { city: "Los Angeles", price: 350, iata: "LAX" },
-];
+// The hand-written non-stop list is gone; NonstopRoutes renders observed fares.
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/placeholders/placeholder-attractions.webp",
@@ -96,7 +90,7 @@ const NEARBY = [
 const FAQ: FaqItem[] = [
   {
     q: "How much are flights to Cancún?",
-    a: `Round-trip fares to Cancún start from around ${usdStr(LOWEST_SEK)} in the low season (September–November), rising well above $500 over Christmas, New Year and spring break. Cancún has huge nonstop competition from the US and Canada, so booking early and flying midweek gets the best prices.`,
+    a: `Round-trip fares to Cancún start from around ${usdStr(LOWEST_SEK)} in the low season (September–November), rising well above $500 over Christmas, New Year and spring break. Cancún has intense airline competition from the US and Canada, so booking early and flying midweek gets the best prices.`,
   },
   {
     q: "When is the best time to visit Cancún?",
@@ -230,7 +224,7 @@ export default function CancunHub() {
           <span className="text-muted-foreground/40">•</span>
           <span>{CITY.flightTime}</span>
           <span className="text-muted-foreground/40">•</span>
-          <span>Nonstop from Miami, New York &amp; Toronto</span>
+          <span>Heavy service from across the US &amp; Canada</span>
           <span className="text-muted-foreground/40">•</span>
           <span className="inline-flex items-center gap-1"><Plane className="h-4 w-4 text-accent" /> {CITY.iata}</span>
         </div>
@@ -244,7 +238,7 @@ export default function CancunHub() {
       {/* 3. Flight search widget */}
       <section id="flights" className="mx-auto mt-10 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
         <h2 className="mb-3 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Find the Best Flights to Cancún</h2>
-        <p className="mb-6 max-w-3xl text-muted-foreground">Cancún is one of the easiest long-haul beach escapes to reach, with a huge volume of nonstop flights from across the US and Canada as well as connections from Europe and Latin America — making it one of the most popular winter-sun destinations anywhere. Find cheap flights to Cancún, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Cancún — just describe your trip and Flyamba does the rest.</p>
+        <p className="mb-6 max-w-3xl text-muted-foreground">Cancún is one of the easiest long-haul beach escapes to reach, with heavy service from across the US and Canada and connections from Europe and Latin America — making it one of the most popular winter-sun destinations anywhere. Find cheap flights to Cancún, compare airlines and book direct. Our AI flight search compares hundreds of routes to find you the cheapest flights to Cancún — just describe your trip and Flyamba does the rest.</p>
         <AviasalesWidget toName={CITY.tpName} />
 
         {/* Observed fares by month. Renders nothing below three months —
@@ -320,22 +314,11 @@ export default function CancunHub() {
         </div>
       </section>
 
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Cancún from {NON_STOP.length} cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → CUN · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      {/* Evidence-driven: rows are observed non-stop fares from the cron's
+          v2/prices/latest pass. The hand-written table that stood here listed
+          six cities with invented prices; this renders nothing when we hold no
+          evidence, which is "not observed", never "no non-stop exists". */}
+      <NonstopRoutes slug="cancun" name="Cancún" iata="CUN" />
 
       {/* 8. Why Cancún */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">

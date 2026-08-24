@@ -436,6 +436,23 @@ Augsburg and Detroit but not Rome, Paris or Athens. The file's own header says t
 scores are editorial judgements authored for a Swedish audience and that some are
 plainly wrong. `/where-is-it-warm` filtered on them briefly and no longer does.
 
+## The cron endpoint cannot be triggered from outside
+
+`CRON_SECRET` is marked **sensitive** in Vercel, so `vercel env pull` returns
+`CRON_SECRET=""` and the local `.env.local` value is a different string — every
+manual call to `/api/cron/fares` from a laptop gets a 401, and no amount of
+quoting fixes it. Do not spend the half hour. To run the job on demand, mirror
+the route's logic locally against the same tables with the local service-role
+key (idempotent: the nightly run upserts the same keys), or trigger it from the
+Vercel dashboard.
+
+Two route-data facts measured the hard way, so they do not get re-derived:
+`v1/prices/cheap` never returns `number_of_changes` (either call shape) — the
+evidence lives on `v2/prices/latest`, which the cron's evidence pass reads. And
+`api.travelpayouts.com/data/routes.json` looks like the perfect schedule source
+but is stale: it lists Alitalia (defunct 2021) and Olympic on JFK–ATH. Nothing in
+the repo reads it, and nothing should start.
+
 ## Every new Supabase reader needs `cache: "no-store"`
 
 Next stores build-time fetch responses in `.next/cache`, and Vercel restores that

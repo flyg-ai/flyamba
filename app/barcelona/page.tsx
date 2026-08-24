@@ -92,7 +92,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "Which airlines fly to Barcelona?",
-    a: `${airlineNames(d).slice(0, 4).join(", ")} and Ryanair operate the most routes into El Prat, alongside easyJet, Lufthansa, Air France and KLM within Europe. Delta, United and American Airlines fly nonstop from the United States.`,
+    a: `${airlineNames(d).slice(0, 4).join(", ")} and Ryanair operate the most routes into El Prat, alongside easyJet, Lufthansa, Air France and KLM within Europe, with US carriers serving the route as well.`,
   },
   {
     q: "When is the cheapest time to fly to Barcelona?",
@@ -100,7 +100,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How long is the flight to Barcelona?",
-    a: `Barcelona is about ${d.flightTime} from London, 1h 45m from Paris and roughly 8h nonstop from New York. Flyamba tracks nonstop routes from ${NON_STOP.length} cities including Chicago, Miami and Los Angeles.`,
+    a: `Within Europe, Barcelona is about ${d.flightTime} from London and 1h 45m from Paris. From the US, total journey time depends on whether your itinerary is non-stop or connects — search live fares above to see real routings and durations for your dates.`,
   },
   {
     q: "Which airport does Barcelona use?",

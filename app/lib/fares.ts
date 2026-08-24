@@ -265,3 +265,47 @@ export function formatFareLabelLong(f: UsFare, originLabel: string): { headline:
     detail: [seen ? `seen ${seen}` : null, dates].filter(Boolean).join(" · ") || null,
   };
 }
+
+// ── Non-stop evidence ────────────────────────────────────────────────────────
+
+export type NonstopEvidence = {
+  /** Metro code of the SUPPORTED_ORIGIN the fare departs from. */
+  origin: string;
+  priceUsd: number;
+  departDate: string | null;
+  returnDate: string | null;
+  fetchedAt: string | null;
+};
+
+/**
+ * Observed non-stop fares for a destination — the rank-3 rows the cron's
+ * v2/prices/latest pass writes.
+ *
+ * THE EVIDENCE ONLY WORKS IN ONE DIRECTION. A row here means someone was sold a
+ * non-stop at this price: the route exists and a page may say so. The ABSENCE of
+ * a row means nothing — the feed reports cheapest fares, the cheapest
+ * transatlantic is almost always a connection, and JFK–AMS showed no non-stop in
+ * it while KLM flies the route daily. Never render "no non-stop service" from an
+ * empty result; render nothing.
+ */
+export async function getNonstopEvidence(slug: string): Promise<NonstopEvidence[]> {
+  if (!faresClient) return [];
+  const { data, error } = await faresClient
+    .from("origin_fares")
+    .select("origin, price_usd, depart_date, return_date, fetched_at")
+    .eq("slug", slug)
+    .eq("one_way", false)
+    .eq("number_of_changes", 0)
+    .order("price_usd");
+  if (error) {
+    console.error("[fares] nonstop evidence select failed:", error.message);
+    return [];
+  }
+  return (data ?? []).map((r) => ({
+    origin: r.origin as string,
+    priceUsd: r.price_usd as number,
+    departDate: (r.depart_date as string | null) ?? null,
+    returnDate: (r.return_date as string | null) ?? null,
+    fetchedAt: (r.fetched_at as string | null) ?? null,
+  }));
+}
