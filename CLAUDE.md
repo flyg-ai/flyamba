@@ -260,6 +260,18 @@ were on the developer's disk, so every local build passed and `next build` repor
 nothing. The images broke only when Vercel built from a clean checkout. Checking the
 filesystem is not enough; a file can exist and still never ship.
 
+**A script that edits files must verify its own effect, not report its intent.**
+Read the result back after writing and fail if the change is not there. A
+`replace()` whose anchor does not match returns the string unchanged, no error —
+so the script prints its success message either way. This has bitten twice: a
+codemod printed "matchade" for ibiza and phuket without writing (the build caught
+it), and a patch to `verify-locale.mjs` printed "mönster tillagda" against an
+anchor that never matched — the gate then passed its own injection test with exit
+code 0 for both new patterns, which looked exactly like success. That one was
+caught only because the injection was tested after the fact. "It printed the done
+message" and "it did the thing" are different claims; only reading the file back
+connects them.
+
 **Known debt — no hero image covers a wide screen at DPR 2.** The homepage hero
 (`/images/content/photo-1507525428034-b723cf961d3e.avif`) is **1600x1064**, and
 `/where-is-it-warm` now borrows the same file. Both render full-bleed. A 1440 CSS
