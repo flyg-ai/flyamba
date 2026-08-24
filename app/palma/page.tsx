@@ -20,6 +20,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── City facts (self-contained; not from the shared destinations catalog) ────
 const CITY = {
@@ -87,17 +88,7 @@ function jsonLd() {
 }
 
 // ── Non-stop routes (USD, research-based low round-trip fares) ───────────────
-const NON_STOP = [
-  { city: "Barcelona", price: 55, iata: "BCN" },
-  { city: "London", price: 79, iata: "LGW" },
-  { city: "Madrid", price: 65, iata: "MAD" },
-  { city: "Manchester", price: 89, iata: "MAN" },
-  { city: "Berlin", price: 95, iata: "BER" },
-  { city: "Frankfurt", price: 99, iata: "FRA" },
-  { city: "Amsterdam", price: 105, iata: "AMS" },
-  { city: "Paris", price: 110, iata: "CDG" },
-  { city: "Dublin", price: 115, iata: "DUB" },
-];
+// The authored non-stop list is gone; NonstopRoutes renders observed fares.
 
 const FAQ: FaqItem[] = [
   {
@@ -114,7 +105,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How long is the flight to Palma?",
-    a: `Palma is ${CITY.flightTime}, about 55 minutes from Barcelona, 1h 20m from Madrid and roughly 2h 15m from Frankfurt or Amsterdam. Flyamba tracks nonstop routes from ${NON_STOP.length} cities.`,
+    a: `Palma is about 55 minutes from Barcelona, 1h 20m from Madrid and roughly 2h 15m from Frankfurt or Amsterdam.`,
   },
   {
     q: "Which airport does Palma use?",
@@ -238,6 +229,10 @@ export default function PalmaHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="palma" name="Palma" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="palma" name="Palma" iata="PMI" />
         <LowFareCta slug="palma" city="Palma" />
       </section>
 

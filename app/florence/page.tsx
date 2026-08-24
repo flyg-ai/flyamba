@@ -16,6 +16,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -34,14 +35,7 @@ const CITY = {
 // The twelve Stockholm SEK estimates that fed this page are gone with the chart,
 // the hero pill and the FAQ answers that quoted them.
 
-const NON_STOP = [
-  { city: "London", price: 88, iata: "LGW" },
-  { city: "Paris", price: 95, iata: "CDG" },
-  { city: "Frankfurt", price: 110, iata: "FRA" },
-  { city: "Amsterdam", price: 99, iata: "AMS" },
-  { city: "Munich", price: 105, iata: "MUC" },
-  { city: "New York", price: 520, iata: "JFK" },
-];
+// The authored non-stop list is gone; NonstopRoutes renders observed fares.
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/florence/sevardheter/brunelleschi-kupolen.webp",
@@ -232,6 +226,10 @@ export default function FlorenceHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="florence" name="Florence" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="florence" name="Florence" iata="FLR" />
       </section>
 
       {/* 4. Booking insights */}

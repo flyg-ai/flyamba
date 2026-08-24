@@ -17,6 +17,7 @@ import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -36,14 +37,6 @@ const CITY = {
 // the FAQ answer that quoted them. Prices now come from observed fares — see
 // app/lib/fare-copy.ts.
 
-const NON_STOP = [
-  { city: "Tokyo", price: 290, iata: "HND" },
-  { city: "Sydney", price: 340, iata: "SYD" },
-  { city: "Dubai", price: 420, iata: "DXB" },
-  { city: "London", price: 610, iata: "LHR" },
-  { city: "San Francisco", price: 780, iata: "SFO" },
-  { city: "New York", price: 920, iata: "JFK" },
-];
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/singapore/sevardheter/gardens-by-the-bay.webp",
@@ -253,6 +246,10 @@ export default async function SingaporeHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="singapore" name="Singapore" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="singapore" name="Singapore" iata="SIN" />
       </section>
 
       {/* 4. Booking insights */}
@@ -307,23 +304,9 @@ export default async function SingaporeHub() {
           FareCalendarSection, mounted after the search widget above, draws the same
           months from observed fares instead — and shows nothing where we hold too
           few. */}
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Singapore from {NON_STOP.length} global cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → SIN · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Singapore */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Singapore?</p>

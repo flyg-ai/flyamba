@@ -18,6 +18,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 const HERO = "/images/destinations/flights-mykonos.avif";
 // The SEK-derived monthly figures are gone with the chart they drew.
@@ -86,14 +87,7 @@ function jsonLd() {
 }
 
 // ── Static data (USD) ────────────────────────────────────────────────────────
-const NON_STOP = [
-  { city: "Athens", price: 89, iata: "ATH" },
-  { city: "London", price: 149, iata: "LHR" },
-  { city: "Paris", price: 179, iata: "CDG" },
-  { city: "Rome", price: 129, iata: "FCO" },
-  { city: "Milan", price: 139, iata: "MXP" },
-  { city: "Vienna", price: 159, iata: "VIE" },
-];
+// The authored non-stop list is gone; NonstopRoutes renders observed fares.
 
 const CATEGORY_IMAGES: Record<string, string> = {
   attractions: "/images/mykonos/attractions/vindkvarnarna-kato-mili.webp",
@@ -216,6 +210,10 @@ export default function MykonosHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="mykonos" name="Mykonos" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="mykonos" name="Mykonos" iata="JMK" />
         <LowFareCta slug="mykonos" city="Mykonos" />
       </section>
 

@@ -18,6 +18,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── Self-contained Bangkok facts (USD-facing, SEK source prices) ──────────────
 const CITY = {
@@ -40,16 +41,6 @@ const LOW = Math.min(...USD_MONTHS.map((m) => m.price));
 const HIGH = Math.max(...USD_MONTHS.map((m) => m.price));
 const AVERAGE = Math.round(USD_MONTHS.reduce((s, m) => s + m.price, 0) / USD_MONTHS.length);
 
-const NON_STOP = [
-  { city: "London", price: 620, iata: "LHR" },
-  { city: "Dubai", price: 340, iata: "DXB" },
-  { city: "Singapore", price: 180, iata: "SIN" },
-  { city: "Tokyo", price: 290, iata: "NRT" },
-  { city: "Hong Kong", price: 260, iata: "HKG" },
-  { city: "Sydney", price: 480, iata: "SYD" },
-  { city: "Seoul", price: 320, iata: "ICN" },
-  { city: "Doha", price: 350, iata: "DOH" },
-];
 
 const WHY = [
   { icon: "🍜", text: "The undisputed street-food capital of the world — from Michelin-starred stalls to Yaowarat's neon-lit night market." },
@@ -118,7 +109,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How long is the flight to Bangkok?",
-    a: `Bangkok is about 11h 30m nonstop from London, 6h from Dubai, 2h 20m from Singapore and 6h from Tokyo. Flyamba tracks nonstop routes from ${NON_STOP.length} cities.`,
+    a: "Within Asia and the Gulf, Bangkok is about 6h from Dubai, 2h 20m from Singapore and 6h from Tokyo. From Europe or the US, total journey time depends on whether your itinerary is non-stop or connects — search live fares above to see real routings for your dates.",
   },
   {
     q: "Which airport does Bangkok use?",
@@ -239,6 +230,10 @@ export default function BangkokHub() {
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="bangkok" name="Bangkok" />
 
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="bangkok" name="Bangkok" iata="BKK" />
+
         <LowFareCta slug="bangkok" city="Bangkok" />
       </section>
 
@@ -306,23 +301,9 @@ export default function BangkokHub() {
         </div>
       </section>
 
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Bangkok from {NON_STOP.length} cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → BKK · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Bangkok */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Bangkok?</p>

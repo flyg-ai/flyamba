@@ -19,6 +19,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── City facts (self-contained; SEK prices → USD for display) ────────────────
 const CITY = {
@@ -39,14 +40,6 @@ const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "Ju
 // Average round-trip fares seeded in SEK.
 const MONTHLY_SEK = [2600, 2400, 2700, 3000, 3400, 3700, 4000, 3800, 3300, 2900, 2500, 2700];
 
-const NON_STOP = [
-  { city: "London", price: 79, iata: "LHR" },
-  { city: "Paris", price: 99, iata: "CDG" },
-  { city: "Amsterdam", price: 89, iata: "AMS" },
-  { city: "New York", price: 459, iata: "JFK" },
-  { city: "Dubai", price: 389, iata: "DXB" },
-  { city: "Doha", price: 429, iata: "DOH" },
-];
 
 const ATTRACTION_PREVIEW = [
   { name: "Charles Bridge", blurb: "Prague's iconic Gothic bridge of baroque saints and castle views.", image: "/images/prague/sevardheter/karlsbron.webp" },
@@ -240,6 +233,10 @@ export default function PragueHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="prague" name="Prague" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="prague" name="Prague" iata="PRG" />
         <LowFareCta slug="prague" city="Prague" />
       </section>
 
@@ -309,23 +306,9 @@ export default function PragueHub() {
         </div>
       </section>
 
-      {/* 7. Non-stop cities */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Prague from {NON_STOP.length} cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → PRG · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Prague */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Prague?</p>

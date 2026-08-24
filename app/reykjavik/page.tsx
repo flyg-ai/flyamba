@@ -18,6 +18,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 const HERO = "/images/destinations/flights-reykjavik.avif";
 const usdMonths = REYKJAVIK.monthlyPrices.map((m) => ({ month: m.month, price: usd5(m.price) }));
@@ -88,14 +89,6 @@ function jsonLd() {
 }
 
 // ── Static data (USD) ────────────────────────────────────────────────────────
-const NON_STOP = [
-  { city: "London", price: 129, iata: "LHR" },
-  { city: "Copenhagen", price: 119, iata: "CPH" },
-  { city: "Oslo", price: 109, iata: "OSL" },
-  { city: "New York", price: 359, iata: "JFK" },
-  { city: "Boston", price: 329, iata: "BOS" },
-  { city: "Paris", price: 149, iata: "CDG" },
-];
 
 const CATEGORY_IMAGES: Record<string, string> = {
   attractions: "/images/reykjavik/attractions/hallgrimskirkja.webp",
@@ -220,6 +213,10 @@ export default function ReykjavikHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="reykjavik" name="Reykjavík" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="reykjavik" name="Reykjavík" iata="KEF" />
         <LowFareCta slug="reykjavik" city="Reykjavík" />
       </section>
 
@@ -291,23 +288,9 @@ export default function ReykjavikHub() {
         </div>
       </section>
 
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Reykjavík from major cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → KEF · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Reykjavík */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Reykjavík?</p>

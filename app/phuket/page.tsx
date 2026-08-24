@@ -17,6 +17,7 @@ import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -36,16 +37,6 @@ const CITY = {
 // the FAQ answer that quoted them. Prices now come from observed fares — see
 // app/lib/fare-copy.ts.
 
-const NON_STOP = [
-  { city: "Bangkok", price: 45, iata: "BKK" },
-  { city: "Kuala Lumpur", price: 70, iata: "KUL" },
-  { city: "Singapore", price: 95, iata: "SIN" },
-  { city: "Hong Kong", price: 180, iata: "HKG" },
-  { city: "Seoul", price: 290, iata: "ICN" },
-  { city: "Dubai", price: 360, iata: "DXB" },
-  { city: "Doha", price: 380, iata: "DOH" },
-  { city: "Sydney", price: 430, iata: "SYD" },
-];
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/phuket/sevardheter/big-buddha.webp",
@@ -255,6 +246,10 @@ export default async function PhuketHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="phuket" name="Phuket" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="phuket" name="Phuket" iata="HKT" />
       </section>
 
       {/* 4. Booking insights */}
@@ -309,24 +304,9 @@ export default async function PhuketHub() {
           FareCalendarSection, mounted after the search widget above, draws the same
           months from observed fares instead — and shows nothing where we hold too
           few. */}
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Phuket from {NON_STOP.length} cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → HKT · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-sm text-muted-foreground">Travelling from the US, UK, Europe or Australia? Connect through Bangkok, Singapore, Dubai, Doha or Hong Kong — our AI search finds the cheapest one-stop combination for your dates.</p>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Phuket */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Phuket?</p>

@@ -18,6 +18,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 const d = SANTORINI;
 const URL = `${SITE}/santorini`;
@@ -77,14 +78,7 @@ function jsonLd() {
   return [touristDestination, faq];
 }
 
-const NON_STOP = [
-  { city: "Athens", price: 95, iata: "ATH", note: "year-round" },
-  { city: "London", price: 165, iata: "LGW", note: "seasonal" },
-  { city: "Milan", price: 140, iata: "MXP", note: "seasonal" },
-  { city: "Paris", price: 175, iata: "ORY", note: "seasonal" },
-  { city: "Amsterdam", price: 185, iata: "AMS", note: "seasonal" },
-  { city: "Rome", price: 130, iata: "FCO", note: "seasonal" },
-];
+// The authored non-stop list is gone; NonstopRoutes renders observed fares.
 
 const WHY = [
   { icon: "🌅", text: "The world's most famous sunset — the whole village of Oia turns gold and pink as the sun sinks behind the caldera." },
@@ -205,6 +199,10 @@ export default function SantoriniHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="santorini" name="Santorini" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="santorini" name="Santorini" iata="JTR" />
         <LowFareCta slug="santorini" city="Santorini" />
       </section>
 

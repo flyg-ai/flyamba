@@ -16,6 +16,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── Self-contained Tokyo hub data ────────────────────────────────────────────
 const SITE = "https://flyamba.com";
@@ -45,17 +46,6 @@ const MONTHLY_SEK = [
   { month: "Dec", price: 5700 },
 ];
 
-const NON_STOP = [
-  { city: "Los Angeles", price: 620, iata: "LAX" },
-  { city: "San Francisco", price: 650, iata: "SFO" },
-  { city: "New York", price: 780, iata: "JFK" },
-  { city: "Seattle", price: 610, iata: "SEA" },
-  { city: "London", price: 720, iata: "LHR" },
-  { city: "Paris", price: 760, iata: "CDG" },
-  { city: "Singapore", price: 420, iata: "SIN" },
-  { city: "Bangkok", price: 310, iata: "BKK" },
-  { city: "Seoul", price: 190, iata: "ICN" },
-];
 
 const WHY_VISIT = [
   { icon: "🍣", text: "The world's greatest food city, with more Michelin stars than anywhere else and unforgettable street eats, sushi, ramen and izakaya." },
@@ -233,6 +223,10 @@ export default function TokyoHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="tokyo" name="Tokyo" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="tokyo" name="Tokyo" iata="NRT" />
         <LowFareCta slug="tokyo" city="Tokyo" />
       </section>
 
@@ -300,23 +294,9 @@ export default function TokyoHub() {
         </div>
       </section>
 
-      {/* 7. Non-stop cities */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Tokyo from {NON_STOP.length} cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → NRT · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Tokyo */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Tokyo?</p>

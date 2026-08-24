@@ -17,6 +17,7 @@ import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const CITY = {
@@ -36,13 +37,6 @@ const CITY = {
 // the FAQ answer that quoted them. Prices now come from observed fares — see
 // app/lib/fare-copy.ts.
 
-const NON_STOP = [
-  { city: "London", price: 75, iata: "LHR" },
-  { city: "Paris", price: 95, iata: "CDG" },
-  { city: "Frankfurt", price: 110, iata: "FRA" },
-  { city: "New York", price: 430, iata: "JFK" },
-  { city: "Chicago", price: 520, iata: "ORD" },
-];
 
 const CATEGORY_IMG: Record<string, string> = {
   attractions: "/images/vienna/sevardheter/schonbrunn-slott.webp",
@@ -246,6 +240,10 @@ export default async function ViennaHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="vienna" name="Vienna" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="vienna" name="Vienna" iata="VIE" />
       </section>
 
       {/* 4. Booking insights */}
@@ -300,23 +298,9 @@ export default async function ViennaHub() {
           FareCalendarSection, mounted after the search widget above, draws the same
           months from observed fares instead — and shows nothing where we hold too
           few. */}
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Vienna from {NON_STOP.length} cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → VIE · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Vienna */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Vienna?</p>

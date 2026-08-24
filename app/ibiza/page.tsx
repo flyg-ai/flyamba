@@ -20,6 +20,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── Self-contained city facts (Ibiza is not in the rich destinations catalog) ─
 const IBIZA = {
@@ -88,16 +89,6 @@ function jsonLd() {
 }
 
 // ── Direct routes (USD, indicative one-way seasonal fares) ───────────────────
-const NON_STOP = [
-  { city: "Barcelona", price: 55, iata: "BCN" },
-  { city: "Madrid", price: 65, iata: "MAD" },
-  { city: "London", price: 95, iata: "LGW" },
-  { city: "Manchester", price: 105, iata: "MAN" },
-  { city: "Milan", price: 110, iata: "MXP" },
-  { city: "Amsterdam", price: 120, iata: "AMS" },
-  { city: "Paris", price: 130, iata: "ORY" },
-  { city: "Brussels", price: 115, iata: "BRU" },
-];
 
 const FAQ: FaqItem[] = [
   {
@@ -114,7 +105,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "How long is the flight to Ibiza?",
-    a: `Ibiza is about 50 minutes from Barcelona, 1h 15m from Madrid, 2h 30m from London and roughly 2h 45m from Amsterdam or Paris. Flyamba tracks nonstop routes from ${NON_STOP.length} cities.`,
+    a: "Ibiza is about 50 minutes from Barcelona, 1h 15m from Madrid, 2h 30m from London and roughly 2h 45m from Amsterdam or Paris.",
   },
   {
     q: "Which airport does Ibiza use?",
@@ -223,6 +214,10 @@ export default function IbizaHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="ibiza" name="Ibiza" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="ibiza" name="Ibiza" iata="IBZ" />
         <LowFareCta slug="ibiza" city="Ibiza" />
       </section>
 
@@ -281,24 +276,9 @@ export default function IbizaHub() {
           as a curve. It is not rebuilt from observed data: Ibiza returns two
           months of fares from all four US origins, and FareCalendarSection
           (mounted above) correctly renders nothing below three. */}
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Ibiza from {NON_STOP.length} cities</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Indicative one-way fares in the summer season; routes are seasonal and busiest June–September.</p>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → IBZ · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Ibiza */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Ibiza?</p>

@@ -19,6 +19,7 @@ import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } f
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 
 // ── Self-contained Tenerife facts (USD audience) ─────────────────────────────
 const HERO = "/images/destinations/flights-teneriffa.avif";
@@ -30,14 +31,6 @@ const FLIGHT_TIME = "4h 30m from London";
 const MONTHLY_SEK = [3800, 3500, 3800, 4100, 4500, 4900, 5300, 5100, 4600, 4200, 3700, 3900];
 const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-const NON_STOP = [
-  { city: "London", price: 89, iata: "LGW" },
-  { city: "Manchester", price: 95, iata: "MAN" },
-  { city: "Madrid", price: 69, iata: "MAD" },
-  { city: "Berlin", price: 110, iata: "BER" },
-  { city: "Paris", price: 99, iata: "CDG" },
-  { city: "Dublin", price: 105, iata: "DUB" },
-];
 
 const NEARBY = [
   { city: "Gran Canaria", href: "/gran-canaria" },
@@ -224,6 +217,10 @@ export default function TenerifeHub() {
         {/* Observed fares by month. Renders nothing below three months —
             see app/components/FareCalendarSection.tsx. */}
         <FareCalendarSection slug="tenerife" name="Tenerife" />
+
+        {/* Observed non-stop fares. Renders nothing without evidence —
+            absence is "not observed", never "no non-stop exists". */}
+        <NonstopRoutes slug="tenerife" name="Tenerife" iata="TFS" />
         <LowFareCta slug="tenerife" city="Tenerife" />
       </section>
 
@@ -294,23 +291,9 @@ export default function TenerifeHub() {
         </div>
       </section>
 
-      {/* 7. Non-stop cities (USD) */}
-      <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">Non-stop to Tenerife from {NON_STOP.length} cities</h2>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {NON_STOP.map((r) => (
-            <div key={r.city} className="flex items-center justify-between rounded-3xl border border-border bg-card p-6">
-              <div>
-                <p className="font-serif text-lg font-semibold text-foreground">{r.city}</p>
-                <p className="text-xs text-muted-foreground">{r.iata} → {IATA} · nonstop</p>
-              </div>
-              <p className="font-serif text-2xl text-accent">${r.price}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* The authored non-stop table that stood here — invented prices and
+          hardcoded stop labels — is gone. NonstopRoutes above renders the
+          observed fares instead. */}
       {/* 8. Why Tenerife */}
       <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
         <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why Tenerife?</p>
