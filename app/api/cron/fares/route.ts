@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 import { supabaseServer, isSupabaseServerConfigured } from "@/app/lib/supabase-server";
 import { SUPPORTED_ORIGINS } from "@/app/lib/origins";
+import { HUB_CITY_SLUGS } from "@/app/lib/hubs";
 
 // Nightly refresh of the "from $X" number for every destination, per origin.
 //
@@ -123,11 +124,10 @@ type CheapOption = {
   return_at?: string;
   expires_at?: string;
   /**
-   * Stops on the itinerary. WRITTEN BUT NEVER RECEIVED: v1/prices/cheap does not
-   * return this field — measured against both call shapes — so it is always
-   * undefined here and the column stays NULL. It lives on v2/prices/latest. Kept
-   * in the type so a future v2 pass slots in without a schema change; do not
-   * read the column as evidence until something actually fills it.
+   * Stops on the itinerary. v1/prices/cheap never returns this field (measured
+   * against both call shapes), so main-loop rows always store NULL here. The
+   * rank-3 evidence rows below are the only writers of 0 — they come from
+   * v1/prices/direct, where 0 stops is true by construction.
    */
   number_of_changes?: number;
 };
@@ -282,74 +282,80 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
   // ── Non-stop evidence pass ─────────────────────────────────────────────────
   //
-  // v1/prices/cheap never returns number_of_changes (measured against both call
-  // shapes), so the main loop above cannot fill the column. v2/prices/latest
-  // does carry it. One call per origin; the cheapest OBSERVED NON-STOP per
-  // (origin, slug) is stored as a rank-3 row — a real, purchasable fare whose
-  // number_of_changes truthfully describes ITS OWN itinerary. Ranks 0–1 remain
-  // "cheapest overall"; rank 3 means "cheapest non-stop we saw".
+  // SOURCE: v1/prices/direct — the Data API method for the cheapest DIRECT fare
+  // per pair. It replaced v2/prices/latest here because latest reports cheapest
+  // fares overall and is therefore biased: the cheapest transatlantic is almost
+  // always a connection, so it showed no non-stop for JFK-AMS (KLM flies it
+  // daily) and none for MIA-CUN, while happening to pass thinner routes.
+  // prices/direct answers the question actually being asked. It is a Data API
+  // method — cache-based, caching explicitly recommended by Travelpayouts, no
+  // user-initiation requirement — unlike flight_search, whose terms forbid
+  // background use outright (see CLAUDE.md).
   //
-  // THE EVIDENCE IS ONE-DIRECTIONAL, and that is the whole point:
+  // THE ASYMMETRY STILL HOLDS, and a better instrument does not loosen it:
   //
-  //   number_of_changes = 0  →  a non-stop exists. May be claimed on a page.
-  //   number_of_changes > 0  →  says NOTHING about non-stops. We saw a cheaper
-  //                             connection, not the absence of a non-stop —
-  //                             v2/prices/latest reports cheapest fares, and the
-  //                             cheapest transatlantic is almost always a
-  //                             connection. This feed showed no non-stop for
-  //                             JFK–AMS while KLM flies it daily.
-  //   NULL                   →  nothing measured.
+  //   answer with a price  ->  a direct route exists. May be claimed.
+  //   empty answer         ->  says NOTHING. This is still a cache; a route can
+  //                            be flown non-stop daily without a cached direct
+  //                            fare this week. Varadero happens to be correctly
+  //                            absent — that is luck, not proof.
   //
-  // Absence of a rank-3 row must never be read as "no non-stop exists".
+  // Scope: the 28 hub cities x all origins — the surface that renders
+  // NonstopRoutes — not the whole catalog. 672 calls, within the published
+  // 180/min for this method.
+  //
+  // CURRENCY IS VERIFIED PER RESPONSE, never assumed. The envelope carries
+  // `currency`; rows are written only when it says "usd", because the column
+  // they land in is named price_usd and the name is a claim. A response in any
+  // other currency is dropped loudly, not converted.
   let evidenceRows = 0;
+  const hubSet = new Set<string>(HUB_CITY_SLUGS);
+  const hubTargets = ALL_DESTINATIONS.filter((d) => hubSet.has(d.slug) && d.iata);
   for (const origin of SUPPORTED_ORIGINS) {
-    try {
-      const url =
-        `https://api.travelpayouts.com/v2/prices/latest` +
-        `?origin=${origin.iata}&currency=usd&period_type=year&one_way=false` +
-        `&show_to_affiliates=true&limit=1000&token=${token}`;
-      const res = await fetch(url, { cache: "no-store" });
-      if (!res.ok) throw new Error(`upstream ${res.status}`);
-      const records = ((await res.json())?.data ?? []) as Array<{
-        destination?: string; value?: number; depart_date?: string; return_date?: string;
-        number_of_changes?: number;
-      }>;
-
-      const cheapestNonstop = new Map<string, (typeof records)[number]>();
-      for (const r of records) {
-        if (r.number_of_changes !== 0 || typeof r.value !== "number" || !r.destination) continue;
-        for (const slug of SLUGS_BY_IATA.get(r.destination.toUpperCase()) ?? []) {
-          const seen = cheapestNonstop.get(slug);
-          if (!seen || (seen.value as number) > r.value) cheapestNonstop.set(slug, r);
+    for (const dest of hubTargets) {
+      try {
+        const url =
+          `https://api.travelpayouts.com/v1/prices/direct` +
+          `?origin=${origin.iata}&destination=${dest.iata}&currency=usd&token=${token}`;
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) throw new Error(`upstream ${res.status}`);
+        const json = (await res.json()) as {
+          currency?: string;
+          data?: Record<string, Record<string, CheapOption>>;
+        };
+        if (json.currency !== "usd") {
+          throw new Error(`answered in ${json.currency ?? "unknown currency"} — row refused, not converted`);
         }
-      }
-
-      const rows: FareRow[] = [...cheapestNonstop.entries()].map(([slug, r]) => ({
-        origin: origin.iata,
-        slug,
-        rank: 3,
-        price_usd: Math.round(r.value as number),
-        depart_date: dateOnly(r.depart_date),
-        return_date: dateOnly(r.return_date),
-        airline: null,
-        flight_number: null,
-        one_way: false,
-        found_at: null,
-        number_of_changes: 0,
-      }));
-      if (rows.length) {
+        const options = Object.values(json.data?.[dest.iata] ?? {}).filter(
+          (o) => typeof o?.price === "number" && Number.isFinite(o.price) && o.price > 0,
+        );
+        // An empty answer is "nothing measured", never "no direct route exists".
+        if (!options.length) continue;
+        const cheapest = options.sort((a, b) => (a.price as number) - (b.price as number))[0];
+        const row: FareRow = {
+          origin: origin.iata,
+          slug: dest.slug,
+          rank: 3,
+          price_usd: Math.round(cheapest.price as number),
+          depart_date: dateOnly(cheapest.departure_at),
+          return_date: dateOnly(cheapest.return_at),
+          airline: typeof cheapest.airline === "string" && cheapest.airline ? cheapest.airline : null,
+          flight_number: cheapest.flight_number != null ? String(cheapest.flight_number) : null,
+          one_way: false,
+          found_at: null,
+          number_of_changes: 0,
+        };
         const { error } = await supabaseServer
           .from("origin_fares")
-          .upsert(rows, { onConflict: "origin,slug,one_way,rank" });
+          .upsert([row], { onConflict: "origin,slug,one_way,rank" });
         if (error) throw new Error(`supabase: ${error.message}`);
-        evidenceRows += rows.length;
+        evidenceRows += 1;
+      } catch (err) {
+        const message = err instanceof Error ? err.message : String(err);
+        failures.push(`${origin.iata}->${dest.iata} evidence: ${message}`);
       }
-    } catch (err) {
-      const message = err instanceof Error ? err.message : String(err);
-      failures.push(`${origin.iata} evidence: ${message}`);
-      console.error(`[cron/fares] ${origin.iata} evidence pass failed:`, message);
+      await sleep(350);
     }
-    await sleep(DELAY_MS);
   }
 
   const summary = {

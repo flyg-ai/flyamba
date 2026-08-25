@@ -13,10 +13,11 @@
 -- that anyone flies it non-stop.
 --
 -- CORRECTION, measured after this file was written: v1/prices/cheap does NOT
--- return number_of_changes — not with destination="-" and not per pair. The field
--- exists on v2/prices/latest only. The cron therefore cannot fill this column
--- from its current endpoint no matter how many nights it runs; filling it needs a
--- v2/prices/latest pass, which is a design decision, not a bug fix.
+-- return number_of_changes — not with destination="-" and not per pair. The
+-- column is filled instead by the cron's evidence pass, which asks
+-- v1/prices/direct (cheapest DIRECT fare per pair) and writes rank-3 rows with
+-- number_of_changes = 0 — true by construction, since that method only returns
+-- direct itineraries. Main-loop rows stay NULL.
 --
 -- NULLABLE, AND NULL MEANS "WE DO NOT KNOW". The 5,370 rows already in the table
 -- were collected without it and must not be backfilled with a guess — a default

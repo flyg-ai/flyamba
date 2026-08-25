@@ -66,3 +66,4 @@ next-env.d.ts
 # Local scratch/backup dirs — never commit
 scratchpad/
 scripts/.fare-months-progress
+scripts/.direct-progress

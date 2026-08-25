@@ -446,6 +446,21 @@ the route's logic locally against the same tables with the local service-role
 key (idempotent: the nightly run upserts the same keys), or trigger it from the
 Vercel dashboard.
 
+**flight_search is off limits for background use — by contract, not by taste.**
+The terms require every search to be user-initiated, shown to that user with a
+"Book" button per variant, and to carry the real user's IP, Referer and
+User-Agent; automatic collection of booking links "will disable the API search
+for the partner". Access requires an application and 50,000 MAU, and the old v1
+endpoint was formally shut down on June 15, 2026 — a probe answering 200 today is
+running on borrowed time, not permission. A nightly job fails every one of those
+conditions, so background filling is a contract breach, not an optimisation
+question. The probe that discovered this was deleted; do not rebuild it. Sources:
+the Flight Search API article (support.travelpayouts.com/hc/en-us/articles/30565016140434),
+the old-version article (/articles/203956173) and the API FAQ (/articles/204529267).
+The in-terms instrument for direct-flight evidence is `v1/prices/direct` — a
+Data API method where caching is explicitly recommended — which the cron's
+evidence pass uses.
+
 Two route-data facts measured the hard way, so they do not get re-derived:
 `v1/prices/cheap` never returns `number_of_changes` (either call shape) — the
 evidence lives on `v2/prices/latest`, which the cron's evidence pass reads. And

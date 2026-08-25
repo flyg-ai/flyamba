@@ -281,21 +281,29 @@ export type NonstopEvidence = {
  * Observed non-stop fares for a destination — the rank-3 rows the cron's
  * v2/prices/latest pass writes.
  *
- * THE EVIDENCE ONLY WORKS IN ONE DIRECTION. A row here means someone was sold a
- * non-stop at this price: the route exists and a page may say so. The ABSENCE of
- * a row means nothing — the feed reports cheapest fares, the cheapest
- * transatlantic is almost always a connection, and JFK–AMS showed no non-stop in
- * it while KLM flies the route daily. Never render "no non-stop service" from an
- * empty result; render nothing.
+ * THE EVIDENCE ONLY WORKS IN ONE DIRECTION, and the better instrument does not
+ * loosen that. A row here means a direct fare was actually on sale at this
+ * price: the route exists and a page may say so. The ABSENCE of a row means
+ * NOTHING — the source (v1/prices/direct) is still a cache, and a route can be
+ * flown non-stop daily without a cached direct fare this week. Varadero happens
+ * to be correctly absent; that is luck, not proof. Never render "no non-stop
+ * service" from an empty result; render nothing.
+ *
+ * ROWS OLDER THAN 30 DAYS ARE DROPPED before anything renders — a cached direct
+ * fare from May is not a direct route today. Same cut-off as the fare calendar.
  */
+const EVIDENCE_MAX_AGE_DAYS = 30;
+
 export async function getNonstopEvidence(slug: string): Promise<NonstopEvidence[]> {
   if (!faresClient) return [];
+  const cutoff = new Date(Date.now() - EVIDENCE_MAX_AGE_DAYS * 86_400_000).toISOString();
   const { data, error } = await faresClient
     .from("origin_fares")
     .select("origin, price_usd, depart_date, return_date, fetched_at")
     .eq("slug", slug)
     .eq("one_way", false)
     .eq("number_of_changes", 0)
+    .gte("fetched_at", cutoff)
     .order("price_usd");
   if (error) {
     console.error("[fares] nonstop evidence select failed:", error.message);
