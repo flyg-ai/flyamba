@@ -27,6 +27,13 @@ import { MapPin, Sun, ArrowRight } from "lucide-react";
  * NOT A LINK LIST. Every destination card carries the observed fare and the
  * measured temperature for the current month, the same numbers the warm guide and
  * the destination pages show, so the three cannot disagree.
+ *
+ * SORTED BY FARE, NOT BY WARMTH. buildDestinations returns the warm guide's
+ * order, which is right there and wrong here — a country page is about where to
+ * go and what it costs, and warmth-first framing belongs to /where-is-it-warm
+ * alone. The grid re-sorts on sortPriceUsd (New York only, per the rule in
+ * fares.ts — a column mixing four origins is not a column), unpriced last,
+ * slug as the total-order tiebreak.
  */
 
 const f = (c: number) => Math.round(c * 1.8 + 32);
@@ -39,7 +46,7 @@ const MONTHS = [
 type CountryFacts = {
   /** Region the country sits in, after the Middle East / Eurasia merge. */
   region: string;
-  /** Every catalog destination in the country, warmest first. */
+  /** Every catalog destination in the country, cheapest New York fare first. */
   destinations: WarmDestination[];
   monthLabel: string;
 };
@@ -58,7 +65,9 @@ export function countryMetadata(country: string): Metadata {
 
 async function getFacts(country: string, monthIndex: number): Promise<CountryFacts | null> {
   const all = await buildDestinations(monthIndex);
-  const destinations = all.filter((d) => d.country === country);
+  const destinations = all
+    .filter((d) => d.country === country)
+    .sort((a, b) => (a.sortPriceUsd ?? Infinity) - (b.sortPriceUsd ?? Infinity) || a.slug.localeCompare(b.slug));
   if (!destinations.length) return null;
   return {
     region: regionOfContinent(destinations[0].continent),
@@ -109,8 +118,9 @@ export async function CountryPage({ country }: { country: string }) {
   const { region, destinations, monthLabel } = facts;
   const priced = destinations.filter((d) => d.fare).sort((a, b) => a.fare!.fare.priceUsd - b.fare!.fare.priceUsd);
   const cheapest = priced.slice(0, 3);
-  const warmest = destinations[0];
-  const coolest = destinations[destinations.length - 1];
+  // The array is fare-sorted, so the temperature extremes are found, not indexed.
+  const warmest = destinations.reduce((a, b) => (b.tempC > a.tempC ? b : a));
+  const coolest = destinations.reduce((a, b) => (b.tempC < a.tempC ? b : a));
   const warm = destinations.filter((d) => d.tempC >= 24 && d.tempC <= 31);
 
   const faq: FaqItem[] = [
@@ -172,24 +182,23 @@ export async function CountryPage({ country }: { country: string }) {
             <>
               We track {destinations.length} destinations in {country}. Right now the cheapest fares we hold are{" "}
               {cheapest[0].name} at ${cheapest[0].fare!.fare.priceUsd} and {cheapest[1].name} at $
-              {cheapest[1].fare!.fare.priceUsd} round trip, and {warmest.name} is the warmest at {f(warmest.tempC)}°F
-              this month.
+              {cheapest[1].fare!.fare.priceUsd} round trip from a US departure city.
             </>
           ) : (
             <>
-              We track {destinations.length} destinations in {country}, with {warmest.name} the warmest at{" "}
-              {f(warmest.tempC)}°F in {monthLabel}.
+              We track {destinations.length} destinations in {country}, each with the fare we found where we hold one
+              and its measured temperature for {monthLabel}.
             </>
           )}
         </p>
 
         <section className="mt-12">
           <h2 className="font-serif text-2xl font-semibold text-foreground sm:text-3xl">
-            {country} cities and islands, warmest first
+            {country} cities and islands, cheapest fare first
           </h2>
           <p className="mt-2 max-w-2xl text-muted-foreground">
-            Average daily high for {monthLabel}, measured rather than estimated, with the round-trip fare we found from
-            a US departure city.
+            Ordered by the round-trip fare we found from New York; destinations without a New York fare come last, even
+            when we hold one from another city. The badge on each card is the average daily high for {monthLabel}.
           </p>
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
             {destinations.map((d) => (
