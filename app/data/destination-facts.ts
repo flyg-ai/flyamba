@@ -129,6 +129,25 @@ export const DESTINATION_FACTS: Record<string, DestinationFacts> = {
   "cayman-islands": { scores: { beaches: 9, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "winter-sun", "island", "diving"] },
   "us-virgin-islands": { scores: { beaches: 9, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "winter-sun", "island"] },
 
+  // US tier 1 (2026-09-01): minimal entries, same shape as the four Caribbean ones
+  // above, ONLY for the additions that are genuinely leisure — the warm guide's
+  // isLeisureDestination() reads these tags, and without them Maui would rank like
+  // Detroit. The plain cities in the same batch deliberately get no entry: a city
+  // that is 88°F in July is still not a warm-weather escape, which is the exact
+  // distinction the tag exists to draw. Palm Springs gets desert/winter-sun tags
+  // (true) and thereby no beach bonus (also true — the predicate is beach-shaped
+  // by design; do not widen it from here).
+  "maui": { scores: { beaches: 9, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "island", "tropical", "surf"] },
+  "kauai": { scores: { beaches: 9, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "island", "tropical"] },
+  "kona": { scores: { beaches: 8, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "island", "tropical", "diving"] },
+  "myrtle-beach": { scores: { beaches: 9, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "family", "golf"] },
+  "fort-lauderdale": { scores: { beaches: 8, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "winter-sun"] },
+  "fort-myers": { scores: { beaches: 8, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "winter-sun"] },
+  "tampa": { scores: { beaches: 7, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "city-break"] },
+  "virginia-beach": { scores: { beaches: 8, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "coast", "family"] },
+  "atlantic-city": { scores: { beaches: 7, nightlife: 7, food: 5, activities: 5, family: 5, value: 5 }, tags: ["beach", "nightlife"] },
+  "palm-springs": { scores: { beaches: 2, nightlife: 5, food: 5, activities: 5, family: 5, value: 5 }, tags: ["desert", "winter-sun", "golf"] },
+
   "aarhus": { scores: { beaches: 2, nightlife: 9, food: 8, activities: 9, family: 6, value: 6 }, tags: ["nightlife", "food", "culture"], tagsDerived: true, foodPerDay: "$29–52", hotelPerNight: "$86–143", dishes: ["Smørrebrød", "Rye bread with liver pâté", "Carlsberg and Tuborg straight from the breweries"], sights: ["ARoS with Rainbow Panorama on the roof", "Den Gamle By", "Moesgaard Museum with Grauballe Man"], insiderTip: "Aarhus is Denmark's food capital — book Gastromé or Frederikshøj weeks in advance; they're often cheaper than Copenhagen for the same quality." },
   "aberdeen": { scores: { beaches: 2, nightlife: 9, food: 8, activities: 9, family: 6, value: 6 }, tags: ["business", "wine"], insiderTip: "Book Aberdeen 6–10 weeks in advance for the best price. Tuesday and Wednesday are generally cheaper departure days." },
   "abidjan": { scores: { beaches: 2, nightlife: 9, food: 8, activities: 9, family: 6, value: 6 }, tags: ["nightlife", "food", "culture"], tagsDerived: true, foodPerDay: "$21–36", hotelPerNight: "$86–143", dishes: ["Attieké", "Poisson braisé", "Garba"], sights: ["St Paul's Cathedral", "Plateau", "Grand Marché Treichville"], insiderTip: "Go to a maquis (outdoor restaurant) in Zone 4 or Cocody in the evening — grilled poisson braisé, attieké and local beer. Coupé-décalé music sets the vibe." },
