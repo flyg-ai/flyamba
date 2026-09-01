@@ -8,6 +8,7 @@ import { destinationCrumbs } from "@/app/lib/destination-crumbs";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
 import { fareFor } from "@/app/lib/fare-display";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
+import { ClimateSection } from "@/app/components/ClimateSection";
 // Still read directly for the "cheapest month" fact card, which is a single value
 // rather than a section. The tier rule itself lives in FareCalendarSection.
 import { fareCalendarFor } from "@/app/lib/fare-calendar";
@@ -152,6 +153,10 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
 
       {/* Same component the 28 hub pages mount, so the tier rule exists once. */}
       <FareCalendarSection slug={d.slug} name={d.name} />
+
+      {/* Renders only where all twelve months are measured (open_meteo) — a
+          gpt_seed destination gets no section, not an estimated one. */}
+      <ClimateSection slug={d.slug} name={d.name} />
 
       {/* Full guide coming soon */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">

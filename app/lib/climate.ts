@@ -20,7 +20,7 @@ import { getUsFareTable, formatFareLabelShort, type UsFare } from "./fares";
 // beach" read is within what they can carry. See the data-quality note in CLAUDE.md.
 
 /** The four measures a card or a chip needs, for one destination in one month. */
-type MonthClimate = {
+export type MonthClimate = {
   tempC: number;
   /** Overnight low, °C. Present for all 550. */
   tempMinC: number | null;
@@ -82,6 +82,8 @@ type ClimateRow = {
   precipitation: number | null;
   sunshine_hours: number | null;
   sea_temp: number | null;
+  /** "open_meteo" = measured ten-year average; "gpt_seed" = an LLM's guess. */
+  data_source: string | null;
 };
 
 /**
@@ -100,10 +102,21 @@ function seaTemp(row: ClimateRow): number | null {
   return Math.round(row.sea_temp);
 }
 
-let cache: Promise<TempsBySlug> | null = null;
+/**
+ * The whole table plus which slugs may claim "measured": every month present AND
+ * every row from open_meteo. The distinction exists because 195 destinations
+ * carry gpt_seed rows — numbers an LLM produced, not observations — and a page
+ * section built on those would print invented figures under a "measured"
+ * footnote. Cards may still show a single gpt_seed temperature (a known,
+ * documented compromise); the month-by-month table may not.
+ */
+type ClimateTable = { bySlug: TempsBySlug; measuredYear: Set<string> };
 
-async function loadTemps(): Promise<TempsBySlug> {
+let cache: Promise<ClimateTable> | null = null;
+
+async function loadTemps(): Promise<ClimateTable> {
   const out: TempsBySlug = {};
+  const sources = new Map<string, Set<string>>();
   // ANY failure — missing env, RLS, network, a schema change — leaves the map
   // empty and every page still renders, just without temperatures. A climate-data
   // outage must never break the build.
@@ -112,7 +125,7 @@ async function loadTemps(): Promise<TempsBySlug> {
     for (let from = 0; ; from += PAGE_SIZE) {
       const { data, error } = await climateClient
         .from("climate_data")
-        .select("destination_slug, month, temp_max, temp_min, precipitation, sunshine_hours, sea_temp")
+        .select("destination_slug, month, temp_max, temp_min, precipitation, sunshine_hours, sea_temp, data_source")
         .order("destination_slug")
         .order("month")
         .range(from, from + PAGE_SIZE - 1);
@@ -121,6 +134,9 @@ async function loadTemps(): Promise<TempsBySlug> {
       for (const row of rows) {
         const { destination_slug: slug, month } = row;
         if (!slug || typeof month !== "number" || month < 1 || month > 12) continue;
+        // Source is recorded for EVERY row, including ones dropped below — a slug
+        // with a stray gpt_seed row anywhere loses the measured badge outright.
+        (sources.get(slug) ?? sources.set(slug, new Set()).get(slug)!).add(row.data_source ?? "unknown");
         if (typeof row.temp_max !== "number") continue;
         if (!out[slug]) out[slug] = new Array(12).fill(null);
         out[slug][month - 1] = {
@@ -135,14 +151,34 @@ async function loadTemps(): Promise<TempsBySlug> {
     console.log(`[climate] loaded ${Object.keys(out).length} destinations from climate_data`);
   } catch (e) {
     console.warn("[climate] climate_data load failed — pages will render without temperatures:", e);
-    return {};
+    return { bySlug: {}, measuredYear: new Set() };
   }
-  return out;
+  const measuredYear = new Set<string>();
+  for (const [slug, months] of Object.entries(out)) {
+    const src = sources.get(slug);
+    if (months.every(Boolean) && src?.size === 1 && src.has("open_meteo")) measuredYear.add(slug);
+  }
+  console.log(`[climate] ${measuredYear.size} of them measured (open_meteo, all 12 months)`);
+  return { bySlug: out, measuredYear };
 }
 
 /** Memoized so a 12-page build reads the table once per worker, not twice per page. */
-function temps(): Promise<TempsBySlug> {
+function temps(): Promise<ClimateTable> {
   return (cache ??= loadTemps());
+}
+
+/**
+ * The full measured year for one destination, or null.
+ *
+ * Null means "we hold no measured series", NOT "no climate": 195 destinations
+ * have only gpt_seed rows, and for those the honest month-by-month table is no
+ * table. The caller renders nothing on null — no empty state, no apology — the
+ * same rule NonstopRoutes follows for missing route evidence.
+ */
+export async function climateYear(slug: string): Promise<MonthClimate[] | null> {
+  const { bySlug, measuredYear } = await temps();
+  if (!measuredYear.has(slug)) return null;
+  return bySlug[slug] as MonthClimate[];
 }
 
 /** The shape a card needs. Plain and serializable — safe to pass to a client component. */
@@ -264,7 +300,7 @@ function sortScore(d: WarmDestination, tier: 1 | 2 | 3 | 4): number {
  * a "where is it warm" grid cannot rank a card with no temperature.
  */
 export async function buildDestinations(monthIndex: number): Promise<WarmDestination[]> {
-  const map = await temps();
+  const { bySlug: map } = await temps();
   const fares = await getUsFareTable();
   const out: WarmDestination[] = [];
   const byCatalog = new Map(ALL_DESTINATIONS.map((d) => [d.slug, d]));
