@@ -9,6 +9,8 @@ import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinatio
 import { fareFor } from "@/app/lib/fare-display";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { ClimateSection } from "@/app/components/ClimateSection";
+import { FaqSection } from "@/app/components/FaqSection";
+import { buildLiteFaq, liteFaqJsonLd } from "@/app/lib/lite-faq";
 // Still read directly for the "cheapest month" fact card, which is a single value
 // rather than a section. The tier rule itself lives in FareCalendarSection.
 import { fareCalendarFor } from "@/app/lib/fare-calendar";
@@ -74,6 +76,10 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
       : null;
 
   const related = ALL_DESTINATIONS.filter((x) => x.continent === d.continent && x.slug !== d.slug).slice(0, 8);
+
+  // Null when no measured climate year exists — then no FAQ and no FAQPage
+  // schema at all. The gate lives in lite-faq.ts.
+  const faq = await buildLiteFaq(d.slug, d.name);
 
   return (
     <div className="min-h-screen bg-background">
@@ -170,6 +176,17 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
           </p>
         </div>
       </section>
+
+      {/* FAQ — schema mirrors the visible items exactly, per FaqSection's rule. */}
+      {faq && (
+        <>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(liteFaqJsonLd(faq)).replace(/</g, "\\u003c") }}
+          />
+          <FaqSection items={faq} city={d.name} />
+        </>
+      )}
 
       {/* Related in continent */}
       {related.length > 0 && (
