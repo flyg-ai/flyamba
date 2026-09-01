@@ -22,58 +22,7 @@ protaras
 limassol
 fethiye
 
-# US tier 1 (added 2026-09-01) — all 53 shipped on the placeholder until real
-# images are sourced; resolve per the instructions above.
-anchorage
-birmingham-alabama
-little-rock
-hartford
-wilmington-delaware
-des-moines
-boise
-indianapolis
-wichita
-louisville
-baltimore
-portland-maine
-st-louis
-kansas-city
-jackson-mississippi
-bozeman
-charlotte
-asheville
-raleigh
-fargo
-omaha
-manchester-new-hampshire
-atlantic-city
-columbus
-cleveland
-oklahoma-city
-philadelphia
-pittsburgh
-providence
-rapid-city
-salt-lake-city
-virginia-beach
-burlington
-milwaukee
+# US tier 1 (added 2026-09-01): 52 of 53 resolved from Unsplash the same day.
+# Charleston WV remains — Unsplash only holds 1973 archival shots and photos of
+# Charleston SC, and the wrong city is worse than the placeholder.
 charleston-west-virginia
-jackson-hole
-maui
-kauai
-kona
-austin
-houston
-san-antonio
-tampa
-fort-lauderdale
-fort-myers
-palm-springs
-reno
-memphis
-knoxville
-buffalo
-tucson
-myrtle-beach
-colorado-springs
