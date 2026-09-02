@@ -7,6 +7,8 @@ import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { destinationCrumbs } from "@/app/lib/destination-crumbs";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
 import { fareFor } from "@/app/lib/fare-display";
+import { getUsFareTable, formatFareLabelShort } from "@/app/lib/fares";
+import { COUNTRY_PAGES } from "@/app/lib/regions";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { ClimateSection } from "@/app/components/ClimateSection";
 import { FaqSection } from "@/app/components/FaqSection";
@@ -75,11 +77,35 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
       ? FULL_MONTHS[calendar.observations.find((o) => o.priceUsd === min)!.monthIndex]
       : null;
 
-  const related = ALL_DESTINATIONS.filter((x) => x.continent === d.continent && x.slug !== d.slug).slice(0, 8);
+  // The continent row excludes the destination's own country: those links live
+  // in the country section above it, and a page should not link Barcelona twice.
+  const related = ALL_DESTINATIONS.filter((x) => x.continent === d.continent && x.country !== d.country).slice(0, 8);
 
   // Null when no measured climate year exists — then no FAQ and no FAQPage
   // schema at all. The gate lives in lite-faq.ts.
   const faq = await buildLiteFaq(d.slug, d.name);
+
+  // Country siblings, cheapest first on the New York sort price — the same
+  // display/sort rule as the country pages (a column mixing four origins is not
+  // a column; no NYC fare sorts last, slug keeps the order total). 70 lite
+  // destinations are alone in their country and render no section.
+  const siblings = ALL_DESTINATIONS.filter((x) => x.country === d.country && x.slug !== d.slug);
+  const fareTable = siblings.length ? await getUsFareTable() : null;
+  const countrySiblings = fareTable
+    ? siblings
+        .sort(
+          (a, b) =>
+            (fareTable.sortPrice[a.slug] ?? Infinity) - (fareTable.sortPrice[b.slug] ?? Infinity) ||
+            a.slug.localeCompare(b.slug),
+        )
+        .slice(0, 12)
+        .map((s) => ({
+          slug: s.slug,
+          name: s.name,
+          fareLabel: fareTable.display[s.slug] ? formatFareLabelShort(fareTable.display[s.slug]) : null,
+        }))
+    : [];
+  const countryPageSlug = COUNTRY_PAGES[d.country] ?? null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -186,6 +212,34 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
           />
           <FaqSection items={faq} city={d.name} />
         </>
+      )}
+
+      {/* Country siblings — cheapest first, with the observed fare where we
+          hold one. No price line renders where we hold none. */}
+      {countrySiblings.length > 0 && (
+        <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Same country</p>
+          <div className="mt-2 flex flex-wrap items-baseline justify-between gap-2">
+            <h2 className="font-serif text-3xl font-semibold text-foreground sm:text-4xl">More of {d.country}</h2>
+            {countryPageSlug && (
+              <Link href={`/${countryPageSlug}`} className="inline-flex items-center gap-1.5 text-sm font-medium text-accent underline-offset-4 hover:underline">
+                All places to visit in {d.country}
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            )}
+          </div>
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {countrySiblings.map((s) => (
+              <Link key={s.slug} href={`/${s.slug}`} className="group rounded-2xl border border-border bg-card px-5 py-4 transition hover:-translate-y-0.5 hover:border-accent">
+                <span className="flex items-center justify-between">
+                  <span className="text-sm font-semibold text-foreground">Flights to {s.name}</span>
+                  <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground transition group-hover:translate-x-1 group-hover:text-accent" />
+                </span>
+                {s.fareLabel && <span className="mt-1 block truncate text-xs font-medium text-accent">{s.fareLabel}</span>}
+              </Link>
+            ))}
+          </div>
+        </section>
       )}
 
       {/* Related in continent */}
