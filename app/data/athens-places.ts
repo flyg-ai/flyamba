@@ -25,7 +25,7 @@ const SHOP_IMG = "/images/content/photo-1483985988355-763728e1935b.avif";
 const KIDS_IMG = "/images/content/photo-1484820540004-14229fe36ca4.avif";
 
 const tiqets = (q: string) =>
-  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=508580&u=${encodeURIComponent(
+  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=563187&u=${encodeURIComponent(
     `https://www.tiqets.com/en/search?q=${encodeURIComponent(q)}`,
   )}`;
 

@@ -312,10 +312,10 @@ properly means touching 28 hub files, which was judged not worth it in Aug 2026.
 
 ## Monetization
 
-Travelpayouts marker **`711264.flyamba`**, `trs=508580`, everywhere.
+Travelpayouts marker **`711264.flyamba`**, `trs=563187`, everywhere.
 
 - Tiqets (attractions/day-trips): the `tiqets()` helper redeclared in every places file →
-  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=508580&u=<encoded tiqets search>`
+  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=563187&u=<encoded tiqets search>`
 - Kiwi deep link from `PrisKalender`: `tp.media/r?…&p=4478&u=<encoded kiwi.com/deep?…>`
 - Aviasales widget: `tpwdg.com/content?…&shmarker=711264.flyamba&…&campaign_id=111&promo_id=4478`
 - **Skyscanner links are non-affiliate** and intentionally `rel="nofollow noopener"`.

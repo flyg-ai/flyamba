@@ -33,7 +33,7 @@ const FOOD = "/images/content/photo-1414235077428-338989a2e8c0.avif";
 const HOTEL = "/images/content/photo-1566073771259-6a8506099945.avif";
 
 const tiqets = (q: string) =>
-  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=508580&u=${encodeURIComponent(
+  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=563187&u=${encodeURIComponent(
     `https://www.tiqets.com/en/search?q=${encodeURIComponent(q)}`,
   )}`;
 

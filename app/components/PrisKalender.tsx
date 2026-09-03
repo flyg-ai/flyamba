@@ -248,7 +248,7 @@ export default function PrisKalender({
   const originLabel = activeOrigin ? (ORIGIN_LABEL.get(activeOrigin) ?? activeOrigin) : null;
 
   function affiliate(url: string): string {
-    return `https://tp.media/r?marker=711264.flyamba&trs=508580&p=4478&u=${encodeURIComponent(url)}`;
+    return `https://tp.media/r?marker=711264.flyamba&trs=563187&p=4478&u=${encodeURIComponent(url)}`;
   }
 
   function buildKiwiUrl(depDate: string, retDate: string): string {

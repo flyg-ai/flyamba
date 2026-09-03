@@ -17,7 +17,7 @@ const DAY = (f: string) => `/images/santorini/dagsutflykter/${f}`;
 const BCH = (f: string) => `/images/santorini/strander/${f}`;
 
 const tiqets = (q: string) =>
-  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=508580&u=${encodeURIComponent(
+  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=563187&u=${encodeURIComponent(
     `https://www.tiqets.com/en/search?q=${encodeURIComponent(q)}`,
   )}`;
 

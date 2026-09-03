@@ -18,7 +18,7 @@ const BEACH = (f: string) => `/images/rome/strander/${f}`;
 const INFO_IMG = "/images/destinations/placeholder.avif"; // transport/prices/weather/events (no card image)
 
 const tiqets = (q: string) =>
-  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=508580&u=${encodeURIComponent(
+  `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=563187&u=${encodeURIComponent(
     `https://www.tiqets.com/en/search?q=${encodeURIComponent(q)}`,
   )}`;
 
