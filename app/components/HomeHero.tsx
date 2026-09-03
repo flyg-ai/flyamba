@@ -8,8 +8,14 @@ import { SUPPORTED_ORIGINS, ORIGIN_COOKIE } from "@/app/lib/origins";
 import { AiResultCard } from "@/app/components/AiResultCard";
 import { AviasalesResultsWidget } from "@/app/components/AviasalesResultsWidget";
 
-// "See all flights" CTA — Kiwi deep-link by destination IATA (origin auto).
-const kiwiDeepLink = (iata: string) => `https://www.kiwi.com/deep?to=${iata}`;
+// "See all flights" CTA — Kiwi deep-link by destination IATA (origin auto),
+// wrapped in the same tp.media redirect PrisKalender uses. It linked to
+// kiwi.com/deep bare until Sept 2026: no marker, no trs — those clicks earned
+// nothing at all, which is worse than the wrong-project stats bug fixed the
+// same day. An affiliate link that skips the redirect is indistinguishable
+// from a working one in the UI; only the dashboard knows.
+const kiwiDeepLink = (iata: string) =>
+  `https://tp.media/r?marker=711264.flyamba&trs=563187&p=4478&u=${encodeURIComponent(`https://www.kiwi.com/deep?to=${iata}`)}`;
 
 const suggestions = [
   "A sunny beach in April under $300",
