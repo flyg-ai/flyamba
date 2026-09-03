@@ -3,12 +3,13 @@
  * Fetch monthly climate normals from Open-Meteo and write them to `climate_data`.
  *
  * WHY THIS EXISTS
- * 197 of the 550 catalog destinations carry `data_source: "gpt_seed"` — rows an
- * LLM produced rather than a weather service measured — and they are not merely
- * approximate. Four Caribbean entries hold identical constants (28.0 °C air,
- * 26 °C sea, no rainfall, 240 hours of sun), and seven landlocked cities including
- * Munich and Kathmandu carry a sea temperature of 0. So this script has two jobs:
- * adding destinations the catalog is missing, and eventually replacing those 197.
+ * 197 of the 550 catalog destinations once carried `data_source: "gpt_seed"` —
+ * rows an LLM produced rather than a weather service measured — and they were not
+ * merely approximate. Four Caribbean entries held identical constants (28.0 °C
+ * air, 26 °C sea, no rainfall, 240 hours of sun), and seven landlocked cities
+ * including Munich and Kathmandu carried a sea temperature of 0. All 197 were
+ * replaced with measured series on 2026-09-03; the script's remaining job is
+ * adding destinations the catalog is missing.
  *
  * It writes `data_source: "open_meteo"`, which is what the copy on
  * /where-is-it-warm is allowed to quote. Do not loosen that.

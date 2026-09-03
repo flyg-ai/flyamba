@@ -105,10 +105,11 @@ function seaTemp(row: ClimateRow): number | null {
 /**
  * The whole table plus which slugs may claim "measured": every month present AND
  * every row from open_meteo. The distinction exists because 195 destinations
- * carry gpt_seed rows — numbers an LLM produced, not observations — and a page
- * section built on those would print invented figures under a "measured"
- * footnote. Cards may still show a single gpt_seed temperature (a known,
- * documented compromise); the month-by-month table may not.
+ * once carried gpt_seed rows — numbers an LLM produced, not observations — and a
+ * page section built on those would print invented figures under a "measured"
+ * footnote. All were refetched from Open-Meteo on 2026-09-03 (554/554 measured),
+ * but the gate stays: it is what stops a future seeded row from silently
+ * re-earning the badge.
  */
 type ClimateTable = { bySlug: TempsBySlug; measuredYear: Set<string> };
 
@@ -170,10 +171,11 @@ function temps(): Promise<ClimateTable> {
 /**
  * The full measured year for one destination, or null.
  *
- * Null means "we hold no measured series", NOT "no climate": 195 destinations
- * have only gpt_seed rows, and for those the honest month-by-month table is no
- * table. The caller renders nothing on null — no empty state, no apology — the
- * same rule NonstopRoutes follows for missing route evidence.
+ * Null means "we hold no measured series", NOT "no climate" — and for such a
+ * slug the honest month-by-month table is no table. The caller renders nothing
+ * on null — no empty state, no apology — the same rule NonstopRoutes follows
+ * for missing route evidence. Since the 2026-09-03 refetch every catalog slug
+ * is measured, so null now means a genuinely new or removed destination.
  */
 export async function climateYear(slug: string): Promise<MonthClimate[] | null> {
   const { bySlug, measuredYear } = await temps();
