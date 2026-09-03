@@ -318,7 +318,7 @@ Travelpayouts marker **`711264.flyamba`**, `trs=563187`, everywhere.
   `https://tp.media/r?campaign_id=89&marker=711264.flyamba&p=2074&trs=563187&u=<encoded tiqets search>`
 - Kiwi deep link from `PrisKalender`: `tp.media/r?…&p=4478&u=<encoded kiwi.com/deep?…>`
 - Aviasales widget: `tpwdg.com/content?…&shmarker=711264.flyamba&…&campaign_id=111&promo_id=4478`
-- **Skyscanner links are non-affiliate** and intentionally `rel="nofollow noopener"`.
+- **There are no Skyscanner links.** The last one (a hardcoded, origin-inverted Barcelona search in FlightCTA) was removed when that component was rewritten to link inward — see its docstring. This line once said they were deliberately non-affiliate; a Sept 2026 audit found zero in the built HTML, so if one reappears it is new, not a survivor.
 
 ## Supabase
 
