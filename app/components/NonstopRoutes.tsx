@@ -27,11 +27,20 @@ export async function NonstopRoutes({
   slug,
   name,
   iata,
+  framing = "city",
 }: {
   slug: string;
   name: string;
   /** The destination airport code shown in each row, e.g. "DBV". */
   iata: string;
+  /**
+   * "city" (the hub pages): the destination IS the airport city, so the heading
+   * may say "Non-stop to Barcelona". "airport" (the lite pages): the evidence
+   * fans out by metro code, so a Sitges page holds BCN fares — the heading names
+   * the airport instead, which is true for every fan-out member including the
+   * airport city itself. One rule, no owner detection that could mislabel.
+   */
+  framing?: "city" | "airport";
 }) {
   const evidence = await getNonstopEvidence(slug);
   if (!evidence.length) return null;
@@ -40,9 +49,12 @@ export async function NonstopRoutes({
     <section id="nonstop" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
       <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Direct routes</p>
       <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">
-        Non-stop to {name}: fares we have seen
+        {framing === "airport"
+          ? `Non-stop flights into ${iata}, the airport for ${name}`
+          : `Non-stop to ${name}: fares we have seen`}
       </h2>
       <p className="mt-2 text-sm text-muted-foreground">
+        {framing === "airport" && `These fares land at ${iata} — the same airport every fare on this page uses. `}
         Round-trip non-stop fares a live search actually returned, with the date we saw each one. Routes we have not
         observed a non-stop fare on are not listed — that is not a claim that none exists.
       </p>

@@ -11,6 +11,7 @@ import { getUsFareTable, formatFareLabelShort } from "@/app/lib/fares";
 import { COUNTRY_PAGES } from "@/app/lib/regions";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { ClimateSection } from "@/app/components/ClimateSection";
+import { NonstopRoutes } from "@/app/components/NonstopRoutes";
 import { FaqSection } from "@/app/components/FaqSection";
 import { buildLiteFaq, liteFaqJsonLd } from "@/app/lib/lite-faq";
 // Still read directly for the "cheapest month" fact card, which is a single value
@@ -185,6 +186,10 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
 
       {/* Same component the 28 hub pages mount, so the tier rule exists once. */}
       <FareCalendarSection slug={d.slug} name={d.name} />
+
+      {/* Evidence fans out by metro code, so the airport framing is mandatory
+          here — see the prop's note. Renders nothing without evidence. */}
+      <NonstopRoutes slug={d.slug} name={d.name} iata={d.iata} framing="airport" />
 
       {/* Renders only where all twelve months are measured (open_meteo) — a
           gpt_seed destination gets no section, not an estimated one. */}
