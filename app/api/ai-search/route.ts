@@ -4,7 +4,6 @@ import { destinations } from "@/app/data/destinations";
 import { ALL_DESTINATIONS, type AllDestination } from "@/app/data/all-destinations";
 import { DESTINATION_FACTS, type DestinationFacts } from "@/app/data/destination-facts";
 import type { AiSearchMatch, BookingIntent, AiSearchResult } from "@/app/lib/ai-search-types";
-import { usd } from "@/app/lib/format";
 import { currentWeatherBadge } from "@/app/lib/destination-helpers";
 import { getCachedResponse, saveCachedResponse, classifyIntent } from "@/app/lib/ai-cache";
 import { getFaresByOrigin, type FareOptions } from "@/app/lib/fares";
@@ -30,33 +29,26 @@ type CatalogEntry = {
   name: string;
   country: string;
   continent: string;
-  priceUsd: number;
+  /**
+   * Cheapest fare we've actually observed from the visitor's origin, or null
+   * when we hold none. NEVER the catalog's `monthlyPrices` — those are
+   * Stockholm-origin SEK estimates (median error 2.35x against observed US
+   * fares, and the error inverts the ranking rather than scaling it) that
+   * were silently driving every "cheap beach" query toward Europe. A missing
+   * price is a valid, honest answer; a wrong one is not.
+   */
+  priceUsd: number | null;
   tags: string[];
 };
 
 const richBySlug = new Map(destinations.map((d) => [d.slug, d]));
 
-function cheapestUsd(d: AllDestination): number {
-  const valid = d.monthlyPrices.filter((p): p is number => p != null);
-  return valid.length ? usd(Math.min(...valid)) : 0;
-}
-
-/** Price in the given month (0–11) when available, else the yearly cheapest. */
-function monthUsd(d: AllDestination, monthIdx: number | null): number {
-  if (monthIdx != null) {
-    const p = d.monthlyPrices[monthIdx];
-    if (p != null) return usd(p);
-  }
-  return cheapestUsd(d);
-}
-
 const CATALOG_BY_SLUG = new Map(ALL_DESTINATIONS.map((d) => [d.slug, d]));
 
 function buildCatalog(
-  monthIdx: number | null,
   region: Region | null,
   activity: Activity | null,
-  fares?: Record<string, FareOptions>,
+  fares: Record<string, FareOptions>,
 ): CatalogEntry[] {
   return ALL_DESTINATIONS.filter(
     (d) =>
@@ -67,7 +59,8 @@ function buildCatalog(
     name: d.name,
     country: d.country,
     continent: d.continent,
-    priceUsd: monthUsd(d, monthIdx),
+    // Fares are ordered cheapest-first (see getFaresByOrigin's `rank` sort).
+    priceUsd: fares[d.slug]?.[0]?.priceUsd ?? null,
     tags: DESTINATION_FACTS[d.slug]?.tags ?? [],
   }));
 }
@@ -75,7 +68,7 @@ function buildCatalog(
 function serializeCatalog(entries: CatalogEntry[]): string {
   return entries
     .map((e) =>
-      [e.slug, e.name, e.country, e.continent, `$${e.priceUsd}`, e.tags.join(",")]
+      [e.slug, e.name, e.country, e.continent, e.priceUsd != null ? `$${e.priceUsd}` : "", e.tags.join(",")]
         .join("|")
         .replace(/\|+$/, ""),
     )
@@ -319,6 +312,8 @@ SCOPE: You only help with travel, flights and destinations. If the traveler asks
 You are given a catalog of flight destinations, one per line, pipe-separated:
 slug|City|Country|Continent|$priceFrom|tags
 
+$priceFrom is a REAL fare we have actually observed recently, never an estimate. It is blank for destinations where we hold no observed fare — a blank price does NOT mean free, cheap or unknown; treat it as "we don't know".
+
 Only ever use slugs from this catalog — never invent one, never return a city that is not listed. The slug is the identifier: return it exactly as written, lowercase.
 
 Always return destination suggestions immediately. NEVER ask follow-up questions. If the request is vague, make reasonable assumptions and return the best matches right away.
@@ -328,7 +323,7 @@ RULES:
 - Vague / open request → return 7 destinations, best fit first. Fewer only if the catalog genuinely has fewer that fit.
 - VERY vague ("don't know", "anywhere", just "a trip") → return a single CONV line instead.
 - Consider budget, season/month, trip length and vibe (beach, city, romantic, long-haul, family, food, nightlife, adventure), flight time, and any stated origin.
-- Budget: "cheap/budget" ≈ under $250; "premium/luxury" ≈ over $500. Prioritize the lowest price when budget is mentioned.
+- Budget: "cheap/budget" ≈ under $250; "premium/luxury" ≈ over $500. When the traveler states a budget or a price ceiling, only return destinations whose $priceFrom is present and satisfies it — a blank price is not evidence a destination is cheap, so never pick one for a budget request just because it has no listed price.
 - The tags are editorial and reliable — trust them over your own impression of a city name. A destination tagged "city-break" but not "beach" is not a beach destination.
 - Match the ACTIVITY, not just the region. A beach request must return coastal and island destinations — never an inland capital or a cold-water city, however popular it is.
 - STAY IN REGION (strict): if the traveler names a country or continent, return ONLY catalog destinations from that exact country/continent.
@@ -577,14 +572,14 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
   const region = detectRegion(query);
   const activity = detectActivity(query);
 
-  let catalog = buildCatalog(monthIdx, region, activity, faresBySlug).filter((c) => !exclude.has(c.slug));
+  let catalog = buildCatalog(region, activity, faresBySlug).filter((c) => !exclude.has(c.slug));
 
   // A narrow region combined with a narrow activity can leave too little to
   // choose from ("northern lights in the Caribbean"). Rather than return three
   // bad options, drop the activity filter and let the model judge — the tags are
   // still on every catalog line, so it keeps the information either way.
   if (catalog.length < 8 && activity) {
-    catalog = buildCatalog(monthIdx, region, null, faresBySlug).filter((c) => !exclude.has(c.slug));
+    catalog = buildCatalog(region, null, faresBySlug).filter((c) => !exclude.has(c.slug));
   }
 
   // Nothing left to show — the traveler has paged through everything that fits.
@@ -631,10 +626,11 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     activity && catalog.length >= 8
       ? `\n\nIt has also been narrowed to destinations that genuinely suit ${activity.name} — rank within these rather than second-guessing the filter.`
       : "";
-  const monthNote =
-    month != null
-      ? `\n\nPrices shown are for ${month}, the month the traveler asked about.`
-      : "\n\nPrices shown are each destination's cheapest month.";
+  // Prices are real fares observed from the visitor's own origin in the last
+  // 48 hours (Travelpayouts' search cache) — never a month-specific figure,
+  // since that's not what we hold. A blank price field means no observed
+  // fare, not a free or unknown-cost destination.
+  const monthNote = `\n\nPrices shown (where present) are the cheapest fare we've actually observed from ${originLabel} recently — not tied to a specific month. A blank price field means we hold no observed fare for that destination; it is not free or necessarily cheap or expensive.`;
 
   const system = destination
     ? `${SYSTEM_PROMPT}\n\nThe user is viewing the ${destination} destination page. Prioritize ${destination} and lead with it in the matches when relevant.`
