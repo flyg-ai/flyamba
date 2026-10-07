@@ -50,7 +50,9 @@ export const SUPPORTED_ORIGINS: Origin[] = [
   { iata: "SYD", label: "Sydney", country: "AU" },
 ];
 
-export const DEFAULT_ORIGIN = "LON";
+// US is the target market, so an unrecognised or missing country falls back to
+// New York rather than London — only explicit non-US signals should move it.
+export const DEFAULT_ORIGIN = "NYC";
 
 export const ORIGIN_BY_IATA = new Map(SUPPORTED_ORIGINS.map((o) => [o.iata, o]));
 

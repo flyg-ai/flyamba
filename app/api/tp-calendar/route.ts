@@ -20,7 +20,9 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const revalidate = 86400;
 
-const FALLBACK_ORIGIN = process.env.TRAVELPAYOUTS_ORIGIN?.trim().toUpperCase() || "LON";
+// US is the target market, so an unrecognised or missing country falls back to
+// New York rather than London — only explicit non-US signals should move it.
+const FALLBACK_ORIGIN = process.env.TRAVELPAYOUTS_ORIGIN?.trim().toUpperCase() || "JFK";
 
 // Country → nearest major origin airport. Anything not listed falls through to
 // FALLBACK_ORIGIN, which is why the list only needs the markets we actually see.
