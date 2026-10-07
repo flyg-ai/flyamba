@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDestination, destinations } from "@/app/data/destinations";
 import { ALL_DESTINATIONS, getAllDestination } from "@/app/data/all-destinations";
+import { ALREADY_INDEXED_SLUGS } from "@/app/data/indexed-overrides";
 import { DestinationDetail } from "@/app/components/DestinationDetail";
 import { DestinationLite } from "@/app/components/DestinationLite";
 import { SITE, airlineNames, lowestPriceStr } from "@/app/lib/destination-helpers";
@@ -83,6 +84,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     alternates: { canonical },
     openGraph: { title, description, url: canonical, type: "website", images: [d.image] },
     twitter: { card: "summary_large_image", images: [d.image] },
+    // Narrow the crawl surface: 526 near-identical Lite pages were diluting
+    // crawl budget (GSC: 929/~970 "Discovered – currently not indexed").
+    // Keep indexable only the slugs already indexed — see indexed-overrides.ts.
+    ...(ALREADY_INDEXED_SLUGS.has(d.slug) ? {} : { robots: { index: false } }),
   };
 }
 

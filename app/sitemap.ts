@@ -1,7 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { MetadataRoute } from "next";
-import { ALL_DESTINATIONS } from "@/app/data/all-destinations";
 import { destinations } from "@/app/data/destinations";
 import { guides, guideHref } from "@/app/data/guides";
 import { CALENDAR_DESTINATIONS, CALENDAR_AIRLINES, lowFareHref } from "@/app/lib/low-fare";
@@ -101,13 +100,10 @@ function readHubs(): { slug: string; subpages: string[] }[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Build time — every page's fares are re-seeded on deploy.
-  const lastModified = new Date();
   const entries: MetadataRoute.Sitemap = [];
 
   entries.push({
     url: SITE,
-    lastModified,
     changeFrequency: "daily",
     priority: 1.0,
   });
@@ -115,7 +111,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const route of STATIC_ROUTES) {
     entries.push({
       url: `${SITE}${route.path}`,
-      lastModified,
       changeFrequency: "monthly",
       priority: route.priority,
     });
@@ -127,7 +122,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const hub of hubs) {
     entries.push({
       url: `${SITE}/${hub.slug}`,
-      lastModified,
       changeFrequency: "weekly",
       priority: 0.9,
     });
@@ -135,8 +129,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const sub of hub.subpages) {
       entries.push({
         url: `${SITE}/${hub.slug}/${sub}`,
-        lastModified,
-        changeFrequency: "weekly",
+          changeFrequency: "weekly",
         priority: 0.7,
       });
     }
@@ -146,7 +139,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const d of CALENDAR_DESTINATIONS) {
     entries.push({
       url: `${SITE}${lowFareHref(d.slug)}`,
-      lastModified,
       changeFrequency: "daily",
       priority: 0.8,
     });
@@ -154,7 +146,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const a of CALENDAR_AIRLINES) {
     entries.push({
       url: `${SITE}/${a.slug}/low-fare-calendar`,
-      lastModified,
       changeFrequency: "daily",
       priority: 0.7,
     });
@@ -165,7 +156,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const d of DEPARTURES) {
     entries.push({
       url: `${SITE}${departureHref(d.slug)}`,
-      lastModified,
       changeFrequency: "daily",
       priority: 0.7,
     });
@@ -176,7 +166,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const m of WARM_MONTHS) {
     entries.push({
       url: `${SITE}${warmHref(m.slug)}`,
-      lastModified,
       changeFrequency: "monthly",
       priority: 0.7,
     });
@@ -188,7 +177,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const pair of TOP_PAIRS) {
     entries.push({
       url: `${SITE}${pairHref(pair)}`,
-      lastModified,
       changeFrequency: "monthly",
       priority: 0.6,
     });
@@ -204,16 +192,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  // Every other destination renders through app/[slug] — the rich hand-authored
-  // cities that have no hub of their own, plus the ported lite catalog.
-  const liteSlugs = new Set<string>();
-  for (const d of destinations) if (!hubSlugs.has(d.slug)) liteSlugs.add(d.slug);
-  for (const d of ALL_DESTINATIONS) if (!hubSlugs.has(d.slug)) liteSlugs.add(d.slug);
-
-  for (const slug of liteSlugs) {
+  // The rich hand-authored cities with no hub of their own. The ~544 ported lite
+  // pages are deliberately left out: Google found them but has not crawled them
+  // (GSC "Discovered – currently not indexed"), and a sitemap that offers 970 URLs
+  // on a new domain dilutes the crawl budget the hubs and rich pages need.
+  for (const d of destinations) {
+    if (hubSlugs.has(d.slug)) continue;
     entries.push({
-      url: `${SITE}/${slug}`,
-      lastModified,
+      url: `${SITE}/${d.slug}`,
       changeFrequency: "monthly",
       priority: 0.5,
     });
