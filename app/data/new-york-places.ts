@@ -19,22 +19,6 @@ export const NEW_YORK = {
   tpName: "new-york-city_ny_us",
   summerTemp: 22,
   tagline: "The city that never sleeps — icons, world-class food and endless energy",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts.
-  monthlyPrices: [
-    { month: "Jan", price: 4800 },
-    { month: "Feb", price: 4500 },
-    { month: "Mar", price: 5100 },
-    { month: "Apr", price: 5400 },
-    { month: "May", price: 5800 },
-    { month: "Jun", price: 6200 },
-    { month: "Jul", price: 6800 },
-    { month: "Aug", price: 6600 },
-    { month: "Sep", price: 5900 },
-    { month: "Oct", price: 5300 },
-    { month: "Nov", price: 4900 },
-    { month: "Dec", price: 5200 },
-  ],
   scores: { beaches: 4, nightlife: 9, food: 10, activities: 9, family: 6, value: 4 },
   nearby: [
     { city: "London", href: "/london" },

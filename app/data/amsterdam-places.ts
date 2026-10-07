@@ -19,22 +19,6 @@ export const AMSTERDAM = {
   tpName: "amsterdam_nl",
   summerTemp: 20,
   tagline: "Canals, bikes, world museums and easy-going charm",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts.
-  monthlyPrices: [
-    { month: "Jan", price: 2900 },
-    { month: "Feb", price: 2700 },
-    { month: "Mar", price: 3000 },
-    { month: "Apr", price: 3300 },
-    { month: "May", price: 3600 },
-    { month: "Jun", price: 3900 },
-    { month: "Jul", price: 4200 },
-    { month: "Aug", price: 4000 },
-    { month: "Sep", price: 3500 },
-    { month: "Oct", price: 3100 },
-    { month: "Nov", price: 2700 },
-    { month: "Dec", price: 2900 },
-  ],
   scores: { beaches: 3, nightlife: 9, food: 7, activities: 9, family: 7, value: 5 },
   nearby: [
     { city: "London", href: "/london" },

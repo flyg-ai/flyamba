@@ -2,25 +2,30 @@ import type { Metadata } from "next";
 import { CityGuideShell } from "@/app/components/CityGuideShell";
 import { CategorySeoSections } from "@/app/components/CategorySeoSections";
 import type { BcnPlace } from "@/app/data/barcelona-places";
-import { CATEGORIES, MADRID } from "@/app/data/madrid-places";
+import { CATEGORIES } from "@/app/data/madrid-places";
 import { SITE } from "@/app/lib/destination-helpers";
-import { usd5 } from "@/app/lib/format";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
-const usdMonths = MADRID.monthlyPrices.map((m) => ({ month: m.month, price: usd5(m.price) }));
-const MIN_USD = Math.min(...usdMonths.map((m) => m.price));
-const MAX_USD = Math.max(...usdMonths.map((m) => m.price));
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the
+// page renders with no price while the build reports success. See CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: "Madrid Prices 2026 — Flights, Daily Budget & Costs | Flyamba",
-  description:
-    "How much does Madrid cost? Flight prices by month, a realistic daily budget, and typical prices for tapas, beer, coffee, hotels, the metro and museums…",
-  alternates: { canonical: `${SITE}/madrid/prices` },
-  openGraph: { title: "How Much Does Madrid Cost? | Flyamba", description: "Flight prices, daily budgets and typical costs in Madrid.", type: "article" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("madrid");
+  return {
+    title: "Madrid Prices 2026 — Flights, Daily Budget & Costs | Flyamba",
+    description: `How much does Madrid cost?${fareCopy.amount ? ` Flights from ${fareCopy.amount} round trip from ${fareCopy.originLabel},` : ""} a realistic daily budget, and typical prices for tapas, beer, coffee, hotels, the metro and museums…`,
+    alternates: { canonical: `${SITE}/madrid/prices` },
+    openGraph: { title: "How Much Does Madrid Cost? | Flyamba", description: "Flight prices, daily budgets and typical costs in Madrid.", type: "article" },
+  };
+}
 
 const IMG = "/images/madrid/attractions/mercado-de-san-miguel.webp";
 
-const INFO: BcnPlace[] = [
+function buildInfo(priceLine: string, flightFullDescription: string): BcnPlace[] {
+  return [
   {
     name: "How expensive is Madrid?", slug: "how-expensive", image: IMG, rating: 5, area: "Overview",
     tip: "Madrid is one of Europe's best-value capitals — cheaper than Barcelona in like-for-like categories, and far cheaper than Paris or London.",
@@ -31,11 +36,11 @@ const INFO: BcnPlace[] = [
   },
   {
     name: "Cheapest time to fly", slug: "cheapest-flights", image: IMG, rating: 5, area: "Flights",
-    tip: "Book 5–7 weeks ahead and fly midweek. February and November are the lowest months; July is the most expensive.",
+    tip: "Book 5–7 weeks ahead and fly midweek for the best price. Madrid is a major Iberia hub with frequent sales.",
     filterKeys: [],
-    description: `Round-trip fares to Madrid run from about $${MIN_USD} in the cheapest months to around $${MAX_USD} at the summer peak.`,
-    practicalInfo: { openingHours: "N/A", price: `Cheapest ~$${MIN_USD} (Feb) · Peak ~$${MAX_USD} (Jul)`, howToGetThere: "Book 5–7 weeks ahead; fly midweek; autumn offers the best price–weather balance" },
-    fullDescription: `Flight prices to Madrid-Barajas swing with the seasons. Round-trip fares start from around $${MIN_USD} in the cheapest months and climb to roughly $${MAX_USD} at the height of summer. February is the single cheapest month to fly, with November close behind — both are low season, quieter and better value, with February typically the rock-bottom month. Prices build through spring, spike in July and August (the most expensive period, driven by the school holidays despite Madrid's fierce heat), then ease again through the autumn. The savviest window for many travellers is September and October, when fares have dropped from the summer peak but the weather is still warm and sunny — the best balance of price and conditions. To get the best deal, book roughly five to seven weeks in advance and fly midweek rather than at weekends, when fares are highest. Madrid is a major Iberia hub with excellent connectivity, so there is strong competition on many routes and frequent sales; setting a price alert and staying flexible on dates can shave a good deal off the fare. For the lowest prices overall, aim for February or November and travel on a weekday.`,
+    description: priceLine,
+    practicalInfo: { openingHours: "N/A", price: priceLine, howToGetThere: "Book 5–7 weeks ahead; fly midweek; autumn offers a good price–weather balance" },
+    fullDescription: flightFullDescription,
   },
   {
     name: "Daily budget", slug: "daily-budget", image: IMG, rating: 5, area: "Planning",
@@ -67,12 +72,19 @@ const INFO: BcnPlace[] = [
     filterKeys: [],
     description: "Free museum hours, the fixed-price lunch, cheaper neighbourhoods and shared transport cards keep Madrid affordable.",
     practicalInfo: { openingHours: "N/A", price: "N/A", howToGetThere: "Fly Feb/Nov, book 5–7 weeks ahead, stay in La Latina/Lavapiés, use free museum hours" },
-    fullDescription: "Madrid is easy to enjoy on a budget with a few smart moves. First, time the free museum hours: the Prado's free last two hours daily, and the Reina Sofía's free evenings and Sunday afternoons, let you see world-class art for nothing — arrive about 30 minutes before to beat the queue. Second, make lunch your main meal and order the menú del día, the fixed-price multi-course deal at €12–18 that is unbeatable value, then keep dinner light with a few tapas. Third, choose your neighbourhood wisely: staying and eating in La Latina, Lavapiés or Embajadores is cheaper than Salamanca or Chamberí, while still being central. Fourth, use public transport smartly — a €12.20 Metrobús card covers 10 journeys and can be shared among your group, and walking the compact centre is free and often faster. Fifth, on flights, aim for February or November, book five to seven weeks ahead and fly midweek. Finally, take advantage of how much is simply free: Retiro park, the Templo de Debod at sunset, CaixaForum's exhibitions, El Rastro market and the endless free spectacle of the city's plazas and streets. Do all this and Madrid delivers a rich trip at a modest cost.",
+    fullDescription: "Madrid is easy to enjoy on a budget with a few smart moves. First, time the free museum hours: the Prado's free last two hours daily, and the Reina Sofía's free evenings and Sunday afternoons, let you see world-class art for nothing — arrive about 30 minutes before to beat the queue. Second, make lunch your main meal and order the menú del día, the fixed-price multi-course deal at €12–18 that is unbeatable value, then keep dinner light with a few tapas. Third, choose your neighbourhood wisely: staying and eating in La Latina, Lavapiés or Embajadores is cheaper than Salamanca or Chamberí, while still being central. Fourth, use public transport smartly — a €12.20 Metrobús card covers 10 journeys and can be shared among your group, and walking the compact centre is free and often faster. Fifth, on flights, book five to seven weeks ahead and fly midweek. Finally, take advantage of how much is simply free: Retiro park, the Templo de Debod at sunset, CaixaForum's exhibitions, El Rastro market and the endless free spectacle of the city's plazas and streets. Do all this and Madrid delivers a rich trip at a modest cost.",
   },
-];
+  ];
+}
 
+export default async function MadridPrices() {
+  const fareCopy = await fareCopyFor("madrid");
+  const priceLine = priceAnswer("Madrid", fareCopy);
+  const flightFullDescription = fareCopy.amount
+    ? `Flight prices to Madrid-Barajas vary with the season. ${priceLine} Madrid is a major Iberia hub with excellent connectivity, so there is strong competition on many routes and frequent sales; booking roughly five to seven weeks ahead, flying midweek rather than at weekends, and setting a price alert while staying flexible on dates can all shave a good deal off the fare.`
+    : priceLine;
+  const INFO = buildInfo(priceLine, flightFullDescription);
 
-export default function MadridPrices() {
   return (
     <CityGuideShell
       citySlug="madrid"
@@ -82,7 +94,7 @@ export default function MadridPrices() {
       crumb="Prices"
       h1="How Much Does Madrid Cost?"
       heroImage={IMG}
-      intro={`Madrid is one of Europe's best-value capitals, cheaper than Barcelona in like-for-like categories and far cheaper than Paris or London. This guide breaks down what a trip actually costs — flight prices by month (from about $${MIN_USD}), a realistic daily budget, and typical prices for tapas, beer, coffee, hotels, the metro and the museums — plus the many ways to see the city for less.`}
+      intro={`Madrid is one of Europe's best-value capitals, cheaper than Barcelona in like-for-like categories and far cheaper than Paris or London. This guide breaks down what a trip actually costs — flights${fareCopy.amount ? ` (from ${fareCopy.amount} round trip from ${fareCopy.originLabel})` : ""}, a realistic daily budget, and typical prices for tapas, beer, coffee, hotels, the metro and the museums — plus the many ways to see the city for less.`}
       wide
     >
       <CategorySeoSections heading="Madrid costs and budgets — in detail" items={INFO} />

@@ -20,22 +20,6 @@ export const CAPE_TOWN = {
   tpName: "cape-town_za",
   summerTemp: 26,
   tagline: "Table Mountain, winelands and Africa's most beautiful city",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts.
-  monthlyPrices: [
-    { month: "Jan", price: 6800 },
-    { month: "Feb", price: 6500 },
-    { month: "Mar", price: 7100 },
-    { month: "Apr", price: 7500 },
-    { month: "May", price: 6800 },
-    { month: "Jun", price: 6200 },
-    { month: "Jul", price: 6000 },
-    { month: "Aug", price: 6100 },
-    { month: "Sep", price: 6500 },
-    { month: "Oct", price: 7000 },
-    { month: "Nov", price: 7500 },
-    { month: "Dec", price: 8000 },
-  ],
   scores: { beaches: 7, nightlife: 9, food: 8, activities: 10, family: 6, value: 6 },
   nearby: [
     { city: "Johannesburg", href: "/johannesburg" },

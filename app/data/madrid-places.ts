@@ -21,22 +21,6 @@ export const MADRID = {
   tpName: "madrid_es",
   summerTemp: 32,
   tagline: "Europe's highest capital — world-class art, tapas and nightlife until dawn",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts.
-  monthlyPrices: [
-    { month: "Jan", price: 2700 },
-    { month: "Feb", price: 2500 },
-    { month: "Mar", price: 2800 },
-    { month: "Apr", price: 3100 },
-    { month: "May", price: 3500 },
-    { month: "Jun", price: 3900 },
-    { month: "Jul", price: 4300 },
-    { month: "Aug", price: 4100 },
-    { month: "Sep", price: 3600 },
-    { month: "Oct", price: 3200 },
-    { month: "Nov", price: 2700 },
-    { month: "Dec", price: 2900 },
-  ],
   scores: { beaches: 1, nightlife: 10, food: 9, activities: 9, family: 7, value: 6 },
   nearby: [
     { city: "Barcelona", href: "/barcelona" },

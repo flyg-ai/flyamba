@@ -20,22 +20,6 @@ export const DUBAI = {
   tpName: "dubai_ae",
   summerTemp: 35,
   tagline: "Futuristic skylines, desert dunes and year-round sunshine",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts.
-  monthlyPrices: [
-    { month: "Jan", price: 5500 },
-    { month: "Feb", price: 5200 },
-    { month: "Mar", price: 5500 },
-    { month: "Apr", price: 5900 },
-    { month: "May", price: 5000 },
-    { month: "Jun", price: 4500 },
-    { month: "Jul", price: 4800 },
-    { month: "Aug", price: 4700 },
-    { month: "Sep", price: 4900 },
-    { month: "Oct", price: 5300 },
-    { month: "Nov", price: 5600 },
-    { month: "Dec", price: 5800 },
-  ],
   scores: { beaches: 8, nightlife: 8, food: 8, activities: 5, family: 9, value: 4 },
   nearby: [
     { city: "Abu Dhabi", href: "/abu-dhabi" },

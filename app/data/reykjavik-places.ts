@@ -20,22 +20,6 @@ export const REYKJAVIK = {
   tpName: "reykjavik_is",
   summerTemp: 13,
   tagline: "Northern lights, geysers and volcanoes — Iceland's pulsing heart",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts.
-  monthlyPrices: [
-    { month: "Jan", price: 2200 },
-    { month: "Feb", price: 2100 },
-    { month: "Mar", price: 2300 },
-    { month: "Apr", price: 2600 },
-    { month: "May", price: 3000 },
-    { month: "Jun", price: 3500 },
-    { month: "Jul", price: 4000 },
-    { month: "Aug", price: 3800 },
-    { month: "Sep", price: 3200 },
-    { month: "Oct", price: 2700 },
-    { month: "Nov", price: 2200 },
-    { month: "Dec", price: 2400 },
-  ],
   scores: { beaches: 2, nightlife: 9, food: 8, activities: 9, family: 6, value: 6 },
   nearby: [
     { city: "London", href: "/london" },

@@ -19,23 +19,6 @@ export const MYKONOS = {
   tpName: "mykonos_gr",
   summerTemp: 27,
   tagline: "Whitewashed lanes, iconic windmills and the Aegean's most legendary nightlife",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts. April is the cheapest
-  // month; July peaks. Winter months are estimated (limited off-season service).
-  monthlyPrices: [
-    { month: "Jan", price: 4000 },
-    { month: "Feb", price: 3900 },
-    { month: "Mar", price: 4100 },
-    { month: "Apr", price: 3800 },
-    { month: "May", price: 5000 },
-    { month: "Jun", price: 6500 },
-    { month: "Jul", price: 8000 },
-    { month: "Aug", price: 7800 },
-    { month: "Sep", price: 6200 },
-    { month: "Oct", price: 4500 },
-    { month: "Nov", price: 4000 },
-    { month: "Dec", price: 4300 },
-  ],
   scores: { beaches: 8, nightlife: 10, food: 7, activities: 6, family: 4, value: 3 },
   nearby: [
     { city: "Santorini", href: "/santorini" },

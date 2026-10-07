@@ -13,14 +13,14 @@ import { FaqSection, type FaqItem } from "@/app/components/FaqSection";
 import { BANGKOK_CATEGORIES, bangkokHref } from "@/app/lib/bangkok";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
-import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { NonstopRoutes } from "@/app/components/NonstopRoutes";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
-// ── Self-contained Bangkok facts (USD-facing, SEK source prices) ──────────────
+// ── Self-contained Bangkok facts ──────────────────────────────────────────────
 const CITY = {
   name: "Bangkok",
   country: "Thailand",
@@ -31,15 +31,7 @@ const CITY = {
   tagline: "Temples, street food and buzzing tropical energy",
   image: "/images/destinations/flights-bangkok.avif",
   coordinates: { lat: 13.7563, lng: 100.5018 },
-  // Average round-trip fare by month, source SEK (Jan–Dec).
-  monthlyPricesSek: [4200, 3900, 4100, 4500, 5200, 5800, 5500, 5400, 4900, 4400, 4000, 4300],
 };
-const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-// Hoisted so the FAQ can quote the same figures the price chart renders.
-const USD_MONTHS = CITY.monthlyPricesSek.map((sek, i) => ({ month: MONTH_LABELS[i], price: usd5(sek) }));
-const LOW = Math.min(...USD_MONTHS.map((m) => m.price));
-const HIGH = Math.max(...USD_MONTHS.map((m) => m.price));
-const AVERAGE = Math.round(USD_MONTHS.reduce((s, m) => s + m.price, 0) / USD_MONTHS.length);
 
 
 const WHY = [
@@ -79,7 +71,7 @@ const NEARBY = [
 export const dynamic = "force-static";
 export const revalidate = 86400;
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Bangkok ${year} — Guide, Prices & Attractions | Flyamba`);
   const description =
@@ -94,10 +86,11 @@ export function generateMetadata(): Metadata {
   };
 }
 
-const FAQ: FaqItem[] = [
+function buildFaq(priceLine: string): FaqItem[] {
+  return [
   {
     q: "How much does a flight to Bangkok cost?",
-    a: `Round-trip fares to Bangkok start around $${LOW} in February and peak near $${HIGH} in June, averaging about $${AVERAGE} across the year. Long-haul fares reward booking two to three months ahead.`,
+    a: priceLine,
   },
   {
     q: "Which airlines fly to Bangkok?",
@@ -105,7 +98,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "When is the cheapest time to fly to Bangkok?",
-    a: `February is the cheapest month at roughly $${LOW} round-trip, with January and November close behind — which conveniently coincides with the cool, dry season. Fares peak in June and stay high through August.`,
+    a: "January, February and November — the cool, dry season — tend to run below the annual average. Fares climb from around April and stay high through peak summer.",
   },
   {
     q: "How long is the flight to Bangkok?",
@@ -115,9 +108,10 @@ const FAQ: FaqItem[] = [
     q: "Which airport does Bangkok use?",
     a: `Suvarnabhumi (${CITY.iata}) handles almost all international flights and reaches the city by Airport Rail Link in about 30 minutes. The older Don Mueang (DMK) serves most budget carriers, so check which one your ticket uses.`,
   },
-];
+  ];
+}
 
-function jsonLd() {
+function jsonLd(FAQ: FaqItem[]) {
   const url = `${SITE}/bangkok`;
   const touristDestination = {
     "@context": "https://schema.org",
@@ -158,16 +152,14 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
   );
 }
 
-export default function BangkokHub() {
+export default async function BangkokHub() {
   const categories = BANGKOK_CATEGORIES.filter((c) => c.slug);
-  const usdMonths = CITY.monthlyPricesSek.map((sek, i) => ({ month: MONTH_LABELS[i], price: usd5(sek) }));
-  const min = Math.min(...usdMonths.map((m) => m.price));
-  const max = Math.max(...usdMonths.map((m) => m.price));
-  const cheapest = usdMonths.reduce((a, b) => (b.price < a.price ? b : a));
+  const fareCopy = await fareCopyFor("bangkok");
+  const FAQ = buildFaq(priceAnswer("Bangkok", fareCopy));
 
   return (
     <div className="min-h-screen bg-background">
-      {jsonLd().map((s, i) => (
+      {jsonLd(FAQ).map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s).replace(/</g, "\\u003c") }} />
       ))}
       <Navbar transparent />
@@ -205,7 +197,9 @@ export default function BangkokHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">{usdStr(CITY.monthlyPricesSek[1])}</span></span>
+          {fareCopy.amount && (
+            <span>from <span className="font-serif text-lg text-accent">{fareCopy.amount}</span> round trip from {fareCopy.originLabel}</span>
+          )}
           <span className="text-muted-foreground/40">•</span>
           <span>~11h from Europe</span>
           <span className="text-muted-foreground/40">•</span>
@@ -244,7 +238,9 @@ export default function BangkokHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "2–3 months ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${cheapest.month} ($${cheapest.price} avg)` },
+            ...(fareCopy.cheapestMonthClause
+              ? [{ icon: TrendingDown, label: "Cheapest month we have seen", value: fareCopy.cheapestMonthClause.split(",")[0] }]
+              : []),
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
             // Removed: this card asserted non-stop service we cannot evidence.
             // origin_fares stores price and dates, not stops. It comes back per
@@ -277,30 +273,10 @@ export default function BangkokHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Bangkok?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - min) / (max - min || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === min;
-              const isMax = m.price === max;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates.
+          FareCalendarSection, mounted after the search widget above, draws the same
+          months from observed fares instead — and shows nothing where we hold too
+          few. */}
       {/* The authored non-stop table that stood here — invented prices and
           hardcoded stop labels — is gone. NonstopRoutes above renders the
           observed fares instead. */}

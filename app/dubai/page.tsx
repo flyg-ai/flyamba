@@ -13,21 +13,16 @@ import { SmartImage } from "@/app/components/SmartImage";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
-import { usd5, usdStr } from "@/app/lib/format";
 import { DUBAI, CATEGORIES } from "@/app/data/dubai-places";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { NonstopRoutes } from "@/app/components/NonstopRoutes";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
 // ── City facts (self-contained) ──────────────────────────────────────────────
 const HERO = "/images/destinations/flights-dubai.avif";
-
-// Monthly average round-trip fares seeded in SEK (from DUBAI.monthlyPrices);
-// displayed in USD via usd5().
-const MONTHLY = DUBAI.monthlyPrices;
-const LOWEST_SEK = Math.min(...MONTHLY.map((m) => m.price));
 
 // DXB is one of the world's great aviation hubs, with nonstop service worldwide.
 
@@ -71,10 +66,11 @@ const BEACH_PREVIEW = [
 
 const NEARBY = DUBAI.nearby;
 
-const FAQ: FaqItem[] = [
+function buildFaq(priceLine: string): FaqItem[] {
+  return [
   {
     q: "How much are flights to Dubai?",
-    a: `Round-trip fares to Dubai start from around ${usdStr(LOWEST_SEK)} in the summer low season (June–August), when the extreme heat keeps demand and prices down. Fares rise through the pleasant winter high season and peak around Christmas and New Year. Booking six to eight weeks ahead and flying midweek gets the best prices.`,
+    a: priceLine,
   },
   {
     q: "When is the best time to visit Dubai?",
@@ -92,7 +88,8 @@ const FAQ: FaqItem[] = [
     q: "Do I need to book Dubai's attractions in advance?",
     a: "Yes for the big timed-entry sights — the Burj Khalifa and especially the Museum of the Future sell out days or weeks ahead, so book online as soon as your dates are set. Many of Dubai's best experiences, including the souks, the public beaches and the nightly Dubai Fountain show, are completely free.",
   },
-];
+  ];
+}
 
 // fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
 // that read is a dynamic-server-usage error, the reader swallows it, and the page
@@ -101,10 +98,11 @@ const FAQ: FaqItem[] = [
 export const dynamic = "force-static";
 export const revalidate = 86400;
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("dubai");
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Dubai ${year} — Guide, Prices & Attractions | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Dubai, UAE from ${usdStr(LOWEST_SEK)}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.`);
+  const description = clampDescription(`Find cheap flights to Dubai, UAE${fareCopy.amount ? ` from ${fareCopy.amount} round trip from ${fareCopy.originLabel}` : ""}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.`);
   const canonical = `${SITE}/dubai`;
   return {
     title,
@@ -115,7 +113,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
-function jsonLd() {
+function jsonLd(FAQ: FaqItem[]) {
   const url = `${SITE}/dubai`;
   const touristDestination = {
     "@context": "https://schema.org",
@@ -156,17 +154,14 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
   );
 }
 
-export default function DubaiHub() {
+export default async function DubaiHub() {
   const guideCategories = CATEGORIES.filter((c) => c.slug);
-  const usdMonths = MONTHLY.map((m) => ({ month: m.month, price: usd5(m.price) }));
-  const min = Math.min(...usdMonths.map((m) => m.price));
-  const max = Math.max(...usdMonths.map((m) => m.price));
-  const cheapest = MONTHLY.reduce((a, b) => (b.price < a.price ? b : a));
-  const cheapestLabel = { Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June", Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December" }[cheapest.month];
+  const fareCopy = await fareCopyFor("dubai");
+  const FAQ = buildFaq(priceAnswer("Dubai", fareCopy));
 
   return (
     <div className="min-h-screen bg-background">
-      {jsonLd().map((s, i) => (
+      {jsonLd(FAQ).map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s).replace(/</g, "\\u003c") }} />
       ))}
       <Navbar transparent />
@@ -204,7 +199,9 @@ export default function DubaiHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">{usdStr(LOWEST_SEK)}</span></span>
+          {fareCopy.amount && (
+            <span>from <span className="font-serif text-lg text-accent">{fareCopy.amount}</span> round trip from {fareCopy.originLabel}</span>
+          )}
           <span className="text-muted-foreground/40">•</span>
           <span>Global hub — nonstop worldwide</span>
           <span className="text-muted-foreground/40">•</span>
@@ -243,7 +240,9 @@ export default function DubaiHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "6–8 weeks ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${cheapestLabel} (${usdStr(cheapest.price)} avg)` },
+            ...(fareCopy.cheapestMonthClause
+              ? [{ icon: TrendingDown, label: "Cheapest month we have seen", value: fareCopy.cheapestMonthClause.split(",")[0] }]
+              : []),
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
             // Removed: this card asserted non-stop service we cannot evidence.
             // origin_fares stores price and dates, not stops. It comes back per
@@ -280,30 +279,10 @@ export default function DubaiHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Dubai?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD. Note that summer is cheapest — it is Dubai's low season because of the heat.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - min) / (max - min || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === min;
-              const isMax = m.price === max;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates.
+          FareCalendarSection, mounted after the search widget above, draws the same
+          months from observed fares instead — and shows nothing where we hold too
+          few. */}
       {/* The authored non-stop table that stood here — invented prices and
           hardcoded stop labels — is gone. NonstopRoutes above renders the
           observed fares instead. */}
@@ -353,7 +332,7 @@ export default function DubaiHub() {
 
       {/* CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA destination={{ slug: "dubai", name: "Dubai" }} priceFrom={usdStr(LOWEST_SEK)} />
+        <FlightCTA destination={{ slug: "dubai", name: "Dubai" }} priceFrom={fareCopy.amount ?? undefined} />
       </section>
 
       {/* 11. Nearby cities */}

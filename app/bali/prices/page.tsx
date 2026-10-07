@@ -2,32 +2,38 @@ import type { Metadata } from "next";
 import { CityGuideShell } from "@/app/components/CityGuideShell";
 import { CategorySeoSections } from "@/app/components/CategorySeoSections";
 import type { BcnPlace } from "@/app/data/barcelona-places";
-import { CATEGORIES, BALI } from "@/app/data/bali-places";
+import { CATEGORIES } from "@/app/data/bali-places";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription } from "@/app/lib/seo";
-import { usd5 } from "@/app/lib/format";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
-const usdMonths = BALI.monthlyPrices.map((m) => usd5(m.price));
-const MIN_USD = Math.min(...usdMonths);
-const MAX_USD = Math.max(...usdMonths);
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the
+// page renders with no price while the build reports success. See CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: "Bali Prices 2026 — Flights, Budget & Daily Costs | Flyamba",
-  description: clampDescription(`How much does Bali cost? Flight fares from $${MIN_USD}, plus a full daily-budget breakdown — hotels, food, drinks, transport and attractions — with currency, ATM, tipping and money-saving tips.`),
-  alternates: { canonical: `${SITE}/bali/prices` },
-  openGraph: { title: "Bali Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to Bali.", type: "article" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("bali");
+  return {
+    title: "Bali Prices 2026 — Flights, Budget & Daily Costs | Flyamba",
+    description: clampDescription(`How much does Bali cost?${fareCopy.amount ? ` Flight fares from ${fareCopy.amount} round trip from ${fareCopy.originLabel},` : ""} plus a full daily-budget breakdown — hotels, food, drinks, transport and attractions — with currency, ATM, tipping and money-saving tips.`),
+    alternates: { canonical: `${SITE}/bali/prices` },
+    openGraph: { title: "Bali Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to Bali.", type: "article" },
+  };
+}
 
 const IMG = "/images/bali/attractions/tegallalang.webp";
 
-const INFO: BcnPlace[] = [
+function buildInfo(priceLine: string, flightFullDescription: string): BcnPlace[] {
+  return [
   {
     name: "Flight prices to Bali", slug: "flight-prices", image: IMG, rating: 5, area: "DPS · round trip",
     tip: "Book about 10–14 weeks ahead and fly Monday or Tuesday for the lowest fares to Denpasar.",
     filterKeys: [],
-    description: `Round-trip fares to Bali start from around $${MIN_USD} and peak in July and August.`,
-    practicalInfo: { openingHours: "Cheapest: February", price: `From ~$${MIN_USD} round trip; ~$${MAX_USD} in peak season`, howToGetThere: "Best connections via Singapore, Doha or Dubai" },
-    fullDescription: `Bali's Ngurah Rai airport (DPS) is a major international gateway, well connected via the big Asian and Gulf hubs, which keeps long-haul fares competitive. As a rough guide in US dollars, round-trip flights start from around $${MIN_USD} in the cheapest months and climb to roughly $${MAX_USD} at the height of the July–August peak season, which coincides with the Australian school holidays. February is typically the cheapest month to fly, with prices then rising through spring toward the mid-year peak before easing again in autumn. There are few truly non-stop options from Europe or the Americas, so most travellers connect through Singapore, Kuala Lumpur, Doha, Dubai or another regional hub — Singapore Airlines via Changi is among the most comfortable routings — while Australia enjoys direct flights. To get the best price, book roughly 10–14 weeks in advance, be flexible with dates, and favour midweek departures, which are usually cheaper than weekends. Set a fare alert and compare across the full-service Asian carriers and the Gulf airlines, and consider a stopover in Singapore or Doha to break the long journey and see another city en route.`,
+    description: priceLine,
+    practicalInfo: { openingHours: "N/A", price: priceLine, howToGetThere: "Best connections via Singapore, Doha or Dubai" },
+    fullDescription: flightFullDescription,
   },
   {
     name: "Daily budget — what to expect", slug: "daily-budget", image: IMG, rating: 5, area: "Per person / day",
@@ -61,10 +67,17 @@ const INFO: BcnPlace[] = [
     practicalInfo: { openingHours: "N/A", price: "~10% at nicer restaurants; round up at warungs; a few dollars for drivers", howToGetThere: "Tip in rupiah, in cash" },
     fullDescription: "Tipping in Bali isn't obligatory but is genuinely appreciated, and a little goes a long way given local wages. At simple warungs there's no expectation to tip, though rounding up the bill is a kind gesture. At nicer restaurants a tip of around 10% is welcome — but check the bill first, as many mid-range and upscale places already add a 'service charge' of 5–10% (sometimes plus government tax), in which case an extra tip isn't necessary. For other services, a few dollars is a thoughtful thank-you: tip your private driver at the end of a good day's sightseeing, leave something for spa therapists, hotel porters and tour guides, and reward warm service wherever you find it. Always tip in cash and in rupiah rather than foreign currency, which is hard for staff to change. Because Bali runs so much on cash and tipping is a meaningful supplement to local incomes, keeping a supply of small notes for gratuities is worth it. Tip for good service, not out of obligation, and you'll find the island's famous friendliness only grows warmer.",
   },
-];
+  ];
+}
 
+export default async function BaliPrices() {
+  const fareCopy = await fareCopyFor("bali");
+  const priceLine = priceAnswer("Bali", fareCopy);
+  const flightFullDescription = fareCopy.amount
+    ? `Bali's Ngurah Rai airport (DPS) is a major international gateway, well connected via the big Asian and Gulf hubs, which keeps long-haul fares competitive. ${priceLine} There are few truly non-stop options from Europe or the Americas, so most travellers connect through Singapore, Kuala Lumpur, Doha, Dubai or another regional hub — Singapore Airlines via Changi is among the most comfortable routings — while Australia enjoys direct flights. To get the best price, book roughly 10–14 weeks in advance, be flexible with dates, and favour midweek departures, which are usually cheaper than weekends.`
+    : priceLine;
+  const INFO = buildInfo(priceLine, flightFullDescription);
 
-export default function BaliPrices() {
   return (
     <CityGuideShell
       citySlug="bali"
@@ -74,7 +87,7 @@ export default function BaliPrices() {
       crumb="Prices"
       h1="Bali Prices & Budget Guide"
       heroImage={IMG}
-      intro={`How much does a trip to Bali cost? The short answer is: far less than you might think. Flights start from around $${MIN_USD} round trip, and once you're on the island your money stretches remarkably far. This guide breaks down the real costs — flights, daily budgets, accommodation, food and drink, transport and attractions — plus how to handle currency, cash and ATMs, and when to tip, all with rupiah and US-dollar figures and money-saving tips.`}
+      intro={`How much does a trip to Bali cost? The short answer is: far less than you might think.${fareCopy.amount ? ` Flights start from around ${fareCopy.amount} round trip from ${fareCopy.originLabel},` : ""} and once you're on the island your money stretches remarkably far. This guide breaks down the real costs — flights, daily budgets, accommodation, food and drink, transport and attractions — plus how to handle currency, cash and ATMs, and when to tip, all with rupiah and US-dollar figures and money-saving tips.`}
       wide
     >
       <CategorySeoSections heading="The cost of visiting Bali — in detail" items={INFO} />

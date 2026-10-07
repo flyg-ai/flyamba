@@ -51,38 +51,13 @@ const ALLOWED = new Set([
  * cannot quietly outlive the work.
  */
 const PENDING = new Set([
-  "app/amsterdam/page.tsx",
-  "app/athens/page.tsx",
-  "app/bali/page.tsx",
-  "app/bali/prices/page.tsx",
-  "app/bangkok/page.tsx",
-  "app/barcelona/page.tsx",
-  "app/cancun/page.tsx",
-  "app/cape-town/page.tsx",
+  // DestinationDetail.tsx is unreachable: every rich-destination slug is in
+  // app/[slug]/page.tsx's RESERVED set and rendered by its own hub folder
+  // instead (see AGENTS.md). Left pending rather than fixed since no visitor
+  // ever sees it, but not deleted without separate confirmation.
   "app/components/DestinationDetail.tsx",
-  "app/data/amsterdam-places.ts",
-  "app/data/bali-places.ts",
-  "app/data/cape-town-places.ts",
-  "app/data/dubai-places.ts",
-  "app/data/dubrovnik-places.ts",
-  "app/data/madrid-places.ts",
-  "app/data/mykonos-places.ts",
-  "app/data/new-york-places.ts",
-  "app/data/reykjavik-places.ts",
-  "app/dubai/page.tsx",
-  "app/dubrovnik/page.tsx",
+  // Same reasoning: only DestinationDetail.tsx (dead code) reads this.
   "app/lib/destination-helpers.ts",
-  "app/lisbon/page.tsx",
-  "app/london/page.tsx",
-  "app/madrid/page.tsx",
-  "app/madrid/prices/page.tsx",
-  "app/new-york/page.tsx",
-  "app/paris/page.tsx",
-  "app/prague/page.tsx",
-  "app/reykjavik/page.tsx",
-  "app/reykjavik/prices/page.tsx",
-  "app/tenerife/page.tsx",
-  "app/tokyo/page.tsx",
 ]);
 
 const PATTERNS = [

@@ -12,12 +12,12 @@ import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { CATEGORIES, ATTRACTIONS, RESTAURANTS } from "@/app/data/london-places";
-import { usd, usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route, Clock } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { NonstopRoutes } from "@/app/components/NonstopRoutes";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
 // ── City constants (self-contained; no shared Destination type) ──────────────
 const SITE = "https://flyamba.com";
@@ -30,10 +30,6 @@ const SUMMER_TEMP = 18;
 const TAGLINE = "Royal palaces, world-class museums and endless neighbourhoods";
 const HERO_IMAGE = "/images/destinations/flights-london.avif";
 const FLIGHT_TIME = "7h 20m from New York";
-
-const MONTH_LABELS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const MONTHLY_SEK = [3100, 2900, 3200, 3500, 3800, 4100, 4400, 4200, 3700, 3300, 2900, 3100];
 
 
 const NEARBY = [
@@ -65,25 +61,15 @@ const CATEGORY_META: Record<string, { image: string; blurb: string }> = {
   events: { image: "/images/content/photo-1533174072545-7a4b6ad7a6c3.avif", blurb: "Festivals and events month by month." },
 };
 
-// ── Derived pricing ──────────────────────────────────────────────────────────
-const usdMonths = MONTHLY_SEK.map((sek, i) => ({ month: MONTH_LABELS[i], price: usd5(sek) }));
-const minUsd5 = Math.min(...usdMonths.map((m) => m.price));
-const maxUsd5 = Math.max(...usdMonths.map((m) => m.price));
-const fromPrice = Math.min(...MONTHLY_SEK.map((s) => usd(s)));
-const cheapestIdx = MONTHLY_SEK.indexOf(Math.min(...MONTHLY_SEK));
-const cheapestMonthName = MONTH_NAMES[cheapestIdx];
-const cheapestMonthUsd = usd(MONTHLY_SEK[cheapestIdx]);
-const dearestIdx = MONTHLY_SEK.indexOf(Math.max(...MONTHLY_SEK));
-const dearestMonthName = MONTH_NAMES[dearestIdx];
-
-const FAQS: FaqItem[] = [
+function buildFaqs(priceLine: string): FaqItem[] {
+  return [
   {
     q: "How much are flights to London?",
-    a: `Round-trip fares to London (Heathrow, LHR) start from around ${usdStr(MONTHLY_SEK[cheapestIdx])} in the low season and average higher in summer. From the US East Coast, expect roughly $400–$600 return; from within Europe, nonstop fares can dip below $100.`,
+    a: priceLine,
   },
   {
     q: "When is the cheapest time to fly to London?",
-    a: `${cheapestMonthName} and November are typically the cheapest months to fly to London, while ${dearestMonthName} and the summer holidays are the most expensive. Booking one to three months ahead and flying midweek (Tuesday or Wednesday) usually secures the best fares.`,
+    a: "Winter months and November are typically the cheapest time to fly to London, while summer and the holidays are the most expensive. Booking one to three months ahead and flying midweek (Tuesday or Wednesday) usually secures the best fares.",
   },
   {
     q: "Which London airport should I fly into?",
@@ -97,7 +83,8 @@ const FAQS: FaqItem[] = [
     q: "Is London expensive to visit?",
     a: "London is one of Europe's pricier capitals for hotels and dining, but it's easy to save: most of the world-class museums and galleries are free, an Oyster or contactless card caps daily Tube spending, and markets and pubs offer good-value meals. Budget travellers can manage on around $90–$120 a day excluding accommodation.",
   },
-];
+  ];
+}
 
 // fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
 // that read is a dynamic-server-usage error, the reader swallows it, and the page
@@ -106,10 +93,11 @@ const FAQS: FaqItem[] = [
 export const dynamic = "force-static";
 export const revalidate = 86400;
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("london");
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to London ${year} — Guide, Prices & Attractions | Flyamba`);
-  const description = clampDescription(`Find cheap flights to London, United Kingdom from ${usdStr(MONTHLY_SEK[cheapestIdx])}. Compare fares to Heathrow (LHR), plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips.`);
+  const description = clampDescription(`Find cheap flights to London, United Kingdom${fareCopy.amount ? ` from ${fareCopy.amount} round trip from ${fareCopy.originLabel}` : ""}. Compare fares to Heathrow (LHR), plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips.`);
   const canonical = `${SITE}/london`;
   return {
     title,
@@ -120,7 +108,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
-function jsonLd() {
+function jsonLd(FAQS: FaqItem[]) {
   const url = `${SITE}/london`;
   const touristDestination = {
     "@context": "https://schema.org",
@@ -161,14 +149,16 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
   );
 }
 
-export default function LondonHub() {
+export default async function LondonHub() {
   const categories = CATEGORIES.filter((c) => c.slug);
   const attractionPreview = ATTRACTIONS.slice(0, 3).map((a) => ({ name: a.name, blurb: a.description, image: a.image }));
   const eatPreview = RESTAURANTS.slice(0, 3).map((r) => ({ name: r.name, blurb: r.description, image: r.image }));
+  const fareCopy = await fareCopyFor("london");
+  const FAQS = buildFaqs(priceAnswer("London", fareCopy));
 
   return (
     <div className="min-h-screen bg-background">
-      {jsonLd().map((s, i) => (
+      {jsonLd(FAQS).map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s).replace(/</g, "\\u003c") }} />
       ))}
       <Navbar transparent />
@@ -206,7 +196,9 @@ export default function LondonHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">${fromPrice}</span></span>
+          {fareCopy.amount && (
+            <span>from <span className="font-serif text-lg text-accent">{fareCopy.amount}</span> round trip from {fareCopy.originLabel}</span>
+          )}
           <span className="text-muted-foreground/40">•</span>
           <span>{FLIGHT_TIME}</span>
           <span className="text-muted-foreground/40">•</span>
@@ -244,7 +236,9 @@ export default function LondonHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "1–3 months ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${cheapestMonthName} (~$${cheapestMonthUsd} avg)` },
+            ...(fareCopy.cheapestMonthClause
+              ? [{ icon: TrendingDown, label: "Cheapest month we have seen", value: fareCopy.cheapestMonthClause.split(",")[0] }]
+              : []),
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
             // Removed: this card asserted non-stop service we cannot evidence.
             // origin_fares stores price and dates, not stops. It comes back per
@@ -283,30 +277,10 @@ export default function LondonHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to London?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - minUsd5) / (maxUsd5 - minUsd5 || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === minUsd5;
-              const isMax = m.price === maxUsd5;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates.
+          FareCalendarSection, mounted after the search widget above, draws the same
+          months from observed fares instead — and shows nothing where we hold too
+          few. */}
       {/* The authored non-stop table that stood here — invented prices and
           hardcoded stop labels — is gone. NonstopRoutes above renders the
           observed fares instead. */}

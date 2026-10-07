@@ -21,22 +21,6 @@ export const BALI = {
   tpName: "denpasar_id",
   summerTemp: 30,
   tagline: "Rice terraces, clifftop temples and Indian Ocean surf",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts.
-  monthlyPrices: [
-    { month: "Jan", price: 7500 },
-    { month: "Feb", price: 7000 },
-    { month: "Mar", price: 7200 },
-    { month: "Apr", price: 7800 },
-    { month: "May", price: 8200 },
-    { month: "Jun", price: 8700 },
-    { month: "Jul", price: 9200 },
-    { month: "Aug", price: 9000 },
-    { month: "Sep", price: 8500 },
-    { month: "Oct", price: 8000 },
-    { month: "Nov", price: 7500 },
-    { month: "Dec", price: 7800 },
-  ],
   scores: { beaches: 8, nightlife: 7, food: 8, activities: 8, family: 7, value: 9 },
   nearby: [
     { city: "Singapore", href: "/singapore" },

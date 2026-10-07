@@ -2,31 +2,38 @@ import type { Metadata } from "next";
 import { CityGuideShell } from "@/app/components/CityGuideShell";
 import { CategorySeoSections } from "@/app/components/CategorySeoSections";
 import type { BcnPlace } from "@/app/data/barcelona-places";
-import { CATEGORIES, REYKJAVIK } from "@/app/data/reykjavik-places";
+import { CATEGORIES } from "@/app/data/reykjavik-places";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription } from "@/app/lib/seo";
-import { usd5 } from "@/app/lib/format";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
-const MIN_USD = Math.min(...REYKJAVIK.monthlyPrices.map((m) => usd5(m.price)));
-const MAX_USD = Math.max(...REYKJAVIK.monthlyPrices.map((m) => usd5(m.price)));
+// fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
+// that read is a dynamic-server-usage error, the reader swallows it, and the
+// page renders with no price while the build reports success. See CLAUDE.md.
+export const dynamic = "force-static";
+export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: "Reykjavík Prices 2026 — Flights, Budget & Daily Costs",
-  description: clampDescription(`How much does Reykjavík cost? Flight fares from $${MIN_USD}, plus a full daily-budget breakdown — hotels, food, geothermal spas, tours and transport — for one of Europe's priciest cities, with money-saving tips.`),
-  alternates: { canonical: `${SITE}/reykjavik/prices` },
-  openGraph: { title: "Reykjavík Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to Reykjavík.", type: "article" },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("reykjavik");
+  return {
+    title: "Reykjavík Prices 2026 — Flights, Budget & Daily Costs",
+    description: clampDescription(`How much does Reykjavík cost?${fareCopy.amount ? ` Flight fares from ${fareCopy.amount} round trip from ${fareCopy.originLabel},` : ""} plus a full daily-budget breakdown — hotels, food, geothermal spas, tours and transport — for one of Europe's priciest cities, with money-saving tips.`),
+    alternates: { canonical: `${SITE}/reykjavik/prices` },
+    openGraph: { title: "Reykjavík Prices & Budget Guide | Flyamba", description: "Flight fares, daily budgets and the real cost of a trip to Reykjavík.", type: "article" },
+  };
+}
 
 const IMG = "/images/reykjavik/attractions/laugavegur.webp";
 
-const INFO: BcnPlace[] = [
+function buildInfo(priceLine: string, flightFullDescription: string): BcnPlace[] {
+  return [
   {
     name: "Flight prices to Reykjavík", slug: "flight-prices", image: IMG, rating: 5, area: "KEF · round trip",
     tip: "Book 4–6 weeks ahead and fly Monday or Tuesday for the lowest fares to Keflavík.",
     filterKeys: [],
-    description: `Round-trip fares to Reykjavík Keflavík start from around $${MIN_USD} and peak in mid-summer.`,
-    practicalInfo: { openingHours: "Cheapest: February & November", price: `From ~$${MIN_USD} round trip; ~$${MAX_USD} in July–August`, howToGetThere: "Non-stop from New York, Boston, London, Copenhagen, Oslo, Paris and more" },
-    fullDescription: `Reykjavík is well connected for a city of its size, thanks to Keflavík (KEF) being the home hub of Icelandair and a key transatlantic stopover point, which keeps fares competitive. As a rough guide in US dollars, round-trip flights start from around $${MIN_USD} in the cheapest months and climb to roughly $${MAX_USD} at the height of summer. The two cheapest months to fly are February and November, when demand dips outside the holidays and the summer peak; prices then rise steadily through spring, peaking in July and August with the midnight-sun crowds before easing again in autumn. To get the best price, book about four to six weeks in advance, be flexible with dates, and favour early-week departures — Mondays and Tuesdays are typically cheaper than weekends. Non-stop routes serve many cities including New York, Boston, London, Copenhagen, Oslo and Paris, and Icelandair's famous stopover programme lets you break a transatlantic journey in Iceland for up to a week at no extra airfare — effectively a free extra destination. Set a fare alert, compare Icelandair with low-cost carriers where they operate, and consider a winter trip for both the lowest fares and the northern lights.`,
+    description: priceLine,
+    practicalInfo: { openingHours: "N/A", price: priceLine, howToGetThere: "Non-stop from New York, Boston, London, Copenhagen, Oslo, Paris and more" },
+    fullDescription: flightFullDescription,
   },
   {
     name: "Daily budget — what to expect", slug: "daily-budget", image: IMG, rating: 5, area: "Per person / day",
@@ -68,10 +75,17 @@ const INFO: BcnPlace[] = [
     practicalInfo: { openingHours: "N/A", price: "Many of Iceland's greatest experiences are free", howToGetThere: "Iceland is almost entirely cashless — a contactless card works everywhere" },
     fullDescription: "Reykjavík and Iceland are expensive, but smart planning makes a huge difference. Start with everything free: the country's greatest attractions — the waterfalls, geysers, black beaches, volcanic landscapes and coastlines of the Golden Circle, South Coast and beyond — cost nothing to visit, as do Hallgrímskirkja's nave, the Sun Voyager, Tjörnin, the harbour and the rooftop viewpoints in the city. Bathe in the locals' municipal geothermal pools (around $12) rather than the premium lagoons, and eat from bakeries, food halls, hot dog stands and supermarkets rather than restaurants. Self-cater where you can by booking an apartment or guesthouse with a kitchen, buy any alcohol from the state Vínbúðin off-licence rather than bars, and refill a bottle with the excellent free tap water. Self-drive your day trips rather than booking guided coaches, splitting the rental cost across a group. Time your visit to the cheaper shoulder or winter months for lower flights and hotels, and fly midweek. Consider the Reykjavík City Card if you'll do several museums and use the buses. And remember there's no tipping, as service is always included. Iceland is a place where the very best experiences — its raw, staggering nature — are the ones that cost nothing at all.",
   },
-];
+  ];
+}
 
+export default async function ReykjavikPrices() {
+  const fareCopy = await fareCopyFor("reykjavik");
+  const priceLine = priceAnswer("Reykjavík", fareCopy);
+  const flightFullDescription = fareCopy.amount
+    ? `Reykjavík is well connected for a city of its size, thanks to Keflavík (KEF) being the home hub of Icelandair and a key transatlantic stopover point, which keeps fares competitive. ${priceLine} Non-stop routes serve many cities including New York, Boston, London, Copenhagen, Oslo and Paris, and Icelandair's famous stopover programme lets you break a transatlantic journey in Iceland for up to a week at no extra airfare — effectively a free extra destination. To get the best price, book about four to six weeks in advance, be flexible with dates, and favour early-week departures — Mondays and Tuesdays are typically cheaper than weekends.`
+    : priceLine;
+  const INFO = buildInfo(priceLine, flightFullDescription);
 
-export default function ReykjavikPrices() {
   return (
     <CityGuideShell
       citySlug="reykjavik"

@@ -14,12 +14,12 @@ import { SmartImage } from "@/app/components/SmartImage";
 import { CATEGORIES, ATTRACTIONS, RESTAURANTS, BEACHES } from "@/app/data/lisbon-places";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
-import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { NonstopRoutes } from "@/app/components/NonstopRoutes";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
 // ── Self-contained city facts (USD audience) ─────────────────────────────────
 const CITY = {
@@ -33,12 +33,8 @@ const CITY = {
   flightTime: "4h from London · 7h from New York",
   tagline: "Atlantic light, tiled hills and pastel de nata",
   image: "/images/destinations/flights-lisbon.avif",
-  // Round-trip averages seeded in SEK; converted to USD for display.
-  monthlyPricesSek: [2700, 2500, 2900, 3100, 3600, 3900, 4300, 4200, 3700, 3100, 2600, 2800],
   coordinates: { lat: 38.7223, lng: -9.1393 },
 };
-
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 
 const WHY = [
@@ -66,11 +62,12 @@ const NEARBY = [
 export const dynamic = "force-static";
 export const revalidate = 86400;
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("lisbon");
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Lisbon ${year} — Guide, Prices & Attractions | Flyamba`);
   const description =
-    clampDescription("Find cheap flights to Lisbon, Portugal from $240. Compare fares from TAP Air Portugal, United and British Airways, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips to Sintra and Cascais.");
+    clampDescription(`Find cheap flights to Lisbon, Portugal${fareCopy.amount ? ` from ${fareCopy.amount} round trip from ${fareCopy.originLabel}` : ""}. Compare fares from TAP Air Portugal, United and British Airways, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips to Sintra and Cascais.`);
   const canonical = `${SITE}/lisbon`;
   return {
     title,
@@ -81,13 +78,16 @@ export function generateMetadata(): Metadata {
   };
 }
 
-const FAQ: FaqItem[] = [
-  { q: "When is the cheapest time to fly to Lisbon?", a: "Fares are lowest in winter — February averages around $240 round-trip — while July and August are the most expensive. April–June and September offer the best balance of warm weather and moderate prices." },
+function buildFaq(priceLine: string): FaqItem[] {
+  return [
+  { q: "How much does a flight to Lisbon cost?", a: priceLine },
+  { q: "When is the cheapest time to fly to Lisbon?", a: "Fares tend to be lowest in winter, while July and August are the most expensive. April–June and September offer the best balance of warm weather and moderate prices." },
   { q: "How long is the flight to Lisbon?", a: "Lisbon (LIS) is about 4 hours from London, 2.5 hours from Paris, and 7–8 hours nonstop from the US East Coast (New York, Boston). TAP Air Portugal, United and British Airways all fly direct." },
   { q: "Which airlines fly nonstop to Lisbon?", a: "TAP Air Portugal is the main carrier, with nonstop routes from New York, Boston, Toronto, São Paulo and across Europe. United, British Airways, Ryanair and easyJet also serve LIS directly." },
-];
+  ];
+}
 
-function jsonLd() {
+function jsonLd(FAQ: FaqItem[]) {
   const url = `${SITE}/lisbon`;
   const touristDestination = {
     "@context": "https://schema.org",
@@ -128,16 +128,14 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
   );
 }
 
-export default function LisbonHub() {
+export default async function LisbonHub() {
   const categories = CATEGORIES.filter((c) => c.slug); // exclude the "Flights" hub link
-  const usdMonths = CITY.monthlyPricesSek.map((sek, i) => ({ month: MONTHS[i], price: usd5(sek) }));
-  const min = Math.min(...usdMonths.map((m) => m.price));
-  const max = Math.max(...usdMonths.map((m) => m.price));
-  const cheapest = usdMonths.find((m) => m.price === min)!;
+  const fareCopy = await fareCopyFor("lisbon");
+  const FAQ = buildFaq(priceAnswer("Lisbon", fareCopy));
 
   return (
     <div className="min-h-screen bg-background">
-      {jsonLd().map((s, i) => (
+      {jsonLd(FAQ).map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s).replace(/</g, "\\u003c") }} />
       ))}
       <Navbar transparent />
@@ -175,7 +173,9 @@ export default function LisbonHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">{usdStr(CITY.monthlyPricesSek[1])}</span></span>
+          {fareCopy.amount && (
+            <span>from <span className="font-serif text-lg text-accent">{fareCopy.amount}</span> round trip from {fareCopy.originLabel}</span>
+          )}
           <span className="text-muted-foreground/40">•</span>
           <span>{CITY.flightTime}</span>
           <span className="text-muted-foreground/40">•</span>
@@ -213,7 +213,9 @@ export default function LisbonHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "6–8 weeks ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${monthName(cheapest.month)} ($${cheapest.price} avg)` },
+            ...(fareCopy.cheapestMonthClause
+              ? [{ icon: TrendingDown, label: "Cheapest month we have seen", value: fareCopy.cheapestMonthClause.split(",")[0] }]
+              : []),
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
             // Removed: this card asserted non-stop service we cannot evidence.
             // origin_fares stores price and dates, not stops. It comes back per
@@ -249,30 +251,10 @@ export default function LisbonHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Lisbon?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - min) / (max - min || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === min;
-              const isMax = m.price === max;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates.
+          FareCalendarSection, mounted after the search widget above, draws the same
+          months from observed fares instead — and shows nothing where we hold too
+          few. */}
       {/* The authored non-stop table that stood here — invented prices and
           hardcoded stop labels — is gone. NonstopRoutes above renders the
           observed fares instead. */}
@@ -370,13 +352,4 @@ export default function LisbonHub() {
       <Footer />
     </div>
   );
-}
-
-// Short month → full month name for the "cheapest month" insight.
-function monthName(short: string): string {
-  const map: Record<string, string> = {
-    Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June",
-    Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December",
-  };
-  return map[short] ?? short;
 }

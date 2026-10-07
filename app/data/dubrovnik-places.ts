@@ -19,22 +19,6 @@ export const DUBROVNIK = {
   tpName: "dubrovnik_hr",
   summerTemp: 28,
   tagline: "The Adriatic's walled pearl — city walls, sea-blue coves and Game of Thrones scenes",
-  // Average round-trip fare per month, stored in SEK (seeded scale) and
-  // converted to USD for display via app/lib/format.ts.
-  monthlyPrices: [
-    { month: "Jan", price: 2800 },
-    { month: "Feb", price: 2600 },
-    { month: "Mar", price: 2900 },
-    { month: "Apr", price: 3200 },
-    { month: "May", price: 3700 },
-    { month: "Jun", price: 4300 },
-    { month: "Jul", price: 5000 },
-    { month: "Aug", price: 4800 },
-    { month: "Sep", price: 4100 },
-    { month: "Oct", price: 3400 },
-    { month: "Nov", price: 2800 },
-    { month: "Dec", price: 2900 },
-  ],
   scores: { beaches: 7, nightlife: 6, food: 7, activities: 9, family: 7, value: 5 },
   nearby: [
     { city: "Split", href: "/split" },

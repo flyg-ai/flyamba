@@ -14,14 +14,14 @@ import { SmartImage } from "@/app/components/SmartImage";
 import { PRAGUE_CATEGORIES } from "@/app/data/prague-places";
 import { SITE } from "@/app/lib/destination-helpers";
 import { clampDescription, clampTitle } from "@/app/lib/seo";
-import { usd, usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { NonstopRoutes } from "@/app/components/NonstopRoutes";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
-// ── City facts (self-contained; SEK prices → USD for display) ────────────────
+// ── City facts (self-contained) ────────────────
 const CITY = {
   name: "Prague",
   country: "Czechia",
@@ -34,11 +34,6 @@ const CITY = {
   coordinates: { lat: 50.0755, lng: 14.4378 },
   flightTime: "From 8h 30m nonstop",
 };
-
-const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const MONTH_NAMES = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-// Average round-trip fares seeded in SEK.
-const MONTHLY_SEK = [2600, 2400, 2700, 3000, 3400, 3700, 4000, 3800, 3300, 2900, 2500, 2700];
 
 
 const ATTRACTION_PREVIEW = [
@@ -71,10 +66,11 @@ const NEARBY = [
   { city: "Krakow", href: "/krakow" },
 ];
 
-const FAQ = [
+function buildFaq(priceLine: string) {
+  return [
   {
     q: "How much are flights to Prague?",
-    a: `Round-trip fares to Prague (PRG) start from around ${usdStr(Math.min(...MONTHLY_SEK))} in the cheapest months. Prices are lowest in winter (outside the Christmas period) and highest in July and August, so booking 6–8 weeks ahead and flying in the shoulder seasons of spring or autumn gets the best value.`,
+    a: priceLine,
   },
   {
     q: "Is there a direct flight to Prague?",
@@ -82,7 +78,7 @@ const FAQ = [
   },
   {
     q: "What is the cheapest month to fly to Prague?",
-    a: `Based on average fares, ${cheapestMonthName()} is typically the cheapest month to fly to Prague, when round-trip prices dip to around ${usdStr(Math.min(...MONTHLY_SEK))}. January and November are also good value, while summer and the Christmas markets season are the most expensive.`,
+    a: "January, February and November tend to be the cheapest months to fly to Prague, while summer and the Christmas markets season are the most expensive.",
   },
   {
     q: "How many days do you need in Prague?",
@@ -92,15 +88,7 @@ const FAQ = [
     q: "Is Prague expensive to visit?",
     a: "No — Prague is one of the best-value capitals in Europe. Beer is famously cheap (often under $2 a half-litre), public transport and meals are affordable, and many of the best sights, from the castle grounds to Charles Bridge, are free to explore.",
   },
-];
-
-function cheapestMonthIdx() {
-  let idx = 0;
-  for (let i = 1; i < MONTHLY_SEK.length; i++) if (MONTHLY_SEK[i] < MONTHLY_SEK[idx]) idx = i;
-  return idx;
-}
-function cheapestMonthName() {
-  return MONTH_NAMES[cheapestMonthIdx()];
+  ];
 }
 
 // fare-calendar.ts reads Supabase with cache: "no-store". Without force-static
@@ -110,10 +98,11 @@ function cheapestMonthName() {
 export const dynamic = "force-static";
 export const revalidate = 86400;
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("prague");
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Prague ${year} — Guide, Prices & Attractions | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Prague, Czechia from ${usdStr(Math.min(...MONTHLY_SEK))}. Compare fares to Václav Havel Airport (PRG), plus complete English guides to Prague attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips.`);
+  const description = clampDescription(`Find cheap flights to Prague, Czechia${fareCopy.amount ? ` from ${fareCopy.amount} round trip from ${fareCopy.originLabel}` : ""}. Compare fares to Václav Havel Airport (PRG), plus complete English guides to Prague attractions, restaurants, hotels, transport, weather, shopping, nightlife, family travel and day trips.`);
   const canonical = `${SITE}/prague`;
   return {
     title,
@@ -124,7 +113,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
-function jsonLd() {
+function jsonLd(FAQ: ReturnType<typeof buildFaq>) {
   const url = `${SITE}/prague`;
   const touristDestination = {
     "@context": "https://schema.org",
@@ -162,16 +151,14 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
   );
 }
 
-export default function PragueHub() {
+export default async function PragueHub() {
   const categories = PRAGUE_CATEGORIES.filter((c) => c.slug);
-  const usdMonths = MONTHLY_SEK.map((sek, i) => ({ month: MONTHS[i], price: usd5(sek) }));
-  const min = Math.min(...usdMonths.map((m) => m.price));
-  const max = Math.max(...usdMonths.map((m) => m.price));
-  const cheapUsd = usd(Math.min(...MONTHLY_SEK));
+  const fareCopy = await fareCopyFor("prague");
+  const FAQ = buildFaq(priceAnswer("Prague", fareCopy));
 
   return (
     <div className="min-h-screen bg-background">
-      {jsonLd().map((s, i) => (
+      {jsonLd(FAQ).map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s).replace(/</g, "\\u003c") }} />
       ))}
       <Navbar transparent />
@@ -209,7 +196,9 @@ export default function PragueHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">{usdStr(Math.min(...MONTHLY_SEK))}</span></span>
+          {fareCopy.amount && (
+            <span>from <span className="font-serif text-lg text-accent">{fareCopy.amount}</span> round trip from {fareCopy.originLabel}</span>
+          )}
           <span className="text-muted-foreground/40">•</span>
           <span>{CITY.flightTime}</span>
           <span className="text-muted-foreground/40">•</span>
@@ -247,7 +236,9 @@ export default function PragueHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "6–8 weeks ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${cheapestMonthName()} ($${cheapUsd} avg)` },
+            ...(fareCopy.cheapestMonthClause
+              ? [{ icon: TrendingDown, label: "Cheapest month we have seen", value: fareCopy.cheapestMonthClause.split(",")[0] }]
+              : []),
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
             // Removed: this card asserted non-stop service we cannot evidence.
             // origin_fares stores price and dates, not stops. It comes back per
@@ -282,30 +273,10 @@ export default function PragueHub() {
         </div>
       </section>
 
-      {/* 6. Price by month (USD) */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Prague?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD. {cheapestMonthName()} is the cheapest month at about ${cheapUsd}.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - min) / (max - min || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === min;
-              const isMax = m.price === max;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates.
+          FareCalendarSection, mounted after the search widget above, draws the same
+          months from observed fares instead — and shows nothing where we hold too
+          few. */}
       {/* The authored non-stop table that stood here — invented prices and
           hardcoded stop labels — is gone. NonstopRoutes above renders the
           observed fares instead. */}
@@ -355,7 +326,7 @@ export default function PragueHub() {
 
       {/* 11. CTA */}
       <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <FlightCTA destination={{ slug: "prague", name: "Prague" }} priceFrom={usdStr(Math.min(...MONTHLY_SEK))} />
+        <FlightCTA destination={{ slug: "prague", name: "Prague" }} priceFrom={fareCopy.amount ?? undefined} />
       </section>
 
       {/* 12. Nearby cities */}

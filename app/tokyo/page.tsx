@@ -11,12 +11,12 @@ import { AviasalesWidget } from "@/app/components/AviasalesWidget";
 import { AskAiWidget } from "@/app/components/AskAiWidget";
 import { CitySubNav } from "@/app/components/CitySubNav";
 import { CATEGORIES } from "@/app/data/tokyo-places";
-import { usd5, usdStr } from "@/app/lib/format";
 import { ArrowRight, Plane, CalendarClock, TrendingDown, CalendarDays, Route } from "lucide-react";
 import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { crumbsForSlug } from "@/app/lib/destination-crumbs";
 import { FareCalendarSection } from "@/app/components/FareCalendarSection";
 import { NonstopRoutes } from "@/app/components/NonstopRoutes";
+import { fareCopyFor, priceAnswer } from "@/app/lib/fare-copy";
 
 // ── Self-contained Tokyo hub data ────────────────────────────────────────────
 const SITE = "https://flyamba.com";
@@ -29,22 +29,6 @@ const SUMMER_TEMP = 26;
 const TAGLINE = "Neon nights, ancient shrines and the world's best food";
 const HERO = "/images/destinations/flights-tokyo.avif";
 const FLIGHT_TIME = "11h 30m nonstop from the US West Coast";
-
-// Monthly average round-trip fares, stored as SEK (converted to USD for display).
-const MONTHLY_SEK = [
-  { month: "Jan", price: 5500 },
-  { month: "Feb", price: 5200 },
-  { month: "Mar", price: 5800 },
-  { month: "Apr", price: 6100 },
-  { month: "May", price: 6500 },
-  { month: "Jun", price: 6900 },
-  { month: "Jul", price: 7200 },
-  { month: "Aug", price: 7000 },
-  { month: "Sep", price: 6300 },
-  { month: "Oct", price: 5800 },
-  { month: "Nov", price: 5400 },
-  { month: "Dec", price: 5700 },
-];
 
 
 const WHY_VISIT = [
@@ -77,16 +61,18 @@ const NEARBY = [
   { city: "Bangkok", href: "/bangkok" },
 ];
 
-const FAQ = [
-  { q: "How much does a flight to Tokyo cost?", a: `Round-trip fares to Tokyo (NRT) start from around ${usdStr(5200)} in the cheapest months, rising toward $685 in peak summer. Booking 2–3 months ahead and flying in February or November gets the best prices.` },
-  { q: "When is the cheapest time to fly to Tokyo?", a: "February is the cheapest month on average, followed by November and January. Peak prices hit in July and August; spring cherry-blossom season (late March to April) and autumn are also popular and pricier." },
+function buildFaq(priceLine: string) {
+  return [
+  { q: "How much does a flight to Tokyo cost?", a: priceLine },
+  { q: "When is the cheapest time to fly to Tokyo?", a: "February, November and January tend to be the cheapest months on average. Peak prices hit in July and August; spring cherry-blossom season (late March to April) and autumn are also popular and pricier." },
   { q: "How long is the flight to Tokyo?", a: "Tokyo is about 11–12 hours nonstop from the US West Coast, 13–14 hours from the US East Coast, and around 12–14 hours from major European hubs like London and Paris." },
   { q: "Which airport should I fly into for Tokyo?", a: "Tokyo has two airports: Narita (NRT), used by most long-haul international flights, about 60–90 minutes from the centre by Narita Express or Skyliner; and the closer Haneda (HND). Both connect easily to the city." },
   { q: "Do I need a visa to visit Tokyo?", a: "Citizens of the US, UK, EU, Canada, Australia and many other countries can enter Japan visa-free for short tourist stays (typically up to 90 days). Always check the latest requirements before booking." },
-];
+  ];
+}
 
 // ── JSON-LD ──────────────────────────────────────────────────────────────────
-function jsonLd() {
+function jsonLd(FAQ: ReturnType<typeof buildFaq>) {
   const url = `${SITE}/${SLUG}`;
   const touristDestination = {
     "@context": "https://schema.org",
@@ -116,10 +102,11 @@ function jsonLd() {
 export const dynamic = "force-static";
 export const revalidate = 86400;
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata(): Promise<Metadata> {
+  const fareCopy = await fareCopyFor("tokyo");
   const year = new Date().getFullYear();
   const title = clampTitle(`Cheap Flights to Tokyo ${year} — Guide, Prices & Attractions | Flyamba`);
-  const description = clampDescription(`Find cheap flights to Tokyo, Japan from ${usdStr(5200)}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.`);
+  const description = clampDescription(`Find cheap flights to Tokyo, Japan${fareCopy.amount ? ` from ${fareCopy.amount} round trip from ${fareCopy.originLabel}` : ""}. Compare fares, plus complete English guides to attractions, restaurants, hotels, transport, weather, shopping, beaches, nightlife, family travel and day trips.`);
   const canonical = `${SITE}/${SLUG}`;
   return {
     title,
@@ -148,20 +135,14 @@ function PreviewGrid({ items }: { items: { name: string; blurb: string; image: s
   );
 }
 
-export default function TokyoHub() {
+export default async function TokyoHub() {
   const categories = CATEGORIES.filter((c) => c.slug);
-  const usdMonths = MONTHLY_SEK.map((m) => ({ month: m.month, price: usd5(m.price) }));
-  const min = Math.min(...usdMonths.map((m) => m.price));
-  const max = Math.max(...usdMonths.map((m) => m.price));
-  const cheapest = usdMonths.reduce((a, b) => (b.price < a.price ? b : a));
-  const monthName: Record<string, string> = {
-    Jan: "January", Feb: "February", Mar: "March", Apr: "April", May: "May", Jun: "June",
-    Jul: "July", Aug: "August", Sep: "September", Oct: "October", Nov: "November", Dec: "December",
-  };
+  const fareCopy = await fareCopyFor("tokyo");
+  const FAQ = buildFaq(priceAnswer("Tokyo", fareCopy));
 
   return (
     <div className="min-h-screen bg-background">
-      {jsonLd().map((s, i) => (
+      {jsonLd(FAQ).map((s, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s).replace(/</g, "\\u003c") }} />
       ))}
       <Navbar transparent />
@@ -199,7 +180,9 @@ export default function TokyoHub() {
       {/* 2. Flight stats bar */}
       <section className="relative z-10 mx-auto mt-8 max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 rounded-full border border-border bg-card px-6 py-4 text-sm font-medium text-foreground shadow-elegant">
-          <span>from <span className="font-serif text-lg text-accent">{usdStr(5200)}</span></span>
+          {fareCopy.amount && (
+            <span>from <span className="font-serif text-lg text-accent">{fareCopy.amount}</span> round trip from {fareCopy.originLabel}</span>
+          )}
           <span className="text-muted-foreground/40">•</span>
           <span>{FLIGHT_TIME}</span>
           <span className="text-muted-foreground/40">•</span>
@@ -237,7 +220,9 @@ export default function TokyoHub() {
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             { icon: CalendarClock, label: "Best time to book", value: "2–3 months ahead" },
-            { icon: TrendingDown, label: "Cheapest month", value: `${monthName[cheapest.month]} ($${cheapest.price} avg)` },
+            ...(fareCopy.cheapestMonthClause
+              ? [{ icon: TrendingDown, label: "Cheapest month we have seen", value: fareCopy.cheapestMonthClause.split(",")[0] }]
+              : []),
             { icon: CalendarDays, label: "Cheapest day to fly", value: "Tuesday & Wednesday" },
             // Removed: this card asserted non-stop service we cannot evidence.
             // origin_fares stores price and dates, not stops. It comes back per
@@ -270,30 +255,10 @@ export default function TokyoHub() {
         </div>
       </section>
 
-      {/* 6. Price by month */}
-      <section id="cheapest-months" className="mx-auto mt-16 max-w-7xl scroll-mt-32 px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Prices by month</p>
-        <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">When is it cheapest to fly to Tokyo?</h2>
-        <p className="mt-2 text-sm text-muted-foreground">Average round-trip fare, USD.</p>
-        <div className="mt-8 overflow-hidden rounded-3xl border border-border bg-card p-6">
-          <div className="flex h-56 items-end gap-2">
-            {usdMonths.map((m) => {
-              const ratio = (m.price - min) / (max - min || 1);
-              const h = Math.round(16 + ratio * 152);
-              const isMin = m.price === min;
-              const isMax = m.price === max;
-              return (
-                <div key={m.month} className="group flex h-full flex-1 flex-col items-center justify-end gap-2">
-                  <span className={`text-[11px] font-semibold ${isMin ? "text-emerald-600 dark:text-emerald-400" : isMax ? "text-orange-500" : "text-muted-foreground"}`}>${m.price}</span>
-                  <div className={`w-full rounded-t-xl ${isMin ? "bg-emerald-500" : isMax ? "bg-orange-500" : "bg-accent/60 group-hover:bg-accent"}`} style={{ height: h }} />
-                  <span className="text-[11px] font-semibold text-muted-foreground">{m.month}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
+      {/* The month chart that stood here plotted twelve Stockholm SEK estimates.
+          FareCalendarSection, mounted after the search widget above, draws the same
+          months from observed fares instead — and shows nothing where we hold too
+          few. */}
       {/* The authored non-stop table that stood here — invented prices and
           hardcoded stop labels — is gone. NonstopRoutes above renders the
           observed fares instead. */}
