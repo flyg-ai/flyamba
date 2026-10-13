@@ -234,35 +234,33 @@ export function getUsFareTable(): Promise<UsFareTable> {
 }
 
 /**
- * The compact card label: "$153 rt · NYC · seen Aug 19".
+ * The compact card label: "$153 rt · NYC".
  *
  * Never "from $153". These are fares we observed, not fares we are offering, and
  * US DOT's full-fare advertising rule (14 CFR 399.84) is about advertised prices
- * being available to buy. Past tense and an origin keep this an observation.
+ * being available to buy. Past tense keeps this an observation — the explicit
+ * "seen <date>" stamp was dropped because on a thin route it can sit unrefreshed
+ * for months and read as "we are two months out of date" rather than "this was
+ * an observation"; the surrounding copy ("prices a live search returned, not a
+ * standing offer") carries that framing instead.
  */
 export function formatFareLabelShort(f: UsFare, { showOrigin = true } = {}): string {
-  const seen = f.fare.fetchedAt
-    ? new Date(f.fare.fetchedAt).toLocaleString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })
-    : null;
   const trip = f.fare.oneWay ? "one way" : "rt";
   // `showOrigin: false` is for lists where every row is already labelled with its
   // departure city — /cheap-flights, where the row IS the city. Repeating the code
   // there adds a token the reader has to skip, not information.
-  return [`$${f.fare.priceUsd.toLocaleString("en-US")} ${trip}`, showOrigin ? f.origin : null, seen ? `seen ${seen}` : null]
+  return [`$${f.fare.priceUsd.toLocaleString("en-US")} ${trip}`, showOrigin ? f.origin : null]
     .filter(Boolean)
     .join(" · ");
 }
 
 /** The long form for destination pages: two lines, the second one the detail. */
 export function formatFareLabelLong(f: UsFare, originLabel: string): { headline: string; detail: string | null } {
-  const seen = f.fare.fetchedAt
-    ? new Date(f.fare.fetchedAt).toLocaleString("en-US", { month: "short", day: "numeric", timeZone: "UTC" })
-    : null;
   const trip = f.fare.oneWay ? "one way" : "round trip";
   const dates = formatFareDates(f.fare);
   return {
     headline: `$${f.fare.priceUsd.toLocaleString("en-US")} ${trip} from ${originLabel}`,
-    detail: [seen ? `seen ${seen}` : null, dates].filter(Boolean).join(" · ") || null,
+    detail: dates,
   };
 }
 
