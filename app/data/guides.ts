@@ -423,6 +423,85 @@ export const guides: Guide[] = [
 <p>London is one of the best-connected cities on earth, which keeps fares competitive year-round. January and February are consistently the cheapest months to fly in, and midweek departures beat weekends as everywhere. With six airports competing, it is always worth checking more than one — but factor the transfer honestly, because the cheapest fare into Stansted is not always the cheapest way to reach London.</p>
 `,
   },
+  {
+    slug: "best-caribbean-getaways-us",
+    title: "Best Caribbean Getaways from the US — 7 Islands Worth the Flight",
+    excerpt:
+      "From no-passport-needed Puerto Rico to the ABC islands outside the hurricane belt, here are seven Caribbean escapes that work brilliantly from US airports — and when to go.",
+    destination: null,
+    category: "Inspiration",
+    readTime: "9 min",
+    publishedAt: "2026-10-15",
+    image: "/images/content/caribbean-turquoise-bay.avif",
+    content: `
+<p>The Caribbean is the easiest "far away" trip available to most of the US — often a shorter flight than crossing the country, with turquoise water and 80°F winters at the other end. Not every island fits every trip, though: some are built for nightlife, some for diving, one doesn't even need a passport. Here are seven worth planning a getaway around.</p>
+
+<h2>1. <a href="/aruba">Aruba</a> — Best for Reliable Weather</h2>
+<p>Aruba sits south of the main hurricane belt, which makes it one of the few Caribbean islands with genuinely dependable weather nearly all year. Add constant trade winds that keep the heat comfortable, powder-white Eagle Beach, and a compact size that makes renting a car worthwhile for a day exploring the desert-like Arikok National Park. Good for both a couples' trip and a family one.</p>
+
+<h2>2. <a href="/jamaica">Jamaica</a> — Best for Variety</h2>
+<p>Jamaica packs the most range into one island: the all-inclusive resort belt around Montego Bay and Negril, Dunn's River Falls for an active day out, Blue Mountain coffee country inland, and a music and food culture that doesn't exist anywhere else in the region. It rewards leaving the resort at least once.</p>
+
+<h2>3. <a href="/punta-cana">Punta Cana</a> — Best for All-Inclusive Value</h2>
+<p>The Dominican Republic's east coast is the Caribbean's all-inclusive capital for a reason: a long stretch of beach lined with resorts covering every budget, direct flights from dozens of US cities, and package rates that are hard to match elsewhere in the region. It's the lowest-effort way to book a Caribbean week — pick a resort, and the rest is handled.</p>
+
+<h2>4. <a href="/puerto-rico">Puerto Rico</a> — Best for No Passport</h2>
+<p>As a US territory, Puerto Rico needs nothing more than a driver's license to visit — no passport, no customs on the way home, and your phone plan likely just works. Old San Juan's colonial streets, the bioluminescent bay in Vieques, and El Yunque rainforest give it more to do than a pure beach island, and flights from the East Coast are often under four hours.</p>
+
+<h2>5. <a href="/bahamas">The Bahamas</a> — Best for a Short Flight</h2>
+<p>From South Florida, Nassau is barely a 45-minute hop — closer than plenty of domestic flights. The appeal is the water itself: some of the clearest, most swimming-pool-blue sea in the hemisphere, plus easy day trips to swim with pigs at Exuma or snorkel the reefs off Nassau.</p>
+
+<h2>6. <a href="/curacao">Curaçao</a> — Best for Diving</h2>
+<p>Also outside the hurricane belt, Curaçao trades big beach resorts for colorful Dutch-colonial Willemstad and some of the best shore diving in the Caribbean — much of the reef is accessible straight off the rocks rather than requiring a boat trip. A quieter, more individual pick than the all-inclusive islands.</p>
+
+<h2>7. <a href="/barbados">Barbados</a> — Best for a Polished Trip</h2>
+<p>Barbados sits at the more refined end of the Caribbean: calm Caribbean-side beaches on the west coast, rougher Atlantic surf on the east, excellent rum and food, and an easygoing but well-run tourism infrastructure. A good pick for travelers who want the Caribbean without roughing it.</p>
+
+<h2>When to Go</h2>
+<p>Caribbean hurricane season runs June through November, peaking August to October — not a reason to avoid the region entirely, but worth knowing before booking late-summer travel, especially to islands directly in the belt (Puerto Rico, Punta Cana, Jamaica, the Bahamas). Aruba and Curaçao sit far enough south to largely avoid it. December through April is the reliable dry season everywhere and also the most expensive; late spring (May) and November offer a good balance of lower rates and decent odds of good weather.</p>
+
+<h2>Which One Should You Pick?</h2>
+<p>No passport and a short flight: Puerto Rico. Best all-inclusive value: Punta Cana. Most to do beyond the beach: Jamaica. Steadiest weather: Aruba or Curaçao. Easiest quick trip from Florida: the Bahamas. Whichever you choose, search live fares from your own airport — Caribbean routes vary enormously in price depending on which US city you're flying from.</p>
+`,
+  },
+  {
+    slug: "spring-break-2027",
+    title: "Spring Break 2027 — Where to Go and When to Book",
+    excerpt:
+      "When spring break actually falls in 2027, which destinations handle the crowds best, and how far ahead to book before the cheap seats disappear.",
+    destination: null,
+    category: "Planning",
+    readTime: "7 min",
+    publishedAt: "2026-10-15",
+    image: "/images/content/spring-break-beach-party.avif",
+    content: `
+<p>Spring break isn't one week — it's a six-week stretch where different schools and colleges let out on different schedules, which is exactly why the destinations and prices swing so much depending on when you go. Here's how to time it and where to point the flight.</p>
+
+<h2>When Is Spring Break 2027?</h2>
+<p>College and school spring breaks spread across <strong>mid-February through late April 2027</strong>, with the heaviest concentration in the first three weeks of March. There's no single national date — each school district and university sets its own calendar — so the honest answer is to check your own (or your kids') school calendar first, then book around it. If you have flexibility, the first half of March is peak spring break; the edges of that window (late February, early April) are quieter and cheaper for identical weather.</p>
+
+<h2>Where to Go, by What You Want</h2>
+
+<h3>The Classic Party Scene</h3>
+<p><a href="/cancun">Cancún</a> is still the reigning spring break capital — an enormous hotel zone built for exactly this, with every budget covered and nightlife that runs all night. <a href="/punta-cana">Punta Cana</a> offers a similar all-inclusive scene with a slightly calmer edge.</p>
+
+<h3>A Beach Trip Without Leaving the Country</h3>
+<p><a href="/miami">Miami</a> delivers the spring break energy domestically — South Beach, no passport required, and direct flights from almost everywhere. It's pricier than Mexico or the Caribbean for a comparable week, but the logistics are simpler.</p>
+
+<h3>Families and Younger Kids</h3>
+<p><a href="/orlando">Orlando</a> is the default for a reason — theme parks built for exactly this crowd, with endless flight options keeping fares competitive even in peak weeks. For a calmer family beach week, <a href="/aruba">Aruba</a>'s steady weather and family-friendly resorts are a strong alternative to the parks.</p>
+
+<h3>Something Different</h3>
+<p><a href="/las-vegas">Las Vegas</a> and <a href="/san-diego">San Diego</a> both pull a spring break crowd without the classic beach-resort format — Vegas for nightlife and shows, San Diego for a milder, more laid-back West Coast week.</p>
+
+<h2>When to Book</h2>
+<p>Spring break fares follow the same rule as any peak-demand period: the airline isn't guessing when seats will sell, it's watching them sell and repricing upward as they go. Booking <strong>two to three months ahead</strong> — by mid-to-late December for a March trip — gets you in before the steepest climb. Waiting until February for a March spring break trip means competing for whatever's left in the most expensive fare buckets.</p>
+<p>If your dates are flexible, flying out a day before or after the peak crowd (Thursday instead of Saturday, for instance) can meaningfully cut the fare even within the same week.</p>
+
+<h2>Beating the Crowds</h2>
+<p>Every destination on this list gets busy during peak spring break weeks. If crowds matter more to you than hitting the exact social spring-break window, the edges of the season — mid-to-late February or mid-to-late April — give you the same weather and beaches with a fraction of the people, at noticeably lower prices.</p>
+`,
+  },
 ];
 
 export function getGuidesByDestination(destination: string): Guide[] {
