@@ -20,6 +20,7 @@ import { fareCalendarFor } from "@/app/lib/fare-calendar";
 import { SITE } from "@/app/lib/destination-helpers";
 import { LowFareCta } from "@/app/components/LowFareCta";
 import { CALENDAR_BY_SLUG } from "@/app/lib/low-fare";
+import { LITE_EDITORIAL } from "@/app/data/lite-editorial";
 import { Plane, Globe, MapPin, TrendingDown, ArrowRight, Sparkles } from "lucide-react";
 
 const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
@@ -107,6 +108,7 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
         }))
     : [];
   const countryPageSlug = COUNTRY_PAGES[d.country] ?? null;
+  const editorial = LITE_EDITORIAL[d.slug] ?? null;
 
   return (
     <div className="min-h-screen bg-background">
@@ -195,18 +197,37 @@ export async function DestinationLite({ d }: { d: AllDestination }) {
           gpt_seed destination gets no section, not an estimated one. */}
       <ClimateSection slug={d.slug} name={d.name} />
 
-      {/* Full guide coming soon */}
-      <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl border border-dashed border-accent/40 bg-accent/8 p-8 text-center sm:p-10">
-          <div className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-accent/15 text-accent">
-            <Sparkles className="h-6 w-6" />
+      {/* Editorial highlights for the handful of Lite pages Google has actually
+          indexed (see app/data/lite-editorial.ts). Falls back to the "coming
+          soon" placeholder everywhere else. */}
+      {editorial ? (
+        <section className="mx-auto mt-16 max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-accent">Why visit</p>
+          <h2 className="mt-2 font-serif text-3xl font-semibold text-foreground sm:text-4xl">What to see in {d.name}</h2>
+          <p className="mt-4 max-w-3xl text-muted-foreground">{editorial.intro}</p>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {editorial.highlights.map((h) => (
+              <div key={h.title} className="rounded-3xl border border-border bg-card p-6">
+                <span className="grid h-11 w-11 place-items-center rounded-xl bg-accent/15 text-xl" aria-hidden>{h.icon}</span>
+                <h3 className="mt-4 font-serif text-lg font-semibold text-foreground">{h.title}</h3>
+                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{h.text}</p>
+              </div>
+            ))}
           </div>
-          <h2 className="mt-5 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Full {d.name} guide coming soon</h2>
-          <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">
-            We&apos;re writing an in-depth guide to {d.name} — attractions, food, hotels, transport and the best time to visit. Meanwhile, search live fares above and grab a deal.
-          </p>
-        </div>
-      </section>
+        </section>
+      ) : (
+        <section className="mx-auto mt-16 max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-3xl border border-dashed border-accent/40 bg-accent/8 p-8 text-center sm:p-10">
+            <div className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-accent/15 text-accent">
+              <Sparkles className="h-6 w-6" />
+            </div>
+            <h2 className="mt-5 font-serif text-2xl font-semibold text-foreground sm:text-3xl">Full {d.name} guide coming soon</h2>
+            <p className="mx-auto mt-2 max-w-md text-sm text-muted-foreground">
+              We&apos;re writing an in-depth guide to {d.name} — attractions, food, hotels, transport and the best time to visit. Meanwhile, search live fares above and grab a deal.
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* FAQ — schema mirrors the visible items exactly, per FaqSection's rule. */}
       {faq && (
