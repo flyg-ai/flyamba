@@ -502,6 +502,73 @@ export const guides: Guide[] = [
 <p>Every destination on this list gets busy during peak spring break weeks. If crowds matter more to you than hitting the exact social spring-break window, the edges of the season — mid-to-late February or mid-to-late April — give you the same weather and beaches with a fraction of the people, at noticeably lower prices.</p>
 `,
   },
+  {
+    slug: "where-to-escape-winter-from-us",
+    title: "Where to Escape Winter From the US — 6 Warm-Weather Picks",
+    excerpt:
+      "When the forecast back home is gray and 30°F, here's where to fly for reliable sun — from a short hop to Mexico to a longer haul worth the extra hours.",
+    destination: null,
+    category: "Inspiration",
+    readTime: "8 min",
+    publishedAt: "2026-10-20",
+    image: "/images/content/winter-escape-tropical-sunset.avif",
+    content: `
+<p>Winter in most of the US means short days and a forecast that doesn't move much above freezing for months. The good news: somewhere warm is always within reach of a direct or one-stop flight, whatever your budget or how much time you have. Here are six reliable picks, roughly ordered by how far you need to go.</p>
+
+<h2>1. <a href="/cancun">Cancún</a> — The Shortest Hop to Guaranteed Heat</h2>
+<p>From much of the US, Cancún is a two-to-four-hour flight to 80°F and turquoise water — hard to beat for distance-to-warmth ratio. Winter (December through April) is actually peak season here precisely because it's dry and sunny while the Yucatán's summer brings heat and rain, so you're not fighting a shoulder-season gamble.</p>
+
+<h2>2. <a href="/honolulu">Hawaii</a> — Warm Without Leaving the Country</h2>
+<p>Honolulu stays around 80°F essentially year-round, and going to Hawaii means no passport, no currency exchange, no customs line on the way home. It's a longer flight from the East Coast, but West Coast departures make it genuinely easy, and winter is whale-watching season on top of the beaches.</p>
+
+<h2>3. <a href="/costa-rica">Costa Rica</a> — Beaches and Rainforest in One Trip</h2>
+<p>December through April is Costa Rica's dry season, which is exactly when most of the US is at its coldest — good timing. Beyond the beaches, it's one of the few winter-escape destinations where you can also do cloud forest zip-lining, volcano hikes and wildlife-watching in the same week.</p>
+
+<h2>4. <a href="/dubai">Dubai</a> — Warm, Dry, and a Long-Haul Done Right</h2>
+<p>Dubai's winter (November to March) is its best season — warm days in the high 70s and 80s without the brutal summer heat the city is also known for. It's a longer flight, but direct routes from several major US hubs make it more accessible than the distance on a map suggests, and the city itself is built for a short, high-impact trip.</p>
+
+<h2>5. <a href="/phuket">Thailand</a> — The Furthest, and Worth It for a Longer Trip</h2>
+<p>Thailand's cool, dry season runs roughly November to February — warm beach weather in Phuket and the southern islands without the monsoon humidity of the wet season. It's a long way from the US, so this one makes most sense paired with at least ten days to justify the flight time, but the value once you're there is hard to match.</p>
+
+<h2>6. <a href="/marrakech">Marrakech</a> — A Different Kind of Warm</h2>
+<p>Morocco in winter isn't a beach trip — daytime temperatures sit in the comfortable 60s and 70s, evenings turn cool — but it's a reliable escape from genuinely freezing weather, with souks, the Atlas Mountains on the horizon, and a one-stop routing from most of the US.</p>
+
+<h2>Picking the Right One for Your Trip</h2>
+<p>Shortest flight and guaranteed beach weather: Cancún. Warm without a passport: Hawaii. Beach plus adventure: Costa Rica. A longer haul that still feels easy: Dubai. Willing to fly far for real value: Thailand. Escaping the cold without needing a swimsuit: Marrakech. Whichever you pick, check our <a href="/where-is-it-warm">Where Is It Warm</a> tool for measured temperatures by month before you book — "winter sun" destinations vary more than people expect.</p>
+`,
+  },
+  {
+    slug: "5-destinations-about-to-blow-up-2026",
+    title: "5 Destinations About to Blow Up in 2026",
+    excerpt:
+      "Before they're on every feed: a Black Sea capital turning heads, Montenegro's quiet rival to Dubrovnik, Vietnam's rising beach city, and two more worth visiting now.",
+    destination: null,
+    category: "Inspiration",
+    readTime: "7 min",
+    publishedAt: "2026-10-20",
+    image: "/images/content/hidden-gem-coastal-town.avif",
+    content: `
+<p>Every destination that's impossible to get a hotel room in today was quiet five years ago. These five are at that point now — genuinely good, still affordable, and not yet overrun. Here's why each one is worth booking before the rest of the internet catches on.</p>
+
+<h2>1. <a href="/tbilisi">Tbilisi, Georgia</a></h2>
+<p>Georgia has spent the last few years turning into one of the best-value trips in Eurasia: a dramatically sited capital of sulfur-bathhouse old towns and Soviet-modernist architecture, a wine region (Kakheti) that claims to be the oldest in the world, and a food scene — khachapuri, khinkali — that travelers who've been are increasingly loud about. Flights are still relatively cheap and the visa situation is easy for US passport holders.</p>
+
+<h2>2. <a href="/kotor">Kotor, Montenegro</a></h2>
+<p>Kotor sits on a fjord-like bay ringed by mountains, with a walled old town that gives <a href="/dubrovnik">Dubrovnik</a> a real run for its money — at a fraction of the crowds and the price. As Croatia's coast has gotten more expensive and more crowded, Montenegro is the obvious next stop for the same Adriatic scenery, and it's starting to show in the search data.</p>
+
+<h2>3. <a href="/da-nang">Da Nang, Vietnam</a></h2>
+<p>Vietnam's central coast has quietly become one of Southeast Asia's best beach destinations, and Da Nang is its anchor — miles of sand, the Marble Mountains just outside town, and the lantern-lit old town of Hoi An twenty minutes away. It's cheaper than Thailand's established beach resorts and far less built-up, for now.</p>
+
+<h2>4. <a href="/medellin">Medellín, Colombia</a></h2>
+<p>Medellín's reinvention over the past decade is well known in digital-nomad circles and increasingly beyond them — a spring-like climate year-round (it's called the "City of Eternal Spring" for a reason), a genuinely good food and coffee scene, and a cable-car transit system that doubles as a sightseeing tour over the hillside neighborhoods. Flights from the US have gotten considerably easier in recent years.</p>
+
+<h2>5. <a href="/essaouira">Essaouira, Morocco</a></h2>
+<p>While Marrakech gets busier and pricier, Essaouira — a windswept fishing port three hours down the coast — offers the same Moroccan souks and medina atmosphere with sea air, fresh grilled fish on the port, and some of the best wind- and kite-surfing in North Africa. It's the coastal counterpoint to Marrakech that's starting to get its own attention.</p>
+
+<h2>Why Now</h2>
+<p>Every destination on this list shares the same pattern: real infrastructure and genuine appeal, but search interest and flight prices that haven't caught up to it yet. That window tends to close within a few years once a place gets written up enough times — book while the flights are still reasonable and the old town isn't yet full of the crowds Dubrovnik or Santorini deal with today.</p>
+`,
+  },
 ];
 
 export function getGuidesByDestination(destination: string): Guide[] {
