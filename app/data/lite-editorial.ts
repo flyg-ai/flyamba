@@ -24,6 +24,30 @@ export const LITE_EDITORIAL: Record<string, LiteEditorial> = {
       { icon: "☀️", title: "Year-round weather", text: "Average highs stay around 86–88°F every month of the year — there's no real off-season for the climate, only for the crowds." },
     ],
   },
+  chicago: {
+    intro:
+      "Chicago is the rare US city that's genuinely great for both architecture lovers and deep-dish-pizza tourists in the same weekend — a lakefront skyline best seen from the water, world-class museums, and neighborhoods with enough personality that locals will argue for hours about which one is best.",
+    highlights: [
+      { icon: "🫘", title: "Cloud Gate (\"The Bean\")", text: "Millennium Park's mirrored sculpture is the city's most-photographed spot, and the park around it hosts free summer concerts." },
+      { icon: "🛥️", title: "Architecture river cruise", text: "The single best way to understand why Chicago is considered the birthplace of the skyscraper — an hour on the Chicago River pointed out by a trained guide." },
+      { icon: "🎨", title: "The Art Institute of Chicago", text: "One of the most important art museums in the US, home to Grant Wood's American Gothic and Seurat's A Sunday on La Grande Jatte." },
+      { icon: "🍕", title: "Deep-dish pizza", text: "A legitimate meal, not just a snack — Lou Malnati's and Giordano's are the classic rival names to try." },
+      { icon: "🎡", title: "Navy Pier", text: "A lakefront entertainment pier with a Ferris wheel, fireworks in summer, and some of the best skyline views in the city." },
+      { icon: "🏙️", title: "Magnificent Mile", text: "Chicago's premier shopping and dining strip along North Michigan Avenue, anchored by the historic Water Tower." },
+    ],
+  },
+  atlanta: {
+    intro:
+      "Atlanta is a major Southern hub that's become a genuine destination in its own right — one of the country's best aquariums, civil rights history that belongs on any serious itinerary, and a food and music scene that reaches well beyond the convention-center version of the city most travelers pass through.",
+    highlights: [
+      { icon: "🐋", title: "Georgia Aquarium", text: "One of the largest aquariums in the world, with whale sharks and beluga whales among species rarely seen in captivity elsewhere in the US." },
+      { icon: "✊", title: "Martin Luther King Jr. National Historical Park", text: "His birth home, Ebenezer Baptist Church and his tomb, all within the Sweet Auburn neighborhood where he grew up." },
+      { icon: "🥤", title: "World of Coca-Cola", text: "An Atlanta institution — the brand's history museum, with a tasting room pouring Coke products from around the world." },
+      { icon: "🚶", title: "Atlanta BeltLine", text: "A former rail corridor turned walkable, bikeable park loop connecting dozens of neighborhoods, lined with public art and breweries." },
+      { icon: "🌳", title: "Piedmont Park", text: "The city's Central Park equivalent, bordering the Atlanta Botanical Garden and the eclectic Virginia-Highland neighborhood." },
+      { icon: "🎶", title: "Music and food scene", text: "The birthplace of modern Southern hip-hop, with a restaurant scene — from soul food to some of the best Southern fine dining in the country — to match." },
+    ],
+  },
   jamaica: {
     intro:
       "Jamaica packs the most range of any single Caribbean island: resort-belt beaches in Montego Bay and Negril, waterfalls and rainforest inland, Blue Mountain coffee country, and a music and food culture that reaches far beyond the all-inclusive strip. It rewards leaving the resort at least once.",

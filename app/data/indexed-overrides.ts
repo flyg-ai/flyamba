@@ -24,7 +24,10 @@ export const ALREADY_INDEXED_SLUGS = new Set<string>([
   "bahamas",
   "barbados",
   "nairobi",
-  // Promoted, batch 1 of 3 (Oct 2026) — highest US search volume first.
+  // Promoted, batch 1 (Oct 2026) — highest US search volume first.
   "aruba",
   "jamaica",
+  // Promoted, batch 2.
+  "chicago",
+  "atlanta",
 ]);
