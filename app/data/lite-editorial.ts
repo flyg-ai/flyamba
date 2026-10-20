@@ -48,6 +48,30 @@ export const LITE_EDITORIAL: Record<string, LiteEditorial> = {
       { icon: "🎶", title: "Music and food scene", text: "The birthplace of modern Southern hip-hop, with a restaurant scene — from soul food to some of the best Southern fine dining in the country — to match." },
     ],
   },
+  miami: {
+    intro:
+      "Miami runs on two speeds: the neon, art-deco energy of South Beach and a genuinely sophisticated Latin American food and culture scene that extends well beyond the beach. It's warm essentially year-round and works equally well as a standalone trip or a jumping-off point to the Keys or a cruise.",
+    highlights: [
+      { icon: "🏖️", title: "South Beach & Ocean Drive", text: "The pastel art-deco hotels and people-watching along Ocean Drive are as much the attraction as the beach itself." },
+      { icon: "🎨", title: "Wynwood Walls", text: "A former warehouse district turned open-air street-art museum, now also packed with galleries, breweries and restaurants." },
+      { icon: "🏛️", title: "Vizcaya Museum & Gardens", text: "An early-1900s Italian Renaissance-style villa on Biscayne Bay, with formal gardens worth half a day alone." },
+      { icon: "🍽️", title: "Little Havana", text: "Cuban coffee, cigar rollers and domino games along Calle Ocho — the city's Cuban exile community at its most visible." },
+      { icon: "🚤", title: "Biscayne Bay boat tours", text: "The classic way to see the Millionaire's Row waterfront mansions and the Miami skyline from the water." },
+      { icon: "🌴", title: "Day trip to the Florida Keys", text: "Key Largo is under two hours south by car — reef diving and conch fritters within easy reach of the city." },
+    ],
+  },
+  "las-vegas": {
+    intro:
+      "Las Vegas is built entirely around spectacle, and it delivers at every scale — from the Strip's casino megaresorts to the red-rock desert twenty minutes outside town. It's also one of the easiest US cities to fly into on a cheap fare, with near-constant airline competition keeping routes well served.",
+    highlights: [
+      { icon: "🎰", title: "The Strip", text: "A 4.2-mile stretch of themed megaresorts — the Bellagio fountains, the Venetian's indoor canals, and more free spectacle than almost anywhere else in the US." },
+      { icon: "🎭", title: "World-class shows", text: "From Cirque du Soleil residencies to A-list concert residencies, Vegas books entertainment at a scale no other US city matches." },
+      { icon: "🏜️", title: "Red Rock Canyon", text: "A 13-mile scenic loop drive or hiking trail through dramatic sandstone formations, just 20 minutes from the Strip." },
+      { icon: "🐉", title: "Fremont Street", text: "Downtown Vegas's older, grittier neon core — a covered pedestrian strip with a nightly light show overhead." },
+      { icon: "🍽️", title: "Celebrity-chef dining", text: "Vegas has become one of the country's genuine fine-dining destinations, with outposts from some of the world's most recognized chefs." },
+      { icon: "🏞️", title: "Day trip to the Grand Canyon", text: "The West Rim is around a 2.5-hour drive, or a short helicopter tour from the Strip — a full day trip that's surprisingly manageable." },
+    ],
+  },
   jamaica: {
     intro:
       "Jamaica packs the most range of any single Caribbean island: resort-belt beaches in Montego Bay and Negril, waterfalls and rainforest inland, Blue Mountain coffee country, and a music and food culture that reaches far beyond the all-inclusive strip. It rewards leaving the resort at least once.",
