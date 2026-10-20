@@ -12,6 +12,30 @@ export type LiteHighlight = { icon: string; title: string; text: string };
 export type LiteEditorial = { intro: string; highlights: LiteHighlight[] };
 
 export const LITE_EDITORIAL: Record<string, LiteEditorial> = {
+  aruba: {
+    intro:
+      "Aruba sits south of the main Caribbean hurricane belt, which gives it one of the most dependable climates in the region — constant trade winds keep the heat comfortable, and the desert-like interior means almost no rain to plan around. It's a small island, easy to see most of in a few days, with English widely spoken and the US dollar accepted everywhere.",
+    highlights: [
+      { icon: "🏖️", title: "Eagle Beach", text: "Consistently ranked among the best beaches in the world — wide, white sand and the island's iconic divi-divi trees leaning in the wind." },
+      { icon: "🏜️", title: "Arikok National Park", text: "Nearly a fifth of the island, covering cactus-studded desert, hidden caves and the natural pool at Conchi, reachable by 4x4." },
+      { icon: "🤿", title: "Snorkeling the Antilla wreck", text: "A WWII-era shipwreck sitting close enough to the surface for snorkelers, not just divers, to explore." },
+      { icon: "🏘️", title: "Oranjestad", text: "A compact, colorful Dutch-Caribbean capital with duty-free shopping and a cruise-ship waterfront." },
+      { icon: "🍽️", title: "Local cuisine", text: "A genuine Dutch-Caribbean-Latin mix — try keshi yena (stuffed cheese) and fresh-caught mahi-mahi at a beachfront zouk." },
+      { icon: "☀️", title: "Year-round weather", text: "Average highs stay around 86–88°F every month of the year — there's no real off-season for the climate, only for the crowds." },
+    ],
+  },
+  jamaica: {
+    intro:
+      "Jamaica packs the most range of any single Caribbean island: resort-belt beaches in Montego Bay and Negril, waterfalls and rainforest inland, Blue Mountain coffee country, and a music and food culture that reaches far beyond the all-inclusive strip. It rewards leaving the resort at least once.",
+    highlights: [
+      { icon: "🏖️", title: "Negril's Seven Mile Beach", text: "One continuous stretch of white sand backed by low-key resorts and beach bars, with famous sunset cliff-diving at Rick's Café." },
+      { icon: "💦", title: "Dunn's River Falls", text: "A terraced waterfall near Ocho Rios you climb hand-in-hand with a guide, straight up from the beach to the top." },
+      { icon: "🎵", title: "Bob Marley Museum", text: "His former home in Kingston, now a museum covering the life and influence of Jamaica's most famous export." },
+      { icon: "☕", title: "Blue Mountains", text: "Home to some of the most sought-after coffee in the world, and cooler hiking terrain a world away from the coast." },
+      { icon: "🍛", title: "Jerk cooking", text: "The real version — smoked over pimento wood at a roadside jerk stand — is worth seeking out beyond the resort buffet." },
+      { icon: "🏞️", title: "YS Falls & Black River", text: "A quieter alternative to Dunn's River, plus a boat safari through mangroves to spot crocodiles on the Black River." },
+    ],
+  },
   nice: {
     intro:
       "Nice is the capital of the French Riviera — a city of pastel façades, a pebble beach that runs the length of downtown, and an old town that smells like lemons and espresso. It's compact enough to see on foot and makes an easy base for day trips along the Côte d'Azur.",

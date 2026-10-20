@@ -9,6 +9,7 @@ import { TOP_PAIRS, pairHref } from "@/app/compare/pairs";
 import { MONTHS as WARM_MONTHS, warmHref } from "@/app/where-is-it-warm/months";
 import { DEPARTURES, departureHref } from "@/app/lib/departures";
 import { COUNTRY_PAGES } from "@/app/lib/regions";
+import { ALREADY_INDEXED_SLUGS } from "@/app/data/indexed-overrides";
 
 // Replaces the hand-maintained public/sitemap.xml. Generated at build time from
 // the same data the pages render from, so a new destination in the catalog shows
@@ -202,6 +203,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE}/${d.slug}`,
       changeFrequency: "monthly",
       priority: 0.5,
+    });
+  }
+
+  // Promoted Lite pages — given real editorial content and deliberately kept
+  // indexable (see indexed-overrides.ts). Listed here so Google has an actual
+  // signal to (re)crawl them, not just permission to.
+  for (const slug of ALREADY_INDEXED_SLUGS) {
+    if (hubSlugs.has(slug)) continue;
+    entries.push({
+      url: `${SITE}/${slug}`,
+      changeFrequency: "monthly",
+      priority: 0.6,
     });
   }
 
