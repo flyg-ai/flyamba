@@ -33,4 +33,7 @@ export const ALREADY_INDEXED_SLUGS = new Set<string>([
   // Promoted, batch 3.
   "miami",
   "las-vegas",
+  // Promoted, batch 4.
+  "orlando",
+  "costa-rica",
 ]);

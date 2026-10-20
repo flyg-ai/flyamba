@@ -72,6 +72,30 @@ export const LITE_EDITORIAL: Record<string, LiteEditorial> = {
       { icon: "🏞️", title: "Day trip to the Grand Canyon", text: "The West Rim is around a 2.5-hour drive, or a short helicopter tour from the Strip — a full day trip that's surprisingly manageable." },
     ],
   },
+  orlando: {
+    intro:
+      "Orlando is built around theme parks on a scale nowhere else matches — four Disney World parks, Universal's two parks and a growing list of competitors, all within a short drive of each other. It's squarely a family destination, but a genuinely huge one: plan for more days than you think you need.",
+    highlights: [
+      { icon: "🏰", title: "Walt Disney World", text: "Four separate parks — Magic Kingdom, EPCOT, Hollywood Studios and Animal Kingdom — plus two water parks and a shopping-and-dining district." },
+      { icon: "🧙", title: "Universal Orlando", text: "Home to The Wizarding World of Harry Potter across two parks, plus Universal's own Epic Universe expansion." },
+      { icon: "🐬", title: "SeaWorld Orlando", text: "Marine-life shows and thrill coasters combined, a different format from the Disney and Universal theme-park model." },
+      { icon: "🛍️", title: "Disney Springs & ICON Park", text: "Shopping, dining and entertainment districts that work well for an evening when you need a break from the parks themselves." },
+      { icon: "🐊", title: "Beyond the parks", text: "Central Florida's natural springs and airboat tours through alligator country are a short drive from the tourist corridor, if you want a day away from the crowds." },
+      { icon: "✈️", title: "Easy to fly into", text: "Orlando International is one of the best-connected airports in the US for leisure travel, which keeps fares competitive from most major cities." },
+    ],
+  },
+  "costa-rica": {
+    intro:
+      "Costa Rica compresses an unusual amount of nature into a small country — rainforest, volcanoes, cloud forest and two coastlines, all reachable within a few hours of each other. \"Pura vida\" isn't just a slogan here; it's a genuinely laid-back, eco-tourism-first culture that's been built over decades, not overnight.",
+    highlights: [
+      { icon: "🌋", title: "Arenal Volcano", text: "A near-perfect cone volcano ringed by hot springs resorts and canopy zip-line courses, in the country's adventure-tourism heartland." },
+      { icon: "🌳", title: "Monteverde Cloud Forest", text: "Suspended hanging bridges through misty, high-altitude rainforest thick with hummingbirds and quetzals." },
+      { icon: "🦥", title: "Manuel Antonio National Park", text: "A small but dense park combining beach, rainforest trails and easy sloth- and monkey-spotting — often a first-timer's favorite." },
+      { icon: "🏄", title: "Guanacaste beaches", text: "The driest, sunniest part of the country, with surf towns like Tamarindo and resort beaches along the Pacific coast." },
+      { icon: "☕", title: "Coffee country", text: "The Central Valley's volcanic soil produces some of the world's most sought-after coffee, with farm tours around Monteverde and the Orosi Valley." },
+      { icon: "🐢", title: "Wildlife-watching", text: "Home to roughly 5% of the world's biodiversity despite its small size — sloths, toucans, monkeys and sea turtle nesting beaches are all realistic sightings." },
+    ],
+  },
   jamaica: {
     intro:
       "Jamaica packs the most range of any single Caribbean island: resort-belt beaches in Montego Bay and Negril, waterfalls and rainforest inland, Blue Mountain coffee country, and a music and food culture that reaches far beyond the all-inclusive strip. It rewards leaving the resort at least once.",
