@@ -96,6 +96,18 @@ export const LITE_EDITORIAL: Record<string, LiteEditorial> = {
       { icon: "🐢", title: "Wildlife-watching", text: "Home to roughly 5% of the world's biodiversity despite its small size — sloths, toucans, monkeys and sea turtle nesting beaches are all realistic sightings." },
     ],
   },
+  "punta-cana": {
+    intro:
+      "Punta Cana is the Dominican Republic's all-inclusive capital — a long, uninterrupted stretch of Caribbean coast lined almost entirely with resorts, built specifically to make a beach week as low-effort as possible. It's less about exploring and more about picking the right resort and committing to it.",
+    highlights: [
+      { icon: "🏖️", title: "Bávaro Beach", text: "Miles of white sand and calm, reef-protected water — consistently rated among the best beaches in the Caribbean for swimming." },
+      { icon: "🏨", title: "All-inclusive resorts", text: "The region's defining feature: meals, drinks and often excursions bundled into one rate, across every budget from family-friendly to adults-only luxury." },
+      { icon: "⛳", title: "Golf", text: "Several championship courses, including Corales and Punta Espada, draw a dedicated golf-travel crowd alongside the beach tourists." },
+      { icon: "🐠", title: "Catalina Island & reef snorkeling", text: "A popular day-trip boat excursion to a small, mostly uninhabited island with some of the region's clearest water." },
+      { icon: "🐴", title: "Macao Beach", text: "A wilder, less developed beach away from the resort strip — popular for horseback riding and surf lessons, with far fewer crowds." },
+      { icon: "✈️", title: "Direct flights from dozens of US cities", text: "One of the most heavily served Caribbean airports from the US, which is part of why package deals here are consistently competitive." },
+    ],
+  },
   jamaica: {
     intro:
       "Jamaica packs the most range of any single Caribbean island: resort-belt beaches in Montego Bay and Negril, waterfalls and rainforest inland, Blue Mountain coffee country, and a music and food culture that reaches far beyond the all-inclusive strip. It rewards leaving the resort at least once.",

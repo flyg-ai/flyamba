@@ -36,4 +36,7 @@ export const ALREADY_INDEXED_SLUGS = new Set<string>([
   // Promoted, batch 4.
   "orlando",
   "costa-rica",
+  // Promoted, batch 5 — completes the planned 10 (Bahamas already counted
+  // from the original GSC-found batch above).
+  "punta-cana",
 ]);
