@@ -639,6 +639,49 @@ export const guides: Guide[] = [
 <p>Want to trade cold for a beach: Aruba, Punta Cana or the Bahamas. Want the classic postcard version of the holidays: Vienna or Prague. Want the biggest possible midnight moment: Dubai or Las Vegas. Want something that isn't really about Christmas at all: Costa Rica's dry season or Tokyo's winter lights. Whichever it is, this is the one trip of the year worth booking earliest.</p>
 `,
   },
+  {
+    slug: "us-flight-delay-cancellation-rights",
+    title: "Your Rights When a US Flight Is Delayed or Cancelled",
+    excerpt:
+      "The US doesn't have Europe's cash-compensation rules, but you still have real rights when a flight is delayed or cancelled — here's what you're actually owed, and how to get it.",
+    destination: null,
+    category: "Tips",
+    readTime: "7 min",
+    publishedAt: "2026-10-28",
+    image: "/images/content/airport-delay-board.avif",
+    content: `
+<p>If you've heard that European flight delays come with a cash payout, you might expect the same in the US. They don't — American air passenger rights work differently, built around refunds and airline-specific commitments rather than a fixed compensation schedule. Here's what you're actually entitled to, and how to make sure you get it.</p>
+
+<h2>The Biggest Difference From Europe</h2>
+<p>The EU's rules (EU261) require airlines to pay cash compensation for delays and cancellations within their control, on a fixed schedule based on flight distance. The US has no federal equivalent. The Department of Transportation (DOT) regulates refunds, deplaning rules and airline accountability, but it does not mandate a cash payout for a delayed or cancelled domestic flight. That single difference is the one most travelers get wrong.</p>
+<p>One exception worth knowing: if you're flying out of the EU on any airline, or flying into the EU on an EU-based carrier, EU261 can still apply even though you're starting or ending your trip in the US.</p>
+
+<h2>What You're Actually Owed</h2>
+<p><strong>A full cash refund if your flight is cancelled and you don't want the replacement.</strong> This is the core US right, and it's a real one: if an airline cancels your flight, or changes it significantly, and you decide not to travel, you're entitled to your money back as cash to your original payment method — not a travel credit or voucher, unless you choose one. Airlines are required to make this refund automatic rather than something you have to fight for.</p>
+<p><strong>A refund for services you paid for but didn't get</strong> — a seat upgrade, extra legroom, or Wi-Fi that didn't work, for instance.</p>
+<p><strong>The right to deplane during a long tarmac delay.</strong> On domestic flights, airlines must give passengers the option to get off after 3 hours stuck on the tarmac (4 hours for international flights), with some narrow safety and air-traffic-control exceptions.</p>
+
+<h2>What's Airline-Specific, Not Guaranteed by Law</h2>
+<p>Meals, hotel rooms and rebooking on another airline during a long delay are not required by federal law — they're voluntary commitments individual airlines have made, and they vary a lot by carrier and by the size of the airline's own network at that airport. The DOT publishes and tracks what each major US airline has committed to for delays within their control, which is worth checking before you fly if this matters to you. In practice: ask the gate agent directly what the airline will cover, and check your airline's own contract of carriage (every airline publishes one) rather than assuming a standard.</p>
+
+<h2>Does It Matter Why the Flight Was Delayed?</h2>
+<p>Yes, for what you can expect beyond a refund. A delay caused by something within the airline's control — a mechanical issue, a crew scheduling problem — is treated differently from weather or air-traffic-control delays, where airlines generally offer less. Either way, your refund right for choosing not to fly a cancelled or significantly changed flight doesn't depend on the cause.</p>
+
+<h2>What Counts as "Significantly Changed"?</h2>
+<p>The DOT defines a significant change as a departure or arrival shifted by more than 3 hours domestically (6 hours internationally), a change to a different airport, an added connection, or a downgrade in service class. If your flight is changed this much and you don't want the new version, you're entitled to a refund rather than being locked into the new itinerary.</p>
+
+<h2>How to Actually Get Your Refund</h2>
+<ul>
+<li><strong>Don't accept a voucher by default.</strong> If a gate agent offers a travel credit, you can ask for a cash refund instead when you're eligible — it's your choice, not theirs.</li>
+<li><strong>Go to the airline first, then the DOT if that fails.</strong> Airlines have to acknowledge and resolve complaints; if yours doesn't, the DOT's consumer complaint portal is the next step.</li>
+<li><strong>Keep your documentation.</strong> Boarding passes, the cancellation or delay notice, and any communication from the airline all help if a refund doesn't come through automatically.</li>
+<li><strong>Check your credit card's own travel protections.</strong> Many travel rewards cards include trip-delay or cancellation coverage that pays out faster and more generously than anything the airline offers.</li>
+</ul>
+
+<h2>The Short Version</h2>
+<p>No automatic cash payout like Europe, but a real right to a full cash refund if your flight is cancelled or significantly changed and you choose not to travel. Everything beyond that — meals, hotels, rebooking — depends on the individual airline's own commitments, so it's worth knowing what your specific carrier has promised before you're standing at the gate needing it.</p>
+`,
+  },
 ];
 
 export function getGuidesByDestination(destination: string): Guide[] {
