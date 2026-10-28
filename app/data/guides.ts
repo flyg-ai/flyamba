@@ -569,6 +569,76 @@ export const guides: Guide[] = [
 <p>Every destination on this list shares the same pattern: real infrastructure and genuine appeal, but search interest and flight prices that haven't caught up to it yet. That window tends to close within a few years once a place gets written up enough times — book while the flights are still reasonable and the old town isn't yet full of the crowds Dubrovnik or Santorini deal with today.</p>
 `,
   },
+  {
+    slug: "nonstop-vs-connecting-flights",
+    title: "Nonstop vs. Connecting — When a Layover Actually Saves You Money",
+    excerpt:
+      "Nonstop isn't always worth the premium it commands. Here's how to tell when a connection is genuinely the smarter choice, and how to protect yourself when it isn't.",
+    destination: null,
+    category: "Tips",
+    readTime: "7 min",
+    publishedAt: "2026-10-28",
+    image: "/images/content/airport-layover-tarmac.avif",
+    content: `
+<p>Nonstop flights get treated as the obviously correct choice, and on short routes they usually are. But on longer or less-traveled routes, a connection can be hundreds of dollars cheaper for an extra hour or two of travel time — and sometimes it's the only way to fly a route at all. Here's how to actually weigh the trade-off instead of defaulting to whichever option is listed first.</p>
+
+<h2>Why Connections Are Often Cheaper</h2>
+<p>A nonstop route only exists where an airline has decided there's enough direct demand to fly a plane empty of any other purpose between two specific cities. That's a narrower set of routes than where people actually want to go, so a connection through a major hub — Atlanta, Dallas, Amsterdam, Dubai — lets an airline sell you a seat on two flights it was already running for other reasons. Less dedicated capacity means more competition on the route, and more competition means lower fares.</p>
+<p>This is also why hub-heavy airlines can often beat a point-to-point carrier's nonstop fare even after adding a connection: they're filling two planes' worth of seats rather than selling scarcity on one.</p>
+
+<h2>When Nonstop Is Worth Paying For</h2>
+<p>Three situations make the nonstop premium genuinely worth it. <strong>Short trips</strong>, where a connection's extra two or three hours is a meaningful fraction of your total time away. <strong>Tight schedules</strong>, where missing a connection has real consequences — a cruise departure, a wedding, a connecting international flight with no slack. And <strong>red-eyes and long-haul</strong>, where breaking the journey with an airport layover is simply worse than just finishing it.</p>
+
+<h2>When a Connection Is the Smarter Choice</h2>
+<p>If your dates are flexible and nothing downstream depends on exact arrival time, a one-stop routing is usually the better financial call — sometimes dramatically so on routes where the nonstop is operated by a single carrier with no real competition. Long-haul connections can also beat the nonstop outright: a one-stop through a European or Gulf hub is routinely cheaper than flying direct, because you're buying into a hub carrier's broader network pricing rather than a single thin nonstop route.</p>
+
+<h2>Protecting Yourself on a Connection</h2>
+<ul>
+<li><strong>Book connecting flights on one ticket, not two separately.</strong> If the first leg is delayed, the airline is responsible for getting you on the next available flight. Two separate bookings mean two separate problems if one runs late.</li>
+<li><strong>Respect the minimum connection time, and add a buffer on top of it.</strong> The airport's official minimum is the floor, not a safe target — especially if your first flight has any history of delays, or if you're connecting between different terminals.</li>
+<li><strong>Check whether you need to re-clear security or immigration.</strong> Connecting through a different country, or between certain airport terminals, can turn a comfortable 90-minute connection into a genuine sprint.</li>
+<li><strong>Carry anything essential in your cabin bag.</strong> A missed connection is an inconvenience; a missed connection with your checked bag on a different flight than you is a worse one.</li>
+</ul>
+
+<h2>How Many Stops Is Too Many?</h2>
+<p>One connection is rarely a problem if it's built sensibly. Two connections start eating meaningfully into the time and cost savings — by that point, check whether a one-stop on a different route or airline closes most of the price gap for a lot less hassle. As a rule, each additional connection should be saving you real money or opening up a route that doesn't otherwise exist; if it isn't doing one of those two things, it's not worth the added risk.</p>
+
+<h2>The Short Version</h2>
+<p>Default to nonstop when your schedule is tight or the trip is short. Default to checking connections when your dates are flexible or the route is long-haul — the savings are often large enough to be worth an extra hour or two in an airport. Either way, book connecting flights as one itinerary and give yourself more buffer than the airport's bare minimum.</p>
+`,
+  },
+  {
+    slug: "best-places-christmas-new-year-abroad",
+    title: "Best Places to Spend Christmas & New Year Abroad",
+    excerpt:
+      "Warm beach instead of shoveling snow, classic European markets, or a big fireworks night out — where to go depends on which kind of holiday you actually want.",
+    destination: null,
+    category: "Inspiration",
+    readTime: "7 min",
+    publishedAt: "2026-10-28",
+    image: "/images/content/tropical-christmas-beach.avif",
+    content: `
+<p>Christmas and New Year abroad means something different depending on what you're after — a warm beach instead of a gray, cold holiday season; the classic European market-and-mulled-wine version; or simply the biggest fireworks show you can find for midnight. Here's where to go for each.</p>
+
+<h2>For a Warm-Weather Christmas</h2>
+<p><a href="/aruba">Aruba</a> and <a href="/punta-cana">Punta Cana</a> both sit comfortably in the mid-80s°F in December, with resorts that lean into the holiday with their own low-key festive touches — think string lights on palm trees rather than snow. <a href="/bahamas">The Bahamas</a> is the closest option from the East Coast for anyone who wants warm water without a long flight. All three are genuinely busy over the holidays, so book well ahead if this is the plan.</p>
+
+<h2>For Classic Christmas Markets</h2>
+<p><a href="/vienna">Vienna</a> and <a href="/prague">Prague</a> are the two cities that do this best — grand squares filled with wooden stalls, mulled wine, and lights, against genuinely beautiful imperial or medieval backdrops. Both get cold and properly festive in December, which is exactly the point. Book early: this is peak season and prices reflect it.</p>
+
+<h2>For a Big New Year's Eve</h2>
+<p><a href="/dubai">Dubai</a> puts on one of the most spectacular fireworks displays anywhere in the world, centered on the Burj Khalifa, and the warm December weather means watching it outdoors is actually comfortable. <a href="/las-vegas">Las Vegas</a> is the domestic equivalent — Strip fireworks, major concert residencies timed around the holiday, and no passport required.</p>
+
+<h2>For Somewhere Different</h2>
+<p><a href="/costa-rica">Costa Rica</a> is in its dry season through December, making it one of the better times of year to combine rainforest and beach in one trip without fighting rain. For a city with its own distinct December character rather than a beach or a market, <a href="/tokyo">Tokyo</a>'s illuminations season runs through the holidays and is worth seeing even though Christmas itself isn't a major Japanese holiday.</p>
+
+<h2>Booking Timing</h2>
+<p>The two weeks around Christmas and New Year are among the most expensive flight windows of the entire year, on essentially every route — demand spikes everywhere at once, so there's no cheap corner of the calendar to find. Booking <strong>two to three months ahead</strong> is the realistic minimum for a popular destination; by early December, both flights and hotels in any of the places above will be thin and expensive. If your dates have any flexibility, flying out a day or two before or after the 23rd–26th rush can meaningfully cut both airfare and hotel rates.</p>
+
+<h2>Which One Should You Pick?</h2>
+<p>Want to trade cold for a beach: Aruba, Punta Cana or the Bahamas. Want the classic postcard version of the holidays: Vienna or Prague. Want the biggest possible midnight moment: Dubai or Las Vegas. Want something that isn't really about Christmas at all: Costa Rica's dry season or Tokyo's winter lights. Whichever it is, this is the one trip of the year worth booking earliest.</p>
+`,
+  },
 ];
 
 export function getGuidesByDestination(destination: string): Guide[] {
